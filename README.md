@@ -49,15 +49,16 @@ Second, some notes about paths:
   2. Set EasyBuild variables
    Easybuild is very consistent in how it can be configured. A configuration file, command-line parameters, or environment variables are all recognized in the same and consistent way. Since Easybuild uses modules, I decided to set environment variables there. I made the following changes to files:
 
-    * in the easybuild modulefile (/app/easybuild/modules/all/EasyBuild/2.3.0 at this time), I added the following:
+    * in the easybuild modulefile (/app/easybuild/modules/all/EasyBuild/2.3.0 at this time), I added the following (and also saved this separately to a file I can use during easybuilding Easybuild to automatically include this in the modulefile using the `--modules-footer` parameter):
 
 ```Tcl
-setenv EASYBUILD_SOURCEPATH /app/easybuild/sources
-setenv EASYBUILD_BUILDPATH /app/easybuild/build
-setenv EASYBUILD_INSTALLPATH_SOFTWARE /app/easybuild/software
-setenv EASYBUILD_INSTALLPATH_MODULES /app/easybuild/modules
-setenv EASYBUILD_REPOSITORYPATH /app/easybuild/ebfiles_repo
-setenv EASYBUILD_LOGFILE_FORMAT "/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
+set ebDir "/app/easybuild"
+setenv EASYBUILD_SOURCEPATH "$ebDir/sources"
+setenv EASYBUILD_BUILDPATH "$ebDir/build"
+setenv EASYBUILD_INSTALLPATH_SOFTWARE "$ebDir/software"
+setenv EASYBUILD_INSTALLPATH_MODULES "$ebDir/modules"
+setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
+setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
 # keep group writable bit
 setenv EASYBUILD_GROUP_WRITABLE_INSTALLDIR 1
 # set umask to preserve group write permissions on modulefiles
@@ -65,11 +66,11 @@ setenv EASYBUILD_UMASK 002
 # create module dependencies to recursively unload
 setenv EASYBUILD_RECURSIVE_MODULE_UNLOAD 1
 # add our normal modulefile footer
-setenv EASYBUILD_MODULES_FOOTER /app/easybuild/etc/fredhutch_modulefile_footer
+setenv EASYBUILD_MODULES_FOOTER "$ebDir/etc/fredhutch_modulefile_footer"
 # add our own easyconfig directory to robot paths
-setenv EASYBUILD_ROBOT_PATHS :/app/easybuild/fh_easyconfigs
+setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"
 # Our licenses
-setenv LM_LICENSE_FILE /app/easybuild/etc/licenses/intel.lic
+setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
 ```
 
     * in /app/easybuild/etc/fredhutch_modulefile_footer, we added these lines to write module loads to syslog for syslog-driven metrics of software use:
@@ -82,6 +83,95 @@ system "logger \$USER module load $curMod "
 }
 ```
 
+   3. At this point, you should be able to load the EasyBuild module:
+
+```
+$ module use /app/easybuild/modules/all   # adds this path to MODULEPATH
+$ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out
+```
+
 # Step-By-Step Build a package
 
+Once you have EasyBuild bootstrapped, you can search for and build a package:
+
+Begin by searching:
+
+```
+$ eb -S PCRE
+== temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
+CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
+ * $CFGS1/PCRE-8.12-goalf-1.1.0-no-OFED.eb
+ * $CFGS1/PCRE-8.12-goolf-1.4.10.eb
+ * $CFGS1/PCRE-8.12-ictce-4.0.6.eb
+ * $CFGS1/PCRE-8.12-ictce-5.3.0.eb
+ * $CFGS1/PCRE-8.12-ictce-5.5.0.eb
+ * $CFGS1/PCRE-8.35-intel-2014b.eb
+ * $CFGS1/PCRE-8.36-foss-2015a.eb
+ * $CFGS1/PCRE-8.36-intel-2015a.eb
+ * $CFGS1/PCRE-8.37-intel-2015a.eb
+== Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
+== Temporary directory /tmp/eb-lz7d_6 has been removed.
+```
+
+Here we have found 9 different easyconfigs for PCRE. The keyword after the version is the toolchain. You should research toolchains at some point, but we chose to focus on two toolchain families: `intel` and `foss`. One is a closed-source optimized compiler for Intel CPUs and the other is an open-source chain using free open source software.
+
+Once we have decided what to build, you can do a dry-run like this:
+
+```
+$ eb -r -D PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
+Dry run: printing build status of easyconfigs and dependencies
+CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
+ * [x] $CFGS/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
+ * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0)
+ * [x] $CFGS/l/libtool/libtool-2.4.2-GCC-4.9.2.eb (module: libtool/2.4.2-GCC-4.9.2)
+ * [x] $CFGS/m/M4/M4-1.4.17-GCC-4.9.2.eb (module: M4/1.4.17-GCC-4.9.2)
+ * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb (module: Autoconf/2.69-GCC-4.9.2)
+ * [x] $CFGS/a/Automake/Automake-1.15-GCC-4.9.2.eb (module: Automake/1.15-GCC-4.9.2)
+ * [x] $CFGS/n/numactl/numactl-2.0.10-GCC-4.9.2.eb (module: numactl/2.0.10-GCC-4.9.2)
+ * [x] $CFGS/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb (module: hwloc/1.10.0-GCC-4.9.2)
+ * [x] $CFGS/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb (module: OpenMPI/1.8.4-GCC-4.9.2)
+ * [x] $CFGS/g/gompi/gompi-2015a.eb (module: gompi/2015a)
+ * [x] $CFGS/f/FFTW/FFTW-3.3.4-gompi-2015a.eb (module: FFTW/3.3.4-gompi-2015a)
+ * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0)
+ * [x] $CFGS/f/foss/foss-2015a.eb (module: foss/2015a)
+ * [ ] $CFGS/p/PCRE/PCRE-8.36-foss-2015a.eb (module: PCRE/8.36-foss-2015a)
+== Tmporary log file(s) /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
+== Temporary directory /tmp/eb-08QTaF has been removed.
+```
+
+In this case, EasyBuild was given the '-r' robot flag so it automatically included dependencies it was able to meet with existing easyconfigs, and it was told to do a dry-run with '-D'. You will note the all of the packages except PCRE itself have 'X' noting they are already built and installed.
+
+And finally, you can remove the '-D' and build the software:
+
+```
+$ eb -r -f PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
+== resolving dependencies ...
+== processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
+== building and installing PCRE/8.36-foss-2015a...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== cleaning up...
+== creating module...
+== permissions...
+== packaging...
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
+== Build succeeded for 1 out of 1
+== Tmporary log file(s) /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
+== Temporary directory /tmp/eb-1TnpU8 has been removed.
+```
 # Step-By-Step Adapt an EasyConfig
