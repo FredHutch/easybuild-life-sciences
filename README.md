@@ -1,19 +1,25 @@
 # easybuild-life-sciences
 Implementation and use of EasyBuild at FredHutch
+
 ---
+
 # Overview
 - We identified EasyBuild as piece of software that could help us manage software package builds
 - We use Environment Modules today, and more importantly, our users use modules
 - We have a small group of people who build software packages (admins, not users)
+
 ---
+
 # Goals
 Before and during implementation, we kept the following goals in mind:
 
-   * software packages will be reproducable
-   * modules will be easily loaded by user in interactive sessions and in scripts
-   * default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but `module load R` will load R-3.2.1)
-   * packages will be built by any member of a given POSIX group
-   * new packages will be easily implemented (new versions and software packages without existing easyconfigs)
+- software packages will be reproducable
+- modules will be easily loaded by user in interactive sessions and in scripts
+- default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but `module load R` will load R-3.2.1)
+- packages will be built by any member of a given POSIX group
+- new packages will be easily implemented (new versions and software packages without existing easyconfigs)
+
+---
 
 # TODO
 Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.
@@ -22,11 +28,15 @@ Some of our goals were not met in the initial implementation. Mostly due to unim
 
 *Default Module Version Management* - In many cases, modules does a good job of picking the most recent modulefile to use. However in several cases (R, PYthon, Intel toolchain, etc.) we do not want the most recent package to be the default. Easybuild (AFAIK) does not provide a mechanism for managing the contents of ".version" in modulefiles directories. Nor should it. However, a written procedure like this does not leave me with a good feeling toward ending up with correctly managed default versions effortlessly. Perhaps a wrapper script. Or an easybuild option "--make-default" that would modify the ".version" file in the resulting modulefile directory.
 
+---
+
 # Implementation Notes
 
 ## Prerequisites
 
 Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the `build-essentials` meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) - it is under current development and offers a different and more advanced feature set.
+
+---
 
 ## Environment
 
@@ -43,11 +53,18 @@ Second, some notes about paths:
   * we created /app/easybuild/etc to hold additional centralized configuration files
   * we created /app/easybuild/fh_easyconfigs to hold our custom easyconfig files while we are developing them
 
+---
+
 # Step-By-Step Easybuild installation
   1. bootstrap easybuild - follow the [excellent documentation](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
    Since we have an existing location for software packages, I chose that for the EasyBuild bootstrap (/app/easybuild in our case)
+
+---
+
   2. Set EasyBuild variables
    Easybuild is very consistent in how it can be configured. A configuration file, command-line parameters, or environment variables are all recognized in the same and consistent way. Since Easybuild uses modules, I decided to set environment variables there. I made the following changes to files:
+
+---
 
     * in the easybuild modulefile (/app/easybuild/modules/all/EasyBuild/2.3.0 at this time), I added the following (and also saved this separately to a file I can use during easybuilding Easybuild to automatically include this in the modulefile using the `--modules-footer` parameter):
 
@@ -73,6 +90,8 @@ setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"
 setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
 ```
 
+---
+
     * in /app/easybuild/etc/fredhutch_modulefile_footer, we added these lines to write module loads to syslog for syslog-driven metrics of software use:
 
 ```Tcl
@@ -83,6 +102,8 @@ system "logger \$USER module load $curMod "
 }
 ```
 
+---
+
    3. At this point, you should be able to load the EasyBuild module:
 
 ```
@@ -90,11 +111,15 @@ $ module use /app/easybuild/modules/all   # adds this path to MODULEPATH
 $ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out
 ```
 
+---
+
 # Step-By-Step Build a package
 
 Once you have EasyBuild bootstrapped, you can search for and build a package:
 
 Begin by searching:
+
+---
 
 ```
 $ eb -S PCRE
@@ -116,6 +141,8 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
 ```
 
 Here we have found 9 different easyconfigs for PCRE. The keyword after the version is the toolchain. You should research toolchains at some point, but we chose to focus on two toolchain families: `intel` and `foss`. One is a closed-source optimized compiler for Intel CPUs and the other is an open-source chain using free open source software.
+
+---
 
 Once we have decided what to build, you can do a dry-run like this:
 
@@ -143,6 +170,8 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
 ```
 
 In this case, EasyBuild was given the '-r' robot flag so it automatically included dependencies it was able to meet with existing easyconfigs, and it was told to do a dry-run with '-D'. You will note the all of the packages except PCRE itself have 'X' noting they are already built and installed.
+
+---
 
 And finally, you can remove the '-D' and build the software:
 
