@@ -24,51 +24,70 @@ Before and during implementation, we kept the following goals in mind:
 # TODO
 Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.
 
-*New package implementation* (i.e.: new easyconfigs) - Easybuild may be in transition with regard to easyconfig implementation. Initially the idea of reproducibility and separate easyconfig files went hand-in-hand. You build R version 3.2.1 with an Intel toolchain so you have an easyconfig detailing just that. At this time there are 738 software packages with easyconfigs in the public repo. If we figure only two toolchains and three versions for each package, we will need 4428 easyconfig files. The number of easyconfigs will become more difficult to manage, and certainly more difficult to choose. Easybuild supports several options in the "try" family like "--try-software-version=" and "--try-toolchain=" that can help re-build packages under a different toolchain or with a new version.
+- New package implementation or **new easyconfigs made easy**
+- - versions can be changed with `--try` options, but a new easyconfig per pkg/ver/compiler balloons quickly
+- - Easybuild may be moving away from this model to more generic easyconfigs, but this may affect reproducibility
 
-*Default Module Version Management* - In many cases, modules does a good job of picking the most recent modulefile to use. However in several cases (R, PYthon, Intel toolchain, etc.) we do not want the most recent package to be the default. Easybuild (AFAIK) does not provide a mechanism for managing the contents of ".version" in modulefiles directories. Nor should it. However, a written procedure like this does not leave me with a good feeling toward ending up with correctly managed default versions effortlessly. Perhaps a wrapper script. Or an easybuild option "--make-default" that would modify the ".version" file in the resulting modulefile directory.
+- Default Module Version Management
+- - Modules picks the 'newest' version if not specified with `module load` or in `.version`
+- - I find no option in Easybuild to manage `.version` files
 
 ---
 
-# Implementation Notes
-
-## Prerequisites
+# Prerequisites
 
 Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the `build-essentials` meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) - it is under current development and offers a different and more advanced feature set.
 
 ---
 
-## Environment
+# Our environment
 
-First, some notes about our environment:
-
-   * read-only NFS mount on all systems at /app that currently has hand-build software packages and our existing modulefile hierarchy
-   * continued use of existing modulefiles (using [Environment Modules](http://modules.sourceforge.net/)
-   * pre-existing POSIX group of all users expected to execute builds
-   * user base that is highly varied with regard to Unix knowledge - *keeping things simple encourages more widespread use*
-
-Second, some notes about paths:
-
-  * easybuild was bootstrapped into /app/easybuild
-  * we created /app/easybuild/etc to hold additional centralized configuration files
-  * we created /app/easybuild/fh_easyconfigs to hold our custom easyconfig files while we are developing them
+- read-only NFS mount on all systems mounted at `/app`
+- hand-built software packages
+- hand-managed modulefile hierarchy
+- pre-existing POSIX group of all users expected to execute builds
+- user base that is highly varied with regard to Unix knowledge - *keeping things simple encourages more widespread use*
 
 ---
 
-# Step-By-Step Easybuild installation
-  1. bootstrap easybuild - follow the [excellent documentation](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
-   Since we have an existing location for software packages, I chose that for the EasyBuild bootstrap (/app/easybuild in our case)
+# Bootstrap
+
+  * easybuild was bootstrapped into `/app/easybuild`
+  * we created `/app/easybuild/etc` to hold additional centralized configuration files
+  * we created `/app/easybuild/fh_easyconfigs` to hold our custom easyconfig files while we are developing them
 
 ---
 
-  2. Set EasyBuild variables
-   Easybuild is very consistent in how it can be configured. A configuration file, command-line parameters, or environment variables are all recognized in the same and consistent way. Since Easybuild uses modules, I decided to set environment variables there. I made the following changes to files:
+# Step-By-Step Easybuild Bootstrap
+
+## Step One - RTFM
+
+- Follow the [Fine Manual](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
 
 ---
 
-    * in the easybuild modulefile (/app/easybuild/modules/all/EasyBuild/2.3.0 at this time), I added the following (and also saved this separately to a file I can use during easybuilding Easybuild to automatically include this in the modulefile using the `--modules-footer` parameter):
+# Step-By-Step Easybuild Bootstrap
 
-```Tcl
+## Step Two - Environment
+
+EasyBuild configuration
+
+- consistent across methods:
+- - config file(s)
+- - environment variables
+- - command-line parameters
+- in that order
+- we picked environment variables as it fits with Modules
+
+---
+
+# Modulefile Templating
+
+## Paths and Logs
+
+In the easybuild modulefile, I added the following:
+
+!Tcl
 set ebDir "/app/easybuild"
 setenv EASYBUILD_SOURCEPATH "$ebDir/sources"
 setenv EASYBUILD_BUILDPATH "$ebDir/build"
@@ -76,6 +95,14 @@ setenv EASYBUILD_INSTALLPATH_SOFTWARE "$ebDir/software"
 setenv EASYBUILD_INSTALLPATH_MODULES "$ebDir/modules"
 setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
 setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
+
+---
+
+# Modulefile Templating 2
+
+## Easybuild parameters
+
+!Tcl
 # keep group writable bit
 setenv EASYBUILD_GROUP_WRITABLE_INSTALLDIR 1
 # set umask to preserve group write permissions on modulefiles
@@ -88,27 +115,31 @@ setenv EASYBUILD_MODULES_FOOTER "$ebDir/etc/fredhutch_modulefile_footer"
 setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"
 # Our licenses
 setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
-```
 
 ---
 
-    * in /app/easybuild/etc/fredhutch_modulefile_footer, we added these lines to write module loads to syslog for syslog-driven metrics of software use:
+# Easybuild Modulefile
 
-```Tcl
+- Our Easybuild config loads with `module load Easybuild/2.3.0` everytime for everyone
+- With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself
+- Custom items can be added to all modulefiles produced by Easybuild, like logging module use:
+
+!Tcl
 # enable logging to syslog
 set curMod [module-info name]
 if { [module-info mode load] } {
 system "logger \$USER module load $curMod "
 }
-```
 
 ---
 
-   3. At this point, you should be able to load the EasyBuild module:
+ # EasyBuilt
 
 ```
-$ module use /app/easybuild/modules/all   # adds this path to MODULEPATH
+$ module use /app/easybuild/modules/all   # adds this path to $MODULEPATH
 $ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out
+$ eb --version
+This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
 ```
 
 ---
@@ -121,7 +152,7 @@ Begin by searching:
 
 ---
 
-```
+!bash
 $ eb -S PCRE
 == temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
 == Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
@@ -138,9 +169,14 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
  * $CFGS1/PCRE-8.37-intel-2015a.eb
 == Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
 == Temporary directory /tmp/eb-lz7d_6 has been removed.
-```
 
-Here we have found 9 different easyconfigs for PCRE. The keyword after the version is the toolchain. You should research toolchains at some point, but we chose to focus on two toolchain families: `intel` and `foss`. One is a closed-source optimized compiler for Intel CPUs and the other is an open-source chain using free open source software.
+---
+
+# Found PCRE esayconfigs!
+
+We found 9 different easyconfigs for PCRE. Let's build this one: `PCRE-8.36-foss-2015a.eb`
+
+You probably figured out that `8.36` is the version of PCRE we will build, but what is `foss`?
 
 ---
 
