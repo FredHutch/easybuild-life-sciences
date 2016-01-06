@@ -1,1 +1,297 @@
-hello, world
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>easybuild-life-sciences</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="file:///home/bmcgough/landslide/local/lib/python2.7/site-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="file:///home/bmcgough/landslide/local/lib/python2.7/site-packages/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="file:///home/bmcgough/landslide/local/lib/python2.7/site-packages/landslide/themes/default/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>easybuild-life-sciences</h1></header>
+            
+            
+            <section><p>Implementation and use of EasyBuild at FredHutch</p>
+<h1>Overview</h1>
+<p>This repo will reflect our decisions and strategy during implementation of EasyBuild to replace our manual build procedure. Prior to Easybuild, we built software packages by hand, installed them onto an NFS share mounted read-only on our cluster, and documented the build procedures as best we could. These software packages were then "wrapped" using Environment Modules to allow users and scripts to use them without multiple manual PATH changes.</p>
+<p>If you are not familiar with Easybuild, check out the <a href="https://github.com/hpcugent/easybuild">repo</a> and <a href="http://easybuild.readthedocs.org/en/latest/">excellent documentation</a>. One of the benefits of Easybuild is that it will construct a proper modulefile for you during the build process.</p>
+<h1>Goals</h1>
+<p>Before and during implementation, we kept the following goals in mind:</p>
+<ul>
+<li>software packages will be reproducable</li>
+<li>modules will be easily loaded by user in interactive sessions and in scripts</li>
+<li>default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but <code>module load R</code> will load R-3.2.1)</li>
+<li>packages will be built by any member of a given POSIX group</li>
+<li>new packages will be easily implemented (new versions and software packages without existing easyconfigs)</li>
+</ul>
+<h1>TODO</h1>
+<p>Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.</p>
+<p><em>New package implementation</em> (i.e.: new easyconfigs) - Easybuild may be in transition with regard to easyconfig implementation. Initially the idea of reproducibility and separate easyconfig files went hand-in-hand. You build R version 3.2.1 with an Intel toolchain so you have an easyconfig detailing just that. At this time there are 738 software packages with easyconfigs in the public repo. If we figure only two toolchains and three versions for each package, we will need 4428 easyconfig files. The number of easyconfigs will become more difficult to manage, and certainly more difficult to choose. Easybuild supports several options in the "try" family like "--try-software-version=" and "--try-toolchain=" that can help re-build packages under a different toolchain or with a new version.</p>
+<p><em>Default Module Version Management</em> - In many cases, modules does a good job of picking the most recent modulefile to use. However in several cases (R, PYthon, Intel toolchain, etc.) we do not want the most recent package to be the default. Easybuild (AFAIK) does not provide a mechanism for managing the contents of ".version" in modulefiles directories. Nor should it. However, a written procedure like this does not leave me with a good feeling toward ending up with correctly managed default versions effortlessly. Perhaps a wrapper script. Or an easybuild option "--make-default" that would modify the ".version" file in the resulting modulefile directory.</p>
+<h1>Implementation Notes</h1>
+<h2>Prerequisites</h2>
+<p>Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the <code>build-essentials</code> meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod</a> - it is under current development and offers a different and more advanced feature set.</p>
+<h2>Environment</h2>
+<p>First, some notes about our environment:</p>
+<ul>
+<li>read-only NFS mount on all systems at /app that currently has hand-build software packages and our existing modulefile hierarchy</li>
+<li>continued use of existing modulefiles (using <a href="http://modules.sourceforge.net/">Environment Modules</a></li>
+<li>pre-existing POSIX group of all users expected to execute builds</li>
+<li>user base that is highly varied with regard to Unix knowledge - <em>keeping things simple encourages more widespread use</em></li>
+</ul>
+<p>Second, some notes about paths:</p>
+<ul>
+<li>easybuild was bootstrapped into /app/easybuild</li>
+<li>we created /app/easybuild/etc to hold additional centralized configuration files</li>
+<li>we created /app/easybuild/fh_easyconfigs to hold our custom easyconfig files while we are developing them</li>
+</ul>
+<h1>Step-By-Step Easybuild installation</h1>
+<ol>
+<li>bootstrap easybuild - follow the <a href="https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild">excellent documentation</a>
+   Since we have an existing location for software packages, I chose that for the EasyBuild bootstrap (/app/easybuild in our case)</li>
+<li>
+<p>Set EasyBuild variables
+   Easybuild is very consistent in how it can be configured. A configuration file, command-line parameters, or environment variables are all recognized in the same and consistent way. Since Easybuild uses modules, I decided to set environment variables there. I made the following changes to files:</p>
+<ul>
+<li>in the easybuild modulefile (/app/easybuild/modules/all/EasyBuild/2.3.0 at this time), I added the following (and also saved this separately to a file I can use during easybuilding Easybuild to automatically include this in the modulefile using the <code>--modules-footer</code> parameter):</li>
+</ul>
+</li>
+</ol>
+<p>```Tcl
+set ebDir "/app/easybuild"
+setenv EASYBUILD_SOURCEPATH "$ebDir/sources"
+setenv EASYBUILD_BUILDPATH "$ebDir/build"
+setenv EASYBUILD_INSTALLPATH_SOFTWARE "$ebDir/software"
+setenv EASYBUILD_INSTALLPATH_MODULES "$ebDir/modules"
+setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
+setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"</p>
+<h1>keep group writable bit</h1>
+<p>setenv EASYBUILD_GROUP_WRITABLE_INSTALLDIR 1</p>
+<h1>set umask to preserve group write permissions on modulefiles</h1>
+<p>setenv EASYBUILD_UMASK 002</p>
+<h1>create module dependencies to recursively unload</h1>
+<p>setenv EASYBUILD_RECURSIVE_MODULE_UNLOAD 1</p>
+<h1>add our normal modulefile footer</h1>
+<p>setenv EASYBUILD_MODULES_FOOTER "$ebDir/etc/fredhutch_modulefile_footer"</p>
+<h1>add our own easyconfig directory to robot paths</h1>
+<p>setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"</p>
+<h1>Our licenses</h1>
+<p>setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
+```</p>
+<pre><code>* in /app/easybuild/etc/fredhutch_modulefile_footer, we added these lines to write module loads to syslog for syslog-driven metrics of software use:
+</code></pre>
+<p>```Tcl</p>
+<h1>enable logging to syslog</h1>
+<p>set curMod [module-info name]
+if { [module-info mode load] } {
+system "logger \$USER module load $curMod "
+}
+```</p>
+<ol>
+<li>At this point, you should be able to load the EasyBuild module:</li>
+</ol>
+<p><code>$ module use /app/easybuild/modules/all   # adds this path to MODULEPATH
+$ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out</code></p>
+<h1>Step-By-Step Build a package</h1>
+<p>Once you have EasyBuild bootstrapped, you can search for and build a package:</p>
+<p>Begin by searching:</p>
+<p><code>$ eb -S PCRE
+== temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
+CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
+ * $CFGS1/PCRE-8.12-goalf-1.1.0-no-OFED.eb
+ * $CFGS1/PCRE-8.12-goolf-1.4.10.eb
+ * $CFGS1/PCRE-8.12-ictce-4.0.6.eb
+ * $CFGS1/PCRE-8.12-ictce-5.3.0.eb
+ * $CFGS1/PCRE-8.12-ictce-5.5.0.eb
+ * $CFGS1/PCRE-8.35-intel-2014b.eb
+ * $CFGS1/PCRE-8.36-foss-2015a.eb
+ * $CFGS1/PCRE-8.36-intel-2015a.eb
+ * $CFGS1/PCRE-8.37-intel-2015a.eb
+== Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
+== Temporary directory /tmp/eb-lz7d_6 has been removed.</code></p>
+<p>Here we have found 9 different easyconfigs for PCRE. The keyword after the version is the toolchain. You should research toolchains at some point, but we chose to focus on two toolchain families: <code>intel</code> and <code>foss</code>. One is a closed-source optimized compiler for Intel CPUs and the other is an open-source chain using free open source software.</p>
+<p>Once we have decided what to build, you can do a dry-run like this:</p>
+<p><code>$ eb -r -D PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
+Dry run: printing build status of easyconfigs and dependencies
+CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
+ * [x] $CFGS/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
+ * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0)
+ * [x] $CFGS/l/libtool/libtool-2.4.2-GCC-4.9.2.eb (module: libtool/2.4.2-GCC-4.9.2)
+ * [x] $CFGS/m/M4/M4-1.4.17-GCC-4.9.2.eb (module: M4/1.4.17-GCC-4.9.2)
+ * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb (module: Autoconf/2.69-GCC-4.9.2)
+ * [x] $CFGS/a/Automake/Automake-1.15-GCC-4.9.2.eb (module: Automake/1.15-GCC-4.9.2)
+ * [x] $CFGS/n/numactl/numactl-2.0.10-GCC-4.9.2.eb (module: numactl/2.0.10-GCC-4.9.2)
+ * [x] $CFGS/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb (module: hwloc/1.10.0-GCC-4.9.2)
+ * [x] $CFGS/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb (module: OpenMPI/1.8.4-GCC-4.9.2)
+ * [x] $CFGS/g/gompi/gompi-2015a.eb (module: gompi/2015a)
+ * [x] $CFGS/f/FFTW/FFTW-3.3.4-gompi-2015a.eb (module: FFTW/3.3.4-gompi-2015a)
+ * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0)
+ * [x] $CFGS/f/foss/foss-2015a.eb (module: foss/2015a)
+ * [ ] $CFGS/p/PCRE/PCRE-8.36-foss-2015a.eb (module: PCRE/8.36-foss-2015a)
+== Tmporary log file(s) /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
+== Temporary directory /tmp/eb-08QTaF has been removed.</code></p>
+<p>In this case, EasyBuild was given the '-r' robot flag so it automatically included dependencies it was able to meet with existing easyconfigs, and it was told to do a dry-run with '-D'. You will note the all of the packages except PCRE itself have 'X' noting they are already built and installed.</p>
+<p>And finally, you can remove the '-D' and build the software:</p>
+<p><code>$ eb -r -f PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
+== resolving dependencies ...
+== processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
+== building and installing PCRE/8.36-foss-2015a...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== cleaning up...
+== creating module...
+== permissions...
+== packaging...
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
+== Build succeeded for 1 out of 1
+== Tmporary log file(s) /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
+== Temporary directory /tmp/eb-1TnpU8 has been removed.</code></p>
+<h1>Step-By-Step Adapt an EasyConfig</h1></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/1
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">easybuild-life-sciences</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
