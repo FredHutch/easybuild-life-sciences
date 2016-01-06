@@ -1,11 +1,11 @@
 # easybuild-life-sciences
 Implementation and use of EasyBuild at FredHutch
-
+---
 # Overview
-This repo will reflect our decisions and strategy during implementation of EasyBuild to replace our manual build procedure. Prior to Easybuild, we built software packages by hand, installed them onto an NFS share mounted read-only on our cluster, and documented the build procedures as best we could. These software packages were then "wrapped" using Environment Modules to allow users and scripts to use them without multiple manual PATH changes.
-
-If you are not familiar with Easybuild, check out the [repo](https://github.com/hpcugent/easybuild) and [excellent documentation](http://easybuild.readthedocs.org/en/latest/). One of the benefits of Easybuild is that it will construct a proper modulefile for you during the build process.
-
+- We identified EasyBuild as piece of software that could help us manage software package builds
+- We use Environment Modules today, and more importantly, our users use modules
+- We have a small group of people who build software packages (admins, not users)
+---
 # Goals
 Before and during implementation, we kept the following goals in mind:
 
