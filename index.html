@@ -57,12 +57,43 @@
             <header><h1>easybuild-life-sciences</h1></header>
             
             
-            <section><p>Implementation and use of EasyBuild at FredHutch</p>
+            <section><h2>Implementation and use of EasyBuild at FredHutch</h2>
 <h1>Overview</h1>
-<p>This repo will reflect our decisions and strategy during implementation of EasyBuild to replace our manual build procedure. Prior to Easybuild, we built software packages by hand, installed them onto an NFS share mounted read-only on our cluster, and documented the build procedures as best we could. These software packages were then "wrapped" using Environment Modules to allow users and scripts to use them without multiple manual PATH changes.</p>
-<p>If you are not familiar with Easybuild, check out the <a href="https://github.com/hpcugent/easybuild">repo</a> and <a href="http://easybuild.readthedocs.org/en/latest/">excellent documentation</a>. One of the benefits of Easybuild is that it will construct a proper modulefile for you during the build process.</p>
-<h1>Goals</h1>
-<p>Before and during implementation, we kept the following goals in mind:</p>
+<ul>
+<li>We identified EasyBuild as piece of software that could help us manage software package builds</li>
+<li>We use Environment Modules today, and more importantly, our users use modules</li>
+<li>We have a small group of people who build software packages (admins, not users)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/2
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Goals</h1></header>
+            
+            
+            <section><p>Before and during implementation, we kept the following goals in mind:</p>
 <ul>
 <li>software packages will be reproducable</li>
 <li>modules will be easily loaded by user in interactive sessions and in scripts</li>
@@ -223,7 +254,7 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             </aside>
             
             <aside class="page_number">
-              1/1
+              2/2
             </aside>
           </footer>
         </div>
@@ -240,6 +271,12 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
       <tr id="toc-row-1">
         <th><a href="#slide1">easybuild-life-sciences</a></th>
         <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">Goals</a></th>
+        <td><a href="#slide2">2</a></td>
       </tr>
       
       
