@@ -61,13 +61,13 @@ You need money to make money, and you need software to build software.
 
 ---
 
-# Easybuild Bootstrap - Step One - RTFM
+# Bootstrap - Step One - RTFM
 
 - Follow the [Fine Manual](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
 
 ---
 
-# Easybuild Bootstrap - Step Two - Environment
+# Bootstrap - Step Two - Environment
 
 EasyBuild configuration
 
@@ -82,7 +82,7 @@ Since we use Modules, it made sense to use Environment Variables in our case
 
 ---
 
-# Easybuild Bootstrap - Modulefile Templating - Paths and Logs
+# Bootstrap - Paths and Logs
 
 In the easybuild modulefile, I added the following:
 
@@ -99,7 +99,7 @@ The modulefile is a tcl snippet and this sets environment variables for us.
 
 ---
 
-# Easybuild Bootstrap - Modulefile Templating - Easybuild Parameters
+# Bootstrap Easybuild Parameters
 
     !Tcl
     # keep group writable bit
@@ -119,7 +119,7 @@ These are more complex, and will be documented soon.
 
 ---
 
-# Easybuild Bootstrap - Ownership and Permissions
+# Bootstrap - Ownership and Permissions
 
 There are a number of manual steps that were performed that can best be described as messy, and also perhaps make up the bulk of the useful information here.
 
@@ -135,13 +135,13 @@ Of course, some manual adjusting was needed:
 
 ---
 
-# Easubuild Bootstrap - Easybuild Parameters
+# Bootstrap - Easybuild Parameters
 
 - `RECURSIVE_MODULE_UNLOAD 1` - this causes Easybuild to create modulefiles that will auto-load *and* auto-unload dependent modules
 - `ROBOT_PATHS <path>` - adds our local easyconfig development dir to robot paths
 - `LM_LICENSE_FILE <file>` - where our licenses are located
 
-# Easybuild Bootstrap - Modulefile Manipulating
+# Bootstrap - Modulefile Manipulating
 
 - Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
 - `MODULES_FOOTER` - code to include in every modulefile created by Easybuild
@@ -161,17 +161,17 @@ To use:
 
 - Add the Easybuild modules directory to your MODULEPATH environment variable:
 
-    !bash
+    !
     $ module use /app/easybuild/modules/all
 
 - Load the EasyBuild module (it should tab out, these are just files):
 
-    !bash
+    !
     $ module load EasyBuild/2.3.0
 
 - Did it work"
 
-    !bash
+    !
     $ eb --version
     This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
 
@@ -183,7 +183,7 @@ Once you have EasyBuild bootstrapped, you can search for and build a package:
 
 Begin by searching:
 
-    !bash
+    !
     $ eb -S PCRE
     == temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
     == Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
@@ -211,7 +211,7 @@ You probably figured out that `8.36` is the version of PCRE we will build, but w
 
 That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with:
 
-    !bash
+    !
     eb --list-toolchains
 
 I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easyconfigs) - toolchains are just another easyconfig to Easybuild.
@@ -222,7 +222,7 @@ I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easycon
 
 Once we have decided what to build, you can do a dry-run like this:
 
-    !bash
+    !
     $ eb -r -D PCRE-8.36-foss-2015a.eb
     == temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
     Dry run: printing build status of easyconfigs and dependencies
@@ -260,7 +260,7 @@ By giving the `-r` flag to Easybuild:
 
 And finally, you can remove the '-D' and build the software:
 
-    !bash
+    !
     $ eb -r -f PCRE-8.36-foss-2015a.eb
     == temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
     == resolving dependencies ...
@@ -350,6 +350,7 @@ Ex:
 This is the version of the software to build. It is referenced later in the easyconfig file.
 
 Ex:
+
     !python
     version = '1.2.8'
 
@@ -379,9 +380,10 @@ This is a generally free-form description that will appear as metadata in the mo
 Ex:
 
     !python
-    description = """zlib is designed to be a free, general-purpose, legally unencumbered -- that is,
- not covered by any patents -- lossless data-compression library for use on virtually any
- computer hardware and operating system."""
+    description = """zlib is designed to be a free, general-purpose, legally
+                     unencumbered -- that is, not covered by any patents --
+                     lossless data-compression library for use on virtually any
+                     computer hardware and operating system."""
 ## `homepage`
 
 This is a URL also included in modulefile metadata. It should be the homepage of the software.
@@ -438,7 +440,7 @@ I save this as `rsync-3.1.2-foss-2015b.eb` and it should build!
 
 # Build Example
 
-    !bash
+    !
     $  eb rsync-3.1.2-foss-2015b.eb
     == temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
     == processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
@@ -472,3 +474,5 @@ And a quick search of `sanity check` in the Easybuild docs reveals that by defau
 `sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/rsync']}`
 
 And now it builds (trust me).
+
+**An interesting note** I expected this build to fail as version `3.1.2` of rsync is distributed in `rsync-3.1.2.tar.gz` but is not actually compressed, only a tarball. Easybuild built it anyway!
