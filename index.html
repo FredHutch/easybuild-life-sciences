@@ -1792,10 +1792,13 @@ aside {
 </ul>
 <p><code>$ module load EasyBuild/2.3.0</code></p>
 <ul>
-<li>Did it work?</li>
-</ul>
-<p><code>$ eb --version</code></p>
-<p><code>This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</code></p></section>
+<li>
+<p>Did it work?</p>
+<p>$ eb --version
+This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
+$</p>
+</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1827,8 +1830,7 @@ aside {
             
             <section><p>Once you have EasyBuild bootstrapped, you can search for and build a package:</p>
 <p>Begin by searching:</p>
-<pre><code>!
-$ eb -S PCRE
+<pre><code>$ eb -S PCRE
 == temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
 == Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
 == Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
@@ -1910,8 +1912,7 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
             
             
             <section><p>Once we have decided what to build, you can do a dry-run like this:</p>
-<pre><code>!
-$ eb -r -D PCRE-8.36-foss-2015a.eb
+<pre><code>$ eb -r -D PCRE-8.36-foss-2015a.eb
 == temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
 Dry run: printing build status of easyconfigs and dependencies
 CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
@@ -1997,8 +1998,7 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             
             
             <section><p>And finally, you can remove the '-D' and build the software:</p>
-<pre><code>!
-$ eb -r -f PCRE-8.36-foss-2015a.eb
+<pre><code>$ eb -r -f PCRE-8.36-foss-2015a.eb
 == temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
 == resolving dependencies ...
 == processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
@@ -2374,8 +2374,7 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
             <header><h1>Build Example</h1></header>
             
             
-            <section><pre><code>!
-$  eb rsync-3.1.2-foss-2015b.eb
+            <section><pre><code>$  eb rsync-3.1.2-foss-2015b.eb
 == temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
 == processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
 == building and installing rsync/3.1.2-foss-2015b...
