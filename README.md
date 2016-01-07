@@ -1,5 +1,4 @@
-# easybuild-life-sciences
-Implementation and use of EasyBuild at FredHutch
+# Implementation and use of EasyBuild at FredHutch
 
 ---
 
@@ -36,7 +35,11 @@ Default Module Version Management
 
 # Prerequisites
 
-Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the `build-essentials` meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod) - it is under current development and offers a different and more advanced feature set.
+You need money to make money, and you need software to build software.
+
+- Ubuntu 14.04
+- `build-essentials`
+- an implementation of Modules - we use Environment Modules, but check out [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
 
 ---
 
@@ -98,6 +101,8 @@ In the easybuild modulefile, I added the following:
     setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
     setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
 
+These should be pretty self-explanatory.
+
 ---
 
 # Modulefile Templating 2
@@ -118,6 +123,8 @@ In the easybuild modulefile, I added the following:
     # Our licenses
     setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
 
+These are more complex, and will be documented soon.
+
 ---
 
 # Easybuild Modulefile
@@ -137,9 +144,18 @@ In the easybuild modulefile, I added the following:
 
 # EasyBuilt
 
+To use:
+
+- Add the Easybuild modules directory to your MODULEPATH environment variable:
     !bash
-    $ module use /app/easybuild/modules/all   # adds this path to $MODULEPATH
-    $ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out
+    $ module use /app/easybuild/modules/all
+
+- Load the EasyBuild module (it should tab out, these are just files):
+    !bash
+    $ module load EasyBuild/2.3.0
+
+- Did it work"
+    !bash
     $ eb --version
     This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
 
@@ -150,8 +166,6 @@ In the easybuild modulefile, I added the following:
 Once you have EasyBuild bootstrapped, you can search for and build a package:
 
 Begin by searching:
-
----
 
     !bash
     $ eb -S PCRE
@@ -179,7 +193,12 @@ We found 9 different easyconfigs for PCRE. Let's build this one: `PCRE-8.36-foss
 
 You probably figured out that `8.36` is the version of PCRE we will build, but what is `foss`?
 
-That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with `eb --list-toolchains` but I prefer to just browse the [repo][https://github.com/hpcugent/easybuild-easyconfigs] (toolchains are just another easyconfig to Easybuild).
+That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with:
+
+    !bash
+    eb --list-toolchains
+
+I prefer to just browse the [repo][https://github.com/hpcugent/easybuild-easyconfigs] (toolchains are just another easyconfig to Easybuild).
 
 ---
 
