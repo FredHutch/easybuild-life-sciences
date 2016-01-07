@@ -171,7 +171,7 @@ To use:
 - Did it work?
 
     !
-    $ eb --version
+    eb --version
     This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
 
 ---
