@@ -150,9 +150,7 @@ Ex:
 
     !Tcl
     set curMod [module-info name]
-    if { [module-info mode load] } {
-    system "logger \$USER module load $curMod "
-    }
+    if { [module-info mode load] } { system "logger \$USER module load $curMod " }
 
 ---
 
@@ -162,16 +160,19 @@ To use:
 
 - Add the Easybuild modules directory to your MODULEPATH environment variable:
 
-    `$ module use /app/easybuild/modules/all`
+    !bash
+    $ module use /app/easybuild/modules/all
 
 - Load the EasyBuild module (it should tab out, these are just files):
 
-    `$ module load EasyBuild/2.3.0`
+    !bash
+    $ module load EasyBuild/2.3.0
 
 - Did it work?
 
-    `$ eb --version
-    This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.`
+    !bash
+    $ eb --version
+    This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
 
 ---
 
@@ -181,7 +182,7 @@ Once you have EasyBuild bootstrapped, you can search for and build a package:
 
 Begin by searching:
 
-    !
+    !bash
     $ eb -S PCRE
     == temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
     == Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
