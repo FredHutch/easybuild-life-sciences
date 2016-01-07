@@ -1730,7 +1730,7 @@ aside {
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-13">
+        <div class="slide has_code slide-13">
           <div class="inner">
             
             <header><h1>Bootstrap - Easybuild Parameters</h1></header>
@@ -1744,16 +1744,15 @@ aside {
 <h1>Bootstrap - Modulefile Manipulating</h1>
 <ul>
 <li>Now, Easybuild configured for us loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
-<li>
-<p><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild
-Ex:</p>
-<p>!Tcl
-set curMod [module-info name]
-if { [module-info mode load] } {
-system "logger \$USER module load $curMod "
-}</p>
-</li>
-</ul></section>
+<li><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild</li>
+</ul>
+<p>Ex:</p>
+<div class="highlight"><pre><span class="k">set</span> curMod <span class="k">[</span><span class="nv">module-info</span> name<span class="k">]</span>
+<span class="k">if</span> <span class="k">{</span> <span class="k">[</span><span class="nv">module-info</span> mode load<span class="k">]</span> <span class="k">}</span> <span class="k">{</span>
+<span class="nv">system</span> <span class="s2">&quot;logger \$USER module load $curMod &quot;</span>
+<span class="k">}</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1794,7 +1793,7 @@ system "logger \$USER module load $curMod "
 <p><code>$ module load EasyBuild/2.3.0</code></p>
 </li>
 <li>
-<p>Did it work"</p>
+<p>Did it work?</p>
 <p>!
 $ eb --version
 This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</p>

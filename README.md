@@ -145,6 +145,7 @@ Of course, some manual adjusting was needed:
 
 - Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
 - `MODULES_FOOTER` - code to include in every modulefile created by Easybuild
+
 Ex:
 
     !Tcl
@@ -167,7 +168,7 @@ To use:
 
     `$ module load EasyBuild/2.3.0`
 
-- Did it work"
+- Did it work?
 
     !
     $ eb --version
