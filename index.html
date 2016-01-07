@@ -1320,7 +1320,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              1/15
+              1/20
             </aside>
           </footer>
         </div>
@@ -1354,7 +1354,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              2/15
+              2/20
             </aside>
           </footer>
         </div>
@@ -1391,7 +1391,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              3/15
+              3/20
             </aside>
           </footer>
         </div>
@@ -1406,8 +1406,12 @@ aside {
             
             
             <section><p>Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.</p>
-<p><em>New package implementation</em> (i.e.: new easyconfigs) - Easybuild may be in transition with regard to easyconfig implementation. Initially the idea of reproducibility and separate easyconfig files went hand-in-hand. You build R version 3.2.1 with an Intel toolchain so you have an easyconfig detailing just that. At this time there are 738 software packages with easyconfigs in the public repo. If we figure only two toolchains and three versions for each package, we will need 4428 easyconfig files. The number of easyconfigs will become more difficult to manage, and certainly more difficult to choose. Easybuild supports several options in the "try" family like "--try-software-version=" and "--try-toolchain=" that can help re-build packages under a different toolchain or with a new version.</p>
-<p><em>Default Module Version Management</em> - In many cases, modules does a good job of picking the most recent modulefile to use. However in several cases (R, PYthon, Intel toolchain, etc.) we do not want the most recent package to be the default. Easybuild (AFAIK) does not provide a mechanism for managing the contents of ".version" in modulefiles directories. Nor should it. However, a written procedure like this does not leave me with a good feeling toward ending up with correctly managed default versions effortlessly. Perhaps a wrapper script. Or an easybuild option "--make-default" that would modify the ".version" file in the resulting modulefile directory.</p></section>
+<p>New package implementation or <strong>new easyconfigs made easy</strong>
+- versions can be changed with <code>--try</code> options, but a new easyconfig per pkg/ver/compiler balloons quickly
+- Easybuild may be moving away from this model to more generic easyconfigs, but this may affect reproducibility</p>
+<p>Default Module Version Management
+- Modules picks the 'newest' version if not specified with <code>module load</code> or in <code>.version</code>
+- I find no option in Easybuild to manage <code>.version</code> files</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1423,7 +1427,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              4/15
+              4/20
             </aside>
           </footer>
         </div>
@@ -1434,11 +1438,10 @@ aside {
         <div class="slide slide-5">
           <div class="inner">
             
-            <header><h1>Implementation Notes</h1></header>
+            <header><h1>Prerequisites</h1></header>
             
             
-            <section><h2>Prerequisites</h2>
-<p>Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the <code>build-essentials</code> meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod</a> - it is under current development and offers a different and more advanced feature set.</p></section>
+            <section><p>Clearly, some software is required to compile software. We started with a base of Ubuntu 14.04 LTS along with the <code>build-essentials</code> meta package. Also, an implementation of Modules is required. We were already using Environment Modules, but if you do not have a Module suite in use, please check out <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod</a> - it is under current development and offers a different and more advanced feature set.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1454,7 +1457,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              5/15
+              5/20
             </aside>
           </footer>
         </div>
@@ -1465,21 +1468,15 @@ aside {
         <div class="slide slide-6">
           <div class="inner">
             
-            <header><h2>Environment</h2></header>
+            <header><h1>Our environment</h1></header>
             
             
-            <section><p>First, some notes about our environment:</p>
-<ul>
-<li>read-only NFS mount on all systems at /app that currently has hand-build software packages and our existing modulefile hierarchy</li>
-<li>continued use of existing modulefiles (using <a href="http://modules.sourceforge.net/">Environment Modules</a></li>
+            <section><ul>
+<li>read-only NFS mount on all systems mounted at <code>/app</code></li>
+<li>hand-built software packages</li>
+<li>hand-managed modulefile hierarchy</li>
 <li>pre-existing POSIX group of all users expected to execute builds</li>
 <li>user base that is highly varied with regard to Unix knowledge - <em>keeping things simple encourages more widespread use</em></li>
-</ul>
-<p>Second, some notes about paths:</p>
-<ul>
-<li>easybuild was bootstrapped into /app/easybuild</li>
-<li>we created /app/easybuild/etc to hold additional centralized configuration files</li>
-<li>we created /app/easybuild/fh_easyconfigs to hold our custom easyconfig files while we are developing them</li>
 </ul></section>
             
           </div>
@@ -1496,7 +1493,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              6/15
+              6/20
             </aside>
           </footer>
         </div>
@@ -1507,13 +1504,14 @@ aside {
         <div class="slide slide-7">
           <div class="inner">
             
-            <header><h1>Step-By-Step Easybuild installation</h1></header>
+            <header><h1>Bootstrap</h1></header>
             
             
-            <section><ol>
-<li>bootstrap easybuild - follow the <a href="https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild">excellent documentation</a>
-   Since we have an existing location for software packages, I chose that for the EasyBuild bootstrap (/app/easybuild in our case)</li>
-</ol></section>
+            <section><ul>
+<li>easybuild was bootstrapped into <code>/app/easybuild</code></li>
+<li>we created <code>/app/easybuild/etc</code> to hold additional centralized configuration files</li>
+<li>we created <code>/app/easybuild/fh_easyconfigs</code> to hold our custom easyconfig files while we are developing them</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1529,7 +1527,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              7/15
+              7/20
             </aside>
           </footer>
         </div>
@@ -1540,11 +1538,13 @@ aside {
         <div class="slide slide-8">
           <div class="inner">
             
+            <header><h1>Step-By-Step Easybuild Bootstrap</h1></header>
             
-            <section><ol>
-<li>Set EasyBuild variables
-   Easybuild is very consistent in how it can be configured. A configuration file, command-line parameters, or environment variables are all recognized in the same and consistent way. Since Easybuild uses modules, I decided to set environment variables there. I made the following changes to files:</li>
-</ol></section>
+            
+            <section><h2>Step One - RTFM</h2>
+<ul>
+<li>Follow the <a href="https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild">Fine Manual</a></li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -1560,7 +1560,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              8/15
+              8/20
             </aside>
           </footer>
         </div>
@@ -1571,21 +1571,17 @@ aside {
         <div class="slide slide-9">
           <div class="inner">
             
-            <header><h1>keep group writable bit</h1></header>
+            <header><h1>Step-By-Step Easybuild Bootstrap</h1></header>
             
             
-            <section><p>setenv EASYBUILD_GROUP_WRITABLE_INSTALLDIR 1</p>
-<h1>set umask to preserve group write permissions on modulefiles</h1>
-<p>setenv EASYBUILD_UMASK 002</p>
-<h1>create module dependencies to recursively unload</h1>
-<p>setenv EASYBUILD_RECURSIVE_MODULE_UNLOAD 1</p>
-<h1>add our normal modulefile footer</h1>
-<p>setenv EASYBUILD_MODULES_FOOTER "$ebDir/etc/fredhutch_modulefile_footer"</p>
-<h1>add our own easyconfig directory to robot paths</h1>
-<p>setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"</p>
-<h1>Our licenses</h1>
-<p>setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
-```</p></section>
+            <section><h2>Step Two - Environment</h2>
+<p>EasyBuild configuration</p>
+<p>Configuration is consistent across methods:
+- config file(s)
+- environment variables
+- command-line parameters</p>
+<p>Easybuild applies them in that order (meaning command-line overrides everything)</p>
+<p>Since we use Modules, it made sense to use Environment Variables in our case</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1601,7 +1597,7 @@ aside {
             </aside>
             
             <aside class="page_number">
-              9/15
+              9/20
             </aside>
           </footer>
         </div>
@@ -1609,17 +1605,23 @@ aside {
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-10">
+        <div class="slide has_code slide-10">
           <div class="inner">
             
-            <header><h1>enable logging to syslog</h1></header>
+            <header><h1>Modulefile Templating</h1></header>
             
             
-            <section><p>set curMod [module-info name]
-if { [module-info mode load] } {
-system "logger \$USER module load $curMod "
-}
-```</p></section>
+            <section><h2>Paths and Logs</h2>
+<p>In the easybuild modulefile, I added the following:</p>
+<div class="highlight"><pre><span class="lineno">1 </span><span class="k">set</span> ebDir <span class="s2">&quot;/app/easybuild&quot;</span>
+<span class="lineno">2 </span><span class="nv">setenv</span> EASYBUILD_SOURCEPATH <span class="s2">&quot;$ebDir/sources&quot;</span>
+<span class="lineno">3 </span><span class="nv">setenv</span> EASYBUILD_BUILDPATH <span class="s2">&quot;$ebDir/build&quot;</span>
+<span class="lineno">4 </span><span class="nv">setenv</span> EASYBUILD_INSTALLPATH_SOFTWARE <span class="s2">&quot;$ebDir/software&quot;</span>
+<span class="lineno">5 </span><span class="nv">setenv</span> EASYBUILD_INSTALLPATH_MODULES <span class="s2">&quot;$ebDir/modules&quot;</span>
+<span class="lineno">6 </span><span class="nv">setenv</span> EASYBUILD_REPOSITORYPATH <span class="s2">&quot;$ebDir/ebfiles_repo&quot;</span>
+<span class="lineno">7 </span><span class="nv">setenv</span> EASYBUILD_LOGFILE_FORMAT <span class="s2">&quot;$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log&quot;</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1635,7 +1637,7 @@ system "logger \$USER module load $curMod "
             </aside>
             
             <aside class="page_number">
-              10/15
+              10/20
             </aside>
           </footer>
         </div>
@@ -1643,15 +1645,27 @@ system "logger \$USER module load $curMod "
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-11">
+        <div class="slide has_code slide-11">
           <div class="inner">
             
+            <header><h1>Modulefile Templating 2</h1></header>
             
-            <section><ol>
-<li>At this point, you should be able to load the EasyBuild module:</li>
-</ol>
-<p><code>$ module use /app/easybuild/modules/all   # adds this path to MODULEPATH
-$ module load Easybuild/2.3.0             # you should use the version you just bootstrapped - it should also tab out</code></p></section>
+            
+            <section><h2>Easybuild parameters</h2>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="c"># keep group writable bit</span>
+<span class="lineno"> 2 </span><span class="nv">setenv</span> EASYBUILD_GROUP_WRITABLE_INSTALLDIR <span class="mi">1</span>
+<span class="lineno"> 3 </span><span class="c"># set umask to preserve group write permissions on modulefiles</span>
+<span class="lineno"> 4 </span><span class="nv">setenv</span> EASYBUILD_UMASK <span class="mo">002</span>
+<span class="lineno"> 5 </span><span class="c"># create module dependencies to recursively unload</span>
+<span class="lineno"> 6 </span><span class="nv">setenv</span> EASYBUILD_RECURSIVE_MODULE_UNLOAD <span class="mi">1</span>
+<span class="lineno"> 7 </span><span class="c"># add our normal modulefile footer</span>
+<span class="lineno"> 8 </span><span class="nv">setenv</span> EASYBUILD_MODULES_FOOTER <span class="s2">&quot;$ebDir/etc/fredhutch_modulefile_footer&quot;</span>
+<span class="lineno"> 9 </span><span class="c"># add our own easyconfig directory to robot paths</span>
+<span class="lineno">10 </span><span class="nv">setenv</span> EASYBUILD_ROBOT_PATHS <span class="s2">&quot;:$ebDir/fh_easyconfigs&quot;</span>
+<span class="lineno">11 </span><span class="c"># Our licenses</span>
+<span class="lineno">12 </span><span class="nv">setenv</span> LM_LICENSE_FILE <span class="s2">&quot;$ebDir/etc/licenses/intel.lic&quot;</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1667,7 +1681,7 @@ $ module load Easybuild/2.3.0             # you should use the version you just 
             </aside>
             
             <aside class="page_number">
-              11/15
+              11/20
             </aside>
           </footer>
         </div>
@@ -1676,6 +1690,83 @@ $ module load Easybuild/2.3.0             # you should use the version you just 
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
         <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>Easybuild Modulefile</h1></header>
+            
+            
+            <section><ul>
+<li>Our Easybuild config loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
+<li>With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself</li>
+<li>
+<p>Custom items can be added to all modulefiles produced by Easybuild, like logging module use:</p>
+<p>!Tcl</p>
+<h1>enable logging to syslog</h1>
+<p>set curMod [module-info name]
+if { [module-info mode load] } {
+system "logger \$USER module load $curMod "
+}</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-13">
+          <div class="inner">
+            
+            <header><h1>EasyBuilt</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span class="lineno">1 </span><span class="nv">$ </span>module use /app/easybuild/modules/all   <span class="c"># adds this path to $MODULEPATH</span>
+<span class="lineno">2 </span><span class="nv">$ </span>module load Easybuild/2.3.0             <span class="c"># you should use the version you just bootstrapped - it should also tab out</span>
+<span class="lineno">3 </span><span class="nv">$ </span>eb --version
+<span class="lineno">4 </span>This is EasyBuild 2.3.0 <span class="o">(</span>framework: 2.3.0, easyblocks: 2.3.0<span class="o">)</span> on host rhino-d.
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
           <div class="inner">
             
             <header><h1>Step-By-Step Build a package</h1></header>
@@ -1698,7 +1789,7 @@ $ module load Easybuild/2.3.0             # you should use the version you just 
             </aside>
             
             <aside class="page_number">
-              12/15
+              14/20
             </aside>
           </footer>
         </div>
@@ -1706,27 +1797,28 @@ $ module load Easybuild/2.3.0             # you should use the version you just 
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-13">
+        <div class="slide has_code slide-15">
           <div class="inner">
             
             
-            <section><p><code>$ eb -S PCRE
-== temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
-== Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
-== Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
-CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
- * $CFGS1/PCRE-8.12-goalf-1.1.0-no-OFED.eb
- * $CFGS1/PCRE-8.12-goolf-1.4.10.eb
- * $CFGS1/PCRE-8.12-ictce-4.0.6.eb
- * $CFGS1/PCRE-8.12-ictce-5.3.0.eb
- * $CFGS1/PCRE-8.12-ictce-5.5.0.eb
- * $CFGS1/PCRE-8.35-intel-2014b.eb
- * $CFGS1/PCRE-8.36-foss-2015a.eb
- * $CFGS1/PCRE-8.36-intel-2015a.eb
- * $CFGS1/PCRE-8.37-intel-2015a.eb
-== Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
-== Temporary directory /tmp/eb-lz7d_6 has been removed.</code></p>
-<p>Here we have found 9 different easyconfigs for PCRE. The keyword after the version is the toolchain. You should research toolchains at some point, but we chose to focus on two toolchain families: <code>intel</code> and <code>foss</code>. One is a closed-source optimized compiler for Intel CPUs and the other is an open-source chain using free open source software.</p></section>
+            <section><div class="highlight"><pre><span class="lineno"> 1 </span><span class="nv">$ </span>eb -S <span class="nv">PCRE</span>
+<span class="lineno"> 2 </span><span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
+<span class="lineno"> 3 </span><span class="o">==</span> Searching <span class="o">(</span><span class="k">case</span>-insensitive<span class="o">)</span> <span class="k">for</span> <span class="s1">&#39;PCRE&#39;</span> in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
+<span class="lineno"> 4 </span><span class="o">==</span> Searching <span class="o">(</span><span class="k">case</span>-insensitive<span class="o">)</span> <span class="k">for</span> <span class="s1">&#39;PCRE&#39;</span> in /app/easybuild/fh_easyconfigs 
+<span class="lineno"> 5 </span><span class="nv">CFGS1</span><span class="o">=</span>/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
+<span class="lineno"> 6 </span> * <span class="nv">$CFGS1</span>/PCRE-8.12-goalf-1.1.0-no-OFED.eb
+<span class="lineno"> 7 </span> * <span class="nv">$CFGS1</span>/PCRE-8.12-goolf-1.4.10.eb
+<span class="lineno"> 8 </span> * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-4.0.6.eb
+<span class="lineno"> 9 </span> * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-5.3.0.eb
+<span class="lineno">10 </span> * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-5.5.0.eb
+<span class="lineno">11 </span> * <span class="nv">$CFGS1</span>/PCRE-8.35-intel-2014b.eb
+<span class="lineno">12 </span> * <span class="nv">$CFGS1</span>/PCRE-8.36-foss-2015a.eb
+<span class="lineno">13 </span> * <span class="nv">$CFGS1</span>/PCRE-8.36-intel-2015a.eb
+<span class="lineno">14 </span> * <span class="nv">$CFGS1</span>/PCRE-8.37-intel-2015a.eb
+<span class="lineno">15 </span><span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
+<span class="lineno">16 </span><span class="o">==</span> Temporary directory /tmp/eb-lz7d_6 has been removed.
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1742,7 +1834,7 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
             </aside>
             
             <aside class="page_number">
-              13/15
+              15/20
             </aside>
           </footer>
         </div>
@@ -1750,32 +1842,65 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-14">
+        <div class="slide slide-16">
+          <div class="inner">
+            
+            <header><h1>Found PCRE easyconfigs!</h1></header>
+            
+            
+            <section><p>We found 9 different easyconfigs for PCRE. Let's build this one: <code>PCRE-8.36-foss-2015a.eb</code></p>
+<p>You probably figured out that <code>8.36</code> is the version of PCRE we will build, but what is <code>foss</code>?</p>
+<p>That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with <code>eb --list-toolchains</code> but I prefer to just browse the [repo][https://github.com/hpcugent/easybuild-easyconfigs] (toolchains are just another easyconfig to Easybuild).</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-17">
           <div class="inner">
             
             
             <section><p>Once we have decided what to build, you can do a dry-run like this:</p>
-<p><code>$ eb -r -D PCRE-8.36-foss-2015a.eb
-== temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
-Dry run: printing build status of easyconfigs and dependencies
-CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
- * [x] $CFGS/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
- * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0)
- * [x] $CFGS/l/libtool/libtool-2.4.2-GCC-4.9.2.eb (module: libtool/2.4.2-GCC-4.9.2)
- * [x] $CFGS/m/M4/M4-1.4.17-GCC-4.9.2.eb (module: M4/1.4.17-GCC-4.9.2)
- * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb (module: Autoconf/2.69-GCC-4.9.2)
- * [x] $CFGS/a/Automake/Automake-1.15-GCC-4.9.2.eb (module: Automake/1.15-GCC-4.9.2)
- * [x] $CFGS/n/numactl/numactl-2.0.10-GCC-4.9.2.eb (module: numactl/2.0.10-GCC-4.9.2)
- * [x] $CFGS/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb (module: hwloc/1.10.0-GCC-4.9.2)
- * [x] $CFGS/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb (module: OpenMPI/1.8.4-GCC-4.9.2)
- * [x] $CFGS/g/gompi/gompi-2015a.eb (module: gompi/2015a)
- * [x] $CFGS/f/FFTW/FFTW-3.3.4-gompi-2015a.eb (module: FFTW/3.3.4-gompi-2015a)
- * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0)
- * [x] $CFGS/f/foss/foss-2015a.eb (module: foss/2015a)
- * [ ] $CFGS/p/PCRE/PCRE-8.36-foss-2015a.eb (module: PCRE/8.36-foss-2015a)
-== Tmporary log file(s) /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
-== Temporary directory /tmp/eb-08QTaF has been removed.</code></p>
-<p>In this case, EasyBuild was given the '-r' robot flag so it automatically included dependencies it was able to meet with existing easyconfigs, and it was told to do a dry-run with '-D'. You will note the all of the packages except PCRE itself have 'X' noting they are already built and installed.</p></section>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="nv">$ </span>eb -r -D PCRE-8.36-foss-2015a.eb
+<span class="lineno"> 2 </span><span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
+<span class="lineno"> 3 </span>Dry run: printing build status of easyconfigs and dependencies
+<span class="lineno"> 4 </span><span class="nv">CFGS</span><span class="o">=</span>/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
+<span class="lineno"> 5 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/g/GCC/GCC-4.9.2.eb <span class="o">(</span>module: GCC/4.9.2<span class="o">)</span>
+<span class="lineno"> 6 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb <span class="o">(</span>module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0<span class="o">)</span>
+<span class="lineno"> 7 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/l/libtool/libtool-2.4.2-GCC-4.9.2.eb <span class="o">(</span>module: libtool/2.4.2-GCC-4.9.2<span class="o">)</span>
+<span class="lineno"> 8 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/m/M4/M4-1.4.17-GCC-4.9.2.eb <span class="o">(</span>module: M4/1.4.17-GCC-4.9.2<span class="o">)</span>
+<span class="lineno"> 9 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb <span class="o">(</span>module: Autoconf/2.69-GCC-4.9.2<span class="o">)</span>
+<span class="lineno">10 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/a/Automake/Automake-1.15-GCC-4.9.2.eb <span class="o">(</span>module: Automake/1.15-GCC-4.9.2<span class="o">)</span>
+<span class="lineno">11 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/n/numactl/numactl-2.0.10-GCC-4.9.2.eb <span class="o">(</span>module: numactl/2.0.10-GCC-4.9.2<span class="o">)</span>
+<span class="lineno">12 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb <span class="o">(</span>module: hwloc/1.10.0-GCC-4.9.2<span class="o">)</span>
+<span class="lineno">13 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb <span class="o">(</span>module: OpenMPI/1.8.4-GCC-4.9.2<span class="o">)</span>
+<span class="lineno">14 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/g/gompi/gompi-2015a.eb <span class="o">(</span>module: gompi/2015a<span class="o">)</span>
+<span class="lineno">15 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/f/FFTW/FFTW-3.3.4-gompi-2015a.eb <span class="o">(</span>module: FFTW/3.3.4-gompi-2015a<span class="o">)</span>
+<span class="lineno">16 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb <span class="o">(</span>module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0<span class="o">)</span>
+<span class="lineno">17 </span> * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/f/foss/foss-2015a.eb <span class="o">(</span>module: foss/2015a<span class="o">)</span>
+<span class="lineno">18 </span> * <span class="o">[</span> <span class="o">]</span> <span class="nv">$CFGS</span>/p/PCRE/PCRE-8.36-foss-2015a.eb <span class="o">(</span>module: PCRE/8.36-foss-2015a<span class="o">)</span>
+<span class="lineno">19 </span><span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
+<span class="lineno">20 </span><span class="o">==</span> Temporary directory /tmp/eb-08QTaF has been removed.
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -1791,7 +1916,7 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             </aside>
             
             <aside class="page_number">
-              14/15
+              17/20
             </aside>
           </footer>
         </div>
@@ -1799,7 +1924,100 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide slide-15">
+        <div class="slide slide-18">
+          <div class="inner">
+            
+            <header><h1>Dependencies</h1></header>
+            
+            
+            <section><p>By giving the <code>-r</code> flag to Easybuild:</p>
+<ul>
+<li>Easybuild automatically spidered all dependencies, including the specified toolchain</li>
+<li>Already built packages are indicated with an <code>X</code></li>
+<li>In this case, only PCRE will be built</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-19">
+          <div class="inner">
+            
+            <header><h1>Build</h1></header>
+            
+            
+            <section><p>And finally, you can remove the '-D' and build the software:</p>
+<div class="highlight"><pre><span class="lineno"> 1 </span><span class="nv">$ </span>eb -r -f PCRE-8.36-foss-2015a.eb
+<span class="lineno"> 2 </span><span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
+<span class="lineno"> 3 </span><span class="o">==</span> resolving dependencies ...
+<span class="lineno"> 4 </span><span class="o">==</span> processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
+<span class="lineno"> 5 </span><span class="o">==</span> building and installing PCRE/8.36-foss-2015a...
+<span class="lineno"> 6 </span><span class="o">==</span> fetching files...
+<span class="lineno"> 7 </span><span class="o">==</span> creating build dir, resetting environment...
+<span class="lineno"> 8 </span><span class="o">==</span> unpacking...
+<span class="lineno"> 9 </span><span class="o">==</span> patching...
+<span class="lineno">10 </span><span class="o">==</span> preparing...
+<span class="lineno">11 </span><span class="o">==</span> configuring...
+<span class="lineno">12 </span><span class="o">==</span> building...
+<span class="lineno">13 </span><span class="o">==</span> testing...
+<span class="lineno">14 </span><span class="o">==</span> installing...
+<span class="lineno">15 </span><span class="o">==</span> taking care of extensions...
+<span class="lineno">16 </span><span class="o">==</span> postprocessing...
+<span class="lineno">17 </span><span class="o">==</span> sanity checking...
+<span class="lineno">18 </span><span class="o">==</span> cleaning up...
+<span class="lineno">19 </span><span class="o">==</span> creating module...
+<span class="lineno">20 </span><span class="o">==</span> permissions...
+<span class="lineno">21 </span><span class="o">==</span> packaging...
+<span class="lineno">22 </span><span class="o">==</span> COMPLETED: Installation ended <span class="nv">successfully</span>
+<span class="lineno">23 </span><span class="o">==</span> Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
+<span class="lineno">24 </span><span class="o">==</span> Build succeeded <span class="k">for</span> <span class="m">1</span> out of <span class="nv">1</span>
+<span class="lineno">25 </span><span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
+<span class="lineno">26 </span><span class="o">==</span> Temporary directory /tmp/eb-1TnpU8 has been removed.
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/20
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
           <div class="inner">
             
             <header><h1>Step-By-Step Adapt an EasyConfig</h1></header>
@@ -1819,7 +2037,7 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             </aside>
             
             <aside class="page_number">
-              15/15
+              20/20
             </aside>
           </footer>
         </div>
@@ -1858,69 +2076,98 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Implementation Notes</a></th>
+        <th><a href="#slide5">Prerequisites</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
-        
-        <tr id="toc-row-6" class="sub">
-          <th><a href="#slide6">Environment</a></th>
-          <td><a href="#slide6">6</a></td>
-        </tr>
-        
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Our environment</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Step-By-Step Easybuild installation</a></th>
+        <th><a href="#slide7">Bootstrap</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">-</a></th>
+        <th><a href="#slide8">Step-By-Step Easybuild Bootstrap</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">keep group writable bit</a></th>
+        <th><a href="#slide9">Step-By-Step Easybuild Bootstrap</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">enable logging to syslog</a></th>
+        <th><a href="#slide10">Modulefile Templating</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">-</a></th>
+        <th><a href="#slide11">Modulefile Templating 2</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Step-By-Step Build a package</a></th>
+        <th><a href="#slide12">Easybuild Modulefile</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">-</a></th>
+        <th><a href="#slide13">EasyBuilt</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">-</a></th>
+        <th><a href="#slide14">Step-By-Step Build a package</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Step-By-Step Adapt an EasyConfig</a></th>
+        <th><a href="#slide15">-</a></th>
         <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Found PCRE easyconfigs!</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">-</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Dependencies</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Build</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">Step-By-Step Adapt an EasyConfig</a></th>
+        <td><a href="#slide20">20</a></td>
       </tr>
       
       
