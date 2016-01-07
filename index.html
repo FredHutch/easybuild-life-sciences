@@ -1705,7 +1705,7 @@ aside {
 <p>Of course, some manual adjusting was needed:</p>
 <ul>
 <li><code>chgrp -R &lt;build group&gt; /app/easybuild/*</code> - change to our build group from the default group of the installer account</li>
-<li><code>`chmod -R g+s /app/easybuild/*</code> - setgid bit for dirs created during bootstrap</li>
+<li><code>chmod -R g+s /app/easybuild/*</code> - setgid bit for dirs created during bootstrap</li>
 </ul></section>
             
           </div>
@@ -1744,9 +1744,9 @@ aside {
 <h1>Bootstrap - Modulefile Manipulating</h1>
 <ul>
 <li>Now, Easybuild configured for us loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
-<li><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild</li>
 <li>
-<p>Ex:</p>
+<p><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild
+Ex:</p>
 <p>!Tcl
 set curMod [module-info name]
 if { [module-info mode load] } {
@@ -1787,13 +1787,11 @@ system "logger \$USER module load $curMod "
 <ul>
 <li>
 <p>Add the Easybuild modules directory to your MODULEPATH environment variable:</p>
-<p>!
-$ module use /app/easybuild/modules/all</p>
+<p><code>$ module use /app/easybuild/modules/all</code></p>
 </li>
 <li>
 <p>Load the EasyBuild module (it should tab out, these are just files):</p>
-<p>!
-$ module load EasyBuild/2.3.0</p>
+<p><code>$ module load EasyBuild/2.3.0</code></p>
 </li>
 <li>
 <p>Did it work"</p>
@@ -1883,8 +1881,7 @@ CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybu
             <section><p>We found 9 different easyconfigs for PCRE. Let's build this one: <code>PCRE-8.36-foss-2015a.eb</code></p>
 <p>You probably figured out that <code>8.36</code> is the version of PCRE we will build, but what is <code>foss</code>?</p>
 <p>That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with:</p>
-<pre><code>!
-eb --list-toolchains
+<pre><code>`eb --list-toolchains`
 </code></pre>
 <p>I prefer to just browse the <a href="https://github.com/hpcugent/easybuild-easyconfigs">repo</a> - toolchains are just another easyconfig to Easybuild.</p></section>
             
@@ -2098,7 +2095,8 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
             
             
             <section><p>Easybuild logic is contained in easyblocks - these are what execute the build. You can get a list of easyblocks with: <code>eb --list-easyblocks</code>.</p>
-<p>There are a number of mandatory parameters for each easyblock, which can be displayed with : <code>eb -a -e &lt;easyblock&gt;</code>.</p>
+<p>There are a number of mandatory parameters for each easyblock, which can be displayed with:</p>
+<p><code>eb -a -e &lt;easyblock&gt;</code></p>
 <p>For this explanation, we will use the <code>ConfigureMake</code> easyblock, which should be familiar to anyone who has manually built software: <code>./configure &amp;&amp; make &amp;&amp; make install</code>.</p>
 <p>The naming convention is typically <code>&lt;name&gt;-&lt;version&gt;-&lt;toolchain name&gt;-&lt;toolchain version&gt;.eb</code>.</p></section>
             
@@ -2169,7 +2167,7 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
         <div class="slide has_code slide-23">
           <div class="inner">
             
-            <header><h1>Easyconfig Parameters: name, version</h1></header>
+            <header><h1>Parameters: name, version</h1></header>
             
             
             <section><h2><code>name</code></h2>
@@ -2210,7 +2208,7 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
         <div class="slide has_code slide-24">
           <div class="inner">
             
-            <header><h1>Easyconfig Parameters: toolchain</h1></header>
+            <header><h1>Parameters: toolchain</h1></header>
             
             
             <section><h2><code>toolchain</code></h2>
@@ -2246,7 +2244,7 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
         <div class="slide has_code slide-25">
           <div class="inner">
             
-            <header><h1>Easyconfig Parameters: description, homepage</h1></header>
+            <header><h1>Parameters: description, homepage</h1></header>
             
             
             <section><h2><code>description</code></h2>
@@ -2290,7 +2288,7 @@ $ eb -r -f PCRE-8.36-foss-2015a.eb
         <div class="slide has_code slide-26">
           <div class="inner">
             
-            <header><h1>Easyconfig Parameters: source, source_urls</h1></header>
+            <header><h1>Parameters: source, source_urls</h1></header>
             
             
             <section><p>We will need to specify a few more parameters for easybuild to handle things correctly:</p>
@@ -2598,25 +2596,25 @@ ERROR: Build of /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb failed (
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">Easyconfig Parameters: name, version</a></th>
+        <th><a href="#slide23">Parameters: name, version</a></th>
         <td><a href="#slide23">23</a></td>
       </tr>
       
       
       <tr id="toc-row-24">
-        <th><a href="#slide24">Easyconfig Parameters: toolchain</a></th>
+        <th><a href="#slide24">Parameters: toolchain</a></th>
         <td><a href="#slide24">24</a></td>
       </tr>
       
       
       <tr id="toc-row-25">
-        <th><a href="#slide25">Easyconfig Parameters: description, homepage</a></th>
+        <th><a href="#slide25">Parameters: description, homepage</a></th>
         <td><a href="#slide25">25</a></td>
       </tr>
       
       
       <tr id="toc-row-26">
-        <th><a href="#slide26">Easyconfig Parameters: source, source_urls</a></th>
+        <th><a href="#slide26">Parameters: source, source_urls</a></th>
         <td><a href="#slide26">26</a></td>
       </tr>
       

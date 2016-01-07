@@ -131,7 +131,7 @@ Since we decided to have building be performed by members of a POSIX group, and 
 Of course, some manual adjusting was needed:
 
 - `chgrp -R <build group> /app/easybuild/*` - change to our build group from the default group of the installer account
-- ``chmod -R g+s /app/easybuild/*` - setgid bit for dirs created during bootstrap
+- `chmod -R g+s /app/easybuild/*` - setgid bit for dirs created during bootstrap
 
 ---
 
@@ -145,7 +145,7 @@ Of course, some manual adjusting was needed:
 
 - Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
 - `MODULES_FOOTER` - code to include in every modulefile created by Easybuild
--  Ex:
+Ex:
 
     !Tcl
     set curMod [module-info name]
@@ -161,13 +161,11 @@ To use:
 
 - Add the Easybuild modules directory to your MODULEPATH environment variable:
 
-    !
-    $ module use /app/easybuild/modules/all
+    `$ module use /app/easybuild/modules/all`
 
 - Load the EasyBuild module (it should tab out, these are just files):
 
-    !
-    $ module load EasyBuild/2.3.0
+    `$ module load EasyBuild/2.3.0`
 
 - Did it work"
 
@@ -211,8 +209,7 @@ You probably figured out that `8.36` is the version of PCRE we will build, but w
 
 That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with:
 
-    !
-    eb --list-toolchains
+    `eb --list-toolchains`
 
 I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easyconfigs) - toolchains are just another easyconfig to Easybuild.
 
@@ -307,7 +304,9 @@ I'll demonstrate creating a new easyconfig as the procedure is the same, only ge
 
 Easybuild logic is contained in easyblocks - these are what execute the build. You can get a list of easyblocks with: `eb --list-easyblocks`.
 
-There are a number of mandatory parameters for each easyblock, which can be displayed with : `eb -a -e <easyblock>`.
+There are a number of mandatory parameters for each easyblock, which can be displayed with:
+
+`eb -a -e <easyblock>`
 
 For this explanation, we will use the `ConfigureMake` easyblock, which should be familiar to anyone who has manually built software: `./configure && make && make install`.
 
@@ -334,7 +333,7 @@ Except for easyblock, these will all default to `None` if not supplied in the fi
 
 ---
 
-# Easyconfig Parameters: name, version
+# Parameters: name, version
 
 ## `name`
 
@@ -356,7 +355,7 @@ Ex:
 
 ---
 
-# Easyconfig Parameters: toolchain
+# Parameters: toolchain
 
 ## `toolchain`
 
@@ -371,7 +370,7 @@ This is a python dict specifying the name and version of the toolchain.
 
 ---
 
-# Easyconfig Parameters: description, homepage
+# Parameters: description, homepage
 
 ## `description`
 
@@ -395,7 +394,7 @@ Ex:
 
 ---
 
-# Easyconfig Parameters: source, source_urls
+# Parameters: source, source_urls
 
 We will need to specify a few more parameters for easybuild to handle things correctly:
 
