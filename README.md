@@ -1,4 +1,4 @@
-# Implementation and use of EasyBuild at FredHutch
+# EasyBuild at FredHutch
 
 ---
 
@@ -61,17 +61,13 @@ You need money to make money, and you need software to build software.
 
 ---
 
-# Step-By-Step Easybuild Bootstrap
-
-## Step One - RTFM
+# Easybuild Bootstrap - Step One - RTFM
 
 - Follow the [Fine Manual](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
 
 ---
 
-# Step-By-Step Easybuild Bootstrap
-
-## Step Two - Environment
+# Easybuild Bootstrap - Step Two - Environment
 
 EasyBuild configuration
 
@@ -86,9 +82,7 @@ Since we use Modules, it made sense to use Environment Variables in our case
 
 ---
 
-# Modulefile Templating
-
-## Paths and Logs
+# Easybuild Bootstrap - Modulefile Templating - Paths and Logs
 
 In the easybuild modulefile, I added the following:
 
@@ -105,9 +99,7 @@ The modulefile is a tcl snippet and this sets environment variables for us.
 
 ---
 
-# Modulefile Templating 2
-
-## Easybuild parameters
+# Easybuild Bootstrap - Modulefile Templating - Easybuild Parameters
 
     !Tcl
     # keep group writable bit
@@ -127,11 +119,33 @@ These are more complex, and will be documented soon.
 
 ---
 
-# Easybuild Modulefile
+# Easybuild Bootstrap - Ownership and Permissions
+
+There are a number of manual steps that were performed that can best be described as messy, and also perhaps make up the bulk of the useful information here.
+
+Since we decided to have building be performed by members of a POSIX group, and we want produced software and modules centrally located for the use of everyone, we have to tell Easybuild how to do that.
+
+- `GROUP_WRITABLE_INSTALLDIR` - this lets our group write to easybuild-created directories
+- `UMASK 002` - this tells Easybuild to set this umask when writing directories/files
+
+Of course, some manual adjusting was needed:
+
+- `chgrp -R <build group> /app/easybuild/*` - change to our build group from the default group of the installer account
+- ``chmod -R g+s /app/easybuild/*` - setgid bit for dirs created during bootstrap
+
+---
+
+# Easubuild Bootstrap - Easybuild Parameters
+
+- `RECURSIVE_MODULE_UNLOAD 1` - this causes Easybuild to create modulefiles that will auto-load *and* auto-unload dependent modules
+- `ROBOT_PATHS <path>` - adds our local easyconfig development dir to robot paths
+- `LM_LICENSE_FILE <file>` - where our licenses are located
+
+# Easybuild Bootstrap - Modulefile Manipulating
 
 - Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
-- With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself with the `modules-footer` configuration option
-- With `modules-footer` and other options, custom items can be added to all modulefiles produced by Easybuild, like logging module use:
+- `MODULES_FOOTER` - code to include in every modulefile created by Easybuild
+-  Ex:
 
     !Tcl
     set curMod [module-info name]
@@ -189,7 +203,7 @@ Begin by searching:
 
 ---
 
-# Found PCRE easyconfigs!
+# Found easyconfigs!
 
 We found 9 different easyconfigs for PCRE. Let's build this one: `PCRE-8.36-foss-2015a.eb`
 
@@ -203,6 +217,8 @@ That is the Easybuild toolchain for this easyconfig. You can get a list of toolc
 I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easyconfigs) - toolchains are just another easyconfig to Easybuild.
 
 ---
+
+# Dry Run
 
 Once we have decided what to build, you can do a dry-run like this:
 
@@ -274,4 +290,185 @@ And finally, you can remove the '-D' and build the software:
 
 ---
 
-# Step-By-Step Adapt an EasyConfig
+# Step-By-Step EasyConfigs
+
+Again, [RTFM](http://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html) - it is very good!
+
+There are two reason rou might want to modify or build an easyconfig file:
+
+- Update versions (of software, toolchain, or dependencies)
+- No easyconfig exists
+
+I'll demonstrate creating a new easyconfig as the procedure is the same, only generally easier for version updates.
+
+---
+
+# Create an easyconfig file
+
+Easybuild logic is contained in easyblocks - these are what execute the build. You can get a list of easyblocks with: `eb --list-easyblocks`.
+
+There are a number of mandatory parameters for each easyblock, which can be displayed with : `eb -a -e <easyblock>`.
+
+For this explanation, we will use the `ConfigureMake` easyblock, which should be familiar to anyone who has manually built software: `./configure && make && make install`.
+
+The naming convention is typically `<name>-<version>-<toolchain name>-<toolchain version>.eb`.
+
+---
+
+# ConfigureMake Mandatory Parameters
+
+This is a skeleton ConfigureMake easyconfig with all mandatory parameters:
+
+    !python
+    easyblock = 'ConfigureMake'
+    name = 
+    version = 
+    toolchain = 
+    description = 
+    homepage = 
+    docurls = 
+    software_license = 
+    software_license_urls = 
+
+Except for easyblock, these will all default to `None` if not supplied in the file (so I guess they are not really mandatory, huh?)
+
+---
+
+# Easyconfig Parameters: name, version
+
+## `name`
+
+This name is the name of the software package, will be the name of the modulefile, and will be in the path of the software install directory. It is sometimes referenced later in the easyconfig file.
+
+Ex:
+
+    !python
+    name = 'zlib'
+
+## `version`
+
+This is the version of the software to build. It is referenced later in the easyconfig file.
+
+Ex:
+    !python
+    version = '1.2.8'
+
+---
+
+# Easyconfig Parameters: toolchain
+
+## `toolchain`
+
+This is the toolchain (compilers, supplemental libraries, etc.) that easybuild will use to build the software. It must be specified in an existing easyconfig (though does not need to be pre-built - easybuild will take care of building it).
+
+Ex:
+
+    !python
+    toolchain = {'name': 'foss', 'version': '2015b'}
+
+This is a python dict specifying the name and version of the toolchain.
+
+---
+
+# Easyconfig Parameters: description, homepage
+
+## `description`
+
+This is a generally free-form description that will appear as metadata in the modulefile, and therefore be availabe to users through the `module` command.
+
+Ex:
+
+    !python
+    description = """zlib is designed to be a free, general-purpose, legally unencumbered -- that is,
+ not covered by any patents -- lossless data-compression library for use on virtually any
+ computer hardware and operating system."""
+## `homepage`
+
+This is a URL also included in modulefile metadata. It should be the homepage of the software.
+
+Ex:
+
+    !python
+    homepage = 'http://www.zlib.net/'
+
+---
+
+# Easyconfig Parameters: source, source_urls
+
+We will need to specify a few more parameters for easybuild to handle things correctly:
+
+    !python
+    sources = 
+    source_urls = 
+
+These will specify where easybuild should find the sourcecode for the software package. There are some shortcuts:
+
+- Use `[SOURCELOWER_TAR_GZ]` to produce `<name>-<version>.tar.gz`
+- Use `%{version}s` and `%{name}s` to use `name` and `version` from the easyconfig
+
+Ex:
+
+    !python
+    sources = [SOURCELOWER_TAR_GZ]
+    source_urls = ['http://sourceforge.net/projects/libpng/files/zlib/%(version)s']
+
+These are python lists.
+
+---
+
+# Build it!
+
+That should be sufficient to build a basic package. Let's see what a failure looks like.
+
+Here is my perfect easyconfig for rsync:
+
+    !python
+    easyblock = 'ConfigureMake'
+    name = 'rsync'
+    version = '3.1.2'
+    toolchain = {'name': 'foss', 'version': '2015b'}
+    description = """rsync is an open source utility that provides fast incremental file transfer"""
+    homepage = 'https://rsync.samba.org'
+    sources = [SOURCELOWER_TAR_GZ]
+    source_urls = ['https://download.samba.org/pub/rsync/src/rsync-3.1.2.tar.gz']
+
+I save this as `rsync-3.1.2-foss-2015b.eb` and it should build!
+
+---
+
+# Build Example
+
+    !bash
+    $  eb rsync-3.1.2-foss-2015b.eb
+    == temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
+    == processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
+    == building and installing rsync/3.1.2-foss-2015b...
+    == fetching files...
+    == creating build dir, resetting environment...
+    == unpacking...
+    == patching...
+    == preparing...
+    == configuring...
+    == building...
+    == testing...
+    == installing...
+    == taking care of extensions...
+    == postprocessing...
+    == sanity checking...
+    == FAILED: Installation ended unsuccessfully (build directory: /app/easybuild/build/rsync/3.1.2/foss-2015b): build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b
+    == Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log
+    ERROR: Build of /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb failed (err: "build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b")
+
+---
+
+# Troubleshooting
+
+We can look into the logfile mentioned (`Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log`') but in this case, the error is shown:
+
+`Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b`
+
+And a quick search of `sanity check` in the Easybuild docs reveals that by default `bin` and `lib` or `lib64` must not be empty after install. Rsync builds no `lib` directory, so we add the following to the easyconfig file:
+
+`sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/rsync']}`
+
+And now it builds (trust me).
