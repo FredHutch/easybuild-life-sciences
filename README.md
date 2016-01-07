@@ -101,7 +101,7 @@ In the easybuild modulefile, I added the following:
     setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
     setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
 
-These should be pretty self-explanatory.
+The modulefile is a tcl snippet and this sets environment variables for us.
 
 ---
 
@@ -129,12 +129,11 @@ These are more complex, and will be documented soon.
 
 # Easybuild Modulefile
 
-- Our Easybuild config loads with `module load Easybuild/2.3.0` everytime for everyone
-- With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself
-- Custom items can be added to all modulefiles produced by Easybuild, like logging module use:
+- Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
+- With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself with the `modules-footer` configuration option
+- With `modules-footer` and other options, custom items can be added to all modulefiles produced by Easybuild, like logging module use:
 
     !Tcl
-    # enable logging to syslog
     set curMod [module-info name]
     if { [module-info mode load] } {
     system "logger \$USER module load $curMod "
@@ -147,14 +146,17 @@ These are more complex, and will be documented soon.
 To use:
 
 - Add the Easybuild modules directory to your MODULEPATH environment variable:
+
     !bash
     $ module use /app/easybuild/modules/all
 
 - Load the EasyBuild module (it should tab out, these are just files):
+
     !bash
     $ module load EasyBuild/2.3.0
 
 - Did it work"
+
     !bash
     $ eb --version
     This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.
@@ -198,7 +200,7 @@ That is the Easybuild toolchain for this easyconfig. You can get a list of toolc
     !bash
     eb --list-toolchains
 
-I prefer to just browse the [repo][https://github.com/hpcugent/easybuild-easyconfigs] (toolchains are just another easyconfig to Easybuild).
+I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easyconfigs) - toolchains are just another easyconfig to Easybuild.
 
 ---
 

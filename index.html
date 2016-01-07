@@ -1625,7 +1625,7 @@ aside {
 <span class="nv">setenv</span> EASYBUILD_LOGFILE_FORMAT <span class="s2">&quot;$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log&quot;</span>
 </pre></div>
 
-<p>These should be pretty self-explanatory.</p></section>
+<p>The modulefile is a tcl snippet and this sets environment variables for us.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1701,13 +1701,12 @@ aside {
             
             
             <section><ul>
-<li>Our Easybuild config loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
-<li>With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself</li>
+<li>Now, Easybuild configured for us loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
+<li>With those modulefile additions saved to a separate file, they can be automatically included in future builds of EasyBuild itself with the <code>modules-footer</code> configuration option</li>
 <li>
-<p>Custom items can be added to all modulefiles produced by Easybuild, like logging module use:</p>
-<p>!Tcl</p>
-<h1>enable logging to syslog</h1>
-<p>set curMod [module-info name]
+<p>With <code>modules-footer</code> and other options, custom items can be added to all modulefiles produced by Easybuild, like logging module use:</p>
+<p>!Tcl
+set curMod [module-info name]
 if { [module-info mode load] } {
 system "logger \$USER module load $curMod "
 }</p>
@@ -1745,20 +1744,20 @@ system "logger \$USER module load $curMod "
             <section><p>To use:</p>
 <ul>
 <li>
-<p>Add the Easybuild modules directory to your MODULEPATH environment variable:
-    !bash
-    $ module use /app/easybuild/modules/all</p>
+<p>Add the Easybuild modules directory to your MODULEPATH environment variable:</p>
+<p>!bash
+$ module use /app/easybuild/modules/all</p>
 </li>
 <li>
-<p>Load the EasyBuild module (it should tab out, these are just files):
-    !bash
-    $ module load EasyBuild/2.3.0</p>
+<p>Load the EasyBuild module (it should tab out, these are just files):</p>
+<p>!bash
+$ module load EasyBuild/2.3.0</p>
 </li>
 <li>
-<p>Did it work"
-    !bash
-    $ eb --version
-    This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</p>
+<p>Did it work"</p>
+<p>!bash
+$ eb --version
+This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</p>
 </li>
 </ul></section>
             
@@ -1845,7 +1844,7 @@ system "logger \$USER module load $curMod "
 <div class="highlight"><pre>eb --list-toolchains
 </pre></div>
 
-<p>I prefer to just browse the [repo][https://github.com/hpcugent/easybuild-easyconfigs] (toolchains are just another easyconfig to Easybuild).</p></section>
+<p>I prefer to just browse the <a href="https://github.com/hpcugent/easybuild-easyconfigs">repo</a> - toolchains are just another easyconfig to Easybuild.</p></section>
             
           </div>
           <div class="presenter_notes">
