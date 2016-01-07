@@ -171,6 +171,7 @@ To use:
 - Did it work?
 
 `$ eb --version`
+
 `This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.`
 
 ---
@@ -181,7 +182,7 @@ Once you have EasyBuild bootstrapped, you can search for and build a package:
 
 Begin by searching:
 
-    !bash
+    !
     $ eb -S PCRE
     == temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
     == Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
@@ -221,7 +222,7 @@ I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easycon
 
 Once we have decided what to build, you can do a dry-run like this:
 
-    !bash
+    !
     $ eb -r -D PCRE-8.36-foss-2015a.eb
     == temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
     Dry run: printing build status of easyconfigs and dependencies
@@ -259,7 +260,7 @@ By giving the `-r` flag to Easybuild:
 
 And finally, you can remove the '-D' and build the software:
 
-    !bash
+    !
     $ eb -r -f PCRE-8.36-foss-2015a.eb
     == temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
     == resolving dependencies ...
@@ -441,7 +442,7 @@ I save this as `rsync-3.1.2-foss-2015b.eb` and it should build!
 
 # Build Example
 
-    !bash
+    !
     $  eb rsync-3.1.2-foss-2015b.eb
     == temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
     == processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb

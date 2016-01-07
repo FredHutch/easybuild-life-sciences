@@ -1794,8 +1794,8 @@ aside {
 <ul>
 <li>Did it work?</li>
 </ul>
-<p><code>$ eb --version</code>
-<code>This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</code></p></section>
+<p><code>$ eb --version</code></p>
+<p><code>This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1819,7 +1819,7 @@ aside {
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-15">
+        <div class="slide slide-15">
           <div class="inner">
             
             <header><h1>Step-By-Step Build a package</h1></header>
@@ -1827,24 +1827,24 @@ aside {
             
             <section><p>Once you have EasyBuild bootstrapped, you can search for and build a package:</p>
 <p>Begin by searching:</p>
-<div class="highlight"><pre><span class="nv">$ </span>eb -S <span class="nv">PCRE</span>
-<span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
-<span class="o">==</span> Searching <span class="o">(</span><span class="k">case</span>-insensitive<span class="o">)</span> <span class="k">for</span> <span class="s1">&#39;PCRE&#39;</span> in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
-<span class="o">==</span> Searching <span class="o">(</span><span class="k">case</span>-insensitive<span class="o">)</span> <span class="k">for</span> <span class="s1">&#39;PCRE&#39;</span> in /app/easybuild/fh_easyconfigs 
-<span class="nv">CFGS1</span><span class="o">=</span>/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
- * <span class="nv">$CFGS1</span>/PCRE-8.12-goalf-1.1.0-no-OFED.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.12-goolf-1.4.10.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-4.0.6.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-5.3.0.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.12-ictce-5.5.0.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.35-intel-2014b.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.36-foss-2015a.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.36-intel-2015a.eb
- * <span class="nv">$CFGS1</span>/PCRE-8.37-intel-2015a.eb
-<span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
-<span class="o">==</span> Temporary directory /tmp/eb-lz7d_6 has been removed.
-</pre></div>
-</section>
+<pre><code>!
+$ eb -S PCRE
+== temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
+CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
+ * $CFGS1/PCRE-8.12-goalf-1.1.0-no-OFED.eb
+ * $CFGS1/PCRE-8.12-goolf-1.4.10.eb
+ * $CFGS1/PCRE-8.12-ictce-4.0.6.eb
+ * $CFGS1/PCRE-8.12-ictce-5.3.0.eb
+ * $CFGS1/PCRE-8.12-ictce-5.5.0.eb
+ * $CFGS1/PCRE-8.35-intel-2014b.eb
+ * $CFGS1/PCRE-8.36-foss-2015a.eb
+ * $CFGS1/PCRE-8.36-intel-2015a.eb
+ * $CFGS1/PCRE-8.37-intel-2015a.eb
+== Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
+== Temporary directory /tmp/eb-lz7d_6 has been removed.
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1903,35 +1903,35 @@ aside {
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-17">
+        <div class="slide slide-17">
           <div class="inner">
             
             <header><h1>Dry Run</h1></header>
             
             
             <section><p>Once we have decided what to build, you can do a dry-run like this:</p>
-<div class="highlight"><pre><span class="nv">$ </span>eb -r -D PCRE-8.36-foss-2015a.eb
-<span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
+<pre><code>!
+$ eb -r -D PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
 Dry run: printing build status of easyconfigs and dependencies
-<span class="nv">CFGS</span><span class="o">=</span>/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/g/GCC/GCC-4.9.2.eb <span class="o">(</span>module: GCC/4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb <span class="o">(</span>module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/l/libtool/libtool-2.4.2-GCC-4.9.2.eb <span class="o">(</span>module: libtool/2.4.2-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/m/M4/M4-1.4.17-GCC-4.9.2.eb <span class="o">(</span>module: M4/1.4.17-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb <span class="o">(</span>module: Autoconf/2.69-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/a/Automake/Automake-1.15-GCC-4.9.2.eb <span class="o">(</span>module: Automake/1.15-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/n/numactl/numactl-2.0.10-GCC-4.9.2.eb <span class="o">(</span>module: numactl/2.0.10-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb <span class="o">(</span>module: hwloc/1.10.0-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb <span class="o">(</span>module: OpenMPI/1.8.4-GCC-4.9.2<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/g/gompi/gompi-2015a.eb <span class="o">(</span>module: gompi/2015a<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/f/FFTW/FFTW-3.3.4-gompi-2015a.eb <span class="o">(</span>module: FFTW/3.3.4-gompi-2015a<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb <span class="o">(</span>module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0<span class="o">)</span>
- * <span class="o">[</span>x<span class="o">]</span> <span class="nv">$CFGS</span>/f/foss/foss-2015a.eb <span class="o">(</span>module: foss/2015a<span class="o">)</span>
- * <span class="o">[</span> <span class="o">]</span> <span class="nv">$CFGS</span>/p/PCRE/PCRE-8.36-foss-2015a.eb <span class="o">(</span>module: PCRE/8.36-foss-2015a<span class="o">)</span>
-<span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
-<span class="o">==</span> Temporary directory /tmp/eb-08QTaF has been removed.
-</pre></div>
-</section>
+CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
+ * [x] $CFGS/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
+ * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0)
+ * [x] $CFGS/l/libtool/libtool-2.4.2-GCC-4.9.2.eb (module: libtool/2.4.2-GCC-4.9.2)
+ * [x] $CFGS/m/M4/M4-1.4.17-GCC-4.9.2.eb (module: M4/1.4.17-GCC-4.9.2)
+ * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb (module: Autoconf/2.69-GCC-4.9.2)
+ * [x] $CFGS/a/Automake/Automake-1.15-GCC-4.9.2.eb (module: Automake/1.15-GCC-4.9.2)
+ * [x] $CFGS/n/numactl/numactl-2.0.10-GCC-4.9.2.eb (module: numactl/2.0.10-GCC-4.9.2)
+ * [x] $CFGS/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb (module: hwloc/1.10.0-GCC-4.9.2)
+ * [x] $CFGS/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb (module: OpenMPI/1.8.4-GCC-4.9.2)
+ * [x] $CFGS/g/gompi/gompi-2015a.eb (module: gompi/2015a)
+ * [x] $CFGS/f/FFTW/FFTW-3.3.4-gompi-2015a.eb (module: FFTW/3.3.4-gompi-2015a)
+ * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0)
+ * [x] $CFGS/f/foss/foss-2015a.eb (module: foss/2015a)
+ * [ ] $CFGS/p/PCRE/PCRE-8.36-foss-2015a.eb (module: PCRE/8.36-foss-2015a)
+== Tmporary log file(s) /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
+== Temporary directory /tmp/eb-08QTaF has been removed.
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -1990,41 +1990,41 @@ Dry run: printing build status of easyconfigs and dependencies
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-19">
+        <div class="slide slide-19">
           <div class="inner">
             
             <header><h1>Build</h1></header>
             
             
             <section><p>And finally, you can remove the '-D' and build the software:</p>
-<div class="highlight"><pre><span class="nv">$ </span>eb -r -f PCRE-8.36-foss-2015a.eb
-<span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
-<span class="o">==</span> resolving dependencies ...
-<span class="o">==</span> processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
-<span class="o">==</span> building and installing PCRE/8.36-foss-2015a...
-<span class="o">==</span> fetching files...
-<span class="o">==</span> creating build dir, resetting environment...
-<span class="o">==</span> unpacking...
-<span class="o">==</span> patching...
-<span class="o">==</span> preparing...
-<span class="o">==</span> configuring...
-<span class="o">==</span> building...
-<span class="o">==</span> testing...
-<span class="o">==</span> installing...
-<span class="o">==</span> taking care of extensions...
-<span class="o">==</span> postprocessing...
-<span class="o">==</span> sanity checking...
-<span class="o">==</span> cleaning up...
-<span class="o">==</span> creating module...
-<span class="o">==</span> permissions...
-<span class="o">==</span> packaging...
-<span class="o">==</span> COMPLETED: Installation ended <span class="nv">successfully</span>
-<span class="o">==</span> Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
-<span class="o">==</span> Build succeeded <span class="k">for</span> <span class="m">1</span> out of <span class="nv">1</span>
-<span class="o">==</span> Tmporary log file<span class="o">(</span>s<span class="o">)</span> /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
-<span class="o">==</span> Temporary directory /tmp/eb-1TnpU8 has been removed.
-</pre></div>
-</section>
+<pre><code>!
+$ eb -r -f PCRE-8.36-foss-2015a.eb
+== temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
+== resolving dependencies ...
+== processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
+== building and installing PCRE/8.36-foss-2015a...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== cleaning up...
+== creating module...
+== permissions...
+== packaging...
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
+== Build succeeded for 1 out of 1
+== Tmporary log file(s) /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
+== Temporary directory /tmp/eb-1TnpU8 has been removed.
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -2368,33 +2368,33 @@ Dry run: printing build status of easyconfigs and dependencies
       
       <!-- slide source: README.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code slide-28">
+        <div class="slide slide-28">
           <div class="inner">
             
             <header><h1>Build Example</h1></header>
             
             
-            <section><div class="highlight"><pre><span class="nv">$ </span> eb rsync-3.1.2-foss-2015b.eb
-<span class="o">==</span> temporary log file in <span class="k">case</span> of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
-<span class="o">==</span> processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
-<span class="o">==</span> building and installing rsync/3.1.2-foss-2015b...
-<span class="o">==</span> fetching files...
-<span class="o">==</span> creating build dir, resetting environment...
-<span class="o">==</span> unpacking...
-<span class="o">==</span> patching...
-<span class="o">==</span> preparing...
-<span class="o">==</span> configuring...
-<span class="o">==</span> building...
-<span class="o">==</span> testing...
-<span class="o">==</span> installing...
-<span class="o">==</span> taking care of extensions...
-<span class="o">==</span> postprocessing...
-<span class="o">==</span> sanity checking...
-<span class="o">==</span> FAILED: Installation ended unsuccessfully <span class="o">(</span>build directory: /app/easybuild/build/rsync/3.1.2/foss-2015b<span class="o">)</span>: build failed <span class="o">(</span>first <span class="m">300</span> chars<span class="o">)</span>: Sanity check failed: no dir of <span class="o">(</span><span class="s1">&#39;lib&#39;</span>, <span class="s1">&#39;lib64&#39;</span><span class="o">)</span> in /app/easybuild/software/rsync/3.1.2-foss-2015b
-<span class="o">==</span> Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log
-ERROR: Build of /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb failed <span class="o">(</span>err: <span class="s2">&quot;build failed (first 300 chars): Sanity check failed: no dir of (&#39;lib&#39;, &#39;lib64&#39;) in /app/easybuild/software/rsync/3.1.2-foss-2015b&quot;</span><span class="o">)</span>
-</pre></div>
-</section>
+            <section><pre><code>!
+$  eb rsync-3.1.2-foss-2015b.eb
+== temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
+== processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
+== building and installing rsync/3.1.2-foss-2015b...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== FAILED: Installation ended unsuccessfully (build directory: /app/easybuild/build/rsync/3.1.2/foss-2015b): build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b
+== Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log
+ERROR: Build of /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb failed (err: "build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b")
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
