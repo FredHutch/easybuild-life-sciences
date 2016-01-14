@@ -164,7 +164,7 @@ To use:
 
 `$ module use /app/easybuild/modules/all`
 
-- Load the EasyBuild module (it should tab out, these are just files):
+- Load the EasyBuild module (it should tab out, these are just files - use this to find newest ver '...EasyBuild/<tab>'):
 
 `$ module load EasyBuild/2.3.0`
 
@@ -173,6 +173,7 @@ To use:
 `$ eb --version  `
 `This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.  `
 
+*Note - you should always use the newest version of EasyBuild that has been built as easyconfigs are distributed with EB.
 ---
 
 # Step-By-Step Build a package
