@@ -221,7 +221,7 @@ I prefer to just browse the [repo](https://github.com/hpcugent/easybuild-easycon
 
 Once we have decided what to build, you can do a dry-run like this:
 
-    $ eb -r -D PCRE-8.36-foss-2015a.eb
+    $ eb PCRE-8.36-foss-2015a.eb --robot --dry-run
     == temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
     Dry run: printing build status of easyconfigs and dependencies
     CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
@@ -258,7 +258,7 @@ By giving the `-r` flag to Easybuild:
 
 And finally, you can remove the '-D' and build the software:
 
-    $ eb -r -f PCRE-8.36-foss-2015a.eb
+    $ eb PCRE-8.36-foss-2015a.eb --robot --force
     == temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
     == resolving dependencies ...
     == processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
