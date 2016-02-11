@@ -9,6 +9,11 @@
 
 ---
 
+# Presentation
+- This readme is also a [presentation](http://fredhutch.github.io/easybuild-life-sciences)
+
+---
+
 # Goals
 Before and during implementation, we kept the following goals in mind:
 
