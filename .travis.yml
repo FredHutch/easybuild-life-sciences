@@ -8,8 +8,8 @@ install:
   - "pip install -r requirements.txt"
   - "bash git_init.sh"
 script:
-  - "darkslide README.md -d index.html"
-  - "darkslide howto.md -d howto.html"
+  - "darkslide README.md -d index.html --relative --copy-theme --linenos=no"
+  - "darkslide howto.md -d howto.html --relative --copt-theme --linenos=no"
 after_success: "bash generate.sh"
 env:
   global:
