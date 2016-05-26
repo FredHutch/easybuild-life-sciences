@@ -29,16 +29,16 @@
     <title>EasyBuild at FredHutch</title>
     <!-- Styles -->
     
-    <link rel="stylesheet" href="file:///home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages/darkslide/themes/default/css/base.css">
-    <link rel="stylesheet" media="print" href="file:///home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages/darkslide/themes/default/css/print.css">
-    <link rel="stylesheet" media="screen, projection" href="file:///home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages/darkslide/themes/default/css/screen.css">
-    <link rel="stylesheet" href="file:///home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages/darkslide/themes/default/css/theme.css">
+    <link rel="stylesheet" href="theme/css/base.css">
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    <link rel="stylesheet" href="theme/css/theme.css">
     
     
     <!-- /Styles -->
     <!-- Javascripts -->
     
-    <script type="text/javascript" src="file:///home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages/darkslide/themes/default/js/slides.js"></script>
+    <script type="text/javascript" src="theme/js/slides.js"></script>
     
     
     
@@ -411,13 +411,13 @@
             
             
             <section><p>In the easybuild modulefile, I added the following:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="k">set</span> ebDir <span class="s2">&quot;/app/easybuild&quot;</span>
-<span class="lineno">2 </span><span class="nv">setenv</span> EASYBUILD_SOURCEPATH <span class="s2">&quot;$ebDir/sources&quot;</span>
-<span class="lineno">3 </span><span class="nv">setenv</span> EASYBUILD_BUILDPATH <span class="s2">&quot;$ebDir/build&quot;</span>
-<span class="lineno">4 </span><span class="nv">setenv</span> EASYBUILD_INSTALLPATH_SOFTWARE <span class="s2">&quot;$ebDir/software&quot;</span>
-<span class="lineno">5 </span><span class="nv">setenv</span> EASYBUILD_INSTALLPATH_MODULES <span class="s2">&quot;$ebDir/modules&quot;</span>
-<span class="lineno">6 </span><span class="nv">setenv</span> EASYBUILD_REPOSITORYPATH <span class="s2">&quot;$ebDir/ebfiles_repo&quot;</span>
-<span class="lineno">7 </span><span class="nv">setenv</span> EASYBUILD_LOGFILE_FORMAT <span class="s2">&quot;$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log&quot;</span>
+<div class="highlight"><pre><span></span><span class="k">set</span> ebDir <span class="s2">&quot;/app/easybuild&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_SOURCEPATH <span class="s2">&quot;$ebDir/sources&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_BUILDPATH <span class="s2">&quot;$ebDir/build&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_INSTALLPATH_SOFTWARE <span class="s2">&quot;$ebDir/software&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_INSTALLPATH_MODULES <span class="s2">&quot;$ebDir/modules&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_REPOSITORYPATH <span class="s2">&quot;$ebDir/ebfiles_repo&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_LOGFILE_FORMAT <span class="s2">&quot;$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log&quot;</span>
 </pre></div>
 
 <p>The modulefile is a tcl snippet and this sets environment variables for us.</p></section>
@@ -451,18 +451,18 @@
             <header><h1>Bootstrap Easybuild Parameters</h1></header>
             
             
-            <section><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="c"># keep group writable bit</span>
-<span class="lineno"> 2 </span><span class="nv">setenv</span> EASYBUILD_GROUP_WRITABLE_INSTALLDIR <span class="mi">1</span>
-<span class="lineno"> 3 </span><span class="c"># set umask to preserve group write permissions on modulefiles</span>
-<span class="lineno"> 4 </span><span class="nv">setenv</span> EASYBUILD_UMASK <span class="mo">002</span>
-<span class="lineno"> 5 </span><span class="c"># create module dependencies to recursively unload</span>
-<span class="lineno"> 6 </span><span class="nv">setenv</span> EASYBUILD_RECURSIVE_MODULE_UNLOAD <span class="mi">1</span>
-<span class="lineno"> 7 </span><span class="c"># add our normal modulefile footer</span>
-<span class="lineno"> 8 </span><span class="nv">setenv</span> EASYBUILD_MODULES_FOOTER <span class="s2">&quot;$ebDir/etc/fredhutch_modulefile_footer&quot;</span>
-<span class="lineno"> 9 </span><span class="c"># add our own easyconfig directory to robot paths</span>
-<span class="lineno">10 </span><span class="nv">setenv</span> EASYBUILD_ROBOT_PATHS <span class="s2">&quot;:$ebDir/fh_easyconfigs&quot;</span>
-<span class="lineno">11 </span><span class="c"># Our licenses</span>
-<span class="lineno">12 </span><span class="nv">setenv</span> LM_LICENSE_FILE <span class="s2">&quot;$ebDir/etc/licenses/intel.lic&quot;</span>
+            <section><div class="highlight"><pre><span></span><span class="c"># keep group writable bit</span>
+<span class="nv">setenv</span> EASYBUILD_GROUP_WRITABLE_INSTALLDIR <span class="mi">1</span>
+<span class="c"># set umask to preserve group write permissions on modulefiles</span>
+<span class="nv">setenv</span> EASYBUILD_UMASK <span class="mo">002</span>
+<span class="c"># create module dependencies to recursively unload</span>
+<span class="nv">setenv</span> EASYBUILD_RECURSIVE_MODULE_UNLOAD <span class="mi">1</span>
+<span class="c"># add our normal modulefile footer</span>
+<span class="nv">setenv</span> EASYBUILD_MODULES_FOOTER <span class="s2">&quot;$ebDir/etc/fredhutch_modulefile_footer&quot;</span>
+<span class="c"># add our own easyconfig directory to robot paths</span>
+<span class="nv">setenv</span> EASYBUILD_ROBOT_PATHS <span class="s2">&quot;:$ebDir/fh_easyconfigs&quot;</span>
+<span class="c"># Our licenses</span>
+<span class="nv">setenv</span> LM_LICENSE_FILE <span class="s2">&quot;$ebDir/etc/licenses/intel.lic&quot;</span>
 </pre></div>
 
 <p>These are more complex, and will be documented soon.</p></section>
@@ -548,10 +548,10 @@
 <li><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild</li>
 </ul>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="k">set</span> curMod <span class="k">[</span><span class="nv">module-info</span> name<span class="k">]</span>
-<span class="lineno">2 </span><span class="k">if</span> <span class="k">{</span> <span class="k">[</span><span class="nv">module-info</span> mode load<span class="k">]</span> <span class="k">}</span> <span class="k">{</span>
-<span class="lineno">3 </span>    <span class="nv">system</span> <span class="s2">&quot;logger \$USER module load $curMod &quot;</span>
-<span class="lineno">4 </span><span class="k">}</span>
+<div class="highlight"><pre><span></span><span class="k">set</span> curMod <span class="k">[</span><span class="nv">module-info</span> name<span class="k">]</span>
+<span class="k">if</span> <span class="k">{</span> <span class="k">[</span><span class="nv">module-info</span> mode load<span class="k">]</span> <span class="k">}</span> <span class="k">{</span>
+    <span class="nv">system</span> <span class="s2">&quot;logger \$USER module load $curMod &quot;</span>
+<span class="k">}</span>
 </pre></div>
 </section>
             
@@ -904,15 +904,15 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             
             
             <section><p>This is a skeleton ConfigureMake easyconfig with all mandatory parameters:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-<span class="lineno">2 </span><span class="n">name</span> <span class="o">=</span> 
-<span class="lineno">3 </span><span class="n">version</span> <span class="o">=</span> 
-<span class="lineno">4 </span><span class="n">toolchain</span> <span class="o">=</span> 
-<span class="lineno">5 </span><span class="n">description</span> <span class="o">=</span> 
-<span class="lineno">6 </span><span class="n">homepage</span> <span class="o">=</span> 
-<span class="lineno">7 </span><span class="n">docurls</span> <span class="o">=</span> 
-<span class="lineno">8 </span><span class="n">software_license</span> <span class="o">=</span> 
-<span class="lineno">9 </span><span class="n">software_license_urls</span> <span class="o">=</span>
+<div class="highlight"><pre><span></span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="n">name</span> <span class="o">=</span> 
+<span class="n">version</span> <span class="o">=</span> 
+<span class="n">toolchain</span> <span class="o">=</span> 
+<span class="n">description</span> <span class="o">=</span> 
+<span class="n">homepage</span> <span class="o">=</span> 
+<span class="n">docurls</span> <span class="o">=</span> 
+<span class="n">software_license</span> <span class="o">=</span> 
+<span class="n">software_license_urls</span> <span class="o">=</span>
 </pre></div>
 
 <p>Except for easyblock, these will all default to <code>None</code> if not supplied in the file (so I guess they are not really mandatory, huh?)</p></section>
@@ -949,13 +949,13 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             <section><h2><code>name</code></h2>
 <p>This name is the name of the software package, will be the name of the modulefile, and will be in the path of the software install directory. It is sometimes referenced later in the easyconfig file.</p>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;zlib&#39;</span>
+<div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;zlib&#39;</span>
 </pre></div>
 
 <h2><code>version</code></h2>
 <p>This is the version of the software to build. It is referenced later in the easyconfig file.</p>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.8&#39;</span>
+<div class="highlight"><pre><span></span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.8&#39;</span>
 </pre></div>
 </section>
             
@@ -991,7 +991,7 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             <section><h2><code>toolchain</code></h2>
 <p>This is the toolchain (compilers, supplemental libraries, etc.) that easybuild will use to build the software. It must be specified in an existing easyconfig (though does not need to be pre-built - easybuild will take care of building it).</p>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
 </pre></div>
 
 <p>This is a python dict specifying the name and version of the toolchain.</p></section>
@@ -1028,16 +1028,16 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             <section><h2><code>description</code></h2>
 <p>This is a generally free-form description that will appear as metadata in the modulefile, and therefore be availabe to users through the <code>module</code> command.</p>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;zlib is designed to be a free, general-purpose, legally</span>
-<span class="lineno">2 </span><span class="s2">                 unencumbered -- that is, not covered by any patents --</span>
-<span class="lineno">3 </span><span class="s2">                 lossless data-compression library for use on virtually any</span>
-<span class="lineno">4 </span><span class="s2">                 computer hardware and operating system.&quot;&quot;&quot;</span>
+<div class="highlight"><pre><span></span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;zlib is designed to be a free, general-purpose, legally</span>
+<span class="s2">                 unencumbered -- that is, not covered by any patents --</span>
+<span class="s2">                 lossless data-compression library for use on virtually any</span>
+<span class="s2">                 computer hardware and operating system.&quot;&quot;&quot;</span>
 </pre></div>
 
 <h2><code>homepage</code></h2>
 <p>This is a URL also included in modulefile metadata. It should be the homepage of the software.</p>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.zlib.net/&#39;</span>
+<div class="highlight"><pre><span></span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.zlib.net/&#39;</span>
 </pre></div>
 </section>
             
@@ -1071,8 +1071,8 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             
             
             <section><p>We will need to specify a few more parameters for easybuild to handle things correctly:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">sources</span> <span class="o">=</span> 
-<span class="lineno">2 </span><span class="n">source_urls</span> <span class="o">=</span>
+<div class="highlight"><pre><span></span><span class="n">sources</span> <span class="o">=</span> 
+<span class="n">source_urls</span> <span class="o">=</span>
 </pre></div>
 
 <p>These will specify where easybuild should find the sourcecode for the software package. There are some shortcuts:</p>
@@ -1081,8 +1081,8 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
 <li>Use <code>%{version}s</code> and <code>%{name}s</code> to use <code>name</code> and <code>version</code> from the easyconfig</li>
 </ul>
 <p>Ex:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
-<span class="lineno">2 </span><span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://sourceforge.net/projects/libpng/files/zlib/</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://sourceforge.net/projects/libpng/files/zlib/</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">]</span>
 </pre></div>
 
 <p>These are python lists.</p></section>
@@ -1118,14 +1118,14 @@ CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybui
             
             <section><p>That should be sufficient to build a basic package. Let's see what a failure looks like.</p>
 <p>Here is my perfect easyconfig for rsync:</p>
-<div class="highlight"><pre><span></span><span class="lineno">1 </span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-<span class="lineno">2 </span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;rsync&#39;</span>
-<span class="lineno">3 </span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;3.1.2&#39;</span>
-<span class="lineno">4 </span><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
-<span class="lineno">5 </span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;rsync is an open source utility that provides fast incremental file transfer&quot;&quot;&quot;</span>
-<span class="lineno">6 </span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://rsync.samba.org&#39;</span>
-<span class="lineno">7 </span><span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
-<span class="lineno">8 </span><span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://download.samba.org/pub/rsync/src/rsync-3.1.2.tar.gz&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;rsync&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;3.1.2&#39;</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;rsync is an open source utility that provides fast incremental file transfer&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://rsync.samba.org&#39;</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://download.samba.org/pub/rsync/src/rsync-3.1.2.tar.gz&#39;</span><span class="p">]</span>
 </pre></div>
 
 <p>I save this as <code>rsync-3.1.2-foss-2015b.eb</code> and it should build!</p></section>

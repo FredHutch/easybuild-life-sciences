@@ -1,0 +1,275 @@
+html, body {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+div.presentation,
+body.presenter_view div#current_presenter_notes section,
+div.slides, body.expose div.slides.nocontext, .presenter_notes {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    background: inherit;
+}
+div.slides.nocontext .slide {
+    opacity: 0;
+}
+div.slides.nocontext .slide.future {
+}
+body.expose div.slides.nocontext .slide,
+div.slides.nocontext .slide.current {
+    opacity: 1;
+}
+div.slide {
+    display: none;
+    left: 50%;
+    top: 50%;
+    margin-top: -384px;
+    -webkit-transition: margin 0.3s ease-in, opacity 0.3s ease-in;
+    -moz-transition: margin 0.3s ease-in, opacity 0.3s ease-in;
+    -o-transition: margin 0.3s ease-in, opacity 0.3s ease-in;
+}
+.slide.far-past {
+    display: block;
+    margin-left: -2660px;
+}
+.slide.past {
+    display: block;
+    margin-left: -1586px;
+}
+.slide.current {
+    display: block;
+    margin-left: -512px;
+}
+.slide.future {
+    display: block;
+    margin-left: 562px;
+}
+.slide.far-future {
+    display: block;
+    margin-left: 1636px;
+}
+/* Content */
+
+/* render a nice scrollbar in overflowed pre area's */
+::-webkit-scrollbar-thumb {
+    background: -webkit-gradient(linear, left bottom, left top, from(#eee), to(#fefefe));
+    border: 1px solid #888;
+    -webkit-border-radius: 1ex;
+}
+::-webkit-scrollbar-corner {
+    background: #dedede;
+}
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    background: #888;
+    border-radius: 5px;
+}
+.sidebar {
+    background: white;
+    color: black;
+    border-right: 5px solid #ccc;
+    z-index: 9999999;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    position: absolute;
+    display: block;
+    margin: 0;
+    margin-left: -400px;
+    padding: 10px 16px;
+    overflow: auto;
+    -webkit-transition: margin 0.2s ease-in;
+    -moz-transition: margin 0.2s ease-in;
+    -o-transition: margin 0.2s ease-in;
+}
+.sidebar h2 {
+    text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    margin: 0 0 16px;
+    padding: 0;
+}
+.sidebar table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+.sidebar table caption {
+    display: none;
+}
+.sidebar tr {
+    margin: 2px 0;
+    border-bottom: 1px solid #ccc;
+}
+.sidebar tr:last-of-type {
+    border-bottom: none;
+}
+.sidebar th {
+    text-align: left;
+    font-weight: normal;
+    max-width: 300px;
+    overflow: hidden;
+}
+.sidebar tr.sub th {
+    text-indent: 20px;
+}
+.sidebar td {
+    text-align: right;
+    min-width: 20px;
+}
+.sidebar a, .sidebar a:hover {
+    display: block;
+    text-decoration: none !important;
+    text-shadow: none !important;
+    background: none !important;
+    border-bottom: none;
+    padding: 4px 0;
+}
+.sidebar tr.active {
+    background: #ff0;
+}
+.notes {
+    display: none;
+    padding: 10px;
+    background: #ccc;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+/* Expose */
+body.expose div.slides {
+    float: left;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+body.expose div.slide {
+    display: block;
+    float: left;
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    margin: 10px !important;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -moz-transform: scale(.30, .30);
+    -moz-transform-origin: 0 0;
+    -webkit-transform: scale(.30, .30);
+    -webkit-transform-origin: 0 0;
+    -o-transform: scale(.30, .30);
+    -o-transform-origin: 0 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    cursor: pointer;
+}
+body.expose .slide-wrapper {
+    float: left;
+    position: relative;
+    margin: 2%;
+    width: 300px;
+    height: 233px;
+}
+body.expose .slide footer {
+}
+body.expose .slide .inner {
+}
+body.expose .slide.far-past,
+body.expose .slide.past,
+body.expose .slide.future,
+body.expose .slide.far-future {
+    margin-left: 0;
+}
+/* Presenter Mode */
+
+body.presenter_view div.slide {
+    display: inline;
+    position: absolute;
+    overflow: hidden;
+    -moz-transform: scale(.5, .5);
+    -moz-transform-origin: 0 0;
+    -webkit-transform: scale(.5, .5);
+    -webkit-transform-origin: 0 0;
+    -o-transform: scale(.5, .5);
+    -o-transform-origin: 0 0;
+    margin-top: -384px;
+}
+body.presenter_view .slide.far-past {
+    display: block;
+    margin-left: -1594px;
+}
+body.presenter_view .slide.past {
+    display: block;
+    margin-left: -1049px;
+}
+body.presenter_view .slide.current {
+    display: block;
+    margin-left: -512px;
+    xborder: 8px solid maroon;
+    box-shadow: 0 0 0 15px #dc322f;
+    z-index: 2;
+}
+body.presenter_view .slide.future {
+    display: block;
+    margin-left: 25px;
+    z-index: 1;
+}
+body.presenter_view .slide.far-future {
+    display: block;
+    margin-left: 562px;
+}
+body.presenter_view .slide.none {
+    display: none;
+}
+body.presenter_view div#current_presenter_notes {
+    visibility: visible;
+    display: block;
+    position: fixed;
+    overflow: auto;
+    vertical-align: middle;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    margin-left: -475px;
+    margin-top: 20px;
+    z-index: 2;
+    width: 950px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+body.presenter_view div#current_presenter_notes section {
+    display: block;
+    overflow: visible;
+    margin: 60px 30px 0 30px;
+    font-size: 24px;
+}
+body.presenter_view div#current_presenter_notes section p {
+    margin: 0;
+}
+body.presenter_view div#current_presenter_notes h1 {
+    font-size: 50%;
+    display: block;
+}
+div#current_presenter_notes {
+    display: none;
+}
+div.slide div.presenter_notes {
+    display: none;
+}
+#blank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 64;
+    display: none;
+}
