@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.5"
+branches:
+  only:
+  - travis_integration
+install:
+  - "pip install -r requirements.txt"
+  - "bash git_init.sh"
+script:
+  - "darkslide README.md -d index.html"
+  - "darkslide howto.md -d howto.html"
+after_success: "bash generate.sh"
+env:
+  global:
+    secure: sNNzfnpe3+uC4x+Ik/qDuya+oWtlMH7xKi/++KG89ZxKqYVmd9PzuM9fJoFg8qEWiL51RWs9hD3IEsRKpmQ+z+178crVBInLkcFbnu5wmWoBY5/0DfB915owF8Zij7OZWax/BC0JKOVOgDSLkRkSOBpQC/KxvIO9cmZ1fEkIrb9G4kVeiU1eZLNwoq/gw3vivXYpp7dxT9v63k6nPtlhyUTrltzv/hXqhnlMbJmkVFDcV3VWIwee6MMn5Y+tppmU1MaJYpSbCmtbURO8ifkG/hHZhgghIO+lcYl6ADte7uXup9UIrPFhVV63b5fqS7Qrp791N33Tgh1UzrinLy15WrJsCUOgeUOguXSsitnkmzZiDgON631nU11cb3LZ3UMvN4dbTTxcSwJsUBFNJTZU33Nkjqo2ZwAiSP0r7C4rCpXY76t5X22n19OEBz16kuBt/qBqNpzkm8ItfQrHe0UjIioW5dpm1vylL4Rhj3fuk56/9qYE8/jfce3maXn/GjQQhnuEOFB3lgE2cadyIdybS30gKIp5f6JAeUU4cXFVHuSzlOHOFns5gDCR8QWiAMhqhnKSH3C/dYSEpFsV4X5L+7Gc1vCRzv54aJXsQqvn1ZkS+0tVlTBlqpMZpJM8FWs/xICsKus9jjsos28zRajTSCtHMI2tHSkDF4BFLnLdwFQ=
