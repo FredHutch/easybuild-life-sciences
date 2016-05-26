@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -o errexit -o nounset
+set -x
 
 # switch to gh-pages
 git reset upstream/gh-pages
