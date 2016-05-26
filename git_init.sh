@@ -17,4 +17,4 @@ git config user.name "Ben McGough"
 git config user.email "bmcgough@fredhutch.org"
 
 git remote add upstream "https://$GH_TOKEN@github.com/FredHutch/easybuild-life-sciences.git"
-get fetch upstream
+git fetch upstream
