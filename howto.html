@@ -60,9 +60,10 @@
             <header><h1>HOWTO</h1></header>
             
             
-            <section><p>Github
-Travis-CI
-darkslide</p></section>
+            <section><h2>Github with Travis-CI and darkslide</h2>
+<h1>Source</h1>
+<p>Have Travis-CI auto-generate a slideshow using darkslid and commit it into Github Pages
+Steps based on <a href="http://www.steveklabnik.com/automatically_update_github_pages_with_travis_example/">www.steveklabnik.com</a></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -79,7 +80,7 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              1/8
+              1/7
             </aside>
           </footer>
         </div>
@@ -90,8 +91,14 @@ darkslide</p></section>
         <div class="slide slide-2">
           <div class="inner">
             
-            <header><h1>Steps based on <a href="http://www.steveklabnik.com/automatically_update_github_pages_with_travis_example/">this</a></h1></header>
+            <header><h1>Get darkslide working</h1></header>
             
+            
+            <section><ul>
+<li>create a virtualenv for your project outside the repo</li>
+<li>install python-darkslide: <code>(your_project)you@yourhost:~/$ pip3 install darkslide</code></li>
+<li>get your darkslide config working to create the output you want</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -108,7 +115,7 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              2/8
+              2/7
             </aside>
           </footer>
         </div>
@@ -119,13 +126,14 @@ darkslide</p></section>
         <div class="slide slide-3">
           <div class="inner">
             
+            <header><h1>Set up for Travis-CI</h1></header>
             
-            <section><p>Have Travis-CI auto-generate a slideshow into Github Pages from your master branch commits</p>
-<ol>
-<li>create a repo with a gh-pages branch per <a href="https://pages.github.com/">this page</a></li>
-<li>create a virtualenv for your project outside the repo</li>
-<li>install python-darkslide: <code>(your_project)you@yourhost:~/$ pip3 install darkslide</code></li>
-</ol></section>
+            
+            <section><ul>
+<li>generate a requirements.txt using pip: <code>(your_project)you@yourhost:~/$ pip3 freeze &gt; requirements.txt</code></li>
+<li>add requirements.txt to your repo</li>
+<li>create a <code>.travis.yml</code> file and add it to your repo</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -142,7 +150,7 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              3/8
+              3/7
             </aside>
           </footer>
         </div>
@@ -153,45 +161,10 @@ darkslide</p></section>
         <div class="slide slide-4">
           <div class="inner">
             
-            <header><h1>Steps (continued)</h1></header>
-            
-            
-            <section><ol>
-<li>generate a requirements.txt using pip: <code>(your_project)you@yourhost:~/$ pip3 freeze &gt; requirements.txt</code></li>
-<li>add requirements.txt to your repo</li>
-<li>create a <code>.travis.yml</code> file and add it to your repo</li>
-</ol></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            
-            <aside class="source">
-              Source: <a href="howto.md">howto.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              4/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: howto.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-5">
-          <div class="inner">
-            
             <header><h1>dot(.)travis.yml file</h1></header>
             
             
-            <section><p>!yaml
+            <section><p>!YAML
       language: python
       python:
         - "3.5"
@@ -202,8 +175,8 @@ darkslide</p></section>
         - "pip install -r requirements.txt"
         - "bash git_init.sh"
       script:
-        - "darkslide README.md -d index.html"
-        - "darkslide howto.md -d howto.html"
+        - "darkslide README.md -d index.html --relative --copy-theme --theme=default"
+        - "darkslide howto.md -d howto.html --relative --copy-theme --theme=default"
       after_success: "bash generate.sh"
       env:
         global:
@@ -225,7 +198,43 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              5/8
+              4/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>travis encrypts github token</h1></header>
+            
+            
+            <section><ul>
+<li>on your workstation, run <code>gem install travis</code> - this may require additional packages like ruby-dev/devel</li>
+<li>go get a github personal access token</li>
+<li>have travis encrypt the token <code>travis encrypt GH_TOKEN=&lt;your token&gt; --add</code> and add to .travis.yml</li>
+<li>create a repo with a gh-pages branch per <a href="https://pages.github.com/">pages.github.com</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/7
             </aside>
           </footer>
         </div>
@@ -236,15 +245,28 @@ darkslide</p></section>
         <div class="slide slide-6">
           <div class="inner">
             
-            <header><h1>Steps (continued)</h1></header>
+            <header><h1>git_init.sh file</h1></header>
             
             
-            <section><ol>
-<li>(this is the gnarly part) - on your workstation, run <code>$ gem install travis</code> - this may require additional packages like ruby-dev/devel</li>
-<li>Go get a github personal access token</li>
-<li>have travis encrypt the token and put in in your .travis.yml file with <code>travis encrypt GH_TOKEN=&lt;your token&gt; --add</code></li>
-<li>create a git_init.sh script to update your repo</li>
-</ol></section>
+            <section><ul>
+<li>create a git_init.sh script to update your repo
+   !bash
+      #!/bin/bash
+      set -o errexit -o nounset
+      BUILD_BRANCH="master"
+      GIT_USER="bmcgough"
+      GIT_EMAIL="bmcgough@fredhutch.org"
+      GIT_REPO="FredHutch/easubuild-life-sciences.git"
+      if [ "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]
+      then
+        echo "commit $TRAVIS_BRANCH and not $BUILD_BRANCH - not generating"
+        exit 0
+      fi
+      # set up a new repo
+      git init
+      git config user.name "$GIT_USER"
+      git config user.email "$GIT_EMAIL"</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -261,7 +283,7 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              6/8
+              6/7
             </aside>
           </footer>
         </div>
@@ -272,74 +294,20 @@ darkslide</p></section>
         <div class="slide slide-7">
           <div class="inner">
             
-            <header><h1>git_init.sh file</h1></header>
+            <header><h1>generate.sh file</h1></header>
             
             
-            <section><p>!bash
-      #!/bin/bash</p>
-<pre><code>  set -o errexit -o nounset
-
-  BUILD_BRANCH="master"
-
-  GIT_USER="bmcgough"
-  GIT_EMAIL="bmcgough@fredhutch.org"
-  GIT_REPO="FredHutch/easubuild-life-sciences.git"
-
-  if [ "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]
-  then
-    echo "This commit was made against the $TRAVIS_BRANCH and not $BUILD_BRANCH. Not generating."
-    exit 0
-  fi
-
-  # set up a new repo
-  git init
-  git config user.name "$GIT_USER"
-  git config user.email "$GIT_EMAIL"
-</code></pre></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            
-            <aside class="source">
-              Source: <a href="howto.md">howto.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              7/8
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: howto.md -->
-      <div class="slide-wrapper">
-        <div class="slide slide-8">
-          <div class="inner">
-            
-            <header><h1>Steps (continued)</h1></header>
-            
-            
-            <section><ol>
+            <section><ul>
 <li>create a generate.sh script to run darkslide on your markdown:</li>
-</ol>
+</ul>
 <p>!bash
-      #!/bin/bash</p>
-<pre><code>  set -o errexit -o nounset
-
-  rev=$(git --rev-parse --short HEAD)
-
-  # add, commit, and push
-  git add *.html
-  git commit -m "regeneration for gh-pages at ${rev}"
-  git push -q upstream HEAD:gh-pages
-</code></pre></section>
+      #!/bin/bash
+      set -o errexit -o nounset
+      rev=$(git --rev-parse --short HEAD)
+      # add, commit, and push
+      git add *.html
+      git commit -m "regeneration for gh-pages at ${rev}"
+      git push -q upstream HEAD:gh-pages</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -356,7 +324,7 @@ darkslide</p></section>
             </aside>
             
             <aside class="page_number">
-              8/8
+              7/7
             </aside>
           </footer>
         </div>
@@ -377,44 +345,38 @@ darkslide</p></section>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide:2">Steps based on <a href="http://www.steveklabnik.com/automatically_update_github_pages_with_travis_example/">this</a></a></th>
+        <th><a href="#slide:2">Get darkslide working</a></th>
         <td><a href="#slide:2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide:3">-</a></th>
+        <th><a href="#slide:3">Set up for Travis-CI</a></th>
         <td><a href="#slide:3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide:4">Steps (continued)</a></th>
+        <th><a href="#slide:4">dot(.)travis.yml file</a></th>
         <td><a href="#slide:4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide:5">dot(.)travis.yml file</a></th>
+        <th><a href="#slide:5">travis encrypts github token</a></th>
         <td><a href="#slide:5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide:6">Steps (continued)</a></th>
+        <th><a href="#slide:6">git_init.sh file</a></th>
         <td><a href="#slide:6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide:7">git_init.sh file</a></th>
+        <th><a href="#slide:7">generate.sh file</a></th>
         <td><a href="#slide:7">7</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-8">
-        <th><a href="#slide:8">Steps (continued)</a></th>
-        <td><a href="#slide:8">8</a></td>
       </tr>
       
       
