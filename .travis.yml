@@ -9,7 +9,7 @@ install:
   - "bash git_init.sh"
 script:
   - "darkslide README.md -d index.html --relative --copy-theme --linenos=no"
-  - "darkslide howto.md -d howto.html --relative --copt-theme --linenos=no"
+  - "darkslide howto.md -d howto.html --relative --copy-theme --linenos=no"
 after_success: "bash generate.sh"
 env:
   global:
