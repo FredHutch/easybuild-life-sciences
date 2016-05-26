@@ -3,11 +3,13 @@ python:
 - '3.5'
 branches:
   only:
-  - master
+  - travis_integration
 install:
   - pip install -r requirements.txt
   - bash git_init.sh
-script: bash darkslide README.md -d index.html
+script:
+  - bash darkslide README.md -d index.html
+  - bash darkslide howto.md -d howto.html
 after_success: bash generate.sh
 env:
   global:
