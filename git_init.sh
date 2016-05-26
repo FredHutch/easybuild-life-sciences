@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset
 
-BUILD_BRANCH="travis_integration"
+BUILD_BRANCH="master"
 
 if [ "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]
 then
