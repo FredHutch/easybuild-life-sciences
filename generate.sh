@@ -11,6 +11,6 @@ git reset upstream/gh-pages
 
 # add, commit, and push
 git add *.html
-git add -A themes
+git add -A theme
 git commit -m "regeneration for gh-pages at ${rev}"
 git push -q upstream HEAD:gh-pages
