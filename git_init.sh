@@ -10,7 +10,7 @@ then
   exit 0
 fi
 
-rev=$(git rev-parge --short HEAD)
+rev=$(git rev-parse --short HEAD)
 
 git init
 git config user.name "Ben McGough"
