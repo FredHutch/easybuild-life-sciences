@@ -20,6 +20,7 @@ My base containers are all from [linuxcontainers.org](https://images.linuxcontai
 | flex-2.5.39-foss-2016a.eb | Ubuntu 14.04 | missed build dependency: m4 | Add to .eb as build dependency? | manual install of os pkg :( |
 | nettle-3.1.1-foss-2016a | Ubuntu 14.04 | sanity check fails: lib64/ not exist as configure looks for /usr/lib64 as key | Patch nettle | mkdir /usr/lib64 :( |
 | libXft-2.3.2-foss-2016a-fontconfig-2.11.95 | Ubuntu 14.04 | missed build dependency: xproto (for X11/X.h) | Add to .eb as build dependency | Added |
+| Python-2.7.11-foss-2016a-libX11-1.6.3 | Ubuntu 14.04 | Cython has moved to PYPI | Change .eb to new location | Manual download |
 
 ## Base OS package inclusion table
 
