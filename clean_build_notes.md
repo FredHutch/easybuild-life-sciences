@@ -18,6 +18,7 @@ My base containers are all from [linuxcontainers.org](https://images.linuxcontai
 | intel-2016a | Ubuntu 14.04 | os pkgs needed: gcc-multilib, g++-multilib (may be an Ubuntu thing) | Add to .eb as os dependency? | Manual install |
 | many pkgs | Ubuntu 14.04 | missed build dependency: pkgconfig | Should be in toolchain? | Manual install of os pkg :( |
 | flex-2.5.39-foss-2016a.eb | Ubuntu 14.04 | missed build dependency: m4 | Add to .eb as build dependency? | manual install of os pkg :( |
+| nettle-3.1.1-foss-2016a | Ubuntu 14.04 | sanity check fails: lib64/ not exist as configure looks for /usr/lib64 as key | Patch nettle | mkdir /usr/lib64 :( |
 
 ## Base OS package inclusion table
 
