@@ -4,9 +4,11 @@
 
 ---
 
-# EasyBuild is building software with ease
+# EasyBuild is...
+
+## building software with ease
  
-*Features*
+### Features
  
 - multiple versions and builds of many software packages
 - automated dependency system
@@ -14,72 +16,72 @@
 - automated environment modules managment
 - curated toolchains
 
-
 ---
 
 # EasyBuild Terms
 
-- **environment modules:** a system of managing environment variables
-- **easyconfig:** a file that describes a software package version
-- **toolchain:** a defined collection of compilers and support libraries
+- **environment modules:**
+   a system of managing environment variables
+- **easyconfig:**
+   a file that describes a software package version
+- **toolchain:**
+   a defined collection of compilers and support libraries
 
 ---
 
 # Environment Modules
- 
-Easybuild uses Environment Modules to automatically "wrap" software packages it builds.
-
-This is how it makes software packages available, isolated from eachother, and able to be used together.
-
-Environment Modules is a system that:
+##Overview
  
 - sets and unsets environment variables
-- avoids conflicts
+- avoids conflicts between software packages
 - provides administrative hooks
  
 ---
  
-# Environment Variables: shell integration
+# Environment Modules
+##Shell integration
  
 Environment Variables integrates with the users shell
 
-- shell function module()
-- calls modulecmd with options and shell name
+- shell function/alias module()
+- calls `modulecmd` with parameters and shell name from the alias
 - modulecmd outputs commands for specified shell to set/unset variables
 - we recommend the use of Lmod as it is the most widely used by EasyBuilders
 
 ---
- 
-# Example of module use
+
+# Environment Modules
+##Example of module use
  
 Here is a quick example of a module in use:
  
-> $ which R
-> /usr/bin/R
-> $ module load R/3.3.0-intel-2016a
-> $ which R
-> /app/easybuild/software/R/3.3.0-intel-2016a/bin/R
+   $ which R
+   /usr/bin/R
+   $ module load R/3.3.0-intel-2016a
+   $ which R
+   /app/easybuild/software/R/3.3.0-intel-2016a/bin/R
 
 ---
 
 # Easyconfigs
 
-Easyconfigs are text files that define a software package version + toolchain.
+- Easyconfigs are text files
+- Easyconfigs define a software package + version + toolchain
 
-> easyblock = 'ConfigureMake'
->
-> name = 'make'
-> version = '4.1'
->
-> homepage = 'http://www.gnu.org/software/make/make.html'
-> description = "GNU version of make utility"
->
-> toolchain = {'name': 'GCC', 'version': '4.9.2'}
->
-> source_urls = [GNU_SOURCE]
-> sources = [SOURCE_TAR_BZ2]
->
-> moduleclass = 'devel'
+   easyblock = 'ConfigureMake'
+
+   name = 'make'
+   version = '4.1'
+
+   homepage = 'http://www.gnu.org/software/make/make.html'
+   description = "GNU version of make utility"
+
+   toolchain = {'name': 'GCC', 'version': '4.9.2'}
+
+   source_urls = [GNU_SOURCE]
+   sources = [SOURCE_TAR_BZ2]
+
+   moduleclass = 'devel'
 
 ---
 
@@ -94,16 +96,17 @@ Easyconfigs are text files that define a software package version + toolchain.
 
 Normal text
 
+---
+
 # Why do I care about toolchains?
 
 Toolchains are simply grouping of EasyBuilt software packages used to supply a consistent set of compilers, options, and libraries with which to build additional software packages.
 
 ---
 
-# Toolchain consistency
+# Toolchain Benefits
 
 Using the same toolchain enables:
-
 - more efficient loading of modules for multiple software packages
 - package stacking (bundles)
 - **re-producibility**
@@ -114,11 +117,13 @@ Using the same toolchain enables:
 
 Toolchains are curated and have been built by the EasyBuild community to provide optimized performance
 
-*rbench:*
+##rbench
 
-R | EB GCC R | EB Intel R
----|---|---
-res | res | res
+- Base R: 
+- EasyBuild foss-2016a toolchain R:
+- EasyBuild intel-2016a toolchain R:
+
+---
 
 # Example of an EasyBuild
 
