@@ -77,7 +77,7 @@
             </aside>
             
             <aside class="page_number">
-              1/14
+              1/16
             </aside>
           </footer>
         </div>
@@ -88,10 +88,11 @@
         <div class="slide has_footer slide-2">
           <div class="inner">
             
-            <header><h1>EasyBuild is building software with ease</h1></header>
+            <header><h1>EasyBuild is...</h1></header>
             
             
-            <section><p><em>Features</em></p>
+            <section><h2>building software with ease</h2>
+<h3>Features</h3>
 <ul>
 <li>multiple versions and builds of many software packages</li>
 <li>automated dependency system</li>
@@ -117,7 +118,7 @@
             </aside>
             
             <aside class="page_number">
-              2/14
+              2/16
             </aside>
           </footer>
         </div>
@@ -132,9 +133,12 @@
             
             
             <section><ul>
-<li><strong>environment modules:</strong> a system of managing environment variables</li>
-<li><strong>easyconfig:</strong> a file that describes a software package version</li>
-<li><strong>toolchain:</strong> a defined collection of compilers and support libraries</li>
+<li><strong>environment modules:</strong>
+   a system of managing environment variables</li>
+<li><strong>easyconfig:</strong>
+   a file that describes a software package version</li>
+<li><strong>toolchain:</strong>
+   a defined collection of compilers and support libraries</li>
 </ul></section>
             
           </div>
@@ -154,7 +158,7 @@
             </aside>
             
             <aside class="page_number">
-              3/14
+              3/16
             </aside>
           </footer>
         </div>
@@ -168,12 +172,10 @@
             <header><h1>Environment Modules</h1></header>
             
             
-            <section><p>Easybuild uses Environment Modules to automatically "wrap" software packages it builds.</p>
-<p>This is how it makes software packages available, isolated from eachother, and able to be used together.</p>
-<p>Environment Modules is a system that:</p>
+            <section><h2>Overview</h2>
 <ul>
 <li>sets and unsets environment variables</li>
-<li>avoids conflicts</li>
+<li>avoids conflicts between software packages</li>
 <li>provides administrative hooks</li>
 </ul></section>
             
@@ -194,7 +196,7 @@
             </aside>
             
             <aside class="page_number">
-              4/14
+              4/16
             </aside>
           </footer>
         </div>
@@ -205,13 +207,14 @@
         <div class="slide has_footer slide-5">
           <div class="inner">
             
-            <header><h1>Environment Variables: shell integration</h1></header>
+            <header><h1>Environment Modules</h1></header>
             
             
-            <section><p>Environment Variables integrates with the users shell</p>
+            <section><h2>Shell integration</h2>
+<p>Environment Variables integrates with the users shell</p>
 <ul>
-<li>shell function module()</li>
-<li>calls modulecmd with options and shell name</li>
+<li>shell function/alias module()</li>
+<li>calls <code>modulecmd</code> with parameters and shell name from the alias</li>
 <li>modulecmd outputs commands for specified shell to set/unset variables</li>
 <li>we recommend the use of Lmod as it is the most widely used by EasyBuilders</li>
 </ul></section>
@@ -233,7 +236,7 @@
             </aside>
             
             <aside class="page_number">
-              5/14
+              5/16
             </aside>
           </footer>
         </div>
@@ -244,17 +247,16 @@
         <div class="slide has_footer slide-6">
           <div class="inner">
             
-            <header><h1>Example of module use</h1></header>
+            <header><h1>Environment Modules</h1></header>
             
             
-            <section><p>Here is a quick example of a module in use:</p>
-<blockquote>
+            <section><h2>Example of module use</h2>
+<p>Here is a quick example of a module in use:</p>
 <p>$ which R
-/usr/bin/R
-$ module load R/3.3.0-intel-2016a
-$ which R
-/app/easybuild/software/R/3.3.0-intel-2016a/bin/R</p>
-</blockquote></section>
+   /usr/bin/R
+   $ module load R/3.3.0-intel-2016a
+   $ which R
+   /app/easybuild/software/R/3.3.0-intel-2016a/bin/R</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -273,7 +275,7 @@ $ which R
             </aside>
             
             <aside class="page_number">
-              6/14
+              6/16
             </aside>
           </footer>
         </div>
@@ -287,18 +289,19 @@ $ which R
             <header><h1>Easyconfigs</h1></header>
             
             
-            <section><p>Easyconfigs are text files that define a software package version + toolchain.</p>
-<blockquote>
+            <section><ul>
+<li>Easyconfigs are text files</li>
+<li>Easyconfigs define a software package + version + toolchain</li>
+</ul>
 <p>easyblock = 'ConfigureMake'</p>
 <p>name = 'make'
-version = '4.1'</p>
+   version = '4.1'</p>
 <p>homepage = 'http://www.gnu.org/software/make/make.html'
-description = "GNU version of make utility"</p>
+   description = "GNU version of make utility"</p>
 <p>toolchain = {'name': 'GCC', 'version': '4.9.2'}</p>
 <p>source_urls = [GNU_SOURCE]
-sources = [SOURCE_TAR_BZ2]</p>
-<p>moduleclass = 'devel'</p>
-</blockquote></section>
+   sources = [SOURCE_TAR_BZ2]</p>
+<p>moduleclass = 'devel'</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -317,7 +320,7 @@ sources = [SOURCE_TAR_BZ2]</p>
             </aside>
             
             <aside class="page_number">
-              7/14
+              7/16
             </aside>
           </footer>
         </div>
@@ -337,9 +340,7 @@ sources = [SOURCE_TAR_BZ2]</p>
 <h4>header 4</h4>
 <h5>header5</h5>
 <h6>header 6</h6>
-<p>Normal text</p>
-<h1>Why do I care about toolchains?</h1>
-<p>Toolchains are simply grouping of EasyBuilt software packages used to supply a consistent set of compilers, options, and libraries with which to build additional software packages.</p></section>
+<p>Normal text</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -358,7 +359,7 @@ sources = [SOURCE_TAR_BZ2]</p>
             </aside>
             
             <aside class="page_number">
-              8/14
+              8/16
             </aside>
           </footer>
         </div>
@@ -369,14 +370,84 @@ sources = [SOURCE_TAR_BZ2]</p>
         <div class="slide has_footer slide-9">
           <div class="inner">
             
-            <header><h1>Toolchain consistency</h1></header>
+            <header><h1>Why do I care about toolchains?</h1></header>
             
             
-            <section><p>Using the same toolchain enables:</p>
+            <section><p>Toolchains are simply grouping of EasyBuilt software packages used to supply a consistent set of compilers, options, and libraries with which to build additional software packages.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+              <em>Presented at Seattle Information Technology Exchange 2016-08-17</em>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_footer slide-10">
+          <div class="inner">
+            
+            <header><h1>Toolchain Benefits</h1></header>
+            
+            
+            <section><p>Using the same toolchain enables:
+- more efficient loading of modules for multiple software packages
+- package stacking (bundles)
+- <strong>re-producibility</strong></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+              <em>Presented at Seattle Information Technology Exchange 2016-08-17</em>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/16
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_footer slide-11">
+          <div class="inner">
+            
+            <header><h1>Toolchains and performance</h1></header>
+            
+            
+            <section><p>Toolchains are curated and have been built by the EasyBuild community to provide optimized performance</p>
+<h2>rbench</h2>
 <ul>
-<li>more efficient loading of modules for multiple software packages</li>
-<li>package stacking (bundles)</li>
-<li><strong>re-producibility</strong></li>
+<li>Base R: </li>
+<li>EasyBuild foss-2016a toolchain R:</li>
+<li>EasyBuild intel-2016a toolchain R:</li>
 </ul></section>
             
           </div>
@@ -396,7 +467,7 @@ sources = [SOURCE_TAR_BZ2]</p>
             </aside>
             
             <aside class="page_number">
-              9/14
+              11/16
             </aside>
           </footer>
         </div>
@@ -404,19 +475,13 @@ sources = [SOURCE_TAR_BZ2]</p>
       
       <!-- slide source: EasyBuild_Presentation.md -->
       <div class="slide-wrapper">
-        <div class="slide has_footer slide-10">
+        <div class="slide has_footer slide-12">
           <div class="inner">
             
-            <header><h1>Toolchains and performance</h1></header>
+            <header><h1>Example of an EasyBuild</h1></header>
             
             
-            <section><p>Toolchains are curated and have been built by the EasyBuild community to provide optimized performance</p>
-<p><em>rbench:</em></p>
-<p>R | EB GCC R | EB Intel R
----|---|---
-res | res | res</p>
-<h1>Example of an EasyBuild</h1>
-<p>Demo a quick EasyBuild in shell</p></section>
+            <section><p>Demo a quick EasyBuild in shell</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -435,7 +500,7 @@ res | res | res</p>
             </aside>
             
             <aside class="page_number">
-              10/14
+              12/16
             </aside>
           </footer>
         </div>
@@ -443,7 +508,7 @@ res | res | res</p>
       
       <!-- slide source: EasyBuild_Presentation.md -->
       <div class="slide-wrapper">
-        <div class="slide has_footer slide-11">
+        <div class="slide has_footer slide-13">
           <div class="inner">
             
             <header><h1>Using EasyBuild</h1></header>
@@ -479,7 +544,7 @@ res | res | res</p>
             </aside>
             
             <aside class="page_number">
-              11/14
+              13/16
             </aside>
           </footer>
         </div>
@@ -487,7 +552,7 @@ res | res | res</p>
       
       <!-- slide source: EasyBuild_Presentation.md -->
       <div class="slide-wrapper">
-        <div class="slide has_footer slide-12">
+        <div class="slide has_footer slide-14">
           <div class="inner">
             
             <header><h1>EasyBuild @FredHutch Details</h1></header>
@@ -528,7 +593,7 @@ module load EasyBuild</p>
             </aside>
             
             <aside class="page_number">
-              12/14
+              14/16
             </aside>
           </footer>
         </div>
@@ -536,7 +601,7 @@ module load EasyBuild</p>
       
       <!-- slide source: EasyBuild_Presentation.md -->
       <div class="slide-wrapper">
-        <div class="slide has_footer slide-13">
+        <div class="slide has_footer slide-15">
           <div class="inner">
             
             <header><h1>EasyBuild Environment</h1></header>
@@ -561,7 +626,7 @@ module load EasyBuild</p>
             </aside>
             
             <aside class="page_number">
-              13/14
+              15/16
             </aside>
           </footer>
         </div>
@@ -569,7 +634,7 @@ module load EasyBuild</p>
       
       <!-- slide source: EasyBuild_Presentation.md -->
       <div class="slide-wrapper">
-        <div class="slide has_footer slide-14">
+        <div class="slide has_footer slide-16">
           <div class="inner">
             
             
@@ -611,7 +676,7 @@ X better transition between env modules and toolchains</p>
             </aside>
             
             <aside class="page_number">
-              14/14
+              16/16
             </aside>
           </footer>
         </div>
@@ -632,7 +697,7 @@ X better transition between env modules and toolchains</p>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide:2">EasyBuild is building software with ease</a></th>
+        <th><a href="#slide:2">EasyBuild is...</a></th>
         <td><a href="#slide:2">2</a></td>
       </tr>
       
@@ -650,13 +715,13 @@ X better transition between env modules and toolchains</p>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide:5">Environment Variables: shell integration</a></th>
+        <th><a href="#slide:5">Environment Modules</a></th>
         <td><a href="#slide:5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide:6">Example of module use</a></th>
+        <th><a href="#slide:6">Environment Modules</a></th>
         <td><a href="#slide:6">6</a></td>
       </tr>
       
@@ -674,38 +739,50 @@ X better transition between env modules and toolchains</p>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide:9">Toolchain consistency</a></th>
+        <th><a href="#slide:9">Why do I care about toolchains?</a></th>
         <td><a href="#slide:9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide:10">Toolchains and performance</a></th>
+        <th><a href="#slide:10">Toolchain Benefits</a></th>
         <td><a href="#slide:10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide:11">Using EasyBuild</a></th>
+        <th><a href="#slide:11">Toolchains and performance</a></th>
         <td><a href="#slide:11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide:12">EasyBuild @FredHutch Details</a></th>
+        <th><a href="#slide:12">Example of an EasyBuild</a></th>
         <td><a href="#slide:12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide:13">EasyBuild Environment</a></th>
+        <th><a href="#slide:13">Using EasyBuild</a></th>
         <td><a href="#slide:13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide:14">-</a></th>
+        <th><a href="#slide:14">EasyBuild @FredHutch Details</a></th>
         <td><a href="#slide:14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide:15">EasyBuild Environment</a></th>
+        <td><a href="#slide:15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide:16">-</a></th>
+        <td><a href="#slide:16">16</a></td>
       </tr>
       
       
