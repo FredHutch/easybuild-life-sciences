@@ -10,6 +10,7 @@ install:
 script:
   - "darkslide README.md -d index.html --relative --copy-theme --linenos=no --theme=default"
   - "darkslide howto.md -d howto.html --relative --copy-theme --linenos=no --theme=default"
+  - "darkslide EasyBuild_Presentation.md -d EasyBuild_Presentation.html --relative --copy-theme --linenos=no --theme=default"
 after_success: "bash generate.sh"
 env:
   global:
