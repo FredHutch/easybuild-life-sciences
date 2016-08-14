@@ -1,7 +1,5 @@
 # EasyBuild
 
-.footer: *Presented at Seattle Information Technology Exchange 2016-08-17*
-
 ---
 
 # EasyBuild is...
@@ -21,11 +19,18 @@
 # EasyBuild Terms
 
 - **environment modules:**
+
    a system of managing environment variables
 - **easyconfig:**
+
    a file that describes a software package version
 - **toolchain:**
+
    a defined collection of compilers and support libraries
+
+---
+
+# Environment Modules
 
 ---
 
@@ -55,6 +60,7 @@ Environment Variables integrates with the users shell
  
 Here is a quick example of a module in use:
  
+   !bash
    $ which R
    /usr/bin/R
    $ module load R/3.3.0-intel-2016a
@@ -63,53 +69,60 @@ Here is a quick example of a module in use:
 
 ---
 
+# Example
+
+   !bash
+   $ module list
+
+---
+
 # Easyconfigs
+
+---
+
+# Easyconfig Simple Example
 
 - Easyconfigs are text files
 - Easyconfigs define a software package + version + toolchain
 
+   !python
    easyblock = 'ConfigureMake'
-
    name = 'make'
    version = '4.1'
-
    homepage = 'http://www.gnu.org/software/make/make.html'
    description = "GNU version of make utility"
-
    toolchain = {'name': 'GCC', 'version': '4.9.2'}
-
    source_urls = [GNU_SOURCE]
    sources = [SOURCE_TAR_BZ2]
-
    moduleclass = 'devel'
 
 ---
 
-# Markdown font size options
+# Easyconfig Extended Example
 
-# header 1
-## header 2
-### header 3
-#### header 4
-##### header5
-###### header 6
-
-Normal text
+extended R example
 
 ---
 
-# Why do I care about toolchains?
+# What are toolchains exactly?
 
-Toolchains are simply grouping of EasyBuilt software packages used to supply a consistent set of compilers, options, and libraries with which to build additional software packages.
+## Toolchains
+
+- are defined in easyconfigs
+- are a collection of compilers and support libraries
+- provide consistent build parameters/env
+- optimize module stacks
+- aid in *re-producibility*
 
 ---
 
-# Toolchain Benefits
+# EasyBuild Benefits
 
-Using the same toolchain enables:
-- more efficient loading of modules for multiple software packages
-- package stacking (bundles)
-- **re-producibility**
+## Metrics
+
+- 1058 Software Packages (6600+ package versions)
+- 54 toolchains
+- 150+ contributors
 
 ---
 
@@ -119,9 +132,9 @@ Toolchains are curated and have been built by the EasyBuild community to provide
 
 ##rbench
 
-- Base R: 
-- EasyBuild foss-2016a toolchain R:
-- EasyBuild intel-2016a toolchain R:
+- Base R: secs
+- EasyBuild foss-2016a toolchain R: secs (nn% faster)
+- EasyBuild intel-2016a toolchain R: secs (nn% faster)
 
 ---
 
@@ -135,7 +148,7 @@ Demo a quick EasyBuild in shell
 
 We talked about toolchains, how and why you might want to build with EasyBuild
  
-
+---
  
 # EasyBuild @FredHutch
  
@@ -154,23 +167,49 @@ Toolchains:
 # EasyBuild @FredHutch Details
 
 - NFS mounted /app on all systems (ro)
-- EasyBuild PREFIX owned by group, EASYBUILD ENV VARS to support group building
-- EasyBuilds done on a single machine (Intel license, sanity)
+- EasyBuild PREFIX owned by POSIX group
+- EASYBUILD ENV VARS to support group building
+- EasyBuild is easy-built; everything in /app
+- EasyBuilds done on a build host
+
+---
+
+# EasyBuild @FredHutch Metrics
+
+- nnn/mmm software packages/versions built
+- 4 builders
+- nn% of our old software stack re-built
+
+---
+
+# FredHutch Next Step Goals
+
+- build EB life-sciences community
+- provide new versions quickly/publicly
+- share tools help promote code
+
+---
+
+# Next Step Details
+
+- publish easyconfigs
+  - upstream
+  - life-sciences github repo
+- published detailed implementation example
+- take ownership of R easyconfig
 
 # Bootstrapping EasyBuild
 
-> # pick an installation prefix to install EasyBuild to (change this to your liking)
-> EASYBUILD_PREFIX=$HOME/.local/easybuild
->
-> # download script
-> curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
->
-> # bootstrap EasyBuild
-> python bootstrap_eb.py $EASYBUILD_PREFIX
->
-> # update $MODULEPATH, and load the EasyBuild module
-> module use $EASYBUILD_PREFIX/modules/all
-> module load EasyBuild
+    !bash
+       # pick an installation prefix to install EasyBuild to (change this to your liking)
+    $ EASYBUILD_PREFIX=$HOME/.local/easybuild
+       # download script
+    $ curl -O https://raw.githubusercontent.com/hpcugent/easybuild-framework/develop/easybuild/scripts/bootstrap_eb.py
+       # bootstrap EasyBuild
+    $ python bootstrap_eb.py $EASYBUILD_PREFIX
+       # update $MODULEPATH, and load the EasyBuild module
+    $ module use $EASYBUILD_PREFIX/modules/all
+    $ module load EasyBuild
 
 ---
 
@@ -192,25 +231,25 @@ X easybuild environment: easybuid at FH - link to easybuild-lifesciences
  shared paths
  no root
 
-swap zlib for a binary with 'which' example
+X swap zlib for a binary with 'which' example
 
 new slide: R dependency example
 
 new slides: easybuild metrics/stats - totals, FH totals + packages for labs, life sciences
 
-new slide: easyconfig simple example
+X new slide: easyconfig simple example
 
-new slide: easyconfig complex example
+X new slide: easyconfig complex example
 
-new slide: collaboration and community
+X new slide: collaboration and community
 
 new slide: new easyconfig example
 
 new slide: easybuild github and easyconfigs search
 
-new slide: contribution, mailing list, community, processes, testing, github-based
+X new slide: contribution, mailing list, community, processes, testing, github-based
 
-new slide: outlook/next steps - lifesciences easybuild community for collaboration using github,
+X new slide: outlook/next steps - lifesciences easybuild community for collaboration using github,
 
 new slide: containers, dockers, contrast and compare
 
