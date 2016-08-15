@@ -128,8 +128,6 @@ Easyconfigs...
 
 # Easyconfig Example
 
-## Python
-
     !python
     easyblock = 'ConfigureMake'
     name = 'make'
@@ -176,6 +174,20 @@ Up:
 ---
 
 # Toolchain example
+
+    GCCcore/4.9.3
+    binutils/2.2.5-GCCcore-4.9.3
+    GCC/4.9.3-2.25
+    numactl/2.0.11-GCC-4.9.3-2.25
+    hwloc/1.11.2-GCC-4.9.2-2.25
+    OpenMPI/1.10.2-GCC-4.9.3-2.25
+    OpenBLAS/0.2.15-GCC-4.9.3-2.25-LAPACK-3.6.0
+    gompi/2016a
+    FFTW/3.3.4-gompi-2016a
+    ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
+
+---
+# Toolchain example pic
 
 ![Toolchain Example](foss_toolchain.png)
 
