@@ -59,9 +59,9 @@
 
 # EasyBuild Terms
 
-- **environment modules:**
-- **easyconfig:**
-- **toolchain:**
+- **environment modules**
+- **easyconfigs**
+- **toolchains**
 
 ---
 
@@ -131,10 +131,6 @@ Easyconfigs...
 ## Python
 
     !python
-    def multiply (x, y):
-        return x * y
-
-    !python
     easyblock = 'ConfigureMake'
     name = 'make'
     version = '4.1'
@@ -149,7 +145,7 @@ Easyconfigs...
 
 # Easyconfig Extended Example
 
-extended R example
+![Module List](r_easyconfig.png)
 
 ---
 
@@ -182,6 +178,8 @@ Up:
 # Toolchain example
 
 ![Toolchain Example](foss_toolchain.png)
+
+---
 
 # Why do you care about Toolchains?
 
