@@ -22,6 +22,9 @@
 # Reliable Software
 
 ## EasyBuild
+challenges: download tarball, build process, pre-requisites, integration with env modules, repeat with next version in the same way
+
+"./configure; make; make install"
 
 ---
 
@@ -59,9 +62,9 @@
 
 # EasyBuild Terms
 
-- **environment modules**
-- **easyconfigs**
-- **toolchains**
+- **environment modules** (`module load`)
+- **easyconfigs** (recipes)
+- **toolchains** (ex: GCC/Intel)
 
 ---
 
@@ -141,12 +144,6 @@ Easyconfigs...
 
 ---
 
-# Easyconfig Extended Example
-
-![Module List](r_easyconfig.png)
-
----
-
 # Toolchains
 
 ---
@@ -219,13 +216,16 @@ rbench:
 
 Software is commonly cited using some combination of:
 
-   - Author Name
+   - Author Name (ex)
    - Project Name
    - URL
 
 ---
 
 # EasyBuild possible citation
+
+show easyconfig URL (ex)
+using that easyconfig will produce the same software built in the same way as the cited data
 
 - software + version + toolchain + release
 - compiler + libraries + parameters + options
@@ -302,25 +302,26 @@ Deployment:
 
 # EasyBuild @FredHutch Metrics
 
-- 218/757 software packages/versions built
-- 4 builders (simultaneous)
+- 218/757 software packages/versions built (add pkg list)
 - 86% built in 4 months
 - 87% of our old software stack re-built
+- 4 SysAdmins independently building consistent packages
 
 ---
 
 # What's the catch?
 
-- writing easyconfigs is not easy
+- adapting existing easyconfigs is easy
+- writing new easyconfigs is not easy
 - existing community accepts all easyconfigs
-- = proliferation of matrix
-- = inconsistent support libraries
-- = conflict
+- proliferation of matrix
+- inconsistent support packages
 
 ---
 
 # FredHutch Next Step Goals
 
+- reduce EasyBuild ramp-up time
 - build EB life-sciences community
 - create github-based workflow for easyconfigs
 - provide new versions quickly/publicly
@@ -331,7 +332,8 @@ Deployment:
 
 # Next Step Details
 
-- help implement expanded toolchains
+- provide 200+ life sciences packages in an hour
+- help implement expanded toolchains/package clusters
 - publish easyconfigs
   - upstream
   - life-sciences github repo
