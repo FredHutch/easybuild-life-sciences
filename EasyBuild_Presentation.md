@@ -202,9 +202,10 @@ Up:
 
 rbench:
 
-- *Ubuntu R*: secs
-- EasyBuild *foss-2016a R*: secs (nn% faster)
-- EasyBuild *intel-2016a R*: secs (nn% faster)
+- *Base R*: 179 secs
+- EasyBuild *foss-2016a R*: 83 secs (54% faster)
+- EasyBuild *intel-2016a R*: 91 secs (49% faster)
+- *Microsoft R Optimized (MRO)*: 86 secs (52% faster)
 
 ---
 
