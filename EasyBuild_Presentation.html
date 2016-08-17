@@ -152,13 +152,13 @@
         <div class="slide slide-4">
           <div class="inner">
             
-            <header><h1>What do they want?</h1></header>
+            <header><h1>What about software?</h1></header>
             
             
             <section><ul>
 <li>current versions built consistently and quickly</li>
 <li>software and version accounting for all jobs</li>
-<li>reliable citation sources -&gt; re-producibility</li>
+<li>reliable citation sources and re-producibility</li>
 </ul></section>
             
           </div>
@@ -191,8 +191,12 @@
             
             
             <section><p><code>./configure; make; sudo make install</code></p>
-<p>Download tarball, check required packages, <strong>install them</strong>, build, re-check required packages, <strong>make install</strong>, build modulefile</p>
-<p>Then repeat above for the next package, and repeat <em>exactly</em> for new versions of this package.</p></section>
+<p>Download tarball, check required packages, <strong>install them</strong>, build, re-check required packages, make test, <strong>make install</strong>, build modulefile.</p>
+<p>Then repeat:</p>
+<ul>
+<li>for the next package</li>
+<li><em>exactly</em> for new versions of this package</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -337,7 +341,7 @@
             <section><ul>
 <li><strong>environment modules</strong> (<code>$ module load R</code>)</li>
 <li><strong>easyconfigs</strong> (<em>build recipe</em>)</li>
-<li><strong>toolchains</strong> GCC, Intel, Clang/LLVM, etc.</li>
+<li><strong>toolchains</strong> GCC, Intel, Clang/LLVM, etc. + libs</li>
 </ul></section>
             
           </div>
@@ -431,7 +435,7 @@
         <div class="slide slide-12">
           <div class="inner">
             
-            <header><h1>You should be using Environment Modules!</h1></header>
+            <header><h1>Use Environment Modules...</h1></header>
             
             
             <section><ul>
@@ -467,7 +471,7 @@
         <div class="slide slide-13">
           <div class="inner">
             
-            <header><h1>You should be using EasyBuild too!</h1></header>
+            <header><h1>... with EasyBuild!</h1></header>
             
             
             <section><ul>
@@ -502,7 +506,7 @@
         <div class="slide slide-14">
           <div class="inner">
             
-            <header><h1>Dependency Example</h1></header>
+            <header><h1>Module Dependency Example</h1></header>
             
             
             <section><p><img alt="Module List" src="module_list.png" /></p></section>
@@ -633,15 +637,20 @@
             <header><h1>Easyconfig Example</h1></header>
             
             
-            <section><div class="highlight"><pre><span></span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;make&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;4.1&#39;</span>
-<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.gnu.org/software/make/make.html&#39;</span>
-<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;GNU version of make utility&quot;</span>
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;GCC&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;4.9.2&#39;</span><span class="p">}</span>
-<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="n">GNU_SOURCE</span><span class="p">]</span>
-<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCE_TAR_BZ2</span><span class="p">]</span>
-<span class="n">moduleclass</span> <span class="o">=</span> <span class="s1">&#39;devel&#39;</span>
+            <section><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;git&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.8.0&#39;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://git-scm.com/&#39;</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Git is a free and open source distributed version control system designed</span>
+<span class="s2">to handle everything from small to very large projects with speed and efficiency.&quot;&quot;&quot;</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2016a&#39;</span><span class="p">}</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://github.com/git/git/archive&#39;</span><span class="p">]</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">(</span><span class="s1">&#39;cURL&#39;</span><span class="p">,</span> <span class="s1">&#39;7.47.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;expat&#39;</span><span class="p">,</span> <span class="s1">&#39;2.1.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;gettext&#39;</span><span class="p">,</span> <span class="s1">&#39;0.19.7&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;Perl&#39;</span><span class="p">,</span> <span class="s1">&#39;5.22.1&#39;</span><span class="p">,</span> <span class="s1">&#39;-bare&#39;</span><span class="p">),</span>
+<span class="p">]</span>
 </pre></div>
 </section>
             
@@ -781,12 +790,12 @@ ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
             <header><h1>Toolchains and performance</h1></header>
             
             
-            <section><p>rbench:</p>
+            <section><p>rbench on R-3.3.0:</p>
 <ul>
-<li><em>Base R</em>: 179 secs</li>
-<li>EasyBuild <em>foss-2016a R</em>: 83 secs (54% faster)</li>
-<li>EasyBuild <em>intel-2016a R</em>: 91 secs (49% faster)</li>
-<li><em>Microsoft R Optimized (MRO)</em>: 86 secs (52% faster)</li>
+<li>179 secs *R compiled on Ubuntu 14.04</li>
+<li>83 secs (54% faster) <em>EasyBuild foss-2016a R</em></li>
+<li>91 secs (49% faster) <em>EasyBuild intel-2016a R</em></li>
+<li>86 secs (52% faster) <em>Microsoft R</em> (yes, on linux)</li>
 </ul></section>
             
           </div>
@@ -822,7 +831,6 @@ ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
 <li>easyconfig is package, version, toolchain</li>
 <li>toolchain is compiler, base libraries</li>
 <li>easyconfigs will build the same for everyone</li>
-<li>re-producibly</li>
 </ul></section>
             
           </div>
@@ -1052,7 +1060,7 @@ $ module load EasyBuild
             <section><p>Toolchains:</p>
 <ul>
 <li><strong>foss-n:</strong> Free Open Source Software - GCC, OpenBLAS, ScaLAPACK</li>
-<li><strong>intel-n:</strong> Intel C (icc), ifort, imkl</li>
+<li><strong>intel-n:</strong> Intel C &amp; Fortran, Intel Math Kernel Libraries</li>
 </ul>
 <p>Deployment:</p>
 <ul>
@@ -1270,9 +1278,8 @@ $ module load EasyBuild
             <section><ul>
 <li>provide 200+ life sciences packages in an hour</li>
 <li>help implement expanded toolchains/package clusters</li>
-<li>publish easyconfigs</li>
-<li>upstream</li>
-<li>life-sciences github repo</li>
+<li>publish easyconfigs upstream</li>
+<li>publish life-sciences github repo</li>
 <li>published detailed implementation example</li>
 <li>take ownership of R easyconfig</li>
 <li>implement EasyBuild in container (docker/LXD)</li>
@@ -1326,7 +1333,7 @@ $ module load EasyBuild
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide:4">What do they want?</a></th>
+        <th><a href="#slide:4">What about software?</a></th>
         <td><a href="#slide:4">4</a></td>
       </tr>
       
@@ -1374,19 +1381,19 @@ $ module load EasyBuild
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide:12">You should be using Environment Modules!</a></th>
+        <th><a href="#slide:12">Use Environment Modules...</a></th>
         <td><a href="#slide:12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide:13">You should be using EasyBuild too!</a></th>
+        <th><a href="#slide:13">... with EasyBuild!</a></th>
         <td><a href="#slide:13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide:14">Dependency Example</a></th>
+        <th><a href="#slide:14">Module Dependency Example</a></th>
         <td><a href="#slide:14">14</a></td>
       </tr>
       
