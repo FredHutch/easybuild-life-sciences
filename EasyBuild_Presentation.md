@@ -197,9 +197,9 @@ rbench on R-3.3.0:
 
 - easyconfig is package, version, toolchain
 - toolchain is compiler, base libraries
-- environment is complex
-- Modules and Easybuild manage complexity
+- environment is complex, Modules and Easybuild manage it
 - easyconfigs will build and run the same for everyone
+- and everywhere (new OS, toolchain, etc.)
 
 ---
 
@@ -311,3 +311,15 @@ Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCL
 - published detailed implementation example
 - take ownership of R easyconfig
 - implement EasyBuild in container (docker/LXD)
+
+---
+
+# Contact
+
+If you have any questions:
+
+bmcgough@fredhutch.org
+
+https://fredhutch.github.io/easybuild-life-sciences/EasyBuild_Presentation.html
+
+
