@@ -60,6 +60,8 @@
             <header><h1>EasyBuild</h1></header>
             
             
+            <section><p><img alt="Module List" src="git-dep-graph.png" /></p></section>
+            
           </div>
           <div class="presenter_notes">
             <header><h1>Presenter Notes</h1></header>
@@ -187,16 +189,14 @@
         <div class="slide slide-5">
           <div class="inner">
             
-            <header><h1>How do we give them what they want?</h1></header>
+            <header><h1>How do we do it?</h1></header>
             
             
             <section><p><code>./configure; make; sudo make install</code></p>
 <p>Download tarball, check required packages, <strong>install them</strong>, build, re-check required packages, make test, <strong>make install</strong>, build modulefile.</p>
-<p>Then repeat:</p>
-<ul>
-<li>for the next package</li>
-<li><em>exactly</em> for new versions of this package</li>
-</ul></section>
+<p>Then repeat:
+- for the next package
+- <em>exactly</em> for new versions of this package</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -792,7 +792,7 @@ ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
             
             <section><p>rbench on R-3.3.0:</p>
 <ul>
-<li>179 secs *R compiled on Ubuntu 14.04</li>
+<li>179 secs <em>R compiled on Ubuntu 14.04</em></li>
 <li>83 secs (54% faster) <em>EasyBuild foss-2016a R</em></li>
 <li>91 secs (49% faster) <em>EasyBuild intel-2016a R</em></li>
 <li>86 secs (52% faster) <em>Microsoft R</em> (yes, on linux)</li>
@@ -830,7 +830,9 @@ ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
             <section><ul>
 <li>easyconfig is package, version, toolchain</li>
 <li>toolchain is compiler, base libraries</li>
-<li>easyconfigs will build the same for everyone</li>
+<li>environment is complex</li>
+<li>Modules and Easybuild manage complexity</li>
+<li>easyconfigs will build and run the same for everyone</li>
 </ul></section>
             
           </div>
@@ -1167,7 +1169,7 @@ $ module load EasyBuild
         <div class="slide slide-33">
           <div class="inner">
             
-            <header><h1>Software Packages</h1></header>
+            <header><h1>FredHutch Software</h1></header>
             
             
             <section><p>Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCLE, GATK, fastqc, Cufflinks, Bowtie, BEAST, WHAM,TopHat, svtoolkit, STAR, SPLITREAD, samblaster, RSEM, Rosetta, Queue, PyMOL, ngsShort, mrsFAST, MEME, matplotlib, lumpy, GROMACS, ClustalW2, bioperl, biopython, BEDTools, BEDOps, bcl2fastq, bcftools, bamUtils, BamTools</p></section>
@@ -1339,7 +1341,7 @@ $ module load EasyBuild
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide:5">How do we give them what they want?</a></th>
+        <th><a href="#slide:5">How do we do it?</a></th>
         <td><a href="#slide:5">5</a></td>
       </tr>
       
@@ -1507,7 +1509,7 @@ $ module load EasyBuild
       
       
       <tr id="toc-row-33">
-        <th><a href="#slide:33">Software Packages</a></th>
+        <th><a href="#slide:33">FredHutch Software</a></th>
         <td><a href="#slide:33">33</a></td>
       </tr>
       
