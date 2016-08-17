@@ -1,7 +1,5 @@
 # EasyBuild
 
-![Module List](git-dep-graph.png)
-
 ---
 
 # Fred Hutch Researchers
