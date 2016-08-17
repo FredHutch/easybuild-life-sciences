@@ -1,5 +1,7 @@
 # EasyBuild
 
+![Module List](git-dep-graph.png)
+
 ---
 
 # Fred Hutch Researchers
@@ -24,14 +26,13 @@
 
 ---
 
-# How do we give them what they want?
+# How do we do it?
 
 `./configure; make; sudo make install`
 
 Download tarball, check required packages, **install them**, build, re-check required packages, make test, **make install**, build modulefile.
 
 Then repeat:
-
 - for the next package
 - *exactly* for new versions of this package
 
@@ -187,7 +188,7 @@ Easyconfigs...
 
 rbench on R-3.3.0:
 
-- 179 secs *R compiled on Ubuntu 14.04
+- 179 secs *R compiled on Ubuntu 14.04*
 - 83 secs (54% faster) *EasyBuild foss-2016a R*
 - 91 secs (49% faster) *EasyBuild intel-2016a R*
 - 86 secs (52% faster) *Microsoft R* (yes, on linux)
@@ -198,7 +199,9 @@ rbench on R-3.3.0:
 
 - easyconfig is package, version, toolchain
 - toolchain is compiler, base libraries
-- easyconfigs will build the same for everyone
+- environment is complex
+- Modules and Easybuild manage complexity
+- easyconfigs will build and run the same for everyone
 
 ---
 
@@ -275,7 +278,7 @@ Deployment:
 
 ---
 
-# Software Packages
+# FredHutch Software
 
 Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCLE, GATK, fastqc, Cufflinks, Bowtie, BEAST, WHAM,TopHat, svtoolkit, STAR, SPLITREAD, samblaster, RSEM, Rosetta, Queue, PyMOL, ngsShort, mrsFAST, MEME, matplotlib, lumpy, GROMACS, ClustalW2, bioperl, biopython, BEDTools, BEDOps, bcl2fastq, bcftools, bamUtils, BamTools
 
