@@ -6,10 +6,7 @@
 
 ## What they want:
 1. reliable systems and hardware
-2. reliable software:
-  - current versions built consistently and quickly
-  - software and version accounting for all jobs
-  - reliable citation sources -> re-producibility
+2. reliable software
 
 ---
 
@@ -19,23 +16,32 @@
 
 ---
 
-# Reliable Software
+# What do they want?
 
-## EasyBuild
-challenges: download tarball, build process, pre-requisites, integration with env modules, repeat with next version in the same way
-
-"./configure; make; make install"
+- current versions built consistently and quickly
+- software and version accounting for all jobs
+- reliable citation sources -> re-producibility
 
 ---
 
-# EasyBuild is...
+# How do we give them what they want?
 
-## building software with ease
+`./configure; make; sudo make install`
+
+Download tarball, check required packages, **install them**, build, re-check required packages, **make install**, build modulefile
+
+Then repeat above for the next package, and repeat *exactly* for new versions of this package.
+
+---
+
+# Reliable Software
+
+EasyBuild: building software with ease
  
 ### Features
  
 - multiple versions and builds of many software packages
-- automated dependency system
+- automated package dependency system
 - re-producible software package builds
 - automated environment modules managment
 - curated toolchains
@@ -47,7 +53,7 @@ challenges: download tarball, build process, pre-requisites, integration with en
 - 1058 Software Packages (6600+ package versions)
 - 54 toolchains
 - 150+ contributors
-- 87% coverage of our existing software stack
+- 87% of our existing software stack out of the box
 
 ---
 
@@ -62,9 +68,9 @@ challenges: download tarball, build process, pre-requisites, integration with en
 
 # EasyBuild Terms
 
-- **environment modules** (`module load`)
-- **easyconfigs** (recipes)
-- **toolchains** (ex: GCC/Intel)
+- **environment modules** (`$ module load R`)
+- **easyconfigs** (*build recipe*)
+- **toolchains** GCC, Intel, Clang/LLVM, etc.
 
 ---
 
@@ -81,24 +87,20 @@ challenges: download tarball, build process, pre-requisites, integration with en
  
 ---
  
-# How It Works
- 
-Environment Variables integrates with the users shell
+# You should be using Environment Modules!
 
-- shell function/alias module()
-- calls `modulecmd`
-- `modulecmd` echoes shell cmds to be eval'd
+- simple, end user-driven, scriptable
+- administrative hooks
+- greatly simplifies tangled, gnarly environments
+- use *Lmod* if you can
 
 ---
 
-# Example of module use
- 
-     !bash
-     $ which R
-     /usr/bin/R
-     $ module load R/3.3.0-intel-2016a
-     $ which R
-     /app/easybuild/software/R/3.3.0-intel-2016a/bin/R
+# You should be using EasyBuild too!
+
+- automated modulefile creation
+- managment of module hierarchy
+- don't write modules, just use them
 
 ---
 
@@ -148,25 +150,13 @@ Easyconfigs...
 
 ---
 
-# What are toolchains exactly?
+# What are toolchains?
 
 - are defined in easyconfig files
 - are a collection of compilers and support libraries
-- provide consistent build parameters/env
+- provide consistent builds for module stacks
+- aid in re-producibility
 - are a great place for optimization fan-out
-
----
-
-# How far does it go?
-
-Down:
-
-- just above kernel/hardware
-- is inconsistent
-
-Up:
-
-- build tools (compilers, static base libraries)
 
 ---
 
@@ -184,19 +174,6 @@ Up:
     ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
 
 ---
-# Toolchain example pic
-
-![Toolchain Example](foss_toolchain.png)
-
----
-
-# Why do you care about Toolchains?
-
-- optimize module stacks
-- optimize software
-- aid in *re-producibility*
-
----
 
 # Toolchains and performance
 
@@ -211,27 +188,10 @@ rbench:
 
 # Re-producibility
 
----
-
-# Common citation
-
-Software is commonly cited using some combination of:
-
-   - Author Name (ex)
-   - Project Name
-   - URL
-
----
-
-# EasyBuild possible citation
-
-show easyconfig URL (ex)
-using that easyconfig will produce the same software built in the same way as the cited data
-
-- software + version + toolchain + release
-- compiler + libraries + parameters + options
-
-The easyconfig will allow one to re-build precisely.
+- easyconfig is package, version, toolchain
+- toolchain is compiler, base libraries
+- easyconfigs will build the same for everyone
+- re-producibly
 
 ---
 
@@ -243,8 +203,6 @@ The easyconfig will allow one to re-build precisely.
 
 - Python
 - Environment Modules
-
-Use *Lmod* if modules are new for you.
 
 ---
 
@@ -281,8 +239,8 @@ Let's build something
 
 Toolchains:
 
-- **foss-n:** Free Open Source Software - GCC and friends
-- **intel-n:** Intel C and Fortran
+- **foss-n:** Free Open Source Software - GCC, OpenBLAS, ScaLAPACK
+- **intel-n:** Intel C (icc), ifort, imkl
 
 Deployment:
 
@@ -310,13 +268,19 @@ Deployment:
 
 ---
 
+# Software Packages
+
+Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCLE, GATK, fastqc, Cufflinks, Bowtie, BEAST, WHAM,TopHat, svtoolkit, STAR, SPLITREAD, samblaster, RSEM, Rosetta, Queue, PyMOL, ngsShort, mrsFAST, MEME, matplotlib, lumpy, GROMACS, ClustalW2, bioperl, biopython, BEDTools, BEDOps, bcl2fastq, bcftools, bamUtils, BamTools
+
+---
+
 # What's the catch?
 
-- adapting existing easyconfigs is easy
-- writing new easyconfigs is not easy
+- adapting existing easyconfigs can be easy
+- writing new easyconfigs is less easy
 - existing community accepts all easyconfigs
-- proliferation of matrix
-- inconsistent support packages
+- proliferation of package matrix
+- hard to know where to start
 
 ---
 
@@ -324,7 +288,6 @@ Deployment:
 
 - reduce EasyBuild ramp-up time
 - build EB life-sciences community
-- create github-based workflow for easyconfigs
 - provide new versions quickly/publicly
 - share tools and code
 - reduce complexity of writing new easyconfigs
@@ -340,4 +303,4 @@ Deployment:
   - life-sciences github repo
 - published detailed implementation example
 - take ownership of R easyconfig
-- implement EasyBuild in a container
+- implement EasyBuild in container (docker/LXD)
