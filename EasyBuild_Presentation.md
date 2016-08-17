@@ -16,11 +16,11 @@
 
 ---
 
-# What do they want?
+# What about software?
 
 - current versions built consistently and quickly
 - software and version accounting for all jobs
-- reliable citation sources -> re-producibility
+- reliable citation sources and re-producibility
 
 ---
 
@@ -28,9 +28,12 @@
 
 `./configure; make; sudo make install`
 
-Download tarball, check required packages, **install them**, build, re-check required packages, **make install**, build modulefile
+Download tarball, check required packages, **install them**, build, re-check required packages, make test, **make install**, build modulefile.
 
-Then repeat above for the next package, and repeat *exactly* for new versions of this package.
+Then repeat:
+
+- for the next package
+- *exactly* for new versions of this package
 
 ---
 
@@ -70,7 +73,7 @@ EasyBuild: building software with ease
 
 - **environment modules** (`$ module load R`)
 - **easyconfigs** (*build recipe*)
-- **toolchains** GCC, Intel, Clang/LLVM, etc.
+- **toolchains** GCC, Intel, Clang/LLVM, etc. + libs
 
 ---
 
@@ -87,7 +90,7 @@ EasyBuild: building software with ease
  
 ---
  
-# You should be using Environment Modules!
+# Use Environment Modules...
 
 - simple, end user-driven, scriptable
 - administrative hooks
@@ -96,7 +99,7 @@ EasyBuild: building software with ease
 
 ---
 
-# You should be using EasyBuild too!
+# ... with EasyBuild!
 
 - automated modulefile creation
 - managment of module hierarchy
@@ -104,7 +107,7 @@ EasyBuild: building software with ease
 
 ---
 
-# Dependency Example
+# Module Dependency Example
 
 ![Module List](module_list.png)
 
@@ -134,15 +137,20 @@ Easyconfigs...
 # Easyconfig Example
 
     !python
-    easyblock = 'ConfigureMake'
-    name = 'make'
-    version = '4.1'
-    homepage = 'http://www.gnu.org/software/make/make.html'
-    description = "GNU version of make utility"
-    toolchain = {'name': 'GCC', 'version': '4.9.2'}
-    source_urls = [GNU_SOURCE]
-    sources = [SOURCE_TAR_BZ2]
-    moduleclass = 'devel'
+    name = 'git'
+    version = '2.8.0'
+    homepage = 'http://git-scm.com/'
+    description = """Git is a free and open source distributed version control system designed
+    to handle everything from small to very large projects with speed and efficiency."""
+    toolchain = {'name': 'foss', 'version': '2016a'}
+    sources = ['v%(version)s.tar.gz']
+    source_urls = ['https://github.com/git/git/archive']
+    dependencies = [
+    ('cURL', '7.47.0'),
+    ('expat', '2.1.0'),
+    ('gettext', '0.19.7'),
+    ('Perl', '5.22.1', '-bare'),
+    ]
 
 ---
 
@@ -177,12 +185,12 @@ Easyconfigs...
 
 # Toolchains and performance
 
-rbench:
+rbench on R-3.3.0:
 
-- *Base R*: 179 secs
-- EasyBuild *foss-2016a R*: 83 secs (54% faster)
-- EasyBuild *intel-2016a R*: 91 secs (49% faster)
-- *Microsoft R Optimized (MRO)*: 86 secs (52% faster)
+- 179 secs *R compiled on Ubuntu 14.04
+- 83 secs (54% faster) *EasyBuild foss-2016a R*
+- 91 secs (49% faster) *EasyBuild intel-2016a R*
+- 86 secs (52% faster) *Microsoft R* (yes, on linux)
 
 ---
 
@@ -191,7 +199,6 @@ rbench:
 - easyconfig is package, version, toolchain
 - toolchain is compiler, base libraries
 - easyconfigs will build the same for everyone
-- re-producibly
 
 ---
 
@@ -240,7 +247,7 @@ Let's build something
 Toolchains:
 
 - **foss-n:** Free Open Source Software - GCC, OpenBLAS, ScaLAPACK
-- **intel-n:** Intel C (icc), ifort, imkl
+- **intel-n:** Intel C & Fortran, Intel Math Kernel Libraries
 
 Deployment:
 
@@ -298,9 +305,8 @@ Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCL
 
 - provide 200+ life sciences packages in an hour
 - help implement expanded toolchains/package clusters
-- publish easyconfigs
-  - upstream
-  - life-sciences github repo
+- publish easyconfigs upstream
+- publish life-sciences github repo
 - published detailed implementation example
 - take ownership of R easyconfig
 - implement EasyBuild in container (docker/LXD)
