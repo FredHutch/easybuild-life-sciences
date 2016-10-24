@@ -116,7 +116,10 @@ EOF
 }
 
 # main
-
+printf "\nUpdating packages..."
+apt-get update
+printf "Installing build-essential...python-minimal...python-pygraph..."
+apt-get install build-essential python-minimal python-pygraph
 printf "\nInstalling Lua...\n"
 lua_install
 printf "Installing Lmod...\n"
