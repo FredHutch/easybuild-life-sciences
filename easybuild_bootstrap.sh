@@ -21,7 +21,7 @@ EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-frame
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
 LMOD_VER="6.3"   # version of Lmod to install into the container
-EB_VER="2.8.2"   # verison of EasyBuild to bootstrap in the container
+EB_VER="2.9.0"   # verison of EasyBuild to bootstrap in the container
 
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
 
