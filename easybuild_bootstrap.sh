@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#####
+# # bootstrap script to demo easybuild
+# # only tested on Ubuntu 16.04 
+# # on fresh linux install create a new user eb
+# # and add that user to sudoers 
+# adduser --disabled-password --gecos "" eb
+# echo "eb ALL=(ALL:ALL) NOPASSWD:ALL" >  /etc/sudoers.d/zz_eb
+#  # then execute script as user eb
+######
+
 # variables
 
 # Internal
@@ -19,10 +29,8 @@ EB_DIR="/easybuild"   # location for EasyBuild directory tree
 function lua_install {
 
   # install readline dev package
-  apt-get install ibreadline-dev
+  sudo apt-get install -y libreadline-dev make unzip
 
-  # install unzip package - apparently luarocks silently requires this
-  apt-get install unzip
 
   # get Lua
   lua_url="${LUA_BASE_URL}$LUA_VER.tar.gz"
@@ -36,7 +44,7 @@ function lua_install {
   tar -xf /tmp/lua-$LUA_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/lua-$LUA_VER && make linux install
+  cd /tmp/lua-$LUA_VER && sudo make linux install
 
   # get luarocks
   luarocks_url="${LUAROCKS_BASE_URL}$LUAROCKS_VER.tar.gz"
@@ -50,21 +58,21 @@ function lua_install {
   tar -xf /tmp/luarocks-$LUAROCKS_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && make install
+  cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && sudo make install
 
   # use luarocks to install luaposix and luafilesystem
-  luarocks install luaposix
-  luarocks install luafilesystem
+  sudo luarocks install luaposix
+  sudo luarocks install luafilesystem
 
   # uninstall libreadline-dev for a clean system
-  apt-get remove libreadline-dev
+  sudo apt-get remove -y libreadline-dev
 }
 
 # install Lmod
 function lmod_install {
 
   # install Tcl 
-  apt-get install tcl
+  sudo apt-get install -y tcl
 
   # get Lmod
   lmod_url="${LMOD_BASE_URL}$LMOD_VER.tar.gz"
@@ -78,15 +86,18 @@ function lmod_install {
   tar -xf /tmp/Lmod-$LMOD_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/Lmod-$LMOD_VER && ./configure && make install
+  cd /tmp/Lmod-$LMOD_VER && ./configure && sudo make install
 
   # link into /etc/profile so shells can use module function
-  ln -s /usr/local/lmod/lmod/init/profile /etc/profile.d/modules.sh
+  sudo ln -s /usr/local/lmod/lmod/init/profile /etc/profile.d/modules.sh
+  source /etc/profile.d/modules.sh
 }
 
 # bootstrap easybuild
 function eb_bootstrap {
 
+  sudo apt-get install -y python git libibverbs-dev libssl-dev build-essential
+  #sudo apt-get install -y environment-modules
   # get EB
   eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
   wget -O /tmp/bootstrap_eb.py $eb_url
@@ -96,7 +107,9 @@ function eb_bootstrap {
   fi
 
   # create $EB_DIR
-  mkdir -p $EB_DIR
+  myself=$(whoami)
+  sudo mkdir -p $EB_DIR
+  sudo chown $myself $EB_DIR
 
   # bootstrap it
   python /tmp/bootstrap_eb.py $EB_DIR
@@ -113,6 +126,9 @@ setenv EASYBUILD_LOGFILE_FORMAT "\$ebDir/logs,easybuild-%(name)s-%(version)s-%(d
 setenv EASYBUILD_MODULES_TOOL "Lmod"
 EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
+
+  sudo sh -c "echo export MODULEPATH=/easybuild/modules/all:'\$MODULEPATH' > /etc/profile.d/modules_eb.sh"
+  source /etc/profile.d/modules_eb.sh
 }
 
 # main
@@ -125,5 +141,7 @@ lua_install
 printf "Installing Lmod...\n"
 lmod_install
 printf "Bootstrapping EasyBuild...\n"
+export EASYBUILD_MODULES_TOOL=Lmod
 eb_bootstrap
+echo "please log out and log in again or source /etc/profile.d/modules.sh and /etc/profile.d/modules_eb.sh"
 exit 0
