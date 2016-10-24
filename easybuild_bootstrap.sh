@@ -138,6 +138,7 @@ lua_install
 printf "Installing Lmod...\n"
 lmod_install
 printf "Bootstrapping EasyBuild...\n"
+export EASYBUILD_MODULES_TOOL=Lmod
 eb_bootstrap
 echo "please log out and log in again or source /etc/profile.d/modules.sh and /etc/profile.d/modules_eb.sh"
 exit 0
