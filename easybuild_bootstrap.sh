@@ -96,7 +96,7 @@ function lmod_install {
 # bootstrap easybuild
 function eb_bootstrap {
 
-  sudo apt-get install -y python git
+  sudo apt-get install -y python git libibverbs-dev libssl-dev build-essential
   #sudo apt-get install -y environment-modules
   # get EB
   eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
