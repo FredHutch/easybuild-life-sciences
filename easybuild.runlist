@@ -1,4 +1,4 @@
-sudo apt-get install -y curl libibverbs-dev
+sudo apt-get install -y curl libibverbs-dev libssl-dev
 sudo adduser --disabled-password --gecos "" eb
 sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
 echo "******* please switch to user eb and then run: ******"
