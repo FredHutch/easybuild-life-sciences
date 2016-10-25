@@ -138,7 +138,7 @@ EOF
 # checking requirements
 mem=$(awk '( $1 == "MemTotal:" ) { printf "%.0f", $2/1024/1024 }' /proc/meminfo)
 if [[ $mem -lt 8 ]]; then
-    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores"
+    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !"
     exit 1
 fi 
 printf "\nUpdating packages..."
