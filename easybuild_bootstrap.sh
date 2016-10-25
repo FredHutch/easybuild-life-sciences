@@ -96,7 +96,7 @@ function lmod_install {
 # bootstrap easybuild
 function eb_bootstrap {
 
-  sudo apt-get install -y python git libibverbs-dev libssl-dev build-essential
+  sudo apt-get install -y python-minimal python-pygraph git libibverbs-dev libssl-dev build-essential
   #sudo apt-get install -y environment-modules
   # get EB
   eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
@@ -128,20 +128,27 @@ EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
 
   sudo sh -c "echo export MODULEPATH=/easybuild/modules/all:'\$MODULEPATH' > /etc/profile.d/modules_eb.sh"
+  sudo sh -c "export EASYBUILD_MODULES_TOOL=Lmod >> /etc/profile.d/modules_eb.sh"
+
   source /etc/profile.d/modules_eb.sh
 }
 
 # main
+
+# checking requirements
+mem=$(awk '( $1 == "MemTotal:" ) { printf "%.0f", $2/1024/1024 }' /proc/meminfo)
+if [[ $mem -lt 8 ]]; then
+    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores"
+    exit 1
+fi 
 printf "\nUpdating packages..."
 apt-get update
-printf "Installing build-essential...python-minimal...python-pygraph..."
-apt-get install build-essential python-minimal python-pygraph
 printf "\nInstalling Lua...\n"
 lua_install
 printf "Installing Lmod...\n"
 lmod_install
 printf "Bootstrapping EasyBuild...\n"
-export EASYBUILD_MODULES_TOOL=Lmod
 eb_bootstrap
 echo "please log out and log in again or source /etc/profile.d/modules.sh and /etc/profile.d/modules_eb.sh"
 exit 0
+
