@@ -28,10 +28,6 @@ EB_DIR="/easybuild"   # location for EasyBuild directory tree
 # install lua, luarocks, luafilesystem, and luaposix
 function lua_install {
 
-  # install readline dev package
-  sudo apt-get install -y libreadline-dev make unzip
-
-
   # get Lua
   lua_url="${LUA_BASE_URL}$LUA_VER.tar.gz"
   wget -O /tmp/lua-$LUA_VER.tar.gz $lua_url
@@ -64,15 +60,10 @@ function lua_install {
   sudo luarocks install luaposix
   sudo luarocks install luafilesystem
 
-  # uninstall libreadline-dev for a clean system
-  sudo apt-get remove -y libreadline-dev
 }
 
 # install Lmod
 function lmod_install {
-
-  # install Tcl 
-  sudo apt-get install -y tcl
 
   # get Lmod
   lmod_url="${LMOD_BASE_URL}$LMOD_VER.tar.gz"
@@ -90,14 +81,27 @@ function lmod_install {
 
   # link into /etc/profile so shells can use module function
   sudo ln -s /usr/local/lmod/lmod/init/profile /etc/profile.d/modules.sh
-  source /etc/profile.d/modules.sh
+
+  # add our easybuild modulepath now
+  echo "export MODULEPATH=\$MODULEPATH:/${EB_DIR}/modules/all" | sudo tee -a /etc/profile.d/modules.sh
+
+}
+
+# install OS packages required by EasyBuild and foss toolchains
+# encryption-related packages here on purpose as OS udpates should be more frequent
+function install_EB_OS_pkgs {
+  sudo apt-get install -y python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+}
+
+# install OS packages to satisfy unstated dependencies in common easyconfigs
+# this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
+function install_missed_dependency_OS_pkgs {
+  sudo apt-get install -y pkg-config m4 libx11-dev 
 }
 
 # bootstrap easybuild
 function eb_bootstrap {
 
-  sudo apt-get install -y python-minimal python-pygraph git libibverbs-dev libssl-dev build-essential
-  #sudo apt-get install -y environment-modules
   # get EB
   eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
   wget -O /tmp/bootstrap_eb.py $eb_url
@@ -127,10 +131,6 @@ setenv EASYBUILD_MODULES_TOOL "Lmod"
 EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
 
-  sudo sh -c "echo export MODULEPATH=/easybuild/modules/all:'\$MODULEPATH' > /etc/profile.d/modules_eb.sh"
-  sudo sh -c "export EASYBUILD_MODULES_TOOL=Lmod >> /etc/profile.d/modules_eb.sh"
-
-  source /etc/profile.d/modules_eb.sh
 }
 
 # main
@@ -138,7 +138,7 @@ EOF
 # checking requirements
 mem=$(awk '( $1 == "MemTotal:" ) { printf "%.0f", $2/1024/1024 }' /proc/meminfo)
 if [[ $mem -lt 8 ]]; then
-    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !"
+    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !\n"
     exit 1
 fi
 if ! hash apt-get 2>/dev/null; then
@@ -147,13 +147,24 @@ if ! hash apt-get 2>/dev/null; then
 fi
 
 printf "\nUpdating packages..."
-apt-get update
-printf "\nInstalling Lua...\n"
+sudo apt-get update
+printf "Installing required OS pkgs...\n"
+install_EB_OS_pkgs
+printf "Installing libreadline-dev for lua install...\n"
+sudo apt-get install -y libreadline-dev
+printf "Installing Lua...\n"
 lua_install
+printf "Removing libreadline-dev for clean system after lua install...\n"
+sudo apt-get remove -y libreadline-dev
 printf "Installing Lmod...\n"
 lmod_install
+printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
+install_missed_dependency_OS_pkgs
 printf "Bootstrapping EasyBuild...\n"
 eb_bootstrap
-echo "please log out and log in again or source /etc/profile.d/modules.sh and /etc/profile.d/modules_eb.sh"
+printf "\n\n"
+printf "It appears to have worked!\n"
+printf "Login shells now have modules enabled, so all you need to do is log out and back in.\n"
+printf "Once you are back, you should have modules, and can run 'module load EasyBuild' to get started building!\n"
 exit 0
 
