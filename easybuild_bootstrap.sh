@@ -85,6 +85,9 @@ function lmod_install {
   # add our easybuild modulepath now
   echo "export MODULEPATH=\$MODULEPATH:/${EB_DIR}/modules/all" | sudo tee -a /etc/profile.d/modules.sh
 
+  # source /etc/profile.d/modules.sh to enable modules in this shell
+  # while this script is not intended to be sourced, it works to do so
+  source /etc/profile.d/modules.sh
 }
 
 # install OS packages required by EasyBuild and foss toolchains
