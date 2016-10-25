@@ -140,7 +140,12 @@ mem=$(awk '( $1 == "MemTotal:" ) { printf "%.0f", $2/1024/1024 }' /proc/meminfo)
 if [[ $mem -lt 8 ]]; then
     printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !"
     exit 1
-fi 
+fi
+if ! hash apt-get 2>/dev/null; then
+    printf "apt-get not found. This script is targeted at Ubuntu/Debian systems.\n"
+    exit 1
+fi
+
 printf "\nUpdating packages..."
 apt-get update
 printf "\nInstalling Lua...\n"
