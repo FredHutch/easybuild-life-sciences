@@ -1,0 +1,17 @@
+body {
+    font-family: Helvetica,Arial,"Calibri","Lucida Grande",sans-serif;
+    font-style: normal;
+}
+
+.app_name {
+    color: #89c348;  /* Hutch Green */
+    font-size: 2.5em;
+    margin: 0 10px .5em 20px;
+}
+.logo {
+   padding: 15px 25px 10px 15px;
+}
+.banner_title {
+    color: #89c348;
+    font-size: 3em;
+}
