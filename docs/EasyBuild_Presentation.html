@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>EasyBuild at FredHutch</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="theme/css/base.css">
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    <link rel="stylesheet" href="theme/css/theme.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>EasyBuild at FredHutch</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Overview</h1></header>
+            
+            
+            <section><ul>
+<li>We identified EasyBuild as piece of software that could help us manage software package builds</li>
+<li>We use Environment Modules today, and more importantly, our users use modules</li>
+<li>We have a small group of people who build software packages (admins, not users)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Presentation</h1></header>
+            
+            
+            <section><ul>
+<li>This readme is also a <a href="http://fredhutch.github.io/easybuild-life-sciences">presentation</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>Goals</h1></header>
+            
+            
+            <section><p>Before and during implementation, we kept the following goals in mind:</p>
+<ul>
+<li>software packages will be reproducable</li>
+<li>modules will be easily loaded by user in interactive sessions and in scripts</li>
+<li>default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but <code>module load R</code> will load R-3.2.1)</li>
+<li>packages will be built by any member of a given POSIX group</li>
+<li>new packages will be easily implemented (new versions and software packages without existing easyconfigs)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>TODO</h1></header>
+            
+            
+            <section><p>Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.</p>
+<p>New package implementation or <strong>new easyconfigs made easy</strong>
+- versions can be changed with <code>--try</code> options, but a new easyconfig per pkg/ver/compiler balloons quickly
+- Easybuild may be moving away from this model to more generic easyconfigs, but this may affect reproducibility</p>
+<p>Default Module Version Management
+- Modules picks the 'newest' version if not specified with <code>module load</code> or in <code>.version</code>
+- I find no option in Easybuild to manage <code>.version</code> files</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1>Prerequisites</h1></header>
+            
+            
+            <section><p>You need money to make money, and you need software to build software.</p>
+<ul>
+<li>Ubuntu 14.04</li>
+<li><code>build-essentials</code></li>
+<li>an implementation of Modules - we use Environment Modules, but check out <a href="https://www.tacc.utexas.edu/research-development/tacc-projects/lmod">Lmod</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h1>Our environment</h1></header>
+            
+            
+            <section><ul>
+<li>read-only NFS mount on all systems mounted at <code>/app</code></li>
+<li>hand-built software packages</li>
+<li>hand-managed modulefile hierarchy</li>
+<li>pre-existing POSIX group of all users expected to execute builds</li>
+<li>user base that is highly varied with regard to Unix knowledge - <em>keeping things simple encourages more widespread use</em></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h1>Bootstrap</h1></header>
+            
+            
+            <section><ul>
+<li>easybuild was bootstrapped into <code>/app/easybuild</code></li>
+<li>we created <code>/app/easybuild/etc</code> to hold additional centralized configuration files</li>
+<li>we created <code>/app/easybuild/fh_easyconfigs</code> to hold our custom easyconfig files while we are developing them</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h1>Bootstrap - Step One - RTFM</h1></header>
+            
+            
+            <section><ul>
+<li>Follow the <a href="https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild">Fine Manual</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>Bootstrap - Step Two - Environment</h1></header>
+            
+            
+            <section><p>EasyBuild configuration</p>
+<p>Configuration is consistent across methods:
+- config file(s)
+- environment variables
+- command-line parameters</p>
+<p>Easybuild applies them in that order (meaning command-line overrides everything)</p>
+<p>Since we use Modules, it made sense to use Environment Variables in our case</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-11">
+          <div class="inner">
+            
+            <header><h1>Bootstrap - Paths and Logs</h1></header>
+            
+            
+            <section><p>In the easybuild modulefile, I added the following:</p>
+<div class="highlight"><pre><span></span><span class="k">set</span> ebDir <span class="s2">&quot;/app/easybuild&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_SOURCEPATH <span class="s2">&quot;$ebDir/sources&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_BUILDPATH <span class="s2">&quot;$ebDir/build&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_INSTALLPATH_SOFTWARE <span class="s2">&quot;$ebDir/software&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_INSTALLPATH_MODULES <span class="s2">&quot;$ebDir/modules&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_REPOSITORYPATH <span class="s2">&quot;$ebDir/ebfiles_repo&quot;</span>
+<span class="nv">setenv</span> EASYBUILD_LOGFILE_FORMAT <span class="s2">&quot;$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log&quot;</span>
+</pre></div>
+
+<p>The modulefile is a tcl snippet and this sets environment variables for us.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-12">
+          <div class="inner">
+            
+            <header><h1>Bootstrap Easybuild Parameters</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="c"># keep group writable bit</span>
+<span class="nv">setenv</span> EASYBUILD_GROUP_WRITABLE_INSTALLDIR <span class="mi">1</span>
+<span class="c"># set umask to preserve group write permissions on modulefiles</span>
+<span class="nv">setenv</span> EASYBUILD_UMASK <span class="mo">002</span>
+<span class="c"># create module dependencies to recursively unload</span>
+<span class="nv">setenv</span> EASYBUILD_RECURSIVE_MODULE_UNLOAD <span class="mi">1</span>
+<span class="c"># add our normal modulefile footer</span>
+<span class="nv">setenv</span> EASYBUILD_MODULES_FOOTER <span class="s2">&quot;$ebDir/etc/fredhutch_modulefile_footer&quot;</span>
+<span class="c"># add our own easyconfig directory to robot paths</span>
+<span class="nv">setenv</span> EASYBUILD_ROBOT_PATHS <span class="s2">&quot;:$ebDir/fh_easyconfigs&quot;</span>
+<span class="c"># Our licenses</span>
+<span class="nv">setenv</span> LM_LICENSE_FILE <span class="s2">&quot;$ebDir/etc/licenses/intel.lic&quot;</span>
+</pre></div>
+
+<p>These are more complex, and will be documented soon.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>Bootstrap - Ownership and Permissions</h1></header>
+            
+            
+            <section><p>There are a number of manual steps that were performed that can best be described as messy, and also perhaps make up the bulk of the useful information here.</p>
+<p>Since we decided to have building be performed by members of a POSIX group, and we want produced software and modules centrally located for the use of everyone, we have to tell Easybuild how to do that.</p>
+<ul>
+<li><code>GROUP_WRITABLE_INSTALLDIR</code> - this lets our group write to easybuild-created directories</li>
+<li><code>UMASK 002</code> - this tells Easybuild to set this umask when writing directories/files</li>
+</ul>
+<p>Of course, some manual adjusting was needed:</p>
+<ul>
+<li><code>chgrp -R &lt;build group&gt; /app/easybuild/*</code> - change to our build group from the default group of the installer account</li>
+<li><code>chmod -R g+s /app/easybuild/*</code> - setgid bit for dirs created during bootstrap</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-14">
+          <div class="inner">
+            
+            <header><h1>Bootstrap - Easybuild Parameters</h1></header>
+            
+            
+            <section><ul>
+<li><code>RECURSIVE_MODULE_UNLOAD 1</code> - this causes Easybuild to create modulefiles that will auto-load <em>and</em> auto-unload dependent modules</li>
+<li><code>ROBOT_PATHS &lt;path&gt;</code> - adds our local easyconfig development dir to robot paths</li>
+<li><code>LM_LICENSE_FILE &lt;file&gt;</code> - where our licenses are located</li>
+</ul>
+<h1>Bootstrap - Modulefile Manipulating</h1>
+<ul>
+<li>Now, Easybuild configured for us loads with <code>module load Easybuild/2.3.0</code> everytime for everyone</li>
+<li><code>MODULES_FOOTER</code> - code to include in every modulefile created by Easybuild</li>
+</ul>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="k">set</span> curMod <span class="k">[</span><span class="nv">module-info</span> name<span class="k">]</span>
+<span class="k">if</span> <span class="k">{</span> <span class="k">[</span><span class="nv">module-info</span> mode load<span class="k">]</span> <span class="k">}</span> <span class="k">{</span>
+    <span class="nv">system</span> <span class="s2">&quot;logger \$USER module load $curMod &quot;</span>
+<span class="k">}</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-15">
+          <div class="inner">
+            
+            <header><h1>EasyBuilt</h1></header>
+            
+            
+            <section><p>To use:</p>
+<ul>
+<li>Add the Easybuild modules directory to your MODULEPATH environment variable:</li>
+</ul>
+<p><code>$ module use /app/easybuild/modules/all</code></p>
+<ul>
+<li>Load the EasyBuild module (it should tab out, these are just files - use this to find newest ver '...EasyBuild/<tab>'):</li>
+</ul>
+<p><code>$ module load EasyBuild/2.3.0</code></p>
+<ul>
+<li>Did it work?</li>
+</ul>
+<p><code>$ eb --version</code>
+<code>This is EasyBuild 2.3.0 (framework: 2.3.0, easyblocks: 2.3.0) on host rhino-d.</code></p>
+<h2>*Note - you should always use the newest version of EasyBuild that has been built as easyconfigs are distributed with EB.</h2>
+<h1>Step-By-Step Build a package</h1>
+<p>Once you have EasyBuild bootstrapped, you can search for and build a package:</p>
+<p>Begin by searching:</p>
+<pre><code>$ eb -S PCRE
+== temporary log file in case of crash /tmp/eb-lz7d_6/easybuild-dKc03x.log
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs 
+== Searching (case-insensitive) for 'PCRE' in /app/easybuild/fh_easyconfigs 
+CFGS1=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE
+ * $CFGS1/PCRE-8.12-goalf-1.1.0-no-OFED.eb
+ * $CFGS1/PCRE-8.12-goolf-1.4.10.eb
+ * $CFGS1/PCRE-8.12-ictce-4.0.6.eb
+ * $CFGS1/PCRE-8.12-ictce-5.3.0.eb
+ * $CFGS1/PCRE-8.12-ictce-5.5.0.eb
+ * $CFGS1/PCRE-8.35-intel-2014b.eb
+ * $CFGS1/PCRE-8.36-foss-2015a.eb
+ * $CFGS1/PCRE-8.36-intel-2015a.eb
+ * $CFGS1/PCRE-8.37-intel-2015a.eb
+== Tmporary log file(s) /tmp/eb-lz7d_6/easybuild-dKc03x.log* have been removed.
+== Temporary directory /tmp/eb-lz7d_6 has been removed.
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-16">
+          <div class="inner">
+            
+            <header><h1>Found easyconfigs!</h1></header>
+            
+            
+            <section><p>We found 9 different easyconfigs for PCRE. Let's build this one:</p>
+<p><code>PCRE-8.36-foss-2015a.eb</code></p>
+<p>You probably figured out that <code>8.36</code> is the version of PCRE we will build, but what is <code>foss</code>?</p>
+<p>That is the Easybuild toolchain for this easyconfig. You can get a list of toolchains with:</p>
+<p><code>eb --list-toolchains</code></p>
+<p>I prefer to just browse the <a href="https://github.com/hpcugent/easybuild-easyconfigs">repo</a> - toolchains are just another easyconfig to Easybuild.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-17">
+          <div class="inner">
+            
+            <header><h1>Dry Run</h1></header>
+            
+            
+            <section><p>Once we have decided what to build, you can do a dry-run like this:</p>
+<pre><code>$ eb PCRE-8.36-foss-2015a.eb --robot --dry-run
+== temporary log file in case of crash /tmp/eb-08QTaF/easybuild-r5D8gf.log
+Dry run: printing build status of easyconfigs and dependencies
+CFGS=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs
+ * [x] $CFGS/g/GCC/GCC-4.9.2.eb (module: GCC/4.9.2)
+ * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.2.13-GCC-4.9.2-LAPACK-3.5.0.eb (module: OpenBLAS/0.2.13-GCC-4.9.2-LAPACK-3.5.0)
+ * [x] $CFGS/l/libtool/libtool-2.4.2-GCC-4.9.2.eb (module: libtool/2.4.2-GCC-4.9.2)
+ * [x] $CFGS/m/M4/M4-1.4.17-GCC-4.9.2.eb (module: M4/1.4.17-GCC-4.9.2)
+ * [x] $CFGS/a/Autoconf/Autoconf-2.69-GCC-4.9.2.eb (module: Autoconf/2.69-GCC-4.9.2)
+ * [x] $CFGS/a/Automake/Automake-1.15-GCC-4.9.2.eb (module: Automake/1.15-GCC-4.9.2)
+ * [x] $CFGS/n/numactl/numactl-2.0.10-GCC-4.9.2.eb (module: numactl/2.0.10-GCC-4.9.2)
+ * [x] $CFGS/h/hwloc/hwloc-1.10.0-GCC-4.9.2.eb (module: hwloc/1.10.0-GCC-4.9.2)
+ * [x] $CFGS/o/OpenMPI/OpenMPI-1.8.4-GCC-4.9.2.eb (module: OpenMPI/1.8.4-GCC-4.9.2)
+ * [x] $CFGS/g/gompi/gompi-2015a.eb (module: gompi/2015a)
+ * [x] $CFGS/f/FFTW/FFTW-3.3.4-gompi-2015a.eb (module: FFTW/3.3.4-gompi-2015a)
+ * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0.eb (module: ScaLAPACK/2.0.2-gompi-2015a-OpenBLAS-0.2.13-LAPACK-3.5.0)
+ * [x] $CFGS/f/foss/foss-2015a.eb (module: foss/2015a)
+ * [ ] $CFGS/p/PCRE/PCRE-8.36-foss-2015a.eb (module: PCRE/8.36-foss-2015a)
+== Tmporary log file(s) /tmp/eb-08QTaF/easybuild-r5D8gf.log* have been removed.
+== Temporary directory /tmp/eb-08QTaF has been removed.
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-18">
+          <div class="inner">
+            
+            <header><h1>Dependencies</h1></header>
+            
+            
+            <section><p>By giving the <code>-r</code> flag to Easybuild:</p>
+<ul>
+<li>Easybuild automatically spidered all dependencies, including the specified toolchain</li>
+<li>Already built packages are indicated with an <code>X</code></li>
+<li>In this case, only PCRE will be built</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-19">
+          <div class="inner">
+            
+            <header><h1>Build</h1></header>
+            
+            
+            <section><p>And finally, you can remove the '-D' and build the software:</p>
+<pre><code>$ eb PCRE-8.36-foss-2015a.eb --robot --force
+== temporary log file in case of crash /tmp/eb-1TnpU8/easybuild-3J4ttj.log
+== resolving dependencies ...
+== processing EasyBuild easyconfig /app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs/p/PCRE/PCRE-8.36-foss-2015a.eb
+== building and installing PCRE/8.36-foss-2015a...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== cleaning up...
+== creating module...
+== permissions...
+== packaging...
+== COMPLETED: Installation ended successfully
+== Results of the build can be found in the log file /app/easybuild/logs/easybuild-PCRE-8.36-20160104.164159.log
+== Build succeeded for 1 out of 1
+== Tmporary log file(s) /tmp/eb-1TnpU8/easybuild-3J4ttj.log* have been removed.
+== Temporary directory /tmp/eb-1TnpU8 has been removed.
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
+          <div class="inner">
+            
+            <header><h1>Step-By-Step EasyConfigs</h1></header>
+            
+            
+            <section><p>Again, <a href="http://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html">RTFM</a> - it is very good!</p>
+<p>There are two reason rou might want to modify or build an easyconfig file:</p>
+<ul>
+<li>Update versions (of software, toolchain, or dependencies)</li>
+<li>No easyconfig exists</li>
+</ul>
+<p>I'll demonstrate creating a new easyconfig as the procedure is the same, only generally easier for version updates.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-21">
+          <div class="inner">
+            
+            <header><h1>Create an easyconfig file</h1></header>
+            
+            
+            <section><p>Easybuild logic is contained in easyblocks - these are what execute the build. You can get a list of easyblocks with: <code>eb --list-easyblocks</code>.</p>
+<p>There are a number of mandatory parameters for each easyblock, which can be displayed with:</p>
+<p><code>eb -a -e &lt;easyblock&gt;</code></p>
+<p>For this explanation, we will use the <code>ConfigureMake</code> easyblock, which should be familiar to anyone who has manually built software: <code>./configure &amp;&amp; make &amp;&amp; make install</code>.</p>
+<p>The naming convention is typically <code>&lt;name&gt;-&lt;version&gt;-&lt;toolchain name&gt;-&lt;toolchain version&gt;.eb</code>.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-22">
+          <div class="inner">
+            
+            <header><h1>ConfigureMake Mandatory Parameters</h1></header>
+            
+            
+            <section><p>This is a skeleton ConfigureMake easyconfig with all mandatory parameters:</p>
+<div class="highlight"><pre><span></span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="n">name</span> <span class="o">=</span> 
+<span class="n">version</span> <span class="o">=</span> 
+<span class="n">toolchain</span> <span class="o">=</span> 
+<span class="n">description</span> <span class="o">=</span> 
+<span class="n">homepage</span> <span class="o">=</span> 
+<span class="n">docurls</span> <span class="o">=</span> 
+<span class="n">software_license</span> <span class="o">=</span> 
+<span class="n">software_license_urls</span> <span class="o">=</span>
+</pre></div>
+
+<p>Except for easyblock, these will all default to <code>None</code> if not supplied in the file (so I guess they are not really mandatory, huh?)</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-23">
+          <div class="inner">
+            
+            <header><h1>Parameters: name, version</h1></header>
+            
+            
+            <section><h2><code>name</code></h2>
+<p>This name is the name of the software package, will be the name of the modulefile, and will be in the path of the software install directory. It is sometimes referenced later in the easyconfig file.</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;zlib&#39;</span>
+</pre></div>
+
+<h2><code>version</code></h2>
+<p>This is the version of the software to build. It is referenced later in the easyconfig file.</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.2.8&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-24">
+          <div class="inner">
+            
+            <header><h1>Parameters: toolchain</h1></header>
+            
+            
+            <section><h2><code>toolchain</code></h2>
+<p>This is the toolchain (compilers, supplemental libraries, etc.) that easybuild will use to build the software. It must be specified in an existing easyconfig (though does not need to be pre-built - easybuild will take care of building it).</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
+</pre></div>
+
+<p>This is a python dict specifying the name and version of the toolchain.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-25">
+          <div class="inner">
+            
+            <header><h1>Parameters: description, homepage</h1></header>
+            
+            
+            <section><h2><code>description</code></h2>
+<p>This is a generally free-form description that will appear as metadata in the modulefile, and therefore be availabe to users through the <code>module</code> command.</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;zlib is designed to be a free, general-purpose, legally</span>
+<span class="s2">                 unencumbered -- that is, not covered by any patents --</span>
+<span class="s2">                 lossless data-compression library for use on virtually any</span>
+<span class="s2">                 computer hardware and operating system.&quot;&quot;&quot;</span>
+</pre></div>
+
+<h2><code>homepage</code></h2>
+<p>This is a URL also included in modulefile metadata. It should be the homepage of the software.</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://www.zlib.net/&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-26">
+          <div class="inner">
+            
+            <header><h1>Parameters: source, source_urls</h1></header>
+            
+            
+            <section><p>We will need to specify a few more parameters for easybuild to handle things correctly:</p>
+<div class="highlight"><pre><span></span><span class="n">sources</span> <span class="o">=</span> 
+<span class="n">source_urls</span> <span class="o">=</span>
+</pre></div>
+
+<p>These will specify where easybuild should find the sourcecode for the software package. There are some shortcuts:</p>
+<ul>
+<li>Use <code>[SOURCELOWER_TAR_GZ]</code> to produce <code>&lt;name&gt;-&lt;version&gt;.tar.gz</code></li>
+<li>Use <code>%{version}s</code> and <code>%{name}s</code> to use <code>name</code> and <code>version</code> from the easyconfig</li>
+</ul>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span><span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://sourceforge.net/projects/libpng/files/zlib/</span><span class="si">%(version)s</span><span class="s1">&#39;</span><span class="p">]</span>
+</pre></div>
+
+<p>These are python lists.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-27">
+          <div class="inner">
+            
+            <header><h1>Build it!</h1></header>
+            
+            
+            <section><p>That should be sufficient to build a basic package. Let's see what a failure looks like.</p>
+<p>Here is my perfect easyconfig for rsync:</p>
+<div class="highlight"><pre><span></span><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;ConfigureMake&#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;rsync&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;3.1.2&#39;</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;rsync is an open source utility that provides fast incremental file transfer&quot;&quot;&quot;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://rsync.samba.org&#39;</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="n">SOURCELOWER_TAR_GZ</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://download.samba.org/pub/rsync/src/rsync-3.1.2.tar.gz&#39;</span><span class="p">]</span>
+</pre></div>
+
+<p>I save this as <code>rsync-3.1.2-foss-2015b.eb</code> and it should build!</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-28">
+          <div class="inner">
+            
+            <header><h1>Build Example</h1></header>
+            
+            
+            <section><pre><code>$  eb rsync-3.1.2-foss-2015b.eb
+== temporary log file in case of crash /tmp/eb-j_sVge/easybuild-cY3SFZ.log
+== processing EasyBuild easyconfig /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb
+== building and installing rsync/3.1.2-foss-2015b...
+== fetching files...
+== creating build dir, resetting environment...
+== unpacking...
+== patching...
+== preparing...
+== configuring...
+== building...
+== testing...
+== installing...
+== taking care of extensions...
+== postprocessing...
+== sanity checking...
+== FAILED: Installation ended unsuccessfully (build directory: /app/easybuild/build/rsync/3.1.2/foss-2015b): build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b
+== Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log
+ERROR: Build of /app/easybuild/fh_easyconfigs/rsync-3.1.2-foss-2015b.eb failed (err: "build failed (first 300 chars): Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b")
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: README.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-29">
+          <div class="inner">
+            
+            <header><h1>Troubleshooting</h1></header>
+            
+            
+            <section><p>We can look into the logfile mentioned (<code>Results of the build can be found in the log file /tmp/eb-j_sVge/easybuild-rsync-3.1.2-20160107.110632.Lepgl.log</code>') but in this case, the error is shown:</p>
+<p><code>Sanity check failed: no dir of ('lib', 'lib64') in /app/easybuild/software/rsync/3.1.2-foss-2015b</code></p>
+<p>And a quick search of <code>sanity check</code> in the Easybuild docs reveals that by default <code>bin</code> and <code>lib</code> or <code>lib64</code> must not be empty after install. Rsync builds no <code>lib</code> directory, so we add the following to the easyconfig file:</p>
+<p><code>sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/rsync']}</code></p>
+<p>And now it builds (trust me).</p>
+<p><strong>An interesting note</strong> I expected this build to fail as version <code>3.1.2</code> of rsync is distributed in <code>rsync-3.1.2.tar.gz</code> but is not actually compressed, only a tarball. Easybuild built it anyway!</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="README.md">README.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/29
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide:1">EasyBuild at FredHutch</a></th>
+        <td><a href="#slide:1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide:2">Overview</a></th>
+        <td><a href="#slide:2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide:3">Presentation</a></th>
+        <td><a href="#slide:3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide:4">Goals</a></th>
+        <td><a href="#slide:4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide:5">TODO</a></th>
+        <td><a href="#slide:5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide:6">Prerequisites</a></th>
+        <td><a href="#slide:6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide:7">Our environment</a></th>
+        <td><a href="#slide:7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide:8">Bootstrap</a></th>
+        <td><a href="#slide:8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide:9">Bootstrap - Step One - RTFM</a></th>
+        <td><a href="#slide:9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide:10">Bootstrap - Step Two - Environment</a></th>
+        <td><a href="#slide:10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide:11">Bootstrap - Paths and Logs</a></th>
+        <td><a href="#slide:11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide:12">Bootstrap Easybuild Parameters</a></th>
+        <td><a href="#slide:12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide:13">Bootstrap - Ownership and Permissions</a></th>
+        <td><a href="#slide:13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide:14">Bootstrap - Easybuild Parameters</a></th>
+        <td><a href="#slide:14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide:15">EasyBuilt</a></th>
+        <td><a href="#slide:15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide:16">Found easyconfigs!</a></th>
+        <td><a href="#slide:16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide:17">Dry Run</a></th>
+        <td><a href="#slide:17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide:18">Dependencies</a></th>
+        <td><a href="#slide:18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide:19">Build</a></th>
+        <td><a href="#slide:19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide:20">Step-By-Step EasyConfigs</a></th>
+        <td><a href="#slide:20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide:21">Create an easyconfig file</a></th>
+        <td><a href="#slide:21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide:22">ConfigureMake Mandatory Parameters</a></th>
+        <td><a href="#slide:22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide:23">Parameters: name, version</a></th>
+        <td><a href="#slide:23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide:24">Parameters: toolchain</a></th>
+        <td><a href="#slide:24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide:25">Parameters: description, homepage</a></th>
+        <td><a href="#slide:25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide:26">Parameters: source, source_urls</a></th>
+        <td><a href="#slide:26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide:27">Build it!</a></th>
+        <td><a href="#slide:27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide:28">Build Example</a></th>
+        <td><a href="#slide:28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide:29">Troubleshooting</a></th>
+        <td><a href="#slide:29">29</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+    <br>
+    <strong>Generated with Darkslide 2.3.3</strong>
+  </div>
+  <script>main()</script>
+</body>
+</html>

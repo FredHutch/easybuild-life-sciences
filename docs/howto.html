@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HOWTO</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="theme/css/base.css">
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    <link rel="stylesheet" href="theme/css/theme.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>HOWTO</h1></header>
+            
+            
+            <section><h2>Github with Travis-CI and darkslide</h2>
+<h1>Source</h1>
+<p>Have Travis-CI auto-generate a slideshow using darkslid and commit it into Github Pages
+Steps based on <a href="http://www.steveklabnik.com/automatically_update_github_pages_with_travis_example/">www.steveklabnik.com</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Get darkslide working</h1></header>
+            
+            
+            <section><ul>
+<li>create a virtualenv for your project outside the repo</li>
+<li>install python-darkslide: <code>(your_project)you@yourhost:~/$ pip3 install darkslide</code></li>
+<li>get your darkslide config working to create the output you want</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Set up for Travis-CI</h1></header>
+            
+            
+            <section><ul>
+<li>generate a requirements.txt using pip: <code>(your_project)you@yourhost:~/$ pip3 freeze &gt; requirements.txt</code></li>
+<li>add requirements.txt to your repo</li>
+<li>create a <code>.travis.yml</code> file and add it to your repo</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>dot(.)travis.yml file</h1></header>
+            
+            
+            <section><p>!YAML
+      language: python
+      python:
+        - "3.5"
+      branches:
+        only:
+        - master
+      install:
+        - "pip install -r requirements.txt"
+        - "bash git_init.sh"
+      script:
+        - "darkslide README.md -d index.html --relative --copy-theme --theme=default"
+        - "darkslide howto.md -d howto.html --relative --copy-theme --theme=default"
+      after_success: "bash generate.sh"
+      env:
+        global:
+          secure:
+            <encrypted string from travis encrypt goes here></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>travis encrypts github token</h1></header>
+            
+            
+            <section><ul>
+<li>on your workstation, run <code>gem install travis</code> - this may require additional packages like ruby-dev/devel</li>
+<li>go get a github personal access token</li>
+<li>have travis encrypt the token <code>travis encrypt GH_TOKEN=&lt;your token&gt; --add</code> and add to .travis.yml</li>
+<li>create a repo with a gh-pages branch per <a href="https://pages.github.com/">pages.github.com</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1>git_init.sh file</h1></header>
+            
+            
+            <section><ul>
+<li>create a git_init.sh script to update your repo
+   !bash
+      #!/bin/bash
+      set -o errexit -o nounset
+      BUILD_BRANCH="master"
+      GIT_USER="bmcgough"
+      GIT_EMAIL="bmcgough@fredhutch.org"
+      GIT_REPO="FredHutch/easubuild-life-sciences.git"
+      if [ "$TRAVIS_BRANCH" != "$BUILD_BRANCH" ]
+      then
+        echo "commit $TRAVIS_BRANCH and not $BUILD_BRANCH - not generating"
+        exit 0
+      fi
+      # set up a new repo
+      git init
+      git config user.name "$GIT_USER"
+      git config user.email "$GIT_EMAIL"</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: howto.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h1>generate.sh file</h1></header>
+            
+            
+            <section><ul>
+<li>create a generate.sh script to run darkslide on your markdown:</li>
+</ul>
+<p>!bash
+      #!/bin/bash
+      set -o errexit -o nounset
+      rev=$(git --rev-parse --short HEAD)
+      # add, commit, and push
+      git add *.html
+      git commit -m "regeneration for gh-pages at ${rev}"
+      git push -q upstream HEAD:gh-pages</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="howto.md">howto.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/7
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide:1">HOWTO</a></th>
+        <td><a href="#slide:1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide:2">Get darkslide working</a></th>
+        <td><a href="#slide:2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide:3">Set up for Travis-CI</a></th>
+        <td><a href="#slide:3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide:4">dot(.)travis.yml file</a></th>
+        <td><a href="#slide:4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide:5">travis encrypts github token</a></th>
+        <td><a href="#slide:5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide:6">git_init.sh file</a></th>
+        <td><a href="#slide:6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide:7">generate.sh file</a></th>
+        <td><a href="#slide:7">7</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+    <br>
+    <strong>Generated with Darkslide 2.3.3</strong>
+  </div>
+  <script>main()</script>
+</body>
+</html>

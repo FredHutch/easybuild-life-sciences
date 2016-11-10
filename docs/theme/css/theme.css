@@ -1,0 +1,208 @@
+/* ======================================
+                 FONTS
+====================================== */
+
+h1, h2, h3, h4, h5, h6,
+body, header {
+    font-family: 'Candara', 'Calibri', 'Segoe UI Semilight', 'Corbel', 'Trebuchet Ms', 'Segoe UI', sans-serif;
+}
+section {
+    font: 34px 'Palatino', 'Palatino Linotype', 'URW Palladio L', 'Century Schoolbook L', 'Georgia', serif;
+}
+
+/* ======================================
+                 COLORS
+====================================== */
+/*
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3)
+{
+    background-color:$rebase03;
+    color:$rebase0;
+    * { color:$rebase0; }
+    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
+    a, a:active, a:visited { color: $rebase1; }
+}
+@mixin accentize($accent) {
+    a, a:active, a:visited, code.url { color: $accent; }
+    h1,h2,h3,h4,h5,h6 {color:$accent}
+}
+/ * light is default mode, so pair with general html definition * /
+html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
+.dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
+html * {
+    color-profile: sRGB;
+    rendering-intent: auto;
+}
+*/
+.base03 { color: #002b36; }
+.base02 { color: #073642; }
+.base01 { color: #586e75; }
+.base00 { color: #657b83; }
+.base0 { color: #839496; }
+.base1 { color: #93a1a1; }
+.base2 { color: #eee8d5; }
+.base3 { color: #fdf6e3; }
+.yellow { color: #b58900; }
+.orange { color: #cb4b16; }
+.red { color: #dc322f; }
+.magenta { color: #d33682; }
+.violet { color: #6c71c4; }
+.blue { color: #268bd2; }
+.cyan { color: #2aa198; }
+.green { color: #859900; }
+body {
+    background: #073642;
+    color: #93a1a1;
+}
+footer {
+    color: #93a1a1;
+}
+a, a:hover {
+    color: #268bd2;
+    padding: 0;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: linear-gradient(#268bd2, #268bd2);
+    background-size: 1px 1px;
+    background-repeat: repeat-x;
+    background-position: 0% 95%;
+    text-shadow: -0.06em -0.03ex #fdf6e3,-0.06em -0.06ex #fdf6e3,-0.06em -0.09ex #fdf6e3,0.12em 0ex #fdf6e3,-0.09em -0.09ex #fdf6e3,-0.09em -0.06ex #fdf6e3,-0.09em -0.03ex #fdf6e3,0.12em -0.21ex #fdf6e3,0.12em -0.27ex #fdf6e3,0.12em -0.24ex #fdf6e3,0em 0.08ex #fdf6e3,0em -0.18ex #fdf6e3,0em -0.15ex #fdf6e3,0em 0.02ex #fdf6e3,-0.06em 0ex #fdf6e3,-0.03em 0ex #fdf6e3,0em 0.06ex #fdf6e3,0em -0.12ex #fdf6e3,-0.12em -0.06ex #fdf6e3,-0.12em -0.03ex #fdf6e3,0.15em 0ex #fdf6e3,-0.12em -0.09ex #fdf6e3,0.03em -0.21ex #fdf6e3,-0.09em -0.18ex #fdf6e3,0.03em -0.24ex #fdf6e3,0.03em -0.27ex #fdf6e3,-0.09em -0.12ex #fdf6e3,-0.09em -0.15ex #fdf6e3,0.09em -0.27ex #fdf6e3,0.09em -0.24ex #fdf6e3,0.09em -0.21ex #fdf6e3,0em 0ex #fdf6e3,-0.15em 0.08ex #fdf6e3,0.06em 0ex #fdf6e3,0.12em -0.12ex #fdf6e3,-0.15em 0.02ex #fdf6e3,-0.15em 0.06ex #fdf6e3,-0.15em 0.04ex #fdf6e3,-0.15em -0.15ex #fdf6e3,-0.09em -0.21ex #fdf6e3,-0.09em -0.27ex #fdf6e3,-0.09em -0.24ex #fdf6e3,0.06em 0.08ex #fdf6e3,-0.06em -0.21ex #fdf6e3,0.06em 0.06ex #fdf6e3,0.06em 0.04ex #fdf6e3,-0.15em -0.18ex #fdf6e3,-0.06em -0.24ex #fdf6e3,-0.06em -0.27ex #fdf6e3,0.15em 0.08ex #fdf6e3,0.12em -0.09ex #fdf6e3,0.03em 0.02ex #fdf6e3,0.03em 0.04ex #fdf6e3,0.03em 0.06ex #fdf6e3,0.09em -0.18ex #fdf6e3,0.03em 0.08ex #fdf6e3,0.09em -0.15ex #fdf6e3,0.12em -0.03ex #fdf6e3,0.09em -0.12ex #fdf6e3,0.12em -0.06ex #fdf6e3,0.15em 0.02ex #fdf6e3,-0.15em -0.03ex #fdf6e3,-0.06em -0.15ex #fdf6e3,-0.15em -0.06ex #fdf6e3,-0.06em -0.12ex #fdf6e3,-0.15em -0.09ex #fdf6e3,-0.12em -0.21ex #fdf6e3,-0.06em -0.18ex #fdf6e3,-0.12em -0.27ex #fdf6e3,-0.12em -0.24ex #fdf6e3,-0.03em 0.04ex #fdf6e3,-0.03em 0.06ex #fdf6e3,0.09em -0.09ex #fdf6e3,-0.03em 0.02ex #fdf6e3,0.09em -0.06ex #fdf6e3,-0.03em 0.08ex #fdf6e3,0.09em -0.03ex #fdf6e3,0.09em 0ex #fdf6e3,0em -0.09ex #fdf6e3,0em -0.06ex #fdf6e3,-0.15em 0ex #fdf6e3,0em -0.03ex #fdf6e3,-0.12em 0.02ex #fdf6e3,0.12em 0.06ex #fdf6e3,-0.12em 0.06ex #fdf6e3,-0.12em 0.04ex #fdf6e3,-0.12em -0.12ex #fdf6e3,-0.12em 0.08ex #fdf6e3,0.15em -0.15ex #fdf6e3,0.15em -0.12ex #fdf6e3,-0.03em -0.24ex #fdf6e3,0em -0.24ex #fdf6e3,-0.03em -0.27ex #fdf6e3,0.15em -0.18ex #fdf6e3,-0.03em -0.21ex #fdf6e3,0.06em -0.24ex #fdf6e3,0.06em -0.27ex #fdf6e3,-0.09em 0ex #fdf6e3,0.06em -0.21ex #fdf6e3,-0.15em -0.12ex #fdf6e3,-0.06em 0.08ex #fdf6e3,-0.06em 0.02ex #fdf6e3,-0.06em 0.06ex #fdf6e3,-0.06em 0.04ex #fdf6e3,-0.12em -0.18ex #fdf6e3,-0.15em -0.21ex #fdf6e3,-0.15em -0.24ex #fdf6e3,-0.15em -0.27ex #fdf6e3,0.06em 0.02ex #fdf6e3,0.15em -0.21ex #fdf6e3,0.03em 0ex #fdf6e3,0.15em -0.27ex #fdf6e3,0.09em 0.02ex #fdf6e3,0.12em -0.18ex #fdf6e3,0.09em 0.06ex #fdf6e3,0.09em 0.04ex #fdf6e3,0em 0.04ex #fdf6e3,0.09em 0.08ex #fdf6e3,0.12em -0.15ex #fdf6e3,-0.03em -0.03ex #fdf6e3,-0.03em -0.06ex #fdf6e3,-0.12em -0.15ex #fdf6e3,0em -0.27ex #fdf6e3,0em -0.21ex #fdf6e3,-0.03em -0.09ex #fdf6e3,0.06em -0.09ex #fdf6e3,0.03em -0.18ex #fdf6e3,0.12em 0.08ex #fdf6e3,0.03em -0.15ex #fdf6e3,0.12em 0.04ex #fdf6e3,0.12em 0.02ex #fdf6e3,0.06em -0.06ex #fdf6e3,0.03em -0.12ex #fdf6e3,-0.03em -0.12ex #fdf6e3,-0.03em -0.15ex #fdf6e3,-0.03em -0.18ex #fdf6e3,0.15em 0.06ex #fdf6e3,0.15em 0.04ex #fdf6e3,0.15em -0.06ex #fdf6e3,0.15em -0.03ex #fdf6e3,0.15em -0.09ex #fdf6e3,0.06em -0.18ex #fdf6e3,0.03em -0.09ex #fdf6e3,0.03em -0.03ex #fdf6e3,0.06em -0.12ex #fdf6e3,0.03em -0.06ex #fdf6e3,0.06em -0.15ex #fdf6e3,0.06em -0.03ex #fdf6e3,-0.09em 0.08ex #fdf6e3,-0.09em 0.02ex #fdf6e3,-0.12em 0ex #fdf6e3,-0.09em 0.06ex #fdf6e3,-0.09em 0.04ex #fdf6e3,0.15em -0.24ex #fdf6e3;
+}
+a:hover {
+    color: #2aa198;
+    background-image: linear-gradient(#2aa198, #2aa198);
+}
+.presenter_notes a, .presenter_notes a:hover,
+div#current_presenter_notes a, div#current_presenter_notes a:hover {
+    text-shadow: -0.06em -0.03ex #002b36,-0.06em -0.06ex #002b36,-0.06em -0.09ex #002b36,0.12em 0ex #002b36,-0.09em -0.09ex #002b36,-0.09em -0.06ex #002b36,-0.09em -0.03ex #002b36,0.12em -0.21ex #002b36,0.12em -0.27ex #002b36,0.12em -0.24ex #002b36,0em 0.08ex #002b36,0em -0.18ex #002b36,0em -0.15ex #002b36,0em 0.02ex #002b36,-0.06em 0ex #002b36,-0.03em 0ex #002b36,0em 0.06ex #002b36,0em -0.12ex #002b36,-0.12em -0.06ex #002b36,-0.12em -0.03ex #002b36,0.15em 0ex #002b36,-0.12em -0.09ex #002b36,0.03em -0.21ex #002b36,-0.09em -0.18ex #002b36,0.03em -0.24ex #002b36,0.03em -0.27ex #002b36,-0.09em -0.12ex #002b36,-0.09em -0.15ex #002b36,0.09em -0.27ex #002b36,0.09em -0.24ex #002b36,0.09em -0.21ex #002b36,0em 0ex #002b36,-0.15em 0.08ex #002b36,0.06em 0ex #002b36,0.12em -0.12ex #002b36,-0.15em 0.02ex #002b36,-0.15em 0.06ex #002b36,-0.15em 0.04ex #002b36,-0.15em -0.15ex #002b36,-0.09em -0.21ex #002b36,-0.09em -0.27ex #002b36,-0.09em -0.24ex #002b36,0.06em 0.08ex #002b36,-0.06em -0.21ex #002b36,0.06em 0.06ex #002b36,0.06em 0.04ex #002b36,-0.15em -0.18ex #002b36,-0.06em -0.24ex #002b36,-0.06em -0.27ex #002b36,0.15em 0.08ex #002b36,0.12em -0.09ex #002b36,0.03em 0.02ex #002b36,0.03em 0.04ex #002b36,0.03em 0.06ex #002b36,0.09em -0.18ex #002b36,0.03em 0.08ex #002b36,0.09em -0.15ex #002b36,0.12em -0.03ex #002b36,0.09em -0.12ex #002b36,0.12em -0.06ex #002b36,0.15em 0.02ex #002b36,-0.15em -0.03ex #002b36,-0.06em -0.15ex #002b36,-0.15em -0.06ex #002b36,-0.06em -0.12ex #002b36,-0.15em -0.09ex #002b36,-0.12em -0.21ex #002b36,-0.06em -0.18ex #002b36,-0.12em -0.27ex #002b36,-0.12em -0.24ex #002b36,-0.03em 0.04ex #002b36,-0.03em 0.06ex #002b36,0.09em -0.09ex #002b36,-0.03em 0.02ex #002b36,0.09em -0.06ex #002b36,-0.03em 0.08ex #002b36,0.09em -0.03ex #002b36,0.09em 0ex #002b36,0em -0.09ex #002b36,0em -0.06ex #002b36,-0.15em 0ex #002b36,0em -0.03ex #002b36,-0.12em 0.02ex #002b36,0.12em 0.06ex #002b36,-0.12em 0.06ex #002b36,-0.12em 0.04ex #002b36,-0.12em -0.12ex #002b36,-0.12em 0.08ex #002b36,0.15em -0.15ex #002b36,0.15em -0.12ex #002b36,-0.03em -0.24ex #002b36,0em -0.24ex #002b36,-0.03em -0.27ex #002b36,0.15em -0.18ex #002b36,-0.03em -0.21ex #002b36,0.06em -0.24ex #002b36,0.06em -0.27ex #002b36,-0.09em 0ex #002b36,0.06em -0.21ex #002b36,-0.15em -0.12ex #002b36,-0.06em 0.08ex #002b36,-0.06em 0.02ex #002b36,-0.06em 0.06ex #002b36,-0.06em 0.04ex #002b36,-0.12em -0.18ex #002b36,-0.15em -0.21ex #002b36,-0.15em -0.24ex #002b36,-0.15em -0.27ex #002b36,0.06em 0.02ex #002b36,0.15em -0.21ex #002b36,0.03em 0ex #002b36,0.15em -0.27ex #002b36,0.09em 0.02ex #002b36,0.12em -0.18ex #002b36,0.09em 0.06ex #002b36,0.09em 0.04ex #002b36,0em 0.04ex #002b36,0.09em 0.08ex #002b36,0.12em -0.15ex #002b36,-0.03em -0.03ex #002b36,-0.03em -0.06ex #002b36,-0.12em -0.15ex #002b36,0em -0.27ex #002b36,0em -0.21ex #002b36,-0.03em -0.09ex #002b36,0.06em -0.09ex #002b36,0.03em -0.18ex #002b36,0.12em 0.08ex #002b36,0.03em -0.15ex #002b36,0.12em 0.04ex #002b36,0.12em 0.02ex #002b36,0.06em -0.06ex #002b36,0.03em -0.12ex #002b36,-0.03em -0.12ex #002b36,-0.03em -0.15ex #002b36,-0.03em -0.18ex #002b36,0.15em 0.06ex #002b36,0.15em 0.04ex #002b36,0.15em -0.06ex #002b36,0.15em -0.03ex #002b36,0.15em -0.09ex #002b36,0.06em -0.18ex #002b36,0.03em -0.09ex #002b36,0.03em -0.03ex #002b36,0.06em -0.12ex #002b36,0.03em -0.06ex #002b36,0.06em -0.15ex #002b36,0.06em -0.03ex #002b36,-0.09em 0.08ex #002b36,-0.09em 0.02ex #002b36,-0.12em 0ex #002b36,-0.09em 0.06ex #002b36,-0.09em 0.04ex #002b36,0.15em -0.24ex #002b36;
+}
+code, tt.docutils.literal {
+    color: #6c71c4;
+}
+div.slide {
+    background-color: #fdf6e3;
+    color: #586e75;
+}
+body.expose div.slide:hover {
+    box-shadow: 0 0 0 15px #268bd2;
+}
+body.expose .slide.current {
+    box-shadow: 0 0 0 30px #b58900;
+}
+body.expose .slide.current:hover {
+    box-shadow: 0 0 0 15px #268bd2, 0 0 0 30px #b58900;
+}
+.presenter_notes {
+    background: #002b36;
+}
+@media screen, projection {
+    ::-webkit-scrollbar-thumb {
+        background: #fdf6e3;
+        border-color: #eee8d5;
+    }
+    ::-webkit-scrollbar {
+        background: #eee8d5;
+    }
+    ::-webkit-scrollbar-corner {
+        background: #fdf6e3;
+    }
+}
+.qr svg {
+    box-shadow: inset 0 0 10px #eee8d5;
+}
+div.slides, body.expose div.slides.nocontext,
+body.expose .slide.current,
+body.expose .slide.current .inner {
+    /*background: #000;*/
+}
+/* See: https://gist.github.com/nicolashery/5765395 */
+/* Synic syntax highlighting */
+/*pre pre:not(.diff-line-pre),pre table{background:#000!important;color:#fdf6e3ff0!important;}*/
+
+pre { background: #fdf6e3; color: #586e75; }
+.linenos pre { background: #eee8d5;}
+.c { color: #93a1a1; }
+.err { color: #586e75; }
+.g { color: #586e75; }
+.k { color: #859900; }
+.l { color: #586e75; }
+.n { color: #586e75; }
+.o { color: #859900; }
+.x { color: #cb4b16; }
+.p { color: #586e75; }
+.cm { color: #93a1a1; }
+.cp { color: #859900; }
+.c1 { color: #93a1a1; }
+.cs { color: #859900; }
+.gd { color: #2aa198; }
+.ge { color: #586e75; font-style: italic; }
+.gr { color: #dc322f; }
+.gh { color: #cb4b16; }
+.gi { color: #859900; }
+.go { color: #586e75; }
+.gp { color: #586e75; }
+.gs { color: #586e75; font-weight: bold; }
+.gu { color: #cb4b16; }
+.gt { color: #586e75; }
+.kc { color: #cb4b16; }
+.kd { color: #268bd2; }
+.kn { color: #859900; }
+.kp { color: #859900; }
+.kr { color: #268bd2; }
+.kt { color: #dc322f; }
+.ld { color: #586e75; }
+.m { color: #2aa198; }
+.s { color: #2aa198; }
+.na { color: #586e75; }
+.nb { color: #b58900; }
+.nc { color: #268bd2; }
+.no { color: #cb4b16; }
+.nd { color: #268bd2; }
+.ni { color: #cb4b16; }
+.ne { color: #cb4b16; }
+.nf { color: #268bd2; }
+.nl { color: #586e75; }
+.nn { color: #586e75; }
+.nx { color: #586e75; }
+.py { color: #586e75; }
+.nt { color: #268bd2; }
+.nv { color: #268bd2; }
+.ow { color: #859900; }
+.w { color: #586e75; }
+.mf { color: #2aa198; }
+.mh { color: #2aa198; }
+.mi { color: #2aa198; }
+.mo { color: #2aa198; }
+.sb { color: #93a1a1; }
+.sc { color: #2aa198; }
+.sd { color: #586e75; }
+.s2 { color: #2aa198; }
+.se { color: #cb4b16; }
+.sh { color: #586e75; }
+.si { color: #2aa198; }
+.sx { color: #2aa198; }
+.sr { color: #dc322f; }
+.s1 { color: #2aa198; }
+.ss { color: #2aa198; }
+.bp { color: #268bd2; }
+.vc { color: #268bd2; }
+.vg { color: #268bd2; }
+.vi { color: #268bd2; }
+.il { color: #2aa198; }
+

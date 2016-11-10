@@ -1,0 +1,43 @@
+#toc,
+#help,
+.slide aside,
+.slide .notes,
+.presenter_notes,
+#current_presenter_notes,
+#presenter_note {
+  display: none;
+}
+@page {
+  size: landscape;
+  margin: 0;
+  size: 1124px 852px;
+}
+@page:last {
+  display: none;
+}
+
+
+div.slide-wrapper {
+  padding: 15px;
+}
+div.slide,
+div.slide.current,
+div.slides,
+body,
+div.presentation {
+  position: relative !important;
+  margin: 0 !important;
+}
+div.inner {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.slide {
+  page-break-after: avoid;
+}
+div.slide-wrapper:last-of-type .slide {
+  page-break-after: auto;
+}
