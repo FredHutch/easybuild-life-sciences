@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>EasyBuild</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" href="theme/css/base.css">
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    <link rel="stylesheet" href="theme/css/theme.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>EasyBuild</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>Fred Hutch Researchers</h1></header>
+            
+            
+            <section><h2>What they want:</h2>
+<ol>
+<li>reliable systems and hardware</li>
+<li>reliable software</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Reliable Systems &amp; Hardware</h1></header>
+            
+            
+            <section><h2>Out of scope (call us)</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>What about software?</h1></header>
+            
+            
+            <section><ul>
+<li>current versions built consistently and quickly</li>
+<li>software and version accounting for all jobs</li>
+<li>reliable citation sources and re-producibility</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>How do we do it?</h1></header>
+            
+            
+            <section><p><code>./configure; make; sudo make install</code></p>
+<p>Download tarball, check required packages, <strong>install them</strong>, build, re-check required packages, make test, <strong>make install</strong>, build modulefile.</p>
+<p>Then repeat:
+- for the next package
+- <em>exactly</em> for new versions of this package</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-6">
+          <div class="inner">
+            
+            <header><h1>Reliable Software</h1></header>
+            
+            
+            <section><p>EasyBuild: building software with ease</p>
+<h3>Features</h3>
+<ul>
+<li>multiple versions and builds of many software packages</li>
+<li>automated package dependency system</li>
+<li>re-producible software package builds</li>
+<li>automated environment modules managment</li>
+<li>curated toolchains</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-7">
+          <div class="inner">
+            
+            <header><h1>EasyBuild Benefits</h1></header>
+            
+            
+            <section><ul>
+<li>1058 Software Packages (6600+ package versions)</li>
+<li>54 toolchains</li>
+<li>150+ contributors</li>
+<li>87% of our existing software stack out of the box</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-8">
+          <div class="inner">
+            
+            <header><h1>EasyBuild Understanding</h1></header>
+            
+            
+            <section><ul>
+<li>Terms &amp; Components</li>
+<li>Building software</li>
+<li>Fred Hutch Implementation</li>
+<li>Community and Collaboration</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-9">
+          <div class="inner">
+            
+            <header><h1>EasyBuild Terms</h1></header>
+            
+            
+            <section><ul>
+<li><strong>environment modules</strong> (<code>$ module load R</code>)</li>
+<li><strong>easyconfigs</strong> (<em>build recipe</em>)</li>
+<li><strong>toolchains</strong> GCC, Intel, Clang/LLVM, etc. + libs</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-10">
+          <div class="inner">
+            
+            <header><h1>Environment Modules</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-11">
+          <div class="inner">
+            
+            <header><h1>Environment Module Overview</h1></header>
+            
+            
+            <section><ul>
+<li>sets and unsets environment variables</li>
+<li>avoids conflicts between software packages</li>
+<li>provides dependency resolution</li>
+<li>provides administrative hooks</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>Use Environment Modules...</h1></header>
+            
+            
+            <section><ul>
+<li>simple, end user-driven, scriptable</li>
+<li>administrative hooks</li>
+<li>greatly simplifies tangled, gnarly environments</li>
+<li>use <em>Lmod</em> if you can</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>... with EasyBuild!</h1></header>
+            
+            
+            <section><ul>
+<li>automated modulefile creation</li>
+<li>managment of module hierarchy</li>
+<li>don't write modules, just use them</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            <header><h1>Module Dependency Example</h1></header>
+            
+            
+            <section><p><img alt="Module List" src="module_list.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-15">
+          <div class="inner">
+            
+            <header><h1>Shell Env Example</h1></header>
+            
+            
+            <section><p><img alt="Module List" src="path.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-16">
+          <div class="inner">
+            
+            <header><h1>Easyconfigs</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-17">
+          <div class="inner">
+            
+            <header><h1>Easyconfigs</h1></header>
+            
+            
+            <section><p>Easyconfigs...</p>
+<ul>
+<li>are text files (python)</li>
+<li>define a software package + version + toolchain</li>
+<li>can define extentions/modules/libraries</li>
+<li>can define options and environment variables</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-18">
+          <div class="inner">
+            
+            <header><h1>Easyconfig Example</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;git&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.8.0&#39;</span>
+<span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;http://git-scm.com/&#39;</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Git is a free and open source distributed version control system designed</span>
+<span class="s2">to handle everything from small to very large projects with speed and efficiency.&quot;&quot;&quot;</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2016a&#39;</span><span class="p">}</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;v</span><span class="si">%(version)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+<span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://github.com/git/git/archive&#39;</span><span class="p">]</span>
+<span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">(</span><span class="s1">&#39;cURL&#39;</span><span class="p">,</span> <span class="s1">&#39;7.47.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;expat&#39;</span><span class="p">,</span> <span class="s1">&#39;2.1.0&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;gettext&#39;</span><span class="p">,</span> <span class="s1">&#39;0.19.7&#39;</span><span class="p">),</span>
+<span class="p">(</span><span class="s1">&#39;Perl&#39;</span><span class="p">,</span> <span class="s1">&#39;5.22.1&#39;</span><span class="p">,</span> <span class="s1">&#39;-bare&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-19">
+          <div class="inner">
+            
+            <header><h1>Toolchains</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
+          <div class="inner">
+            
+            <header><h1>What are toolchains?</h1></header>
+            
+            
+            <section><ul>
+<li>are defined in easyconfig files</li>
+<li>are a collection of compilers and support libraries</li>
+<li>provide consistent builds for module stacks</li>
+<li>aid in re-producibility</li>
+<li>are a great place for optimization fan-out</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-21">
+          <div class="inner">
+            
+            <header><h1>Toolchain example</h1></header>
+            
+            
+            <section><pre><code>GCCcore/4.9.3
+binutils/2.2.5-GCCcore-4.9.3
+GCC/4.9.3-2.25
+numactl/2.0.11-GCC-4.9.3-2.25
+hwloc/1.11.2-GCC-4.9.2-2.25
+OpenMPI/1.10.2-GCC-4.9.3-2.25
+OpenBLAS/0.2.15-GCC-4.9.3-2.25-LAPACK-3.6.0
+gompi/2016a
+FFTW/3.3.4-gompi-2016a
+ScaLAPACK/2.0.2-gompi-2016a-OpenBLAS-0.2.15-LAPACK-3.6.0
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-22">
+          <div class="inner">
+            
+            <header><h1>Toolchains and performance</h1></header>
+            
+            
+            <section><p>rbench on R-3.3.0:</p>
+<ul>
+<li>179 secs <em>R compiled on Ubuntu 14.04</em></li>
+<li>83 secs (54% faster) <em>EasyBuild foss-2016a R</em></li>
+<li>91 secs (49% faster) <em>EasyBuild intel-2016a R</em></li>
+<li>86 secs (52% faster) <em>Microsoft R</em> (yes, on linux)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-23">
+          <div class="inner">
+            
+            <header><h1>Re-producibility</h1></header>
+            
+            
+            <section><ul>
+<li>easyconfig is package, version, toolchain</li>
+<li>toolchain is compiler, base libraries</li>
+<li>environment is complex, Modules and Easybuild manage it</li>
+<li>easyconfigs will build and run the same for everyone</li>
+<li>and everywhere (new OS, toolchain, etc.)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-24">
+          <div class="inner">
+            
+            <header><h1>EasyBuilding Software</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-25">
+          <div class="inner">
+            
+            <header><h1>Prerequisites</h1></header>
+            
+            
+            <section><ul>
+<li>Python</li>
+<li>Environment Modules</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-26">
+          <div class="inner">
+            
+            <header><h1>Bootstrapping EasyBuild</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span>$ curl -O https://raw.github.../bootstrap_eb.py
+$ python bootstrap_eb.py <span class="nv">$EASYBUILD_PREFIX</span>
+$ module use <span class="nv">$EASYBUILD_PREFIX</span>/modules/all
+$ module load EasyBuild
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-27">
+          <div class="inner">
+            
+            <header><h1>build something</h1></header>
+            
+            
+            <section><p>Let's build something</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-28">
+          <div class="inner">
+            
+            <header><h1>EasyBuild @FredHutch</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-29">
+          <div class="inner">
+            
+            <header><h1>Fred Hutch goals</h1></header>
+            
+            
+            <section><ul>
+<li>centralized, shared packages</li>
+<li>non-root, multiple, individual builders in a group</li>
+<li>fast release of new versions</li>
+<li>"fat" R with up-to-date libraries optimized</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-30">
+          <div class="inner">
+            
+            <header><h1>Executive decisions</h1></header>
+            
+            
+            <section><p>Toolchains:</p>
+<ul>
+<li><strong>foss-n:</strong> Free Open Source Software - GCC, OpenBLAS, ScaLAPACK</li>
+<li><strong>intel-n:</strong> Intel C &amp; Fortran, Intel Math Kernel Libraries</li>
+</ul>
+<p>Deployment:</p>
+<ul>
+<li>universal read-only NFS export</li>
+<li>common EasyBuild hierarchy</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-31">
+          <div class="inner">
+            
+            <header><h1>Engineering Decisions</h1></header>
+            
+            
+            <section><ul>
+<li>NFS mounted /app on all systems (nfs ro)</li>
+<li>EasyBuild PREFIX owned by POSIX group</li>
+<li>EASYBUILD ENV VARS to support group building</li>
+<li>EasyBuild is easy-built; everything in /app</li>
+<li>EasyBuilds done on a build host (nfs rw)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-32">
+          <div class="inner">
+            
+            <header><h1>EasyBuild @FredHutch Metrics</h1></header>
+            
+            
+            <section><ul>
+<li>218/757 software packages/versions built (add pkg list)</li>
+<li>86% built in 4 months</li>
+<li>87% of our old software stack re-built</li>
+<li>4 SysAdmins independently building consistent packages</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-33">
+          <div class="inner">
+            
+            <header><h1>FredHutch Software</h1></header>
+            
+            
+            <section><p>Python, HDF5, R, Perl, netCDF, SAMtools, BWA, SRA-Toolkit, R Bioconductor, MUSCLE, GATK, fastqc, Cufflinks, Bowtie, BEAST, WHAM,TopHat, svtoolkit, STAR, SPLITREAD, samblaster, RSEM, Rosetta, Queue, PyMOL, ngsShort, mrsFAST, MEME, matplotlib, lumpy, GROMACS, ClustalW2, bioperl, biopython, BEDTools, BEDOps, bcl2fastq, bcftools, bamUtils, BamTools</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-34">
+          <div class="inner">
+            
+            <header><h1>What's the catch?</h1></header>
+            
+            
+            <section><ul>
+<li>adapting existing easyconfigs can be easy</li>
+<li>writing new easyconfigs is less easy</li>
+<li>existing community accepts all easyconfigs</li>
+<li>proliferation of package matrix</li>
+<li>hard to know where to start</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-35">
+          <div class="inner">
+            
+            <header><h1>FredHutch Next Step Goals</h1></header>
+            
+            
+            <section><ul>
+<li>reduce EasyBuild ramp-up time</li>
+<li>build EB life-sciences community</li>
+<li>provide new versions quickly/publicly</li>
+<li>share tools and code</li>
+<li>reduce complexity of writing new easyconfigs</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-36">
+          <div class="inner">
+            
+            <header><h1>Next Step Details</h1></header>
+            
+            
+            <section><ul>
+<li>provide 200+ life sciences packages in an hour</li>
+<li>help implement expanded toolchains/package clusters</li>
+<li>publish easyconfigs upstream</li>
+<li>publish life-sciences github repo</li>
+<li>published detailed implementation example</li>
+<li>take ownership of R easyconfig</li>
+<li>implement EasyBuild in container (docker/LXD)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: EasyBuild_Presentation.md -->
+      <div class="slide-wrapper">
+        <div class="slide slide-37">
+          <div class="inner">
+            
+            <header><h1>Contact</h1></header>
+            
+            
+            <section><p>If you have any questions:</p>
+<p>bmcgough@fredhutch.org</p>
+<p>https://fredhutch.github.io/easybuild-life-sciences/EasyBuild_Presentation.html</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            
+            <aside class="source">
+              Source: <a href="EasyBuild_Presentation.md">EasyBuild_Presentation.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/37
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide:1">EasyBuild</a></th>
+        <td><a href="#slide:1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide:2">Fred Hutch Researchers</a></th>
+        <td><a href="#slide:2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide:3">Reliable Systems &amp; Hardware</a></th>
+        <td><a href="#slide:3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide:4">What about software?</a></th>
+        <td><a href="#slide:4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide:5">How do we do it?</a></th>
+        <td><a href="#slide:5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide:6">Reliable Software</a></th>
+        <td><a href="#slide:6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide:7">EasyBuild Benefits</a></th>
+        <td><a href="#slide:7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide:8">EasyBuild Understanding</a></th>
+        <td><a href="#slide:8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide:9">EasyBuild Terms</a></th>
+        <td><a href="#slide:9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide:10">Environment Modules</a></th>
+        <td><a href="#slide:10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide:11">Environment Module Overview</a></th>
+        <td><a href="#slide:11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide:12">Use Environment Modules...</a></th>
+        <td><a href="#slide:12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide:13">... with EasyBuild!</a></th>
+        <td><a href="#slide:13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide:14">Module Dependency Example</a></th>
+        <td><a href="#slide:14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide:15">Shell Env Example</a></th>
+        <td><a href="#slide:15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide:16">Easyconfigs</a></th>
+        <td><a href="#slide:16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide:17">Easyconfigs</a></th>
+        <td><a href="#slide:17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide:18">Easyconfig Example</a></th>
+        <td><a href="#slide:18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide:19">Toolchains</a></th>
+        <td><a href="#slide:19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide:20">What are toolchains?</a></th>
+        <td><a href="#slide:20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide:21">Toolchain example</a></th>
+        <td><a href="#slide:21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide:22">Toolchains and performance</a></th>
+        <td><a href="#slide:22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide:23">Re-producibility</a></th>
+        <td><a href="#slide:23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide:24">EasyBuilding Software</a></th>
+        <td><a href="#slide:24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide:25">Prerequisites</a></th>
+        <td><a href="#slide:25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide:26">Bootstrapping EasyBuild</a></th>
+        <td><a href="#slide:26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide:27">build something</a></th>
+        <td><a href="#slide:27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide:28">EasyBuild @FredHutch</a></th>
+        <td><a href="#slide:28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide:29">Fred Hutch goals</a></th>
+        <td><a href="#slide:29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide:30">Executive decisions</a></th>
+        <td><a href="#slide:30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide:31">Engineering Decisions</a></th>
+        <td><a href="#slide:31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide:32">EasyBuild @FredHutch Metrics</a></th>
+        <td><a href="#slide:32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide:33">FredHutch Software</a></th>
+        <td><a href="#slide:33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide:34">What's the catch?</a></th>
+        <td><a href="#slide:34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide:35">FredHutch Next Step Goals</a></th>
+        <td><a href="#slide:35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide:36">Next Step Details</a></th>
+        <td><a href="#slide:36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide:37">Contact</a></th>
+        <td><a href="#slide:37">37</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+    <br>
+    <strong>Generated with Darkslide 2.3.3</strong>
+  </div>
+  <script>main()</script>
+</body>
+</html>
