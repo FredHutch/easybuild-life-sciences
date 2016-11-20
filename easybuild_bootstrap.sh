@@ -150,7 +150,9 @@ function eb_bootstrap {
   # create $EB_DIR
   myself=$(whoami)
   sudo mkdir -p $EB_DIR
-  sudo chown -R $myself $EB_DIR
+  sudo chown -R ${myself} ${EB_DIR}
+  homedir=~
+  sudo chown -R ${myself} $homedir
 
   # bootstrap it
   python /tmp/bootstrap_eb.py $EB_DIR
