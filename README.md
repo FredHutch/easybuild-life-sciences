@@ -27,6 +27,13 @@ sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
 ```
 curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/easybuild_bootstrap.sh | bash
 ```
+- after easybuild is installed simply log  out and login again and as an example (installing R) execute this
+
+```
+module load EasyBuild
+eb R-3.3.1-foss-2016b.eb --robot
+```
+
 
 ---
 
@@ -43,19 +50,6 @@ Before and during implementation, we kept the following goals in mind:
 - default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but `module load R` will load R-3.2.1)
 - packages will be built by any member of a given POSIX group
 - new packages will be easily implemented (new versions and software packages without existing easyconfigs)
-
----
-
-# TODO
-Some of our goals were not met in the initial implementation. Mostly due to unimplemented features in Environment Modules and/or EasyBuild itself.
-
-New package implementation or **new easyconfigs made easy**
-- versions can be changed with `--try` options, but a new easyconfig per pkg/ver/compiler balloons quickly
-- Easybuild may be moving away from this model to more generic easyconfigs, but this may affect reproducibility
-
-Default Module Version Management
-- Modules picks the 'newest' version if not specified with `module load` or in `.version`
-- I find no option in Easybuild to manage `.version` files
 
 ---
 
