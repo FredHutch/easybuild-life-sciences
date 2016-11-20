@@ -126,14 +126,14 @@ function remove_OS_pkgs {
   fi
 }
 
-# download java and to it into source 
+# download some required stuff  and to it into source 
 function download_extra_sources {
   if ! [[ -d $EASYBUILD_SOURCEPATH ]]; then
     EASYBUILD_SOURCEPATH=~/.local/easybuild/sources
     mkdir -p $EASYBUILD_SOURCEPATH
   fi
   rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
-  wget -O ${EASYBUILD_SOURCEPATH} "${rooturl}/jdk-8u92-linux-x64.tar.gz"
+  wget -o "${EASYBUILD_SOURCEPATH}/jdk-8u92-linux-x64.tar.gz" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
 }
 
 # bootstrap easybuild
