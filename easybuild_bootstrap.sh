@@ -135,7 +135,7 @@ function download_extra_sources {
     mkdir -p $EASYBUILD_SOURCEPATH
   fi
   rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
-  wget -o "${EASYBUILD_SOURCEPATH}/jdk-8u92-linux-x64.tar.gz" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
+  wget -P "${EASYBUILD_SOURCEPATH}/" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
 }
 
 # bootstrap easybuild
