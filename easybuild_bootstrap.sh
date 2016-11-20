@@ -21,7 +21,7 @@ EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-frame
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
 LMOD_VER="6.3"   # version of Lmod to install into the container
-EB_VER="2.9.0"   # verison of EasyBuild to bootstrap in the container
+EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
 
@@ -93,13 +93,47 @@ function lmod_install {
 # install OS packages required by EasyBuild and foss toolchains
 # encryption-related packages here on purpose as OS udpates should be more frequent
 function install_EB_OS_pkgs {
-  sudo apt-get install -y python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+  if hash apt-get 2>/dev/null; then
+    apt-get update
+    sudo apt-get install -y python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+  elif hash yum 2>/dev/null; then
+    echo "redhat based install, not currently supported"
+  else
+    echo "unknown unix, not currently supported"
+  fi
 }
 
 # install OS packages to satisfy unstated dependencies in common easyconfigs
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
-  sudo apt-get install -y pkg-config m4 libx11-dev 
+  if hash apt-get 2>/dev/null; then
+    sudo apt-get install -y pkg-config m4 libx11-dev
+  elif hash yum 2>/dev/null; then
+    echo "redhat based install, not currently supported"
+  else
+    echo "unknown unix, not currently supported"
+  fi
+}
+
+# remove OS packages after dependency install to get clean OS
+function remove_OS_pkgs {
+  if hash apt-get 2>/dev/null; then
+    sudo apt-get remove -y libreadline-dev
+  elif hash yum 2>/dev/null; then
+    echo "redhat based install, not currently supported"
+  else
+    echo "unknown unix, not currently supported"
+  fi
+}
+
+# download java and to it into source 
+function download_extra_sources {
+  if ! [[ -d $EASYBUILD_SOURCEPATH ]]; then
+    EASYBUILD_SOURCEPATH=~/.local/easybuild/sources
+    mkdir -p $EASYBUILD_SOURCEPATH
+  fi
+  rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
+  wget -O ${EASYBUILD_SOURCEPATH} "${rooturl}/jdk-8u92-linux-x64.tar.gz"
 }
 
 # bootstrap easybuild
@@ -116,7 +150,7 @@ function eb_bootstrap {
   # create $EB_DIR
   myself=$(whoami)
   sudo mkdir -p $EB_DIR
-  sudo chown $myself $EB_DIR
+  sudo chown -R $myself $EB_DIR
 
   # bootstrap it
   python /tmp/bootstrap_eb.py $EB_DIR
@@ -144,27 +178,21 @@ if [[ $mem -lt 8 ]]; then
     printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !\n"
     exit 1
 fi
-if ! hash apt-get 2>/dev/null; then
-    printf "apt-get not found. This script is targeted at Ubuntu/Debian systems.\n"
-    exit 1
-fi
 
-printf "\nUpdating packages..."
-sudo apt-get update
 printf "Installing required OS pkgs...\n"
 install_EB_OS_pkgs
-printf "Installing libreadline-dev for lua install...\n"
-sudo apt-get install -y libreadline-dev
 printf "Installing Lua...\n"
 lua_install
-printf "Removing libreadline-dev for clean system after lua install...\n"
-sudo apt-get remove -y libreadline-dev
 printf "Installing Lmod...\n"
 lmod_install
+printf "Removing packages to clean system after dependency install...\n"
+remove_OS_pkgs
 printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
 install_missed_dependency_OS_pkgs
 printf "Bootstrapping EasyBuild...\n"
 eb_bootstrap
+printf "Downloading some extras...\n"
+download_extra_sources
 printf "\n\n"
 printf "It appears to have worked!\n"
 printf "Login shells now have modules enabled, so all you need to do is log out and back in.\n"
