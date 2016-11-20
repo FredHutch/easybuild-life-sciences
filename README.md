@@ -3,9 +3,30 @@
 ---
 
 # Overview
-- We identified EasyBuild as piece of software that could help us manage software package builds
-- We use Environment Modules today, and more importantly, our users use modules
-- We have a small group of people who build software packages (admins, not users)
+- FredHutch Scientific Computing uses Easybuild to provide 100s of OSS packages to our Scientists
+- Scientists can load multiple versions of any software via Environemnt modules (LMOD)
+- All software is built to offer high reproducibility, it can be rebuilt exactly even 10 years from now 
+
+---
+
+# Quickstart 
+
+please follow these simple steps:
+
+- use a system with at least 8GB RAM, 8GB Disk and 4 cores
+- create a useraccount you using for builds, for example 'eb' :
+
+```
+sudo adduser --disabled-password --gecos "" eb
+sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
+
+```
+
+- and then simply launch the bootstrap process:
+
+```
+curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/easybuild_bootstrap.sh | bash
+```
 
 ---
 
