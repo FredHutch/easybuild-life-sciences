@@ -25,6 +25,8 @@ EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
 
+myself=$(whoami)
+
 # install lua, luarocks, luafilesystem, and luaposix
 function lua_install {
 
@@ -94,7 +96,7 @@ function lmod_install {
 # encryption-related packages here on purpose as OS udpates should be more frequent
 function install_EB_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    apt-get update
+    sudo apt-get update
     sudo apt-get install -y python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
@@ -148,7 +150,6 @@ function eb_bootstrap {
   fi
 
   # create $EB_DIR
-  myself=$(whoami)
   sudo mkdir -p $EB_DIR
   sudo chown -R ${myself} ${EB_DIR}
   homedir=~
@@ -177,8 +178,12 @@ EOF
 # checking requirements
 mem=$(awk '( $1 == "MemTotal:" ) { printf "%.0f", $2/1024/1024 }' /proc/meminfo)
 if [[ $mem -lt 8 ]]; then
-    printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !\n"
-    exit 1
+  printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !\n"
+  exit 1
+fi
+if [[ "$myself" == "root" ]]; then 
+  printf "please do not run as root, run under a user with sudo access"
+  exit 1
 fi
 
 printf "Installing required OS pkgs...\n"
