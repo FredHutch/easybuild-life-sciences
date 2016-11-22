@@ -190,8 +190,8 @@ EOF
 
   if [[ -n $EB_TOOLCHAIN_ONLY ]]; then    
     easyconfigs="${EB_DIR}/software/EasyBuild/${EB_VER}/lib/python2.7/site-packages/easybuild_easyconfigs-${EB_VER}-py2.7.egg/easybuild/easyconfigs"
-    printf "\ndeleting default easyconfigs  except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n"
-    find ${easyconfigs} -name *.eb ! -name "*${EB_TOOLCHAIN_ONLY}*" -exec rm {} \;
+    ## printf "\ndeleting default easyconfigs  except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n"
+    ## find ${easyconfigs} -name *.eb ! -name "*${EB_TOOLCHAIN_ONLY}*" -exec rm {} \;
   fi
 
 }
