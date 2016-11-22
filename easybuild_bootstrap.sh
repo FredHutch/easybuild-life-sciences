@@ -26,16 +26,14 @@ EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
 
 EB_CFG_DEVELOP="hpcugent FredHutch"
-
-EB_CFG_DEVEL_1="https://github.com/hpcugent/easybuild-easyconfigs"
-EB_CFG_DEVEL_2="https://github.com/FredHutch/easybuild-easyconfigs"
-
 EB_TOOLCHAIN_ONLY="foss-2016b"
-
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
 myself=$(whoami)
+for clon in $EB_CFG_DEVELOP; do
+  robot_paths=${EB_DIR}/github/develop/${clon}/easybuild/easyconfigs:${robot_paths}
+done
 
 # install lua, luarocks, luafilesystem, and luaposix
 function lua_install {
@@ -144,7 +142,6 @@ function download_extra_sources {
   mkdir -p $EB_DIR/sources
   wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
 
-  robot_paths=''
   mkdir -p $EB_DIR/github/develop
   for clon in $EB_CFG_DEVELOP; do 
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
@@ -152,14 +149,8 @@ function download_extra_sources {
       if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
         find ${EB_DIR}/github/develop/${clon} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
       fi
-      robot_paths=${EB_DIR}/github/develop/${clon}/easybuild/easyconfigs:${robot_paths}
     fi
   done
-
-      if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
-        find ${EB_DIR}/github/develop/${clon} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
-      fi
-
 
 }
 
@@ -233,7 +224,7 @@ download_extra_sources
 printf "\n\n"
 printf "************It appears to have worked! *************\n"
 printf "Login shells now have modules enabled, so all you need to do is log out and back in.\n"
-printf "   ... or you can source /etc/profiles.d/modules.sh .\n"
+printf "   ... or you can source /etc/profile.d/modules.sh .\n"
 printf "Once you are back, you should have modules, and can run 'module load EasyBuild' to get started building!\n"
 exit 0
 
