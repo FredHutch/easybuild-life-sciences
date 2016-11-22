@@ -31,8 +31,9 @@ EB_TOOLCHAIN_ONLY="foss-2016b"
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
 myself=$(whoami)
+robot_paths=${EB_DIR}/github/easybuild-life-sciences/easybuild/easyconfigs
 for clon in $EB_CFG_DEVELOP; do
-  robot_paths=${EB_DIR}/github/develop/${clon}/easybuild/easyconfigs:${robot_paths}
+  robot_paths=${robot_paths}:${EB_DIR}/github/develop/${clon}/easybuild/easyconfigs
 done
 
 # install lua, luarocks, luafilesystem, and luaposix
@@ -141,6 +142,9 @@ function download_extra_sources {
 
   mkdir -p $EB_DIR/sources
   wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
+
+  mkdir -p $EB_DIR/github
+  git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences
 
   mkdir -p $EB_DIR/github/develop
   for clon in $EB_CFG_DEVELOP; do 
