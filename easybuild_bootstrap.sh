@@ -21,9 +21,11 @@ EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-frame
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
 LMOD_VER="6.3"   # version of Lmod to install into the container
-EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 
+EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
+
+SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
 myself=$(whoami)
 
@@ -130,12 +132,16 @@ function remove_OS_pkgs {
 
 # download some required stuff  and to it into source 
 function download_extra_sources {
-  if ! [[ -d $EASYBUILD_SOURCEPATH ]]; then
-    EASYBUILD_SOURCEPATH=~/.local/easybuild/sources
-    mkdir -p $EASYBUILD_SOURCEPATH
+  #if ! [[ -d $EASYBUILD_SOURCEPATH ]]; then
+  #  EASYBUILD_SOURCEPATH=~/.local/easybuild/sources
+  #  mkdir -p $EASYBUILD_SOURCEPATH
+  #fi
+  #rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
+  #wget -P "${EASYBUILD_SOURCEPATH}/" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
+  if ! [[ -d $EB_DIR/sources ]]; then
+    mkdir -p $EB_DIR/sources
   fi
-  rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
-  wget -P "${EASYBUILD_SOURCEPATH}/" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
+  wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"  
 }
 
 # bootstrap easybuild
@@ -159,17 +165,28 @@ function eb_bootstrap {
   python /tmp/bootstrap_eb.py $EB_DIR
 
   # pop in some useful environment variables to our EasyBuild modulefile
+#  (cat <<EOF
+#set ebDir "$EB_DIR"
+#setenv EASYBUILD_SOURCEPATH "\$ebDir/sources"
+#setenv EASYBUILD_BUILDPATH "\$ebDir/build"
+#setenv EASYBUILD_INSTALLPATH_SOFTWARE "\$ebDir/software"
+#setenv EASYBUILD_INSTALLPATH_MODULES "\$ebDir/modules"
+#setenv EASYBUILD_REPOSITORYPATH "\$ebDir/ebfiles_repo"
+#setenv EASYBUILD_LOGFILE_FORMAT "\$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
+#setenv EASYBUILD_MODULES_TOOL "Lmod"
+#EOF
+#  ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
+
   (cat <<EOF
-set ebDir "$EB_DIR"
-setenv EASYBUILD_SOURCEPATH "\$ebDir/sources"
-setenv EASYBUILD_BUILDPATH "\$ebDir/build"
-setenv EASYBUILD_INSTALLPATH_SOFTWARE "\$ebDir/software"
-setenv EASYBUILD_INSTALLPATH_MODULES "\$ebDir/modules"
-setenv EASYBUILD_REPOSITORYPATH "\$ebDir/ebfiles_repo"
-setenv EASYBUILD_LOGFILE_FORMAT "\$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
-setenv EASYBUILD_MODULES_TOOL "Lmod"
+setenv ("EASYBUILD_SOURCEPATH", "${EB_DIR}/sources")
+setenv ("EASYBUILD_BUILDPATH", "${EB_DIR}/build")
+setenv ("EASYBUILD_INSTALLPATH_SOFTWARE", "${EB_DIR}/software")
+setenv ("EASYBUILD_INSTALLPATH_MODULES", "${EB_DIR}/modules")
+setenv ("EASYBUILD_REPOSITORYPATH", "${EB_DIR}/ebfiles_repo")
+setenv ("EASYBUILD_LOGFILE_FORMAT", "${EB_DIR}/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log")
+setenv ("EASYBUILD_MODULES_TOOL", "Lmod")
 EOF
-  ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
+  ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER.lua
 
 }
 
