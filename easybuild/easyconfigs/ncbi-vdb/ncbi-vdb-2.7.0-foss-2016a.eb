@@ -1,0 +1,65 @@
+# Built with EasyBuild version 2.8.2 on 2016-09-01_11-17-53
+easyblock = 'ConfigureMake'
+
+name = 'ncbi-vdb'
+version = '2.7.0'
+
+homepage = 'https://github.com/ncbi/ncbi-vdb'
+description = """The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for
+ using data in the INSDC Sequence Read Archives."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/ncbi/ncbi-vdb/archive/']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [
+    ('libxml2', '2.9.3'),
+    ('file', '5.28'),  # provides libmagic
+    ('HDF5', '1.8.17'),
+    ('NGS', '1.2.5'),
+]
+
+# override default of using $HOME/ncbi-outdir
+configopts = "--build-prefix=%(builddir)s/ncbi-outdir "
+
+configopts += "--with-ngs-sdk-prefix=$EBROOTNGS --with-ngs-java-prefix=$EBROOTNGS "
+configopts += "--with-hdf5-prefix=$EBROOTHDF5 --with-xml2-prefix=$EBROOTLIBXML2"
+
+parallel = 1
+
+sanity_check_paths = {
+    'files': ['include/ncbi-vdb/NGS.hpp', ('lib/libncbi-vdb.%s' % SHLIB_EXT, 'lib64/libncbi-vdb.%s' % SHLIB_EXT),
+              ('lib/libncbi-wvdb.%s' % SHLIB_EXT, 'lib64/libncbi-wvdb.%s' % SHLIB_EXT),
+              ('lib/libncbi-ngs-c++.a', 'lib64/libncbi-ngs-c++.a'), ('lib/libncbi-vdb.a', 'lib64/libncbi-vdb.a'),
+              ('lib/libncbi-wvdb.a', 'lib64/libncbi-wvdb.a')],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 109.54,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'ncbi-vdb-2.7.0-foss-2016a.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "2.8.2",
+    "easybuild-framework_version": "2.8.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 68755636,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1472753872,
+    "total_memory": 32048,
+}]

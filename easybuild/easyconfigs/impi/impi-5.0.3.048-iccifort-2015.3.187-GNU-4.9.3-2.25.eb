@@ -1,0 +1,48 @@
+# Built with EasyBuild version 2.3.0 on 2015-11-20_16-31-02
+name = 'impi'
+version = '5.0.3.048'
+
+homepage = 'http://software.intel.com/en-us/intel-mpi-library/'
+description = """The Intel(R) MPI Library for Linux* OS is a multi-fabric message
+ passing library based on ANL MPICH2 and OSU MVAPICH2. The Intel MPI Library for
+ Linux OS implements the Message Passing Interface, version 2 (MPI-2) specification."""
+
+toolchain = {'name': 'iccifort', 'version': '2015.3.187-GNU-4.9.3-2.25'}
+
+sources = ['l_mpi_p_%(version)s.tgz']
+
+dontcreateinstalldir = 'True'
+
+# license file
+import os
+license_file = os.path.join(os.getenv('HOME'), "licenses", "intel", "license.lic")
+
+# set up all the mpi wrappers to work as expected with intel compilers (e.g. mpicc wraps icc not the default gcc)
+# set_mpi_wrappers_all = 'True' 
+
+moduleclass = 'mpi'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.3.0",
+    "easybuild-easyblocks_version": "2.3.0",
+    "timestamp": 1448065817,
+    "build_time": 60.12,
+    "install_size": 1783164188,
+    "command_line": ['--buildpath=/app/easybuild/build', '--force', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-footer=/app/easybuild/etc/fredhutch_modulefile_footer', '--recursive-module-unload', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/app/easybuild/software/EasyBuild/2.3.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.3.0-py2.7.egg/easybuild/easyconfigs:/app/easybuild/fh_easyconfigs', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'intel-2015b.eb'],
+    "modules_tool": ('EnvironmentModulesC', '/app/Modules/3.2.10/bin/modulecmd', '3.2.10'),
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 3324.998,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCC/4.9.3-binutils-2.25/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCC/4.9.3-binutils-2.25 --with-local-prefix=/app/easybuild/software/GCC/4.9.3-binutils-2.25; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCC/4.9.3-binutils-2.25/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+}]

@@ -1,0 +1,67 @@
+# Built with EasyBuild version 2.8.2 on 2016-09-01_11-15-13
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Center
+
+easyblock = 'ConfigureMake' 
+name = 'NGS'
+version = '1.2.5'
+
+homepage = 'https://github.com/ncbi/ngs'
+description = """NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from
+ Next Generation Sequencing."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/ncbi/ngs/archive/']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [('Java', '1.8.0_92', '', True)]
+
+# override default of using $HOME/ncbi-outdir
+configopts = "--build-prefix=%(builddir)s/ncbi-outdir"
+
+buildopts = 'CC="$CC -c" CPP="$CXX" CP="$CXX -c" -C ngs-sdk && '
+buildopts += 'make CC="$CC -c" CPP="$CXX" CP="$CXX -c" -C ngs-java'
+
+installopts = "-C ngs-sdk && make install -C ngs-java"
+
+parallel = 1
+
+sanity_check_paths = {
+    'files': ['jar/ngs-java.jar', ('lib/libngs-sdk.%s' % SHLIB_EXT, 'lib64/libngs-sdk.%s' % SHLIB_EXT),
+              ('lib/libngs-adapt-c++.a', 'lib64/libngs-adapt-c++.a'), ('lib/libngs-c++.a', 'lib64/libngs-c++.a')],
+    'dirs': ['include/ngs', 'share'],
+}
+
+modextrapaths = {'CLASSPATH': 'jar/ngs-java.jar'}
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 41.0,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'NGS-1.2.5-foss-2016a.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "2.8.2",
+    "easybuild-framework_version": "2.8.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 4115556,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1472753713,
+    "total_memory": 32048,
+}]

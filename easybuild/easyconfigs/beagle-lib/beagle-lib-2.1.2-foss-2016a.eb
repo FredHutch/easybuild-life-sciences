@@ -1,0 +1,65 @@
+# Built with EasyBuild version 2.7.0 on 2016-06-20_09-28-53
+# easybuild easyconfig
+#
+# updated:  John Dey jfdey@fredhutch.org
+#
+# Fred Hutch Cancer Research Center Seattle United States
+#
+#
+
+name = 'beagle-lib'
+version = '2.1.2'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'https://github.com/beagle-dev/beagle-lib'
+description = """beagle-lib is a high-performance library that can perform the core
+ calculations at the heart of most Bayesian and Maximum Likelihood
+ phylogenetics packages."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/beagle-dev/beagle-lib/archive/']
+sources = ['beagle_release_2_1_2.zip']       #  Tag name is non standard %(version)s does not work
+
+dependencies = [ ('Java', '1.8.0_66', '', True) ] 
+
+preconfigopts = './autogen.sh && '
+
+# parallel build does not work
+parallel = 1
+
+sanity_check_paths = {
+    'files': ["include/libhmsbeagle-1/libhmsbeagle/%s" % includefile
+              for includefile in ["beagle.h", "platform.h"]] +
+             ["lib/libhmsbeagle%s.so" % libfile
+              for libfile in ["-cpu", "-cpu-sse", "-jni" ,""]],
+    'dirs' : []
+}
+
+moduleclass = 'numlib'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.7.0",
+    "easybuild-easyblocks_version": "2.7.0",
+    "timestamp": 1466440133,
+    "build_time": 41.74,
+    "install_size": 1225116,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'beagle-lib_2.1.2-foss-2016a.eb'],
+    "modules_tool": ('Lmod', '/app/easybuild/software/Lmod/5.9-GCC-4.8.4/lmod/lmod/libexec/lmod', '5.9'),
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+}]

@@ -1,0 +1,49 @@
+# Built with EasyBuild version 2.8.0 on 2016-06-30_18-02-47
+easyblock = 'ConfigureMake'
+
+name = 'gperf'
+version = '3.0.4'
+
+homepage = 'http://www.gnu.org/software/gperf/'
+description = """GNU gperf is a perfect hash function generator. For a given list of strings, it produces a hash
+ function and hash table, in form of C or C++ code, for looking up a value depending on the input string. The hash
+ function is perfect, which means that the hash table has no collisions, and the hash table lookup needs a single
+ string comparison only."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = [GNU_SOURCE]
+sources = [SOURCELOWER_TAR_GZ]
+
+sanity_check_paths = {
+    'files': ['bin/gperf'],
+    'dirs': []
+}
+
+moduleclass = 'devel'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.8.0",
+    "easybuild-easyblocks_version": "2.8.0",
+    "timestamp": 1467309767,
+    "build_time": 5.25,
+    "install_size": 306092,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--rebuild', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--robot-paths=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--sourcepath=/app/easybuild/sources', '--umask=002', 'r/R/R-3.3.0-foss-2016a.eb'],
+    "modules_tool": ('Lmod', '/usr/local/lmod/lmod/libexec/lmod', '6.3'),
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "eb-bmcgough-r",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "total_memory": 32135,
+}]

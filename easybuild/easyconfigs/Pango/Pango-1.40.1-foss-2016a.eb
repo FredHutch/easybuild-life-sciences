@@ -1,0 +1,67 @@
+# Built with EasyBuild version 2.8.0 on 2016-06-30_17-35-36
+easyblock = 'ConfigureMake'
+
+name = 'Pango'
+version = '1.40.1'
+
+homepage = 'http://www.pango.org/'
+description = """Pango is a library for laying out and rendering of text, with an emphasis on internationalization.
+Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the
+context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = [FTPGNOME_SOURCE]
+sources = [SOURCELOWER_TAR_XZ]
+
+glibver = '2.48.0'
+dependencies = [
+    ('GLib', glibver, '-Python-2.7.11-libX11-1.6.3'),
+    ('cairo', '1.14.6', '-GLib-%s' % glibver),
+    ('HarfBuzz', '1.2.7'),
+    ('GObject-Introspection', '1.48.0'),
+    ('fontconfig', '2.11.95', '-freetype-no-HarfBuzz'),
+]
+
+builddependencies = [
+    ('pkg-config', '0.29'),
+    ('libpthread-stubs', '0.3'),
+    ('xproto', '7.0.28'),
+    ('renderproto', '0.11'),
+    ('kbproto', '1.0.7'),
+    ('xextproto', '7.3.0'),
+]
+
+configopts = "--disable-silent-rules --enable-introspection=yes --enable-static --enable-shared "
+
+modextrapaths = {
+    'XDG_DATA_DIRS': 'share',
+}
+
+moduleclass = 'vis'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.8.0",
+    "easybuild-easyblocks_version": "2.8.0",
+    "timestamp": 1467308135,
+    "build_time": 38.7,
+    "install_size": 6166504,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--rebuild', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--robot-paths=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--sourcepath=/app/easybuild/sources', '--umask=002', 'r/R/R-3.3.0-foss-2016a.eb'],
+    "modules_tool": ('Lmod', '/usr/local/lmod/lmod/libexec/lmod', '6.3'),
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "eb-bmcgough-r",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/app/easybuild/software/Python/2.7.11-foss-2016a-libX11-1.6.3/bin/python",
+    "total_memory": 32135,
+}]

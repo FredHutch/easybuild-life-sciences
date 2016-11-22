@@ -1,0 +1,54 @@
+# Built with EasyBuild version 2.8.2 on 2016-07-22_15-33-59
+easyblock = 'ConfigureMake'
+
+name = 'Bison'
+version = '3.0.4'
+
+homepage = 'http://www.gnu.org/software/bison'
+description = """Bison is a general-purpose parser generator that converts an annotated context-free grammar
+ into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+sources = [SOURCELOWER_TAR_GZ]
+source_urls = [GNU_SOURCE]
+
+builddependencies = [
+    ('M4', '1.4.17'),
+    # use same binutils version that was used when building GCCcore toolchain
+    ('binutils', '2.26', '', True),
+]
+
+
+sanity_check_paths = {
+    'files': ["bin/%s" % x for x in ["bison", "yacc"]] + ["lib/liby.a"],
+    'dirs': [],
+}
+
+moduleclass = 'lang'
+
+# Build statistics
+buildstats = [{
+    "build_time": 49.67,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/app/easybuild/software/EasyBuild/2.8.2/lib/python2.7/site-packages/easybuild_easyconfigs-2.8.2-py2.7.egg/easybuild/easyconfigs:/app/easybuild/fh_easyconfigs', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "2.8.2",
+    "easybuild-framework_version": "2.8.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 2335534,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4/libexec/lmod', '6.4'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1469226839,
+    "total_memory": 32048,
+}]

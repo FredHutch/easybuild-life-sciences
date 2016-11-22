@@ -1,0 +1,32 @@
+# EasyBuild easyconfig 
+#
+#  2016.07.20 John Dey jfddey@fredhutch.org
+#  
+
+name = 'whamg'
+version = '1.8.0'
+
+easyblock = 'MakeCp'
+
+homepage = 'https://github.com/zeeev/wham'
+description = '''The wham suite consists of two programs, wham and whamg. wham, the original tool, is a very sensitive method with a high false discovery rate. The second program, whamg, is more accurate and better suited for general structural variant (SV) discovery.'''
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+dependencies = [('Python', '2.7.11', '-fh1')]
+parallel = 1
+
+# create your own tarball 
+# clone https://github.com/zeeev/wham.git --recursive
+# git checkout 1.8.0
+# zip -r wham-1.8.0.zip --exclude=*.git* wham-1.8.0
+sources = [SOURCE_ZIP]
+
+executables = ['mergeIndvs', 'WHAM-BAM', 'WHAM-GRAPHENING']
+directories = ['benchmarking', 'bin', 'data', 'docs', 'src', 'utils']
+files_to_copy = directories 
+sanity_check_paths = {
+    'dirs': directories, 
+    'files': ["bin/%s" % x for x in executables]
+}
+
+moduleclass = 'bio'

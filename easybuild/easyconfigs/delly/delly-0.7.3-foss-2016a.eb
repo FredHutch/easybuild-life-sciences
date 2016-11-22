@@ -1,0 +1,72 @@
+# Built with EasyBuild version 2.8.1 on 2016-07-20_11-06-05
+#
+#  easybuild easyconfig 
+#
+#  2016.07.18 John Dey jfdey@fredhutch.org
+#
+#  source was assembled from git then zipped.  This is not good. I've sent a message to support@github
+#
+#  mkdir /app/easybuild/sources/d/delly
+#  cd /app/easybuild/sources/d/delly
+#  git clone --recursive https://github.com/tobiasrausch/delly.git
+#  mv delly delly-0.7.3 
+#  zip v0.7.3.zip delly-0.7.3
+
+
+name = 'delly'
+version = '0.7.3'
+
+easyblock = 'MakeCp'
+
+homepage = 'https://github.com/tobiasrausch/delly'
+description = '''DELLY2: Structural variant discovery by integrated paired-end and split-read analysis'''
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/tobiasrausch/delly/archive']
+sources = ['v%(version)s.zip']
+
+directories = [
+    "assembly", 
+    "complexVariants", 
+    "docker",
+    "excludeTemplates",
+    "R", 
+    "vis"]
+
+files_to_copy = directories 
+
+sanity_check_paths = {
+    'dirs': directories, 
+    'files': ["assembly/assembly.sh"]
+} 
+
+modloadmsg = '''delly scripts are located in \\$EBROOTDELLY'''
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.8.1",
+    "easybuild-easyblocks_version": "2.8.1",
+    "timestamp": 1469037965,
+    "build_time": 274.52,
+    "install_size": 10123882,
+    "command_line": ['--buildpath=/app/easybuild/build', '--force', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'delly-0.7.3-foss-2016a.eb'],
+    "modules_tool": ('Lmod', '/app/easybuild/software/Lmod/5.9-GCC-4.8.4/lmod/lmod/libexec/lmod', '5.9'),
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "total_memory": 32048,
+}]

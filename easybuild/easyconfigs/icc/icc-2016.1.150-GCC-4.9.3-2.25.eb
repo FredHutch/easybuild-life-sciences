@@ -1,0 +1,60 @@
+# Built with EasyBuild version 2.7.0 on 2016-05-13_11-08-20
+# This is an easyconfig file for EasyBuild, see http://hpcugent.github.io/easybuild
+
+name = 'icc'
+version = '2016.1.150'
+
+homepage = 'http://software.intel.com/en-us/intel-compilers/'
+description = "C and C++ compiler from Intel"
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+sources = ['parallel_studio_xe_%(version_major)s_composer_edition_for_cpp_update%(version_minor)s.tgz']
+
+checksums = ['4b93b0ff549e6bd8d1a8b9a441b235a8']
+
+gccver = '4.9.3'
+binutilsver = '2.25'
+versionsuffix = '-GCC-%s-%s' % (gccver, binutilsver)
+
+dependencies = [
+    ('GCCcore', gccver),
+    ('binutils', binutilsver, '', ('GCCcore', gccver)),
+]
+
+# full list of components can be obtained from pset/mediaconfig.xml in unpacked sources
+# cfr. https://software.intel.com/en-us/articles/intel-composer-xe-2015-silent-installation-guide
+components = ['intel-comp', 'intel-ccomp', 'intel-icc', 'intel-openmp', 'intel-ipsc?_']
+
+dontcreateinstalldir = 'True'
+
+# license file
+import os
+license_file = os.path.join(os.getenv('HOME'), "licenses", "intel", "license.lic")
+
+moduleclass = 'compiler'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.7.0",
+    "easybuild-easyblocks_version": "2.7.0",
+    "timestamp": 1463162900,
+    "build_time": 147.64,
+    "install_size": 635525314,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/app/easybuild/software/EasyBuild/2.7.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.7.0-py2.7.egg/easybuild/easyconfigs:/app/easybuild/fh_easyconfigs', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'intel-2016a.eb'],
+    "modules_tool": ('EnvironmentModulesC', '/app/Modules/3.2.10/bin/modulecmd', '3.2.10'),
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+}]

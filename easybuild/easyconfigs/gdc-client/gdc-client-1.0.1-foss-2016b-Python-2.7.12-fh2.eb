@@ -1,0 +1,84 @@
+# Built with EasyBuild version 2.9.0 on 2016-11-15_11-33-04
+easyblock = 'Bundle'
+
+name = 'gdc-client'
+version = '1.0.1'
+versionsuffix = '-Python-%(pyver)s-fh2'
+
+homepage = 'https://gdc.nci.nih.gov/access-data/gdc-data-transfer-tool'
+description = """The gdc-client provides several convenience functions over the GDC API which provides general
+ download/upload via HTTPS."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# this is a bundle of Python packages
+exts_defaultclass = 'PythonPackage'
+
+dependencies = [
+    ('Python', '2.7.12', '-fh1'),
+    ('libxslt', '1.1.29'),
+    ('libyaml', '0.1.6'),
+]
+
+exts_list = [
+    ('setuptools', '19.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/setuptools/'],
+    }),
+    ('parcel', '20160602', {
+        'source_urls': ['https://github.com/LabAdvComp/parcel/archive'],
+        'source_tmpl': 'd3b619584606ed5d2f127f9ba12df7b764ebe975.tar.gz',
+    }),
+    ('lxml', '3.5.0b1', {
+        'source_urls': ['https://pypi.python.org/packages/source/l/lxml/'],
+    }),
+    ('PyYAML', '3.11', {
+        'source_urls': ['https://pypi.python.org/packages/source/P/PyYAML'],
+        'modulename': 'yaml',
+    }),
+    ('jsonschema', '2.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/jsonschema/'],
+    }),
+    (name, version, {
+        'source_urls': ['https://github.com/NCI-GDC/gdc-client/archive'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'modulename': 'gdc_client',
+    }),
+]
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+# specify that Bundle easyblock should run a full sanity check, rather than just trying to load the module
+full_sanity_check = True
+
+sanity_check_paths = {
+    'files': ['bin/gdc-client'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'tools'
+
+# Build statistics
+buildstats = [{
+    "build_time": 149.71,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--modules-tool='Lmod'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'gdc-client-1.0.1-foss-2016b-Ptyon-2.7.12-fh2.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "2.9.0",
+    "easybuild-framework_version": "2.9.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 17987294,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/app/easybuild/software/Python/2.7.12-foss-2016b-fh1/bin/python",
+    "timestamp": 1479238384,
+    "total_memory": 32048,
+}]

@@ -1,0 +1,56 @@
+# Built with EasyBuild version 2.8.0 on 2016-06-30_17-36-32
+easyblock = 'ConfigureMake'
+
+name = 'libXfixes'
+version = '5.0.1'
+
+homepage = "http://www.freedesktop.org/wiki/Software/xlibs"
+description = """X Fixes extension library"""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = [XORG_LIB_SOURCE]
+
+builddependencies = [
+    ('fixesproto', '5.0'),
+    ('xextproto', '7.3.0'),
+    ('xproto', '7.0.28'),
+    ('pkg-config' , '0.29'),
+    ('kbproto', '1.0.7'),
+    ('libX11', '1.6.3'),
+    ('libpthread-stubs', '0.3'),
+]
+
+sanity_check_paths = {
+    'files': ['include/X11/extensions/Xfixes.h', 'lib/libXfixes.a', 'lib/libXfixes.%s' % SHLIB_EXT],
+    'dirs': [],
+}
+
+moduleclass = 'vis'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.8.0",
+    "easybuild-easyblocks_version": "2.8.0",
+    "timestamp": 1467308192,
+    "build_time": 8.35,
+    "install_size": 114983,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-tool=Lmod', '--rebuild', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--robot-paths=/home/bmcgough/github/FredHutch/easybuild-easyconfigs/easybuild/easyconfigs/', '--sourcepath=/app/easybuild/sources', '--umask=002', 'r/R/R-3.3.0-foss-2016a.eb'],
+    "modules_tool": ('Lmod', '/usr/local/lmod/lmod/libexec/lmod', '6.3'),
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "eb-bmcgough-r",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "total_memory": 32135,
+}]

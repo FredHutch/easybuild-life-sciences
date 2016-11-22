@@ -1,0 +1,47 @@
+# Built with EasyBuild version 2.8.0 on 2016-05-19_13-16-32
+easyblock = 'ConfigureMake'
+
+name = 'renderproto'
+version = '0.11'
+
+homepage = "http://www.freedesktop.org/wiki/Software/xlibs"
+description = "Xrender protocol and ancillary headers"
+
+toolchain = {'name': 'intel', 'version': '2016a'}
+toolchainopts = {'optarch': True}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = [XORG_PROTO_SOURCE]
+
+sanity_check_paths = {
+    'files': ['include/X11/extensions/%s' % x for x in ['render.h', 'renderproto.h']],
+    'dirs': [],
+}
+
+moduleclass = 'devel'
+
+# Build statistics
+buildstats = [{
+    "easybuild-framework_version": "2.8.0",
+    "easybuild-easyblocks_version": "2.8.0",
+    "timestamp": 1463688992,
+    "build_time": 3.34,
+    "install_size": 58734,
+    "command_line": ['--buildpath=/app/easybuild/build', '--group-writable-installdir', '--installpath-modules=/app/easybuild/modules', '--installpath-software=/app/easybuild/software', '--logfile-format=/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log', '--modules-footer=/app/easybuild/etc/fredhutch_modulefile_footer', '--repositorypath=/app/easybuild/ebfiles_repo', '--robot=/app/easybuild/software/EasyBuild/2.8.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.8.0-py2.7.egg/easybuild/easyconfigs:/app/easybuild/fh_easyconfigs', '--robot-paths=:/app/easybuild/fh_easyconfigs', '--sourcepath=/app/easybuild/sources', '--umask=002', 'Tk-8.6.4-intel-2016a-libX11-1.6.3.eb'],
+    "modules_tool": ('EnvironmentModulesC', '/app/Modules/3.2.10/bin/modulecmd', '3.2.10'),
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/4.9.3/libexec/gcc/x86_64-unknown-linux-gnu/4.9.3/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --enable-bootstrap --prefix=/app/easybuild/software/GCCcore/4.9.3 --with-local-prefix=/app/easybuild/software/GCCcore/4.9.3; Thread model: posix; gcc version 4.9.3 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/4.9.3/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "total_memory": 32048,
+}]
