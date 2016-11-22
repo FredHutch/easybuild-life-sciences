@@ -25,10 +25,13 @@ LMOD_VER="7.0"   # version of Lmod to install into the container
 EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
 
+EB_CFG_DEVELOP="hpcugent FredHutch"
+
 EB_CFG_DEVEL_1="https://github.com/hpcugent/easybuild-easyconfigs"
 EB_CFG_DEVEL_2="https://github.com/FredHutch/easybuild-easyconfigs"
 
-#"git clone -b 2.4 --single-branch https://github.com/Itseez/opencv.git opencv-2.4"
+EB_TOOLCHAIN_ONLY="foss-2016b"
+
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
@@ -141,9 +144,22 @@ function download_extra_sources {
   mkdir -p $EB_DIR/sources
   wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
 
-  mkdir -p $EB_DIR/github
-  git clone -b devel --single-branch ${EB_CFG_DEVEL_1} ${EB_DIR}/github/devel1
-  git clone -b devel --single-branch ${EB_CFG_DEVEL_2} ${EB_DIR}/github/devel2
+  robot_paths=''
+  mkdir -p $EB_DIR/github/develop
+  for clon in $EB_CFG_DEVELOP; do 
+    if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
+      git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
+      if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
+        find ${EB_DIR}/github/develop/${clon} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
+      fi
+      robot_paths=${EB_DIR}/github/develop/${clon}/easybuild/easyconfigs:${robot_paths}
+    fi
+  done
+
+      if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
+        find ${EB_DIR}/github/develop/${clon} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
+      fi
+
 
 }
 
@@ -174,11 +190,16 @@ setenv ("EASYBUILD_BUILDPATH", "${EB_DIR}/build")
 setenv ("EASYBUILD_INSTALLPATH_SOFTWARE", "${EB_DIR}/software")
 setenv ("EASYBUILD_INSTALLPATH_MODULES", "${EB_DIR}/modules")
 setenv ("EASYBUILD_REPOSITORYPATH", "${EB_DIR}/ebfiles_repo")
-setenv ("EASYBUILD_ROBOT_PATHS", "${EB_DIR}/github/devel1:${EB_DIR}/github/devel2")
+setenv ("EASYBUILD_ROBOT_PATHS", "${robot_paths}")
 setenv ("EASYBUILD_LOGFILE_FORMAT", "${EB_DIR}/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log")
 setenv ("EASYBUILD_MODULES_TOOL", "Lmod")
 EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER.lua
+
+  if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
+    easyconfigs="${EB_DIR}/software/EasyBuild/${EB_VER}/lib/python2.7/site-packages/easybuild_easyconfigs-${EB_VER}-py2.7.egg/easybuild/easyconfigs"
+    find ${easyconfigs} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
+  fi
 
 }
 
