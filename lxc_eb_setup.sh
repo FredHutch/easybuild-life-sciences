@@ -518,6 +518,7 @@ function eb_fix_perms () {
 
   lxc exec $CT_NAME -- bash -c "chgrp -R $IMPORT_GROUP $EB_DIR"
   lxc exec $CT_NAME -- bash -c "chmod -R g+w $EB_DIR"
+}
 
 function sign_container () {
 
