@@ -147,7 +147,8 @@ function download_extra_sources {
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
       git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
       if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
-        find ${EB_DIR}/github/develop/${clon} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
+	printf "deleting easyconfigs in ${clon} except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n"
+        find ${EB_DIR}/github/develop/${clon} -name *.eb ! -name "*-${EB_TOOLCHAIN_ONLY}-*" -exec rm {} \;
       fi
     fi
   done
@@ -187,9 +188,10 @@ setenv ("EASYBUILD_MODULES_TOOL", "Lmod")
 EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER.lua
 
-  if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
+  if [[ -n $EB_TOOLCHAIN_ONLY ]]; then    
     easyconfigs="${EB_DIR}/software/EasyBuild/${EB_VER}/lib/python2.7/site-packages/easybuild_easyconfigs-${EB_VER}-py2.7.egg/easybuild/easyconfigs"
-    find ${easyconfigs} ! -name *-${EB_TOOLCHAIN_ONLY}-* -name *.eb -exec rm {} \;
+    printf "deleting default easyconfigs  except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n"
+    find ${easyconfigs} -name *.eb ! -name "*-${EB_TOOLCHAIN_ONLY}-*" -exec rm {} \;
   fi
 
 }
