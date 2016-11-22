@@ -20,10 +20,15 @@ EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-frame
 
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
-LMOD_VER="6.3"   # version of Lmod to install into the container
+LMOD_VER="7.0"   # version of Lmod to install into the container
 
 EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
 EB_DIR="/easybuild"   # location for EasyBuild directory tree
+
+EB_CFG_DEVEL_1="https://github.com/hpcugent/easybuild-easyconfigs"
+EB_CFG_DEVEL_2="https://github.com/FredHutch/easybuild-easyconfigs"
+
+#"git clone -b 2.4 --single-branch https://github.com/Itseez/opencv.git opencv-2.4"
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
@@ -130,18 +135,16 @@ function remove_OS_pkgs {
   fi
 }
 
-# download some required stuff  and to it into source 
+# download some required stuff and to it into source 
 function download_extra_sources {
-  #if ! [[ -d $EASYBUILD_SOURCEPATH ]]; then
-  #  EASYBUILD_SOURCEPATH=~/.local/easybuild/sources
-  #  mkdir -p $EASYBUILD_SOURCEPATH
-  #fi
-  #rooturl="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java"
-  #wget -P "${EASYBUILD_SOURCEPATH}/" "${rooturl}/jdk-8u92-linux-x64.tar.gz"
-  if ! [[ -d $EB_DIR/sources ]]; then
-    mkdir -p $EB_DIR/sources
-  fi
-  wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"  
+
+  mkdir -p $EB_DIR/sources
+  wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
+
+  mkdir -p $EB_DIR/github
+  git clone -b devel --single-branch ${EB_CFG_DEVEL_1} ${EB_DIR}/github/devel1
+  git clone -b devel --single-branch ${EB_CFG_DEVEL_2} ${EB_DIR}/github/devel2
+
 }
 
 # bootstrap easybuild
@@ -156,33 +159,22 @@ function eb_bootstrap {
   fi
 
   # create $EB_DIR
-  sudo mkdir -p $EB_DIR
+  sudo mkdir -p "${EB_DIR}"
   sudo chown -R ${myself} ${EB_DIR}
   homedir=~
-  sudo chown -R ${myself} $homedir
+  sudo chown -R ${myself} ${homedir}
 
   # bootstrap it
   python /tmp/bootstrap_eb.py $EB_DIR
 
   # pop in some useful environment variables to our EasyBuild modulefile
-#  (cat <<EOF
-#set ebDir "$EB_DIR"
-#setenv EASYBUILD_SOURCEPATH "\$ebDir/sources"
-#setenv EASYBUILD_BUILDPATH "\$ebDir/build"
-#setenv EASYBUILD_INSTALLPATH_SOFTWARE "\$ebDir/software"
-#setenv EASYBUILD_INSTALLPATH_MODULES "\$ebDir/modules"
-#setenv EASYBUILD_REPOSITORYPATH "\$ebDir/ebfiles_repo"
-#setenv EASYBUILD_LOGFILE_FORMAT "\$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
-#setenv EASYBUILD_MODULES_TOOL "Lmod"
-#EOF
-#  ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER
-
   (cat <<EOF
 setenv ("EASYBUILD_SOURCEPATH", "${EB_DIR}/sources")
 setenv ("EASYBUILD_BUILDPATH", "${EB_DIR}/build")
 setenv ("EASYBUILD_INSTALLPATH_SOFTWARE", "${EB_DIR}/software")
 setenv ("EASYBUILD_INSTALLPATH_MODULES", "${EB_DIR}/modules")
 setenv ("EASYBUILD_REPOSITORYPATH", "${EB_DIR}/ebfiles_repo")
+setenv ("EASYBUILD_ROBOT_PATHS", "${EB_DIR}/github/devel1:${EB_DIR}/github/devel2")
 setenv ("EASYBUILD_LOGFILE_FORMAT", "${EB_DIR}/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log")
 setenv ("EASYBUILD_MODULES_TOOL", "Lmod")
 EOF
@@ -218,8 +210,9 @@ eb_bootstrap
 printf "Downloading some extras...\n"
 download_extra_sources
 printf "\n\n"
-printf "It appears to have worked!\n"
+printf "************It appears to have worked! *************\n"
 printf "Login shells now have modules enabled, so all you need to do is log out and back in.\n"
+printf "   ... or you can source /etc/profiles.d/modules.sh .\n"
 printf "Once you are back, you should have modules, and can run 'module load EasyBuild' to get started building!\n"
 exit 0
 
