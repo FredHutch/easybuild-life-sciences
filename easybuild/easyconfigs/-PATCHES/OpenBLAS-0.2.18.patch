@@ -1,0 +1,12 @@
+diff -ruN OpenBLAS-0.2.18.orig/interface/ztrmv.c OpenBLAS-0.2.18/interface/ztrmv.c
+--- OpenBLAS-0.2.18.orig/interface/ztrmv.c	2016-04-12 12:29:19.000000000 -0700
++++ OpenBLAS-0.2.18/interface/ztrmv.c	2016-07-25 11:21:19.654007000 -0700
+@@ -243,6 +243,8 @@
+ #endif
+   {
+     buffer_size = ((n - 1) / DTB_ENTRIES) * 2 * DTB_ENTRIES + 32 / sizeof(FLOAT);
++    // It seems to be required for some K8 or Barcelona CPU
++    buffer_size += 8;
+     if(incx != 1)
+       buffer_size += n * 2;
+   }

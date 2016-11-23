@@ -1,0 +1,12 @@
+diff -ruN randomForestSRC.orig/src/randomForestSRC.h randomForestSRC/src/randomForestSRC.h
+--- randomForestSRC.orig/src/randomForestSRC.h	2016-11-02 13:29:55.000000000 -0700
++++ randomForestSRC/src/randomForestSRC.h	2016-11-04 11:46:54.805233000 -0700
+@@ -229,7 +229,7 @@
+ #define RF_WGHT_INTEGER 2
+ #define RF_WGHT_GENERIC 3
+ typedef unsigned int  uint;
+-typedef unsigned long long  ulong;
++typedef unsigned long int ulong;
+ #define RFprintf Rprintf
+ typedef struct node Node;
+ struct node {

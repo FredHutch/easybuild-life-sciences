@@ -1,0 +1,30 @@
+diff -ruN pymc-2.3.6.orig/setup.py pymc-2.3.6/setup.py
+--- pymc-2.3.6.orig/setup.py	2015-10-15 18:15:33.000000000 -0700
++++ pymc-2.3.6/setup.py	2016-05-26 12:18:51.473328000 -0700
+@@ -61,8 +61,11 @@
+ 
+ # Compile linear algebra utilities
+ if lapack_info:
+-    config.add_extension(name='gp.linalg_utils',sources=['pymc/gp/linalg_utils.f','pymc/blas_wrap.f'], extra_info=lapack_info)
+-    config.add_extension(name='gp.incomplete_chol',sources=['pymc/gp/incomplete_chol.f'], extra_info=lapack_info)
++    config.add_extension(name='gp.linalg_utils',sources=['pymc/gp/linalg_utils.f','pymc/blas_wrap.f'], extra_info=lapack_info,
++        extra_compile_args = ['-fPIC'])
++    config.add_extension(name='gp.incomplete_chol',sources=['pymc/gp/incomplete_chol.f'], extra_info=lapack_info,
++        extra_compile_args = ['-fPIC'])
++
+ 
+ if not lapack_info or dist in ['bdist', 'sdist']:
+     print('No optimized BLAS or Lapack libraries found, building from source. This may take a while...')
+@@ -74,8 +77,10 @@
+     for fname in ['dpotrs','dpotrf','dpotf2','ilaenv','dlamch','ilaver','ieeeck','iparmq']:
+         f_sources.append('lapack/double/'+fname+'.f')
+ 
+-    config.add_extension(name='gp.linalg_utils',sources=['pymc/gp/linalg_utils.f'] + f_sources)
+-    config.add_extension(name='gp.incomplete_chol',sources=['pymc/gp/incomplete_chol.f'] + f_sources)
++    config.add_extension(name='gp.linalg_utils',sources=['pymc/gp/linalg_utils.f'] + f_sources,
++        extra_compile_args = ['-fPIC'])
++    config.add_extension(name='gp.incomplete_chol',sources=['pymc/gp/incomplete_chol.f'] + f_sources,
++        extra_compile_args = ['-fPIC'])
+ 
+ 
+ # Compile covariance functions
