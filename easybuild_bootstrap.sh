@@ -13,6 +13,13 @@
 # variables
 
 # Internal
+
+EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
+EB_VER="3.0.0"      # version of EasyBuild to bootstrap in the container
+
+#EB_CFG_DEVELOP="hpcugent FredHutch" # develop branches of easybuild-easyconfigs github repos
+EB_TOOLCHAIN_ONLY="foss-2016b"      #
+
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
 LMOD_BASE_URL="https://github.com/TACC/Lmod/archive/"
@@ -21,12 +28,6 @@ EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-frame
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
 LMOD_VER="7.0"   # version of Lmod to install into the container
-
-EB_VER="3.0.0"   # verison of EasyBuild to bootstrap in the container
-EB_DIR="/easybuild"   # location for EasyBuild directory tree
-
-EB_CFG_DEVELOP="hpcugent FredHutch"
-EB_TOOLCHAIN_ONLY="foss-2016b"
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
