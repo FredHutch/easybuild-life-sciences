@@ -17,8 +17,11 @@
 EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
 EB_VER="3.0.0"      # version of EasyBuild to bootstrap in the container
 
-#EB_CFG_DEVELOP="hpcugent FredHutch" # develop branches of easybuild-easyconfigs github repos
-EB_TOOLCHAIN_ONLY="foss-2016b"      #
+# install these develop branches of easybuild-easyconfigs from github repos
+EB_CFG_DEVELOP=""  #EB_CFG_DEVELOP="hpcugent FredHutch"
+# remove all older easyconfigs with these pattern
+EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
+
 
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
@@ -119,7 +122,10 @@ function install_EB_OS_pkgs {
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get install -y pkg-config m4 libx11-dev
+    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libpq-dev
+    # libglu1-mesa-dev is for R rgl package, xorg-dev is bigger than libx11-dev and may not be needed.
+    # libcairo2-dev is needed for R package Cairo (libxt-dev is also reuiqred but already installed)
+    # libpq-dev is needed for RPostgreSQL
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -151,9 +157,9 @@ function download_extra_sources {
   for clon in $EB_CFG_DEVELOP; do 
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
       git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
-      if [[ -n $EB_TOOLCHAIN_ONLY ]]; then
-	printf "deleting easyconfigs in ${clon} except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n\n"
-        find ${EB_DIR}/github/develop/${clon} -name *.eb ! -name "*${EB_TOOLCHAIN_ONLY}*" -exec rm {} \;
+      if [[ -n $EB_OLDSTUFF ]]; then
+	printf "deleting old easyconfigs in ${clon} ...\n\n"
+        find "${EB_DIR}/github/develop/${clon}" -regex "${EB_OLDSTUFF}" -exec rm "{}" \;
       fi
     fi
   done
@@ -193,10 +199,10 @@ setenv ("EASYBUILD_MODULES_TOOL", "Lmod")
 EOF
   ) >> $EB_DIR/modules/all/EasyBuild/$EB_VER.lua
 
-  if [[ -n $EB_TOOLCHAIN_ONLY ]]; then    
+  if [[ -n $EB_OLDSTUFF ]]; then    
     easyconfigs="${EB_DIR}/software/EasyBuild/${EB_VER}/lib/python2.7/site-packages/easybuild_easyconfigs-${EB_VER}-py2.7.egg/easybuild/easyconfigs"
-    ## printf "\ndeleting default easyconfigs  except for toolchain ${EB_TOOLCHAIN_ONLY} ...\n"
-    ## find ${easyconfigs} -name *.eb ! -name "*${EB_TOOLCHAIN_ONLY}*" -exec rm {} \;
+    printf "deleting old easyconfigs in ${easyconfigs} ...\n\n"
+    find "${easyconfigs}" -regex "${EB_OLDSTUFF}" -exec rm "{}" \;
   fi
 
 }
