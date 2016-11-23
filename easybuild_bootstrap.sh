@@ -122,10 +122,11 @@ function install_EB_OS_pkgs {
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libpq-dev
+    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libpq-dev libnetcdf-dev
     # libglu1-mesa-dev is for R rgl package, xorg-dev is bigger than libx11-dev and may not be needed.
     # libcairo2-dev is needed for R package Cairo (libxt-dev is also reuiqred but already installed)
     # libpq-dev is needed for RPostgreSQL
+    # libnetcdf-dev is for netcdf4 support in R 
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
