@@ -18,7 +18,7 @@ EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
 EB_VER="3.0.0"      # version of EasyBuild to bootstrap in the container
 
 # install these develop branches of easybuild-easyconfigs from github repos
-EB_CFG_DEVELOP=""  #EB_CFG_DEVELOP="hpcugent FredHutch"
+EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
 # remove all older easyconfigs with these pattern
 EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
 
@@ -122,13 +122,14 @@ function install_EB_OS_pkgs {
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libpq-dev libnetcdf-dev libglpk-dev
+    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libpq-dev libnetcdf-dev libglpk-dev unixodbc-dev libzmq3-dev
     # xorg-dev is bigger than libx11-dev and may not be needed.
     # libglu1-mesa-dev is needed for R rgl (R)
     # libcairo2-dev is needed for Cairo (R) / libxt-dev is also reuiqred but already installed
     # libpq-dev is needed for RPostgreSQL (R)
     # libnetcdf-dev is for netcdf4 (R)
     # libglpk-dev is for Rglpk (R)
+    # RODBC rzmq
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
