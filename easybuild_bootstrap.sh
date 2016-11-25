@@ -122,7 +122,9 @@ function install_EB_OS_pkgs {
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get install -y pkg-config m4 libx11-dev libglu1-mesa-dev libcairo2-dev libxt-dev libpq-dev libnetcdf-dev libglpk-dev unixodbc-dev libzmq3-dev
+    wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.apt
+    sudo apt-get install -y pkg-config m4 libx11-dev
+    sudo apt-get install -y $(cat /tmp/os-dependencies.apt)
     # xorg-dev is bigger than libx11-dev and may not be needed.
     # libglu1-mesa-dev is needed for R rgl (R)
     # libcairo2-dev libxt-dev are needed for Cairo (R)
@@ -131,7 +133,9 @@ function install_missed_dependency_OS_pkgs {
     # libglpk-dev is for Rglpk (R)
     # RODBC rzmq
   elif hash yum 2>/dev/null; then
-    echo "redhat based install, not currently supported"
+    #echo "redhat based install, not currently supported"
+    wget -O /tmp/os-dependencies.yum https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.yum
+    sudo yum -y install $(cat /tmp/osdependencies.yum)
   else
     echo "unknown unix, not currently supported"
   fi
@@ -162,7 +166,7 @@ function download_extra_sources {
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
       git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
       if [[ -n $EB_OLDSTUFF ]]; then
-	printf "deleting old easyconfigs in ${clon} ...\n\n"
+        printf "deleting old easyconfigs in ${clon} ...\n\n"
         find "${EB_DIR}/github/develop/${clon}" -regex "${EB_OLDSTUFF}" -exec rm "{}" \;
       fi
     fi
