@@ -123,7 +123,7 @@ function install_EB_OS_pkgs {
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
     wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.apt
-    sudo apt-get install -y pkg-config m4 libx11-dev
+    sudo apt-get install -y pkg-config m4
     for mypkg in $(cat /tmp/os-dependencies.apt); do
       sudo apt-get install -y $mypkg
     done
