@@ -48,7 +48,19 @@ dependencies = [
     # ('OpenSSL', '1.0.2h'),
 ]
 
-osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+osdependencies = [
+    ('openssl-devel', 'libssl-dev', 'libopenssl-devel'), 
+    ('libx11-dev', 'libx11-devel'),
+    ('libglu1-mesa-dev', 'libglu1-mesa-devel'),  # for rgl 
+    ('libcairo2-dev', 'libcairo2-devel'),  # for Cairo 
+    ('libxt-dev', 'libxt-devel'), # for Cairo
+    ('libpq-dev', 'libpq-devel'), # for RPostgreSQL
+    ('libnetcdf-dev', 'libnetcdf-devel'), # for netcdf4
+    ('libglpk-dev', 'libglpk-devel'), # for Rglpk
+    ('unixodbc-dev', 'unixodbc-devel'), # for RODBC
+    ('libzmq3-dev', 'libzmq3-devel') # for zmq
+]
+
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
 ext_options = {
