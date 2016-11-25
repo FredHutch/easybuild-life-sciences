@@ -235,6 +235,10 @@ if [[ "$myself" == "root" ]]; then
   echo 'su - eb'
   exit 1
 fi
+if [[ "$(ls -A $EB_DIR)" ]]; then
+  echo "$EB_DIR is not empty. Please empty it or choose a different folder."
+  exit 1
+fi
 
 printf "This script will install Lua & Lmod from source in /usr/local,\n"
 printf "and add configuration /etc/profile.d/modules.sh\n"
