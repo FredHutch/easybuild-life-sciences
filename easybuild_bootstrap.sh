@@ -124,7 +124,9 @@ function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
     wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.apt
     sudo apt-get install -y pkg-config m4 libx11-dev
-    sudo apt-get install -y $(cat /tmp/os-dependencies.apt)
+    for mypkg in $(cat /tmp/os-dependencies.apt); do
+      sudo apt-get install -y $mypkg
+    done
     # xorg-dev is bigger than libx11-dev and may not be needed.
     # libglu1-mesa-dev is needed for R rgl (R)
     # libcairo2-dev libxt-dev are needed for Cairo (R)
@@ -135,7 +137,9 @@ function install_missed_dependency_OS_pkgs {
   elif hash yum 2>/dev/null; then
     #echo "redhat based install, not currently supported"
     wget -O /tmp/os-dependencies.yum https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.yum
-    sudo yum -y install $(cat /tmp/osdependencies.yum)
+    for mypkg in $(cat /tmp/os-dependencies.yum); do
+      sudo yum -y install $mypkg
+    done
   else
     echo "unknown unix, not currently supported"
   fi
@@ -224,9 +228,16 @@ if [[ $mem -lt 8 ]]; then
   exit 1
 fi
 if [[ "$myself" == "root" ]]; then 
-  printf "please do not run as root, run under a user with sudo access"
+  printf "please do not run as root, run under a user with sudo access.\n"
+  printf "for example, to create a user eb run this:\n"
+  echo 'adduser --disabled-password --gecos "" eb'
+  echo 'echo "eb ALL=(ALL:ALL) NOPASSWD:ALL" >  /etc/sudoers.d/zz_eb'
+  echo 'su - eb'
   exit 1
 fi
+
+printf "This script will install Lua & Lmod from source in /usr/local,\n"
+printf "and add configuration /etc/profile.d/modules.sh\n"
 
 printf "Installing required OS pkgs...\n"
 install_EB_OS_pkgs
