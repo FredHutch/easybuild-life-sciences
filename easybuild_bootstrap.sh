@@ -110,7 +110,7 @@ function lmod_install {
 function install_EB_OS_pkgs {
   if hash apt-get 2>/dev/null; then
     sudo apt-get update
-    sudo apt-get install -y python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+    sudo apt-get install -y wget python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
