@@ -228,8 +228,8 @@ if [[ $mem -lt 8 ]]; then
   exit 1
 fi
 if [[ "$myself" == "root" ]]; then 
-  printf "please do not run as root, run under a user with sudo access.\n"
-  printf "for example, to create a user eb run this:\n"
+  printf "  please do not run as root, run as a user with sudo access.\n"
+  printf "  for example, to create a user eb run this:\n"
   echo 'adduser --disabled-password --gecos "" eb'
   echo 'echo "eb ALL=(ALL:ALL) NOPASSWD:ALL" >  /etc/sudoers.d/zz_eb'
   echo 'su - eb'
