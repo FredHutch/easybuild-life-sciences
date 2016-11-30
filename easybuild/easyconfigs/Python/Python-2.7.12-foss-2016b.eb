@@ -27,7 +27,14 @@ dependencies = [
     # ('OpenSSL', '1.0.2h'),
 ]
 
-osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+osdependencies = [
+    ('openssl-devel', 'libssl-dev', 'libopenssl-devel'),
+    ('libgnutls-dev', 'libgnutls-devel'), # for pycurl 
+    ('freetds-dev', 'freetds-devel'),  # for pymssql
+    ('r-base-dev', 'r-base-devel'), # for rpy2, suboptimal
+    ('pandoc') # for warlock
+]
+
 
 # order is important!
 # package versions updated May 28th 2015

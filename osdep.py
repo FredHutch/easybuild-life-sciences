@@ -21,6 +21,8 @@ def _convert(node):
 
 def _pkgadd (aptpkg, yumpkg, osdepts):
     for pkglist in osdepts:
+        if isinstance(pkglist, basestring):
+            pkglist = (pkglist,)        
         for pkg in pkglist:
             if pkg.endswith('-dev'):
                 if not pkg in aptpkg:

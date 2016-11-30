@@ -1,1 +1,1 @@
-openssl-devel libibverbs-devel libopenssl-devel kernel-headers libx11-devel libglu1-mesa-devel libcairo2-devel libxt-devel libpq-devel libnetcdf-devel libglpk-devel unixodbc-devel libzmq3-devel
+openssl-devel libibverbs-devel libopenssl-devel libgnutls-devel freetds-devel pandoc r-base-devel kernel-headers libx11-devel libglu1-mesa-devel libcairo2-devel libxt-devel libpq-devel libnetcdf-devel libglpk-devel unixodbc-devel libzmq3-devel
