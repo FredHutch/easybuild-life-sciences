@@ -9,6 +9,11 @@
 
 ---
 
+# New package requests (including Python and R libraries/modules)
+Please open an issue against this repo to request new softwares!
+
+---
+
 # Quickstart 
 
 please follow these simple steps:
