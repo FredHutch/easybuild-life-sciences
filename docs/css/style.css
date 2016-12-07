@@ -15,3 +15,15 @@ body {
     color: #89c348;
     font-size: 3em;
 }
+.libraries li {
+    line-height: 2em;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2em;
+    padding: 3px 5px;
+}
+li.r1 {
+    background: #f0f0f0;
+}
+li.r2 {
+    background: #fafafa;
+}
