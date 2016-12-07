@@ -3,6 +3,8 @@ body {
     font-style: normal;
 }
 
+a { padding: 0px 10px 0px 0px; }
+
 .ext_list a {color: black; text-decoration: none; font-weight: bold;}
 .ext_list li:hover {background: #eef; }
 .ext_list a:hover {color: #89c348;}
@@ -20,7 +22,7 @@ span.fh_green {color: #89c348;}  <!-- Hutch Green -->
     color: #89c348;
     font-size: 3em;
 }
-.libraries li {
+.ext_list li {
     line-height: 2em;
     border-bottom: 1px solid #ddd;
     font-size: 1.2em;
