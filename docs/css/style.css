@@ -3,6 +3,11 @@ body {
     font-style: normal;
 }
 
+.ext_list a {color: black; text-decoration: none; font-weight: bold;}
+.ext_list li:hover {background: #eef; }
+.ext_list a:hover {color: #89c348;}
+span.fh_green {color: #89c348;}  <!-- Hutch Green -->
+
 .app_name {
     color: #89c348;  /* Hutch Green */
     font-size: 1.5em;
