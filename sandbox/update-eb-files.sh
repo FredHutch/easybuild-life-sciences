@@ -9,5 +9,5 @@ if [[ -d easybuild/easyconfigs ]]; then
   ./sandbox/osdep.py
   git add easybuild
 else
-  echo "folder easybuild/easyconfigs does not exist."
+  echo "folder easybuild/easyconfigs does not exist. Please switch to the root of the easybuild-life-sciences repos."
 fi
