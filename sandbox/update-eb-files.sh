@@ -6,8 +6,8 @@ if [[ -d easybuild/easyconfigs ]]; then
   echo "deleting unwanted easyconfigs ..."
   oldstuff=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
   find easybuild/easyconfigs -regex "${oldstuff}"  -exec rm {} \;
-  ./osdep.py
+  ./sandbox/osdep.py
   git add easybuild
 else
-  echo "folder easybuild/easyconfigs does not exist."
+  echo "folder easybuild/easyconfigs does not exist. Please switch to the root of the easybuild-life-sciences repos."
 fi

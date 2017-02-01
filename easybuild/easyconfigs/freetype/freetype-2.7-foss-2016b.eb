@@ -1,39 +1,35 @@
-# Built with EasyBuild version 2.9.0 on 2016-12-01_12-49-11
-# easybuild easyconfig
-#
-# build with b2
+# Built with EasyBuild version 2.9.0 on 2016-12-23_12-48-43
+name = 'freetype'
+version = '2.7'
 
-name = 'Boost'
-version = '1.62.0'
-
-homepage = 'http://www.boost.org/'
-description = """Boost provides free peer-reviewed portable C++ source libraries."""
+homepage = 'http://freetype.org'
+description = """FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and
+ portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display
+ servers, font conversion tools, text image generation tools, and many other products as well."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
-toolchainopts = {'pic': True, 'usempi': True}
 
-source_urls = [SOURCEFORGE_SOURCE]
-sources = ['%%(namelower)s_%s.tar.gz' % '_'.join(version.split('.'))]
+source_urls = [GNU_SAVANNAH_SOURCE]
+sources = [SOURCE_TAR_GZ]
 
-builddependencies = [
+dependencies = [
+    ('libpng', '1.6.26'),
     ('bzip2', '1.0.6'),
-    ('libxml2', '2.9.4'),                                                                                                                               
     ('zlib', '1.2.8'),
 ]
 
-osdependencies = [('libicu-devel', 'libicu-dev')]
+sanity_check_paths = {
+    'files': ['bin/freetype-config', 'lib/libfreetype.a', 'lib/libfreetype.%s' % SHLIB_EXT,
+              'lib/pkgconfig/freetype2.pc'],
+    'dirs': ['include/freetype2'],
+}
 
-configopts = '--without-libraries=python'
-b2 = True
-boost_mpi = True
-toolset = 'gcc'
-
-moduleclass = 'devel'
+moduleclass = 'vis'
 
 # Build statistics
 buildstats = [{
-    "build_time": 1330.04,
-    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--modules-tool='Lmod'", '--rebuild', "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'Boost-1.62.0-foss-2016b.eb'],
+    "build_time": 18.76,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--modules-tool='Lmod'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'free.eb'],
     "core_count": 8,
     "cpu_model": "Common KVM processor",
     "cpu_speed": 2899.998,
@@ -43,7 +39,7 @@ buildstats = [{
     "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
     "glibc_version": "2.19",
     "hostname": "rhino-d",
-    "install_size": 178973108,
+    "install_size": 4089720,
     "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
     "os_name": "ubuntu",
     "os_type": "Linux",
@@ -52,6 +48,6 @@ buildstats = [{
     "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
     "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
     "system_python_path": "/usr/bin/python",
-    "timestamp": 1480625350,
+    "timestamp": 1482526123,
     "total_memory": 32048,
 }]
