@@ -1,4 +1,3 @@
-# Built with EasyBuild version 3.0.2 on 2017-01-26_16-23-55
 # easybuild easycofig
 
 # 2016.08.29 John Dey jfdey@fredhutch.org
@@ -27,10 +26,10 @@ dependencies = [
     ('SQLite', '3.13.0'),
     ('Tk', '8.6.5', '-no-X11'),
     ('GMP', '6.1.1'),
-    ('HDF5', '1.8.18'),  # required for h5py
     ('freetype', '2.7'),
     ('libxml2', '2.9.4'),  # required for lxml
     ('libxslt', '1.1.29'), # required for lxml
+    ('HDF5', '1.8.17'),  # required for h5py 
 ]
 
 osdependencies = [
@@ -62,7 +61,7 @@ exts_list = [
     ('packaging', '16.8', {
         'source_urls': ['https://pypi.python.org/packages/source/p/packaging/'],
     }),
-    ('setuptools', '34.0.2', {
+    ('setuptools', '34.1.0', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.python.org/packages/source/s/setuptools/'],
     }),
@@ -176,7 +175,7 @@ exts_list = [
     ('ecdsa', '0.13', {
         'source_urls': ['https://pypi.python.org/packages/source/e/ecdsa/'],
     }),
-    ('cryptography', '1.7.1', {
+    ('cryptography', '1.7.2', {
         'source_urls': ['https://pypi.python.org/packages/source/c/cryptography/'],
     }),
     ('pyasn1', '0.1.9', {
@@ -221,7 +220,7 @@ exts_list = [
         'modulename': 'concurrent',
         'source_urls': ['https://pypi.python.org/packages/source/f/futures'],
     }),
-    ('python-swiftclient', '3.2.0', {
+    ('python-swiftclient', '3.3.0', {
         'modulename': 'swiftclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-swiftclient'],
     }),
@@ -326,7 +325,7 @@ exts_list = [
         'modulename': 'flask_sqlalchemy',
         'source_urls': ['https://pypi.python.org/packages/source/f/flask_sqalchemy'],
     }),
-    ('Flask-Migrate', '2.0.2', {
+    ('Flask-Migrate', '2.0.3', {
         'modulename': 'flask_migrate',
         'source_urls': ['https://pypi.python.org/packages/source/f/flask_migrate'],
     }),
@@ -348,7 +347,7 @@ exts_list = [
     ('Markdown', '2.6.8', {
         'source_urls': ['https://pypi.python.org/packages/source/M/Markdown'],
     }),
-    ('Jinja2', '2.9.4', {
+    ('Jinja2', '2.9.5', {
         'source_urls': ['https://pypi.python.org/packages/source/J/Jinja2'],
     }),
     ('darkslide', '2.3.3', {
@@ -365,7 +364,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/s/simplegeneric'],
     }),
     ('ipython_genutils', '0.1.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/i/ipython-genutils/'],
+        'source_urls': ['https://pypi.python.org/packages/source/i/ipython_genutils/'],
     }),
     ('traitlets', '4.3.1', {
         'source_urls': ['https://pypi.python.org/packages/source/t/traitlets'],
@@ -376,12 +375,12 @@ exts_list = [
     ('pickleshare', '0.7.4', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pickleshare'],
     }),
-    ('backports.shutil-get-terminal-size', '1.0.0', {
+    ('backports.shutil_get_terminal_size', '1.0.0', {
         'modulename': 'backports.shutil_get_terminal_size',
-        'source_urls': ['https://pypi.python.org/packages/source/b/backports.shutil-get-terminal-size'],
+        'source_urls': ['https://pypi.python.org/packages/source/b/backports.shutil_get_terminal_size'],
         'source_tmpl': 'backports.shutil_get_terminal_size-%(version)s.tar.gz',
     }),
-    ('prompt_toolkit', '1.0.9', {
+    ('prompt_toolkit', '1.0.10', {
         'source_urls': ['https://pypi.python.org/packages/source/p/prompt-toolkit/'],
     }),
     #('ipython', '5.1.0', {
@@ -399,7 +398,7 @@ exts_list = [
     ('boto3', '1.4.4', {
         'source_urls': ['https://pypi.python.org/packages/source/b/boto3'],
     }),
-    ('awscli', '1.11.43', {
+    ('awscli', '1.11.44', {
         'source_urls': ['https://pypi.python.org/packages/source/a/awscli'],
     }),
     #('debian', '0.1.28', {
@@ -442,7 +441,7 @@ exts_list = [
         'modulename': 'glanceclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-glanceclient/'],
     }),
-    ('python-cinderclient', '1.10.0', {
+    ('python-cinderclient', '1.11.0', {
         'modulename': 'cinderclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-cinderclient/'],
     }),
@@ -459,7 +458,7 @@ exts_list = [
         'modulename': 'openstackclient',
         'source_urls': ['https://pypi.python.org/packages/source/o/osc-lib/'],
     }),
-    ('python-openstackclient', '3.7.0', {
+    ('python-openstackclient', '3.8.1', {
         'modulename': 'openstackclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-openstackclient'],
     }),
@@ -470,7 +469,7 @@ exts_list = [
         'modulename': 'oslo_concurrency',
         'source_urls': ['https://pypi.python.org/packages/source/o/oslo.concurrency/'],
     }),
-    ('oslo.context', '2.12.0', {
+    ('oslo.context', '2.12.1', {
         'modulename': 'oslo_context',
         'source_urls': ['https://pypi.python.org/packages/source/o/oslo.context/'],
     }),
@@ -495,7 +494,7 @@ exts_list = [
         'modulename': 'freezerclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-freezerclient/'],
     }),
-    ('psutil', '5.0.1', {
+    ('psutil', '5.1.0', {
         'source_urls': ['https://pypi.python.org/packages/source/p/psutil/'],
     }),
     ('freezer', '4.0.0.0b3', {
@@ -599,32 +598,16 @@ exts_list = [
     ('pyastro', '1.1', {
         'source_urls':['https://pypi.python.org/packages/source/p/pyastro'],
     }),
+    ('toolshed', '0.4.6', {
+        'source_urls':['https://pypi.python.org/packages/source/t/toolshed'],
+    }),
+    ('cruzdb', '0.5.6', {
+        'source_urls':['https://pypi.python.org/packages/source/c/cruzdb'],
+    }),
+    ('cpv', '0.46', {
+        'source_tmpl': 'v%(version)s.zip',
+        'source_urls': ['https://github.com/brentp/combined-pvalues/archive'],
+    }),
 ]
 
 moduleclass = 'lang'
-
-# Build statistics
-buildstats = [{
-    "build_time": 272.25,
-    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", '--rebuild', "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", '--skip', "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'Python-2.7.13-foss-2016b.eb'],
-    "core_count": 8,
-    "cpu_model": "Common KVM processor",
-    "cpu_speed": 2899.998,
-    "cpu_vendor": "Intel",
-    "easybuild-easyblocks_version": "3.0.2",
-    "easybuild-framework_version": "3.0.2",
-    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
-    "glibc_version": "2.19",
-    "hostname": "rhino-d",
-    "install_size": 1236966553,
-    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
-    "os_name": "ubuntu",
-    "os_type": "Linux",
-    "os_version": "14.04",
-    "platform_name": "x86_64-unknown-linux",
-    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
-    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
-    "system_python_path": "/usr/bin/python",
-    "timestamp": 1485476632,
-    "total_memory": 32048,
-}]
