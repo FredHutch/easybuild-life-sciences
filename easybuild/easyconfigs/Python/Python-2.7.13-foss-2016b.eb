@@ -26,10 +26,10 @@ dependencies = [
     ('SQLite', '3.13.0'),
     ('Tk', '8.6.5', '-no-X11'),
     ('GMP', '6.1.1'),
-    ('freetype', '2.7'),
+    ('HDF5', '1.8.17'),  # required for h5py
+    ('freetype', '2.7'),   # required for matplotlib
     ('libxml2', '2.9.4'),  # required for lxml
     ('libxslt', '1.1.29'), # required for lxml
-    ('HDF5', '1.8.17'),  # required for h5py 
 ]
 
 osdependencies = [
@@ -61,12 +61,15 @@ exts_list = [
     ('packaging', '16.8', {
         'source_urls': ['https://pypi.python.org/packages/source/p/packaging/'],
     }),
-    ('setuptools', '34.1.0', {
+    ('setuptools', '34.2.0', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.python.org/packages/source/s/setuptools/'],
     }),
     ('pip', '9.0.1', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pip/'],
+    }),
+    ('pep8', '1.7.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pep8/'],
     }),
     ('nose', '1.3.7', {
         'source_urls': ['https://pypi.python.org/packages/source/n/nose/'],
@@ -107,9 +110,11 @@ exts_list = [
 #        'source_urls': ['https://bitbucket.org/dakl/msings/get/'],
 #    }),
     ('PyClone', '0.12.9', {
+        'modulename': 'pyclone',
         'source_urls': ['https://bitbucket.org/aroth85/pyclone/downloads/']
     }),
     ('PyDP', '0.2.2', {
+        'modulename': 'pydp',
         'source_urls': ['https://bitbucket.org/aroth85/pydp/downloads/']
     }),
     ('argparse', '1.4.0', {
@@ -155,6 +160,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/pyvcf/'],
     }),
     ('deepTools', '2.4.2', {
+        'modulename': 'deeptools',
         'source_urls': ['https://pypi.python.org/packages/source/d/deepTools/'],
     }),
     ('twobitreader', '3.1.4', { # A fast python package for reading .2bit files (used by the UCSC genome browser)
@@ -178,7 +184,7 @@ exts_list = [
     ('cryptography', '1.7.2', {
         'source_urls': ['https://pypi.python.org/packages/source/c/cryptography/'],
     }),
-    ('pyasn1', '0.1.9', {
+    ('pyasn1', '0.2.2', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pyasn1'],
     }),
     ('paramiko', '2.1.1', {
@@ -225,6 +231,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/python-swiftclient'],
     }),
     ('Babel', '2.3.4', {
+        'modulename': 'babel',
         'source_urls': ['https://pypi.python.org/packages/source/B/Babel/'],
     }),
     ('wrapt', '1.10.8', {
@@ -291,9 +298,11 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/python-novaclient'],
     }),
     ('Flask', '0.12', {
+        'modulename': 'flask',
         'source_urls': ['https://pypi.python.org/packages/source/f/flask'],
     }),
     ('WTForms', '2.1', {
+        'modulename': 'wtforms',
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.python.org/packages/source/W/WTForms/'],
     }),
@@ -342,12 +351,15 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/d/docutils'],
     }),
     ('Pygments', '2.2.0', {
+        'modulename': 'pygments',
         'source_urls': ['https://pypi.python.org/packages/source/P/Pygments'],
     }),
     ('Markdown', '2.6.8', {
+        'modulename': 'markdown',
         'source_urls': ['https://pypi.python.org/packages/source/M/Markdown'],
     }),
     ('Jinja2', '2.9.5', {
+        'modulename': 'jinja2',
         'source_urls': ['https://pypi.python.org/packages/source/J/Jinja2'],
     }),
     ('darkslide', '2.3.3', {
@@ -380,25 +392,27 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/b/backports.shutil_get_terminal_size'],
         'source_tmpl': 'backports.shutil_get_terminal_size-%(version)s.tar.gz',
     }),
-    ('prompt_toolkit', '1.0.10', {
+    ('prompt_toolkit', '1.0.13', {
         'source_urls': ['https://pypi.python.org/packages/source/p/prompt-toolkit/'],
     }),
     #('ipython', '5.1.0', {
     #    'source_urls': ['https://pypi.python.org/packages/source/i/ipython'],
     #}),
     ('SQLAlchemy', '1.1.5', {
+        'modulename': 'sqlalchemy',
         'source_urls': ['https://pypi.python.org/packages/source/s/SQLAlchemy'],
     }),
     ('bokeh', '0.12.4', {
         'source_urls': ['https://pypi.python.org/packages/source/b/bokeh'],
     }),
     ('Nuitka', '0.5.25', {
+        'modulename': 'nuitka',
         'source_urls': ['https://pypi.python.org/packages/source/n/Nuitka'],
     }),
     ('boto3', '1.4.4', {
         'source_urls': ['https://pypi.python.org/packages/source/b/boto3'],
     }),
-    ('awscli', '1.11.44', {
+    ('awscli', '1.11.47', {
         'source_urls': ['https://pypi.python.org/packages/source/a/awscli'],
     }),
     #('debian', '0.1.28', {
@@ -417,6 +431,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/t/tzlocal/'],
     }),
     ('APScheduler', '3.3.1', {
+        'modulename': 'apscheduler',
         'source_urls': ['https://pypi.python.org/packages/source/a/APScheduler'],
     }),
     ('PyYAML', '3.12', {
@@ -488,27 +503,28 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/pymongo/'],
     }),
     ('PyMySQL', '0.7.9', {
+        'modulename': 'pymysql',
         'source_urls': ['https://pypi.python.org/packages/source/P/PyMySQL/'],
     }),
     ('python-freezerclient', '1.2.0', {
         'modulename': 'freezerclient',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-freezerclient/'],
     }),
-    ('psutil', '5.1.0', {
+    ('psutil', '5.1.3', {
         'source_urls': ['https://pypi.python.org/packages/source/p/psutil/'],
     }),
-    ('freezer', '4.0.0.0b3', {
+    ('freezer', '4.0.0.0rc1', {
         'source_urls': ['https://pypi.python.org/packages/source/f/freezer'],
     }),
     ('uritemplate', '3.0.0', {
         'source_urls': ['https://pypi.python.org/packages/source/u/uritemplate/'],
     }),
     ('pyOpenSSL', '16.2.0', {
-        'modulename': False, 
+        'modulename': 'OpenSSL',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyOpenSSL/'],
     }),
     ('ndg-httpsclient', '0.4.2', {
-        'modulename': False,
+        'modulename': 'ndg.httpsclient', 
         'source_tmpl': 'ndg_httpsclient-%(version)s.tar.gz',
         'source_urls': ['https://pypi.python.org/packages/source/n/ndg-httpsclient/'],
     }),
@@ -528,10 +544,11 @@ exts_list = [
     ('html5lib', '0.999999999', {
         'source_urls': ['https://pypi.python.org/packages/source/h/html5lib'],
     }),
-    ('ldap3', '2.2.0', {
+    ('ldap3', '2.2.1', {
         'source_urls': ['https://pypi.python.org/packages/source/l/ldap3'],
     }),
     ('Mako', '1.0.6', {
+        'modulename': 'mako',
         'source_urls': ['https://pypi.python.org/packages/source/m/Mako'],
     }),
     ('functools32', '3.2.3-2', {
@@ -550,7 +567,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/o/oauth'],
     }),
     ('pyBigWig', '0.3.2', {
-        'modulename': False,
+        'modulename': 'pyBigWig', 
         'source_urls': ['https://pypi.python.org/packages/source/p/pyBigWig/'],
     }),
     ('python-pam', '1.8.2', {
@@ -592,7 +609,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/c/ConfigArgParse'],
     }),
     ('HTSeq', '0.6.1', {
-        'modulename': False,   # 0.6.1p1 has fixed the version issue; Remove False in future build
+        'modulename': 'HTSeq', 
         'source_urls': ['https://pypi.python.org/packages/source/h/HTSeq'],
     }),
     ('pyastro', '1.1', {
@@ -601,12 +618,23 @@ exts_list = [
     ('toolshed', '0.4.6', {
         'source_urls':['https://pypi.python.org/packages/source/t/toolshed'],
     }),
+    ('MySQL-python', '1.2.5', {
+        'modulename': '_mysql',
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/M/MySQL-python'],
+    }),
     ('cruzdb', '0.5.6', {
         'source_urls':['https://pypi.python.org/packages/source/c/cruzdb'],
     }),
     ('cpv', '0.46', {
         'source_tmpl': 'v%(version)s.zip',
         'source_urls': ['https://github.com/brentp/combined-pvalues/archive'],
+    }),
+    ('brewer2mpl', '1.4.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/brewer2mpl'],
+    }),
+    ('vctools', '0.1.6.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/v/vctools'],
     }),
 ]
 
