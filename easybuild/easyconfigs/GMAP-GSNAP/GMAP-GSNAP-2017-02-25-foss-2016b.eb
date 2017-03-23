@@ -1,0 +1,69 @@
+# Built with EasyBuild version 3.0.2 on 2017-03-13_11-37-23
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Pablo Escobar Lopez
+# Swiss Institute of Bioinformatics
+# Biozentrum - University of Basel
+# 2016-11-07 modified by:
+# Adam Huffman
+# The Francis Crick Institute
+#
+# Updated with 2017-02-25 by bmcgough@fredhutch.org
+
+easyblock = 'ConfigureMake'
+
+name = 'GMAP-GSNAP'
+version = '2017-02-25'
+
+homepage = 'http://research-pub.gene.com/gmap/'
+description = """GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences
+ GSNAP: Genomic Short-read Nucleotide Alignment Program"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://research-pub.gene.com/gmap/src/']
+sources = [SOURCELOWER_TAR_GZ]
+
+# with these deps you can use standard compressed files
+# to support files in gobby format take a look at README for extra dependencies
+# http://research-pub.gene.com/gmap/src/README
+dependencies = [
+    ('bzip2', '1.0.6'),
+    ('zlib', '1.2.8'),
+]
+
+# you can change the MAX_READLENGTH for GSNAP with something like this.
+# details in the README http://research-pub.gene.com/gmap/src/README
+# configopts = 'MAX_READLENGTH=250'
+
+sanity_check_paths = {
+    'files': ['bin/gmap', 'bin/gsnap'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 134.95,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'GMAP-GSNAP-2017-02-25-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.0.2",
+    "easybuild-framework_version": "3.0.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 115735289,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1489430243,
+    "total_memory": 32048,
+}]
