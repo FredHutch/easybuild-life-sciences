@@ -1,3 +1,4 @@
+# Built with EasyBuild version 3.0.2 on 2017-03-17_10-49-15
 # Built with EasyBuild version 2.9.0 on 2016-10-28_10-34-34
 name = 'Perl'
 version = '5.24.0'
@@ -19,6 +20,18 @@ exts_list = [
     ('File::Listing', '6.04', {
         'source_tmpl': 'File-Listing-6.04.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/G/GA/GAAS'],
+    }),
+    ('File::Path', '2.12', {
+        'source_tmpl': 'File-Path-2.12.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RI/RICHE'],
+    }),
+    ('File::ShareDir', '1.102', {
+        'source_tmpl': 'File-ShareDir-1.102.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RE/REHSACK'],
+    }),
+    ('File::pushd', '1.014', {
+        'source_tmpl': 'File-pushd-1.014.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
     }),
     ('ExtUtils::InstallPaths', '0.011', {
         'source_tmpl': 'ExtUtils-InstallPaths-0.011.tar.gz',
@@ -92,12 +105,20 @@ exts_list = [
         'source_tmpl': 'Module-Runtime-0.014.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM'],
     }),
+    ('Module::Load::Conditional', '0.68', {
+        'source_tmpl': 'Module-Load-Conditional-0.68.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/B/BI/BINGOS'],
+    }),
     ('Try::Tiny', '0.24', {
         'source_tmpl': 'Try-Tiny-0.24.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
     }),
     ('Params::Validate', '1.24', {
         'source_tmpl': 'Params-Validate-1.24.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
+    }),
+    ('Params::ValidationCompiler', '0.23', {
+        'source_tmpl': 'Params-ValidationCompiler-0.23.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
     }),
     ('List::MoreUtils', '0.416', {
@@ -111,10 +132,6 @@ exts_list = [
     ('Class::Singleton', '1.5', {
         'source_tmpl': 'Class-Singleton-1.5.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/S/SH/SHAY'],
-    }),
-    ('DateTime', '1.34', {
-        'source_tmpl': 'DateTime-1.34.tar.gz',
-        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
     }),
     ('File::Find::Rule::Perl', '1.15', {
         'source_tmpl': 'File-Find-Rule-Perl-1.15.tar.gz',
@@ -284,6 +301,10 @@ exts_list = [
         'source_tmpl': 'Text-Diff-1.44.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/N/NE/NEILB'],
     }),
+    ('Log::Log4perl', '1.49', {
+        'source_tmpl': 'Log-Log4perl-1.49.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/M/MS/MSCHILLI'],
+    }),
     ('Log::Message::Simple', '0.10', {
         'source_tmpl': 'Log-Message-Simple-0.10.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/B/BI/BINGOS'],
@@ -396,6 +417,10 @@ exts_list = [
         'source_tmpl': 'HTTP-Tiny-0.058.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
     }),
+    ('Package::Constants', '0.06', {
+        'source_tmpl': 'Package-Constants-0.06.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/B/BI/BINGOS'],
+    }),
     ('Package::DeprecationManager', '0.17', {
         'source_tmpl': 'Package-DeprecationManager-0.17.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
@@ -492,6 +517,14 @@ exts_list = [
         'source_tmpl': 'HTML-Tree-5.03.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/C/CJ/CJM'],
     }),
+    ('PadWalker', '2.2', {
+        'source_tmpl': 'PadWalker-2.2.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RO/ROBIN'],
+    }),
+    ('Devel::Caller', '2.06', {
+        'source_tmpl': 'Devel-Caller-2.06.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RC/RCLAMP'],
+    }),
     ('Devel::GlobalDestruction', '0.13', {
         'source_tmpl': 'Devel-GlobalDestruction-0.13.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/H/HA/HAARG'],
@@ -572,6 +605,18 @@ exts_list = [
         'source_tmpl': 'Class-Inspector-1.28.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/A/AD/ADAMK'],
     }),
+    ('Class::Load', '0.23', {
+        'source_tmpl': 'Class-Load-0.23.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('Moose', '2.2004', {
+        'source_tmpl': 'Moose-2.2004.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('Class::Load::XS', '0.09', {
+        'source_tmpl': 'Class-Load-XS-0.09.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
     ('Parse::RecDescent', '1.967013', {
         'source_tmpl': 'Parse-RecDescent-1.967013.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/J/JT/JTBRAUN'],
@@ -579,6 +624,10 @@ exts_list = [
     ('Carp', '1.38', {
         'source_tmpl': 'Carp-1.38.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/R/RJ/RJBS'],
+    }),
+    ('Carp::Clan', '6.06', {
+        'source_tmpl': 'Carp-Clan-6.06.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/K/KE/KENTNL'],
     }),
     ('XML::XPath', '1.37', {
         'source_tmpl': 'XML-XPath-1.37.tar.gz',
@@ -596,6 +645,10 @@ exts_list = [
         'source_tmpl': 'Sub-Exporter-0.987.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/R/RJ/RJBS'],
     }),
+    ('XSLoader', '0.24', {
+        'source_tmpl': 'XSLoader-0.24.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SA/SAPER'],
+    }),
     ('Class::Load::XS', '0.09', {
         'source_tmpl': 'Class-Load-XS-0.09.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
@@ -607,6 +660,10 @@ exts_list = [
     ('Sub::Exporter::Progressive', '0.001011', {
         'source_tmpl': 'Sub-Exporter-Progressive-0.001011.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/F/FR/FREW'],
+    }),
+    ('Data::Dumper', '2.161', {
+        'source_tmpl': 'Data-Dumper-2.161.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SM/SMUELLER'],
     }),
     ('Data::Dumper::Concise', '2.022', {
         'source_tmpl': 'Data-Dumper-Concise-2.022.tar.gz',
@@ -776,6 +833,10 @@ exts_list = [
         'source_tmpl': 'Import-Into-1.002005.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/H/HA/HAARG'],
     }),
+    ('DateTime', '1.34', {
+        'source_tmpl': 'DateTime-1.34.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
+    }),
     ('DateTime::Tiny', '1.06', {
         'source_tmpl': 'DateTime-Tiny-1.06.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
@@ -811,10 +872,6 @@ exts_list = [
     ('Set::IntSpan', '1.19', {
         'source_tmpl': 'Set-IntSpan-1.19.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/S/SW/SWMCD'],
-    }),
-    ('Moose', '2.1804', {
-        'source_tmpl': 'Moose-2.1804.tar.gz',
-        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
     }),
     ('Algorithm::Dependency', '1.110', {
         'source_tmpl': 'Algorithm-Dependency-1.110.tar.gz',
@@ -880,6 +937,107 @@ exts_list = [
         'source_tmpl': 'MailTools-2.18.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/M/MA/MARKOV'],
     }),
+# required for HPCI
+    ('Specio', '0.36', {
+        'source_tmpl': 'Specio-0.36.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
+    }),
+    ('Role::Tiny', '2.000005', {
+        'source_tmpl': 'Role-Tiny-2.000005.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/H/HA/HAARG'],
+    }),
+    ('autodie', '2.29', {
+        'source_tmpl': 'autodie-2.29.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/P/PJ/PJF'],
+    }),
+    ('Path::Class', '0.37', {
+        'source_tmpl': 'Path-Class-0.37.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS'],
+    }),
+    ('Sub::Exporter', '0.987', {
+        'source_tmpl': 'Sub-Exporter-0.987.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RJ/RJBS'],
+    }),
+    ('Sub::Exporter::ForMethods', '0.100052', {
+        'source_tmpl': 'Sub-Exporter-ForMethods-0.100052.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RJ/RJBS'],
+    }),
+    ('Sub::Exporter::Progressive', '0.001013', {
+        'source_tmpl': 'Sub-Exporter-Progressive-0.001013.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/F/FR/FREW'],
+    }),
+    ('Sub::Identify', '0.12', {
+        'source_tmpl': 'Sub-Identify-0.12.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RG/RGARCIA'],
+    }),
+    ('Sub::Install', '0.928', {
+        'source_tmpl': 'Sub-Install-0.928.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RJ/RJBS'],
+    }),
+    ('Sub::Name', '0.21', {
+        'source_tmpl': 'Sub-Name-0.21.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('Sub::Uplevel', '0.2600', {
+        'source_tmpl': 'Sub-Uplevel-0.2600.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
+    }),
+    ('Devel::OverloadInfo', '0.004', {
+        'source_tmpl': 'Devel-OverloadInfo-0.004.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/I/IL/ILMARI'],
+    }),
+    ('B::Hooks::EndOfScope', '0.21', {
+        'source_tmpl': 'B-Hooks-EndOfScope-0.21.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/E/ET/ETHER'],
+    }),
+    ('MooseX', '0.002', {
+         'source_tmpl': 'MooseX-0.002.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('MooseX::ClassAttribute', '0.29', {
+         'source_tmpl': 'MooseX-ClassAttribute-0.29.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
+    }),
+    ('MooseX::Param', '0.002', {
+         'source_tmpl': 'MooseX-Param-0.02.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/S/ST/STEVAN'],
+    }),
+    ('MooseX::Params::Validate', '0.21', {
+         'source_tmpl': 'MooseX-Params-Validate-0.21.tar.gz',
+         'source_urls': ['http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY'],
+    }),
+    ('MooseX::Role::Parameterized', '1.09', {
+         'source_tmpl': 'MooseX-Role-Parameterized-1.09.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('MooseX::Types::Parameterizable', '0.08', {
+         'source_tmpl': 'MooseX-Types-Parameterizable-0.08.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/J/JJ/JJNAPIORK'],
+    }),
+    ('MooseX::Types', '0.50', {
+         'source_tmpl': 'MooseX-Types-0.50.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('MooseX::Types::Path::Class', '0.09', {
+         'source_tmpl': 'MooseX-Types-Path-Class-0.09.tar.gz',
+         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('namespace::clean', '0.27', {
+        'source_tmpl': 'namespace-clean-0.27.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI'],
+    }),
+    ('namespace::autoclean', '0.28', {
+        'source_tmpl': 'namespace-autoclean-0.28.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+    }),
+    ('HPCI', '2.18', {
+        'source_tmpl': 'HPCI-0.41.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/B/BO/BOUTROSLB'],
+    }),
+    ('File::Sync', '0.11', {
+        'source_tmpl': 'File-Sync-0.11.tar.gz',
+        'source_urls': ['http://cpan.metacpan.org/authors/id/B/BR/BRIANSKI/'],
+    }),
 ]
 
 moduleclass = 'lang'
@@ -909,3 +1067,55 @@ buildstats = [{
     "timestamp": 1477676073,
     "total_memory": 32048,
 }]
+
+# Build statistics
+buildstats = [
+{
+    "build_time": 1564.24,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--modules-tool='Lmod'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot='/app/easybuild/software/EasyBuild/2.9.0/lib/python2.7/site-packages/easybuild_easyconfigs-2.9.0-py2.7.egg/easybuild/easyconfigs:/app/easybuild/fh_easyconfigs'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'Perl-5.24.0-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "2.9.0",
+    "easybuild-framework_version": "2.9.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 141333570,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Jun 22 2015, 17:58:13) ; [GCC 4.8.2]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1477676073,
+    "total_memory": 32048,
+},
+{
+    "build_time": 38.46,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", '--rebuild', "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", '--skip', "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'Perl-5.24.0-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.0.2",
+    "easybuild-framework_version": "3.0.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 144209015,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1489772953,
+    "total_memory": 32048,
+},
+]
