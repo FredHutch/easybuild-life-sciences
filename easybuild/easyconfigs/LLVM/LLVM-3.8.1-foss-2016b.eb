@@ -1,0 +1,69 @@
+# Built with EasyBuild version 3.0.2 on 2017-04-11_17-12-00
+easyblock = 'CMakeMake'
+
+name = 'LLVM'
+version = '3.8.1'
+
+homepage = "http://llvm.org/"
+description = """The LLVM Core libraries provide a modern source- and target-independent
+ optimizer, along with code generation support for many popular CPUs
+ (as well as some less common ones!) These libraries are built around a well
+ specified code representation known as the LLVM intermediate representation
+ ("LLVM IR"). The LLVM Core libraries are well documented, and it is
+ particularly easy to invent your own language (or port an existing compiler)
+ to use LLVM as an optimizer and code generator."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'cstd': 'gnu++11'}
+
+source_urls = ["http://llvm.org/releases/%(version)s"]
+sources = ["llvm-%(version)s.src.tar.xz"]
+
+builddependencies = [
+    ('CMake', '3.6.1'),
+    ('Python', '2.7.12'),
+]
+
+dependencies = [
+    ('ncurses', '6.0'),
+    ('zlib', '1.2.8'),
+]
+
+configopts = '-DBUILD_SHARED_LIBS=ON '
+# required to install extra tools in bin/
+configopts += "-DLLVM_INSTALL_UTILS=ON -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_ZLIB=ON"
+
+sanity_check_paths = {
+    'files': ['bin/llvm-ar', 'bin/FileCheck'],
+    'dirs': ['include/llvm', 'include/llvm-c'],
+}
+
+separate_build_dir = True
+
+moduleclass = 'compiler'
+
+# Build statistics
+buildstats = [{
+    "build_time": 553.24,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'LLVM-3.8.1-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.0.2",
+    "easybuild-framework_version": "3.0.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 61832874,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/app/easybuild/software/Python/2.7.12-foss-2016b/bin/python",
+    "timestamp": 1491955919,
+    "total_memory": 32048,
+}]
