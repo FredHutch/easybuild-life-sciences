@@ -15,7 +15,7 @@
 # Internal
 
 EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
-EB_VER="3.0.2"      # version of EasyBuild to bootstrap in the container
+EB_VER="3.1.2"      # version of EasyBuild to bootstrap in the container
 
 # install these develop branches of easybuild-easyconfigs from github repos
 EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
