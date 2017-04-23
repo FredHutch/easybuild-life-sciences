@@ -110,7 +110,8 @@ function lmod_install {
 function install_EB_OS_pkgs {
   if hash apt-get 2>/dev/null; then
     sudo apt-get update
-    sudo apt-get install -y wget python-minimal python-pygraph build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+    sudo apt-get install -y wget python-minimal build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+    sudo apt-get install -y python-pygraph
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -122,7 +123,7 @@ function install_EB_OS_pkgs {
 # this is usually due to Ubuntu<->RedHat differences and these should be included in easyconfigs eventually
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.apt
+    wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/os-dependencies.apt
     sudo apt-get install -y pkg-config m4
     for mypkg in $(cat /tmp/os-dependencies.apt); do
       sudo apt-get install -y $mypkg
@@ -136,7 +137,7 @@ function install_missed_dependency_OS_pkgs {
     # RODBC rzmq
   elif hash yum 2>/dev/null; then
     #echo "redhat based install, not currently supported"
-    wget -O /tmp/os-dependencies.yum https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/os-dependencies.yum
+    wget -O /tmp/os-dependencies.yum https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/os-dependencies.yum
     for mypkg in $(cat /tmp/os-dependencies.yum); do
       sudo yum -y install $mypkg
     done
