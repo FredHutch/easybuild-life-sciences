@@ -156,16 +156,16 @@ function remove_OS_pkgs {
 # download some required stuff and to it into source 
 function download_extra_sources {
 
-  /bin/su - eb -c mkdir -p $EB_DIR/sources
-  /bin/su - eb -c wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
+  /bin/su - eb -c "mkdir -p $EB_DIR/sources"
+  /bin/su - eb -c "wget -P \"${EB_DIR}/sources\" \"${SOURCE_JAVA}\""
 
-  /bin/su - eb -c mkdir -p $EB_DIR/github
-  /bin/su - eb -c git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences
+  /bin/su - eb -c "mkdir -p $EB_DIR/github"
+  /bin/su - eb -c "git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences"
 
-  /bin/su - eb -c mkdir -p $EB_DIR/github/develop
+  /bin/su - eb -c "mkdir -p $EB_DIR/github/develop"
   for clon in $EB_CFG_DEVELOP; do 
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
-      /bin/su - eb -c git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
+      /bin/su - eb -c "git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}"
       if [[ -n $EB_OLDSTUFF ]]; then
         printf "deleting old easyconfigs in ${clon} ...\n\n"
         find "${EB_DIR}/github/develop/${clon}" -regex "${EB_OLDSTUFF}" -exec rm "{}" \;
@@ -178,14 +178,6 @@ function download_extra_sources {
 # bootstrap easybuild
 function eb_bootstrap {
 
-  # get EB
-  eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
-  /bin/su - eb -c wget -O /tmp/bootstrap_eb.py $eb_url
-  if [ "$?" != "0" ]; then
-    echo "Oops, retrieving bootstrap_eb.py failed!" 1>&2
-    exit 1
-  fi
-  
   # create eb user if needed
   if id "eb" >/dev/null 2>&1; then
     echo "user eb exists"
@@ -193,12 +185,20 @@ function eb_bootstrap {
     adduser --disabled-password --gecos "" eb
   fi
 
+  # get EB
+  eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
+  /bin/su - eb -c "wget -O /tmp/bootstrap_eb.py $eb_url"
+  if [ "$?" != "0" ]; then
+    echo "Oops, retrieving bootstrap_eb.py failed!" 1>&2
+    exit 1
+  fi
+
   # create $EB_DIR
   mkdir -p "${EB_DIR}"
   chown -R eb ${EB_DIR}
 
   # bootstrap it
-  /bin/su - eb -c /usr/bin/python /tmp/bootstrap_eb.py $EB_DIR
+  /bin/su - eb -c "/usr/bin/python /tmp/bootstrap_eb.py $EB_DIR"
 
   # pop in some useful environment variables to our EasyBuild modulefile
   /bin/su - eb -c (cat <<EOF
