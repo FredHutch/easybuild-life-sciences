@@ -201,7 +201,7 @@ function eb_bootstrap {
   /bin/su - eb -c "/usr/bin/python /tmp/bootstrap_eb.py $EB_DIR"
 
   # pop in some useful environment variables to our EasyBuild modulefile
-  /bin/su - eb -c (cat <<EOF
+  (/bin/su - eb -c cat <<EOF
 setenv ("EASYBUILD_SOURCEPATH", "${EB_DIR}/sources")
 setenv ("EASYBUILD_BUILDPATH", "${EB_DIR}/build")
 setenv ("EASYBUILD_INSTALLPATH_SOFTWARE", "${EB_DIR}/software")
