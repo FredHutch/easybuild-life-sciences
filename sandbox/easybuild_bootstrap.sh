@@ -2,12 +2,9 @@
 
 #####
 # # bootstrap script to demo easybuild
-# # only tested on Ubuntu 16.04 
-# # on fresh linux install create a new user eb
-# # and add that user to sudoers 
-# adduser --disabled-password --gecos "" eb
-# echo "eb ALL=(ALL:ALL) NOPASSWD:ALL" >  /etc/sudoers.d/zz_eb
-#  # then execute script as user eb
+# # only tested on Ubuntu 14.04/16.04 
+# # run as root inside fresh linux os 
+# # or inside a container
 ######
 
 # variables
@@ -21,7 +18,6 @@ EB_VER="3.1.2"      # version of EasyBuild to bootstrap in the container
 EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
 # remove all older easyconfigs with these pattern
 EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
-
 
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
@@ -55,7 +51,7 @@ function lua_install {
   tar -xf /tmp/lua-$LUA_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/lua-$LUA_VER && sudo make linux install
+  cd /tmp/lua-$LUA_VER && make linux install
 
   # get luarocks
   luarocks_url="${LUAROCKS_BASE_URL}$LUAROCKS_VER.tar.gz"
@@ -69,11 +65,11 @@ function lua_install {
   tar -xf /tmp/luarocks-$LUAROCKS_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && sudo make install
+  cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && make install
 
   # use luarocks to install luaposix and luafilesystem
-  sudo luarocks install luaposix
-  sudo luarocks install luafilesystem
+  luarocks install luaposix
+  luarocks install luafilesystem
 
 }
 
@@ -92,13 +88,13 @@ function lmod_install {
   tar -xf /tmp/Lmod-$LMOD_VER.tar.gz -C /tmp
 
   # build and install
-  cd /tmp/Lmod-$LMOD_VER && ./configure && sudo make install
+  cd /tmp/Lmod-$LMOD_VER && ./configure && make install
 
   # link into /etc/profile so shells can use module function
-  sudo ln -s /usr/local/lmod/lmod/init/profile /etc/profile.d/modules.sh
+  ln -s /usr/local/lmod/lmod/init/profile /etc/profile.d/modules.sh
 
   # add our easybuild modulepath now
-  echo "export MODULEPATH=\$MODULEPATH:/${EB_DIR}/modules/all" | sudo tee -a /etc/profile.d/modules.sh
+  echo "export MODULEPATH=\$MODULEPATH:/${EB_DIR}/modules/all" | tee -a /etc/profile.d/modules.sh
 
   # source /etc/profile.d/modules.sh to enable modules in this shell
   # while this script is not intended to be sourced, it works to do so
@@ -109,9 +105,9 @@ function lmod_install {
 # encryption-related packages here on purpose as OS udpates should be more frequent
 function install_EB_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get update
-    sudo apt-get install -y wget python-minimal build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
-    sudo apt-get install -y python-pygraph
+    apt-get update
+    apt-get install -y wget python-minimal python-setuptools build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
+    apt-get install -y python-pygraph
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -124,9 +120,9 @@ function install_EB_OS_pkgs {
 function install_missed_dependency_OS_pkgs {
   if hash apt-get 2>/dev/null; then
     wget -O /tmp/os-dependencies.apt https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/os-dependencies.apt
-    sudo apt-get install -y pkg-config m4
+    apt-get install -y pkg-config m4
     for mypkg in $(cat /tmp/os-dependencies.apt); do
-      sudo apt-get install -y $mypkg
+      apt-get install -y $mypkg
     done
     # xorg-dev is bigger than libx11-dev and may not be needed.
     # libglu1-mesa-dev is needed for R rgl (R)
@@ -139,7 +135,7 @@ function install_missed_dependency_OS_pkgs {
     #echo "redhat based install, not currently supported"
     wget -O /tmp/os-dependencies.yum https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/os-dependencies.yum
     for mypkg in $(cat /tmp/os-dependencies.yum); do
-      sudo yum -y install $mypkg
+      yum -y install $mypkg
     done
   else
     echo "unknown unix, not currently supported"
@@ -149,7 +145,7 @@ function install_missed_dependency_OS_pkgs {
 # remove OS packages after dependency install to get clean OS
 function remove_OS_pkgs {
   if hash apt-get 2>/dev/null; then
-    sudo apt-get remove -y libreadline-dev
+    apt-get remove -y libreadline-dev
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -160,16 +156,16 @@ function remove_OS_pkgs {
 # download some required stuff and to it into source 
 function download_extra_sources {
 
-  mkdir -p $EB_DIR/sources
-  wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
+  /bin/su - eb -c mkdir -p $EB_DIR/sources
+  /bin/su - eb -c wget -P "${EB_DIR}/sources" "${SOURCE_JAVA}"
 
-  mkdir -p $EB_DIR/github
-  git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences
+  /bin/su - eb -c mkdir -p $EB_DIR/github
+  /bin/su - eb -c git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences
 
-  mkdir -p $EB_DIR/github/develop
+  /bin/su - eb -c mkdir -p $EB_DIR/github/develop
   for clon in $EB_CFG_DEVELOP; do 
     if ! [[ -d ${EB_DIR}/github/develop/${clon} ]]; then
-      git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
+      /bin/su - eb -c git clone -b develop --single-branch https://github.com/${clon}/easybuild-easyconfigs ${EB_DIR}/github/develop/${clon}
       if [[ -n $EB_OLDSTUFF ]]; then
         printf "deleting old easyconfigs in ${clon} ...\n\n"
         find "${EB_DIR}/github/develop/${clon}" -regex "${EB_OLDSTUFF}" -exec rm "{}" \;
@@ -184,23 +180,28 @@ function eb_bootstrap {
 
   # get EB
   eb_url=$(printf "$EB_BASE_URL" "$EB_VER")
-  wget -O /tmp/bootstrap_eb.py $eb_url
+  /bin/su - eb -c wget -O /tmp/bootstrap_eb.py $eb_url
   if [ "$?" != "0" ]; then
     echo "Oops, retrieving bootstrap_eb.py failed!" 1>&2
     exit 1
   fi
+  
+  # create eb user if needed
+  if id "eb" >/dev/null 2>&1; then
+    echo "user eb exists"
+  else
+    adduser --disabled-password --gecos "" eb
+  fi
 
   # create $EB_DIR
-  sudo mkdir -p "${EB_DIR}"
-  sudo chown -R ${myself} ${EB_DIR}
-  homedir=~
-  sudo chown -R ${myself} ${homedir}
+  mkdir -p "${EB_DIR}"
+  chown -R eb ${EB_DIR}
 
   # bootstrap it
-  python /tmp/bootstrap_eb.py $EB_DIR
+  /bin/su - eb -c /usr/bin/python /tmp/bootstrap_eb.py $EB_DIR
 
   # pop in some useful environment variables to our EasyBuild modulefile
-  (cat <<EOF
+  /bin/su - eb -c (cat <<EOF
 setenv ("EASYBUILD_SOURCEPATH", "${EB_DIR}/sources")
 setenv ("EASYBUILD_BUILDPATH", "${EB_DIR}/build")
 setenv ("EASYBUILD_INSTALLPATH_SOFTWARE", "${EB_DIR}/software")
@@ -228,12 +229,8 @@ if [[ $mem -lt 8 ]]; then
   printf "This script requires a minimum of 8GB ram, 8 GB disk and 8 cores !\n"
   exit 1
 fi
-if [[ "$myself" == "root" ]]; then 
-  printf "  please do not run as root, run as a user with sudo access.\n"
-  printf "  for example, to create a user eb run this:\n"
-  echo 'adduser --disabled-password --gecos "" eb'
-  echo 'echo "eb ALL=(ALL:ALL) NOPASSWD:ALL" >  /etc/sudoers.d/zz_eb'
-  echo 'su - eb'
+if ! [[ "$myself" == "root" ]]; then 
+  printf "  This script needs to be run as root.\n"
   exit 1
 fi
 if [[ "$(ls -A $EB_DIR)" ]]; then
@@ -260,8 +257,6 @@ printf "Downloading some extras...\n"
 download_extra_sources
 printf "\n\n"
 printf "************It appears to have worked! *************\n"
-printf "Login shells now have modules enabled, so all you need to do is log out and back in.\n"
-printf "   ... or you can source /etc/profile.d/modules.sh .\n"
-printf "Once you are back, you should have modules, and can run 'module load EasyBuild' to get started building!\n"
+printf "Login shells now have modules enabled, so all you need to do is login as user 'eb' or switch to the eb user 'su - eb'.\n"
+printf "Once you are back, you should have modules, and can run 'ml EasyBuild' to get started building!\n"
 exit 0
-
