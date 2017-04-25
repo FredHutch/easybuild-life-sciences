@@ -1,5 +1,5 @@
 adduser --disabled-password --gecos "" eb
-dpkg -l | grep software-properties-common > /dev/null 2>&1 || apt-get install software-properties-common
+dpkg -l | grep software-properties-common > /dev/null 2>&1 | apt-get install software-properties-common
 gpg --no-default-keyring --primary-keyring /etc/apt/trusted.gpg --recv-keys E6BA110F3C0BC307
 add-apt-repository 'deb http://repo.qlustar.com/repo/distro-supp 10.0-xenial main'
 add-apt-repository 'deb http://repo.qlustar.com/repo/distro-supp 10.0-xenial-proposed-updates main'
