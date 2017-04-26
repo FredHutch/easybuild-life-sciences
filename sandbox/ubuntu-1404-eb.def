@@ -15,7 +15,7 @@ MirrorURL: http://us.archive.ubuntu.com/ubuntu/
 
 %post
     echo "Hello from inside the container"
-    sed -i 's/$/ universe/' /etc/apt/sources.list
+    # sed -i 's/$/ universe/' /etc/apt/sources.list
     apt-get -y install curl
     curl https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh -o /tmp/easybuild_bootstrap.sh
     bash /tmp/easybuild_bootstrap.sh
