@@ -1,0 +1,96 @@
+# Built with EasyBuild version 3.0.2 on 2017-05-18_10-49-37
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+# nanopolish uses git clone --recursive to load additional code sets outside
+# of the repository.  breakdancer.tar.gz was created manualy.
+#
+# mkdir temp
+# cd temp
+# git clone --recursive https://github.com/jts/nanopolish.git && cd nanopolish && make -j8
+# cd nanopolish 
+# git checkout v0.6.0
+# cd ..
+# tar -czvf nanopolish-0.6.0.tar.gz --exclude .git* nanopolish/
+# mkdir  $EASYBUILD_SOURCEPATH/n/nanopolish
+# cp nanopolish-0.6.0.tar.gz $EASYBUILD_SOURCEPATH/n/nanopolish
+#
+easyblock = 'MakeCp'
+
+name = 'nanopolish'
+version = '0.6.0'
+
+homepage = 'http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/'
+description = """Our computational work focuses on the development of
+algorithms for handling very large sequencing data sets, from indexing
+and text compression, to probabilistic modeling and inference. We make
+our methods freely available as open source software."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/jts/nanopolish/archive/')]
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('zlib', '1.2.8'),
+]
+
+directories = [
+    'bin',
+    'eigen',
+    'etc',
+    'fast5',
+    'hdf5-1.8.14',
+    'htslib',
+    'include',
+    'lib',
+    'scripts',
+    'share',
+    'test']
+
+bin = ['gif2h5', 'h52gif', 'h5cc', 'h5copy', 'h5debug', 'h5diff', 'h5dump',
+       'h5import', 'h5jam', 'h5ls', 'h5mkgrp', 'h5perf_serial',
+       'h5redeploy', 'h5repack', 'h5repart', 'h5stat', 'h5unjam']
+libs = ['bhdf5.a', 'libhdf5_hl.la', 'libhdf5_hl.so.9', 'libhdf5.la',
+        'libhdf5.so', 'libhdf5.so.9.0.0', 'libhdf5_hl.a', 'libhdf5_hl.so',
+        'libhdf5_hl.so.9.0.0', 'libhdf5.settings', 'libhdf5.so.9']
+
+files_to_copy = ['nanopolish'] + directories
+
+sanity_check_paths = {
+    'dirs': directories,
+    'files': ['nanopolish'],
+}
+
+modloadmsg = """nanoPolish scripts are located in $EBROOTNANOPOLISH To use: $EBROOTNANOPOLISH/nanopolish"""
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 454.61,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", '--rebuild', "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'nanopolish-0.6.0-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.0.2",
+    "easybuild-framework_version": "3.0.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 266140954,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1495129776,
+    "total_memory": 32048,
+}]

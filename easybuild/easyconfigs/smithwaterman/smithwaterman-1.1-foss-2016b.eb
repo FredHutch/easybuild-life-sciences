@@ -1,0 +1,65 @@
+# Built with EasyBuild version 3.0.2 on 2017-05-11_15-05-07
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+easyblock = 'MakeCp'
+
+name = 'smithwaterman'
+version = '1.1'
+java = 'Java'
+javaver = '1.8.0_92'
+
+homepage = 'https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library'
+description = """Overview SSW is a fast implementation of the Smith-Waterman
+ algorithm, which uses the Single-Instruction Multiple-Data (SIMD)
+ instructions to parallelize the algorithm at the instruction level."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library/archive')]
+sources = ['v%(version)s.zip']
+
+dependencies = [
+    (java, javaver, '', True), 
+]
+
+start_dir = 'src'
+
+files_to_copy = ['src/ssw', 'src/libssw.so', 'src/pyssw.py', 'src/ssw_lib.py', 'src/ssw_test', 'demo']
+
+sanity_check_paths = {
+    'dirs': ['ssw', 'demo'],
+    'files': ['ssw/Aligner.java'],
+}
+modloadmsg = 'SSW scripts are located in $EBROOTSMITHWATERMAN Java classes are located in $EBROOTNANOPOLISH/ssw\n'
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 7.39,
+    "command_line": ["--buildpath='/app/easybuild/build'", '--group-writable-installdir', "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='/app/easybuild/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", '--rebuild', "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'smithwaterman-1.1-foss-2016b.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.0.2",
+    "easybuild-framework_version": "3.0.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/5.4.0/libexec/gcc/x86_64-unknown-linux-gnu/5.4.0/lto-wrapper; Target: x86_64-unknown-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/5.4.0 --with-local-prefix=/app/easybuild/software/GCCcore/5.4.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/5.4.0/dummy-/gcc-5.4.0/stage2_stuff; Thread model: posix; gcc version 5.4.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 28416284,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/6.4.5/libexec/lmod', '6.4.5'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.6 (default, Oct 26 2016, 20:30:19) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/5.4.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1494540307,
+    "total_memory": 32048,
+}]
