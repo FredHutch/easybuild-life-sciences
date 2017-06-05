@@ -5,6 +5,7 @@ add-apt-repository 'deb http://repo.qlustar.com/repo/distro-supp 10.0-xenial mai
 add-apt-repository 'deb http://repo.qlustar.com/repo/distro-supp 10.0-xenial-proposed-updates main'
 apt-get update
 apt-get install -y --allow-unauthenticated curl singularity-container
+curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh | bash
 # sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
 echo "******* please switch to user eb (su - eb) and then run: ******"
 echo "curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh | bash"
