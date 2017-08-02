@@ -12,7 +12,7 @@
 # Internal
 
 EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
-EB_VER="3.2"      # version of EasyBuild to bootstrap in the container
+EB_VER="3.2.1"      # version of EasyBuild to bootstrap in the container
 
 # install these develop branches of easybuild-easyconfigs from github repos
 EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
@@ -22,7 +22,7 @@ EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|C
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
 LMOD_BASE_URL="https://github.com/TACC/Lmod/archive/"
-EB_BASE_URL="https://github.com/hpcugent/easybuild-framework/raw/easybuild-framework-v%s/easybuild/scripts/bootstrap_eb.py"
+EB_BASE_URL="https://raw.githubusercontent.com/easybuilders/easybuild-framework/master/easybuild/scripts/bootstrap_eb.py"
 
 LUA_VER="5.3.3"   # verion of lua to install into the container
 LUAROCKS_VER="2.3.0"   # version of luarocks package manager to install into the container
