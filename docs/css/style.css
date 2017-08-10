@@ -34,3 +34,8 @@ li.r1 {
 li.r2 {
     background: #fafafa;
 }
+hdr {
+   <!-- top right bottom left -->
+   padding: 5px 0px 5px -5px;
+}
+
