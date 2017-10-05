@@ -265,9 +265,9 @@ class R(ExtsList):
     def read_bioconductor_pacakges(self):
             """ read the Bioconductor package list into bio_data dict
             """
-            bioc_urls = {'https://bioconductor.org/packages/json/3.4/bioc/packages.json',
-                         'https://bioconductor.org/packages/json/3.4/data/annotation/packages.json',
-                         'https://bioconductor.org/packages/json/3.4/data/experiment/packages.json'}
+            bioc_urls = {'https://bioconductor.org/packages/json/3.5/bioc/packages.json',
+                         'https://bioconductor.org/packages/json/3.5/data/annotation/packages.json',
+                         'https://bioconductor.org/packages/json/3.5/data/experiment/packages.json'}
             self.bioc_data = {}
             for url in bioc_urls:
                 try:
