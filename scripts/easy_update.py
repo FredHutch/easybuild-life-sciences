@@ -60,6 +60,7 @@ class ExtsList(object):
         self.pkg_name = eb.name + '-' + eb.version
         self.pkg_name += '-' + eb.toolchain['name']
         self.pkg_name += '-' + eb.toolchain['version']
+        self.pkg_version = eb.version
         self.bioconductor = False
 
         # compare easyconfig name with file name
@@ -81,7 +82,6 @@ class ExtsList(object):
             self.exts_orig.append((pkg_name, 'add'))
         if package:
             self.checkpackage = True
-            self.verbose = True
             self.exts_orig = [(package, 'add')]
         else:
             self.out = open(self.pkg_name + ".update", 'w')
@@ -119,6 +119,8 @@ class ExtsList(object):
                 pkg.append('duplicate')
                 self.exts_processed.append(pkg)
             return
+        if self.verbose > 1:
+            print('check_package: %s' % pkg)
         pkg_ver, depends = self.get_package_info(pkg)
         if pkg_ver == "error" or pkg_ver == 'not found':
             if pkg_name == self.pkg_top and pkg[1] != 'add':
@@ -147,10 +149,10 @@ class ExtsList(object):
 
         for depend in depends:
             if depend not in self.depend_exclude:
-                self.check_package([depend, 'x'])
+                self.check_package([depend, 'x', 'x'])
         self.exts_processed.append(pkg)
         self.ext_counter += 1
-        if self.verbose:
+        if self.verbose > 0:
             if len(pkg) < 4:
                 print("Error:"),
             print("%20s : %-8s (%s) [%2d, %d]" % (pkg[0], pkg[1], pkg[-1],
@@ -258,16 +260,18 @@ class R(ExtsList):
                     self.R_modules.append(pkg[0])
                 else:
                     self.R_modules.append(pkg)
-            self.read_bioconductor_pacakges()
+            self.read_bioconductor_pacakges(self.version)
         else:
             self.bioconductor = False
 
-    def read_bioconductor_pacakges(self):
+    def read_bioconductor_pacakges(self, version):
             """ read the Bioconductor package list into bio_data dict
             """
-            bioc_urls = {'https://bioconductor.org/packages/json/3.5/bioc/packages.json',
-                         'https://bioconductor.org/packages/json/3.5/data/annotation/packages.json',
-                         'https://bioconductor.org/packages/json/3.5/data/experiment/packages.json'}
+            base_url = 'https://bioconductor.org/packages/json/%s' % version
+            bioc_urls = ['%s/bioc/packages.json' % base_url,
+                         '%s/data/annotation/packages.json' % base_url,
+                         '%s/data/experiment/packages.json' % base_url
+                         ]
             self.bioc_data = {}
             for url in bioc_urls:
                 try:
@@ -341,7 +345,7 @@ class R(ExtsList):
                 pkg.append('ext_options')
             else:
                 pkg[2] = 'ext_options'
-        if self.verbose:
+        if self.verbose > 0:
             self.print_depends(pkg[0], depends)
         return pkg_ver, depends
 
@@ -460,7 +464,7 @@ if __name__ == '__main__':
         help()
         sys.exit(0)
 
-    vflag = False
+    vflag = 0 
     add_packages = []
     package = None
     file_name = os.path.basename(sys.argv[1])
@@ -472,7 +476,7 @@ if __name__ == '__main__':
         if opt == "--add":
             get_package_list(arg, add_packages)
         elif opt == "--verbose":
-            vflag = True
+            vflag += 1 
         elif opt == "--check":
             package = arg
     if file_name[:2] == 'R-':
