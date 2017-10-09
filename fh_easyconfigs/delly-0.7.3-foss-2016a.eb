@@ -1,0 +1,45 @@
+#
+#  easybuild easyconfig 
+#
+#  2016.07.18 John Dey jfdey@fredhutch.org
+#
+#  source was assembled from git then zipped.  This is not good. I've sent a message to support@github
+#
+#  mkdir /app/easybuild/sources/d/delly
+#  cd /app/easybuild/sources/d/delly
+#  git clone --recursive https://github.com/tobiasrausch/delly.git
+#  mv delly delly-0.7.3 
+#  zip v0.7.3.zip delly-0.7.3
+
+
+name = 'delly'
+version = '0.7.3'
+
+easyblock = 'MakeCp'
+
+homepage = 'https://github.com/tobiasrausch/delly'
+description = '''DELLY2: Structural variant discovery by integrated paired-end and split-read analysis'''
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/tobiasrausch/delly/archive']
+sources = ['v%(version)s.zip']
+
+directories = [
+    "assembly", 
+    "complexVariants", 
+    "docker",
+    "excludeTemplates",
+    "R", 
+    "vis"]
+
+files_to_copy = directories 
+
+sanity_check_paths = {
+    'dirs': directories, 
+    'files': ["assembly/assembly.sh"]
+} 
+
+modloadmsg = '''delly scripts are located in \\$EBROOTDELLY'''
+
+moduleclass = 'bio'

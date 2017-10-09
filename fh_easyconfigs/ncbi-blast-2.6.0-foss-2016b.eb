@@ -1,0 +1,53 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+##
+
+easyblock = 'ConfigureMake'
+
+name = 'ncbi-blast'
+version = "2.6.0"
+#versionsuffix = '-Python-2.7.12'
+
+homepage = 'http://blast.ncbi.nlm.nih.gov/'
+description = """Basic Local Alignment Search Tool, or BLAST, is an algorithm
+ for comparing primary biological sequence information, such as the amino-acid
+ sequences of different proteins or the nucleotides of DNA sequences."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+sources = ['%(name)s-%(version)s+-src.tar.gz']
+source_urls = ['http://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/%(version)s/']
+patches = [
+    '%(name)s-%(version)s_fix_make_install.patch'
+]
+
+#patches = ['%(name)s-%(version)s_basename-fixes.patch']
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('bzip2', '1.0.6'),
+    ('PCRE', '8.38'),
+    ('Perl', '5.24.1'),
+    ('libxml2', '2.9.4'),
+    ('LLVM', '3.8.1'),
+    ('Szip', '2.1'),
+    ('Python', '2.7.13'),
+    ('Boost', '1.62.0'),
+    ('Mesa', '12.0.2'),
+    ('freeglut', '3.0.0'),
+    ('glew', '1.13.0'),
+    ('HDF5','1.8.18'),
+]
+
+configopts = '--with-boost=$EBROOTBOOST --with-64 --with-bin-release --without-debug --with-mt '
+configopts += '--with-bz2=$EBROOTBZIP2 --with-pcre=$EBROOTPCRE '
+configopts += "--with-python=$EBROOTPYTHON --with-boost=$EBROOTBOOST --with-gmp=$EBROOTGMP --with-png=$EBROOTLIBPNG "
+buildopts = ' CXXFLAGS=-fpermissive'
+
+
+sanity_check_paths = {
+    'files': ["bin/blastn", "bin/blastp", "bin/blastx"],
+    'dirs': []
+}
+
+moduleclass = 'bio'

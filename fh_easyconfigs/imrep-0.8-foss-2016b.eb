@@ -1,0 +1,45 @@
+# easybuild easyconfig
+#
+#
+easyblock = 'Tarball'
+
+name = 'imrep'
+version = '0.8'
+
+homepage = 'https://github.com/mandricigor/imrep/wiki'
+description = """ImReP is a method for rapid and accurate profiling of the adaptive immune repertoires from regular RNA-Seq data"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+builddependencies = [
+    ('Python', '2.7.13'),
+]
+
+dependencies = [
+    ('Python', '2.7.13'),
+]
+
+source_urls = ['https://github.com/mandricigor/imrep/archive/']
+sources = ['v%(version)s.zip']
+
+postinstallcmds = ['./install.sh']
+
+modextrapaths = {
+                 'PYTHONPATH': ".",
+                 }
+
+sanity_check_paths = {
+    'dirs': ['db', 'example', 'ext'],
+    'files': [
+        'cast.py',
+        'clonality.py',
+        'imrep.py',
+        'info.py',
+        'search.py',
+        'utils.py',
+    ],
+}
+
+modloadmsg = 'To execute imrep: python $EBROOTIMREP/imrep.py\n'
+
+moduleclass = 'bio'

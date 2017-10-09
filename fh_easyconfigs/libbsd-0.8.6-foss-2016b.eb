@@ -1,0 +1,22 @@
+easyblock = 'ConfigureMake'
+
+name = 'libbsd'
+version = '0.8.6'
+
+homepage = 'https://libbsd.freedesktop.org/'
+description = """This library provides useful functions commonly found on BSD systems, and lacking on others like GNU systems, thus making it easier to port projects with strong BSD origins, without needing to embed the same code over and over again on each project. Part of freedesktop.org"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls  = ['https://libbsd.freedesktop.org/releases/']
+sources = [SOURCELOWER_TAR_XZ]
+
+dependencies = [
+]
+
+sanity_check_paths = {
+    'files' : ['lib/libbsd%s.a' % x for x in ["", "-ctor"]], 
+    'dirs': ['include', 'lib', 'lib/pkgconfig', 'share'],
+}
+
+moduleclass = 'lib'

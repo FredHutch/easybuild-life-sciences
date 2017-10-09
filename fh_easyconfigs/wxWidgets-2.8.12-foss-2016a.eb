@@ -1,0 +1,39 @@
+# easybuild easyconfig
+#
+# Authors::   John Dey jfdey@fredhutch.org 
+#
+# Fred Hutchinson Cancer Center 
+#
+
+easyblock = 'ConfigureMake'
+
+name = 'wxWidgets'
+version = "2.8.12"
+
+homepage = 'https://www.%(namelower)s.org/'
+description = """wxWidgets is a C++ library that lets developers create applications for Windows, Mac OS X, Linux and other platforms with a single code base."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+sources = ['%(name)s-%(version)s.tar.gz']
+source_urls = ['https://github.com/wxWidgets/wxWidgets/releases/download/v%(version)s']
+
+configopts = "--enable-unicode"
+
+lib_files = ["baseu", "baseu_net", "baseu_xml", "gtk2u_adv",
+    "gtk2u_aui",
+    "gtk2u_core",
+    "gtk2u_html",
+    "gtk2u_qa",
+    "gtk2u_richtext",
+    "gtk2u_xrc"
+    ]
+
+sanity_check_paths = {
+    'dirs': ["bin", "lib", "include", "include/wx-2.8", "include/wx-2.8/wx", "share"],
+    'files': ["bin/wxrc-2.8",
+              "include/wx-2.8/wx/wx.h"] +
+              ["lib/libwx_%s-2.8.so" % x for x in lib_files],
+}
+
+moduleclass = 'vis'

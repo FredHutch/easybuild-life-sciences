@@ -1,0 +1,38 @@
+easyblock = 'ConfigureMake'
+
+name = 'libXft'
+version = '2.3.2'
+versionsuffix = '-fontconfig-2.11.95'
+
+homepage = "http://www.freedesktop.org/wiki/Software/xlibs"
+description = """X11 client-side library"""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = [XORG_LIB_SOURCE]
+
+builddependencies = [
+    ('kbproto', '1.0.7'),
+    ('renderproto', '0.11'),
+    ('xorg-macros', '1.19.0),
+    ('xproto', '7.0.28'),
+    ('xextproto', '7.3.0'),
+    ('libpthread-stubs', '0.3'),
+    ('pkg-config', '0.29'),
+]
+
+dependencies = [
+    ('libX11', '1.6.3'),
+    ('xproto', '7.0.28'),
+    ('libXrender', '0.9.9'),
+    ('freetype', '2.6.3', '-no-HarfBuzz'),
+    ('fontconfig', '2.11.95', '-freetype-no-HarfBuzz'),
+]
+
+sanity_check_paths = {
+    'files': ['lib/libXft.a'],
+    'dirs': [],
+}
+
+moduleclass = 'vis'

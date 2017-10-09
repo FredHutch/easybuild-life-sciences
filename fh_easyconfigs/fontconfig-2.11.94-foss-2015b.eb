@@ -1,0 +1,52 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild                                                                       
+#
+#  206.04.19  John Dey jfdey@fredhutch.org
+
+name = 'fontconfig'
+version = '2.11.94'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'http://www.freedesktop.org/software/fontconfig'
+description = """Fontconfig is a library designed to provide system-wide font configuration, customization and
+application access."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ['http://www.freedesktop.org/software/fontconfig/release/']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('CMake', '3.4.1'),
+]
+
+dependencies = [
+    ('expat', '2.1.0'),
+    ('freetype', '2.6.1'),
+]
+
+configopts  = '--sysconfdir=%(installdir)s/etc '
+configopts += '--disable-docs '
+
+sanity_check_paths = {
+    'dirs': [
+        'bin',
+        'etc/fonts',
+        'include',
+        'lib',
+        'share',
+        ], 
+    'files': [
+        'bin/fc-cache',
+        'bin/fc-cat',
+        'bin/fc-list',
+        'bin/fc-match',
+        'bin/fc-pattern',
+        'bin/fc-query',
+        'bin/fc-scan',
+        'bin/fc-validate',
+        'lib/libfontconfig.%s' % SHLIB_EXT,
+        ]
+    }
+
+moduleclass = 'vis'

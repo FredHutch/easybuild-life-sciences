@@ -1,0 +1,60 @@
+#  easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+#
+# Note:  illumina blc2fastq requires Boost 1.54 and GCC 4.7 These
+#  requirements keep the toolchain frozen at 2015b.
+
+easyblock = 'ConfigureMake'
+
+name = 'bcl2fastq'
+version = '2.19.0'
+
+homepage = 'https://support.illumina.com/'
+description = """Illumina conversion Software bcl2fastq can be used to
+both demultiplex data and convert BCL files to FASTQ file formats for
+downstream analysis."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+# tarball name and project name do not match! Add '2' to name where needed
+source_urls = ['https://support.illumina.com/content/dam/illumina-support/documents/downloads/software/%(name)s/']
+sources = ['%(name)s2-v%(version)s.tar.gz']
+
+unpack_options = ' && mkdir build_dir '
+unpack_options += ' && chmod +x bcl2fastq/src/configure '
+unpack_options += ' && chmod +x bcl2fastq/src/cmake/bootstrap/installCmake.sh '
+
+start_dir = 'build_dir'
+
+configure_cmd_prefix = '../bcl2fastq/src/'
+
+configopts = '--with-cmake=$EBROOTCMAKE/bin/cmake '
+configopts += '--include=/usr/include/x86_64-linux-gnu/sys'
+
+builddependencies = [
+    ('CMake', '3.4.1'),
+]
+
+dependencies = [
+    ('Boost', '1.55.0'),
+    ('zlib', '1.2.5'),
+    ('libxml2', '2.9.2'),
+    ('libxslt', '1.1.28'),
+]
+
+#build_version = '316'
+sanity_check_paths = {
+    'dirs':  ['bin',
+              'etc',
+              'etc/%(name)s-%(version)s.316',
+              'lib',
+              'lib/%(name)s-%(version)s.316',
+              'libexec/%(name)s-%(version)s.316',
+              'share'],
+    'files': ["bin/bcl2fastq"],
+}
+
+moduleclass = 'bio'

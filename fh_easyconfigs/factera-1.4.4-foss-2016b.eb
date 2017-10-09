@@ -1,0 +1,41 @@
+#
+# EasyBuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org
+#
+# Please note that you will need to accept the terms of the license in order
+# to download FACTERA. Create an account with Stanford.edu
+
+easyblock = 'Tarball'
+
+name = 'factera'
+version = "1.4.4"
+versionsuffix = '-Perl-5.24.1'
+
+homepage = 'https://factera.stanford.edu/'
+description = """(Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+sources = ['%(name)s-v%(version)s.zip']
+source_urls = ['https://factera.stanford.edu/download.php#download']
+patches = ['%(name)s-%(version)s_fix_env.patch']
+
+dependencies = [
+    ('Boost', '1.62.0'),
+    ('ncbi-blast', '2.6.0'),
+    ('kentUtils', '302.1.0'),
+    ('SAMtools', '1.4.1'),
+]
+
+files_to_copy = ['exons.bed', 'factera.pl', 'license.txt']
+
+
+sanity_check_paths = {
+    'files': ['exons.bed', 'factera.pl', 'license.txt'],
+    'dirs': []
+}
+
+modloadmsg = """factera can be run with: $EBROOTFACTERA/factera.pl
+"""
+moduleclass = 'bio'

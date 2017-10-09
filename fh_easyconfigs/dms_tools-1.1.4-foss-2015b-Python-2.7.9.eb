@@ -1,0 +1,37 @@
+# 
+# 2016.04.06 john dey jfdey@fredhutch.org Fred Hutchenson Cancer Research Center 
+#
+# dms_tools Jesse Bloom
+#
+easyblock = 'PythonPackage'
+
+name = 'dms_tools'
+version = '1.1.4'
+
+homepage = 'http://jbloom.github.io/dms_tools'
+description = """dms_tools is a software package for analyzing and visualizing deep mutational scanning data."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = [PYPI_SOURCE] 
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '2.7.9'
+pyshortver = '.'.join(pyver.split('.')[:2])
+versionsuffix = '-%s-%s' % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+    ('Biopython', ''),
+    ('PyStan',''),
+    ('weblogolib',''),
+    ('PyPDF2',''),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,36 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Author: Adam Huffman
+# adam.huffman@crick.ac.uk
+# The Francis Crick Institute
+#
+# This is the version with the bundled libStatGen library
+# 
+# 2016.05.25 John Dey jfdey@fredhutch.org
+#   - sources moved to github
+
+name = 'bamUtil'
+version = '1.0.14'
+
+easyblock = 'MakeCp'
+
+homepage = 'http://genome.sph.umich.edu/wiki/BamUtil'
+description = """BamUtil is a repository that contains several programs
+  that perform operations on SAM/BAM files. All of these programs
+  are built into a single executable, bam."""
+
+toolchain = {'name': 'foss', 'version': '2016a'}
+
+source_urls = ['https://github.com/statgen/bamUtil/archive']
+sources = ['v%(version)s.zip']
+
+prebuildopts = ' make cloneLib && '
+
+files_to_copy = ["bin/bam", "../libStatGen"]
+
+sanity_check_paths = {
+    'files': ["bam"],
+    'dirs': ["libStatGen"],
+}
+
+moduleclass = 'bio'

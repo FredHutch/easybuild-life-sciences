@@ -1,0 +1,40 @@
+#
+# EasyBuild easyconfig 
+#
+#  John Dey jfdey@fredhutch.org
+#  Fred Hutchenson Cancer Research Institue
+#
+
+name = 'svtyper'
+version = '0.0.4'
+
+easyblock = "Tarball"
+
+homepage = 'https://github.com/hall-lab/svtyper'
+description = """Bayesian genotyper for structural variants"""
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/hall-lab/svtyper/archive/']
+sources = ['v%(version).zip']
+
+python = 'Python'
+pyver = '2.7.12'
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+versionsuffix = "-%s-%s-fh1" % (python, pyver)
+
+dependencies = [
+    (python, pyver, '-fh1'),
+]
+
+script_files = ['batchtyper',  'sv_classifier.py',  'sv_counts.sh',  'update_info.py',  
+         'vcf_allele_freq.py',  'vcf_group_multiline.py',  'vcf_modify_header.py',  
+         'vcf_paste.py'
+        ]
+sanity_check_paths = {
+    'dirs': ['scripts', 'test'],
+    'files': ['scripts/%s' % x for x in script_files]
+}
+
+modloadmsg = '''svtyper scripts are located in \\$EBROOTSVTYPER/scripts'''
+moduleclass = 'bio'

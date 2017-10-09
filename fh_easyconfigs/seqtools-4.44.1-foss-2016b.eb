@@ -1,0 +1,21 @@
+# easybuild easyconfig
+
+easyblock = 'ConfigureMake'
+
+name = 'seqtools'
+version = '4.44.1'
+
+homepage = 'http://www.sanger.ac.uk/science/tools/seqtools'
+description = """The SeqTools package contains three tools for visualising sequence alignments: Blixem, Dotter and Belvu."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['ftp://ftp.sanger.ac.uk/pub/resources/software/%(name)s/PRODUCTION/']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('libxml2', '2.9.4'),
+]
+
+moduleclass = 'lib'

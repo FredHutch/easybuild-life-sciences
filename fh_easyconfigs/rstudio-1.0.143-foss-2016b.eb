@@ -1,0 +1,44 @@
+# easybuild easyconfig 
+#
+# Ben McGough <bmcgough@fredhutch.org>
+# 
+# Fred Hutchenson Cancer Research Center 
+
+easyblock = 'CMakeMake'
+
+name = 'rstudio'
+version = '1.0.143'
+
+homepage = 'https://github.com/rstudio/rstudio'
+description = """RStudio is an integrated development environment (IDE) for the R programming language."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/rstudio/rstudioarchive')]
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('CMake', '3.6.1'),
+]
+
+dependencies = [
+   ('', ''),
+   ('', ''),
+]
+
+unpack_options = ' && mkdir breakdancer/build '
+srcdir = '..'
+start_dir = 'build'
+configopts = ' .. -DCMAKE_BUILD_TYPE=release '
+maxparallel = 1
+
+sanity_check_paths = {
+    'dirs': ['bin', 'lib'],
+    'files': ['bin/breakdancer-max',
+              'lib/breakdancer-maxunstable/AlnParser.pm',
+              'lib/breakdancer-maxunstable/Poisson.pm',
+              'lib/breakdancer-maxunstable/bam2cfg.pl',
+              ],
+}
+
+moduleclass = 'bio'

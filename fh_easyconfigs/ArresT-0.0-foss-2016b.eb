@@ -1,0 +1,41 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'Tarball'
+
+name = 'Arrest'
+version = '0.0'
+
+homepage = 'http://bat.infspire.org/arrest/'
+discription = """Antigen Receptors Research Tool / ARResT is designed to enable
+ a deep understanding of antigen receptor sequences with a cascade of 
+ algorithms and databases. ARResT, in some form or other over the years, is
+ behind all of our publications in the field, and will continue to be in the
+ foreseeable future. It is under constant development by and hosted at the
+ Bioinformatics Analysis Team / BAT (i.e. us) and many colleagues and
+ collaborators, including the EuroClonality-NGS (EC-NGS) consortium on
+ Next-Generation Sequencing for IG / TR immunoprofiling."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_url = [('https://github.com/infspiredBAT/ARResT/archive')]
+sources = ["master.zip"]
+
+dependencies = [
+    ('R', '3.6.1'),
+    ('Perl', '5.9.1')
+]
+
+postinstallcmds = ['setup.pl']
+
+sanity_check_paths = {
+    'dirs': [],
+    'files': [
+        'Arrest',
+    ],
+}
+
+modloadmsg = ""
+
+moduleclass = 'bio'

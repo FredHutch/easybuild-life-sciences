@@ -1,0 +1,43 @@
+# easybuild easyconfig
+
+name = 'HarfBuzz'
+version = '1.3.1'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'http://www.freedesktop.org/wiki/Software/HarfBuzz'
+description = """HarfBuzz is an OpenType text shaping engine."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/behdad/harfbuzz/archive']
+sources = ['%(version)s.zip']
+
+dependencies = [
+    ('GLib', '2.49.5'), 
+    ('freetype', '2.6.5'),
+    ('pkg-config', '0.29.1'),
+]
+
+builddependencies = [('GObject-Introspection', '1.48.0'),
+                     ('ragel', '6.9'),
+                     ('cairo', '1.14.6')]
+
+preconfigopts = ' ./autogen.sh && '
+
+configopts = "--enable-introspection=yes --with-gobject=yes --enable-static --enable-shared --with-cairo "
+
+modextrapaths = {
+    'GI_TYPELIB_PATH': 'share',
+    'XDG_DATA_DIRS': 'share',
+}
+
+sanity_check_paths = {
+    'files': ['lib/libharfbuzz.%s' % SHLIB_EXT,
+              'bin/hb-ot-shape-closure',
+              'bin/hb-shape'
+             ],
+    'dirs': []
+}
+
+moduleclass = 'vis'

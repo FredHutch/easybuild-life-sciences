@@ -1,0 +1,48 @@
+# 2016.03.24 John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center 
+# Seattle - United States 
+#
+#  file: ngsShoRT-2.2-foss-2015b-Perl-5.22.0-bare.eb
+
+name = 'ngsShoRT'
+version = '2.2'
+
+easyblock = "Tarball"
+
+homepage = 'http://research.bioinformatics.udel.edu/genomics/ngsShoRT/index.html'
+description = """ngsShoRT (Next Generation Sequencing Short Read Trimmer) a comprehensive and flexible open-source software package written in Perl that implements the novel algorithms developed by our group and many other commonly used pre-processing algorithms in the literature. """
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+#
+source_urls = ['http://research.bioinformatics.udel.edu/genomics/ngsShoRT/download/']
+sources = ['%(name)s_%(version)s.tar.gz']
+
+modloadmsg = """Usage: perl \\$EBROOTNGSSHORT/ngsShoRT.pl ..."""
+
+# Perl dependencies 
+# cpan> install String::Approx
+# cpan> install PerlIO::gzip
+
+perl    = 'Perl'
+perlver = '5.22.0'
+versionsuffix = '-%s-%s-bare' % (perl, perlver)
+
+dependencies = [
+    ('ngsShoRT_bundle',  version, versionsuffix),
+]
+
+sanity_check_paths = {
+    'files': ["ngsShoRT.pl", "Manual_2.2.pdf" ],
+    'dirs': []
+}
+
+testcmd  = 'mkdir output_directory' 
+testcmd += ' && perl ngsShoRT.pl'
+testcmd += ' -pe1 sample_data/fastq/SRR065390_1_1st_2000reads.fastq.gz'
+testcmd += ' -pe2 sample_data/fastq/SRR065390_2_1st_2000reads.fastq.gz'
+testcmd += ' -o output_directry -methods 5adpt'
+tests = testcmd
+
+moduleclass = 'bio'
+

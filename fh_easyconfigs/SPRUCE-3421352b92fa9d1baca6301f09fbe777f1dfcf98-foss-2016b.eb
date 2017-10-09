@@ -1,0 +1,23 @@
+easyblock = 'CMakeMake'
+
+name = 'SPRUCE'
+version = '3421352b92fa9d1baca6301f09fbe777f1dfcf98'
+
+homepage = 'http://www.github.com/raphael-group/spruce/'
+description = """SPRUCE: Somatic Phylogeny Reconstruction using Combinatorial Enumeration"""
+
+source_urls = ['http://www.github.com/raphael-group/spruce/archive/']
+sources = ['%(version)s.tar.gz']
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Boost', '1.62.0'),
+    ('LEMON', '1.3.1'),
+]
+
+builddependencies = [
+    ('CMake', '3.5.2'),
+]
+
+moduleclass = 'bio'

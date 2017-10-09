@@ -1,0 +1,63 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center 
+# Seattle - United States 
+
+name = 'PyMOL'
+version = '1.8.0.0'
+#release = '4144'
+
+easyblock = 'PythonPackage'
+easybuild_version = '2.6.0'  
+
+description = """PyMOL is an OpenGL based molecular visualization system"""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+#  Commerical site: https://www.pymol.org/
+#  Open source version of PyMol from sourceforge
+homepage = 'http://sourceforge.net/projects/pymol'
+
+source_urls = [SOURCEFORGE_SOURCE] 
+sources = ['%(namelower)s-v%(version)s-r4144.tar.bz2']
+
+python = 'Python'
+pyver = '2.7.9'
+versionsuffix = "-%s-%s" % (python, pyver)
+
+builddependencies = [
+    ('libpng', '1.6.17'),
+    ('glew',      '1.13.0'),
+    ('Pmw',       '2.0.0', versionsuffix),
+    ('freeglut',  '3.0.0'),
+    ('freetype',  '2.6.1'),   
+]
+
+dependencies = [
+    (python, pyver),
+    ('glew',      '1.13.0'),
+    ('Tk',  '8.6.3'),
+    ('Tcl', '8.6.3'),
+    ('Pmw',       '2.0.0', versionsuffix),
+    ('freeglut',  '3.0.0'),
+    ('freetype',  '2.6.1'),   
+]
+
+sanity_check_paths = {
+    'files': ['bin/pymol',
+              'lib/python2.7/site-packages/pymol-1.8.0.0-py2.7.egg-info',
+              'lib/python2.7/site-packages/pymol/api.py',
+             ],
+    'dirs': ['bin',
+             'lib',
+             'lib/python2.7/site-packages/pymol',
+             'lib/python2.7/site-packages/pymol2',
+             'lib/python2.7/site-packages/chempy',
+             'lib/python2.7/site-packages/web',
+             'lib/python2.7/site-packages/pymol/opengl/glut',
+             'lib/python2.7/site-packages/pymol/pymol_path/scripts',
+             'lib/python2.7/site-packages/pymol/pymol_path/test',
+            ]
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,29 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright 2012-2013 The Cyprus Institute
+# Authors::   Andreas Panteli <a.panteli@cyi.ac.cy>, George Tsouloupas <g.tsouloupas@cyi.ac.cy>
+# License::   MIT/GPL
+#
+#  2016.05.25 John Dey jfdey@fredhutch.org
+##
+
+name = 'BamTools'
+version = '2.4.1'
+
+homepage = 'https://github.com/pezmaster31/bamtools'
+description = """BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+sources = ['v%(version)s.tar.gz']
+source_urls = ['https://github.com/pezmaster31/bamtools/archive']
+
+builddependencies = [('CMake', '3.5.2')]
+dependencies = [
+    ('GCCcore', '5.4.0', '', True)    # needed for /usr/lib/x86-linux-gnu/libstdc++.so.6: version GLIBCXX_3.4.20
+]
+
+files_to_copy = ["bin", "lib", "include", "docs", "LICENSE", "README"]
+
+moduleclass = 'bio'

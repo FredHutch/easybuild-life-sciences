@@ -1,0 +1,22 @@
+easyblock = 'CMakeMake'
+
+name = 'LEMON'
+version = '1.3.1'
+
+homepage = 'http://lemon.cs.elte.hu/trac/lemon'
+description = """LEMON stands for Library for Efficient Modeling and Optimization in Networks. It is a C++ template library providing efficient implementations of common data structures and algorithms with focus on combinatorial optimization tasks connected mainly with graphs and networks."""
+
+source_urls = ['http://lemon.cs.elte.hu/pub/sources/']
+sources = [SOURCELOWER_TAR_GZ]
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+builddependencies = [
+    ('CMake', '3.5.2'),
+]
+
+dependencies = [
+    ('GLPK', '4.61'),
+]
+
+moduleclass = 'devel'

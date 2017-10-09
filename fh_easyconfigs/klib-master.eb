@@ -1,0 +1,45 @@
+# 
+# 
+# 
+# 
+# 
+
+easyblock = "Tarball"
+
+name = 'klib'
+version = 'master'
+
+homepage = 'https://github.com/attractivechaos/klib'
+description = """Klib strives for efficiency and a small memory footprint. Some components, such as hash table, B-tree, vector and sorting algorithms, are among the most efficient implementations of similar algorithms or data structures in all programming languages, in terms of both speed and memory use."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/attractivechaos/klib/archive']
+sources = ['master.zip']
+
+sanity_check_paths = {
+    'files': ["bgzf.h",
+        "kbit.h",
+        "kbtree.h",
+        "kdq.h",
+        "kexpr.h",
+        "kgraph.h",
+        "khash.h",
+        "khmm.h",
+        "klist.h",
+        "kmath.h",
+        "knetfile.h",
+        "knhx.h",
+        "kseq.h",
+        "kson.h",
+        "ksort.h",
+        "kstring.h",
+        "ksw.h",
+        "kthread.h",
+        "kurl.h",
+        "kvec.h",
+    ],
+    'dirs': ['lua', 'test']
+}
+
+moduleclass = 'lang'

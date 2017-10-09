@@ -1,0 +1,39 @@
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+easyblock = 'MakeCp'
+
+name = 'smithwaterman'
+version = '1.1'
+java = 'Java'
+javaver = '1.8.0_92'
+
+homepage = 'https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library'
+description = """Overview SSW is a fast implementation of the Smith-Waterman
+ algorithm, which uses the Single-Instruction Multiple-Data (SIMD)
+ instructions to parallelize the algorithm at the instruction level."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library/archive')]
+sources = ['v%(version)s.zip']
+
+dependencies = [
+    (java, javaver, '', True), 
+]
+
+start_dir = 'src'
+
+files_to_copy = ['src/ssw', 'src/libssw.so', 'src/pyssw.py', 'src/ssw_lib.py', 'src/ssw_test', 'demo']
+
+sanity_check_paths = {
+    'dirs': ['ssw', 'demo'],
+    'files': ['ssw/Aligner.java'],
+}
+
+modloadmsg = 'SSW scripts are located in $EBROOTSMITHWATERMAN Java classes are located in $EBROOTNANOPOLISH/ssw\n'
+
+moduleclass = 'bio'

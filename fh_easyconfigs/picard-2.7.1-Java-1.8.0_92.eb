@@ -1,0 +1,36 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+#
+#  picard easyblock is broken.  Picard requires local clone of repo.
+#  build from tarball after building from repo clone.
+
+easyblock = 'Tarball'
+
+name = 'picard'
+version = '2.7.1'
+versionsuffix = '-Java-%(javaver)s'
+
+homepage = 'http://broadinstitute.github.io/picard/'
+description = """A set of tools (in Java) for working with next generation sequencing data in the BAM
+  (http://samtools.github.io/hts-specs) format."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/broadinstitute/picard/archive/']
+sources = ['%(name)s-%(version)s.zip']
+
+java = 'Java'
+javaver = '1.8.0_92'
+dependencies = [(java, javaver)]
+
+modloadmsg = "To execute picard run: java -jar \\${EBROOTPICARD}/build/libs/%(name)s.jar"
+
+sanity_check_paths = {
+    'files': ["build/libs/picard.jar"],
+    'dirs': ["build", "build/libs", "etc", "gradle", "project", "src", "testdata"],
+} 
+
+moduleclass = 'bio'

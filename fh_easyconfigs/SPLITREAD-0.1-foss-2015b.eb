@@ -1,0 +1,67 @@
+#  easyconfig
+#
+#  2016.04.21  John Dey  jfdey@fredhutch.org
+#
+#  Notes: SPLITREAD distribution does not have a Makefile. Splitread is build by running a single shell script with
+#  no parameters called:  Make.sh.  
+#  
+#  Make.sh installs 'copies' to <$HOME>.
+#  Use prebuildopts 'parameter' to define $HOME and to execute Make.sh
+# 
+
+name = 'SPLITREAD'
+version = '0.1'
+
+easyblock = 'MakeCp'
+
+homepage = 'http://splitread.sourceforge.net/'
+description = """SPLITREAD is a novel method for detecting INDELs (small insertions and deletion with size less than 50bp) as well as large deletions that are within the coding regions from the exome sequencing data. It also can be applied ot the whole genome sequencing data."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = [('http://sourceforge.net/projects/%(name)s/files/', 'download')]
+sources = ['%(name)s_v%(version)s.tar.gz']
+
+start_dir = 'Code-Release'
+
+prebuildopts = ' mkdir %(installdir)s/bin && '
+prebuildopts += 'HOME=%(installdir)s/bin && ' 
+prebuildopts += '/bin/bash Make.sh # '
+
+builddependencies = [
+    ('zlib', '1.2.8'),
+]
+
+files_to_copy = [
+    ([
+        'breakReads',
+        'events5',
+        'fastqdeloea',
+        'Paired-end_match_sam',
+        'pair_match_v5',
+        'split_match_sam',
+        'SplitOEA_match',
+        'SplitReadAll_lite',
+     ], 'bin'),
+]
+
+dependencies = [
+    ('mrsFAST', '3.3.8'),
+    ('SAMtools', '0.1.19'),
+]
+
+sanity_check_paths = {
+    'dirs': ['bin',
+    ],
+    'files': ['bin/breakReads',
+              'bin/events5',
+              'bin/fastqdeloea',
+              'bin/Paired-end_match_sam',
+              'bin/pair_match_v5',
+              'bin/split_match_sam',
+              'bin/SplitOEA_match',
+              'bin/SplitReadAll_lite',
+    ],
+}
+
+moduleclass = 'bio'

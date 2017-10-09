@@ -1,0 +1,38 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# 
+# 2016.04.26 John Dey  jfdey@fredhutch.org
+#
+# Note: FreeBayes project is composed of many submdules. git clone --recursive https://github.com/ekg/freebayes.git was used to download the 
+# project.  A tarball was made and  placed in $EBROOT/sources/f/FreeBayes/...
+# Version number was found in src/Version.h   (0.9.9)
+
+name = 'freebayes'
+version = '0.9.9'
+easyblock = 'MakeCp'
+
+homepage = 'http://github/ekg/freebayes'
+description = """FreeBayes is a Bayesian genetic variant detector designed to find small polymorphisms, specifically SNPs (single-nucleotide polymorphisms), indels (insertions and deletions), MNPs (multi-nucleotide polymorphisms), and complex events (composite insertion and substitution events) smaller than the length of a short-read sequencing alignment."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+# https://github.com/ekg/freebayes/archive/master.zip
+source_urls = ['https://github.com/ekg/freebayes/archive/']
+sources = [SOURCE_TAR_GZ]                                                                                                                             
+
+# runtest = 'test'
+
+files_to_copy = [
+    (['bin/freebayes','bin/bamleftalign'], 'bin')
+]
+
+sanity_check_paths = {
+    'files': [
+        'bin/freebayes',
+        'bin/bamleftalign',
+    ],
+    'dirs': [
+        'bin',
+    ]
+}
+
+moduleclass = 'bio'

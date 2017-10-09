@@ -1,0 +1,29 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright 2012-2014 Uni.Lu/LCSB, NTUA
+# Authors::   Fotis Georgatos <fotis@cern.ch>
+# License::   MIT/GPL
+# $Id$
+#
+# This work implements a part of the HPCBIOS project and is a component of the policy:
+# http://hpcbios.readthedocs.org/en/latest/
+##
+# Updated 05.31.2017 Ben McGough <bmcgough@fredhutch.org>
+
+easyblock = 'ConfigureMake'
+
+name = 'giflib'
+version = '5.1.4'
+
+homepage = 'http://libungif.sourceforge.net/'
+description = "libungif: Tools and library routines for working with GIF images"
+
+sources = [SOURCE_TAR_BZ2]
+source_urls = [('http://sourceforge.net/projects/giflib/files', 'download')]
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [('X11','20160819')]
+
+moduleclass = 'lib'

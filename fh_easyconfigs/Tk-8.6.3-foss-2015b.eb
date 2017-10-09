@@ -1,0 +1,62 @@
+# EasyBuild easyconfig
+#
+#  2016.04.27 John Dey jfdey@fredhutch.org 
+#  with X11 
+
+name = 'Tk'
+version = '8.6.3'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'http://www.tcl.tk/'
+description = """Tk is an open source, cross-platform widget toolchain that provides a library of basic elements for building
+ a graphical user interface (GUI) in many different programming languages."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ["http://prdownloads.sourceforge.net/tcl"]
+sources = ['%(namelower)s%(version)s-src.tar.gz']
+
+patches = ['Tk-%(version)s_different-prefix-with-tcl.patch']
+
+dependencies = [
+    ('Tcl', version),
+    ('libpng', '1.6.17'),
+    ('fontconfig', '2.11.94'),
+    ('freetype', '2.6.1'),
+    ('libX11', '1.6.3'),
+    ('libXft', '2.3.2'),
+    ('libXext', '1.3.3'),
+    ('libXrender', '0.9.9'),
+    ('expat', '2.1.0'),
+    ('libxcb', '1.11.1', '-Python-2.7.9'),
+    ('libXau', '1.0.8'),
+    ('libXdmcp', '1.1.2'),
+]
+
+configopts = '--enable-threads '
+configopts += '--enable-shared '
+configopts += '--enable-64bit '
+configopts += '--with-tcl="$EBROOTTCL/lib" '
+
+start_dir = 'unix'
+#  runtest = 'test'   Note: DISPLAY needs to be set for this to work
+
+sanity_check_paths = {
+    'files': [
+        'bin/wish8.6',
+        'lib/libtk8.6.so',
+        'lib/tkConfig.sh',
+        'lib/libtkstub8.6.a',
+        'lib/tk8.6/tk.tcl',
+        'include/tk.h',
+    ],
+    'dirs':  [
+        'bin',
+        'include',
+        'lib/tk8.6',
+        'lib/pkgconfig',
+    ]
+}
+
+moduleclass = 'vis'

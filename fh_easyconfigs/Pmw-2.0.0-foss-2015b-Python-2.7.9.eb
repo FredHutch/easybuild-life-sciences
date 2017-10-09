@@ -1,0 +1,42 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Adam Mazur
+# Research IT
+# Biozentrum, University of Basel
+#
+# 2016.03  John Dey  jfdey@fredhutch.org
+# Fred Hutchenson Cancer Research Center
+# Seattle, Washington United States
+
+easyblock = "PythonPackage"
+
+name = 'Pmw'
+version = '2.0.0'
+#  Note: Source file 2.0.0 contains two versions of PMW 2.0.0 and 1.3.3; the correct version 
+#        being installed depending on the version of Python target version = '1.3.3'
+
+homepage = 'http://pmw.sourceforge.net'
+description = """Pmw is a toolkit for building high-level compound widgets in Python using the Tkinter module. """
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '2.7.9'
+versionsuffix = '-%s-%s' % (python, pyver)
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+dependencies = [
+    (python, pyver ),
+]
+
+options = {'modulename': 'Pmw'}
+
+# /usr/lib/python2.7/dist-packages/Pmw-1.3.2.egg-info
+sanity_check_paths = {
+    'dirs': ['lib/python%s/site-packages/%s' % (pyshortver, name )],
+    'files': ['lib/python%s/site-packages/%s-%s-py%s.egg-info' % (pyshortver, name, version, pyshortver )],
+}
+
+moduleclass = 'vis'

@@ -1,0 +1,48 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright 2012-2013 The Cyprus Institute
+# Authors::   Andreas Panteli <a.panteli@cyi.ac.cy>, Thekla Loizou <t.loizou@cyi.ac.cy>, George Tsouloupas <g.tsouloupas@cyi.ac.cy>
+# License::   MIT/GPL
+#
+##
+easyblock = "PythonPackage"
+
+name = 'biopython'
+version = '1.66'
+
+homepage = 'http://www.biopython.org'
+source_urls = ['https://github.com/biopython/biopython.git']
+description = """Biopython is a set of freely available tools for biological computation written
+in Python by an international team of developers. It is a distributed collaborative effort to
+develop Python libraries and applications which address the needs of current and future work in
+bioinformatics. """
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '2.7.9'
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+versionsuffix = "-%s-%s" % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+    # ('numpy', '1.9.1', versionsuffix)  Numpy is part of base Python, so removing from eb 
+]
+
+# /app/easybuild/software/biopython/1.66-foss-2015b-Python-2.7.9/lib/python2.7/site-packages/biopython-1.66-py2.7.egg-info
+sanity_check_paths = {
+    'files': ['lib/python%s/site-packages/biopython-%s-py%s.egg-info' % (pyshortver, version, pyshortver)],
+    'dirs': ['lib/python%s/site-packages/Bio' % (pyshortver),
+             'lib/python%s/site-packages/BioSQL' % (pyshortver) ]
+}
+
+runtest = "python setup.py test" 
+
+options = {'modulename': 'Bio'}
+
+moduleclass = 'bio'

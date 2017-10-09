@@ -1,0 +1,32 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+
+easyblock = 'Tarball'
+
+name = 'mixcr'
+version = '2.1.5'
+
+homepage = 'https://github.com/milaboratory/mixcr'
+description = "MiXCR is a universal software for fast and accurate analysis of T- and B- cell receptor repertoire sequencing data."
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/milaboratory/mixcr/releases/download/v%(version)s']
+sources = ['%(name)s-%(version)s.zip']
+
+dependencies = [('Java', '1.8.0_121', '', True)]
+
+# add the software directory to PATH
+modextrapaths = {
+    'PATH': '',
+}
+
+modloadmsg = "To run just type: mixcr\n"
+
+sanity_check_paths = {
+    'files': ["mixcr.jar", "mixcr"],
+    'dirs': ['libraries'],
+}
+
+moduleclass = 'bio'

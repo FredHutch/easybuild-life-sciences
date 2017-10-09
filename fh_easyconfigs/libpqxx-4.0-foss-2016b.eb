@@ -1,0 +1,37 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+
+easyblock = 'ConfigureMake'
+
+name = 'libpqxx'
+version = '5.0.1'
+
+homepage = 'http://pqxx.org/development/libpqxx/'
+description = """libpqxx is the official C++ client API for PostgreSQL,
+ the enterprise-strength open-source relational database."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+source_urls = [('https://github.com/jtv/libpqxx/archive/')]
+sources = ['%(version)s.zip']
+
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('PostgreSQL', '9.6.1'),
+]
+
+configopts = "--disable-documentation"
+
+sanity_check_paths = {
+    'files': ['bin/pqxx-config',
+              'lib/libpqxx.a',
+              'lib/libpqxx.la',
+              'include/pqxx/cursor.hxx'
+              ],
+    'dirs': ['bin', 'include', 'include/pqxx', 'lib'],
+}
+
+moduleclass = 'lib'

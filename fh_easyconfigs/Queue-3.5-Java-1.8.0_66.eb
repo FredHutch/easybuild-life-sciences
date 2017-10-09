@@ -1,0 +1,40 @@
+##
+# This file is an EasyBuild reciPY 
+#
+# Authors::   John Dey 
+#
+##
+
+easyblock = 'Tarball'
+
+name = 'Queue'
+version = '3.5'
+
+homepage = 'http://www.broadinstitute.org/gatk/'
+description = """The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute 
+ to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,
+ with a primary focus on variant discovery and genotyping as well as strong emphasis on 
+ data quality assurance. Its robust architecture, powerful processing engine and 
+ high-performance computing features make it capable of taking on projects of any size."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# download manually from http://www.broadinstitute.org/gatk/download
+sources = ['Queue-3.5.tar.bz2']
+
+java = 'Java'
+javaver = '1.8.0_66'
+versionsuffix = '-%s-%s' % (java, javaver)
+dependencies = [
+    (java, javaver),
+    ('GATK', '3.5', versionsuffix),
+]
+
+modloadmsg = """To execute Queue run: java -jar \\$EBROOTQUEUE/Queue.jar"""
+
+sanity_check_paths = {
+    'files': ["Queue.jar"],
+    'dirs': ["resources"],
+}
+
+moduleclass = 'bio'

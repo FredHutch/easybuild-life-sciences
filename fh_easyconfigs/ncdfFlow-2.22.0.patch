@@ -1,0 +1,58 @@
+diff -ruN ncdfFlow.orig/configure.ac ncdfFlow/configure.ac
+--- ncdfFlow.orig/configure.ac	2017-04-24 13:42:52.000000000 -0700
++++ ncdfFlow/configure.ac	2017-08-08 16:45:26.312269000 -0700
+@@ -34,7 +34,7 @@
+ 		
+ 		if test -z "${HDF5_CFLAGS}" ; then
+         	AC_MSG_NOTICE([pkg-config was not able to find the hdf5 library.])
+-        	AC_MSG_NOTICE([Trying some common locations."])
++        	AC_MSG_NOTICE([Trying some common locations.])
+ 			#still not detected, then search some default standard location
+ 			for HDF5_PREFIX in "/usr/local" #skip searching/usr since it is standard system path
+ 			do
+@@ -55,6 +55,7 @@
+ 			fi	
+ 			done
+ 		else
++			AC_MSG_NOTICE(["using pkg-config to search for hdf5 library"])
+ 			HDF5_LIBS="`${HDF_CONFIG} --libs`"
+ 		fi
+ 	fi
+@@ -70,16 +71,21 @@
+ if test -z "${H5CC}"; then
+ 			AC_PATH_PROG(H5CC, h5cc)
+ fi
+-if ! test -z "${H5CC}" ; then
+-	if test -n "`h5cc -showconfig|grep 'Parallel HDF5'|grep yes`"; then
+-		MPI_CPPFLAGS="`mpicc -showme:compile`"
+-	fi
++if test -z "${MPICC}"; then
++            AC_PATH_PROG(MPICC, mpicc)
+ fi
+-	
++if test -n "${H5CC}" ; then
++    if test -n "`h5cc -showconfig|grep 'Parallel HDF5'|grep yes`"; then
++            AC_MSG_NOTICE(["setting MIP_LIBS with mpicc"])
++ 			MPI_CPPFLAGS="`mpicc -showme:compile`"
++			MPI_LIBS="-L`mpicc -showme:libdirs`"
++    fi
++fi
++
+ 
+ 
+ PKG_CPPFLAGS="${HDF5_CFLAGS} ${MPI_CPPFLAGS}"
+-PKG_LIBS="${HDF5_LIBS}"
++PKG_LIBS="${HDF5_LIBS} ${MPI_LIBS}"
+ 
+ AC_MSG_NOTICE([PKG_CPPFLAGS = ${PKG_CPPFLAGS}])
+ AC_MSG_NOTICE([PKG_LIBS = ${PKG_LIBS}])
+diff -ruN ncdfFlow.orig/src/readFrame.cpp ncdfFlow/src/readFrame.cpp
+--- ncdfFlow.orig/src/readFrame.cpp	2017-04-24 16:11:03.000000000 -0700
++++ ncdfFlow/src/readFrame.cpp	2017-08-07 23:31:06.144046000 -0700
+@@ -1,3 +1,6 @@
++#undef MPICH_IGNORE_CXX_SEEK
++#define OMPI_IGNORE_CXX_SEEK 1
++
+ #include "hdf5.h"
+ 
+ #define DATASETNAME3d "/exprsMat"

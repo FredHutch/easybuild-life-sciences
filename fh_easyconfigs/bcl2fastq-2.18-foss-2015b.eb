@@ -1,0 +1,49 @@
+#  easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org 
+#
+#  Fred Hutchinson Cancer Research Center
+#
+
+easyblock = 'ConfigureMake'
+
+name = 'bcl2fastq'
+version = '2.18.0.12'
+
+homepage = 'https://support.illumina.com/'
+description = """Illumina conversion Software bcl2fastq can be used to both demultiplex data and convert 
+BCL files to FASTQ file formats for downstream analysis. """
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+# tarball name and project name do not match! Add '2' to name where needed
+source_urls = ['http://support.illumina.com/content/dam/illumina-support/documents/downloads/software/%(name)s/']
+sources = ['%s2-v%s-tar.zip' % (name, version.replace('.', '-'))]
+
+unpack_options = ' && tar -xzf %(name)s2-v%(version)s.tar.gz '
+unpack_options += ' && mkdir build_dir '
+unpack_options += ' && chmod +x bcl2fastq/src/configure ' 
+unpack_options += ' && chmod +x bcl2fastq/src/cmake/bootstrap/installCmake.sh ' 
+
+start_dir = 'build_dir'
+
+configure_cmd_prefix = '../bcl2fastq/src/'
+
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('libxml2', '2.9.2'),
+    ('libxslt', '1.1.28'),
+    ('Boost', '1.58.0'),
+    ]
+
+sanity_check_paths = {
+    'dirs':  ['bin', 
+              'etc', 
+              'lib', 
+              'lib/bcl2fastq-%(version)s',
+              'libexec', 
+              'share' ],
+    'files': ["bin/bcl2fastq"],
+}
+
+moduleclass = 'bio'

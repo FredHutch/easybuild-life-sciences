@@ -1,0 +1,41 @@
+##
+#
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# updated:  John Dey jfdey@fredhutch.org
+#
+# Fred Hutch Cancer Research Center Seattle United States
+#
+#
+## 
+name = 'beagle-lib'
+version = '2.1.2'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'https://github.com/beagle-dev/beagle-lib'
+description = """beagle-lib is a high-performance library that can perform the core
+ calculations at the heart of most Bayesian and Maximum Likelihood
+ phylogenetics packages."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ['https://github.com/beagle-dev/beagle-lib/archive/']
+sources = ['beagle_release_2_1_2.zip']       #  Tag name is non standard %(version)s does not work
+
+dependencies = [ ('Java', '1.8.0_66', '', True) ] 
+
+preconfigopts = './autogen.sh && '
+
+# parallel build does not work
+parallel = 1
+
+sanity_check_paths = {
+    'files': ["include/libhmsbeagle-1/libhmsbeagle/%s" % includefile
+              for includefile in ["beagle.h", "platform.h"]] +
+             ["lib/libhmsbeagle%s.so" % libfile
+              for libfile in ["-cpu", "-cpu-sse", "-jni" ,""]],
+    'dirs' : []
+}
+
+moduleclass = 'numlib'

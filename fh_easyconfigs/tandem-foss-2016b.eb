@@ -1,0 +1,33 @@
+#
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+#
+
+easyblock = 'MakeCp'
+
+name = 'tandem'
+version = '17-01-01-2'
+
+homepage = 'http://www.thegpm.org/TANDEM/instructions.html'
+description = """X! Tandem open source is software that can match tandem mass spectra with peptide sequences, in a process that has come to be known as protein identification."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['ftp://ftp.thegpm.org/projects/tandem/source']
+sources = ['%(name)s-linux-%(version)s.zip']
+
+prebuildopts = ' cd src && touch mprocess.cpp && touch ../bin/tandem.exe && '
+
+#dependencies = [(java, javaver)]
+
+modloadmsg = """To execute tandum use:  \\$EBROOTTANDEM/bin/tandem.exe"""
+
+files_to_copy = [ 'bin', 'fasta' ]
+
+sanity_check_paths = {
+    'files': ['bin/tandem.exe'],
+    'dirs': ['bin', 'fasta'],
+}
+
+moduleclass = 'bio'

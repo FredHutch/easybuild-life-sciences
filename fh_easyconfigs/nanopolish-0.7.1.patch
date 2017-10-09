@@ -1,0 +1,14 @@
+diff -ruN nanopolish-0.7.1.orig/Makefile nanopolish-0.7.1/Makefile
+--- nanopolish-0.7.1.orig/Makefile	2017-07-05 09:30:27.000000000 -0700
++++ nanopolish-0.7.1/Makefile	2017-07-10 17:22:36.506653000 -0700
+@@ -16,8 +16,8 @@
+ CC ?= gcc
+ 
+ # Change the value of HDF5 or EIGEN below to any value to disable compilation of bundled HDF5 code
+-HDF5=install
+-EIGEN=install
++HDF5=false
++EIGEN=false
+ 
+ # Check operating system, OSX doesn't have -lrt
+ UNAME_S := $(shell uname -s)

@@ -1,0 +1,43 @@
+#  easyconfig
+#
+#  2016.04.22  John Dey  jfdey@fredhutch.org
+#
+#  Note: distribution uses version in an inconsistent fasion: 0.04 and 0.4 
+#
+
+name = 'VariationHunter'
+version = '0.4'
+
+easyblock = 'MakeCp'
+
+homepage = 'http://variationhunter.sourceforge.net/Home'
+description = """Variation Hunter - CommonLaw is a tool for discovery of structural variation in one or more individuals simultaneously using high throughput technologies."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+
+#                https://sourceforge.net/projects/variationhunter/files/V0.4/VariationHunter_CL.v0.04.tar.gz/download
+#                https://sourceforge.net/projects/variationhunter/files/V0.4/VariationHunter_CL.v0.04.tar.gz/download 
+source_urls = [('https://sourceforge.net/projects/%(namelower)s/files/V%(version)s/', 'download')]
+sources = ['%(name)s_CL.v0.04.tar.gz']
+
+start_dir = 'clustering'
+
+modloadmsg = """To execute Variation Hunter type: VH""" 
+
+files_to_copy = [
+    ([
+        'VH',
+     ], 'bin'),
+]
+
+sanity_check_paths = {
+    'dirs': [
+        'bin',
+    ],
+    'files': [
+        'bin/VH',
+    ],
+}
+
+moduleclass = 'bio'

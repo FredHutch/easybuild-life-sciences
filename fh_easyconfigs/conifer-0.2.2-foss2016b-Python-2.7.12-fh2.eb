@@ -1,0 +1,42 @@
+#  easybuild easyconfig
+#
+#  John Dey  jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center 
+
+name = 'conifer'
+version = '0.2.2'
+
+easyblock = 'Tarball'
+
+homepage = 'https://sourceforge.net/projects/conifer'
+description = """CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('http://sourceforge.net/projects/%(name)s/files/', 'download')]
+sources = ['%(name)s_v%(version)s.tar.gz']
+
+python = 'Python'
+pyver = '2.7.12'
+versionsuffix = '-%s-%s-fh2' % (python, pyver)
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+dependencies = [
+    (python, pyver, '-fh2'),
+]
+
+postinstallcmds = [ 'chmod -R +x %(installdir)s' ]
+
+sanity_check_paths = {
+    'dirs': [
+    ],
+    'files': [
+        'conifer_functions.py',
+        'conifer.py',
+    ],
+}
+
+modloadmsg = "To execute conifer: python \\$EBROOTCONIFER/conifer.py"
+
+moduleclass = 'bio'

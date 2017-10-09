@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+# 2016.05.16 John Dey jfdey@fredhutch.org
+#
+
+name = 'SWIG'
+version = '3.0.8'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'http://www.swig.org/'
+description = """SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+toolchainopts = {'pic': True, 'opt': True, 'optarch': True}
+
+source_urls = [SOURCEFORGE_SOURCE]
+sources = [SOURCELOWER_TAR_GZ]
+
+python = 'Python'
+pythonversion = '2.7.9'
+versionsuffix = '-%s-%s' % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+    ('PCRE', '8.38'),
+]
+
+sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/swig']}
+
+moduleclass = 'devel'

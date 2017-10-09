@@ -1,0 +1,14 @@
+easyblock = 'ConfigureMake'
+
+name = 'rsync'
+version = '3.1.2'
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+description = """rsync is an open source utility that provides fast incremental file transfer"""
+homepage = 'https://rsync.samba.org'
+
+sources = [SOURCELOWER_TAR_GZ]
+source_urls = ['https://download.samba.org/pub/rsync/src/']
+
+sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/rsync']}

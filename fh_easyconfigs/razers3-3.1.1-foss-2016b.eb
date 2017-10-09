@@ -1,0 +1,28 @@
+# 
+# Author: John Dey   jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center 
+# Seattle Washington 
+
+easyblock = 'Tarball'
+
+name = 'razers3'
+version = '3.1.1'
+
+homepage = 'https://www.ncbi.nlm.nih.gov/pubmed/22923295'
+description = """RazerS 3 is a tool for mapping millions of short genomic reads
+onto a reference genome. It was designed with focus on mapping next-generation
+sequencing reads onto whole DNA genomes. RazerS 3 searches for matches of
+reads with a percent identity above a given threshold (-i X), whereby it
+detects alignments with mismatches as well as gaps."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://packages.seqan.de/razers3/']
+sources = ['%(name)s-%(version)s-Linux-x86_64.tar.bz2']
+
+sanity_check_paths = {
+    'files': ['bin/razers3'],
+    'dirs': ['bin'],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,49 @@
+# easybuild easyconfig
+
+#  Note:  Homer.tar was created by hand from configureHomer.pl and placein into sources/h/Homer
+
+easyblock = 'CmdCp'
+
+name = 'Homer'
+version = 'v4.9'
+
+homepage = 'http://homer.ucsd.edu/homer/download.html'
+description = '''HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for Motif Discovery and ChIP-Seq analysis. It is a collection of command line programs for unix-style operating systems written in mostly perl and c++. Homer was primarily written as a de novo motif discovery algorithm that is well suited for finding 8-12 bp motifs in large scale genomics data.'''
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+builddependencies = [
+    ('Perl', '5.24.1'),
+]
+
+dependencies = [
+    ('Perl', '5.24.1'),
+    ('zlib', '1.2.8'),
+]
+
+source_urls = ['http://homer.ucsd.edu/homer']
+sources = ['Homer.tar']
+
+cmds_map = [('', 'perl ./configureHomer.pl -install')] 
+
+modextrapaths = {
+                 'PATH': "bin",
+                 }
+
+files_to_copy = ['bin', 'config.txt', 'data',
+                 'DoughnutDocumentation.pdf',
+                 'motifs',
+                 'update',]
+
+sanity_check_paths = {
+    'dirs': ['bin', 'data', 'motifs', 'update'],
+    'files': [
+        'config.txt',
+        'DoughnutDocumentation.pdf',
+        'bin/homer',
+        'data/accession/homologene.data',
+        'motifs/hnf1b.motif',
+    ],
+}
+
+moduleclass = 'bio'

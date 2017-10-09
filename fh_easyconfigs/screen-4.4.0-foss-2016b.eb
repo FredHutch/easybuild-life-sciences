@@ -1,0 +1,21 @@
+# easybuild easyconfig
+#
+#  Fred Hutchinson Cancer Research Center
+#
+easyblock = 'ConfigureMake'
+
+name = 'screen'
+version = '4.4.0'
+
+description = """Screen is a full-screen window manager that multiplexes a physical terminal between several processes, typically interactive shells."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+homepage = 'http://www.gnu.org/software/screen/'
+source_urls = [GNU_SOURCE]
+sources = [SOURCELOWER_TAR_GZ]
+
+sanity_check_paths = {'dirs': ['bin','share'], 'files': ['bin/screen']}
+
+moduleclass = 'tools'

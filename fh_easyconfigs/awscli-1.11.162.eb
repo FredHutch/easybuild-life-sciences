@@ -1,0 +1,28 @@
+easyblock = 'PythonPackage'
+
+name = 'awscli'
+version = '1.11.162'
+
+homepage = 'https://pypi.python.org/pypi/awscli'
+description = 'Universal Command Line Environment for AWS'
+
+toolchain = {'name': 'dummy', 'version': 'dummy' }
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+osdependencies = [
+    ('python2.7'),
+]
+
+modluafooter = """
+execute {cmd="complete -C \'".. root.. "/bin/aws_completer\' aws",modeA={"load"}}
+execute {cmd="complete -r aws",modeA={"unload"}}
+"""
+
+sanity_check_paths = {
+    'files': ['bin/aws'],
+    'dirs': ['lib/python2.7/site-packages/'],
+}
+
+moduleclass = 'tools'

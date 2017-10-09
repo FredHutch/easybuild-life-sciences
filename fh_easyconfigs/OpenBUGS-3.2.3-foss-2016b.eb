@@ -1,0 +1,25 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Fred Hutch Cancer Research Center
+#
+easyblock = 'ConfigureMake'
+
+name = 'OpenBUGS'
+version = '3.2.3'
+
+homepage = 'http://www.openbugs.net/'
+description = """BUGS is a software package for performing Bayesian inference Using Gibbs Sampling."""
+
+toolchain = {'name': 'foss', 'version': '2015a'}
+
+source_urls = ['http://www.openbugs.net/w/OpenBUGS_3_2_3?action=AttachFile&do=get&target=']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+builddependencies = [
+#    ('Automake', '1.15'),
+]
+
+parallel = 1
+moduleclass = 'bio'

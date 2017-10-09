@@ -1,0 +1,40 @@
+#  
+#  John Dey jfdey@fredhutch.org
+# 
+# Wandy is not versioned.  I have contacted the developer Jan 13, 2017
+
+easyblock = 'Tarball'
+
+name = 'Wandy'
+version = 'Feb2_2015'
+
+homepage = "http://bioinformaticstools.mayo.edu/research/wandy/"
+description = """Wandy is designed for Copy Number Variation (CNV) and Aneuploidy detection from large genomes such as human. It takes a sorted BAM file as input and report predicted chromosome regions that have amplifications or deletions using LOG2 ratio, generate graphic reports."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://s3-us-west-2.amazonaws.com/mayo-bic-tools/wandy']
+sources = ['%(name)s.tar.gz']
+
+java = 'Java'
+javaver = '1.8.0_92'
+versionsuffix = '-%s-%s' % (java, javaver)
+
+#  Note: R has its own Java dependancy.  
+dependencies = [(java, javaver, '', True),
+                ('R', '3.3.2', '-fh1'),
+               ]
+
+files_to_copy = ["reference", "script", "tool.info", "Wandy"]
+
+sanity_check_paths = {
+    'files': ["reference/run_info_Feb2_2015.ini",
+              "script/jar/HumanGenomeReadInfoWithBedNipt.jar",
+              "script/r/Rcall.R",
+              "script/r/Rcallrun.R"],
+    'dirs': ["reference", "script", "script/r", "script/jar"], 
+}
+
+modloadmsg = """Wandy can be run with: \\$EBROOTWANDY/Wandy"""
+
+moduleclass = 'bio'

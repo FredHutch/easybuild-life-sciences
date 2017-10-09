@@ -1,0 +1,15 @@
+diff -Nru pydot-pydot-1.0.28.orig/pydot.py pydot-pydot-1.0.28/pydot.py
+--- pydot-pydot-1.0.28.orig/pydot.py	2016-05-16 12:33:46.397697000 -0700
++++ pydot-pydot-1.0.28/pydot.py	2016-05-16 12:34:40.851864000 -0700
+@@ -17,9 +17,9 @@
+ Distributed under MIT license [http://opensource.org/licenses/mit-license.html].
+ """
+ 
+-__revision__ = "$LastChangedRevision$"
++__revision__ = "28"
+ __author__ = 'Ero Carrera'
+-__version__ = '1.0.%d' % int( __revision__[21:-2] )
++__version__ = '1.0.%d' % int( __revision__ )
+ __license__ = 'MIT'
+ 
+ import os

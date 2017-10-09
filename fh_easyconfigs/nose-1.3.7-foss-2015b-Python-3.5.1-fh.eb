@@ -1,0 +1,22 @@
+name = 'nose'
+version = '1.3.7'
+easyblock = 'PythonPackage'
+
+homepage = 'http://readthedocs.org/docs/nose/'
+description = """nose extends the test loading and running features of unittest, making
+it easier to write, find and run tests.
+"""
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '3.5.1'
+pysuffix = '-fh'
+versionsuffix = '-%s-%s%s' % (python, pyver, pysuffix)
+
+dependencies = [
+    (python, pyver, pysuffix),
+]
+

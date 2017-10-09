@@ -1,0 +1,31 @@
+##
+#
+# 2016.03.31 John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center Seattle United States
+#
+#
+## 
+name = 'libomxil-bellagio'
+version = '0.9.3'
+
+easyblock = 'ConfigureMake'
+
+homepage = 'http://omxil.sourceforge.net/'
+description = """OpenMAX Integration Layer (IL) is a standard API to access Multimedia Components on mobile platforms. Bellagio is an opensource implementation of the OpenMAX IL API that runs on Linux PC"""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = [('http://sourceforge.net/projects/omxil/Bellagio %(version)s', 'download')]
+
+preconfigopts = 'autoreconf -i && '
+
+# parallel build does not work
+parallel = 1
+
+sanity_check_paths = {
+    'files': [],
+    'dirs' : []
+}
+
+moduleclass = 'vis'

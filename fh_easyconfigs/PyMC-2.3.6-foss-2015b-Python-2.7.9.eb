@@ -1,0 +1,88 @@
+# easybuild easyconfig
+#
+# 2016.05.16 John Dey jfdey@fredhutch.org
+
+name = 'PyMC'
+version = '2.3.6'
+
+easyblock = 'Bundle'
+
+homepage = 'https://pymc-devs.github.io/'
+description = """PyMC is a python module that implements Bayesian statistical models and fitting algorithms, including Markov chain Monte Carlo. Its flexibility and extensibility make it applicable to a large suite of problems. Along with core sampling functionality, PyMC includes methods for summarizing output, plotting, goodness-of-fit and convergence diagnostics."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+# this is a bundle of Python packages
+exts_defaultclass = 'PythonPackage'
+
+python = 'Python'
+pyver = '2.7.9'
+versionsuffix = '-%s-%s' % (python, pyver)
+pyshortver = '.'.join(pyver.split('.')[:2]) 
+
+blaslib = 'OpenBLAS'
+blasver = '0.2.14'
+blas = '%s-%s' % (blaslib, blasver)
+
+gnu = 'GNU'
+gnuver = '4.9.3'
+binutilsver = '2.25'
+tcver = '%s-%s-%s' % (gnu, gnuver, binutilsver)
+
+blassuff = 'LAPACK-3.5.0'
+
+#  patches = ['%(name)s-%(version)s.patch']
+
+dependencies = [
+     #OpenBLAS/0.2.14-GNU-4.9.3-2.25-LAPACK-3.5.0
+    (blaslib, blasver, '', (tcver, blassuff)),
+    (python, pyver),
+]
+
+cleanupoldbuild = False
+keeppreviousinstall = False
+
+exts_list = [
+    ('cycler', '0.9.0', {
+        'modulename': 'cycler',
+        'source_urls': [PYPI_SOURCE],
+        'source_tmpl': 'cycler-%(version)s.tar.gz',
+    }),
+    ('matplotlib', '1.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/matplotlib'],
+    }),
+    ('pyparsing', '1.5.7', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyparsing'],
+    }),
+    ('pydot', '1.0.29', {
+        'source_urls': ['https://github.com/erocarrera/pydot/archive'],
+        'source_tmpl': 'v%(version)s.zip',
+    }),
+    ('pandas', '0.17.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pandas'],
+    }),
+#    ('pymc', '2.3.6', {
+#        'source_urls': ['https://github.com/pymc-devs/pymc/archive'],
+#        'source_tmpl': 'v%(version)s.zip',
+#    }),
+]
+
+modextrapaths = {'PYTHONPATH': ['lib/python%s/site-packages' % pyshortver]}
+
+# specify that Bundle easyblock should run a full sanity check, rather than just trying to load the module
+full_sanity_check = False
+
+sanity_check_paths = {
+    'dirs': [
+        'lib/python%s/site-packages' % (pyshortver),
+        'lib/python%s/site-packages/matplotlib-1.5.1-py2.7-linux-x86_64.egg' % (pyshortver),
+        'lib/python%s/site-packages/pandas-0.17.1-py2.7-linux-x86_64.egg' % (pyshortver),
+    ],
+    'files': [
+        'lib/python%s/site-packages/cycler-0.9.0-py2.7.egg' % (pyshortver),
+        'lib/python%s/site-packages/pydot-1.0.29-py2.7.egg' % (pyshortver),
+        'lib/python%s/site-packages/pyparsing-1.5.7-py2.7.egg-info' % (pyshortver),
+    ],
+}
+
+moduleclass = 'math'

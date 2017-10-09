@@ -1,0 +1,10 @@
+# neovim easyconfig for easybuild
+# Author: Ben McGough
+# Fred Hutchinson Cancer Research Center
+
+name = 'neovim'
+version = '0.1.5'
+
+easyblock = 'ConfigureMake'
+
+

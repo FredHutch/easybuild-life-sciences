@@ -1,0 +1,33 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#  Fred Hutch Cancer Research Center
+# 
+easyblock = 'MakeCp'
+
+name = 'SUGEN'
+version = '8.3'
+
+homepage = 'https://github.com/dragontaoran/SUGEN/'
+description = """SUGEN is a command-line software program written in C++ to implement the weighted and unweighted approaches described by Lin et al. (2014) for various types of association analysis under complex survey sampling. The current version of the program can accommodate continuous, binary, and right-censored time-to-event traits."""
+
+source_urls = ['https://github.com/dragontaoran/SUGEN/archive']
+sources = ['master.zip']
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('zlib', '1.2.8'),
+]
+
+builddependencies = [
+]
+
+files_to_copy = [ 'SUGEN', 'CodeBase', 'eigen-eigen-07105f7124f9', 'libStatGen']
+
+sanity_check_paths = {
+    'files': ['SUGEN'],
+    'dirs': ['CodeBase', 'libStatGen'],
+}
+
+moduleclass = 'bio'

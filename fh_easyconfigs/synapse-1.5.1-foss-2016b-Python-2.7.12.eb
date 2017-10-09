@@ -1,0 +1,46 @@
+# easybuild easyconfig
+#
+# 2016.05.27 John Dey jfdey@fredhutch.org
+#
+
+name = 'synapseclient'
+version = '1.5.1'
+
+easyblock = "PythonPackage"
+
+
+homepage = 'https://www.synapse.org/'
+description = """A Python client for Sage Bionetwork's Synapse, a collaborative compute space that allows scientists to share and analyze data together. The Python client can be used as a library for development of software that communicates with Synapse or as a command-line utility."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/Sage-Bionetworks/synapsePythonClient/archive']
+sources = ['v%(version)s.zip']
+
+python = "Python"
+pythonversion = '2.7.12'
+pyshortver = ".".join(pythonversion.split(".")[:-1])
+
+versionsuffix = "-%s-%s" % (python, pythonversion)
+
+dependencies = [
+    (python, pythonversion),
+]
+
+pyprefix = 'lib/python%s/site-packages' % pyshortver
+eggname = '%%(name)s-%%(version)s-py%s.egg' % pyshortver
+
+sanity_check_paths = {
+    'files': [
+        'bin/futurize',
+        'bin/pasteurize',
+        'bin/synapse',
+        ('%s/site.py' % (pyprefix)),
+    ],
+    'dirs': ['bin',
+             pyprefix,
+             ('%s/%%(name)s' % pyprefix, '%s/%s' % (pyprefix, eggname))
+    ],
+}
+
+moduleclass = 'vis'

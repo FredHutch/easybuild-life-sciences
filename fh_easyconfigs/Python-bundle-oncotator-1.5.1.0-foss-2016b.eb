@@ -1,0 +1,22 @@
+easyblock = 'Bundle'
+
+name = 'Python-bundle-oncotator'
+version = '1.5.1.0'
+pyver = '2.7.12'
+#versionsuffix = '-Python-%(rver)s-fh1'
+
+homepage = 'http://portals.broadinstitute.org/oncotator/'
+description = """Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '2.7.12', '-fh1'),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['AnnotationDbi', 'BiocInstaller', 'GenomicFeatures'],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,41 @@
+# easybuild easyconfig
+#
+#  2016.05.16 John Dey jfdey@fredhutch.org
+#
+
+name = 'pydot'
+version = '1.0.28'
+
+easyblock = "PythonPackage"
+
+homepage = 'https://github.com/erocarrera/pydot'
+description = """Graphviz’s dot language Python interface. This module provides a full interface for process graphs in Graphviz’s dot language."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ['https://github.com/erocarrera/pydot/archive/']
+sources = [SOURCE_ZIP]
+patches = ['pydot-%s.patch' % version]
+
+python = "Python"
+pythonver = '2.7.9'
+pyshortver = ".".join(pythonver.split('.')[:-1])
+versionsuffix = '-%s-%s' % (python, pythonver)
+
+dependencies = [
+    (python, pythonver),
+    ('freetype', '2.6.1'),
+    ('libpng', '1.6.17'), 
+    ('Graphviz', '2.38.0'),
+]
+
+sanity_check_paths = {
+    'files': [
+        'lib/python%s/site-packages/%s-%s-py%s.egg-info' % (pyshortver, name, version, pyshortver ),
+        'lib/python%s/site-packages/dot_parser.py' % (pyshortver),
+        'lib/python%s/site-packages/pydot.py' % (pyshortver),
+    ],
+    'dirs': ['lib/python%s/site-packages/' % (pyshortver )],
+}
+
+moduleclass = 'lang'

@@ -1,0 +1,20 @@
+# easyblock easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'ConfigureMake'
+
+name = 'udunits'
+version = '2.2.25'
+
+homepage = 'https://www.unidata.ucar.edu/downloads/udunits/index.jsp'
+description = """The UDUNITS package from Unidata is a C-based package for \
+the programatic handling of units of physical quantities."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['ftp://ftp.unidata.ucar.edu/pub/udunits/']
+sources = [SOURCE_TAR_GZ]
+
+moduleclass = 'lib'

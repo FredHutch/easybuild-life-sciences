@@ -1,0 +1,62 @@
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+# breakdancer uses git clone --recursive to load additional code sets outside
+# of the repository.  breakdancer.tar.gz was created manualy.
+#
+# mkdir temp
+# cd temp
+# git clone --recursive https://github.com/genome/breakdancer.git
+# cd breakdancer
+# git checkout v1.4.5
+# cd ..
+# tar -czvf breakdancer-1.4.5.tar.gz --exclude .git* breakdancer/
+# mkdir  $EASYBUILD_SOURCEPATH/b/breakdancer
+# cp breakdancer-1.4.5.tar.gz  $EASYBUILD_SOURCEPATH/b/breakdancer
+#
+# toolchain 2014b was required due to dependancy with gcc
+# boost 1.3 will not build with >gcc 4.8.4; 
+
+easyblock = 'CMakeMake'
+
+name = 'breakdancer'
+version = '1.4.5'
+
+homepage = 'http://gmt.genome.wustl.edu/packages/breakdancer/index.html'
+description = """BreakDancerMax predicts five types of structural variants: insertions, deletions, inversions, inter- and intra-chromosomal translocations from next-generation short paired-end sequencing reads using read pairs that are mapped with unexpected separation distances or orientation."""
+
+toolchain = {'name': 'foss', 'version': '2014b'}
+
+source_urls = [('https://github.com/genome/breakdancer/archive')]
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('CMake', '3.0.0'),
+    ('zlib', '1.2.8'),
+]
+
+dependencies = [
+#   ('SAMtools', '1.3.1'),
+#   ('BamTools', '2.4.1'),
+#   ('HTSlib', '1.3.1'),
+]
+
+unpack_options = ' && mkdir breakdancer/build '
+srcdir = '..'
+start_dir = 'build'
+configopts = ' .. -DCMAKE_BUILD_TYPE=release '
+maxparallel = 1
+
+sanity_check_paths = {
+    'dirs': ['bin', 'lib'],
+    'files': ['bin/breakdancer-max',
+              'lib/breakdancer-maxunstable/AlnParser.pm',
+              'lib/breakdancer-maxunstable/Poisson.pm',
+              'lib/breakdancer-maxunstable/bam2cfg.pl',
+              ],
+}
+
+moduleclass = 'bio'

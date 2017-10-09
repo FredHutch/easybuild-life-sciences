@@ -1,0 +1,28 @@
+#  2016.03.24 John Dey jfdey@fredhutch.org
+#
+#
+#  ngsShoRT_bundle-foss-2015b-Perl-5.22.0-bare.eb
+#
+
+name = 'ngsShoRT_bundle'
+version = '2.2'
+
+easyblock = 'Bundle'
+
+homepage = 'http://research.bioinformatics.udel.edu/genomics/ngsShoRT/index.html'
+description = """ngsShoRT (Next Generation Sequencing Short Read Trimmer) a comprehensive and flexible open-source software package written in Perl that implements the novel algorithms developed by our group and many other commonly used pre-processing algorithms in the literature. """
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+perl    = 'Perl'
+perlver = '5.22.0'
+versionsuffix = '-%s-%s-bare' % (perl, perlver)
+
+dependencies = [
+    (perl,            perlver, '-bare'),
+    ('String-Approx', '3.27',  versionsuffix),
+    ('PerlIO-gzip',   '0.19',  versionsuffix),
+]
+
+moduleclass = 'lib'
+

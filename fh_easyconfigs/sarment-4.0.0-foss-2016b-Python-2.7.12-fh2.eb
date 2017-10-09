@@ -1,0 +1,41 @@
+#  easybuild easyconfig
+#
+#  John Dey  jfdey@fredhutch.org
+#
+# Fred Hutchinson Cancer Research Center
+
+name = 'sarment'
+version = '4.0.0'
+
+easyblock = "MakeCp"
+
+homepage = 'http://pbil.univ-lyon1.fr/software/sarment/'
+description = """Sarment is a source package of object-oriented Python modules for sequence segmentation via HMM analysis and Maximal Predictive Partitioning."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://pbil.univ-lyon1.fr/software/sarment/Versions/4/']
+sources = ['Sarment_src.tar.gz']
+
+python = 'Python'
+pyver = '2.7.12'
+pysuffix = '-fh2'
+versionsuffix = '-%s-%s%s' % (python, pyver, pysuffix)
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+dependencies = [
+    (python, pyver, pysuffix ),
+]
+
+start_dir = 'SARMENT'
+
+files_to_copy = [
+    'bin/sarment'
+]
+
+sanity_check_paths = {
+    'dirs': [],
+    'files': [],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,70 @@
+# easybuild easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+# nanopolish uses git clone --recursive to load additional code sets outside
+# of the repository.  breakdancer.tar.gz was created manualy.
+#
+# mkdir temp
+# cd temp
+# git clone --recursive https://github.com/jts/nanopolish.git && cd nanopolish && make -j8
+# cd nanopolish 
+# git checkout v0.6.0
+# cd ..
+# tar -czvf nanopolish-0.6.0.tar.gz --exclude .git* nanopolish/
+# mkdir  $EASYBUILD_SOURCEPATH/n/nanopolish
+# cp nanopolish-0.6.0.tar.gz $EASYBUILD_SOURCEPATH/n/nanopolish
+#
+#  Notes: last build is based on May 18 2017.
+easyblock = 'MakeCp'
+
+name = 'nanopolish'
+version = '0.6.0'
+
+homepage = 'http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/'
+description = """Our computational work focuses on the development of
+algorithms for handling very large sequencing data sets, from indexing
+and text compression, to probabilistic modeling and inference. We make
+our methods freely available as open source software."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/jts/nanopolish/archive/')]
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('zlib', '1.2.8'),
+]
+
+directories = [
+    'bin',
+    'eigen',
+    'etc',
+    'fast5',
+    'hdf5-1.8.14',
+    'htslib',
+    'include',
+    'lib',
+    'scripts',
+    'share',
+    'test']
+
+bin = ['gif2h5', 'h52gif', 'h5cc', 'h5copy', 'h5debug', 'h5diff', 'h5dump',
+       'h5import', 'h5jam', 'h5ls', 'h5mkgrp', 'h5perf_serial',
+       'h5redeploy', 'h5repack', 'h5repart', 'h5stat', 'h5unjam']
+libs = ['bhdf5.a', 'libhdf5_hl.la', 'libhdf5_hl.so.9', 'libhdf5.la',
+        'libhdf5.so', 'libhdf5.so.9.0.0', 'libhdf5_hl.a', 'libhdf5_hl.so',
+        'libhdf5_hl.so.9.0.0', 'libhdf5.settings', 'libhdf5.so.9']
+
+files_to_copy = ['nanopolish'] + directories
+
+sanity_check_paths = {
+    'dirs': directories,
+    'files': ['nanopolish'],
+}
+
+modloadmsg = """nanoPolish scripts are located in $EBROOTNANOPOLISH To use: $EBROOTNANOPOLISH/nanopolish"""
+
+moduleclass = 'bio'

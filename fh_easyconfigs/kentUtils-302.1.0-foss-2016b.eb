@@ -1,0 +1,29 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'MakeCp'
+
+name = 'kentUtils'
+version = '302.1.0'
+
+homepage = 'http://genome.cse.ucsc.edu/'
+description = """Jim Kent tools: collection of tools used by the UCSC genome browser."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/ENCODE-DCC/kentUtils/archive/']
+sources = ['v%(version)s.zip']
+
+files_to_copy = ["bin", 'samtabix', 'scripts',
+                 ]
+
+sanity_check_paths = {
+    'files': ['bin/addCols',
+              'bin/bigWigInfo',
+              'bin/twoBitToFa',
+              'bin/wigToBigWig'],
+    'dirs': ['bin'],
+}
+
+moduleclass = 'bio'

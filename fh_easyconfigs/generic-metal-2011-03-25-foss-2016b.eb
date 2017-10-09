@@ -1,0 +1,29 @@
+# Easybuild easyconfig 
+
+easyblock = 'MakeCp'
+
+name = 'generic-metal'
+version = '2011-03-25'
+
+homepage = "http://csg.sph.umich.edu/abecasis/Metal/download/"
+description = """The METAL software is designed to facilitate meta-analysis of large datasets (such as several whole genome scans) in a convenient, rapid and memory efficient manner. """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://csg.sph.umich.edu/abecasis/Metal/download/']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+buildopts = '&& make all'
+
+files_to_copy = ["executables", "pdf", "examples"]
+
+modextrapaths = { 'PATH': ['executables']}
+
+sanity_check_paths = {
+    'files': ['executables/metal',
+              'examples/GlucoseExample/DGI_three_regions.txt',
+              ],
+    'dirs': files_to_copy,
+}
+
+moduleclass = 'bio'

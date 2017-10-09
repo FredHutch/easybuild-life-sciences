@@ -1,0 +1,31 @@
+# easybuild easyconfig
+
+easyblock = 'ConfigureMake'
+
+name = 'ncbi_cxx'
+version = '18_0_0'
+
+homepage = 'https://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/'
+description = """NCBI C++ Toolkit provides free, portable, public domain
+libraries. Stuff for BLAST, Sequence Alignment Algorithms Library Biological
+Sequences Retrieval and P rocessing Library"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/CURRENT/']
+sources = ['%(name)s--%(version)s.tar.gz']
+
+dependencies = [('Boost', '1.62.0'),
+    ('HDF5','1.8.18'),
+]
+
+
+configopts = '--with-boost=$EBROOTBOOST --with-64'
+
+
+sanity_check_paths = {
+    'files': ["bin/"],
+    'dirs': ['bin', 'lib', 'include']
+}
+
+moduleclass = 'bio'

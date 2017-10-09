@@ -1,0 +1,37 @@
+#  2016.03.24 John Dey jfdey@fredhutch.org
+#
+#
+#  PerlIO-gzip-0.19-foss-2015b-Perl-5.22.0-bare.eb 
+#
+
+name = 'PerlIO-gzip'
+version = '0.19'
+
+easyblock = 'PerlModule'
+
+homepage = 'http://search.cpan.org/~nwclark/PerlIO-gzip-0.19'
+description = """PerlIO::gzip provides a PerlIO layer that manipulates files in the format used by the gzip program. Compression and Decompression are implemented, but not together. If you attempt to open a file for reading and writing the open will fail."""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ['http://search.cpan.org/CPAN/authors/id/N/NW/NWCLARK/']
+sources = [SOURCE_TAR_GZ]
+
+perl = 'Perl'
+perlver = '5.22.0'
+versionsuffix = '-%s-%s-bare' % (perl, perlver)
+perlmajver = perlver.split('.')[0]
+
+dependencies = [
+    (perl, perlver, '-bare'),
+]
+
+options = {'modulename': 'PerlIO::gzip'}
+
+# /app/easybuild/software/PerlIO-gzip/0.19-foss-2015b-Perl-5.22.0-bare/lib/perl5/site_perl/5.22.0/x86_64-linux-thread-multi/PerlIO/gzip.pm
+sanity_check_paths = {
+    'files':['lib/perl%s/site_perl/%s/x86_64-linux-thread-multi/PerlIO/gzip.pm' % (perlmajver, perlver)],
+    'dirs' :['lib/perl%s/site_perl/%s/x86_64-linux-thread-multi/PerlIO'         % (perlmajver, perlver)],
+}
+
+moduleclass = 'lib'

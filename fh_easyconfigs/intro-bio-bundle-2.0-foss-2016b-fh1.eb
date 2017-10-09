@@ -1,0 +1,22 @@
+easyblock = 'Bundle'
+
+name = 'intro-bio-bundle'
+version = '2.0'
+versionsuffix = '-fh1'
+
+homepage = 'http://scicomp.fhcrc.org'
+description = """Bundle used for CompBio teaching at FredHutch."""
+
+toolchain = { 'name': 'foss', 'version': '2016b' }
+
+dependencies = [
+    ('Python', '2.7.12', '-fh2'),
+    ('R', '3.3.1', '-fh1'),
+    ('FastTree', '2.1.9'),
+    ('newick-utils', '1.6'),
+    ('MUSCLE','3.8.31'),
+    ('tmux', '2.3'),
+]
+
+moduleclass = 'bio'
+

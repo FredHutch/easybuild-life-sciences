@@ -1,0 +1,30 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+
+easyblock = 'Tarball'
+
+name = 'drill'
+version = '1.9.0'
+
+homepage = 'https://drill.apache.org/'
+description = """Drill is cool"""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://tin.fhcrc.org/v1/AUTH_Swift__ADM_IT_public/packages/']
+sources = ['apache-%(name)s-%(version)s.tar.gz']
+
+java = 'Java'
+javaver = '1.8.0_92'
+versionsuffix = '-%s-%s' % (java, javaver)
+dependencies = [(java, javaver)]
+
+modloadmsg = """To execute drill run: \\$EBROOT/drill"""
+
+#sanity_check_paths = {
+#    'files': ["GenomeAnalysisTK.jar"],
+#    'dirs': ["resources"],
+#}
+
+moduleclass = 'tools'
