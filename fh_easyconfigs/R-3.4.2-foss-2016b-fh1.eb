@@ -57,11 +57,7 @@ dependencies = [
     ('ZeroMQ', '4.1.4'), # for zmq
     ('HDF5', '1.8.18'),
     ('OpenSSL', '1.1.0f'),
-]
-
-osdependencies = [
-    ('unixodbc-dev', 'unixodbc-devel'), # for RODBC
-
+    ('unixODBC', '2.3.4'),
 ]
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
