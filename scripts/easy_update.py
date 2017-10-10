@@ -42,6 +42,7 @@ class ExtsList(object):
         self.ext_counter = 0
         self.pkg_update = 0
         self.pkg_new = 0
+        self.pkg_drop = 0
 
         self.exts_processed = []  # single list of package names
         self.depend_exclude = []  # built in packages not be added to exts_list
@@ -126,7 +127,8 @@ class ExtsList(object):
             if pkg_name == self.pkg_top and pkg[1] != 'add':
                 pkg.append('keep')
             else:
-                sys.stderr.write("Warning: %s Not in CRAN.\n" % pkg_name)
+                self.pkg_drop += 1
+                sys.stderr.write("Warning: package %s will be dropped!\n" % pkg_name)
                 return
         else:
             if self.pkg_top == pkg_name and pkg[1] != 'add':
@@ -225,6 +227,7 @@ class ExtsList(object):
         self.out.write(self.code[self.ptr_head:])
         print("Updated Packages: %d" % self.pkg_update)
         print("New Packages: %d" % self.pkg_new)
+        print("Dropped Packages: %d" % self.pkg_drop)
 
 
 class R(ExtsList):
@@ -379,27 +382,25 @@ class PythonExts(ExtsList):
         """
         sys_platform = 'Linux'
         python_version = self.python_version
+        platform_python_implementation = ''
         extra = ''
         require_re = '^([A-Za-z0-9_\-\.]+)(?:.*)$'
         extra_re = "and\sextra\s==\s'([A-Za-z0-9_\-\.]+)'"  # only if the
         targets = ['python_version', 'sys_platform', 'extra']
         ans = re.search(require_re, requires)
         name = ans.group(1)
-        test = False    # do we need to test extra requires field?
         state = True    # result of eval(requires)
 
         version = requires.split(';')
         if len(version) > 1:
             for target in targets:
                 if target in version[1]:
-                    test = True
+                    state = eval(version[1])
                     if target == 'extra':
                         extra = re.search(extra_re, version[1])
                         extra = extra.group(1) if extra else None
                         if extra not in [i[0] for i in self.exts_processed]:
                             extra = None
-            if test:
-                state = eval(version[1])
         if state:
             if self.debug:
                 if name not in [i[0] for i in self.exts_processed] and (
@@ -414,9 +415,9 @@ class PythonExts(ExtsList):
             return None
 
     def get_package_info(self, pkg):
-        """Python pypi API for package version and dependancy list
+        """Python pypi API for package version and dependency list
            pkg is a list; ['package name', 'version', 'other stuff']
-           return the version number for the package and a list of dependancie
+           return the version number for the package and a list of dependencies
         """
         pkg_name = pkg[0]
         pkg_version = pkg[1]
@@ -433,7 +434,7 @@ class PythonExts(ExtsList):
         else:
             self.depend_exclude.append(pkg[0])
             sys.stderr.write("Warning: %s Not in PyPi. " % pkg[0])
-            sys.stderr.write("No depdancy checking performed\n")
+            sys.stderr.write("No dependency checking performed\n")
             pkg_ver = 'not found'
         return pkg_ver, depends
 
