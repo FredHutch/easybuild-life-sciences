@@ -8,8 +8,10 @@ import imp
 import json
 import requests
 import urllib2
-import xmlrpclib
-
+try:
+    import xmlrpclib
+except ImportError:
+    import xmlrpc.client as xmlrpclib
 
 class ExtsList(object):
     """ Extension List Update is a utilty program for maintaining EasyBuild
@@ -112,10 +114,17 @@ class ExtsList(object):
     def get_package_info(self, pkg):
         pass
 
-    def check_package(self, pkg):
-        pkg_name = pkg[0]
+    def is_processed(self, pkg_name):
         if pkg_name in [i[0] for i in self.exts_processed] or (
            pkg_name in self.depend_exclude):
+            return True
+        else:
+            return False
+
+    def check_package(self, pkg):
+        pkg_name = pkg[0]
+        orig_ver = pkg[1]
+        if self.is_processed(pkg_name):
             if pkg_name == self.pkg_top:
                 pkg.append('duplicate')
                 self.exts_processed.append(pkg)
@@ -123,18 +132,25 @@ class ExtsList(object):
         if self.verbose > 1:
             print('check_package: %s' % pkg)
         pkg_ver, depends = self.get_package_info(pkg)
+        if pkg[0] != pkg_name:
+            print("update package name %s -> %s" % (pkg_name, pkg[0]))
+            if self.is_processed(pkg[0]):
+                 return
         if pkg_ver == "error" or pkg_ver == 'not found':
-            if pkg_name == self.pkg_top and pkg[1] != 'add':
+            if pkg[0] == self.pkg_top and pkg[1] != 'add':
                 pkg.append('keep')
             else:
                 self.pkg_drop += 1
-                sys.stderr.write("Warning: package %s will be dropped!\n" % pkg_name)
+                print("Warning: package %s is " % pkg_name),
+                print("a dependancy of %s " % self.pkg_top),
+                print("but can't be found!")
                 return
         else:
             if self.pkg_top == pkg_name and pkg[1] != 'add':
                 if pkg[1] == pkg_ver:
                     pkg.append('keep')
                 else:
+                    orig_ver = pkg[1]
                     pkg[1] = pkg_ver
                     pkg.append('update')
                     self.pkg_update += 1
@@ -151,14 +167,22 @@ class ExtsList(object):
 
         for depend in depends:
             if depend not in self.depend_exclude:
-                self.check_package([depend, 'x', 'x'])
+                self.check_package([depend, 'x'])
         self.exts_processed.append(pkg)
         self.ext_counter += 1
         if self.verbose > 0:
             if len(pkg) < 4:
                 print("Error:"),
-            print("%20s : %-8s (%s) [%2d, %d]" % (pkg[0], pkg[1], pkg[-1],
-                  self.ext_list_len, self.ext_counter))
+            if pkg[-1] == 'update':
+                version = '%s -> %s' % (orig_ver, pkg[1])
+            elif pkg[-1] == 'add':
+                version = '%s (add)' % pkg[1]
+            elif pkg[-1] == 'new':
+                version = '%s (new)' % pkg[1]
+            else:
+                version = pkg[1]
+            print("%20s : %-20s [%2d, %d]" % (pkg[0], version,
+                       self.ext_list_len, self.ext_counter))
 
     def update_exts(self):
         """
@@ -419,25 +443,41 @@ class PythonExts(ExtsList):
            pkg is a list; ['package name', 'version', 'other stuff']
            return the version number for the package and a list of dependencies
         """
-        pkg_name = pkg[0]
-        pkg_version = pkg[1]
         depends = []
-        xml_vers = self.client.package_releases(pkg_name)
-        if xml_vers:
-            pkg_ver = xml_vers[0]
-            xml_info = self.client.release_data(pkg_name, pkg_ver)
-            if 'requires_dist' in xml_info.keys():
-                for requires in xml_info['requires_dist']:
+        (pkg_name, pkg_ver, pkg_info) = get_pypi_info(pkg[0])
+        if pkg_info:
+            if pkg[0] != pkg_info['name']:
+                pkg[0] = pkg_info['name']
+            if 'requires_dist' in pkg_info.keys():
+                for requires in pkg_info['requires_dist']:
                     pkg_requires = self.parse_pypi_requires(pkg_name, requires)
                     if pkg_requires:
                         depends.append(pkg_requires)
         else:
             self.depend_exclude.append(pkg[0])
-            sys.stderr.write("Warning: %s Not in PyPi. " % pkg[0])
-            sys.stderr.write("No dependency checking performed\n")
+            print("Warning: %s Not in PyPi. " % pkg[0])
+            print("No dependency checking performed")
             pkg_ver = 'not found'
         return pkg_ver, depends
 
+def get_pypi_info(pkg_name):
+    """get version information from pypi.  If <pkg_name> is not found seach
+    pypi. if <pkg_name> matches search results case; use the new value of
+    pkg_name""" 
+    client = xmlrpclib.ServerProxy('https://pypi.python.org/pypi')
+    ver_list = client.package_releases(pkg_name)
+    if len(ver_list) == 0:
+        search_list = client.search({'name': pkg_name})
+        for info in search_list:
+            if pkg_name.lower() == info['name'].lower():
+                 pkg_name = info['name']
+                 break 
+        ver_list = client.package_releases(pkg_name)
+        if len(ver_list) == 0:
+            return pkg_name, 'not found', {} 
+    version = ver_list[0]
+    xml_info = client.release_data(pkg_name, version)
+    return pkg_name, version, xml_info
 
 def help():
     print("usage: easy_update  easyconfig.eb [flags]")
