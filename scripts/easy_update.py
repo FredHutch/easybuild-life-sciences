@@ -486,8 +486,9 @@ def help():
     print("easy_update works with R, Python and R-bioconductor " +
           "easyconfig files")
     print("  --verbose  diplay status for each package")
-    print("  --add [filename]  filename contains list of package names to add")
-    print("  --check [package name] print update actions for a single package")
+    print("  --add filename  filename contains list of package names to add")
+    print("  --addpkg pkgname add new package")
+    print("  --check pkgname print update actions for a single package")
     print("          option is used for debugging single packages")
 
 
@@ -512,10 +513,13 @@ if __name__ == '__main__':
     myopts, args = getopt.getopt(sys.argv[2:], "",
                                  ['verbose',
                                   'add=',
+                                  'addpkg=',
                                   'check='])
     for opt, arg in myopts:
         if opt == "--add":
             get_package_list(arg, add_packages)
+        elif opt == "--addpkg":
+            add_packages.append(arg)
         elif opt == "--verbose":
             vflag += 1 
         elif opt == "--check":
