@@ -59,6 +59,7 @@ class ExtsList(object):
         self.toolchain = eb.toolchain
         self.dependencies = eb.dependencies
         self.version = eb.version
+        self.biocver = eb.biocver
         self.name = eb.name
         self.pkg_name = eb.name + '-' + eb.version
         self.pkg_name += '-' + eb.toolchain['name']
@@ -287,9 +288,10 @@ class R(ExtsList):
                     self.R_modules.append(pkg[0])
                 else:
                     self.R_modules.append(pkg)
-            self.read_bioconductor_pacakges(self.version)
         else:
             self.bioconductor = False
+        if self.biocver > 0:
+            self.read_bioconductor_pacakges(self.biocver)
 
     def read_bioconductor_pacakges(self, version):
             """ read the Bioconductor package list into bio_data dict
@@ -367,7 +369,10 @@ class R(ExtsList):
         else:
             if self.debug:
                 print("get_package_info: %s" % pkg)
-            pkg_ver, depends = self.check_CRAN(pkg)
+            if self.biocver > 0:
+                pkg_ver, depends = self.check_BioC(pkg)
+            if pkg_ver == 'not found':
+                pkg_ver, depends = self.check_CRAN(pkg)
             if len(pkg) < 3:
                 pkg.append('ext_options')
             else:
