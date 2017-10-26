@@ -1,0 +1,60 @@
+#  easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+#
+# Note:  illumina blc2fastq requires Boost 1.54 and GCC 4.7 These
+#  requirements keep the toolchain frozen at 2015b.
+
+easyblock = 'ConfigureMake'
+
+name = 'bcl2fastq2'
+# download file is odd - see below as version if hardcoded
+version = '2.20.0'
+
+homepage = 'https://support.illumina.com/'
+description = """Illumina conversion Software bcl2fastq can be used to
+both demultiplex data and convert BCL files to FASTQ file formats for
+downstream analysis."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# tarball name and project name do not match! Add '2' to name where needed
+source_urls = ['ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq/']
+sources = ['bcl2fastq2-v2-20-0-tar.zip']
+
+unpack_options = ' && tar -xvzf bcl2fastq2-v2.20.0.422-Source.tar.gz '
+unpack_options += ' && mkdir build_dir '
+
+patches = ['bcl2fastq2-2.20.0-newer-boost.patch']
+
+start_dir = 'build_dir'
+
+configure_cmd_prefix = '../bcl2fastq/src/'
+
+configopts = '--with-cmake=$EBROOTCMAKE/bin/cmake '
+configopts += '--include=/usr/include/x86_64-linux-gnu/sys'
+
+builddependencies = [
+    ('CMake', '3.7.2'),
+]
+
+dependencies = [
+    ('Boost', '1.62.0'),
+    ('zlib', '1.2.8'),
+    ('libxml2', '2.9.4'),
+    ('libxslt', '1.1.29'),
+    ('expat', '2.2.0'),
+    ('XML-Parser' ,'2.44', '-Perl-5.24.1'),
+]
+
+sanity_check_paths = {
+    'dirs':  ['bin',
+              'etc',
+              'lib',
+              'share'],
+    'files': ["bin/bcl2fastq"],
+}
+
+moduleclass = 'bio'

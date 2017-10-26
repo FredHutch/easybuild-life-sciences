@@ -1,0 +1,21 @@
+diff -Naur bcl2fastq/src/cxx/lib/io/Xml.cpp bcl2fastq.new/src/cxx/lib/io/Xml.cpp
+--- bcl2fastq/src/cxx/lib/io/Xml.cpp	2017-06-22 10:14:50.000000000 -0700
++++ bcl2fastq.new/src/cxx/lib/io/Xml.cpp	2017-10-26 10:28:25.493871386 -0700
+@@ -169,7 +169,7 @@
+     {
+         unindex(*tree.begin(), treeWithIndexAttributes);
+ #ifndef WIN32
+-        boost::property_tree::write_xml(os, treeWithIndexAttributes, boost::property_tree::xml_writer_make_settings(' ', 2));
++        boost::property_tree::write_xml(os, treeWithIndexAttributes, boost::property_tree::xml_writer_make_settings<ptree::key_type>(' ', 2));
+ #else
+         boost::property_tree::write_xml(os, treeWithIndexAttributes, boost::property_tree::xml_writer_make_settings<std::string>(' ', 2));
+ #endif
+@@ -177,7 +177,7 @@
+     else
+     {
+ #ifndef WIN32
+-        boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings(' ', 2));
++        boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings<ptree::key_type>(' ', 2));
+ #else
+         boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings<std::string>(' ', 2));
+ #endif

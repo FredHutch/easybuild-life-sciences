@@ -52,7 +52,7 @@ dependencies = [
     ('Mesa', '12.0.2'), # for rgl 
     ('cairo', '1.14.6'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
-    ('netCDF', '4.4.1'), # for netcdf4
+    ('netCDF', '4.5.0'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
     ('ZeroMQ', '4.1.4'), # for zmq
     ('HDF5', '1.10.1'),
