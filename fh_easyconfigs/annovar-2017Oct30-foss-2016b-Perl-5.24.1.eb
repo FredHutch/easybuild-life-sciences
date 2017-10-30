@@ -7,8 +7,8 @@ easyblock = 'Tarball'
 name = 'annovar'
 # Unconventional version is taken from the upstream site
 # http://annovar.openbioinformatics.org/en/latest/user-guide/download/
-version = '2016Feb01'
-perlver = '5.24.0'
+version = '2017Oct30'
+perlver = '5.24.1'
 versionsuffix = '-Perl-%(perlver)s'
 
 homepage = 'http://annovar.openbioinformatics.org/en/latest/'
