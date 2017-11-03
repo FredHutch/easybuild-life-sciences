@@ -1065,6 +1065,7 @@ exts_list = [
     ('Statistics::Descriptive,', '3.0612', {
         'source_tmpl': 'Statistics-Descriptive-3.0612.tar.gz',
         'source_urls': ['http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/'],
+        'modulename': 'False',
     }),
     ('Storable', '2.51', {
         'source_tmpl': 'Storable-2.51.tar.gz',
