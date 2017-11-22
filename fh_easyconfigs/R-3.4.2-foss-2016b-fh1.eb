@@ -688,6 +688,7 @@ exts_list = [
     ('argparser', '0.4', ext_options),
     ('rgenoud', '5.7-12.4', ext_options),
     ('inferference', '0.5.4', ext_options),
+    ('udunits-2', '0.13', ext_options),
 
 ]
 
