@@ -13,13 +13,20 @@ try:
 except ImportError:
     import xmlrpc.client as xmlrpclib
 
+"""
+   TODO
+   convert to argparse, process flags first  (python_deps.py)
+   add built in R packages to the <depend_exclude> list.
+   Add --Py and -R flags to allow processing of other file types (example: azure-cli)
+"""
+
 class ExtsList(object):
     """ Extension List Update is a utilty program for maintaining EasyBuild
     easyconfig files for R, Python and Bioconductor.  R, Python and
     Bioconductor langueges support package extensions.  Easyconfig supports
-    the building of the language with a list of extions. This program automates
-    the the updating of extension lists for R and Python by using API for
-    resolving current version for each package.
+    the building of the language with a list of extions. This program
+    automates the the updating of extension lists for R and Python by using
+    API for resolving current version for each package.
 
     command line arguments -> arguments
     --add [file] ->add_packages. add_packages is a list of package names to
@@ -27,17 +34,19 @@ class ExtsList(object):
     --check [package name] -> package.  If package is not None just check
             this one package and exit.
 
+    Note: At the FredHutch BioCondutor packages are merged with R.
+    An earlier version of easy_update built BioCondutor in a seperate package.
+
     Issues
        There are many small inconsistancies with PyPI which make it difficult
        to fully automate building of easyconfig files.
        - dependancy checking - check for extras=='all'
-       - Not all Python modules usr tar.gz so modules added can be incorrect.
        - pypi projects names do not always match module names and or file names
          project: liac-arff, module: arff,  file_name: liac_arff.zip
     """
     def __init__(self, file_name, add_packages, package, verbose):
+        self.add_packages = add_packages
         self.verbose = verbose
-        self.debug = False
         self.checkpackage = False
         self.code = None
         self.ext_list_len = 0
@@ -59,15 +68,15 @@ class ExtsList(object):
         self.toolchain = eb.toolchain
         self.dependencies = eb.dependencies
         self.version = eb.version
-        self.biocver = eb.biocver
         self.name = eb.name
         self.pkg_name = eb.name + '-' + eb.version
         self.pkg_name += '-' + eb.toolchain['name']
         self.pkg_name += '-' + eb.toolchain['version']
         self.pkg_version = eb.version
-        self.bioconductor = False
+        self.biocver = None 
+        if self.pkg_name[1] == 'R':
+            self.biocver = eb.biocver
 
-        # compare easyconfig name with file name
         try:
             self.pkg_name += eb.versionsuffix
         except (AttributeError, NameError):
@@ -107,12 +116,23 @@ class ExtsList(object):
             exec (code, eb.__dict__)
         except Exception as err:
             print("interperting easyconfig error: %s" % err)
+            sys.exit(1)
         if primary:     # save original text of source code
             self.code = code
             self.ptr_head = len(header)
         return eb
 
     def get_package_info(self, pkg):
+        """base class 
+        subclasses of <get_package_info> search CRAN, Pypi or Bioconductor
+        based on easyconfig.
+        input: pkg - list [pkg_name, pkg_version, source]
+        return: [pkg_version, depends[]]
+        <depends> list of package names that are dependancies
+        look hard for dependant packages, try to match different cases
+        and interchange underscore and dash.  If input package_name
+        does not match rewrite pkg[0] with name found from repository.
+        """
         pass
 
     def is_processed(self, pkg_name):
@@ -123,6 +143,15 @@ class ExtsList(object):
             return False
 
     def check_package(self, pkg):
+        """base class check_package [this is heart of the program]
+        check pkg is the latest versionif <pkg_version> is the latest version
+
+        input: pkg - list [pkg_name, pkg_version, source]
+        check that all dependancies are meet for each package.
+        check_package can be called recursivly. To track recursion
+        global <self.pkg_top> contains the package name of the original
+        call.
+        """
         pkg_name = pkg[0]
         orig_ver = pkg[1]
         if self.is_processed(pkg_name):
@@ -131,7 +160,7 @@ class ExtsList(object):
                 self.exts_processed.append(pkg)
             return
         if self.verbose > 1:
-            print('check_package: %s' % pkg)
+            print('check_package: (%s, %s)' % (pkg[0], pkg[1]))
         pkg_ver, depends = self.get_package_info(pkg)
         if pkg[0] != pkg_name:
             print("update package name %s -> %s" % (pkg_name, pkg[0]))
@@ -143,7 +172,7 @@ class ExtsList(object):
             else:
                 self.pkg_drop += 1
                 print("Warning: package %s is " % pkg_name),
-                print("a dependancy of %s " % self.pkg_top),
+                print("a dependency of %s " % self.pkg_top),
                 print("but can't be found!")
                 return
         else:
@@ -168,7 +197,7 @@ class ExtsList(object):
 
         for depend in depends:
             if depend not in self.depend_exclude:
-                self.check_package([depend, 'x'])
+                self.check_package([depend, 'x', 'new package'])
         self.exts_processed.append(pkg)
         self.ext_counter += 1
         if self.verbose > 0:
@@ -182,8 +211,8 @@ class ExtsList(object):
                 version = '%s (new)' % pkg[1]
             else:
                 version = pkg[1]
-            print("%20s : %-20s [%2d, %d]" % (pkg[0], version,
-                       self.ext_list_len, self.ext_counter))
+            print("%20s : %-8s (%s) [%2d, %d]" % (pkg[0], pkg[1], pkg[-1],
+                  self.ext_list_len, self.ext_counter))
 
     def update_exts(self):
         """
@@ -191,12 +220,16 @@ class ExtsList(object):
         self.ext_list_len = len(self.exts_orig)
         for pkg in self.exts_orig:
             if isinstance(pkg, tuple):
-                if self.debug:
+                if self.verbose > 1:
                     print("update_exts loop package: %s" % pkg[0])
                 self.pkg_top = pkg[0]
                 self.check_package(list(pkg))
             else:
                 self.exts_processed.append(pkg)
+        #  Add new packages to EB file
+        self.pkg_top = None
+        for pkg_name in self.add_packages:
+            self.check_package([pkg_name, 'add'])
 
     def write_chunk(self, indx):
         self.out.write(self.code[self.ptr_head:indx])
@@ -208,7 +241,8 @@ class ExtsList(object):
         indx = self.code[name_indx:].find("'") + name_indx + 1
         self.write_chunk(indx)
         self.out.write("%s'," % pkg[1])  # write version Number
-        self.ptr_head = self.code[self.ptr_head:].find(',') + self.ptr_head + 1
+        self.ptr_head = self.code[self.ptr_head:].find(',') + (
+                        self.ptr_head + 1)
         indx = self.code[self.ptr_head:].find('),') + self.ptr_head + 3
         self.write_chunk(indx)
 
@@ -242,13 +276,10 @@ class ExtsList(object):
                 self.ptr_head = indx
                 continue
             elif action == 'new':
-                if self.bioconductor and extension[2] == 'ext_options':
-                    print(" CRAN depencancy: %s" % extension[0])
-                else:
-                    self.out.write("%s('%s', '%s', %s),\n" % (self.indent,
-                                                              extension[0],
-                                                              extension[1],
-                                                              extension[2]))
+                self.out.write("%s('%s', '%s', %s),\n" % (self.indent,
+                                                          extension[0],
+                                                          extension[1],
+                                                          extension[2]))
         self.out.write(self.code[self.ptr_head:])
         print("Updated Packages: %d" % self.pkg_update)
         print("New Packages: %d" % self.pkg_new)
@@ -263,52 +294,29 @@ class R(ExtsList):
         self.bioc_data = {}
         self.depend_exclude = ['R', 'parallel', 'methods', 'utils', 'stats',
                                'stats4', 'graphics', 'grDevices', 'tools',
-                               'tcltk', 'grid', 'splines']
-
-        if 'bioconductor' in self.pkg_name.lower():
-            self.bioconductor = True
-            self.R_modules = []
-
-            #  Read the R package list from the dependent R package
-            for dep in self.dependencies:
-                if dep[0] == 'R':
-                    R_name = dep[0] + '-' + dep[1] + '-'
-                    R_name += (self.toolchain['name'] + '-' +
-                               self.toolchain['version'])
-                    if len(dep) > 2:
-                        R_name += dep[2]
-                    R_name += '.eb'
-                    print('Required R module: %s' % R_name)
-                    if os.path.dirname(file_name):
-                        R_name = os.path.dirname(file_name) + '/' + R_name
-                    eb = self.parse_eb(R_name, primary=False)
-                    break
-            for pkg in eb.exts_list:
-                if isinstance(pkg, tuple):
-                    self.R_modules.append(pkg[0])
-                else:
-                    self.R_modules.append(pkg)
+                               'tcltk', 'grid', 'splines', 'compiler' ]
+        if self.biocver:
+            self.read_bioconductor_pacakges()
         else:
-            self.bioconductor = False
-        if self.biocver > 0:
-            self.read_bioconductor_pacakges(self.biocver)
+            print('BioCondutor verserion: biocver not set')
+            sys.exit(1)
 
-    def read_bioconductor_pacakges(self, version):
-            """ read the Bioconductor package list into bio_data dict
-            """
-            base_url = 'https://bioconductor.org/packages/json/%s' % version
-            bioc_urls = ['%s/bioc/packages.json' % base_url,
-                         '%s/data/annotation/packages.json' % base_url,
-                         '%s/data/experiment/packages.json' % base_url
-                         ]
-            self.bioc_data = {}
-            for url in bioc_urls:
-                try:
-                    response = urllib2.urlopen(url)
-                except IOError as e:
-                    print('URL request: %s' % url)
-                    sys.exit(e)
-                self.bioc_data.update(json.loads(response.read()))
+    def read_bioconductor_pacakges(self):
+        """ read the Bioconductor package list into bio_data dict
+        """
+        base_url = 'https://bioconductor.org/packages/json/%s' % self.biocver
+        bioc_urls = ['%s/bioc/packages.json' % base_url,
+                     '%s/data/annotation/packages.json' % base_url,
+                     '%s/data/experiment/packages.json' % base_url]
+        self.bioc_data = {}
+        for url in bioc_urls:
+            try:
+                response = urllib2.urlopen(url)
+            except IOError as e:
+                print 'URL request: ', url
+                sys.exit(e)
+            self.bioc_data.update(json.loads(response.read()))
+
 
     def check_CRAN(self, pkg):
         cran_list = "http://crandb.r-pkg.org/"
@@ -328,16 +336,14 @@ class R(ExtsList):
             depends = cran_info[u"Depends"].keys()
         if u"Imports" in cran_info:
             depends += cran_info[u"Imports"].keys()
-        if u"LinkingTo" in cran_info:
-            depends += cran_info[u"LinkingTo"].keys()
         return pkg_ver, depends
 
     def check_BioC(self, pkg):
         """Extract <Depends> and <Imports> from BioCondutor json metadata
         Example:
         bioc_data['pkg']['Depends']
-                 [u'R (>= 2.10)', u'BiocGenerics (>= 0.3.2)', u'utils']
-        bioc_data['pkg']['Depends']['Imports'] [ 'Biobase', 'graphics']
+                    [u'R (>= 2.10)', u'BiocGenerics (>= 0.3.2)', u'utils']
+        bioc_data['pkg']['Depends'] ['Imports'] [ 'Biobase', 'graphics']
         """
         depends = []
         if pkg[0] in self.bioc_data:
@@ -358,27 +364,14 @@ class R(ExtsList):
                 print("%20s : requires %s" % (pkg, p))
 
     def get_package_info(self, pkg):
-        if self.bioconductor:
-            pkg_ver, depends = self.check_BioC(pkg)
-            pkg[2] = 'bioconductor_options'
-            if pkg_ver == 'not found':
-                if pkg[0] in self.R_modules:
-                    return pkg_ver, []
-                pkg_ver, depends = self.check_CRAN(pkg)
-                pkg[2] = 'ext_options'
-        else:
-            if self.debug:
-                print("get_package_info: %s" % pkg)
-            if self.biocver > 0:
-                pkg_ver, depends = self.check_BioC(pkg)
-            if pkg_ver == 'not found':
-                pkg_ver, depends = self.check_CRAN(pkg)
-            if len(pkg) < 3:
-                pkg.append('ext_options')
-            else:
-                pkg[2] = 'ext_options'
+        pkg_ver, depends = self.check_BioC(pkg)
+        pkg[2] = 'bioconductor_options'
+        if pkg_ver == 'not found':
+            pkg_ver, depends = self.check_CRAN(pkg)
+            pkg[2] = 'ext_options'
         if self.verbose > 0:
-            self.print_depends(pkg[0], depends)
+            for p in depends:
+                print("%s requires: %s" % (pkg[0], p))
         return pkg_ver, depends
 
 
@@ -411,7 +404,6 @@ class PythonExts(ExtsList):
         """
         sys_platform = 'Linux'
         python_version = self.python_version
-        platform_python_implementation = ''
         extra = ''
         require_re = '^([A-Za-z0-9_\-\.]+)(?:.*)$'
         extra_re = "and\sextra\s==\s'([A-Za-z0-9_\-\.]+)'"  # only if the
@@ -431,14 +423,14 @@ class PythonExts(ExtsList):
                         if extra not in [i[0] for i in self.exts_processed]:
                             extra = None
         if state:
-            if self.debug:
+            if self.verbose > 1:
                 if name not in [i[0] for i in self.exts_processed] and (
                    name not in self.depend_exclude):
-                    print('Add dependent package: %s ' % name +
-                          'for: %s, Expression: %s' % (pkg_name, requires))
+                    print('Add dependent package: %s ' % name),
+                    print('for: %s, Expression: %s' % (pkg_name, requires))
             return name
         else:
-            if self.debug:
+            if self.verbose > 1:
                 print('Do not install: %s, ' % name +
                       'for package: %s, Expression: %s' % (pkg_name, requires))
             return None
@@ -449,20 +441,33 @@ class PythonExts(ExtsList):
            return the version number for the package and a list of dependencies
         """
         depends = []
-        (pkg_name, pkg_ver, pkg_info) = get_pypi_info(pkg[0])
-        if pkg_info:
-            if pkg[0] != pkg_info['name']:
-                pkg[0] = pkg_info['name']
-            if 'requires_dist' in pkg_info.keys():
-                for requires in pkg_info['requires_dist']:
-                    pkg_requires = self.parse_pypi_requires(pkg_name, requires)
-                    if pkg_requires:
-                        depends.append(pkg_requires)
-        else:
-            self.depend_exclude.append(pkg[0])
+        (pkg_name, pkg_ver, xml_info, url_info) = get_pypi_info(pkg[0])
+        if not xml_info:
             print("Warning: %s Not in PyPi. " % pkg[0])
             print("No dependency checking performed")
             pkg_ver = 'not found'
+            return pkg_ver, [] 
+        URL = None
+        for url in url_info:
+            file_name = url['filename']
+            if url['filename'].endswith('tar.gz'):
+                URL = url['url']
+                break
+            if url['filename'].endswith('.zip'):
+                URL = url['url']
+                source_tmpl = url['filename'].replace(pkg_name, '%(name)s')
+                source_tmpl = source_tmpl.replace(pkg_ver, '%(version)s')
+            break
+        # TODO look for whl
+        if pkg[0] != pkg_name:
+            pkg[0] = pkg_name
+        if 'requires_dist' in xml_info.keys():
+            for requires in xml_info['requires_dist']:
+                pkg_requires = self.parse_pypi_requires(pkg_name, requires)
+                if pkg_requires:
+                    depends.append(pkg_requires)
+        else:
+            self.depend_exclude.append(pkg[0])
         return pkg_ver, depends
 
 def get_pypi_info(pkg_name):
@@ -477,23 +482,27 @@ def get_pypi_info(pkg_name):
             if pkg_name.lower() == info['name'].lower():
                  pkg_name = info['name']
                  break 
+            if pkg_name.replace('-','_') == info['name'].lower() or (
+               pkg_name.replace('_','-') == info['name'].lower() ):
+                 pkg_name = info['name']
+                 break
         ver_list = client.package_releases(pkg_name)
         if len(ver_list) == 0:
-            return pkg_name, 'not found', {} 
+            return pkg_name, 'not found', {}, {} 
     version = ver_list[0]
     xml_info = client.release_data(pkg_name, version)
-    return pkg_name, version, xml_info
+    url_info = client.release_urls(pkg_name, version)
+    return pkg_name, version, xml_info, url_info
 
 def help():
     print("usage: easy_update  easyconfig.eb [flags]")
-    print("easy_update Updates ext_list information of EasyBuild " +
-          "easyconfig  files")
-    print("easy_update works with R, Python and R-bioconductor " +
-          "easyconfig files")
+    print("easy_update Updates ext_list information of EasyBuild"),
+    print(" easyconfig files")
+    print("easy_update works with R, Python and R-bioconductor"),
+    print(" easyconfig files")
     print("  --verbose  diplay status for each package")
-    print("  --add [filename]  filename contains list of package names to add")
-    print("  --check [package name] print update actions for a single package")
-    print("          option is used for debugging single packages")
+    print("  --add [filename]  filename contains list of package"),
+    print(" names to add")
 
 
 def get_package_list(fname, add_packages):
@@ -510,10 +519,11 @@ if __name__ == '__main__':
         help()
         sys.exit(0)
 
-    vflag = 0 
+    verbose = 0 
     add_packages = []
     package = None
-    file_name = os.path.basename(sys.argv[1])
+    path = sys.argv[1]
+    file_name = os.path.basename(path)
     myopts, args = getopt.getopt(sys.argv[2:], "",
                                  ['verbose',
                                   'add=',
@@ -522,13 +532,14 @@ if __name__ == '__main__':
         if opt == "--add":
             get_package_list(arg, add_packages)
         elif opt == "--verbose":
-            vflag += 1 
+            verbose += 1 
         elif opt == "--check":
             package = arg
     if file_name[:2] == 'R-':
-        module = R(sys.argv[1], add_packages, package, verbose=vflag)
+#    def __init__(self, file_name, add_packages, package, verbose):
+        module = R(path, add_packages, package, verbose)
     elif file_name[:7] == 'Python-':
-        module = PythonExts(sys.argv[1], add_packages, package, verbose=vflag)
+        module = PythonExts(path, add_packages, package, verbose)
     else:
         print("Module name must begin with R- or Python-")
         sys.exit(1)

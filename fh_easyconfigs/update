@@ -1,0 +1,22 @@
+libreadline-6.3-foss-2017b
+ncurses-6.0-GCCcore-6.4.0,bzip2/1.0.6-GCCcore-6.4.0
+XZ-5.2.2-foss-2017b
+SQLite-3.13.0-foss-2017b
+PCRE-8.38-foss-2017b
+libpng-1.6.24-foss-2017b
+'libjpeg-turbo', '1.5.0'),  # for plottting in R
+    ('libpthread-stubs', '0.3'),
+    ('LibTIFF', '4.0.6'),
+    ('Java', '1.8.0_92', '', True),  # Java bindings are built if Java is found, might as well provide it
+    ('Tcl', '8.6.5'),  # for tcltk
+    ('Tk', '8.6.5'),  # for tcltk
+    ('cURL', '7.49.1'),  # for RCurl
+    ('libxml2', '2.9.4'),  # for XML
+    ('X11', '20160819'),
+    ('freeglut', '3.0.0'),   # OpenGL for mixOmics -> rgl
+    ('GDAL', '2.1.1'),  # for rgdal
+    ('GSL', '2.3'), # for gsl
+    ('PROJ', '4.9.2'), # for rgdal
+    ('GMP', '6.1.1'),  # for igraph
+    ('JAGS', '4.2.0'),   # for rjags
+    ('libGLU', '9.0.0'
