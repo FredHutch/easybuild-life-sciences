@@ -22,9 +22,9 @@ dependencies = [
 ]
 
 source_urls = ['http://homer.ucsd.edu/homer']
-sources = ['Homer.tar']
+sources = ['homer.tar']
 
-cmds_map = [('', 'perl ./configureHomer.pl -install')] 
+cmds_map = [('', 'perl ./configureHomer.pl -install -all')] 
 
 modextrapaths = {
                  'PATH': "bin",

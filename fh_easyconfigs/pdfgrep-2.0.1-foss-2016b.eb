@@ -1,0 +1,27 @@
+easyblock = 'ConfigureMake'
+
+name = 'pdfgrep'
+version = '2.0.1'
+
+homepage = 'https://pdfgrep.org/'
+
+description = """a commandline utility to search text in PDF files"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://pdfgrep.org/download/']
+sources = [SOURCELOWER_TAR_GZ]
+
+dependencies = [
+    ('poppler', '0.54.0'),
+    ('libgcrypt', '1.8.1'),
+    ('PCRE', '8.41'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/pdfgrep'],
+    'dirs': [],
+}
+
+moduleclass = 'lib'

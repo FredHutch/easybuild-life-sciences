@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+#
+#  Oncotator Datasource Corpus
+
+easyblock = 'Tarball'
+
+name = 'oncotator_v1_ds'
+version = 'April052016'
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+homepage = 'http://portals.broadinstitute.org/oncotator/'
+description = """Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers."""
+
+source_urls = ['ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/oncotator/']
+sources = ['%(name)s_%(version)s.tar.gz']
+
+modextravars = {
+    'DB_DIR': '$EBROOTONCOTATOR_V1_DS',
+}
+
+sanity_check_paths = {
+    'files': ['1000genome_db/hg19/1000genome_db.config'],
+    'dirs': ['gencode_out2', 'uniprot_aa_xform', 'ref_hg'],
+} 
+
+moduleclass = 'bio'
