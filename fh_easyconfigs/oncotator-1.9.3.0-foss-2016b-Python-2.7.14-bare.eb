@@ -1,0 +1,88 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutinson Cancer Research Center
+
+easyblock = 'Bundle'
+
+name = 'oncotator'
+version = '1.9.3.0'
+pyver = '2.7.14'
+versionsuffix = '-Python-%(pyver)s-bare'
+
+homepage = 'http://portals.broadinstitute.org/oncotator/'
+description = """Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '2.7.14', '-bare'),
+    ('oncotator_v1_ds', 'April052016', '', True),
+    ('SAMtools', '1.6'),
+    ('tabix', '0.2.6'),
+]
+
+exts_defaultclass = 'PythonPackage'
+
+exts_list = [
+    ('numpy', '1.11.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/n/numpy'],
+    }),
+    ('Cython', '0.24', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/Cython']
+    }),
+    ('bcbio-gff', '0.6.2', {
+        'modulename': 'BCBio.GFF',
+        'source_urls': ['https://pypi.python.org/packages/source/b/bcbio-gff/'],   
+    }),
+    ('biopython', '1.66', {
+        'modulename': 'Bio',
+        'source_urls': ['https://pypi.python.org/packages/source/b/biopython/'], 
+    }),
+    ('shove', '0.6.6', {
+        'source_tmpl': '%(name)s-%(version)s.tar.bz2',
+        'source_urls': ['https://pypi.python.org/packages/source/s/shove/'],
+    }),
+    ('python-memcached', '1.57', {
+        'modulename': 'memcache',
+        'source_urls': ['https://pypi.python.org/packages/source/p/python-memcached/'],
+    }),
+    ('PyVCF', '0.6.8', {
+        'modulename': 'vcf',
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyvcf/'],
+    }),
+    ('pysam', '0.9.0', { # a python module for reading, manipulating and writing genomic data sets (SAM/BAM/BED etc)
+        'source_urls': ['https://pypi.python.org/packages/source/p/pysam/'],
+    }),
+    ('pandas', '0.18.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pandas'],
+    }),
+    ('enum34', '1.1.2', {
+        'modulename': 'enum',
+        'source_urls': ['https://pypi.python.org/packages/source/e/enum34'],
+    }),
+    ('SQLAlchemy', '1.0.12', {
+        'modulename': 'sqlalchemy',
+        'source_urls': ['https://pypi.python.org/packages/source/S/SQLAlchemy/'],
+    }),
+    ('natsort', '4.0.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/natsort'],
+    }),
+    ('more-itertools', '2.2', {
+        'modulename': 'more_itertools',
+        'source_urls': ['https://pypi.python.org/packages/source/m/more-itertools'],
+    }),
+    ('oncotator', '1.9.3.0', {
+     #'patches': ['oncotator-1.8.0.0.patch'],
+     'modulename': False, 
+     'source_urls': ['https://github.com/broadinstitute/oncotator/archive/'],
+     'source_tmpl': 'v%(version)s.tar.gz',
+    }),
+]
+
+pyshortver = '.'.join(pyver.split('.')[:2])
+modextrapaths = {'PYTHONPATH': ['lib/python%s/site-packages' % pyshortver]}
+
+moduleclass = 'bio'
