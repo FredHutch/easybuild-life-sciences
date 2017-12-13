@@ -24,10 +24,14 @@ dependencies = [
 source_urls = ['http://homer.ucsd.edu/homer']
 sources = ['homer.tar']
 
+unpack_options = " && cp %(builddir)s/configureHomer.pl %(installdir)s "
+start_dir = "%(installdir)s"
 cmds_map = [('', 'perl ./configureHomer.pl -install -all')] 
+skipsteps = ['install']
 
 modextrapaths = {
                  'PATH': "bin",
+                 'PERL5LIB': "bin"
                  }
 
 files_to_copy = ['bin', 'config.txt', 'data',

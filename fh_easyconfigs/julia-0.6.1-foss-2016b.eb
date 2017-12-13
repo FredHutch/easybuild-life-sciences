@@ -1,0 +1,58 @@
+# EasyBuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org 
+# 
+#  Fred Hutchenson Cancer Research Center 
+#  http://fredhutch.org/
+
+easyblock = 'MakeCp'
+
+name = 'julia'
+version = '0.6.1'
+
+homepage = 'http://www.julialang.org/'
+description = """Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+source_urls = ['https://github.com/JuliaLang/%(name)s/archive/']
+sources = ['v%(version)s.zip']
+
+builddependencies = [
+    ('CMake', '3.7.2'),
+    #('LLVM', '3.9.0'),
+    #('pkg-config', '0.29.1')
+]
+
+dependencies = [
+    #('PCRE2', '10.30'),
+    #('GMP', '6.1.1'),
+    #('MPFR', '3.1.4'),
+    #('arpack-ng', '3.4.0'),
+    #('SuiteSparse', '5.1.0', '-ParMETIS-4.0.3'),
+    #('cURL', '7.49.1'),
+    #('patchelf', '0.9'),
+]
+
+buildopts = 'USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 USE_SYSTEM_FFTW=1 '
+buildopts += 'MARCH=x86-64 '
+#buildopts += 'JULIA_CPU_TARGET=native '
+#buildopts = 'USE_SYSTEM_LLVM=1 USE_SYSTEM_PCRE=1 USE_SYSTEM_BLAS=1 '
+#buildopts += 'USE_SYSTEM_LAPACK=1 USE_SYSTEM_FFTW=1 USE_SYSTEM_GMP=1 '
+#buildopts += 'USE_SYSTEM_MPFR=1 USE_SYSTEM_ARPACK=1 USE_SYSTEM_SUITESPARSE=1 '
+#buildopts += 'USE_SYSTEM_CURL=1 USE_SYSTEM_PATCHELF=1'
+
+#files_to_copy = ['usr/bin',
+                 #'usr/etc',
+                 #'usr/include',
+                 #'usr/lib',
+                 #'usr/share',
+                 #'usr/tools']
+
+files_to_copy = [(['usr/*'], '.')]
+
+sanity_check_paths = {
+    'files': ['bin/julia'], 
+    'dirs': ['bin','etc','include','lib','share','tools']
+}
+
+moduleclass = 'lang'
