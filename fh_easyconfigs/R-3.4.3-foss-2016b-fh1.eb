@@ -700,6 +700,10 @@ exts_list = [
     ('aws.ec2metadata', '0.1.2', ext_options),
     ('aws.signature', '0.3.5', ext_options),
     ('aws.s3', '0.3.3', ext_options),
+    ('ichorCNA', '0.1.0', {
+        'source_urls': ['https://github.com/Azure/%(name)s/archive/'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+    }),
 
 ]
 
