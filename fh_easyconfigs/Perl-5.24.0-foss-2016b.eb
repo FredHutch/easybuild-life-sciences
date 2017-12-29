@@ -11,6 +11,11 @@ toolchainopts = {'pic': True}
 source_urls = ['http://www.cpan.org/src/%(version_major)s.0']
 sources = [SOURCELOWER_TAR_GZ]
 
+sanity_check_paths = {
+    'files': ['bin/perl', 'bin/perldoc'],
+    'dirs': ['lib/perl5/5.24.0']
+}
+
 exts_list = [
     ('Config::General', '2.61', {
         'source_tmpl': 'Config-General-2.61.tar.gz',
@@ -1036,6 +1041,22 @@ exts_list = [
     ('File::Sync', '0.11', {
         'source_tmpl': 'File-Sync-0.11.tar.gz',
         'source_urls': ['http://cpan.metacpan.org/authors/id/B/BR/BRIANSKI/'],
+    }),
+    ('PDF::API2', '2.031', {
+        'source_tmpl': 'PDF-API2-2.031.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/S/SS/SSIMMS/'],
+    }),
+    ('Statistics::Basic', '1.6611', {
+        'source_tmpl': 'Statistics-Basic-1.6611.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/J/JE/JETTERO/'],
+    }),
+    ('SVG', '2.77', {
+        'source_tmpl': 'SVG-2.77.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/'],
+    }),
+    ('Text::Template', '1.46', {
+        'source_tmpl': 'Text-Template-1.46.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/M/MJ/MJD'],
     }),
 ]
 
