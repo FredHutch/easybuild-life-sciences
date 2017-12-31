@@ -11,4 +11,9 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 source_urls = ['ftp://ftp.cyrusimap.org/cyrus-sasl/']
 sources = [SOURCELOWER_TAR_GZ]
 
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/sasl2']
+}
+
 moduleclass = 'system'

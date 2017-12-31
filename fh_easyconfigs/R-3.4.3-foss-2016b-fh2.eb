@@ -59,6 +59,7 @@ dependencies = [
     ('HDF5', '1.8.18'),
     ('OpenSSL', '1.1.0f'),
     ('UDUNITS', '2.1.24'),
+    ('cyrus-sasl', '2.1.26'),
 ]
 
 osdependencies = [
