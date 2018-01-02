@@ -16,6 +16,7 @@ builddependencies = [('Autotools', '20150215')]
 
 preconfigopts = "./autogen.sh && "
 #prebuildopts = "make dist && "
+installopts = "install_bin install_include install_lib"
 
 sanity_check_paths = {
     'files': ['bin/jeprof', 'lib/libjemalloc.a', 'lib/libjemalloc_pic.a', 'lib/libjemalloc.%s' % SHLIB_EXT,
