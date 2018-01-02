@@ -20,10 +20,11 @@ dependencies = [
     ('zlib', '1.2.8'),
     ('ncurses', '6.0'),
     ('jemalloc', '4.2.0'),
-    ('PCRE', '8.38'),
-    ('XZ', '5.2.2', '-gettext-0.19.7'),
-    ('Boost', '1.61.0', '-Python-2.7.11'),
-    ('libxml2', '2.9.3'),
+    ('PCRE', '8.39'),
+    #('XZ', '5.2.2', '-gettext-0.19.7'),
+    ('XZ', '5.2.2'),
+    ('Boost', '1.61.0', '-Python-2.7.12'),
+    ('libxml2', '2.9.4'),
 ]
 
 builddependencies = [('CMake', '3.4.3')]
