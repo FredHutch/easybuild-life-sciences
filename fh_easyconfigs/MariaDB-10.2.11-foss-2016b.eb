@@ -25,6 +25,7 @@ dependencies = [
     ('XZ', '5.2.2'),
     ('Boost', '1.61.0', '-Python-2.7.12'),
     ('libxml2', '2.9.4'),
+    ('OpenSSL', '1.1.0f'),
 ]
 
 builddependencies = [('CMake', '3.4.3')]
