@@ -1,0 +1,11 @@
+--- jemalloc-5.0.1.orig/Makefile.in	2017-07-01 17:44:01.000000000 -0700
++++ jemalloc-5.0.1/Makefile.in	2018-01-02 11:27:44.489738685 -0800
+@@ -461,7 +461,7 @@
+ 
+ install_doc: install_doc_html install_doc_man
+ 
+-install: install_bin install_include install_lib install_doc
++install: install_bin install_include install_lib
+ 
+ tests_unit: $(TESTS_UNIT:$(srcroot)%.c=$(objroot)%$(EXE))
+ tests_integration: $(TESTS_INTEGRATION:$(srcroot)%.c=$(objroot)%$(EXE)) $(TESTS_INTEGRATION_CPP:$(srcroot)%.cpp=$(objroot)%$(EXE))

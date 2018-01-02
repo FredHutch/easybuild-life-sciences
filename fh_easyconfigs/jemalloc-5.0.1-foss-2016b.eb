@@ -14,6 +14,10 @@ sources = ['%(version)s.tar.gz']
 
 builddependencies = [('Autotools', '20150215')]
 
+patches = [
+    'jemalloc-5.0.1-skip-install-doc.patch',
+]
+
 preconfigopts = "./autogen.sh && "
 #prebuildopts = "make dist && "
 installopts = "install_bin install_include install_lib"
