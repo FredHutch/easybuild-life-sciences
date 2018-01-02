@@ -19,7 +19,7 @@ sources = [SOURCELOWER_TAR_GZ]
 dependencies = [
     ('zlib', '1.2.8'),
     ('ncurses', '6.0'),
-    #('jemalloc', '5.0.1'),
+    ('jemalloc', '5.0.1'),
     ('PCRE', '8.39'),
     #('XZ', '5.2.2', '-gettext-0.19.7'),
     ('XZ', '5.2.2'),
@@ -32,8 +32,7 @@ builddependencies = [('CMake', '3.4.3')]
 
 separate_build_dir = True
 
-configopts = "-DWITH_PCRE=system -DWITH_ZLIB=system -DMYSQL_MAINTAINER_MODE=ON "
-#configopts = "-DWITH_PCRE=system -DWITH_JEMALLOC=yes -DWITH_ZLIB=system -DMYSQL_MAINTAINER_MODE=ON "
+configopts = "-DWITH_PCRE=system -DWITH_JEMALLOC=yes -DWITH_ZLIB=system -DMYSQL_MAINTAINER_MODE=ON "
 configopts += "-DDISABLE_LIBMYSQLCLIENT_SYMBOL_VERSIONING=TRUE "  # required because of ld.gold
 configopts += "-DWITH_EMBEDDED_SERVER=ON "  # for libmysqld.so & co
 
