@@ -1,0 +1,23 @@
+easyblock = 'ConfigureMake'
+
+name = 'man-db'
+version = '2.7.6'
+
+homepage = 'https://savannah.nongnu.org/projects/man-db'
+
+description = """ This package provides the man command and related utilities for examining on-line help files (manual pages)."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://download.savannah.nongnu.org/releases/man-db/']
+
+sources = [SOURCELOWER_TAR_XZ]
+
+configopts = '--with-systemdtmpfilesdir=/tmp --with-db=db5'
+
+dependencies = [
+    ('libpipeline', '1.5.0'),
+    ('DB', '5.3.28'),
+]
+
+moduleclass = 'system'

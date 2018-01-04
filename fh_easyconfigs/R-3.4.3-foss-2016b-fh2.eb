@@ -53,6 +53,7 @@ dependencies = [
     ('Mesa', '12.0.2'), # for rgl
     ('cairo', '1.14.6'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
+    ('MariaDB', '10.2.11'), # for RMySQL
     ('netCDF', '4.4.1'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
     ('ZeroMQ', '4.1.4'), # for zmq
@@ -60,6 +61,7 @@ dependencies = [
     ('OpenSSL', '1.1.0f'),
     ('UDUNITS', '2.1.24'),
     ('cyrus-sasl', '2.1.26'),
+    ('unixODBC', '2.3.4'),
 ]
 
 osdependencies = [

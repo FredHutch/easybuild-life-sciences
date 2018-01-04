@@ -1,0 +1,26 @@
+easyblock = 'ConfigureMake'
+
+name = 'libpipeline'
+version = '1.5.0'
+
+homepage = 'https://savannah.nongnu.org/projects/libpipeline'
+
+description = """ libpipeline is a C library for manipulating pipelines of subprocesses in a flexible and convenient way """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://download.savannah.nongnu.org/releases/libpipeline/']
+
+sources = [SOURCELOWER_TAR_GZ]
+
+builddependencies = [
+    ('pkg-config', '0.29.1'),
+    ('Check', '0.12.0'),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib']
+}
+
+moduleclass = 'system'
