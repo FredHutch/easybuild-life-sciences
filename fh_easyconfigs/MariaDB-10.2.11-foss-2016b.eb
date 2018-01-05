@@ -26,7 +26,7 @@ dependencies = [
     ('OpenSSL', '1.1.0f'),
 ]
 
-builddependencies = [('CMake', '3.6.1')]
+builddependencies = [('CMake', '3.7.1')]
 
 separate_build_dir = True
 
