@@ -17,14 +17,10 @@ checksums = [
     '7a6daa8349393af3d340e774aebf07c7410c51e01bc654ceb3679877063b961d',  # Tk-8.6.4_different-prefix-with-tcl.patch
 ]
 
-builddependencies = [
-    ('X11', '20160819'),
-]
-
 dependencies = [
     ('Tcl', version),
     ('X11', '20160819'),
-    ('zlib', '1.2.11'),
+    ('zlib', '1.2.8'),
 ]
 
 configopts = '--enable-threads --with-tcl=$EBROOTTCL/lib CFLAGS="-I$EBROOTTCL/include"'

@@ -12,7 +12,7 @@ sources = ['util-macros-%(version)s.tar.gz']
 
 builddependencies = [
     ('Autotools', '20150215'),
-    ('pkg-config', '0.29'),
+    ('pkg-config', '0.29.1'),
     ('renderproto', '0.11'),
     ('xproto', '7.0.28'),
     ('xextproto', '7.3.0'),

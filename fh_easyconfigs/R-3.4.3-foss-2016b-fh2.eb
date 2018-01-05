@@ -9,7 +9,7 @@
 
 name = 'R'
 version = '3.4.3'
-versionsuffix='-fh1'
+versionsuffix='-fh2'
 biocver = '3.6'
 
 homepage = 'http://www.r-project.org/'
@@ -32,7 +32,7 @@ dependencies = [
     ('XZ', '5.2.2'),
     ('zlib', '1.2.8'),
     ('SQLite', '3.13.0'),
-    ('PCRE', '8.39'),
+    ('PCRE', '8.38'),
     ('libpng', '1.6.24'),  # for plotting in R
     ('libjpeg-turbo', '1.5.0'),  # for plottting in R
     ('libpthread-stubs', '0.3'),
@@ -54,7 +54,7 @@ dependencies = [
     ('cairo', '1.14.6'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
     ('MariaDB', '10.2.11'), # for RMySQL
-    ('netCDF', '4.4.1'), # for netcdf4
+    ('netCDF', '4.5.0'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
     ('ZeroMQ', '4.1.4'), # for zmq
     ('HDF5', '1.8.18'),

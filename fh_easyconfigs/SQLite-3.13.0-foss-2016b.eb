@@ -30,7 +30,7 @@ configopts = ' --enable-readline '
 
 dependencies = [
     ('libreadline', '6.3'),
-    ('Tcl', '8.6.5'),
+    ('Tcl', '8.6.7'),
 ]
 
 sanity_check_paths = {

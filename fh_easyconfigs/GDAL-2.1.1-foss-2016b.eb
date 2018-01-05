@@ -19,7 +19,7 @@ sources = [SOURCELOWER_TAR_XZ]
 configopts = '--with-cryptopp=no'
 
 dependencies = [
-    ('netCDF', '4.4.1'),
+    ('netCDF', '4.5.0'),
     ('expat', '2.2.0'),
     ('libxml2', '2.9.4'),
     ('zlib', '1.2.8'),
