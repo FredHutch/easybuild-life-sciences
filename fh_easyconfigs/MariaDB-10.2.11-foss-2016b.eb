@@ -31,8 +31,8 @@ builddependencies = [('CMake', '3.4.3')]
 separate_build_dir = True
 
 configopts = " -DWITH_JEMALLOC=yes -DWITH_ZLIB=system -DMYSQL_MAINTAINER_MODE=ON "
-#configopts += " -DCMAKE_SHARED_LINKER_FLAGS='-fuse-ld=bfd' "
-configopts += "-DDISABLE_LIBMYSQLCLIENT_SYMBOL_VERSIONING=1 "
+configopts += " -DCMAKE_SHARED_LINKER_FLAGS='-fuse-ld=bfd' "
+#configopts += "-DDISABLE_LIBMYSQLCLIENT_SYMBOL_VERSIONING=1 "
 configopts += "-DWITH_EMBEDDED_SERVER=ON "  # for libmysqld.so & co
 
 sanity_check_paths = {
