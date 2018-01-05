@@ -64,11 +64,6 @@ dependencies = [
     ('unixODBC', '2.3.4'),
 ]
 
-osdependencies = [
-    ('unixodbc-dev', 'unixodbc-devel'), # for RODBC
-
-]
-
 name_tmpl = '%(name)s_%(version)s.tar.gz'
 ext_options = {
     'source_urls': [
