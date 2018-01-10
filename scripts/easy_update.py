@@ -229,7 +229,7 @@ class ExtsList(object):
         #  Add new packages to EB file
         self.pkg_top = None
         for pkg_name in self.add_packages:
-            self.check_package([pkg_name, 'add'])
+            self.check_package([pkg_name, '', 'add'])
 
     def write_chunk(self, indx):
         self.out.write(self.code[self.ptr_head:indx])
@@ -364,7 +364,6 @@ class R(ExtsList):
 
     def get_package_info(self, pkg):
         pkg_ver, depends = self.check_BioC(pkg)
-        pkg[1] = pkg_ver
         pkg[2] = 'bioconductor_options'
         if pkg_ver == 'not found':
             pkg_ver, depends = self.check_CRAN(pkg)
