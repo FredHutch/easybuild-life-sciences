@@ -364,6 +364,7 @@ class R(ExtsList):
 
     def get_package_info(self, pkg):
         pkg_ver, depends = self.check_BioC(pkg)
+        pkg[1] = pkg_ver
         pkg[2] = 'bioconductor_options'
         if pkg_ver == 'not found':
             pkg_ver, depends = self.check_CRAN(pkg)
