@@ -247,9 +247,6 @@ exts_list = [
     ('psutil', '5.4.0', {
         'source_urls': ['https://pypi.python.org/packages/source/p/psutil/'],
     }),
-    ('dask', '0.15.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/dask/'],
-    }),
     ('cloudpickle', '0.4.0', {
         'source_urls': ['https://pypi.python.org/packages/source/c/cloudpickle/'],
     }),
@@ -530,7 +527,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/P/Paste/'],
     }),
     ('PasteDeploy', '1.5.2', {
-        'modulename': False,
+        'modulename': 'paste.deploy', 
         'source_urls': ['https://pypi.python.org/packages/source/P/PasteDeploy/'],
     }),
     ('oslo.service', '1.26.0', {
@@ -631,6 +628,9 @@ exts_list = [
         'modulename': 'vcf',
         'source_urls': ['https://pypi.python.org/packages/source/P/PyVCF/'],
     }),
+    ('sklearn', '0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/sklearn/'],
+    }),
     ('scikit-bio', '0.5.1', {
         'modulename': 'skbio',
         'source_urls': ['https://pypi.python.org/packages/source/s/scikit-bio/'],
@@ -642,6 +642,21 @@ exts_list = [
     #('seqmagick', '0.6.1', {    # Python 2.7 only!
     #    'source_urls': ['https://pypi.python.org/packages/source/s/seqmagick/'],
     #}),
+    ('dask', '0.15.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/dask/'],
+    }),
+    ('dask-searchcv', '0.2.0', {
+        'modulename': 'dask_searchcv',
+        'source_url': ['https://pypi.python.org/packages/a9/ab/ac49083e81aa1527ef2d0cd30a0ea1260c7e74262174ddbc6c8a7a94f816/'],
+    }),
+    ('dask-tensorflow', '0.0.1', {
+        'modulename': 'dask_tensorflow',
+        'source_url': ['https://pypi.python.org/packages/d/dask-tensorflow'],
+    }),
+    ('dask-ml', '0.4.0', {
+        'modulename': 'dask_ml',
+        'source_urls': ['https://pypi.python.org/packages/source/d/dask-ml/'],
+    }),
     ('serializable', '0.1.1', {
         'source_urls': ['https://pypi.python.org/packages/source/s/serializable/'],
     }),
@@ -672,13 +687,11 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/c/coverage/'],
     }),
     ('Sphinx', '1.6.4', {
+        'modulename': 'sphinx',
         'source_urls': ['https://pypi.python.org/packages/source/s/sphinx/'],
     }),
     ('sphinx_rtd_theme', '0.2.5b1', {
         'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-rtd-theme/'],
-    }),
-    ('sklearn', '0.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/sklearn/'],
     }),
     #('glmnet', '2.0.0', {   # wrapper to R function will not work without R install
     #    'source_urls': ['https://pypi.python.org/packages/source/g/glmnet/'],
@@ -1088,7 +1101,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/e/easygui_qt/'],
     }),
     ('PyOpenGL', '3.1.1a1', {
-        'modulename': False,
+        'modulename': 'OpenGL', 
         'source_urls': ['https://pypi.python.org/packages/source/p/PyOpenGL/'],
     }),
     ('spyder', '3.2.3', {
@@ -1098,9 +1111,9 @@ exts_list = [
         'modulename': False,
         'source_urls': ['https://pypi.python.org/packages/source/s/ssh-import-id/'],
     }),
-    #('statsmodels', '0.8.0rc1', {
-    #    'source_urls': ['https://pypi.python.org/packages/source/s/statsmodels/'],
-    #}),
+    ('statsmodels', '0.8.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/statsmodels/'],
+    }),
     ('stdeb', '0.8.5', {
         'source_urls': ['https://pypi.python.org/packages/source/s/stdeb/'],
     }),
@@ -1249,7 +1262,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/k/kivy/'],
     }),
     ('kivy-garden', '0.1.4', {
-        'modulename': False,
+        'modulename': 'kivy.garden',
         'source_urls': ['https://pypi.python.org/packages/source/k/kivy-garden/'],
     }),
     ('lazy-object-proxy', '1.3.1', {
@@ -1405,8 +1418,7 @@ exts_list = [
         'use_pip': True,
     }),
     ('Keras', '2.0.8', {
-        'modulename': False, 
-        # 'modulename': 'keras',
+        'modulename': 'keras',
         'source_urls': ['https://pypi.python.org/packages/source/k/Keras/'],
         'patch': ['Keras-2.0.8.patch'],
     }),
@@ -1439,6 +1451,15 @@ exts_list = [
     }),
     ('celery', '4.1.0', {
         'source_urls': ['https://pypi.python.org/packages/source/c/celery/'],
+    }),
+        ('seaborn', '0.8.1', {
+        'source_url': ['https://pypi.python.org/packages/s/seaborn'],
+    }),
+    ('textblob', '0.13.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/T/TextBlob/'],
+    }),
+    ('seaborn', '0.8.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/seaborn/'],
     }),
 ]
 

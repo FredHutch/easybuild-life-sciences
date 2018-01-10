@@ -74,9 +74,9 @@ class ExtsList(object):
         self.pkg_name += '-' + eb.toolchain['version']
         self.pkg_version = eb.version
         self.biocver = None 
-        if self.pkg_name[1] == 'R':
+        if self.pkg_name[0] == 'R':
             self.biocver = eb.biocver
-
+            print('biocver')
         try:
             self.pkg_name += eb.versionsuffix
         except (AttributeError, NameError):
@@ -299,7 +299,6 @@ class R(ExtsList):
             self.read_bioconductor_pacakges()
         else:
             print('BioCondutor verserion: biocver not set')
-            sys.exit(1)
 
     def read_bioconductor_pacakges(self):
         """ read the Bioconductor package list into bio_data dict
@@ -405,6 +404,7 @@ class PythonExts(ExtsList):
         sys_platform = 'Linux'
         python_version = self.python_version
         extra = ''
+        platform_python_implementation = 'CPython'
         require_re = '^([A-Za-z0-9_\-\.]+)(?:.*)$'
         extra_re = "and\sextra\s==\s'([A-Za-z0-9_\-\.]+)'"  # only if the
         targets = ['python_version', 'sys_platform', 'extra']
@@ -416,7 +416,13 @@ class PythonExts(ExtsList):
         if len(version) > 1:
             for target in targets:
                 if target in version[1]:
-                    state = eval(version[1])
+                    # eval Example: python_version == "3.3" and sys_platform == 'Linux'
+                    try:
+                        state = eval(version[1])
+                    except NameError:
+                        print('Error: NameError on eval, ignoring')
+                    except SyntaxError:
+                        pass
                     if target == 'extra':
                         extra = re.search(extra_re, version[1])
                         extra = extra.group(1) if extra else None

@@ -1,0 +1,24 @@
+#  2018.01.03 John Dey jfdey@fredhutch.org
+#
+#
+
+name = 'bam2wig'
+version = '1.4'
+
+easyblock = 'Tarball'
+
+homepage = 'https://github.com/MikeAxtell/bam2wig'
+description = """Conversion of a BAM alignment to wiggle and bigwig coverage files, with flexible reporting options."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/MikeAxtell/bam2wig/archive']
+sources = ['v%(version)s.zip']
+
+sanity_check_paths = {
+    'files': ["bam2wig"],
+    'dirs': []
+}
+
+modextrapaths = {'PATH': ''}
+moduleclass = 'bio'

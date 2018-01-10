@@ -1,0 +1,32 @@
+# easybuild easyconfig
+
+easyblock = "CmdCp"
+
+name = 'Bazel'
+version = '0.9.0'
+
+homepage = 'http://bazel.io/'
+description = """Bazel is a build tool that builds code quickly and reliably. 
+It is used to build the majority of Google's software."""
+
+toolchain = {'name': 'GCCcore', 'version': '6.4.0'}
+
+source_urls = ['https://github.com/bazelbuild/bazel/releases/download/%(version)s']
+sources = ['%(namelower)s-%(version)s-dist.zip']
+checksums = ['efb28fed4ffcfaee653e0657f6500fc4cbac61e32104f4208da385676e76312a']
+
+builddependencies = [('binutils', '2.28'),
+                     ('Java', '1.8.0_121', '', True)]
+
+dependencies = [('Java', '1.8.0_121', '', True)]
+
+cmds_map = [('.*', "./compile.sh")]
+
+files_to_copy = [(['output/bazel'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/bazel'],
+    'dirs':  [],
+}
+
+moduleclass = 'devel'
