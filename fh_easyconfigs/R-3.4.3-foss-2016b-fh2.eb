@@ -25,6 +25,8 @@ configopts = "--with-lapack --with-blas --with-pic --enable-threads --with-x=yes
 # some recommended packages may fail in a parallel build (e.g. Matrix), and we're installing them anyway below
 configopts += " --with-recommended-packages=no"
 
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
 dependencies = [
     ('libreadline', '6.3'),
     ('ncurses', '6.0'),
@@ -53,12 +55,11 @@ dependencies = [
     ('Mesa', '12.0.2'), # for rgl
     ('cairo', '1.14.6'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
-    ('MariaDB', '10.2.11'), # for RMySQL
+    #('MariaDB', '10.2.11'), # for RMySQL
     ('netCDF', '4.5.0'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
     ('ZeroMQ', '4.1.4'), # for zmq
     ('HDF5', '1.8.18'),
-    ('OpenSSL', '1.1.0f'),
     ('UDUNITS', '2.1.24'),
     ('cyrus-sasl', '2.1.26'),
     ('unixODBC', '2.3.4'),
@@ -564,7 +565,8 @@ exts_list = [
     ('regtools', '1.0.1', ext_options),
     ('partools', '1.1.6', ext_options),
     ('RPostgreSQL', '0.6-2', ext_options),
-    ('RMySQL', '0.10.13', ext_options),
+    #('RMySQL', '0.10.13', dict(ext_options.items() + [('patches', ['RMySQL-mariadb-mysql-server-version.patch'])])),
+    #('RMariaDB', '1.0-4', ext_options),
     ('gsubfn', '0.6-6', ext_options),
     ('sqldf', '0.4-11', ext_options),
     ('alr3', '2.0.5', ext_options),
@@ -667,7 +669,7 @@ exts_list = [
     ('GWASExactHW', '1.01', ext_options),
     ('StanHeaders', '2.16.0-1', ext_options),
     ('inline', '0.3.14', ext_options),
-    ('rstan', '2.16.2', ext_options),
+#    ('rstan', '2.17.2', ext_options),
     ('ASCAT', '2.4.3', {
         'source_urls': ['https://github.com/Crick-CancerGenomics/ascat/raw/v%(version)s/'],
         'source_tmpl': 'ASCAT_%(version)s.tar.gz'
@@ -698,10 +700,10 @@ exts_list = [
     ('aws.ec2metadata', '0.1.2', ext_options),
     ('aws.signature', '0.3.5', ext_options),
     ('aws.s3', '0.3.3', ext_options),
-    ('ichorCNA', '0.1.0', {
-        'source_urls': ['https://github.com/Azure/%(name)s/archive/'],
-        'source_tmpl': 'v%(version)s.tar.gz',
-    }),
+    #('ichorCNA', '0.1.0', {   # this depends on bioc packages
+        #'source_urls': ['https://github.com/Azure/%(name)s/archive/'],
+        #'source_tmpl': 'v%(version)s.tar.gz',
+    #}),
 
 ]
 
