@@ -76,7 +76,6 @@ class ExtsList(object):
         self.biocver = None 
         if self.pkg_name[0] == 'R':
             self.biocver = eb.biocver
-            print('biocver')
         try:
             self.pkg_name += eb.versionsuffix
         except (AttributeError, NameError):
@@ -229,7 +228,7 @@ class ExtsList(object):
         #  Add new packages to EB file
         self.pkg_top = None
         for pkg_name in self.add_packages:
-            self.check_package([pkg_name, '', 'add'])
+            self.check_package([pkg_name, 'add'])
 
     def write_chunk(self, indx):
         self.out.write(self.code[self.ptr_head:indx])
@@ -294,7 +293,8 @@ class R(ExtsList):
         self.bioc_data = {}
         self.depend_exclude = ['R', 'parallel', 'methods', 'utils', 'stats',
                                'stats4', 'graphics', 'grDevices', 'tools',
-                               'tcltk', 'grid', 'splines', 'compiler' ]
+                               'tcltk', 'grid', 'splines', 'compiler',
+                               'datasets']
         if self.biocver:
             self.read_bioconductor_pacakges()
         else:
@@ -364,7 +364,9 @@ class R(ExtsList):
 
     def get_package_info(self, pkg):
         pkg_ver, depends = self.check_BioC(pkg)
-        pkg[2] = 'bioconductor_options'
+        if pkg[1] == 'add':
+            pkg[1] = pkg_ver
+            pkg.append('bioconductor_options')
         if pkg_ver == 'not found':
             pkg_ver, depends = self.check_CRAN(pkg)
             pkg[2] = 'ext_options'
