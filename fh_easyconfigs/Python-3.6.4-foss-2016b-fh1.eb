@@ -852,6 +852,7 @@ exts_list = [
     ('ipython', '6.2.1', {
         'modulename': False,
         'source_urls': ['https://pypi.python.org/packages/source/i/ipython/'],
+        'use_pip': True,
     }),
     ('pyzmq', '17.0.0b3', {
         'modulename': 'zmq',
