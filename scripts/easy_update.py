@@ -126,7 +126,9 @@ class ExtsList(object):
         subclasses of <get_package_info> search CRAN, Pypi or Bioconductor
         based on easyconfig.
         input: pkg - list [pkg_name, pkg_version, source]
-        return: [pkg_version, depends[]]
+        return: [pkg_version, source, depends[]]
+        <pkg_version> string; highest version of <pkg_name> available
+        <source> Where to fine the package: PYPI, CRAN or Bioconductor  
         <depends> list of package names that are dependancies
         look hard for dependant packages, try to match different cases
         and interchange underscore and dash.  If input package_name
@@ -142,11 +144,12 @@ class ExtsList(object):
             return False
 
     def check_package(self, pkg):
-        """base class check_package [this is heart of the program]
-        check pkg is the latest versionif <pkg_version> is the latest version
+        """this is heart of the program
+        check that <pkg> is the latest version.
+        check that all dependancies are meet for each package.
+        check that <pkg> is not a duplicate.
 
         input: pkg - list [pkg_name, pkg_version, source]
-        check that all dependancies are meet for each package.
         check_package can be called recursivly. To track recursion
         global <self.pkg_top> contains the package name of the original
         call.
@@ -160,13 +163,13 @@ class ExtsList(object):
             return
         if self.verbose > 1:
             print('check_package: (%s, %s)' % (pkg[0], pkg[1]))
-        pkg_ver, depends = self.get_package_info(pkg)
+        pkg_ver, pkg_source, depends = self.get_package_info(pkg)
         if pkg[0] != pkg_name:
-            print("update package name %s -> %s" % (pkg_name, pkg[0]))
+            print("Repository package name does not match. %s -> %s" % (pkg_name, pkg[0]))
             if self.is_processed(pkg[0]):
                  return
         if pkg_ver == "error" or pkg_ver == 'not found':
-            if pkg[0] == self.pkg_top and pkg[1] != 'add':
+            if pkg[0] == self.pkg_top and pkg[1][0:3] != 'add':
                 pkg.append('keep')
             else:
                 self.pkg_drop += 1
@@ -175,7 +178,7 @@ class ExtsList(object):
                 print("but can't be found!")
                 return
         else:
-            if self.pkg_top == pkg_name and pkg[1] != 'add':
+            if self.pkg_top == pkg_name and pkg[1][0:3] != 'add':
                 if pkg[1] == pkg_ver:
                     pkg.append('keep')
                 else:
@@ -191,12 +194,15 @@ class ExtsList(object):
                     ext_url += "%s/%s/'],\n%s}" % (pkg_name[0], pkg_name,
                                                    self.indent)
                     pkg.append(ext_url)
+                elif self.name == 'R':
+                    pkg.append(pkg_source)
+                    
                 pkg.append('new')
                 self.pkg_new += 1
 
         for depend in depends:
             if depend not in self.depend_exclude:
-                self.check_package([depend, 'x', 'new package'])
+                self.check_package([depend, 'add-dep'])  # third arg?
         self.exts_processed.append(pkg)
         self.ext_counter += 1
         if self.verbose > 0:
@@ -204,8 +210,8 @@ class ExtsList(object):
                 print("Error:"),
             if pkg[-1] == 'update':
                 version = '%s -> %s' % (orig_ver, pkg[1])
-            elif pkg[-1] == 'add':
-                version = '%s (add)' % pkg[1]
+            elif pkg[-1][0:3] == 'add':
+                version = '%s (%s)' % (pkg[1], pkg[-1])
             elif pkg[-1] == 'new':
                 version = '%s (new)' % pkg[1]
             else:
@@ -364,16 +370,14 @@ class R(ExtsList):
 
     def get_package_info(self, pkg):
         pkg_ver, depends = self.check_BioC(pkg)
-        if pkg[1] == 'add':
-            pkg[1] = pkg_ver
-            pkg.append('bioconductor_options')
+        pkg_source = 'bioconductor_options'
         if pkg_ver == 'not found':
             pkg_ver, depends = self.check_CRAN(pkg)
-            pkg[2] = 'ext_options'
+            pkg_source = 'ext_options'
         if self.verbose > 0:
             for p in depends:
-                print("%s requires: %s" % (pkg[0], p))
-        return pkg_ver, depends
+                print("%s requires: %s from %s" % (pkg[0], p, pkg_source))
+        return pkg_ver, pkg_source, depends
 
 
 class PythonExts(ExtsList):
@@ -450,11 +454,12 @@ class PythonExts(ExtsList):
         """
         depends = []
         (pkg_name, pkg_ver, xml_info, url_info) = get_pypi_info(pkg[0])
+        pkg_source = 'PYPI'
         if not xml_info:
             print("Warning: %s Not in PyPi. " % pkg[0])
             print("No dependency checking performed")
             pkg_ver = 'not found'
-            return pkg_ver, [] 
+            return pkg_ver, pkg_source, [] 
         URL = None
         for url in url_info:
             file_name = url['filename']
