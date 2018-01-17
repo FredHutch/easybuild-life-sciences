@@ -659,21 +659,6 @@ exts_list = [
     #('seqmagick', '0.6.1', {    # Python 2.7 only!
     #    'source_urls': ['https://pypi.python.org/packages/source/s/seqmagick/'],
     #}),
-    ('dask', '0.16.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/dask/'],
-    }),
-    ('dask-searchcv', '0.2.0', {
-        'modulename': 'dask_searchcv',
-        'source_url': ['https://pypi.python.org/packages/a9/ab/ac49083e81aa1527ef2d0cd30a0ea1260c7e74262174ddbc6c8a7a94f816/'],
-    }),
-    #('dask-tensorflow', '0.0.1', {  # missing requirements.txt Patched by hand
-    #    'modulename': False,   # fails sanity check
-    #    'source_url': ['https://pypi.python.org/packages/d/dask-tensorflow'],
-    #}),
-    ('dask-ml', '0.4.0', {
-        'modulename': 'dask_ml',
-        'source_urls': ['https://pypi.python.org/packages/source/d/dask-ml/'],
-    }),
     ('serializable', '0.1.1', {
         'source_urls': ['https://pypi.python.org/packages/source/s/serializable/'],
     }),
@@ -797,9 +782,6 @@ exts_list = [
     }),
     ('singledispatch', '3.4.0.3', {
         'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
-    }),
-    ('distributed', '1.20.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/distributed/'],
     }),
     ('boto3', '1.5.8', {
         'source_urls': ['https://pypi.python.org/packages/source/b/boto3/'],
@@ -1403,17 +1385,39 @@ exts_list = [
         'modulename': 'absl',
         'source_urls': ['https://pypi.python.org/packages/source/a/absl-py/'],
     }),
-    #('tensorflow', '1.5.0rc0', {
-    #    'source_urls': ['https://pypi.python.org/pypi/tensorflow'],
-    #    'source_tmpl': '%(name)s-%(version)s-cp36-cp36m-manylinux1_x86_64.whl',
-    #    'unpack_sources': False,
-    #    'use_pip': True,
-    #}),
-    #('Keras', '2.1.2', {
-    #    'modulename': 'keras',
-    #    'source_urls': ['https://pypi.python.org/packages/source/k/Keras/'],
-    #    'patch': ['Keras-2.0.8.patch'],
-    #}),
+    ('tensorflow', '1.5.0rc0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.python.org/pypi/tensorflow'],
+        'source_tmpl': '%(name)s-%(version)s-cp36-cp36m-linux_x86_64.whl',
+        'unpack_sources': False,
+        'use_pip': True,
+    }),
+    ('Keras', '2.1.2', {
+        'modulename': False,
+        'source_urls': ['https://pypi.python.org/packages/source/k/Keras/'],
+        'patch': ['Keras-2.0.8.patch'],
+    }),
+    ('dask', '0.16.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/dask/'],
+    }),
+    ('dask-searchcv', '0.2.0', {
+        'modulename': 'dask_searchcv',
+        'source_url': ['https://pypi.python.org/packages/a9/ab/ac49083e81aa1527ef2d0cd30a0ea1260c7e74262174ddbc6c8a7a94f816/'],
+    }),
+    ('dask-tensorflow', '0.0.1', {  # missing requirements.txt Patched by hand
+        'modulename': False,   # fails sanity check
+        'source_url': ['https://pypi.python.org/packages/d/dask-tensorflow'],
+    }),
+    ('dask-xgboost', '0.1.5', {
+        'source_url': ['https://pypi.python.org/packages/d/dask-xgboost'],
+    }),
+    ('dask-ml', '0.4.0', {
+        'modulename': 'dask_ml',
+        'source_urls': ['https://pypi.python.org/packages/source/d/dask-ml/'],
+    }),
+    ('distributed', '1.20.2', {
+        'source_url': ['https://pypi.python.org/packages/source/d/dask-ml/'],
+    }),
     ('httpie', '0.9.9', {
         'source_urls': ['https://pypi.python.org/packages/source/h/httpie/'],
     }),
@@ -1464,6 +1468,9 @@ exts_list = [
     }),
     ('pybedtools', '0.7.10', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pybedtools/'],
+    }),
+    ('pipenv', '9.0.1', {
+        'source_url': ['https://pypi.python.org/packages/p/pipenv'],
     }),
 ]
 
