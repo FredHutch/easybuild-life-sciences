@@ -7,23 +7,18 @@ The Life Sciences Software (LS2) project aims to normalize the build of software
 ## Components
 LS2 is a collection of open source components.
 
-<dl>
-  <dt>[EasyBuild](https://easybuilders.github.io/easybuild/)
-  <dd>we use EasyBuild to compile software packages and provide reproducibility.
-
-  <dt>[Lmod](https://github.com/TACC/Lmod)
-  <dd>EasyBuild uses Environment Modules to manage software packages, and LS2 uses Lmod to provide Environment Modules.
-
-  <dt>[Docker](https://www.docker.com/)
-  <dd>LS2 can produce Docker containers with one or more software packages.
-
-  <dt>[Ubuntu](https://www.ubuntu.com/)
-  <dd>LS2 uses Ubuntu as its primary platform, and creates Docker containers based on Ubuntu containers. Note that EasyBuild uses CentOS as their primary platform, and extending LS2 to CentOS would likely be pretty easy.
-
-</dl>
+*[EasyBuild](https://easybuilders.github.io/easybuild/)
+  *We use EasyBuild to compile software packages and provide reproducibility.
+*[Lmod](https://github.com/TACC/Lmod)
+  *EasyBuild uses Environment Modules to manage software packages, and LS2 uses Lmod to provide Environment Modules.
+*[Docker](https://www.docker.com/)
+  *LS2 can produce Docker containers with one or more software packages.
+*[Ubuntu](https://www.ubuntu.com/)
+  *LS2 uses Ubuntu as its primary platform, and creates Docker containers based on Ubuntu containers. Note that EasyBuild uses CentOS as their primary platform, and extending LS2 to CentOS would likely be pretty easy.
 
 ## LS2 Architecture
 This is the hierarchy of LS2 containers:
+
 Name/Repo | Reason | Notes
 --- | --- | ---
 [ls2_ubuntu](https://github.com/FredHutch/ls2_ubuntu) | simple 'freeze' of the public ubuntu container | OS pkgs added: bash, curl, git
@@ -34,19 +29,15 @@ Name/Repo | Reason | Notes
 
 ## Container Architecture
 * default user 'neo' (UID 500, GID 500) /home/neo
-* Lmod and EasyBuild installed into /app
-* EasyConfigs from LS2 repo are copied into /app/fh_easyconfigs
-* sources from LS2 repo are copied and downloaded into /app/sources
+* Lmod and EasyBuild are installed into /app
+* EasyConfigs are copied into /app/fh_easyconfigs
+* sources are copied and downloaded into /app/sources
 * EasyBuild is run in a single 'RUN' command to reduce container layer size:
   * installs specified OS packages
   * runs EasyBuild
   * uninstalls specified OS packages
 
 ## Use Cases
-* Create a container with self-contained optimized software packages that can easily be reproduced.
-* Test new EasyConfigs in isolation
-* Find uncited OS dependencies in existing EasyConfigs
-* Manage an installed software package archive
 
 ### Create a container
 The initial reason for LS2 is to create Docker containers with EasyBuilt software packages to mirror those available on our HPC systems. We realize that containerizing common software packages will be key in leveraging many new technologies like AWS Batch.
@@ -69,7 +60,7 @@ Steps to build a new LS2 container are pretty straight-forward, but assume some 
 
 1. Fork this repo
 1. Add your target EasyConfig file to the root of your new repo
-1. Add dependent EasyConfigs that are not in the EasyBuild repo to /easyconfigs
+1. Add dependent EasyConfig files that are not in the EasyBuild repo to /easyconfigs
 1. Add sources to the sources/ folder of the repo (for sources <50MB in size that cannot easily be downloaded)
 1. Add URLs to sources/download_sources.sh to download sources during `docker build` (for larger sources, perhaps placed in the cloud for easier download)
 1. Edit the Dockerfile to adjust the following:
