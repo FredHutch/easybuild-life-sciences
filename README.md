@@ -19,13 +19,13 @@ LS2 is a collection of open source components.
 ## LS2 Architecture
 This is the hierarchy of LS2 containers:
 
-Name/Repo | Reason | Notes
+Name/Repo | FROM | Reason | Notes
 --- | --- | ---
-[ls2_ubuntu](https://github.com/FredHutch/ls2_ubuntu) | simple 'freeze' of the public ubuntu container | OS pkgs added: bash, curl, git
-[ls2_easybuild](https://github.com/FredHutch/ls2_easybuild) | Adding EasyBuild and Lmod | OS pkgs added: python, lua
-[ls2_easybuild_foss](https://github.com/FredHutch/ls2_easybuild_foss) | Adding the 'foss' toolchain | OS pkgs added: libibverbs-dev, lib6c-dev, bzip2, unzip, make, xz-utils
-[ls2](https://github.com/FredHutch/ls2) | This 'demo' repo | does not produce a container directly
-[ls2_r](https://github.com/FredHutch/ls2_r) | Our 'R' build | OS pkgs added: awscli
+[ls2_ubuntu](https://github.com/FredHutch/ls2_ubuntu) | ubuntu | simple 'freeze' of the public ubuntu container | OS pkgs added: bash, curl, git
+[ls2_easybuild](https://github.com/FredHutch/ls2_easybuild) | ls2_ubuntu | Adding EasyBuild and Lmod | OS pkgs added: python, lua
+[ls2_easybuild_foss](https://github.com/FredHutch/ls2_easybuild_foss) | ls2_easybuild | Adding the 'foss' toolchain | OS pkgs added: libibverbs-dev, lib6c-dev, bzip2, unzip, make, xz-utils
+[ls2](https://github.com/FredHutch/ls2) | ls2_easybuild_foss | This 'demo' repo | does not produce a container directly
+[ls2_r](https://github.com/FredHutch/ls2_r) | ls2_easybuild_foss | Our 'R' build | OS pkgs added: awscli
 
 ## Container Architecture
 * default user 'neo' (UID 500, GID 500) /home/neo
