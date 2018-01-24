@@ -25,7 +25,10 @@ configopts = "--with-lapack --with-blas --with-pic --enable-threads --with-x=yes
 # some recommended packages may fail in a parallel build (e.g. Matrix), and we're installing them anyway below
 configopts += " --with-recommended-packages=no"
 
-osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+osdependencies = [
+    ('openssl-devel', 'libssl-dev', 'libopenssl-devel'),
+    ('libmysqlclient-dev'),
+]
 
 dependencies = [
     ('libreadline', '6.3'),
@@ -55,7 +58,6 @@ dependencies = [
     ('Mesa', '12.0.2'), # for rgl
     ('cairo', '1.14.6'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
-    #('MariaDB', '10.2.11'), # for RMySQL
     ('netCDF', '4.5.0'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
     ('ZeroMQ', '4.1.4'), # for zmq
@@ -581,7 +583,7 @@ exts_list = [
     ('regtools', '1.0.1', ext_options),
     ('partools', '1.1.6', ext_options),
     ('RPostgreSQL', '0.6-2', ext_options),
-    #('RMySQL', '0.10.13', dict(ext_options.items() + [('patches', ['RMySQL-mariadb-mysql-server-version.patch'])])),
+    ('RMySQL', '0.10.13', ext_options),
     #('RMariaDB', '1.0-4', ext_options),
     ('gsubfn', '0.6-6', ext_options),
     ('sqldf', '0.4-11', ext_options),
@@ -778,7 +780,6 @@ exts_list = [
     ('illuminaio', '0.20.0', bioconductor_options),
     ('rtracklayer', '1.38.3', bioconductor_options),
     ('biomaRt', '2.34.2', bioconductor_options),
-    ('RMySQL', '0.10.13', ext_options),
     ('GenomicFeatures', '1.30.0', bioconductor_options),
     ('bumphunter', '1.20.0', bioconductor_options),
     ('multtest', '2.34.0', bioconductor_options),
