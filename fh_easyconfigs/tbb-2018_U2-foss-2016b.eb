@@ -1,0 +1,18 @@
+# easybuild easyconfig
+
+name = 'tbb'
+version = '2018_U2'
+
+homepage = 'https://www.threadingbuildingblocks.org/'
+description = """Intel(R) Threading Building Blocks (Intel(R) TBB) lets you easily write parallel C++ programs that take full advantage of multicore performance, that are portable and composable, and that have future-proof scalability."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = ['https://github.com/01org/tbb/archive/']
+sources = ['%(version)s.tar.gz']
+
+builddependencies = [
+    ('binutils', '2.26')
+]
+
+moduleclass = 'lib'

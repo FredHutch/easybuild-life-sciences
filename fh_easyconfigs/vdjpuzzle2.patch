@@ -1,0 +1,12 @@
+diff -ruN kirbyvisp-vdjpuzzle2-3771ca670a3a.org/bin/vdjpuzzle kirbyvisp-vdjpuzzle2-3771ca670a3a/bin/vdjpuzzle
+--- kirbyvisp-vdjpuzzle2-3771ca670a3a.org/bin/vdjpuzzle	2018-01-04 22:20:38.000000000 -0800
++++ kirbyvisp-vdjpuzzle2-3771ca670a3a/bin/vdjpuzzle	2018-01-21 19:41:54.661842000 -0800
+@@ -23,7 +23,7 @@
+ if [[ -z ${CONDA_PREFIX+x} ]]; then
+ 	CURDIR="$PWD"
+ 	cd $BIN_DIR/../
+-	source activate vdjpuzzle
++	#source activate vdjpuzzle
+ 	cd $CURDIR
+ fi
+ # If conda_prefix still does not exist, environment hasn't been created - leave this to the user.

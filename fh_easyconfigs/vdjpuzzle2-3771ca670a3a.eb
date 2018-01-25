@@ -1,0 +1,49 @@
+# easybuild easyconfig
+#
+#  John Dey - Work in progress
+#
+easyblock = 'Tarball'
+
+name = 'vdjpuzzle2'
+version = '3771ca670a3a'
+# kirbyvisp-vdjpuzzle2-3771ca670a3a
+
+homepage = 'https://bitbucket.org/kirbyvisp/vdjpuzzle2'
+description = """TCR and BCR reconstruction from scRNA-seq data"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://bitbucket.org/kirbyvisp/vdjpuzzle2/get/']
+sources = ['%(version)s.zip']
+patches = ['%(name)s.patch']
+
+dependencies = [
+    ('Python', '3.6.4', '-fh1'),
+    ('Trinity', '2.4.0'),
+]
+
+modextrapaths = {'PATH': '',
+                 'CONDA_PREFIX': '$EBROOTPYTHON',
+                 }
+
+
+sanity_check_paths = {
+    'files': ['Example/Cell1/Cell1_1.fastq.gz',
+              'bin/vdjpuzzle',
+              'scripts/extract_fasta.py',
+              'share/bed_files/IGH_human.bed',
+              ],
+    'dirs': ['Example',
+             'Example/Cell1',
+             'Example/Cell2',
+             'bin',
+             'scripts',
+             'share/bed_files',
+             'share'],
+}
+
+modloadmsg = """vdjpuzzle2 scripts are located in $EBROOTVDJPUZZLE2/scripts.
+Databases are located: $EBROOTVDJPUZZLE2/share/bed_files
+"""
+
+moduleclass = 'bio'
