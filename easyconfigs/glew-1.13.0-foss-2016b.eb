@@ -19,6 +19,10 @@ sources = [SOURCE_TGZ]
 #    ('libXmu',  ?'),
 #    ('libgl',  '?'),
 
+builddependencies = [
+    ('libGLU', '9.0.0'),
+]
+
 dependencies = [
     ('libXi', '1.7.2'),
 ]

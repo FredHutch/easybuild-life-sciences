@@ -17,10 +17,16 @@ toolchainopts = {'pic': True}
 source_urls = ['http://www.python.org/ftp/%(namelower)s/%(version)s/']
 sources = [SOURCE_TGZ]
 
-# python needs bzip2 to build the bz2 package
+builddependencies = [
+    ('freetds', '1.00.9'), # pymssql
+    ('libjpeg-turbo', '1.5.0'),
+]
+
 dependencies = [
-    ('bzip2', '1.0.6'),
+    ('bzip2', '1.0.6'), # required for bz2 
     ('zlib', '1.2.8'),
+    ('freetds', '1.00.9'), # pymssql
+    ('libjpeg-turbo', '1.5.0'),  # required for Pillow
     ('libreadline', '6.3'),
     ('ncurses', '6.0'),
     ('SQLite', '3.13.0'),
@@ -356,9 +362,9 @@ exts_list = [
         'modulename': 'flask_migrate',
         'source_urls': ['https://pypi.python.org/packages/source/f/flask_migrate'],
     }),
-    ('psycopg2', '2.7.3.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/psycopg2'],
-    }),
+    #('psycopg2', '2.7.3.2', {  # requires Postgres Path too install pg_config
+    #    'source_urls': ['https://pypi.python.org/packages/source/p/psycopg2'],
+    #}),
     ('pypandoc', '1.4', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pypandoc'],
     }),
@@ -617,9 +623,9 @@ exts_list = [
         'modulename': 'pam',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-pam'],
     }),
-    ('pymssql', '2.1.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pymssql'],
-    }),
+    #('pymssql', '2.1.3', {
+    #    'source_urls': ['https://pypi.python.org/packages/source/p/pymssql'],
+    #}),
     ('urwid', '1.3.1', {
         'source_urls': ['https://pypi.python.org/packages/source/u/urwid'],
     }),
@@ -958,10 +964,10 @@ exts_list = [
         'modulename': 'github',
         'source_urls': ['https://pypi.python.org/packages/source/P/PyGithub/'],
     }),
-    ('PyGreSQL', '5.0.4', {
-        'modulename': 'pg',
-        'source_urls': ['https://pypi.python.org/packages/source/P/PyGreSQL/'],
-    }),
+    #('PyGreSQL', '5.0.4', {
+    #    'modulename': 'pg',
+    #    'source_urls': ['https://pypi.python.org/packages/source/P/PyGreSQL/'],
+    #}),
     #('pylint', '1.7.1', {
     #    'source_urls': ['https://pypi.python.org/packages/source/p/pylint/'],
     #}),
@@ -1251,9 +1257,9 @@ exts_list = [
     ('pathtools', '0.1.2', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pathtools/'],
     }),
-    ('paycheck', '1.0.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/paycheck/'],
-    }),
+    #('paycheck', '1.0.2', {  # docker issue unicode non ascii128 found
+    #    'source_urls': ['https://pypi.python.org/packages/source/p/paycheck/'],
+    #}),
     ('python-editor', '1.0.3', {
         'modulename': 'editor',
         'source_urls': ['https://pypi.python.org/packages/source/p/python-editor/'],
@@ -1432,9 +1438,9 @@ exts_list = [
     ('umi_tools', '0.5.3', {
         'source_urls': ['https://pypi.python.org/packages/source/u/umi_tools/'],
     }),
-    ('snakemake', '4.4.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/snakemake/'],
-    }),
+    #('snakemake', '4.4.0', { # unicode issue 0xe2
+    #    'source_urls': ['https://pypi.python.org/packages/source/s/snakemake/'],
+    #}),
     ('porechop', '0.2.0', {
         'source_tmpl': 'v%(version)s.zip',
         'source_urls': ['https://github.com/rrwick/Porechop/archive'],
@@ -1480,6 +1486,24 @@ exts_list = [
         'modulename': False,
         'source_urls': ['https://pypi.python.org/packages/source/s/synapseclient/'],
     }),
+    ('tqdm', '4.19.5', {
+        'source_url': ['https://pypi.python.org/packages/source/t/tqdm'],
+    }),
+    ('profilehooks', '1.10.0', {
+        'source_url': ['https://pypi.python.org/packages/source/p/profilehooks'],
+    }),
+    ('joblib', '0.11', {
+        'source_url': ['https://pypi.python.org/packages/source/j/joblib'],
+    }),
+    ('anndata', '0.4.4', {
+        'source_url': ['https://pypi.python.org/packages/source/a/anndata'],
+    }),
+    #('scanpy', '0.4.2', {
+    #    'source_tmpl': '%(version)s.zip',
+    #    'source_urls': ['https://github.com/theislab/scanpy/archive/'],
+    #    'unpack_sources': False,
+    #    'use_pip': True,
+    #}),
 ]
 
 moduleclass = 'lang'
