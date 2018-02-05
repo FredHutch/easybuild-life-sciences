@@ -15,8 +15,12 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 source_urls = ['ftp://ftp.freetds.org/pub/freetds/stable']
 sources = [SOURCE_TAR_GZ]
 
+builddependencies = [
+    ('unixODBC', '2.3.4'),
+]
+
 dependencies = [
-    # ('unixODBC', '2.3.4'),
+    ('unixODBC', '2.3.4'),
 ]
 
 sanity_check_paths = {

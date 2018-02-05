@@ -39,6 +39,7 @@ dependencies = [
     ('libxml2', '2.9.4'),  # required for lxml
     ('libxslt', '1.1.29'), # required for lxml
     ('freeglut', '3.0.0'),   # OpenGL for Spyder3
+    ('PostgreSQL', '9.6.1'), # psycopg2
     ('Qt5', '5.9.1'),
     ('cURL', '7.49.1'),  # for RCurl
     ('libGLU', '9.0.0'), # glu
@@ -124,9 +125,6 @@ exts_list = [
     ('PyDP', '0.2.2', {
         'modulename': 'pydp',
         'source_urls': ['https://bitbucket.org/aroth85/pydp/downloads/'],
-    }),
-    ('argparse', '1.4.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/a/argparse/'],
     }),
     ('cycler', '0.10.0', {
         'modulename': 'cycler',
@@ -362,9 +360,9 @@ exts_list = [
         'modulename': 'flask_migrate',
         'source_urls': ['https://pypi.python.org/packages/source/f/flask_migrate'],
     }),
-    #('psycopg2', '2.7.3.2', {  # requires Postgres Path too install pg_config
-    #    'source_urls': ['https://pypi.python.org/packages/source/p/psycopg2'],
-    #}),
+    ('psycopg2', '2.7.3.2', {  # requires Postgres Path too install pg_config
+        'source_urls': ['https://pypi.python.org/packages/source/p/psycopg2'],
+    }),
     ('pypandoc', '1.4', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pypandoc'],
     }),
@@ -711,9 +709,6 @@ exts_list = [
         'source_tmpl': '%(name)s-%(version)s-py3-none-any.whl',
         'unpack_sources': False,
         'use_pip': True,
-    }),
-    ('asyncio', '3.4.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/a/asyncio/'],
     }),
     ('pep8', '1.7.1', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pep8/'],
@@ -1392,10 +1387,10 @@ exts_list = [
         'modulename': 'absl',
         'source_urls': ['https://pypi.python.org/packages/source/a/absl-py/'],
     }),
-    ('tensorflow', '1.5.0rc0', {
+    ('tensorflow', '1.5.0', {
         'modulename': False,
         'source_urls': ['https://pypi.python.org/pypi/tensorflow'],
-        'source_tmpl': '%(name)s-%(version)s-cp36-cp36m-linux_x86_64.whl',
+        'source_tmpl': '%(name)s-%(version)s-cp36-cp36m-manylinux1_x86_64.whl',
         'unpack_sources': False,
         'use_pip': True,
     }),
