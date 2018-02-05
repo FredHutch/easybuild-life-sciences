@@ -1,0 +1,42 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+
+easyblock = 'CMakeMake'
+
+name = 'rclonebrowser'
+version = '1.2'
+
+homepage = "https://mmozeiko.github.io/RcloneBrowser/"
+description = """Simple cross platfrom GUI for rclone command line tool. Supports Windows, macOS and GNU/Linux."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/mmozeiko/RcloneBrowser/archive']
+sources = ['%(version)s.tar.gz']
+patches = [ 'rclonebrowser-cmake.patch']
+
+builddependencies = [
+    ('CMake', '3.7.2'),
+]
+
+dependencies = [
+    ('libxkbcommon', '0.6.1'),
+    ('Qt5', '5.9.1'),
+]
+
+start_dir = 'src'
+separate_build_dir = True
+
+# xkb should be in QT5
+modextravars = {'QT_XKB_CONFIG_ROOT': '$EBROOTLIBXKBCOMMON/lib'}
+
+sanity_check_paths = {
+    'dirs': ['bin', 'share/applications', 'share/pixmaps'],
+    'files': ['bin/rclone-browser',
+              'share/applications/rclone-browser.desktop',
+              'share/pixmaps/rclone-browser.png'
+              ]
+}
+
+moduleclass = 'tools'

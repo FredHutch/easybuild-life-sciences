@@ -1,0 +1,29 @@
+diff -ruN RcloneBrowser-1.2.orig/src/CMakeLists.txt RcloneBrowser-1.2/src/CMakeLists.txt
+--- RcloneBrowser-1.2.orig/src/CMakeLists.txt	2017-03-11 14:16:36.000000000 -0800
++++ RcloneBrowser-1.2/src/CMakeLists.txt	2018-02-01 10:27:40.191710000 -0800
+@@ -1,3 +1,6 @@
++cmake_policy(SET CMP0005 NEW)
++cmake_minimum_required(VERSION 3.7)
++
+ if(WIN32)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4 /WX /wd4100 /wd4189")
+ else()
+@@ -67,6 +70,7 @@
+ 
+ add_definitions(-DRCLONE_BROWSER_VERSION="${RCLONE_BROWSER_VERSION}")
+ 
++find_package(Qt5Widgets)
+ qt5_wrap_ui(UI_OUT ${UI})
+ qt5_wrap_cpp(MOC_OUT ${MOC})
+ qt5_add_resources(QRC_OUT ${QRC} OPTIONS "-no-compress")
+@@ -74,8 +78,8 @@
+ source_group("" FILES ${SOURCE} ${MOC} ${UI} ${QRC} ${OTHER})
+ source_group("Generated" FILES ${MOC_OUT} ${UI_OUT} ${MOC_OUT} ${QRC_OUT})
+ 
+-use_pch(pch.h pch.cpp "${SOURCE}")
+-use_pch(pch.h pch.cpp "${MOC_OUT}")
++# use_pch(pch.h pch.cpp "${SOURCE}")
++# use_pch(pch.h pch.cpp "${MOC_OUT}")
+ 
+ if(WIN32)
+   add_executable(RcloneBrowser WIN32 ${SOURCE} ${BACKEND} ${OTHER} ${MOC} ${MOC_OUT} ${UI_OUT} ${MOC_OUT} ${QRC_OUT})
