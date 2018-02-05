@@ -4,8 +4,7 @@ FROM fredhutch/ls2_easybuild_foss:2016b
 ENV EASYCONFIG_NAME Python-3.6.4-foss-2016b-fh1.eb 
 # required OS packages for the build
 ENV INSTALL_OS_PKGS "awscli build-essential pkg-config libssl-dev unzip libc6-dev libthread-queue-any-perl\
-                    pandoc postgresql-client-9.5\
-                    unixodbc unixodbc-dev"
+                    pandoc" 
 # os pkg list to be removed after the build - in EasyBuild, the 'dummy' toolchain requires build-essential
 # also, the current toolchain we are using (foss-2016b) does not actually include 'make'
 # removing build-essential will mean the resulting container cannot build additional software
@@ -24,12 +23,12 @@ RUN /bin/bash /app/sources/download_sources.sh
 # install build-essential, build R, remove build-essential
 # EVERYTHING beyond build-essential needs to be moved into EB!!!
 USER root
-RUN apt-get update -y && apt-get install -y $INSTALL_OS_PKGS 
-# && \
-#    su -c ". /app/lmod/lmod/init/bash && \
-#           module use /app/modules/all && \
-#           module load EasyBuild && \
-#           eb -l $EASYCONFIG_NAME --robot" - neo && \
-#    apt-get remove -y --purge $UNINSTALL_OS_PKGS && \
-#    apt-get autoremove -y
+RUN apt-get update -y && apt-get install -y $INSTALL_OS_PKGS && \
+    su -c ". /app/lmod/lmod/init/bash && \
+           module use /app/modules/all && \
+           module load EasyBuild && \
+           eb -l $EASYCONFIG_NAME --robot" - neo && \
+    apt-get remove -y --purge $UNINSTALL_OS_PKGS && \
+    apt-get autoremove -y
 USER neo
+

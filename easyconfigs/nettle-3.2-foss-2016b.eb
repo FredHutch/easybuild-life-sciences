@@ -1,0 +1,35 @@
+easyblock = 'ConfigureMake'
+
+name = 'nettle'
+version = '3.2'
+
+homepage = 'http://www.lysator.liu.se/~nisse/nettle/'
+description = """Nettle is a cryptographic library that is designed to fit easily
+ in more or less any context: In crypto toolkits for object-oriented
+ languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,
+ or even in kernel space."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [GNU_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('M4', '1.4.17'),
+]
+
+dependencies = [
+    ('GMP', '6.1.1'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/%s' % x for x in ['nettle-hash', 'nettle-lfib-stream',
+                                     'pkcs1-conv', 'sexp-conv']] + [
+              'lib/%s' % x for x in ['libhogweed.a', 'libhogweed.so',
+                                     'libhogweed.so.4', 'libhogweed.so.4.2',
+                                     'libnettle.a', 'libnettle.so',
+                                     'libnettle.so.6', 'libnettle.so.6.2']],
+    'dirs': ['include/nettle'],
+}
+
+moduleclass = 'lib'
