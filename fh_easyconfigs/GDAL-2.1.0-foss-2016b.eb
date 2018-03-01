@@ -1,7 +1,7 @@
 easyblock = 'ConfigureMake'
 
 name = 'GDAL'
-version = '2.1.1'
+version = '2.1.0'
 
 homepage = 'http://www.gdal.org/'
 description = """GDAL is a translator library for raster geospatial data formats that is released under an X/MIT style
@@ -12,21 +12,31 @@ description = """GDAL is a translator library for raster geospatial data formats
 toolchain = {'name': 'foss', 'version': '2016b'}
 toolchainopts = {'usempi': True}
 
+configopts = "--with-geotiff=internal --with-cryptopp=no "
+
+
 source_urls = ['http://download.osgeo.org/gdal/%(version)s/']
 sources = [SOURCELOWER_TAR_XZ]
 
-buildopts = 'CXXFLAGS="$CXXFLAGS -DOMPI_IGNORE_CXX_SEEK"'
-
-# problem with cryptopp being picked up on our build host
-configopts = '--with-cryptopp=no'
-
 dependencies = [
-    ('netCDF', '4.5.0'),
+    ('netCDF', '4.4.1'),
     ('expat', '2.2.0'),
     ('libxml2', '2.9.4'),
+    ('libffi', '3.2.1'),
     ('zlib', '1.2.8'),
-    ('SQLite', '3.13.0'),
     ('LibTIFF', '4.0.6'),
+    ('PCRE', '8.38'),
+    ('gnutls', '3.5.13'),
+    ('HDF5', '1.8.18'),
+    ('JasPer', '1.900.1'),
+    ('libjpeg-turbo', '1.5.0'),
+    ('XZ', '5.2.2'),
+]
+
+buildopts = 'CXXFLAGS="$CXXFLAGS -DOMPI_IGNORE_CXX_SEEK"'
+
+builddependencies = [
+    ('libpciaccess', '0.13.4'),
 ]
 
 sanity_check_paths = {

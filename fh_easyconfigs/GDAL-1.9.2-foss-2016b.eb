@@ -1,7 +1,7 @@
 easyblock = 'ConfigureMake'
 
 name = 'GDAL'
-version = '2.1.1'
+version = '1.9.2'
 
 homepage = 'http://www.gdal.org/'
 description = """GDAL is a translator library for raster geospatial data formats that is released under an X/MIT style
@@ -13,7 +13,7 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 toolchainopts = {'usempi': True}
 
 source_urls = ['http://download.osgeo.org/gdal/%(version)s/']
-sources = [SOURCELOWER_TAR_XZ]
+sources = [SOURCELOWER_TAR_GZ]
 
 buildopts = 'CXXFLAGS="$CXXFLAGS -DOMPI_IGNORE_CXX_SEEK"'
 
