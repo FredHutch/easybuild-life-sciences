@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EasyBuild at FredHutch
 
 ---
@@ -499,3 +500,12 @@ And a quick search of `sanity check` in the Easybuild docs reveals that by defau
 And now it builds (trust me).
 
 **An interesting note** I expected this build to fail as version `3.1.2` of rsync is distributed in `rsync-3.1.2.tar.gz` but is not actually compressed, only a tarball. Easybuild built it anyway!
+=======
+# ls2_python3
+
+
+Please look at [ls2](https://github.com/FredHutch/ls2) for details on how to build these Dockerfiles and how to use them to deploy the same software to a local archive.
+
+This container adds: Python3
+
+>>>>>>> 34c2607c52ea2576a50a407f68333ff624148831

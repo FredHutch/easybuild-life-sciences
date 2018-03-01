@@ -1,0 +1,3 @@
+[submodule "aws-batch-helpers"]
+	path = aws-batch-helpers
+	url = ssh://git@github.com/awslabs/aws-batch-helpers

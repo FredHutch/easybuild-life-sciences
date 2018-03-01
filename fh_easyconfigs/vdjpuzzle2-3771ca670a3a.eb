@@ -1,7 +1,8 @@
 # easybuild easyconfig
 #
-#  John Dey - Work in progress
+#  John Dey jfdey@fredhutch.org
 #
+
 easyblock = 'Tarball'
 
 name = 'vdjpuzzle2'
@@ -17,9 +18,17 @@ source_urls = ['https://bitbucket.org/kirbyvisp/vdjpuzzle2/get/']
 sources = ['%(version)s.zip']
 patches = ['%(name)s.patch']
 
+java = 'Java'
+javaver = '1.8.0_121'
+
 dependencies = [
     ('Python', '3.6.4', '-fh1'),
-    ('Trinity', '2.4.0'),
+    ('Trinity', '2.5.1'),
+    ('TopHat', '2.1.1'),
+    ('Bowtie2', '2.2.9'),
+    ('SAMtools', '1.6'),
+    ('BEDTools', '2.26.0'),
+    ('Trimmomatic', '0.36', '-%s-%s' % (java, javaver), True),
 ]
 
 modextrapaths = {'PATH': '',
@@ -43,7 +52,7 @@ sanity_check_paths = {
 }
 
 modloadmsg = """vdjpuzzle2 scripts are located in $EBROOTVDJPUZZLE2/scripts.
-Databases are located: $EBROOTVDJPUZZLE2/share/bed_files
+vdjpuzzle2 Databases are located: $EBROOTVDJPUZZLE2/share/bed_files
 """
 
 moduleclass = 'bio'

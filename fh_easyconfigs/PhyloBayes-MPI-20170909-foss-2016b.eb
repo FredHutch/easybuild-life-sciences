@@ -13,11 +13,15 @@ source_urls = ['https://github.com/bayesiancook/pbmpi/archive/']
 sources = ['%s.tar.gz' % commit]
 
 start_dir = 'sources'
+builddependencies = [
+    ('Boost', '1.62.0'),  # might be looking for boost/cstdint.hpp
+    ('libpthread-stubs', '0.3'),
+]
 
 # get rid of included binaries to ensur they're recompiled
 prebuildopts = "rm -f data/* &&"
 
-buildopts = 'CC="$MPICXX" CPPFLAGS="$CXXFLAGS -c -DOMPI_IGNORE_CXX_SEEK" LDFLAGS="$CXXFLAGS"'
+buildopts = 'CC="$MPICXX" CPPFLAGS="$CXXFLAGS -std=c++11 -c -DOMPI_IGNORE_CXX_SEEK" LDFLAGS="$CXXFLAGS"'
 #buildopts = 'CPPFLAGS=-DOMPI_IGNORE_CXX_SEEK'
 
 files_to_copy = [(['data/*'], 'bin')]
