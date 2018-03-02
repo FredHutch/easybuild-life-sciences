@@ -1,0 +1,44 @@
+# easybuild easyconfig
+
+# March 2, 2018 John Dey  
+# the configure step is interactive. This EB does not work 
+
+easyblock = 'Tarball'
+
+name = 'RepeatMasker'
+version = '4-0-7'
+
+homepage = 'www.repeatmasker.org'
+description = """RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+builddependencies = [
+    ('Perl', '5.24.1'),
+]
+
+dependencies = [
+    ('TRF', '4.09-linux64-fh', '', True),
+    ('HMMER', '3.1b2'),
+    ('Perl', '5.24.1'),
+    ('zlib', '1.2.8'),
+]
+
+source_urls = ['http://www.repeatmasker.org/']
+sources = ['%(name)s-open-%(version)s.tar.gz']
+
+#cmds_map = [('', 'perl ./configure')] 
+
+modextrapaths = {
+                 'PATH': "%(name)s",
+                 'PERL5LIB': "%(name)s"
+                 }
+
+files_to_copy = ['*'] 
+
+sanity_check_paths = {
+    'dirs': [],
+    'files': ['ArrayListIterator.pm', 'RepeatMasker'],
+}
+
+moduleclass = 'bio'

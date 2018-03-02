@@ -1,0 +1,27 @@
+# easybuild easyblock
+#
+#  this easyconfig differs from the repository 
+#  replace 'legacylinux64' with 'linux64'
+
+easyblock = 'Binary'
+
+name = 'TRF'
+version = '4.09'
+versionsuffix = '-linux64-fh'
+
+homepage = 'https://tandem.bu.edu/trf/trf.html'
+description = """Tandem repeats finder: a program to analyze DNA sequences. Legacy version."""
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+source_urls = ['http://tandem.bu.edu/trf/downloads']
+sources = ['trf%(version_major)s%(version_minor)s.linux64']
+
+postinstallcmds = ["mv %(installdir)s/trf%(version_major)s%(version_minor)s.linux64 %(installdir)s/trf"]
+
+sanity_check_paths = {
+    'files': ['trf'],
+    'dirs': []
+}
+
+moduleclass = 'bio'
