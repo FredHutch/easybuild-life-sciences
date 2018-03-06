@@ -1059,6 +1059,13 @@ exts_list = [
     ('jupyter_contrib_nbextensions', '0.4.0', {
         'source_urls': ['https://pypi.python.org/packages/source/j/jupyter_contrib_nbextensions/'],
     }),
+    ('jupyter-js-widgets-nbextension', '0.0.2.dev0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-js-widgets-nbextension'],
+        'source_tmpl': 'jupyter_js_widgets_nbextension-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+        'use_pip': True,
+    }),
     ('qtconsole', '4.3.1', {
         'source_urls': ['https://pypi.python.org/packages/source/q/qtconsole/'],
     }),
@@ -1547,6 +1554,17 @@ exts_list = [
     ('feather-format', '0.4.0', {
         'modulename': 'feather',
         'source_urls': ['https://pypi.python.org/packages/source/f/feather-format/'],
+    }),
+    ('altair', '1.2.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/altair/'],
+    }),
+    ('vega', '0.5.0', {
+        'modulename': 'vega',
+        'source_urls': ['https://pypi.python.org/packages/source/v/vega/'],
+    }),
+    ('vega3', '0.4.0', {
+        'modulename': 'vega',
+        'source_urls': ['https://pypi.python.org/packages/source/v/vega3/'],
     }),
 ]
 
