@@ -1,0 +1,29 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# 
+easyblock = 'Bundle'
+
+name = 'nodejs-bundle'
+version = '9.8.0'
+
+homepage = 'http:/scicomp.fhcrc.org'
+description = 'nodejs with Canvas and Vega-lite packages'
+
+toolchain = { 'name': 'foss', 'version': '2016b' }
+
+dependencies = [
+    ('nodejs', version),
+    ('giflib', '5.0.5'),
+    ('libjpeg-turbo', '1.5.0'),
+    ('Pango', '1.40.5'),
+    ('cairo', '1.14.6'), 
+    ('librsvg', '2.40.18'),
+]
+
+postinstallcmds = ['PATH=$EBROOTNODEJS/bin:$PATH && ' +
+                   'npm install canvas -g && ' +
+                   'npm install vega-lite -g '
+                   ]
+
+moduleclass = 'lang'

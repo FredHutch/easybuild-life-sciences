@@ -1,0 +1,41 @@
+# easybuild easyconfig
+#
+# john dey jfey@fredhutch.org
+#
+# this works! dependency from: nodejs -> canvas
+#
+easyblock = 'ConfigureMake'
+
+name = 'librsvg'
+version = '2.40.18'
+
+homepage = 'http://www.libpng.org/pub/png/libpng.html'
+description = "The librsvg package contains a library and tools used to manipulate, convert and view Scalable Vector Graphic (SVG) images."
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+source_urls = ["http://ftp.gnome.org/pub/gnome/sources/librsvg/2.40/"]
+sources = [SOURCE_TAR_XZ]
+
+dependencies = [('Pango', '1.40.5'),
+                ('libcroco', '0.6.11'),
+                ('Gdk-Pixbuf', '2.36.0'),
+                ('GObject-Introspection', '1.48.0'),
+                #('Vala', '0.36.4'),
+                ]
+
+configopts = ['--disable-static --disable-vala']
+
+sanity_check_paths = {
+    'files': ['bin/rsvg-convert'] +
+             ['include/librsvg-2.0/librsvg/%s' % x for x in [
+                    'librsvg-enum-types.h', 'librsvg-features.h', 'rsvg-cairo.h', 'rsvg.h']] +
+             ['lib/librsvg-2.%s' % SHLIB_EXT,
+              'share/gtk-doc/html/rsvg-2.0/index.html' ,
+              'share/man/man1/rsvg-convert.1'
+              ],
+    'dirs': ['bin', 'include', 'lib', 'share'],
+}
+
+moduleclass = 'lib'
