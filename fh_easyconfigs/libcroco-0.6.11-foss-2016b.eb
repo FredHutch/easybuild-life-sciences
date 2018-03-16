@@ -1,0 +1,36 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# dependency from:  nodejs -> canvas -> librsvg 
+#
+easyblock = 'ConfigureMake'
+
+name = 'libcroco'
+version = '0.6.11'
+
+homepage = "http://www.gnome.org"
+description = """The libcroco package contains a standalone CSS2 parsing and manipulation library"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'optarch': True}
+
+source_urls = ["http://ftp.gnome.org/pub/gnome/sources/libcroco/0.6"]
+sources = [SOURCE_TAR_XZ]
+
+dependencies = [
+    ('GLib', '2.49.5'),  # required: 2.50.3
+    ('libxml2', '2.9.4'),
+]
+
+configopts = ['--disable-static']
+
+sanity_check_paths = {
+    'files': ['bin/croco-0.6-config',
+              'bin/csslint-0.6',
+              'include/libcroco-0.6/libcroco/libcroco.h',
+              'lib/libcroco-0.6.%s' % SHLIB_EXT,
+              'share/gtk-doc/html/libcroco/index.html'],
+    'dirs': ['bin', 'include', 'lib', 'share'],
+}
+
+moduleclass = 'lib'

@@ -1,29 +1,33 @@
-##
-# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# easybuild easyconfig
 #
-# Copyright:: Copyright 2012-2014 Uni.Lu/LCSB, NTUA
-# Authors::   Fotis Georgatos <fotis@cern.ch>
-# License::   MIT/GPL
-# $Id$
+# john dey jfey@fredhutch.org
 #
-# This work implements a part of the HPCBIOS project and is a component of the policy:
-# http://hpcbios.readthedocs.org/en/latest/
-##
-# Updated 05.31.2017 Ben McGough <bmcgough@fredhutch.org>
-
+# dependency from: nodejs -> canvas
+#
 easyblock = 'ConfigureMake'
 
 name = 'giflib'
 version = '5.1.4'
 
-homepage = 'http://libungif.sourceforge.net/'
-description = "libungif: Tools and library routines for working with GIF images"
-
-sources = [SOURCE_TAR_BZ2]
-source_urls = [('http://sourceforge.net/projects/giflib/files', 'download')]
+homepage = 'https://downloads.sourceforge.net'
+description = """The giflib package contains libraries for reading and writing GIFs as well as programs for converting and working with GIF files."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-dependencies = [('X11','20160819')]
+source_urls = [" https://downloads.sourceforge.net/giflib/"]
+sources = [SOURCE_TAR_BZ2]
+
+configopts = ['--disable-static']
+
+sanity_check_paths = {
+    'files': ['bin/rsvg-convert'] +
+             ['include/librsvg-2.0/librsvg/%s' % x for x in [
+                    'librsvg-enum-types.h', 'librsvg-features.h', 'rsvg-cairo.h', 'rsvg.h']] +
+             ['lib/librsvg-2.%s' % SHLIB_EXT,
+              'share/gtk-doc/html/rsvg-2.0/index.html' ,
+              'share/man/man1/rsvg-convert.1'
+              ],
+    'dirs': ['bin', 'include', 'lib', 'share'],
+}
 
 moduleclass = 'lib'
