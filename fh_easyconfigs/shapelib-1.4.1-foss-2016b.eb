@@ -1,0 +1,29 @@
+easyblock = 'ConfigureMake'
+
+name = 'shapelib'
+version = '1.4.1'
+
+homepage = 'http://shapelib.maptools.org/'
+description = """The Shapefile C Library provides the ability to write simple C programs for reading, writing and updating (to a limited extent) ESRI Shapefiles, and the associated attribute file (.dbf)."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://download.osgeo.org/shapelib/%(version)s/']
+sources = [SOURCELOWER_TAR_GZ]
+
+dependencies = [
+    ('netCDF', '4.5.0'),
+    ('expat', '2.2.0'),
+    ('libxml2', '2.9.4'),
+    ('zlib', '1.2.8'),
+    ('SQLite', '3.13.0'),
+    ('LibTIFF', '4.0.6'),
+    ('libgeotiff', '1.4.2'),
+]
+
+sanity_check_paths = {
+    'files': ['lib/libgdal.%s' % SHLIB_EXT, 'lib/libgdal.a'],
+    'dirs': ['bin', 'include']
+}
+
+moduleclass = 'data'
