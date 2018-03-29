@@ -1,0 +1,26 @@
+easyblock = 'ConfigureMake'
+
+name = 'LAST'
+version = '926'
+
+homepage = 'http://last.cbrc.jp/'
+description = "LAST finds similar regions between sequences."
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'cstd': 'c++11'}
+
+source_urls = ['http://last.cbrc.jp/']
+sources = ['last-%(version)s.zip']
+checksums = ['0bebd28ad4b0a6e377f53d25f0572b7202fc7cd1292ac482100767e052a5672c']
+
+skipsteps = ['configure']
+
+buildopts = 'CC="$CC" CXX="$CXX" CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS -pthread -DHAS_CXX_THREADS"'
+installopts = 'prefix=%(installdir)s'
+
+sanity_check_paths = {
+    'files': ['bin/lastal', 'bin/lastdb'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
