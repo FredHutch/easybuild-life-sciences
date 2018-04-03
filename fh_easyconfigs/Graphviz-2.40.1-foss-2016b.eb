@@ -38,6 +38,9 @@ dependencies = [
     ('SWIG', '3.0.12', '-%s-%s' % (python, pythonversion)),
     ('Tcl', '8.6.5'),
     ('zlib', '1.2.8'),
+    ('libiconv', '1.15', '', ('GCCcore', '5.4.0')),
+    ('libtool', '2.4.6'),
+    ('libgd', '2.2.3'),
 ]
 
 builddependencies = [
@@ -52,6 +55,7 @@ builddependencies = [
 preconfigopts = "sed -i 's/install-data-hook$//g' tclpkg/Makefile.in && "
 configopts = '--enable-guile=no --enable-lua=no --enable-ocaml=no '
 configopts += '--enable-r=no --enable-ruby=no '
+configopts += '--with-freetype2=yes '
 
 prebuildopts = 'qmake -o cmd/gvedit/qMakefile cmd/gvedit/gvedit.pro && '
 
