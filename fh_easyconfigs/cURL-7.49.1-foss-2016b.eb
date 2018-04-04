@@ -16,8 +16,8 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 sources = [SOURCELOWER_TAR_GZ]
 source_urls = ['http://curl.haxx.se/download/']
 
-dependencies = [('OpenSSL', '1.1.0f')]
-configopts = "--with-ssl=$EBROOTOPENSSL"
+#dependencies = [('OpenSSL', '1.1.0f')]
+#configopts = "--with-ssl=$EBROOTOPENSSL"
 
 modextravars = {'CURL_INCLUDES': '%(installdir)s/include'}
 

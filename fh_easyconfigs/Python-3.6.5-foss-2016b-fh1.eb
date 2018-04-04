@@ -1003,6 +1003,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/a/attrs'],
     }),
     ('more-itertools', '4.1.0', {
+        'modulename': 'more_itertools',
         'source_urls': ['https://pypi.python.org/packages/source/m/more-itertools'],
     }),
     ('pytest', '3.5.0', {
@@ -1172,7 +1173,7 @@ exts_list = [
         'use_pip': True,
     }),
     ('AnyQt', '0.0.8', { # new to build 3.6.5 
-        'modulename': 'anyqt',
+        'modulename': 'AnyQt',
         'source_urls': ['https://pypi.python.org/packages/source/q/anyqt/'],
         'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
         'unpack_sources': False,
@@ -1251,8 +1252,9 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/bd2k-python-lib/'],
     }),
     ('dill', '0.2.7.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/dill'],
     }),
-    ('toil', '3.15.0', {
+    ('toil', '3.14.0', {
         'source_urls': ['https://pypi.python.org/packages/source/t/toil/'],
     }),
     ('ansible', '2.5.0', {
@@ -1599,10 +1601,6 @@ exts_list = [
     ('PyChef', '0.3.0', {
         'modulename': 'chef',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyarrow/'],
-    }),
-    ('NanoSV', '1.1.2', {
-        'modulename': False,
-        'source_urls': ['https://pypi.python.org/packages/source/n/NanoSV/'],
     }),
 ]
 
