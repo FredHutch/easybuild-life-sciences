@@ -872,7 +872,7 @@ exts_list = [
     ('metagenomeSeq', '1.20.1', bioconductor_options),
     ('gdsfmt', '1.14.1', bioconductor_options),
     ('SNPRelate', '1.12.2', bioconductor_options),
-    ('rhdf5', '2.22.0', bioconductor_options),
+    #('rhdf5', '2.22.0', bioconductor_options),
     ('biomformat', '1.6.0', bioconductor_options),
     ('phyloseq', '1.22.3', bioconductor_options),
     ('ALDEx2', '1.10.0', bioconductor_options),

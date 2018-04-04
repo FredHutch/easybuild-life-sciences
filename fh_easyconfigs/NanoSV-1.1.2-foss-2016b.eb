@@ -1,0 +1,40 @@
+# EasyBuild Easyconfig 
+#
+# 2016.03  John Dey  jfdey@fredhutch.org
+# Fred Hutchenson Cancer Research Center
+# Seattle, Washington United States
+
+easyblock = "PythonPackage"
+
+name = 'NanoSV'
+version = '1.1.2'
+
+homepage = 'http://pmw.sourceforge.net'
+description = """Pmw is a toolkit for building high-level compound widgets in Python using the Tkinter module. """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '3.6.4'
+versionsuffix = '-%s-%s' % (python, pyver)
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+dependencies = [
+    (python, pyver ),
+    ('SAMtools', '1.8'),
+]
+
+options = {'modulename': False}
+
+sanity_check_paths = {
+    'files': ['bin/NanoSV', 'bin/vcf_filter.py', 'bin/vcf_melt', 'bin/vcf_sample_filter.py'],
+    'dirs': ['bin', 'lib'],
+}
+sanity_check_commands = [('NanoSV', '-h')]
+
+modextravars = {'PYTHONPATH': 'lib/python3.6/site-packages/NanoSV-1.1.2-py3.6.egg/nanosv'}
+
+moduleclass = 'vis'

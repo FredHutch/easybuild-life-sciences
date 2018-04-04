@@ -1,0 +1,45 @@
+# easybuild easycconfig
+#
+# 2018.04.03 john dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center
+# Work in Progress
+
+name = 'NanoOk'
+version = '1.26'
+
+easyblock = 'Tarball'
+
+homepage = 'http://nanook.readthedocs.io/en/latest/'
+description = """NanoOK (pronounced na-nook) is a tool for extraction, alignment and analysis of Nanopore reads. NanoOK will extract reads as FASTA or FASTQ files, align them (with a choice of alignment tools), then generate a comprehensive multi-page PDF report containing yield, accuracy and quality analysis. Along the way, it generates plain text files which can be used for further analysis, as well as graphs suitable for inclusion in presentations and papers."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('LAST', '926'),
+    ('texlive', '20170524'),
+    ('Perl', '5.24.1'),
+    ('Java', '1.8.0_121', '',True),
+    ('R', '3.4.3', '-fh1'),
+    ('HDF5', '1.8.18'),
+]
+
+source_urls = ['https://github.com/TGAC/NanoOK/archive']
+sources = ['v%(version)s.zip']
+
+#modextrapaths = { 'PATH': '', }
+
+files_to_copy = ["bin", "script", "tool.info", "Wandy"]
+
+sanity_check_paths = {
+    'dirs': ["bin", "dist/lib"],
+    'files': ["README.md",
+              "bin/nanook",
+              "bin/nanook_get_read_stats.pl",
+              "bin/nanook_split_fasta",
+              "bin/nanook_plot_comparison.R",
+              "dist/lib/commons-io-2.5.jar"],
+}
+
+
+moduleclass = 'bio'
+
