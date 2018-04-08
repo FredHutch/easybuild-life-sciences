@@ -1,0 +1,29 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhtuch.org>
+#
+# Fred Hutchenson Cancer Research Center
+
+easyblock = 'Tarball'
+
+name = 'sbcl'
+version = '1.4.6'
+
+homepage = 'https://sourceforge.net/projects/sbcl/'
+description = """A high performance Common Lisp compiler. In addition to standard ANSI Common Lisp, it provides an interactive environment including an a debugger, a statistical profiler, a code coverage tool, and many other extensions."""
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+
+source_urls = ['http://prdownloads.sourceforge.net/sbcl']
+sources = ['%(namelower)s-%(version)s-x86-64-linux-binary.tar.bz2']
+
+postinstallcmds = ['INSTALL_ROOT=%(installdir)s sh install.sh']
+
+sanity_check_paths = {
+    'files': ['bin/sbcl'],
+    'dirs': ['bin', 'lib'],
+}
+
+modextravars = {'SBCL_HOME': '%(installdir)s/lib/sbcl'}
+moduleclass = 'compiler'
