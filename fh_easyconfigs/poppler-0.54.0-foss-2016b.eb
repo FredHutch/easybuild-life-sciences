@@ -16,6 +16,7 @@ builddependencies = [
     ('GObject-Introspection', '1.48.0'),
     ('libjpeg-turbo', '1.5.0'),
     ('libpng', '1.6.24'), 
+    ('LibTIFF', '4.0.6'),
 ]
 
 bin_files = ['pdfdetach', 'pdffonts', 'pdfimages', 'pdfinfo', 'pdfseparate',

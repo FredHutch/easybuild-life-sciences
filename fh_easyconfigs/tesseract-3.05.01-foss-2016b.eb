@@ -1,0 +1,36 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutch Cancer Research Ceneter
+
+easyblock = 'ConfigureMake'
+
+name = 'tesseract'
+version = '4.00.00alpha'
+
+homepage = 'https://opensource.google.com/projects/tesseract'
+description = """Tesseract is an OCR engine with support for unicode and the ability to recognize more than 100 languages out of the box. It can be trained to recognize other languages."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/tesseract-ocr/tesseract/archive']
+sources = ['%(version)s.zip']
+
+builddependencies = [('CMake', '3.5.2')]
+
+dependencies = [('leptonica', '1.75.3')]
+
+preconfigopts = ' ./autogen.sh && '
+
+sanity_check_paths = {
+    'files': ['bin/cwebp','bin/dwebp',
+              'include/webp/decode.h', 'include/webp/encode.h',
+              'lib/libtesseract.%s' % SHLIB_EXT,
+              'share/man/man1/cwebp.1',
+              'share/man/man1/dwebp.1',
+              ],
+    'dirs': ['bin', 'include', 'lib', 'share']
+}
+
+moduleclass = 'lib'

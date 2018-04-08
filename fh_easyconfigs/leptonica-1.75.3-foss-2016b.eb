@@ -1,0 +1,40 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutch Cancer Research Ceneter
+
+easyblock = 'ConfigureMake'
+
+name = 'leptonica'
+version = '1.75.3'
+
+homepage = 'https://www.leptonica.com/'
+description = """Leptonica is useful for image processing and image analysis applications."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://www.leptonica.com/source']
+# leptonica-1.75.3.tar.gz
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [('CMake', '3.5.2')]
+
+#preconfigopts = ' ./autogen.sh && '
+
+bin_files = ['convertfilestopdf', 'convertformat', 'convertsegfilestops', 'converttops', 'xtractprotos', 'convertfilestops', 'convertsegfilestopdf', 'converttopdf', 'fileinfo']
+include_files = ['allheaders.h', 'bilateral.h', 'dewarp.h', 'imageio.h',
+    'pix.h', 'recog.h', 'watershed.h', 'alltypes.h', 'bmfdata.h',
+    'endianness.h', 'jbclass.h', 'ptra.h', 'regutils.h', 'arrayaccess.h',
+    'bmf.h', 'environ.h', 'leptwin.h', 'queue.h', 'stack.h', 'array.h',
+    'bmp.h', 'gplot.h', 'list.h', 'rbtree.h', 'stringcode.h', 'bbuffer.h',
+    'ccbord.h', 'heap.h', 'morph.h', 'readbarcode.h', 'sudoku.h']
+
+sanity_check_paths = {
+    'files': ['bin/%s' % x for x in bin_files] +
+              ['include/leptonica/%s' % x for x in include_files] +
+              ['lib/liblept.%s' % SHLIB_EXT],
+    'dirs': ['bin', 'include', 'lib']
+}
+
+moduleclass = 'lib'
