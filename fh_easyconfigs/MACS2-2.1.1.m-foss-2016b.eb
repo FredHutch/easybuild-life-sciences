@@ -1,0 +1,51 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright (c) 2015 Virginia Bioinformatics Institute at Virginia Tech
+# Authors::   Dominik L. Borkowski <dominik.borkowski@gmail.com>
+# License::   MIT/GPL
+# $Id$
+#
+##
+
+easyblock = 'PythonPackage'
+
+name = 'MACS2'
+version = '2.1.1.m'   # Master @ Apr10, 2018
+
+homepage = 'http://liulab.dfci.harvard.edu/MACS'
+description = "Model Based Analysis for ChIP-Seq data"
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/taoliu/MACS/archive']
+sources = ['master.zip']
+
+python = 'Python'
+pyver = '2.7.14'
+pyshortver = '.'.join(pyver.split('.')[0:2])
+pylibdir = 'lib/python%s/site-packages' % pyshortver
+versionsuffix = "-%s-%s" % (python, pyver)
+
+dependencies = [
+    (python, pyver),
+]
+
+src_list = ['hashtable.pyx', 'PeakDetect.pyx', 'PeakModel.pyx', 'Pileup.pyx',
+            'Prob.pyx', 'Signal.pyx', 'Statistics.pyx']
+
+prebuildopts = ' cython %(builddir)s/MACS2/*.pyx && '
+ 
+options = {'modulename': name}
+
+# specify that this asyblock should run a full sanity check, rather than just trying to load the module
+full_sanity_check = True
+
+sanity_check_paths = {
+    'files': ['bin/macs2', '%s/%s-%s-py%s-linux-x86_64.egg' % (pylibdir, name, version, pyshortver)],
+    'dirs': [],
+}
+
+sanity_check_commands = [('%(namelower)s --version')]
+
+moduleclass = 'bio'
