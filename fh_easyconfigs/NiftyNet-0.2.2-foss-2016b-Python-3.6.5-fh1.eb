@@ -1,0 +1,39 @@
+# easybuild easyconfig
+#
+# 2018.04.16 John Dey jfdey@fredhutch.org
+
+easyblock = "PythonPackage"
+
+name = 'NiftyNet'
+version = '0.2.2'
+versionsuffix = '-Python-%(pyver)s-fh1'
+
+homepage = 'https://http://www.niftynet.io/'
+description = """NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNNs) platform for research in medical image analysis and image-guided therapy."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+pyver = '3.6.5'
+pyshortver = '.'.join(pyver.split('.')[0:2])
+
+source_urls = ['https://pypi.org/project/%(name)s/#files'],
+source_tmpl = '%(name)s-%(version)s-py2.py3-none-any.whl',
+
+dependencies = [
+    ('Python', pyver, '-fh1'),
+]
+
+exts_defaultclass = 'PythonPackage'
+
+use_pip = True
+unpack_sources = False
+
+sanity_check_paths = {
+    'files': [ 'bin/niftynet', ],
+    'dirs': ['bin',
+             'lib/python%(pyshortver)s/site-packages/%(name)s'],
+}
+
+modextrapaths = {'PYTHONPATH': ['lib/python%s/site-packages' % pyshortver]}
+
+moduleclass = 'bio'
