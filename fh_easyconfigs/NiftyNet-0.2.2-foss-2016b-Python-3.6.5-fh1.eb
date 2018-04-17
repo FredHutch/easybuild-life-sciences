@@ -1,6 +1,14 @@
 # easybuild easyconfig
 #
 # 2018.04.16 John Dey jfdey@fredhutch.org
+#
+# python -c "import niftynet"  has this output; but not errors
+#  The tensorflow issue is fixed with 1.8.0rc0
+#  SimpleITK should be added to the base Python
+# WARNING:tensorflow:From /app/easybuild/software/Python/3.6.5-foss-2016b-fh1/lib/python3.6/site-packages/tensorflow/contrib/learn/python/learn/datasets/base.py:198: retry (from tensorflow.contrib.learn.python.learn.datasets.base) is deprecated and will be removed in a future version.
+# Instructions for updating:
+# Use the retry module or similar alternatives.
+# WARNING:tensorflow:SimpleITK adapter failed to load, reducing the supported file formats.
 
 easyblock = "PythonPackage"
 
@@ -17,22 +25,37 @@ pyver = '3.6.5'
 pyshortver = '.'.join(pyver.split('.')[0:2])
 
 source_urls = ['https://pypi.org/project/%(name)s/#files'],
-source_tmpl = '%(name)s-%(version)s-py2.py3-none-any.whl',
+sources = ['%(name)s-%(version)s-py2.py3-none-any.whl']
 
 dependencies = [
     ('Python', pyver, '-fh1'),
 ]
 
 exts_defaultclass = 'PythonPackage'
+exts_list = [
+    ('nibabel', '2.2.1', {
+        'source_urls': ['https://pypi.org/project/nibabel/2.2.1/#files'],
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+]
 
 use_pip = True
 unpack_sources = False
 
+# modulename should be changed to 'niftynet' after Tensorflow is updated, to solve WARNING messages
+options = {'modulename': False}
+
+
+bin_files = ['net_autoencoder', 'net_download', 'net_gan', 'net_regress', 'net_run', 'net_segment']
+
 sanity_check_paths = {
-    'files': [ 'bin/niftynet', ],
-    'dirs': ['bin',
-             'lib/python%(pyshortver)s/site-packages/%(name)s'],
+    'files': ['bin/%s' % x for x in bin_files ] +
+             ['lib/python3.6/site-packages/niftynet/application/base_application.py',
+              'lib/python3.6/site-packages/NiftyNet-0.2.2.dist-info/metadata.json'
+              ],
+    'dirs': ['bin', 'lib'],
 }
+full_sanity_check = False 
 
 modextrapaths = {'PYTHONPATH': ['lib/python%s/site-packages' % pyshortver]}
 
