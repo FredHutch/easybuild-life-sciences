@@ -1502,6 +1502,8 @@ exts_list = [
     ('SimpleITK', '1.1.0', {
         'source_urls': ['https://pypi.org/project/SimpleITK/#files'],
         'source_tmpl': '%(name)s-%(version)-cp36-cp36m-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+        'use_pip': True,
     }),
     ('httpie', '0.9.9', {
         'source_urls': ['https://pypi.python.org/packages/source/h/httpie/'],

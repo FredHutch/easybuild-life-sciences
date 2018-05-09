@@ -34,7 +34,8 @@ postinstallcmds = ['mv %(builddir)s/%(name)s-%(version)s/bin/%(namelower)s-core-
 
 sanity_check_paths = {
     'dirs': ['bin', 'lib'],
-    'files': ['bin/sniffles-core-1.0.8/sniffles'],
+    'files': ['bin/sniffles',
+              'lib/bamtools-2.3.0/README'],
 }
 
 moduleclass = 'bio'
