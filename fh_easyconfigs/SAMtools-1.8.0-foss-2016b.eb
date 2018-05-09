@@ -30,6 +30,7 @@ dependencies = [
     ('zlib', '1.2.8'),
     ('bzip2', '1.0.6'),
     ('XZ', '5.2.2'),
+    ('HTSlib', '1.8'),
 ]
 
 moduleclass = 'bio'

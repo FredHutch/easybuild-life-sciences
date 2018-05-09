@@ -1602,6 +1602,10 @@ exts_list = [
         'modulename': 'chef',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyarrow/'],
     }),
+    ('tf_unet', '0.1.1', {
+        'source_urls': ['https://github.com/jakeret/tf_unet/archive'],
+        'source_tmpl': '%(version)s.zip',
+    })
 ]
 
 moduleclass = 'lang'
