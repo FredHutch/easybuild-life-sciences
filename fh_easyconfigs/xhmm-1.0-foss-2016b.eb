@@ -1,8 +1,8 @@
-#  easybuild easyconfig
+#  easyconfig
 #
 #  John Dey  jfdey@fredhutch.org
 #
-#  Fred Hutchinson Cancer Research Center
+#  Fred Hutchenson Cancer Research Center
 
 easyblock = 'MakeCp'
 
@@ -19,7 +19,7 @@ sources = ['cc14e528d909.zip']
 
 start_dir = 'statgen-xhmm-cc14e528d909'
 
-files_to_copy = [ ([ 'build/execs/xhmm', ], 'bin'), ]
+files_to_copy = [ (['build/execs/xhmm', ], 'bin'), ]
 
 sanity_check_paths = {
     'files': [ 'bin/xhmm', ],
