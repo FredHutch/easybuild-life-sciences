@@ -440,6 +440,7 @@ exts_list = [
     ('gsalib', '2.1', ext_options),
     ('optparse', '1.4.4', ext_options),
     ('hms', '0.4.2', ext_options),
+    ('feather', '0.3.1', ext_options),
     ('readr', '1.1.1', ext_options),
     ('forcats', '0.3.0', ext_options),
     ('haven', '1.1.1', ext_options),

@@ -1,0 +1,55 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Fred Hutch Cancer Research Center Seattle United States
+#
+#
+
+easyblock = 'ConfigureMake'
+name = 'tesseract'
+version = '4.0.0-beta.1'
+
+homepage = 'https://github.com/tesseract-ocr/tesseract/wiki'
+description = """This package contains an OCR engine - libtesseract and a command line program - tesseract."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/tesseract-ocr/tesseract/archive']
+sources = ['%(version)s.zip']
+
+builddependencies = [
+    ('Automake', '1.15'),
+    ('CMake', '3.7.2'),
+    ('Autoconf', '2.69'),
+    ('libtool', '2.4.6'),
+    ('pkg-config', '0.29.1'),
+    ('Pango', '1.40.5'),
+    ('cairo', '1.14.6'),
+    ('leptonica', '1.75.3'),
+    ('libpng', '1.6.24'),
+    ('libjpeg-turbo', '1.5.0'),
+    ('libgeotiff', '1.4.2'),
+    ]
+
+dependencies = [
+    ('Pango', '1.40.5'),
+    ('cairo', '1.14.6'),
+    ('leptonica', '1.75.3'),
+    ('libpng', '1.6.24'),
+    ('libjpeg-turbo', '1.5.0'),
+    ('libgeotiff', '1.4.2'),
+    ]
+
+preconfigopts = "./autogen.sh && "
+
+sanity_check_paths = {
+    'files': ["bin/tesseract",
+              "include/tesseract/version.h",
+              "lib/libtesseract.%s" % SHLIB_EXT,
+              "share/tessdata/pdf.ttf"
+              ],
+    'dirs' : ['bin', 'include', 'lib', 'share']
+}
+
+moduleclass = 'numlib'
