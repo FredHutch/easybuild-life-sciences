@@ -873,7 +873,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/protobuf/'],
     }),
     ('Keras', '2.1.6', {
-        'modulename': 'keras', 
+        'modulename': False, 
         'source_urls': ['https://pypi.python.org/packages/source/k/Keras/'],
     }),
     ('wheel', '0.31.0', {
