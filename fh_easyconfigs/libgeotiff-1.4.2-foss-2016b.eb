@@ -18,7 +18,7 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 source_urls = [ 'http://download.osgeo.org/geotiff/libgeotiff/' ]
 sources = ['%(name)s-%(version)s.tar.gz']
 
-builddependencies = [ 
+dependencies = [ 
     ('PROJ', '4.9.2'),
     ('LibTIFF', '4.0.6') 
     ]
