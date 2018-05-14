@@ -195,7 +195,6 @@ digraph graphname {
 "R/3.5.0-foss-2016b-fh1" -> "poppler/0.54.0-foss-2016b";
 "R/3.5.0-foss-2016b-fh1" -> "GDAL/2.2.3-foss-2016b";
 "R/3.5.0-foss-2016b-fh1" -> "GSL/2.3-foss-2016b";
-"R/3.5.0-foss-2016b-fh1" -> "PROJ/4.9.2-foss-2016b";
 "R/3.5.0-foss-2016b-fh1" -> "GMP/6.1.1-foss-2016b";
 "R/3.5.0-foss-2016b-fh1" -> "JAGS/4.2.0-foss-2016b";
 "R/3.5.0-foss-2016b-fh1" -> "libGLU/9.0.0-foss-2016b";
@@ -403,7 +402,8 @@ digraph graphname {
 "libXau/1.0.8-foss-2016b" -> "foss/2016b";
 "libpng/1.6.24-foss-2016b" -> "zlib/1.2.8-foss-2016b";
 "libpng/1.6.24-foss-2016b" -> "foss/2016b";
-"libgeotiff/1.4.2-foss-2016b" -> "LibTIFF/4.0.6-foss-2016b";
+"libgeotiff/1.4.2-foss-2016b" -> "PROJ/4.9.2-foss-2016b"  [color=blue, style=dotted, arrowhead=diamond];
+"libgeotiff/1.4.2-foss-2016b" -> "LibTIFF/4.0.6-foss-2016b"  [color=blue, style=dotted, arrowhead=diamond];
 "libgeotiff/1.4.2-foss-2016b" -> "foss/2016b";
 "hwloc/1.11.3-GCC-5.4.0-2.26" -> "numactl/2.0.11-GCC-5.4.0-2.26";
 "hwloc/1.11.3-GCC-5.4.0-2.26" -> "GCC/5.4.0-2.26";

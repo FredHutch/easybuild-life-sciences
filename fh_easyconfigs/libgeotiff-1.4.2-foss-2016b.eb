@@ -1,23 +1,35 @@
+# easybuild easyconfig
+#
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutch Cancer Research Center 
+# Seattle - Washington - US
+#
 easyblock = 'ConfigureMake'
 
 name = 'libgeotiff'
 version = '1.4.2'
 
 homepage = 'https://trac.osgeo.org/geotiff'
-description = "GeoTIFF represents an effort by over 160 different remote sensing, GIS, cartographic, and surveying related companies and organizations to establish a ​TIFF based interchange format for georeferenced raster imagery."
+description = """GeoTIFF represents an effort by over 160 different remote sensing, GIS, cartographic, and surveying related companies and organizations to establish a ​TIFF based interchange format for georeferenced raster imagery."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-source_urls = [
-    'http://download.osgeo.org/geotiff/libgeotiff/',
-]
+source_urls = [ 'http://download.osgeo.org/geotiff/libgeotiff/' ]
 sources = ['%(name)s-%(version)s.tar.gz']
 
-dependencies = [ ('LibTIFF', '4.0.6') ]
+builddependencies = [ 
+    ('PROJ', '4.9.2'),
+    ('LibTIFF', '4.0.6') 
+    ]
 
-#sanity_check_paths = {
-    #'files': ['bin/tiffinfo'],
-    #'dirs': [],
-#}
+sanity_check_paths = {
+    'files': ['bin/applygeo', 'bin/geotifcp', 'bin/listgeo',
+              'include/geotiff.h',
+              'lib/libgeotiff.%s' % SHLIB_EXT,
+              'share/man/man1/geotifcp.1'
+              ],
+    'dirs': ['bin', 'include', 'lib', 'share'],
+}
 
 moduleclass = 'lib'
