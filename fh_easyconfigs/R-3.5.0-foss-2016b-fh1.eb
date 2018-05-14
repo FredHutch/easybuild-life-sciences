@@ -57,7 +57,6 @@ dependencies = [
     ('poppler', '0.54.0'),
     ('GDAL', '2.2.3'),  # for rgdal  -> netCDF 4.5.0 -> HDF5-1.8.18
     ('GSL', '2.3'), # for gsl
-    ('PROJ', '4.9.2'), # for rgdal
     ('GMP', '6.1.1'),  # for igraph
     ('JAGS', '4.2.0'),   # for rjags
     ('libGLU', '9.0.0'),

@@ -4,6 +4,11 @@
 # 2016.10.18 Ben McGough bmcgough@fredhutch.org
 #
 # Fred Hutch Cancer Research Center
+#
+# Updated Packages: 187
+# New Packages: 47
+# Dropped Packages: 12
+
 
 name = 'Python'
 version = '2.7.15'
