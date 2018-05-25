@@ -1,0 +1,21 @@
+easyblock = 'ConfigureMake'
+
+name = 'iupred'
+version = '1.0'
+
+homepage = 'http://iupred.enzim.hu/'
+description = " Intrinsically unstructured/disordered proteins have no single well-defined tertiary structure in their native, functional state. Our server recognizes such regions from the amino acid sequence based on the estimated pairwise energy content."
+
+toolchain = {'name': 'GCC', 'version': '5.4.0-2.26'}
+
+source_urls = ['http://iupred.enzim.hu/']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+skipsteps = ['configure']
+
+sanity_check_paths = {
+    'files': ['bin/lastal', 'bin/lastdb'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
