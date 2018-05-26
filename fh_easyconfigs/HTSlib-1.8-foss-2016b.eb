@@ -20,7 +20,10 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 source_urls = ['https://github.com/samtools/htslib/releases/download/%(version)s/']
 sources = [SOURCELOWER_TAR_BZ2]
 
-dependencies = [('zlib', '1.2.8')]
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('cURL', '7.49.1'),
+    ]
 
 runtest = 'test'
 

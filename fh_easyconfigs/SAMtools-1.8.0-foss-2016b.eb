@@ -26,6 +26,7 @@ sources = [SOURCELOWER_TAR_BZ2]
 #patches = ['SAMtools-%s.patch' % version ]
 
 dependencies = [
+    ('cURL', '7.49.1'),
     ('ncurses', '6.0'),
     ('zlib', '1.2.8'),
     ('bzip2', '1.0.6'),

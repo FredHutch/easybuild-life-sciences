@@ -11,7 +11,7 @@
 easyblock = 'CmdCp'
 
 name = 'Pindel'
-version = '0.2.5'
+version = '0.2.5b8'
 
 homepage = 'http://gmt.genome.wustl.edu/packages/pindel/'
 description = """ Pindel can detect breakpoints of large deletions, medium sized 

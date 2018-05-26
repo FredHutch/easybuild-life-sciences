@@ -1,0 +1,34 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutch Cancer Research Center
+# Seattle - Washington - US
+#
+easyblock = 'MakeCp'
+
+name = 'minimap2'
+version = '2.10'
+
+homepage = 'https://lh3.github.io/minimap2'
+description = """A versatile pairwise aligner for genomic and spliced nucleotide sequences."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/lh3/minimap2/archive/']
+sources = ['v%(version)s.zip']
+
+dependencies = []
+
+files_to_copy = ['minimap2']
+
+sanity_check_paths = {
+    'dirs': [""],
+    'files': ["minimap2"]
+}
+
+modextrapaths = {'PATH': ''}
+
+
+moduleclass = 'bio'
