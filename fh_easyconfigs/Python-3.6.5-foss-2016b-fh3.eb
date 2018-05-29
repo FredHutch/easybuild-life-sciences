@@ -99,7 +99,13 @@ exts_list = [
         'source_urls': ['https://github.com/scott-griffiths/bitstring/archive/'],
     }),
     ('NanoPlot', '1.13.0', {
+        'modulename': 'nanoplot',
         'source_urls': ['https://github.com/wdecoster/NanoPlot/archive'],
+        'use_pip': True,
+    }),
+    ('NanoStat', '1.1.0', {
+        'modulename': 'nanostat',
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanostat'],
         'use_pip': True,
     }),
     ('albacore', '2.3.1', {
@@ -328,6 +334,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/i/itsdangerous'],
     }),
     ('MarkupSafe', '1.0', {
+        'modulename': 'markupsafe',
         'source_urls': ['https://pypi.python.org/packages/source/M/MarkupSafe'],
     }),
     ('Jinja2', '2.10', {
