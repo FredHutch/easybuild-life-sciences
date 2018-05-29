@@ -2,13 +2,14 @@
 #
 # John Dey jfdey@fredhutch.org
 #
+# work in progress May, 2018
 easyblock = 'Tarball'
 
 name = 'Arrest'
 version = '0.0'
 
 homepage = 'http://bat.infspire.org/arrest/'
-discription = """Antigen Receptors Research Tool / ARResT is designed to enable
+description = """Antigen Receptors Research Tool / ARResT is designed to enable
  a deep understanding of antigen receptor sequences with a cascade of 
  algorithms and databases. ARResT, in some form or other over the years, is
  behind all of our publications in the field, and will continue to be in the
@@ -19,7 +20,7 @@ discription = """Antigen Receptors Research Tool / ARResT is designed to enable
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
-source_url = [('https://github.com/infspiredBAT/ARResT/archive')]
+source_urls = [('https://github.com/infspiredBAT/ARResT/archive')]
 sources = ["master.zip"]
 
 dependencies = [

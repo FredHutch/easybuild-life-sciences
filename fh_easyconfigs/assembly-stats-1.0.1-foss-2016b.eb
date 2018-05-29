@@ -1,0 +1,37 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutch Cancer Research Center
+# Seattle - Washington - US
+#
+easyblock = 'CMakeMake'
+
+name = 'assembly-stats'
+version = '1.0.0'
+
+homepage = 'https://github.com/sanger-pathogens/assembly-stats'
+description = """Get assembly statistics from FASTA and FASTQ files"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/sanger-pathogens/assembly-stats/archive']
+sources = ['v%(version)s.zip']
+
+separate_build_dir = True
+
+builddependencies = [('CMake', '3.7.2')]
+
+configopts = " -DINSTALL_DIR:PATH=%(installdir)s "
+
+files_to_copy = ['assembly-stats']
+
+sanity_check_paths = {
+    'files': ['assembly-stats'],
+    'dirs': ['']
+    }
+
+modextrapaths = {'PATH': ''}
+
+moduleclass = 'bio'
