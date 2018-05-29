@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EasyBuild at FredHutch
 
 ---
