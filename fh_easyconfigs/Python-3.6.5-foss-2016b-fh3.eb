@@ -1,4 +1,4 @@
-
+# easybuild easycofig
 #
 # Fred Hutchinson Cancer Research Center
 
@@ -97,6 +97,33 @@ exts_list = [
     ('bitstring', '3.1.5', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://github.com/scott-griffiths/bitstring/archive/'],
+    }),
+    ('plotly', '2.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/plotly'],
+    }),
+    ('nanoplotter', '0.38.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanoplotter'],
+    }),
+    ('nanoget', '1.5.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanoget'],
+    }),
+    ('nanomath', '0.21.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanomath'],
+    }),
+    ('NanoFilt', '2.2.0', {
+        'modulename': 'nanofilt',
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanofilt'],
+        'use_pip': True,
+    }),
+    ('NanoLyse', '1.1.0', {
+        'modulename': 'nanolyse',
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanolyse'],
+        'use_pip': True,
+    }),
+    ('NanoComp', '0.19.0', {
+        'modulename': 'nanocomp',
+        'source_urls': ['https://pypi.python.org/packages/source/n/nanocomp'],
+        'use_pip': True,
     }),
     ('NanoPlot', '1.13.0', {
         'modulename': 'nanoplot',
@@ -1584,8 +1611,7 @@ exts_list = [
     ('pipenv', '2018.5.18', {
         'source_urls': ['https://pypi.python.org/packages/p/pipenv'],
     }),
-    ('synapseclient', '1.8.1', {  # fails sanity
-        'modulename': False,
+    ('synapseclient', '1.8.1', {
         'source_urls': ['https://pypi.python.org/packages/source/s/synapseclient/'],
     }),
     ('tqdm', '4.23.4', {
