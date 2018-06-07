@@ -24,6 +24,7 @@ pyshortver = '.'.join(pyver.split('.')[:2])
 
 dependencies = [
     (python, pyver ),
+    ('cURL', '7.49.1'),
     ('SAMtools', '1.8'),
 ]
 

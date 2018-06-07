@@ -628,7 +628,7 @@ exts_list = [
         'modulename': 'os_brick',
         'source_urls': ['https://pypi.python.org/packages/source/o/os-brick/'],
     }),
-    ('botocore', '1.10.25', {
+    ('botocore', '1.10.32', {
         'source_urls': ['https://pypi.python.org/packages/source/b/botocore/'],
     }),
     ('freezer', '6.0.0', {
@@ -848,7 +848,7 @@ exts_list = [
     ('singledispatch', '3.4.0.3', {
         'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
     }),
-    ('boto3', '1.7.25', {
+    ('boto3', '1.7.32', {
         'source_urls': ['https://pypi.python.org/packages/source/b/boto3/'],
     }),
     ('dnspython', '1.15.0', {
@@ -1659,6 +1659,9 @@ exts_list = [
     ('PyChef', '0.3.0', {
         'modulename': 'chef',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyarrow/'],
+    }),
+    ('agfusion', '1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/agfusion'],
     }),
 ]
 
