@@ -1,0 +1,165 @@
+# easybuild easyconfig
+name = 'Python'
+version = '2.7.15'
+
+homepage = 'http://python.org/'
+description = """Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['http://www.python.org/ftp/%(namelower)s/%(version)s/']
+sources = [SOURCE_TGZ]
+
+# python needs bzip2 to build the bz2 package
+dependencies = [
+    ('bzip2', '1.0.6'),
+    ('zlib', '1.2.8'),
+    ('libreadline', '6.3'),
+    ('ncurses', '6.0'),
+    ('SQLite', '3.23.1'),
+    ('GMP', '6.1.1'),  # required for pycrypto
+    ('libffi', '3.2.1'),  # required for cryptography
+    # OS dependency should be preferred if the os version is more recent then this version,
+    # it's nice to have an up to date openssl for security reasons
+    # ('OpenSSL', '1.1.0g'),
+]
+
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
+# order is important!
+# package versions updated January 12th 2018
+exts_list = [
+    ('setuptools', '39.2.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/s/setuptools/'],
+    }),
+    ('pip', '10.0.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pip/'],
+    }),
+    ('nose', '1.3.7', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/nose/'],
+    }),
+    ('numpy', '1.14.3', {
+        'patches': ['numpy-1.12.0-mkl.patch'],
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/n/numpy/'],
+    }),
+    ('scipy', '1.1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/scipy/'],
+    }),
+    ('blist', '1.3.6', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/blist/'],
+    }),
+    ('mpi4py', '3.0.0', {
+        'source_urls': ['http://bitbucket.org/mpi4py/mpi4py/downloads/'],
+    }),
+    ('paycheck', '1.0.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/paycheck/'],
+    }),
+    ('pbr', '4.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pbr/'],
+    }),
+    ('Cython', '0.28.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/C/Cython/'],
+    }),
+    ('six', '1.11.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/six/'],
+    }),
+    ('python-dateutil', '2.7.3', {
+        'modulename': 'dateutil',
+        'source_urls': ['https://pypi.python.org/packages/source/p/python-dateutil/'],
+    }),
+    ('deap', '1.2.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/deap/'],
+    }),
+    ('decorator', '4.3.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/decorator/'],
+    }),
+    ('liac-arff', '2.2.1', {
+        'modulename': 'arff',
+        'source_urls': ['https://pypi.python.org/packages/source/l/liac-arff/'],
+    }),
+    ('pycrypto', '2.6.1', {
+        'modulename': 'Crypto',
+        'source_urls': ['https://pypi.python.org/packages/source/p/pycrypto/'],
+    }),
+    ('ecdsa', '0.13', {
+        'source_urls': ['https://pypi.python.org/packages/source/e/ecdsa/'],
+    }),
+    ('ipaddress', '1.0.22', {
+        'source_urls': ['https://pypi.python.org/packages/source/i/ipaddress/'],
+    }),
+    ('enum34', '1.1.6', {
+        'source_urls': ['https://pypi.python.org/packages/source/e/enum34/'],
+        'modulename': 'enum',
+    }),
+    ('cryptography', '2.2.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/cryptography/'],
+    }),
+    ('bcrypt', '3.1.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/bcrypt'],
+    }),
+    ('PyNaCl', '1.2.1', {
+        'modulename': False, 
+        'source_urls': ['https://pypi.python.org/packages/source/p/pynacl'],
+    }),
+    ('pyasn1', '0.4.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyasn1'],
+    }),
+    ('paramiko', '2.4.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/paramiko/'],
+    }),
+    ('pyparsing', '2.2.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyparsing/'],
+    }),
+    ('netifaces', '0.10.7', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/netifaces/'],
+    }),
+    ('netaddr', '0.7.19', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/netaddr/'],
+    }),
+    ('funcsigs', '1.0.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/f/funcsigs/'],
+    }),
+    ('mock', '2.0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/mock/'],
+    }),
+    ('pytz', '2018.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pytz/'],
+    }),
+    ('pandas', '0.23.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pandas/'],
+    }),
+    ('bitstring', '3.1.5', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/b/bitstring/'],
+    }),
+    ('virtualenv', '16.0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/v/virtualenv/'],
+    }),
+    ('docopt', '0.6.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/docopt/'],
+    }),
+    ('joblib', '0.11', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/joblib/'],
+    }),
+    ('certifi', '2018.4.16', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/certifi'],
+    }),
+    ('chardet', '3.0.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/chardet'],
+    }),
+    ('idna', '2.6', {
+        'source_urls': ['https://pypi.python.org/packages/source/i/idna'],
+    }),
+    ('urllib3', '1.22', {
+        'source_urls': ['https://pypi.python.org/packages/source/u/urllib3'],
+    }),
+    ('requests', '2.18.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/r/requests/'],
+    }),
+]
+
+moduleclass = 'lang'

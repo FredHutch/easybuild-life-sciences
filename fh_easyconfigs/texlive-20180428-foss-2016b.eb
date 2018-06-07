@@ -1,20 +1,24 @@
 # Easybuild easyconfig
 
-# TexLive 2017
+# TexLive 2018
 # Net Install for texlive.
+# All network installs of tex live have the same download name.
+# download install-tl-unx.tar.gz and rename it with a version install-tl-unx-20180531.tar.gz
+#
 # requires texlive.profile to be located in the current working directory
 # /app/easybuild/fh_eadyconfig/texlive.profile  paths are based on $EBROOTTEXLIVE
+#
 
-# $EBROOTTEXLIVE = /app/easybuild/software/texlive/20170524-foss-2016b
-#TEXDIR         /app/easybuild/software/texlive/20170524-foss-2016b/texlive/2017
-#TEXMFLOCAL     /app/easybuild/software/texlive/20170524-foss-2016b/texlive/texmf-local
-#TEXMFSYSCONFIG /app/easybuild/software/texlive/20170524-foss-2016b/texlive/2017/texmf-config
-#TEXMFSYSVAR    /app/easybuild/software/texlive/20170524-foss-2016b/texlive/2017/texmf-var
+# $EBROOTTEXLIVE = /app/easybuild/software/texlive/20180531-foss-2016b
+#TEXDIR         /app/easybuild/software/texlive/20180531-foss-2016b/texlive/2018
+#TEXMFLOCAL     /app/easybuild/software/texlive/20180531-foss-2016b/texlive/texmf-local
+#TEXMFSYSCONFIG /app/easybuild/software/texlive/20180531-foss-2016b/texlive/2018/texmf-config
+#TEXMFSYSVAR    /app/easybuild/software/texlive/20180531-foss-2016b/texlive/2018/texmf-var
 
 easyblock = 'Tarball'
 
 name = 'texlive'
-version = '20170524'
+version = '20180531'
 
 homepage = 'http://tug.org'
 description = """TeX is a typesetting language. Instead of visually
@@ -26,8 +30,9 @@ of the final typeset output, and so can be easily edited and manipulated."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-source_urls = ['ftp://tug.org/texlive/historic/2017/']
-sources = ['install-tl-unx.tar.gz']
+source_urls = ['ftp://tug.org/texlive/historic/2018/']
+sources = ['install-tl-unx-%(version)s.tar.gz',
+           'texlive-%(version)s.profile.tar.gz']
 
 dependencies = [
     ('X11', '20160819'),
@@ -42,24 +47,24 @@ dependencies = [
     ('graphite2', '1.3.10'),
 ]
 
-postinstallcmds = ['%(builddir)s/install-tl-%(version)s/install-tl -profile /app/easybuild/fh_easyconfigs/texlive.profile']
+postinstallcmds = ['%(builddir)s/install-tl-%(version)s/install-tl -profile ../texlive-%(version)s.profile']
 
 modextrapaths = {
-    'PATH': 'texlive/2017/bin/x86_64-linux',
-    'INFOPATH': 'texlive/2017/texmf-dist/doc/info',
-    'MANPATH': 'texlive/2017/texmf-dist/doc/man',
+    'PATH': 'texlive/2018/bin/x86_64-linux',
+    'INFOPATH': 'texlive/2018/texmf-dist/doc/info',
+    'MANPATH': 'texlive/2018/texmf-dist/doc/man',
 }
 modextravars = {
-    'TEXMFHOME': '%(installdir)s/texlive/2017/texmf-dist'
+    'TEXMFHOME': '%(installdir)s/texlive/2018/texmf-dist'
 }
 
 sanity_check_paths = {
-    'dirs': ['texlive/2017/bin/x86_64-linux',
-             'texlive/2017/texmf-dist',
+    'dirs': ['texlive/2018/bin/x86_64-linux',
+             'texlive/2018/texmf-dist',
              ],
     'files': [
-       'texlive/2017/bin/x86_64-linux/tex',
-       'texlive/2017/bin/x86_64-linux/latex'
+       'texlive/2018/bin/x86_64-linux/tex',
+       'texlive/2018/bin/x86_64-linux/latex'
     ],
 }
 
