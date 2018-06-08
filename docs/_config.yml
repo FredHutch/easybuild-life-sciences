@@ -1,0 +1,19 @@
+collections:
+  Python:
+    output: true
+    permalink: /:collection/:path/
+    layout: page
+  R:
+    output: true
+    permalink: /:collection/:path/
+    layout: page
+  Dot:
+    output: true
+    permalink: /:collection/:path/
+    layout: page
+
+# Reading Files
+include:
+  - _layouts
+  - assets
+  - _pages
