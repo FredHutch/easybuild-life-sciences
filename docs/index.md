@@ -28,8 +28,8 @@ Modules can be loaded, unloaded, listed and searched.  The ```module load``` can
  - ml avail Python  \# Show all available Python modules
  
 ### R 
-{% for album in site.R %}
-  #### {{ album.title }}
+{% for page in site.R %}
+  - [{{ page.title }}](page.url)
 {% endfor %}
 
 ### Python  
