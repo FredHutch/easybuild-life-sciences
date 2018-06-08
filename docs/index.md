@@ -29,7 +29,7 @@ Modules can be loaded, unloaded, listed and searched.  The ```module load``` can
  
 ### R 
 {% for page in site.R %}
-  - [{{ page.title }}](page.url)
+  - [{{ page.title }}](page.path)
 {% endfor %}
 
 ### Python  
