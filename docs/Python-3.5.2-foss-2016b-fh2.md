@@ -1,10 +1,10 @@
-# Python-3.5.2-foss-2016b-fh1
+# Python-3.5.2-foss-2016b-fh2
 ## Package List
 #### Updated June 07, 2018
 
   * [APScheduler-3.2.0](http://pypi.org/project/APScheduler/) In-process task scheduler with Cron-like capabilities
   * [Babel-2.3.4](http://pypi.org/project/Babel/) Internationalization utilities
-  * [Cython-0.23.4](https://pypi.org/project/Cython/) The Cython compiler for writing C extensions for the Python language.
+  * [Cython-0.25.1](https://pypi.org/project/Cython/) The Cython compiler for writing C extensions for the Python language.
   * [Flask-0.11.1](https://pypi.org/project/Flask/) A simple framework for building complex web applications.
   * [Flask-Bootstrap-3.3.6.0](https://pypi.org/project/Flask-Bootstrap/) An extension that includes Bootstrap in your project, without any boilerplate code.
   * [Flask-Debug-0.4.3](https://pypi.org/project/Flask-Debug/) Shows reflection/configuration to aid the development of Flask applications.
@@ -19,10 +19,12 @@
   * [PrettyTable-0.7.2](https://pypi.org/project/PrettyTable/) A simple Python library for easily displaying tabular data in a visually appealing ASCII table format.
   * PyClone 0.12.9
   * PyDP 0.2.2
+  * [PyGithub-1.34](https://pypi.org/project/PyGithub/) Use the full Github API v3
   * [PyMySQL-0.7.6](https://pypi.org/project/PyMySQL/) Pure Python MySQL Driver
   * [PyYAML-3.11](https://pypi.org/project/PyYAML/) YAML parser and emitter for Python
   * [Pygments-2.1.3](http://pypi.org/project/Pygments/) Pygments is a syntax highlighting package written in Python.
   * [SQLAlchemy-1.0.14](http://pypi.org/project/SQLAlchemy/) Database Abstraction Library
+  * albacore 1.2.1
   * [appdirs-1.4.0](http://pypi.org/project/appdirs/) A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".
   * [arff-2.1.0](https://pypi.org/project/arff/) Python package for reading and writing Weka arff files
   * [argparse-1.4.0](https://pypi.org/project/argparse/) Python command-line parsing library
@@ -52,7 +54,6 @@
   * [flask-nav-0.5](https://pypi.org/project/flask-nav/) Easily create navigation for Flask applications.
   * [freezer-3.0.0.0b2](https://pypi.org/project/freezer/) The OpenStack Backup Restore and Disaster Recovery as a Service Platform
   * [funcsigs-1.0.2](https://pypi.org/project/funcsigs/) Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+
-  * [github3.py-1.0.0a4](https://pypi.org/project/github3.py/) Python wrapper for the GitHub API(http://developer.github.com/v3)
   * [google-1.9.3](https://pypi.org/project/google/) Python bindings to the Google search engine.
   * [h5py-2.6.0](https://pypi.org/project/h5py/) Read and write HDF5 files from Python
   * [html5lib-0.999999999](https://pypi.org/project/html5lib/) HTML parser based on the WHATWG HTML specification
@@ -97,6 +98,7 @@
   * [pyasn1-0.1.9](https://pypi.org/project/pyasn1/) ASN.1 types and codecs
   * [pycrypto-2.6.1](https://pypi.org/project/pycrypto/) Cryptographic modules for Python.
   * [pycurl-7.43.0](http://pypi.org/project/pycurl/) PycURL -- A Python Interface To The cURL library
+  * [pygithub3-0.5.1](https://pypi.org/project/pygithub3/) Python wrapper for the github v3 api
   * [pymongo-3.3.0](https://pypi.org/project/pymongo/) Python driver for MongoDB <http://www.mongodb.org>
   * [pymssql-2.1.3](https://pypi.org/project/pymssql/) DB-API interface to Microsoft SQL Server for Python. (new Cython-based version)
   * [pypandoc-1.2.0](https://pypi.org/project/pypandoc/) Thin wrapper for pandoc.
@@ -115,7 +117,6 @@
   * [requests-2.11.1](http://pypi.org/project/requests/) Python HTTP for Humans.
   * [requestsexceptions-1.1.3](https://pypi.org/project/requestsexceptions/) Import exceptions from potentially bundled packages in requests.
   * [rfc3986-0.4.1](https://pypi.org/project/rfc3986/) Validating URI References per RFC 3986
-  * [rpy2-2.8.2](https://pypi.org/project/rpy2/) Python interface to the R language (embedded R)
   * [scipy-0.17.1](https://pypi.org/project/scipy/) SciPy: Scientific Library for Python
   * [setuptools-26.0.0](https://pypi.org/project/setuptools/) Easily download, build, install, upgrade, and uninstall Python packages
   * [simplegeneric-0.8.1](https://pypi.org/project/simplegeneric/) Simple generic functions (similar to Python's own len(), pickle.dump(), etc.)
