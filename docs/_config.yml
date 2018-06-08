@@ -17,3 +17,5 @@ include:
   - _layouts
   - assets
   - _pages
+
+theme: jekyll-theme-slate
