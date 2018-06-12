@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %} {% endblock %}
+{% block head %} {{ super() }}
+{% endblock %}
+{% block content %}
+<body>
+  <div id="container">
+    <h4> Fred Hutch Scientific Software</h4>
+      <p>This repository contains the tools and recipes used to build software
+      for the Fred Hutch. The Hutch uses Easybuild frame to buiand and manage
+      software. Easybuild is a software build and installation framework for 
+      managing scientific software. The user interface for using software is
+      Modules.  The module command is used to instantiate a specific software
+      package. Easybuild and Modules together provide a method to make
+      repeatable and documented scientific software.
+      </p>
+
+    <h4>Software Packages</h4>
+      <p>Easybuild modules are build from toolkits. The toolkit provides the
+      foundation for system level and math libraries. Easybuild software modules
+      names contain the software name-version and the toolkit name used to build
+      the module. Custom reciepies used at the Hutch also have suffix ```fh``` 
+      to distigue them from other published reciepeis. Once a reciepe is published
+      to this repository it is not changed. If changes have to be made to a package
+      the suffix is versioned. (fh1, fh2, fh3 etc).
+
+    <h4>Using Modules</h4>
+      <p>Modules can be loaded, unloaded, listed and searched.  The 
+      <tt>module load</tt> can be abrivated to <tt>ml</tt>.
+      <ul>
+         <li>ml Python/3.6.5-foss-2016b-fh1  \# load a module</li>
+         <li>ml  \# list currently loaded modules</li>
+         <li>ml purge \# Unload all modules</li>
+         <li>ml avail Python  \# Show all available Python modules</li>
+      </ul>
+
+  </div>
+{% endblock %}
+~
+
