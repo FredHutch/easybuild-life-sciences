@@ -11,8 +11,8 @@ bellow to see a list of available builds with a list of modules.
 
  - [R Builds]({{ site.baseurl }}{% link R.html %})
  - [Python Builds]({{ site.baseurl }}{% link Python.html %})
- - [Dependancy Graphs]({{ site.baseurl }}{% link DOT.html %})
+ - [Dependancy Graphs]({{ site.baseurl }}{% link Dot.html %})
 
 ### Scientific Software Inventory
 
- - [Life Science Software Inventory]()
+ - [Life Science Software Inventory]({{ site.baseurl }}{% link Dot.html %})
