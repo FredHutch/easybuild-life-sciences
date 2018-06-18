@@ -2,9 +2,8 @@
 layout: default 
 ---
 
-  <h2>R Builds</h2>
-    {% assign rsorted = site.R | sort: 'title' | reverse %}
-    {% for item in rsorted %} 
+  <h2>Dependancy Graphs</h2>
+    {% for item in site.DOT %}
        <h4>{{ item.title }}</h4>
        <p><a href="{{ item.url }}">{{ item.title }}</a></p>
     {% endfor %}
