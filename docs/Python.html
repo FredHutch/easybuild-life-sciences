@@ -3,7 +3,8 @@ layout: default
 ---
 
   <h2>Python Builds</h2>
+  <ul>
     {% for item in site.Python %}
-       <h4>{{ item.title }}</h4>
-       <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+       <li><a href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
+  </ul>
