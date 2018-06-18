@@ -1,9 +1,12 @@
-# Python-3.5.2-foss-2016b-fh2
-## Package List
-#### Updated June 07, 2018
+---
+layout: post
+title: Python-3.5.2-foss-2016b-fh2
+date: 2017-10-10
+---
 
-  * [APScheduler-3.2.0](http://pypi.org/project/APScheduler/) In-process task scheduler with Cron-like capabilities
-  * [Babel-2.3.4](http://pypi.org/project/Babel/) Internationalization utilities
+### Package List
+  * [APScheduler-3.2.0](https://pypi.org/project/APScheduler/) In-process task scheduler with Cron-like capabilities
+  * [Babel-2.3.4](https://pypi.org/project/Babel/) Internationalization utilities
   * [Cython-0.25.1](https://pypi.org/project/Cython/) The Cython compiler for writing C extensions for the Python language.
   * [Flask-0.11.1](https://pypi.org/project/Flask/) A simple framework for building complex web applications.
   * [Flask-Bootstrap-3.3.6.0](https://pypi.org/project/Flask-Bootstrap/) An extension that includes Bootstrap in your project, without any boilerplate code.
@@ -14,7 +17,7 @@
   * [Flask-WTF-0.12](https://pypi.org/project/Flask-WTF/) Simple integration of Flask and WTForms.
   * [Jinja2-2.8](http://pypi.org/project/Jinja2/) A small but fast and easy to use stand-alone template engine written in pure python.
   * [Mako-1.0.4](https://pypi.org/project/Mako/) A super-fast templating language that borrows the  best ideas from the existing templating languages.
-  * [Markdown-2.6.6](https://pypi.org/project/Markdown/) Python implementation of Markdown.
+  * [Markdown-2.6.6](http://pypi.org/project/Markdown/) Python implementation of Markdown.
   * [Nuitka-0.5.20](https://pypi.org/project/Nuitka/) Python compiler with full language support and CPython compatibility
   * [PrettyTable-0.7.2](https://pypi.org/project/PrettyTable/) A simple Python library for easily displaying tabular data in a visually appealing ASCII table format.
   * PyClone 0.12.9
@@ -22,23 +25,23 @@
   * [PyGithub-1.34](https://pypi.org/project/PyGithub/) Use the full Github API v3
   * [PyMySQL-0.7.6](https://pypi.org/project/PyMySQL/) Pure Python MySQL Driver
   * [PyYAML-3.11](https://pypi.org/project/PyYAML/) YAML parser and emitter for Python
-  * [Pygments-2.1.3](http://pypi.org/project/Pygments/) Pygments is a syntax highlighting package written in Python.
+  * [Pygments-2.1.3](https://pypi.org/project/Pygments/) Pygments is a syntax highlighting package written in Python.
   * [SQLAlchemy-1.0.14](http://pypi.org/project/SQLAlchemy/) Database Abstraction Library
   * albacore 1.2.1
   * [appdirs-1.4.0](http://pypi.org/project/appdirs/) A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".
   * [arff-2.1.0](https://pypi.org/project/arff/) Python package for reading and writing Weka arff files
-  * [argparse-1.4.0](https://pypi.org/project/argparse/) Python command-line parsing library
+  * [argparse-1.4.0](http://pypi.org/project/argparse/) Python command-line parsing library
   * [astroid-1.4.8](https://pypi.org/project/astroid/) A abstract syntax tree for Python with inference support.
   * [backports.shutil-get-terminal-size-1.0.0](https://pypi.org/project/backports.shutil_get_terminal_size/) A backport of the get_terminal_size function from Python 3.3's shutil.
-  * [beautifulsoup4-4.5.1](http://pypi.org/project/beautifulsoup4/) Screen-scraping library
+  * [beautifulsoup4-4.5.1](https://pypi.org/project/beautifulsoup4/) Screen-scraping library
   * [biopython-1.66](https://pypi.org/project/biopython/) Freely available tools for computational molecular biology.
   * [bitstring-3.1.5](https://pypi.org/project/bitstring/) Simple construction, analysis and modification of binary data.
   * [blist-1.3.6](https://pypi.org/project/blist/) a list-like type with better asymptotic performance and similar performance on small lists
   * [bokeh-0.12.1](https://pypi.org/project/bokeh/) Interactive plots and applications in the browser from Python
-  * [boto3-1.4.0](https://pypi.org/project/boto3/) The AWS SDK for Python
+  * [boto3-1.4.0](http://pypi.org/project/boto3/) The AWS SDK for Python
   * [changeo-0.3.3](https://pypi.org/project/changeo/) A bioinformatics toolkit for processing high-throughput lymphocyte receptor sequencing data.
   * [cliff-2.2.0](https://pypi.org/project/cliff/) Command Line Interface Formulation Framework
-  * [cryptography-1.4](https://pypi.org/project/cryptography/) cryptography is a package which provides cryptographic recipes and primitives to Python developers.
+  * [cryptography-1.4](http://pypi.org/project/cryptography/) cryptography is a package which provides cryptographic recipes and primitives to Python developers.
   * [cycler-0.10.0](https://pypi.org/project/Cycler/) Composable style cycles
   * [darkslide-2.3.3](https://pypi.org/project/darkslide/) Lightweight markup language-based html5 slideshow generator. Forked from Landslide.
   * [dask-0.11.0](https://pypi.org/project/dask/) Parallel PyData with Task Scheduling
@@ -49,7 +52,7 @@
   * [docutils-0.12](http://pypi.org/project/docutils/) Docutils -- Python Documentation Utilities
   * [drmaa-0.7.6](https://pypi.org/project/drmaa/) a python DRMAA library
   * [ecdsa-0.13](http://pypi.org/project/ecdsa/) ECDSA cryptographic signature library (pure python)
-  * [enum34-1.1.2](https://pypi.org/project/enum34/) Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4
+  * [enum34-1.1.2](http://pypi.org/project/enum34/) Python 3.4 Enum backported to 3.3, 3.2, 3.1, 2.7, 2.6, 2.5, and 2.4
   * [flask-appconfig-0.11.1](https://pypi.org/project/flask-appconfig/) Configures Flask applications in a canonical way. Also auto-configures Heroku. Aims to standardize configuration.
   * [flask-nav-0.5](https://pypi.org/project/flask-nav/) Easily create navigation for Flask applications.
   * [freezer-3.0.0.0b2](https://pypi.org/project/freezer/) The OpenStack Backup Restore and Disaster Recovery as a Service Platform
@@ -95,14 +98,14 @@
   * [presto-0.5.2](https://pypi.org/project/presto/) A bioinformatics toolkit for processing high-throughput lymphocyte receptor sequencing data.
   * [prompt_toolkit-1.0.7](https://pypi.org/project/prompt_toolkit/) Library for building powerful interactive command lines in Python
   * [psycopg2-2.6.2](https://pypi.org/project/psycopg2/) psycopg2 - Python-PostgreSQL Database Adapter
-  * [pyasn1-0.1.9](https://pypi.org/project/pyasn1/) ASN.1 types and codecs
-  * [pycrypto-2.6.1](https://pypi.org/project/pycrypto/) Cryptographic modules for Python.
+  * [pyasn1-0.1.9](http://pypi.org/project/pyasn1/) ASN.1 types and codecs
+  * [pycrypto-2.6.1](http://pypi.org/project/pycrypto/) Cryptographic modules for Python.
   * [pycurl-7.43.0](http://pypi.org/project/pycurl/) PycURL -- A Python Interface To The cURL library
   * [pygithub3-0.5.1](https://pypi.org/project/pygithub3/) Python wrapper for the github v3 api
   * [pymongo-3.3.0](https://pypi.org/project/pymongo/) Python driver for MongoDB <http://www.mongodb.org>
   * [pymssql-2.1.3](https://pypi.org/project/pymssql/) DB-API interface to Microsoft SQL Server for Python. (new Cython-based version)
   * [pypandoc-1.2.0](https://pypi.org/project/pypandoc/) Thin wrapper for pandoc.
-  * [pyparsing-2.1.8](http://pypi.org/project/pyparsing/) Python parsing module
+  * [pyparsing-2.1.8](https://pypi.org/project/pyparsing/) Python parsing module
   * [pysam-0.9.1.4](https://pypi.org/project/pysam/) pysam
   * [python-cinderclient-1.8.0](https://pypi.org/project/python-cinderclient/) OpenStack Block Storage API Client Library
   * [python-dateutil-2.5.3](http://pypi.org/project/python-dateutil/) Extensions to the standard Python datetime module
@@ -112,7 +115,7 @@
   * [python-openstackclient-3.0.1](https://pypi.org/project/python-openstackclient/) OpenStack Command-line Client
   * [python-pam-1.8.2](https://pypi.org/project/python-pam/) Python PAM module using ctypes, py3/py2
   * [python-swiftclient-3.0.0](https://pypi.org/project/python-swiftclient/) OpenStack Object Storage API Client Library
-  * [pytz-2016.6.1](https://pypi.org/project/pytz/) World timezone definitions, modern and historical
+  * [pytz-2016.6.1](http://pypi.org/project/pytz/) World timezone definitions, modern and historical
   * [qrcode-5.3](https://pypi.org/project/qrcode/) QR Code image generator
   * [requests-2.11.1](http://pypi.org/project/requests/) Python HTTP for Humans.
   * [requestsexceptions-1.1.3](https://pypi.org/project/requestsexceptions/) Import exceptions from potentially bundled packages in requests.
@@ -120,16 +123,16 @@
   * [scipy-0.17.1](https://pypi.org/project/scipy/) SciPy: Scientific Library for Python
   * [setuptools-26.0.0](https://pypi.org/project/setuptools/) Easily download, build, install, upgrade, and uninstall Python packages
   * [simplegeneric-0.8.1](https://pypi.org/project/simplegeneric/) Simple generic functions (similar to Python's own len(), pickle.dump(), etc.)
-  * [simplejson-3.8.2](https://pypi.org/project/simplejson/) Simple, fast, extensible JSON encoder/decoder for Python
+  * [simplejson-3.8.2](http://pypi.org/project/simplejson/) Simple, fast, extensible JSON encoder/decoder for Python
   * [six-1.10.0](https://pypi.org/project/six/) Python 2 and 3 compatibility utilities
-  * [stevedore-1.17.1](https://pypi.org/project/stevedore/) Manage dynamic plugins for Python applications
+  * [stevedore-1.17.1](http://pypi.org/project/stevedore/) Manage dynamic plugins for Python applications
   * [traitlets-4.2.2](https://pypi.org/project/traitlets/) Traitlets Python config system
   * [twobitreader-3.1.4](https://pypi.org/project/twobitreader/) A fast python package for reading .2bit files (used by the UCSC genome browser)
   * [tzlocal-1.2.2](https://pypi.org/project/tzlocal/) tzinfo object for the local timezone
   * [uritemplate.py-2.0.0](https://pypi.org/project/uritemplate.py/) URI templates
   * [urwid-1.3.1](https://pypi.org/project/urwid/) A full-featured console (xterm et al.) user interface library
   * [utils-0.9.0](https://pypi.org/project/utils/) Python Distribution Utilities
-  * [virtualenv-15.0.3](http://pypi.org/project/virtualenv/) Virtual Python Environment builder
+  * [virtualenv-15.0.3](https://pypi.org/project/virtualenv/) Virtual Python Environment builder
   * [warlock-1.3.0](https://pypi.org/project/warlock/) Python object model built on JSON schema and JSON patch.
   * [watchdog-0.8.3](http://pypi.org/project/watchdog/) Filesystem events monitoring
-  * [wrapt-1.10.8](https://pypi.org/project/wrapt/) Module for decorators, wrappers and monkey patching.
+  * [wrapt-1.10.8](http://pypi.org/project/wrapt/) Module for decorators, wrappers and monkey patching.
