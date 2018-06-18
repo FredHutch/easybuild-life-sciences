@@ -4,7 +4,8 @@ layout: default
 
   <h2>Dependancy Graphs </h2>
     {% assign rsorted = site.Dot | sort: 'title' %}
+    <ul>
     {% for item in rsorted %} 
-       <h4>{{ item.title }}</h4>
-       <p><a href="{{ item.url }}">{{ item.title }}</a></p>
+       <li><a href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
+    </ul>
