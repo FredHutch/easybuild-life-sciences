@@ -1660,7 +1660,7 @@ exts_list = [
         'modulename': 'chef',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyarrow/'],
     }),
-    ('agfusion', '1.0', {
+    ('agfusion', '1.2', {
         'source_urls': ['https://pypi.python.org/packages/source/a/agfusion'],
     }),
 ]
