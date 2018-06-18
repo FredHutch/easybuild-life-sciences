@@ -3,8 +3,9 @@ layout: default
 ---
 
   <h2>Python Builds</h2>
+  {% assign rsorted = site.Python | sort: 'title' | reverse %}
   <ul>
-    {% for item in site.Python %}
+    {% for item in rsorted %}
        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
   </ul>
