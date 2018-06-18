@@ -1,28 +1,27 @@
 
-title: Slate theme
-description: Slate is a theme for GitHub Pages.
+title: Fred Hutch Scientific Software
+description: Easybuild Easyconfigs for Scientific Software
 show_downloads: true
+logo: 
 google_analytics:
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 
 collections:
   Python:
     output: true
     permalink: /:collection/:path/
-    layout: page
+    layout: post
   R:
     output: true
     permalink: /:collection/:path/
-    layout: page
+    layout: post
   Dot:
     output: true
     permalink: /:collection/:path/
-    layout: page
+    layout: post
 
 # Reading Files
 include:
   - _layouts
   - assets
   - _pages
-
-theme: jekyll-theme-slate
