@@ -3,7 +3,7 @@ logo: /assets/img/logo.png
 description: Fred Hutch Easybuild Easyconfigs for Scientific Software. 
 show_downloads: false
 google_analytics:
-theme: jekyll-theme-slate
+theme: jekyll-theme-minimal
 
 collections:
   R:
