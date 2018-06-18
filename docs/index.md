@@ -16,3 +16,8 @@ bellow to see a list of available builds with a list of modules.
 ### Scientific Software Inventory
 
  - [Life Science Software Inventory]({{ site.baseurl }}{% link Dot.html %})
+
+### Presentations 
+
+ - [EasyBuild Presentation]({{ site.baseurl }}/presentation/EasyBuild_Presentation.html)
+ - [EB Presentation]({{ site.baseurl }}/presentation/EBd_Presentation.html)
