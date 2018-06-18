@@ -1,27 +1,20 @@
-
 title: Fred Hutch Scientific Software
-description: Easybuild Easyconfigs for Scientific Software
-show_downloads: true
-logo: 
+logo: /assets/img/logo.png
+description: Fred Hutch Easybuild Easyconfigs for Scientific Software. 
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 
 collections:
-  Python:
-    output: true
-    permalink: /:collection/:path/
-    layout: post
   R:
     output: true
     permalink: /:collection/:path/
-    layout: post
+    layout: default 
+  Python:
+    output: true
+    permalink: /:collection/:path/
+    layout: default 
   Dot:
     output: true
     permalink: /:collection/:path/
-    layout: post
-
-# Reading Files
-include:
-  - _layouts
-  - assets
-  - _pages
+    layout: default 
