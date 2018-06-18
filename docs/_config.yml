@@ -9,7 +9,7 @@ collections:
   R:
     output: true
     permalink: /:collection/:path/
-    layout: default 
+    layout: post 
   Python:
     output: true
     permalink: /:collection/:path/
