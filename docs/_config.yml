@@ -5,10 +5,12 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 
+baseurl: "/easybuild-life-sciences"
+
 collections:
   R:
     output: true
-    permalink: /:collection/:path/
+    permalink: /baseurl/:collection/:path/
     layout: post 
   Python:
     output: true
