@@ -22,13 +22,21 @@ have to be made to a package the suffix is versioned. (fh1, fh2, fh3 etc).
 ### Using Modules
 
 Modules can be loaded, unloaded, listed and searched.  The 
-```module load```
-can be abrivated to ```ml```.
+```module load``` command can be abrivated to ```ml```.
 
  - ```ml Python/3.6.5-foss-2016b-fh1``` Load a Python module 
  - ```ml list``` List currently loaded modules
  - ```ml purge``` Unload all modules
  - ```ml avail Python``` Show all available Python modules
+
+To you modules from a script the modules environment needs to be setup. Place the following
+in your bash or sbatch scripts.
+
+```
+source /app/Lmod/lmod/lmod/init/bash
+module use /app/easybuild/modules/all
+module load R/3.5.0-foss-2016b-fh1
+```
 
 ### Software Requests
 Please send software requests to SciComp support.  
