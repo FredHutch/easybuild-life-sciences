@@ -6,6 +6,6 @@ layout: default
   {% assign rsorted = site.Python | sort: 'title' | reverse %}
   <ul>
     {% for item in rsorted %}
-       <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+       <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
   </ul>
