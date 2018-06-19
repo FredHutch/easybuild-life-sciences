@@ -18,5 +18,5 @@ collections:
     permalink: /:collection/:path
   Dot:
     output: true
-    permalink: /:collection/:path/
     layout: post 
+    permalink: /:collection/:path/
