@@ -10,8 +10,8 @@ baseurl: "/easybuild-life-sciences"
 collections:
   R:
     output: true
-    layout: post 
-    permalink: /easybuild-life-sciences/:collection/:path/
+    layout: default 
+    permalink: /easybuild-life-sciences/:collection/:path
   Python:
     output: true
     layout: default 
