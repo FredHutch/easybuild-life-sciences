@@ -15,7 +15,7 @@ collections:
   Python:
     output: true
     layout: post 
-    permalink: /:collection/:path
+    permalink: /:collection/:path/
   Dot:
     output: true
     layout: post 
