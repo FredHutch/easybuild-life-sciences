@@ -5,7 +5,9 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 
+
 baseurl: "/easybuild-life-sciences"
+# baseurl: ""
 
 collections:
   R:
@@ -17,6 +19,10 @@ collections:
     layout: post 
     permalink: /:collection/:path/
   Dot:
+    output: true
+    layout: post 
+    permalink: /:collection/:path/
+  presentation:
     output: true
     layout: post 
     permalink: /:collection/:path/
