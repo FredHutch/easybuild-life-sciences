@@ -29,8 +29,9 @@ Modules can be loaded, unloaded, listed and searched.  The
  - ```ml purge``` Unload all modules
  - ```ml avail Python``` Show all available Python modules
 
-To you modules from a script the modules environment needs to be setup. Place the following
-in your bash or sbatch scripts.
+### Using Modules in Scripts
+Place the following in your bash or sbatch scripts to load modules within
+your scripts. 
 
 ```
 source /app/Lmod/lmod/lmod/init/bash
