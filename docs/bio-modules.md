@@ -1,204 +1,135 @@
 ---
-layout: default
+layout: post 
 title: Bio Modules
 date: 2018-06-19
 ---
- - AMOS/3.1.0-foss-2016b.lua
- - BCFtools/1.3-foss-2015b
- - BCFtools/1.6-foss-2016b.lua
- - BCFtools/1.8-foss-2016b.lua
+ - AMOS/3.1.0-foss-2016b
+ - BCFtools/1.6-foss-2016b
+ - BCFtools/1.8-foss-2016b
  - BEAST/1.8.2
- - BEAST/1.8.2-foss-2015b
  - BEDOPS/2.4.2-GCC-4.8.2
- - BEDTools/2.23.0-foss-2015b
  - BEDTools/2.26.0-foss-2016b
  - BLAST/2.2.26-Linux_x86_64
- - BLAT/3.5-foss-2015b
- - BWA/0.6.2-foss-2015b
- - BWA/0.7.10-foss-2015b
- - BWA/0.7.12-foss-2015b
  - BWA/0.7.15-foss-2016b
- - BWA/0.7.7-foss-2015b
- - BamTools/2.4.0-foss-2016a
- - BamTools/2.4.1-foss-2016b.lua
- - Beast/1.8.4-foss-2016b.lua
+ - BamTools/2.4.1-foss-2016b
+ - Beast/1.8.4-foss-2016b
  - Beast/2.3.2
- - Beast/2.4.0-foss-2016a
- - Beast/2.4.7-foss-2016a.lua
- - BioPerl/.1.6.1-foss-2015b-Perl-5.16.3
  - BioPerl/1.7.0-foss-2016b-Perl-5.24.0
- - Bowtie/1.0.0-foss-2015b
- - Bowtie/1.2.1.1-foss-2016b.lua
- - Bowtie2/2.2.2-foss-2015b
- - Bowtie2/2.2.3-foss-2015b
- - Bowtie2/2.2.9-foss-2016a
+ - Bowtie/1.2.1.1-foss-2016b
  - Bowtie2/2.2.9-foss-2016b
- - Bowtie2/2.3.2-foss-2016b.lua
- - CAP3/20150211.lua
- - ClustalW2/2.1-foss-2015b
- - Cufflinks/2.2.1-foss-2015b
- - Cufflinks/2.2.1-intel-2015b-Python-2.7.10-Boost-1.59.0
- - DIAMOND/0.9.10-foss-2016b.lua
- - DIAMOND/0.9.22-foss-2016b.lua
- - EMBOSS/6.6.0-foss-2016b.lua
- - EPACTS/a5209db-foss-2016b-R-3.4.1-fh1.lua
- - FASTX-Toolkit/0.0.14-foss-2016a
- - FLASH/1.2.11-foss-2016b.lua
- - FLASH/2.2.00-foss-2016b.lua
+ - Bowtie2/2.3.2-foss-2016b
+ - DIAMOND/0.9.10-foss-2016b
+ - DIAMOND/0.9.22-foss-2016b
+ - EMBOSS/6.6.0-foss-2016b
+ - EPACTS/a5209db-foss-2016b-R-3.4.1-fh1
+ - FLASH/1.2.11-foss-2016b
+ - FLASH/2.2.00-foss-2016b
  - FastQC/0.11.5-Java-1.8.0_74
  - FastQC/0.11.5-Java-1.8.0_92
- - FastTree/2.1.8-foss-2015b
  - FastTree/2.1.9-foss-2016b
  - GATK/3.4-46-Java-1.7.0_80
  - GATK/3.5-Java-1.8.0_66
  - GATK/3.6-Java-1.8.0_92
- - GATK/3.7-Java-1.8.0_92.lua
- - GISTIC/2.0.23.lua
- - GMAP-GSNAP/2014-08-20-foss-2015b
- - GMAP-GSNAP/2014-12-16-foss-2015b
- - GMAP-GSNAP/2014-12-17-foss-2015b
- - GMAP-GSNAP/2014-12-29-foss-2015b
- - GMAP-GSNAP/2017-02-25-foss-2016b.lua
- - GROMACS/5.0.5-intel-2015b-hybrid
- - HISAT2/2.0.4-foss-2016b.lua
- - HMMER/3.1b2-foss-2016b.lua
- - HTSlib/1.3-foss-2015b
+ - GATK/3.7-Java-1.8.0_92
+ - GISTIC/2.0.23
+ - GMAP-GSNAP/2017-02-25-foss-2016b
+ - HISAT2/2.0.4-foss-2016b
+ - HMMER/3.1b2-foss-2016b
  - HTSlib/1.3.1-foss-2016b
- - HTSlib/1.8-foss-2016b.lua
- - Homer/v4.9-foss-2016b.lua
- - IGV/2.3.93-Java-1.8.0_121.lua
- - IGVTools/2.3.93-Java-1.8.0_121.lua
- - ImmunediveRsity/1.0.9-foss-2016b.lua
- - LAST/926-foss-2016b.lua
- - MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9
- - MACS2/2.1.1.20160309-foss-2015b-Python-2.7.9.lua
- - MAFFT/7.305-foss-2016b-with-extensions.lua
- - MEME/4.11.1-foss-2015b
- - MUMmer/3.23-foss-2016b.lua
- - MUSCLE/3.8.31-foss-2015b
+ - HTSlib/1.8-foss-2016b
+ - Homer/v4.9-foss-2016b
+ - IGV/2.3.93-Java-1.8.0_121
+ - IGVTools/2.3.93-Java-1.8.0_121
+ - ImmunediveRsity/1.0.9-foss-2016b
+ - LAST/926-foss-2016b
+ - MAFFT/7.305-foss-2016b-with-extensions
+ - MUMmer/3.23-foss-2016b
  - MUSCLE/3.8.31-foss-2016b
- - MUSCLE/3.8.31-intel-2015b
- - NGS/1.2.5-foss-2016a
- - NGS/1.2.5-foss-2016b.lua
- - NanoOk/1.26-foss-2016b.lua
- - NiftyNet/0.2.2-foss-2016b-Python-3.6.5-fh1.lua
- - PANDAseq/2.11-foss-2016b.lua
- - PhyloBayes-MPI/1.8-foss-2015b.lua
- - Pindel/0.2.5b8-foss-2016b.lua
- - PyMOL/1.8.0.0-foss-2015b-Python-2.7.9
+ - NGS/1.2.5-foss-2016b
+ - NanoOk/1.26-foss-2016b
+ - NiftyNet/0.2.2-foss-2016b-Python-3.6.5-fh1
+ - PANDAseq/2.11-foss-2016b
+ - Pindel/0.2.5b8-foss-2016b
  - Queue/3.5-Java-1.8.0_66
- - R-bundle-Bioconductor/3.3-foss-2016a-R-3.3.0
  - R-bundle-Bioconductor/3.3-foss-2016b-R-3.3.1-fh1
- - R-bundle-Bioconductor/3.3-intel-2016a-R-3.3.0
  - R-bundle-Bioconductor/3.4-foss-2016b-R-3.3.2-fh1
- - R-bundle-Bioconductor/3.5-foss-2016b-R-3.4.0-fh1.lua
- - RAxML/8.2.11-foss-2016b-hybrid-avx2.lua
- - RSEM/1.2.30-foss-2015b
- - RepeatMasker/4-0-7-foss-2016b.lua
- - Rosetta/2016.13.58602-foss-2015b
- - SAMtools/0.1.19-foss-2015b
- - SAMtools/0.1.19-intel-2015b
- - SAMtools/0.1.20-intel-2015b
- - SAMtools/1.2-foss-2015b
- - SAMtools/1.3-foss-2015b
- - SAMtools/1.3.1-foss-2016a
+ - R-bundle-Bioconductor/3.5-foss-2016b-R-3.4.0-fh1
+ - RAxML/8.2.11-foss-2016b-hybrid-avx2
+ - RepeatMasker/4-0-7-foss-2016b
  - SAMtools/1.3.1-foss-2016b
- - SAMtools/1.4.1-foss-2016b.lua
- - SAMtools/1.5-foss-2016b.lua
- - SAMtools/1.6-foss-2016b.lua
- - SAMtools/1.8-foss-2016b.lua
- - SPLITREAD/0.1-foss-2015b
+ - SAMtools/1.4.1-foss-2016b
+ - SAMtools/1.5-foss-2016b
+ - SAMtools/1.6-foss-2016b
+ - SAMtools/1.8-foss-2016b
  - SPLITREAD/0.1-foss-2016b
  - SRA-Toolkit/2.5.7-ubuntu64
  - SRA-Toolkit/2.6.2-ubuntu64
  - SRA-Toolkit/2.7.0-ubuntu64
  - SRA-Toolkit/2.8.0-ubuntu64
- - SRA-Toolkit/2.9.0-ubuntu64.lua
- - STAR/2.5.0a-foss-2015b
- - SUGEN/8.3-foss-2016b.lua
- - Sniffles/1.0.8-foss-2016b.lua
- - TRF/4.09-linux64-fh.lua
- - TopHat/2.1.1-foss-2015b
+ - SRA-Toolkit/2.9.0-ubuntu64
+ - SUGEN/8.3-foss-2016b
+ - Sniffles/1.0.8-foss-2016b
+ - TRF/4.09-linux64-fh
  - TopHat/2.1.1-foss-2016b
  - Tracer/v1.6
- - Trimmomatic/0.36-Java-1.8.0_121.lua
- - Trinity/2.5.1-foss-2016b.lua
- - VCFtools/0.1.15-foss-2016b-Perl-5.24.1.lua
- - VariationHunter/0.4-foss-2015b
+ - Trimmomatic/0.36-Java-1.8.0_121
+ - Trinity/2.5.1-foss-2016b
+ - VCFtools/0.1.15-foss-2016b-Perl-5.24.1
  - VariationHunter/0.4-foss-2016b
- - WHAM/2.0.9-foss-2015b
- - Wandy/Feb2_2015-foss-2016b-Java-1.8.0_92
  - annovar/2016Feb01
  - annovar/2016Feb01-foss-2016b-Perl-5.24.0
- - assembly-stats/1.0.0-foss-2016b.lua
- - ataqv/0.9.5-foss-2016b.lua
- - bam2wig/1.4.lua
- - bamUtil/1.0.14-foss-2016a
- - bcl2fastq/2.17.1.14-foss-2015b
+ - assembly-stats/1.0.0-foss-2016b
+ - ataqv/0.9.5-foss-2016b
+ - bam2wig/1.4
  - bcl2fastq/2.18.0.12-foss-2016b
- - bcl2fastq/2.19.0-foss-2015b.lua
- - bcl2fastq2/2.20.0-foss-2016b.lua
- - biopython/1.66-foss-2015b-Python-2.7.9
- - breakdancer/1.4.5-foss-2014b.lua
- - bwa/0.7.17-foss-2016b.lua
- - cellranger/2.1.0.lua
- - cellranger/2.1.1.lua
- - conifer/0.2.2-foss-2015b-Python-2.7.9
+ - bcl2fastq2/2.20.0-foss-2016b
+ - breakdancer/1.4.5-foss-2014b
+ - bwa/0.7.17-foss-2016b
+ - cellranger/2.1.0
+ - cellranger/2.1.1
  - conifer/0.2.2-foss-2016b-Python-2.7.12-fh2
- - ctffind/4.1.8-foss-2016b.lua
- - delly/0.7.3-foss-2016a
- - delly/0.7.6-foss-2016b.lua
- - factera/1.4.4-foss-2016b-Perl-5.24.1.lua
- - fast5/0.6.2.lua
+ - ctffind/4.1.8-foss-2016b
+ - delly/0.7.6-foss-2016b
+ - factera/1.4.4-foss-2016b-Perl-5.24.1
+ - fast5/0.6.2
  - fastqc/0.11.2
  - fastqc/0.11.3
  - fiji/1.0.0-Java-1.8.0_66
- - fiji/1.0.0-foss-2015b-Java-1.8.0_66
- - freebayes/0.9.9-foss-2015b
- - gbench/2.12.0-foss-2016b.lua
- - generic-metal/2011-03-25-foss-2016b.lua
- - hmmcopy/master-foss-2016b.lua
- - imrep/0.8-foss-2016b.lua
+ - gbench/2.12.0-foss-2016b
+ - generic-metal/2011-03-25-foss-2016b
+ - hmmcopy/master-foss-2016b
+ - imrep/0.8-foss-2016b
  - intro-bio-bundle/2.0-foss-2016b-fh1
- - kallisto/0.43.1-foss-2016b.lua
- - kentUtils/302.1.0-foss-2016b.lua
- - lumpy/0.2.13-foss-2016a
- - lumpy/0.2.13-foss-2016b.lua
- - magicblast/1.0.0-foss-2016a
+ - kallisto/0.43.1-foss-2016b
+ - kentUtils/302.1.0-foss-2016b
+ - lumpy/0.2.13-foss-2016b
  - magicblast/1.0.0-foss-2016b
- - minimap2/2.10-foss-2016b.lua
- - mixcr/2.1.5-foss-2016b.lua
+ - minimap2/2.10-foss-2016b
+ - mixcr/2.1.5-foss-2016b
  - mrsFAST/3.3.11-foss-2016b
- - mrsFAST/3.3.8-foss-2015b
- - nanopolish/0.6.0-foss-2016b.lua
- - nanopolish/0.7.1-foss-2016b.lua
- - ncbi-blast/2.6.0-foss-2016b.lua
- - ncbi-vdb/2.7.0-foss-2016a
- - ncbi-vdb/2.7.0-foss-2016b.lua
+ - nanopolish/0.6.0-foss-2016b
+ - nanopolish/0.7.1-foss-2016b
+ - ncbi-blast/2.6.0-foss-2016b
+ - ncbi-vdb/2.7.0-foss-2016b
  - newick-utils/1.6-foss-2016b
- - ngmlr/0.2.6-foss-2016b.lua
- - ngsShoRT/2.2-foss-2015b-Perl-5.22.0-bare
+ - ngmlr/0.2.6-foss-2016b
  - oncotator/1.8.0.0-foss-2016b-Python-2.7.12-fh1
  - oncotator/1.8.0.0-foss-2016b-Python-2.7.12-fh2
- - oncotator/1.9.3.0-foss-2016b-Python-2.7.14-bare.lua
- - oncotator_v1_ds/April052016.lua
+ - oncotator/1.9.3.0-foss-2016b-Python-2.7.14-bare
+ - oncotator_v1_ds/April052016
  - picard/2.0.1-Java-1.8.0_66
- - picard/2.13.2-Java-1.8.0_92.lua
- - picard/2.18.1-Java-1.8.0_121.lua
+ - picard/2.13.2-Java-1.8.0_92
+ - picard/2.18.1-Java-1.8.0_121
  - picard/2.7.1-Java-1.8.0_92
- - plink/1.9b_4.6-x86_64.lua
+ - plink/1.9b_4.6-x86_64
  - prokka/1.11-foss-2016b-BioPerl-1.7.0
- - prokka/1.13-foss-2016b-BioPerl-1.7.0.lua
- - samblaster/0.1.22-foss-2016a
+ - prokka/1.13-foss-2016b-BioPerl-1.7.0
  - samblaster/0.1.22-foss-2016b
- - smithwaterman/1.1-foss-2016b.lua
- - svtoolkit/2.00.1678-foss-2016a
+ - smithwaterman/1.1-foss-2016b
  - svtoolkit/2.00.1678-foss-2016b
  - svtyper/0.0.4-foss-2016b-Python-2.7.12-fh1
  - tabix/0.2.6-foss-2016b
  - tandem/17-01-01-2-foss-2016b
- - vdjpuzzle2/3771ca670a3a-foss-2016b.lua
- - vdjtools/1.1.5-foss-2016b.lua
- - wham/1.8.0-foss-2016a
- - xhmm/1.0-foss-2015b
+ - vdjpuzzle2/3771ca670a3a-foss-2016b
+ - vdjtools/1.1.5-foss-2016b
  - xhmm/1.0-foss-2016b

@@ -1,0 +1,37 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutch Cancer Research Center
+# Seattle - Washington - US
+#
+easyblock = 'MakeCp'
+
+name = 'psipred'
+version = '4.01'
+
+homepage = 'http://bioinf.cs.ucl.ac.uk/psipred/'
+description = """The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred']
+sources = ['psipred.4.01.tar.gz']
+
+dependencies = [
+    ('BLAST', '2.2.26', '-Linux_x86_64', True),
+]
+
+start_dir = 'src'
+
+files_to_copy = [ 'bin' ]
+
+executables = ['chkparse', 'psipass2', 'psipred', 'seq2mtx']
+
+sanity_check_paths = {
+    'files': ['bin/%' % x for x in executables],
+    'dirs': files_to_copy,
+}
+
+moduleclass = 'bio'
