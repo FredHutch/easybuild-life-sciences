@@ -19,5 +19,6 @@ bellow to see a list of available builds with a list of modules.
 
 ### Presentations 
 
- - [EasyBuild Presentation]({{ site.baseurl }}/presentation/{% link EasyBuild_Presentation.html %})
- - [EB Presentation]({{ site.baseurl }}presentation/{% link EB_Presentation.html %})
+ - [EasyBuild Presentation](/presentation/EasyBuild_Presentation) 
+ - [EB Presentation](/presentation/EB_Presentation)
+~
