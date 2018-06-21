@@ -22,7 +22,7 @@ collections:
     output: true
     layout: post 
     permalink: /:collection/:path/
-  presentation:
+  release:
     output: true
     layout: post 
     permalink: /:collection/:path/
