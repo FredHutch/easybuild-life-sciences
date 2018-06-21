@@ -4,10 +4,9 @@ layout: default
 
 <h2>Software Releases</h2>
 {% assign rsorted = site.release | sort: 'date' | reverse %}
-{% for item in rsorted %}
-<strong><a href="{{ item.homepage}}">{{ item.title }}</a></strong>
-    <time datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date_to_long_string }}</time>
+{% for post in site.posts %}
+<strong><a href="{{ post.homepage}}">{{ post.title }}</a></strong>
+    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     <br>
-    Module name: {{item.modulename}}
-    <p>{{ item.description}}</p>
+    Module name: {{post.modulename}}
 {% endfor %}
