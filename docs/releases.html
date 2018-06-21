@@ -9,4 +9,5 @@ layout: default
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     <br>
     Module name: {{post.modulename}}
+    <p>{{ post.excerpt }}</p>
 {% endfor %}
