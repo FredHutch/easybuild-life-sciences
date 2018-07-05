@@ -7,28 +7,45 @@
 
 repo='easybuild-life-sciences'
 
-list='bio
-chem
-phys
-math'
-
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Can not find github pages docs directory."
     echo "Run script from github repo: ${repo}"
     exit 1
 fi
 
-cwd=$PWD
 # remove the $repo from left everything else; add the $repo and the "/docs" dir back
-base_dir=${cwd%${repo}*}${repo}
+base_dir=${PWD%${repo}*}${repo}
 docs_dir=${base_dir}/docs
 scripts_dir=${base_dir}/scripts
 
-for mtype in $list; do
-    /app/Lmod/lmod/lmod/libexec/spider -o /app/easybuild/modules/${mtype} >> $docs_dir/mod_list.txt
-done
 spider=/app/Lmod/lmod/lmod/libexec/spider
 module_dir=/app/easybuild/modules
-$spider -o spider-json ${module_dir}/bio | python -mjson.tool >bio.json
+cd $base_dir
+$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules.json
 
+echo '---' > ${docs_dir}/bio-modules.md
+echo 'layout: post' >> ${docs_dir}/bio-modules.md
+echo 'title: Bio Modules' >> ${docs_dir}/bio-modules.md
+echo 'date: '`date +'%Y-%m-%d'` >> ${docs_dir}/bio-modules.md
+echo '---' >> ${docs_dir}/bio-modules.md
+echo '' >> ${docs_dir}/bio-modules.md 
+
+python - <<EOF  >> ${docs_dir}/bio-modules.md
+import os
+import json
+jfile = open('docs/modules.json', 'r')
+data = json.load(jfile)
+packages = data.keys()
+
+slist = sorted(packages)
+for p in slist:
+   for ver in data[p].keys():
+       short_ver = os.path.basename(ver)
+       if '-2015' in short_ver:
+            continue
+       if short_ver.endswith('.lua'):
+           print(' - %s/%s' %(p, short_ver[:-4]))
+       else:
+           print(' - %s/%s' %(p, short_ver))
+EOF
 
