@@ -33,7 +33,7 @@ dependencies = [
     ]
 
 # preconfigopts = 'autoreconf -i && '
-configopts = ' SAMTOOLS=$EBROOTSAMTOOLS HTSLIB=$EBROOTHTSLIB '
+configopts = ' SAMTOOLS=$EBROOTSAMTOOLS HTSLIB=$EBROOTHTSLIB:$EBROOTHTSLIB/include/bam '
 
 sanity_check_paths = {
     'files': ["bin/tesseract",

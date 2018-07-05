@@ -20,7 +20,7 @@ source_urls = ['http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred']
 sources = ['psipred.4.01.tar.gz']
 
 dependencies = [
-    ('BLAST', '2.2.26', '-Linux_x86_64', True),
+    ('ncbi-blast', '2.6.0'),
 ]
 
 start_dir = 'src'
@@ -30,7 +30,7 @@ files_to_copy = [ 'bin' ]
 executables = ['chkparse', 'psipass2', 'psipred', 'seq2mtx']
 
 sanity_check_paths = {
-    'files': ['bin/%' % x for x in executables],
+    'files': ['bin/%s' % x for x in executables],
     'dirs': files_to_copy,
 }
 
