@@ -30,22 +30,29 @@ echo 'date: '`date +'%Y-%m-%d'` >> ${docs_dir}/bio-modules.md
 echo '---' >> ${docs_dir}/bio-modules.md
 echo '' >> ${docs_dir}/bio-modules.md 
 
-python - <<EOF  >> ${docs_dir}/bio-modules.md
-import os
+python - <<EOF
 import json
 jfile = open('docs/modules.json', 'r')
+outfile = open('docs/bio-modules.md', 'a')
 data = json.load(jfile)
 packages = data.keys()
-
 slist = sorted(packages)
 for p in slist:
-   for ver in data[p].keys():
-       short_ver = os.path.basename(ver)
-       if '-2015' in short_ver:
+   pac = data[p]
+   for ver in pac.keys():
+       if '-2015' in pac[ver]['full']: 
             continue
-       if short_ver.endswith('.lua'):
-           print(' - %s/%s' %(p, short_ver[:-4]))
-       else:
-           print(' - %s/%s' %(p, short_ver))
+       descrp = ''
+       url = ''
+       if 'Description' in pac[ver]:
+           text = pac[ver]['Description'].split(' - ')[0]
+           descrp = text.encode('utf8', 'replace')
+       if 'whatis' in pac[ver]:
+           entry = [x for x in pac[ver]['whatis'] if 'Homepage: ' in x]
+           text = entry[0].split('Homepage: ')[1]
+           url = text.encode('utf8', 'replace')
+       outfile.write(' - [' + pac[ver]['full'] + ']')
+       outfile.write('(' + url + ')  ')
+       outfile.write(descrp + '\n')
 EOF
 
