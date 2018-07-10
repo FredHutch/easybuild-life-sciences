@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules
-date: 2018-07-06
+date: 2018-07-10
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  The AMOS consortium is committed to the development of open-source whole genome assembly software
@@ -13,6 +13,9 @@ date: 2018-07-06
  - [BEDOPS/2.4.2-GCC-4.8.2](https://github.com/bedops/bedops )  BEDOPS is an open-source command-line toolkit that performs highly   efficient and scalable Boolean and other set operations, statistical calculations,   archiving, conversion and other management of genomic data of arbitrary scale.
  - [BEDTools/2.26.0-foss-2016b](https://github.com/arq5x/bedtools2 )  The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM.
  - [BLAST/2.2.26-Linux_x86_64](http://blast.ncbi.nlm.nih.gov/ )  
+ - [BLAST+/2.7.1-foss-2016b](http://blast.ncbi.nlm.nih.gov/)  Basic Local Alignment Search Tool, or BLAST, is an algorithm
+ for comparing primary biological sequence information, such as the amino-acid
+ sequences of different proteins or the nucleotides of DNA sequences.
  - [BWA/0.7.15-foss-2016b](http://bio-bwa.sourceforge.net/ )  Burrows-Wheeler Aligner (BWA) is an efficient program that aligns  relatively short nucleotide sequences against a long reference sequence such as the human genome.
  - [BamTools/2.4.0-foss-2016a](https://github.com/pezmaster31/bamtools )  BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [BamTools/2.4.1-foss-2016b](https://github.com/pezmaster31/bamtools)  BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
