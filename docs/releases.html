@@ -8,6 +8,8 @@ layout: default
 <strong><a href="{{ post.homepage}}">{{ post.title }}</a></strong>
     <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     <br>
-    Module name: {{post.modulename}}
+    {% if post.modulename %}
+        Module name: {{post.modulename}}
+    {% endif %}
     <p>{{ post.excerpt }}</p>
 {% endfor %}
