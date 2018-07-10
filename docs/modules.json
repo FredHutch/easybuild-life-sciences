@@ -212,6 +212,32 @@
             ]
         }
     },
+    "BLAST+": {
+        "/app/easybuild/modules/bio/BLAST+/2.7.1-foss-2016b.lua": {
+            "Description": "Basic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.",
+            "epoch": 1530907197,
+            "full": "BLAST+/2.7.1-foss-2016b",
+            "full_lower": "blast+/2.7.1-foss-2016b",
+            "help": "\nDescription\n===========\nBasic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.\n\n\nMore information\n================\n - Homepage: http://blast.ncbi.nlm.nih.gov/\n",
+            "lpathA": {
+                "/app/easybuild/software/BLAST+/2.7.1-foss-2016b/lib": 1
+            },
+            "markedDefault": false,
+            "name": "BLAST+",
+            "name_lower": "blast+",
+            "parent": [
+                "default"
+            ],
+            "path": "/app/easybuild/modules/bio/BLAST+/2.7.1-foss-2016b.lua",
+            "pathA": {
+                "/app/easybuild/software/BLAST+/2.7.1-foss-2016b/bin": 1
+            },
+            "whatis": [
+                "Description: Basic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.",
+                "Homepage: http://blast.ncbi.nlm.nih.gov/"
+            ]
+        }
+    },
     "BLAT": {
         "/app/easybuild/modules/bio/BLAT/3.5-foss-2015b": {
             "epoch": 1455307462,
@@ -4488,7 +4514,7 @@
     "psipred": {
         "/app/easybuild/modules/bio/psipred/4.01-foss-2016b.lua": {
             "Description": "The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.",
-            "epoch": 1530034607,
+            "epoch": 1531242951,
             "full": "psipred/4.01-foss-2016b",
             "full_lower": "psipred/4.01-foss-2016b",
             "help": "\nDescription\n===========\nThe PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.\n\n\nMore information\n================\n - Homepage: http://bioinf.cs.ucl.ac.uk/psipred/\n",
