@@ -6,6 +6,19 @@
 # Fred Hutch Cancer Research Center
 # Seattle - Washington - US
 #
+#  psipred is setup to use the old BLAST. The last version of BLAST is
+#  2.2.26 from 2013-03-05
+#  ftp://ftp.ncbi.nih.gov/blast/executables/legacy.NOTSUPPORTED/
+#  To use BLAST+ run the script   BLAST+/runpsipredplus
+#
+#  psiblast requires a referance database
+# wget ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz
+# gunzip -v uniref90.fasta.gz
+# bin/pfilt uniref90.fasta > uniref90filt
+# formatdb -t uniref90filt -i uniref90filt
+#
+# pfilt was found here: https://github.com/bjornwallner/proteus
+
 easyblock = 'MakeCp'
 
 name = 'psipred'
@@ -19,19 +32,27 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 source_urls = ['http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred']
 sources = ['psipred.4.01.tar.gz']
 
+patches = ['psipred-4.01.patch']
+
 dependencies = [
-    ('ncbi-blast', '2.6.0'),
+    ('BLAST', '2.2.26-Linux_x86_64', '', True),
+    ('BLAST+', '2.7.1'),
 ]
 
 start_dir = 'src'
 
-files_to_copy = [ 'bin' ]
+files_to_copy = ['bin', 'data', 'example',
+                 (['runpsipred', 'runpsipred_single'], 'bin'),
+                 (['BLAST+/runpsipredplus'], 'bin'),
+                 ]
 
 executables = ['chkparse', 'psipass2', 'psipred', 'seq2mtx']
 
 sanity_check_paths = {
     'files': ['bin/%s' % x for x in executables],
-    'dirs': files_to_copy,
+    'dirs': ['bin', 'data', 'example'],
 }
+
+modextravars = {'BLASTDB': '/shared/biodata/ncbi-blast'}
 
 moduleclass = 'bio'

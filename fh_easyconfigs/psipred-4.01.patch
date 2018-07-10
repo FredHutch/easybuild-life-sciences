@@ -1,0 +1,60 @@
+diff -ruN psipred.org/BLAST+/runpsipredplus psipred/BLAST+/runpsipredplus
+--- psipred.org/BLAST+/runpsipredplus	2016-10-02 14:46:21.000000000 -0700
++++ psipred/BLAST+/runpsipredplus	2018-07-06 15:18:15.202268000 -0700
+@@ -11,13 +11,13 @@
+ # NOTE: Experimental PSIPRED script with BLAST+ compatability (DTJ May 2010)
+ 
+ # The name of the BLAST+ data bank
+-set dbname = uniref90filt
++set dbname = ${BLASTDB}/uniref90filt
+ 
+ # Where the NCBI BLAST+ programs have been installed
+-set ncbidir = /usr/local/bin
++set ncbidir = ${EBROOTBLASTPLUS}/bin 
+ 
+ # Where the PSIPRED V3 programs have been installed
+-set execdir = ../bin
++set execdir = ${EBROOTPSIPRED}/bin
+ 
+ # Where the PSIPRED V3 data files have been installed
+ set datadir = ../data
+diff -ruN psipred.org/runpsipred psipred/runpsipred
+--- psipred.org/runpsipred	2016-10-02 14:44:36.000000000 -0700
++++ psipred/runpsipred	2018-07-10 10:11:57.633248000 -0700
+@@ -11,16 +11,16 @@
+ # NOTE: Script modified to be more cluster friendly (DTJ April 2008)
+ 
+ # The name of the BLAST data bank
+-set dbname = uniref90
++set dbname = ${BLASTDB}/uniref90
+ 
+ # Where the NCBI programs have been installed
+-set ncbidir = /usr/local/bin
++set ncbidir = ${EBROOTBLAST}/bin
+ 
+ # Where the PSIPRED V4 programs have been installed
+-set execdir = ./bin
++set execdir = ${EBROOTPSIPRED}/bin
+ 
+ # Where the PSIPRED V4 data files have been installed
+-set datadir = ./data
++set datadir = ${EBROOTPSIPRED}/data
+ 
+ set basename = $1:r
+ set rootname = $basename:t
+diff -ruN psipred.org/runpsipred_single psipred/runpsipred_single
+--- psipred.org/runpsipred_single	2016-02-26 08:04:11.000000000 -0800
++++ psipred/runpsipred_single	2018-07-06 15:16:27.856633000 -0700
+@@ -10,10 +10,10 @@
+ # NOTE: Script modified to be more cluster friendly (DTJ April 2008)
+ 
+ # Where the PSIPRED V4 programs have been installed
+-set execdir = ./bin
++set execdir = ${BLASTDB}/bin
+ 
+ # Where the PSIPRED V4 data files have been installed
+-set datadir = ./data
++set datadir = ${EBROOTPSIPRED}/data
+ 
+ set basename = $1:r
+ set rootname = $basename:t
