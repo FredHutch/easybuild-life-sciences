@@ -11,11 +11,18 @@
 #  ftp://ftp.ncbi.nih.gov/blast/executables/legacy.NOTSUPPORTED/
 #  To use BLAST+ run the script   BLAST+/runpsipredplus
 #
-#  psiblast requires a referance database
+#  This was helpful: https://www.biostars.org/p/70342/
+#
+#  psiblast requires a referance database. The database needs to be setup
+#  for BLAST. psiblast is written for legacy BLAST.
 # wget ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz
 # gunzip -v uniref90.fasta.gz
-# bin/pfilt uniref90.fasta > uniref90filt
-# formatdb -t uniref90filt -i uniref90filt
+#  modify runpsipred script to use /shared/biodata/ncbi-blast = BLASTDB
+#  set dbname = ${BLASTDB}/uniref90
+# 
+# Create Database for BLAST+
+# makeblastdb -in uniref90.fasta -dbtype prot -input_type fasta -out uniref90
+# called from runpsipredplus
 #
 # pfilt was found here: https://github.com/bjornwallner/proteus
 
