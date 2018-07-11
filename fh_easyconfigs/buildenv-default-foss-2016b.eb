@@ -1,0 +1,19 @@
+easyblock = 'BuildEnv'
+
+name = 'buildenv'
+version = 'default'
+
+homepage = 'None'
+description = """This module sets a group of environment variables for compilers, linkers, maths libraries, etc., that
+ you can use to easily transition between toolchains when building your software. To query the variables being set
+ please use: module show <this module name>"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [('Autotools', '20150215', '', ('GNU', '4.9.3-2.25')),
+                ('CMake', '3.7.2'),
+                ('flex', '2.6.0'),
+                ('Bison', '3.0.4'),
+                ]
+
+moduleclass = 'devel'
