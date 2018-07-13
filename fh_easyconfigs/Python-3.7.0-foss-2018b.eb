@@ -5,7 +5,7 @@ homepage = 'http://python.org/'
 description = """Python is a programming language that lets you work more quickly and integrate your systems
  more effectively."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 toolchainopts = {'pic': True}
 
 source_urls = ['http://www.python.org/ftp/%(namelower)s/%(version)s/']
@@ -15,12 +15,12 @@ checksums = ['85bb9feb6863e04fb1700b018d9d42d1caac178559ffa453d7e6a436e259fd0d']
 # python needs bzip2 to build the bz2 package
 dependencies = [
     ('bzip2', '1.0.6'),
-    ('zlib', '1.2.8'),
-    ('libreadline', '6.3'),
-    ('ncurses', '6.0'),
-    ('SQLite', '3.13.0'),
-    ('XZ', '5.2.2'),
-    ('GMP', '6.1.1'),  # required for pycrypto
+    ('zlib', '1.2.11'),
+    ('libreadline', '7.0'),
+    ('ncurses', '6.1'),
+    ('SQLite', '3.24.0'),
+    ('XZ', '5.2.4'),
+    ('GMP', '6.1.2'),  # required for pycrypto
     ('libffi', '3.2.1'),  # required for cryptography
     # OS dependency should be preferred if the OS version is more recent then this version,
     # it's nice to have an up to date OpenSSL for security reasons;
@@ -39,10 +39,10 @@ buildopts = 'LDFLAGS="$LDFLAGS -lssp"'
 # order is important!
 # package versions updated June 19th 2018
 exts_list = [
-    ('setuptools', '40.0.0', {
+    ('setuptools', '39.2.0', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.python.org/packages/source/s/setuptools/'],
-        'checksums': ['012adb8e25fbfd64c652e99e7bab58799a3aaf05d39ab38561f69190a909015f'],
+        'checksums': ['f7cddbb5f5c640311eb00eab6e849f7701fa70bf6a183fc8a2c33dd1d1672fb2'],
     }),
     ('pip', '10.0.1', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pip/'],
@@ -73,21 +73,17 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/paycheck/'],
         'checksums': ['6db7fc367c146cd59d2327ad4d2d6b0a24bc1be2d6953bb0773cbf702ee1ed34'],
     }),
-    ('pbr', '4.1.0', {
+    ('pbr', '4.0.4', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pbr/'],
-        'checksums': ['e0f23b61ec42473723b2fec2f33fb12558ff221ee551962f01dd4de9053c2055'],
+        'checksums': ['a9c27eb8f0e24e786e544b2dbaedb729c9d8546342b5a6818d8eda098ad4340d'],
     }),
-    ('Cython', '0.28.4', {
+    ('Cython', '0.28.3', {
         'source_urls': ['https://pypi.python.org/packages/source/C/Cython/'],
-        'checksums': ['76ac2b08d3d956d77b574bb43cbf1d37bd58b9d50c04ba281303e695854ebc46'],
+        'checksums': ['1aae6d6e9858888144cea147eb5e677830f45faaff3d305d77378c3cba55f526'],
     }),
     ('six', '1.11.0', {
         'source_urls': ['https://pypi.python.org/packages/source/s/six/'],
         'checksums': ['70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9'],
-    }),
-    ('setuptools_scm', '2.1.0', {
-        'source_urls': ['PYPI_SOURCE'],
-        'checksums': ['a767141fecdab1c0b3c8e4c788ac912d7c94a0d6c452d40777ba84f918316379'],
     }),
     ('python-dateutil', '2.7.3', {
         'modulename': 'dateutil',
@@ -169,9 +165,9 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/m/mock/'],
         'checksums': ['b158b6df76edd239b8208d481dc46b6afd45a846b7812ff0ce58971cf5bc8bba'],
     }),
-    ('pytz', '2018.5', {
+    ('pytz', '2018.4', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pytz/'],
-        'checksums': ['ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277'],
+        'checksums': ['c06425302f2cf668f1bba7a0a03f3c1d34d4ebeef2c72003da308b3947c7f749'],
     }),
     ('pandas', '0.23.3', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pandas/'],
@@ -190,9 +186,9 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/d/docopt/'],
         'checksums': ['49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491'],
     }),
-    ('joblib', '0.12.0', {
+    ('joblib', '0.11', {
         'source_urls': ['https://pypi.python.org/packages/source/j/joblib/'],
-        'checksums': ['aba9f97aa3e0548be6fc458b5d708be863eb4be35830caeb3faa7bd3d9afb7bb'],
+        'checksums': ['7b8fd56df36d9731a83729395ccb85a3b401f62a96255deb1a77220c00ed4085'],
     }),
     ('chardet', '3.0.4', {
         'source_urls': ['https://pypi.python.org/packages/source/c/chardet/'],
