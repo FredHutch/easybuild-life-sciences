@@ -1,0 +1,35 @@
+#  easybuild easyconfig
+#
+#  John Dey  jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center 
+
+name = 'spacy'
+version = '2.0.12'
+
+easyblock = 'PythonPackage'
+
+homepage = 'https://spacy.io/'
+description = """Industrial-strength natural language processing in Python"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+python = 'Python'
+pyver = '3.6.5'
+versionsuffix = '-%s-%s-fh3' % (python, pyver)
+pyshortver = '.'.join(pyver.split('.')[:2])
+
+dependencies = [
+    (python, pyver, '-fh3'),
+]
+
+
+sanity_check_paths = {
+    'dirs': [ 'bin'],
+    'files': ['bin/spacy'],
+}
+
+moduleclass = 'tools'
