@@ -1131,6 +1131,14 @@ exts_list = [
         'unpack_sources': False,
         'use_pip': True,
     }),
+    ('jupyterlab_launcher', '0.11.2', {
+        'source_urls': [PYPI_SOURCE],
+        'use_pip': True,
+    }),
+    ('jupyterlab', '0.33.7', {
+        'source_urls': [PYPI_SOURCE],
+        'use_pip': True,
+    }),
     ('qtconsole', '4.3.1', {
         'source_urls': ['https://pypi.python.org/packages/source/q/qtconsole/'],
     }),

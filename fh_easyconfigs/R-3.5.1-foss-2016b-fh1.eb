@@ -46,6 +46,7 @@ dependencies = [
     ('libpng', '1.6.24'),  # for plotting in R
     ('libjpeg-turbo', '1.5.0'),  # for plottting in R
     ('libpthread-stubs', '0.3'),
+    ('libsndfile', '1.0.28'),
     ('LibTIFF', '4.0.6'),
     ('Java', '1.8.0_92', '', True),  # Java bindings are built if Java is found, might as well provide it
     ('Tcl', '8.6.7'),  # for tcltk
@@ -56,12 +57,16 @@ dependencies = [
     ('freeglut', '3.0.0'),   # OpenGL for mixOmics -> rgl
     ('poppler', '0.54.0'),
     ('GDAL', '2.2.3'),  # for rgdal  -> netCDF 4.5.0 -> HDF5-1.8.18
+    ('PROJ', '4.9.2'),
     ('GSL', '2.3'), # for gsl
     ('GMP', '6.1.1'),  # for igraph
+    ('NLopt', '2.4.2'),
     ('JAGS', '4.2.0'),   # for rjags
     ('libGLU', '9.0.0'),
     ('Mesa', '12.0.2'), # for rgl
     ('cairo', '1.14.6'),
+    ('FFTW', '3.3.7'), # for fftw
+    ('ICU', '61.1'),
     ('PostgreSQL', '9.6.1'), # for RPostgreSQL
     ('netCDF', '4.5.0'), # for netcdf4
     ('GLPK', '4.61'), # for Rglpk
@@ -522,8 +527,8 @@ exts_list = [
     ('spatstat.utils', '1.9-0', ext_options),
     ('spatstat.data', '1.3-1', ext_options),
     ('spatstat', '1.56-1', ext_options),
-    #('rgdal', '1.1-10', ext_options),
-    #('gdalUtils', '2.0.1.7', ext_options),
+    ('rgdal', '1.2-16', ext_options),
+    ('gdalUtils', '2.0.1.7', ext_options),
     ('pracma', '2.1.4', ext_options),
     ('RCurl', '1.95-4.11', ext_options),
     ('bio3d', '2.3-4', ext_options),
@@ -567,14 +572,8 @@ exts_list = [
     ('git2r', '0.23.0', ext_options),
     ('rversions', '1.0.3', ext_options),
     ('devtools', '1.13.6', ext_options),
-    ('rAzureBatch', '0.5.1', {
-        'source_urls': ['https://github.com/Azure/%(name)s/archive/'],
-        'source_tmpl': 'v%(version)s.tar.gz',
-    }),
-    ('doAzureParallel', '0.5.0', {
-        'source_urls': ['https://github.com/Azure/%(name)s/archive'],
-        'source_tmpl': 'v%(version)s.tar.gz',
-    }),
+    ('rAzureBatch', '0.6.1', ext_options),
+    ('doAzureParallel', '0.7.1', ext_options),
     ('Rook', '1.1-1', ext_options),
     ('Cairo', '1.5-9', ext_options),
     ('RMTstat', '0.3', ext_options),
@@ -724,7 +723,7 @@ exts_list = [
     ('wavethresh', '4.6.8', ext_options),
     ('config', '0.3', ext_options),
     ('dbplyr', '1.2.2', ext_options),
-    ('sparklyr', '0.8.4', ext_options),
+    ('sparklyr', '0.8.4', ext_options), 
     ('REDCapR', '0.9.8', ext_options),
     ('synapseClient', '1.13-4', ext_options),
     ('GWASExactHW', '1.01', ext_options),
