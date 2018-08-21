@@ -1,0 +1,15 @@
+name = 'Java'
+version = '10.0.2'
+
+homepage = 'http://java.com/'
+description = """Java Platform, Standard Edition (Java SE) lets you develop and deploy
+ Java applications on desktops and servers."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# download the tar.gz directly from
+# http://www.oracle.com/technetwork/java/javase/downloads/index.html
+sources = ['jdk-%s_linux-x64_bin.tar.gz' % version]
+checksums = ['6633c20d53c50c20835364d0f3e172e0cbbce78fff81867488f22a6298fa372b']
+
+moduleclass = 'lang'
