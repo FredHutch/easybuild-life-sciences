@@ -1671,6 +1671,9 @@ exts_list = [
     ('agfusion', '1.2', {
         'source_urls': ['https://pypi.python.org/packages/source/a/agfusion'],
     }),
+    ('shap', '0.24.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/shap/'],
+    }),
 ]
 
 

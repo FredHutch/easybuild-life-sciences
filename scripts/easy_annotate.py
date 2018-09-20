@@ -56,6 +56,7 @@ class ExtsList(object):
         """
         header = 'SOURCE_TGZ  = "%(name)s-%(version)s.tgz"\n'
         header += 'SOURCE_TAR_GZ = "%(name)s-%(version)s.tar.gz"\n'
+        header += 'PYPI_SOURCE = "https://pypi.org/project/%(name)s"\n'
         code = header
 
         eb = imp.new_module("easyconfig")
