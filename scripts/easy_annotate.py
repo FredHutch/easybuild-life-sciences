@@ -5,15 +5,18 @@ import sys
 import imp
 import json
 import ssl
-from datetime import datetime
+from datetime import date
 import requests
 import urllib2
 import xmlrpclib
 
 __author__ = "John Dey"
-__version__ = "1.0.1"
+__version__ = "2.0.0"
 __email__ = "jfdey@fredhutch.org"
 
+"""Versioin 1.x create HTML output
+   Version 2 create Markdown output
+"""
 
 class ExtsList(object):
     """ Easy Anotate is a utilty program for documenting EasyBuild easyconfig
@@ -44,7 +47,7 @@ class ExtsList(object):
             print("file name does not match module name. " +
                   "file name: %s, package: %s" % (f_name, self.pkg_name))
             sys.exit(0)
-        self.out = open(f_name + '.html', 'w')
+        self.out = open(f_name + '.md', 'w')
         self.html_header()
 
     @staticmethod
@@ -73,28 +76,14 @@ class ExtsList(object):
         """write html head block
         All custom styles are defined here.  No external css is used.
         """
-        block = """<!DOCTYPE html>
-<html>
-<head>
-  <title>Fred Hutchinson Cancer Research Center</title>
-  <title>EasyBuild Annotate extension list for R, Biocondotor and
- Python easyconfig files</title>
-  <style>
-    body {font-family: Helvetica,Arial,"Calibri","Lucida Grande",sans-serif;}
-    .ext_list a {color: black; text-decoration: none; font-weight: bold;}
-    .ext_list li:hover a:hover {color: #89c348;}
-    span.fh_green {color: #89c348;}  <!-- Hutch Green -->
-  </style>
-</head>
-<body>
-"""
+        today = date.today() 
+        date_string = '%d-%02d-%02d' % (today.year, today.month, today.day) 
+        block = '---\nlayout: post\ntitle: %s\n' % self.pkg_name
+        block += 'date: %s\n---\n\n' % date_string
         self.out.write(block)
-        self.out.write('<h2><span class="fh_green">%s</span></h2>\n' %
-                       self.pkg_name)
-        self.out.write('<h3>Package List</h3>\n<div class="ext_list">\n')
 
     def exts2html(self):
-        self.out.write('  <ul style="list-style-type:none">\n')
+        self.out.write('### Package List\n')
         pkg_info = {}
         for pkg in self.extension:
             if isinstance(pkg, tuple):
@@ -113,18 +102,13 @@ class ExtsList(object):
         pkg_list.sort()
         for key in pkg_list:
             if pkg_info[key]['url'] == 'not found':
-                self.out.write('    <li>%s&emsp;%s</li>\n' %
-                               (key, pkg_info[key]['version']))
+                self.out.write('  * %s %s\n' % (key, pkg_info[key]['version']))
             else:
-                self.out.write('    <li><a href="%s">%s-%s</a>&emsp;%s</li>\n'
-                               % (pkg_info[key]['url'],
-                                  key,
-                                  pkg_info[key]['version'],
-                                  pkg_info[key]['description']))
-        self.out.write('  </ul>\n</div>\n')
-        self.out.write('  updated: %s\n' %
-                       "{:%B %d, %Y}".format(datetime.now()))
-        self.out.write('</body></html>\n')
+                msg = '  * [%s-%s](%s) %s\n' % (key,
+                                                pkg_info[key]['version'],
+                                                pkg_info[key]['url'],
+                                                pkg_info[key]['description'])
+                self.out.write(msg)
 
     def get_package_url(self, pkg_name):
         pass
