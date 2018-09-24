@@ -148,6 +148,27 @@
             "whatis": [
                 "Description:  BEDOPS is an open-source command-line toolkit that performs highly   efficient and scalable Boolean and other set operations, statistical calculations,   archiving, conversion and other management of genomic data of arbitrary scale. - Homepage: https://github.com/bedops/bedops "
             ]
+        },
+        "/app/easybuild/modules/bio/BEDOPS/2.4.35-foss-2016b.lua": {
+            "Description": "BEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.",
+            "epoch": 1534364649,
+            "full": "BEDOPS/2.4.35-foss-2016b",
+            "full_lower": "bedops/2.4.35-foss-2016b",
+            "help": "\nDescription\n===========\nBEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.\n\n\nMore information\n================\n - Homepage: http://bedops.readthedocs.io/en/latest/index.html\n",
+            "markedDefault": false,
+            "name": "BEDOPS",
+            "name_lower": "bedops",
+            "parent": [
+                "default"
+            ],
+            "path": "/app/easybuild/modules/bio/BEDOPS/2.4.35-foss-2016b.lua",
+            "pathA": {
+                "/app/easybuild/software/BEDOPS/2.4.35-foss-2016b/bin": 1
+            },
+            "whatis": [
+                "Description: BEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.",
+                "Homepage: http://bedops.readthedocs.io/en/latest/index.html"
+            ]
         }
     },
     "BEDTools": {
@@ -927,6 +948,24 @@
                 "Description: Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.",
                 "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
             ]
+        },
+        "/app/easybuild/modules/math/Eigen/3.3.2-foss-2016b.lua": {
+            "Description": "Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.",
+            "epoch": 1536088158,
+            "full": "Eigen/3.3.2-foss-2016b",
+            "full_lower": "eigen/3.3.2-foss-2016b",
+            "help": "\nDescription\n===========\nEigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n\n\nMore information\n================\n - Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page\n",
+            "markedDefault": false,
+            "name": "Eigen",
+            "name_lower": "eigen",
+            "parent": [
+                "default"
+            ],
+            "path": "/app/easybuild/modules/math/Eigen/3.3.2-foss-2016b.lua",
+            "whatis": [
+                "Description: Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.",
+                "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
+            ]
         }
     },
     "FASTX-Toolkit": {
@@ -1621,6 +1660,30 @@
             "path": "/app/easybuild/modules/bio/IGV/2.3.93-Java-1.8.0_121.lua",
             "pathA": {
                 "/app/easybuild/software/IGV/2.3.93-Java-1.8.0_121": 1
+            },
+            "whatis": [
+                "Description:  The Integrative Genomics Viewer (IGV) is a high-performance visualization \n tool for interactive exploration of large, integrated genomic datasets. It supports a wide \n variety of data types, including array-based and next-generation sequence data, and genomic annotations. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
+        },
+        "/app/easybuild/modules/bio/IGV/2.4.14-Java-1.8.0_121.lua": {
+            "Description": "The Integrative Genomics Viewer (IGV) is a high-performance visualization \n tool for interactive exploration of large, integrated genomic datasets. It supports a wide \n variety of data types, including array-based and next-generation sequence data, and genomic annotations. ",
+            "epoch": 1535399513,
+            "full": "IGV/2.4.14-Java-1.8.0_121",
+            "full_lower": "igv/2.4.14-java-1.8.0_121",
+            "help": "\nDescription\n===========\nThe Integrative Genomics Viewer (IGV) is a high-performance visualization \n tool for interactive exploration of large, integrated genomic datasets. It supports a wide \n variety of data types, including array-based and next-generation sequence data, and genomic annotations.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "lpathA": {
+                "/app/easybuild/software/IGV/2.4.14-Java-1.8.0_121/lib": 1
+            },
+            "markedDefault": false,
+            "name": "IGV",
+            "name_lower": "igv",
+            "parent": [
+                "default"
+            ],
+            "path": "/app/easybuild/modules/bio/IGV/2.4.14-Java-1.8.0_121.lua",
+            "pathA": {
+                "/app/easybuild/software/IGV/2.4.14-Java-1.8.0_121": 1
             },
             "whatis": [
                 "Description:  The Integrative Genomics Viewer (IGV) is a high-performance visualization \n tool for interactive exploration of large, integrated genomic datasets. It supports a wide \n variety of data types, including array-based and next-generation sequence data, and genomic annotations. ",
@@ -4514,7 +4577,7 @@
     "psipred": {
         "/app/easybuild/modules/bio/psipred/4.01-foss-2016b.lua": {
             "Description": "The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.",
-            "epoch": 1531242951,
+            "epoch": 1531342487,
             "full": "psipred/4.01-foss-2016b",
             "full_lower": "psipred/4.01-foss-2016b",
             "help": "\nDescription\n===========\nThe PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.\n\n\nMore information\n================\n - Homepage: http://bioinf.cs.ucl.ac.uk/psipred/\n",

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules
-date: 2018-07-10
+date: 2018-09-21
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  The AMOS consortium is committed to the development of open-source whole genome assembly software
@@ -10,6 +10,10 @@ date: 2018-07-10
  - [BCFtools/1.8-foss-2016b](http://www.htslib.org/)  SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [BEAST/1.8.2]()  
+ - [BEDOPS/2.4.35-foss-2016b](http://bedops.readthedocs.io/en/latest/index.html)  BEDOPS is an open-source command-line toolkit that performs highly efficient and
+ scalable Boolean and other set operations, statistical calculations, archiving, conversion and
+ other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for
+ distributing whole-genome analyses across a computational cluster.
  - [BEDOPS/2.4.2-GCC-4.8.2](https://github.com/bedops/bedops )  BEDOPS is an open-source command-line toolkit that performs highly   efficient and scalable Boolean and other set operations, statistical calculations,   archiving, conversion and other management of genomic data of arbitrary scale.
  - [BEDTools/2.26.0-foss-2016b](https://github.com/arq5x/bedtools2 )  The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM.
  - [BLAST/2.2.26-Linux_x86_64](http://blast.ncbi.nlm.nih.gov/ )  
@@ -50,6 +54,8 @@ date: 2018-07-10
  EMBOSS is a free Open Source software analysis package specially developed for
  the needs of the molecular biology (e.g. EMBnet) user community.
  - [EPACTS/a5209db-foss-2016b-R-3.4.1-fh1](http://github.com/statgen/EPACTS)  EPACTS is a versatile software pipeline to perform various statistical tests for identifying genome-wide association from sequence data through a user-friendly interface, both to scientific analysts and to method developer.s
+ - [Eigen/3.3.2-foss-2016b](http://eigen.tuxfamily.org/index.php?title=Main_Page)  Eigen is a C++ template library for linear algebra:
+ matrices, vectors, numerical solvers, and related algorithms.
  - [Eigen/3.2.9-foss-2016b](http://eigen.tuxfamily.org/index.php?title=Main_Page)  Eigen is a C++ template library for linear algebra:
  matrices, vectors, numerical solvers, and related algorithms.
  - [FASTX-Toolkit/0.0.14-foss-2016a](http://hannonlab.cshl.edu/fastx_toolkit/ )  The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/FASTQ files preprocessing.
@@ -99,6 +105,9 @@ date: 2018-07-10
  HTSlib also provides the bgzip, htsfile, and tabix utilities
  - [Homer/v4.9-foss-2016b](http://homer.ucsd.edu/homer/download.html)  HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for Motif Discovery and ChIP-Seq analysis. It is a collection of command line programs for unix-style operating systems written in mostly perl and c++. Homer was primarily written as a de novo motif discovery algorithm that is well suited for finding 8-12 bp motifs in large scale genomics data.
  - [IGV/2.3.93-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  The Integrative Genomics Viewer (IGV) is a high-performance visualization 
+ tool for interactive exploration of large, integrated genomic datasets. It supports a wide 
+ variety of data types, including array-based and next-generation sequence data, and genomic annotations. 
+ - [IGV/2.4.14-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  The Integrative Genomics Viewer (IGV) is a high-performance visualization 
  tool for interactive exploration of large, integrated genomic datasets. It supports a wide 
  variety of data types, including array-based and next-generation sequence data, and genomic annotations. 
  - [IGVTools/2.3.93-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  This package contains command line utilities for preprocessing, 
