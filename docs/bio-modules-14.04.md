@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Bio Modules
-date: 2018-09-21
+date: 2018-09-26
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  The AMOS consortium is committed to the development of open-source whole genome assembly software
+ - [BBMap/36.62-foss-2016b-Java-1.8.0_121](https://sourceforge.net/projects/bbmap/)  BBMap short read aligner, and other bioinformatic tools.
  - [BCFtools/1.6-foss-2016b](http://www.htslib.org/)  SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [BCFtools/1.8-foss-2016b](http://www.htslib.org/)  SAM Tools provide various utilities for manipulating alignments in the SAM format, 
