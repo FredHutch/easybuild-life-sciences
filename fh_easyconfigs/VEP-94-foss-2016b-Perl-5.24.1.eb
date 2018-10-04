@@ -1,21 +1,21 @@
 # easybuild easyconfig
 name = 'VEP'
-version = '94'
+version = '94.0'
 versionsuffix = '-Perl-%(perlver)s'
 
 homepage = 'https://www.ensembl.org/info/docs/tools/vep'
 description = """Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,
  CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions."""
 
-toolchain = {'name': 'intel', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2016b'}
 
 source_urls = ['https://github.com/Ensembl/ensembl-vep/archive/release/']
-sources = ['%(version)s.zip']
+sources = ['%(version)s.tar.gz']
 
 dependencies = [
-    ('Perl', '5.24.1'),
-    ('DBD-mysql', '4.046', versionsuffix),
-    ('BioPerl', '2.1.9', versionsuffix),
+    ('Perl', '5.24.0'),
+    ('DBD-mysql', '4.033', versionsuffix),
+    ('BioPerl', '1.7.0', versionsuffix),
     ('Bio-DB-HTS', '2.11', versionsuffix),
 ]
 
