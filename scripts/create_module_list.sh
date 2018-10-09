@@ -31,7 +31,14 @@ elif [[ $os_ver == '14.04' ]]; then
     module_dir=/app/easybuild/modules
 fi
 
+echo Collecting Inventory
 cd $base_dir
 $spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
 
-echo Wrote inventory to ${docs_dir}/modules-${os_ver}.json
+echo Generating Markdown
+json_in=${docs_dir}/modules-${os_ver}.json
+md_out=${docs_dir}/modules-${os_ver}.md
+cat ${json_in} | ${scripts_dir}/spider2post.py > ${md_out}
+
+echo Wrote inventory to ${md_out}
+
