@@ -32,13 +32,6 @@ elif [[ $os_ver == '14.04' ]]; then
 fi
 
 cd $base_dir
-$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules.json
+$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
 
-echo 'start inventory'
-echo '---' > ${docs_dir}/${inventory}
-echo 'layout: post' >> ${docs_dir}/${inventory}
-echo 'title: Bio Modules' >> ${docs_dir}/${inventory}
-echo 'date: '`date +'%Y-%m-%d'` >> ${docs_dir}/${inventory}
-echo '---' >> ${docs_dir}/${inventory}
-echo '' >> ${docs_dir}/${inventory} 
-
+echo Wrote inventory to ${docs_dir}/modules-${os_ver}.json
