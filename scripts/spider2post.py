@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 
 import json
+import platform
 
-jfile = open('../docs/modules.json', 'r')
-outfile = open('../docs/bio-modules-16.04.md', 'a')
+(name, version, id) = platform.dist()
+
+jfile = open('../docs/modules-%s.json' % version, 'r')
+outfile = open('../docs/bio-modules-%s.md' % version, 'a')
 
 data = json.load(jfile)
 packages = data.keys()
