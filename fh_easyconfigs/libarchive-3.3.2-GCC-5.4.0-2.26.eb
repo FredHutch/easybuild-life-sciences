@@ -1,0 +1,14 @@
+easyblock = 'ConfigureMake'
+
+name = 'libarchive'
+version = '3.3.2'
+
+homepage = 'https://www.libarchive.org'
+description = """Multi-format archive and compression library."""
+
+toolchain = {'name': 'GCC', 'version': '5.4.0-2.26'}
+
+sources = [SOURCELOWER_TAR_GZ]
+source_urls = ['http://www.libarchive.org/downloads/']
+
+moduleclass = 'lib'
