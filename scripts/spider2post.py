@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
 import json
+import sys
 
-jfile = open('../docs/modules.json', 'r')
-outfile = open('../docs/bio-modules-16.04.md', 'a')
-
-data = json.load(jfile)
+data = json.load(sys.stdin)
 packages = data.keys()
 slist = sorted(packages)
 for p in slist:
@@ -22,6 +20,6 @@ for p in slist:
            entry = [x for x in pac[ver]['whatis'] if 'Homepage: ' in x]
            text = entry[0].split('Homepage: ')[1]
            url = text.encode('utf8', 'replace')
-       outfile.write(' - [' + pac[ver]['fullName'] + ']')
-       outfile.write('(' + url + ')  ')
-       outfile.write(descrp + '\n')
+       print(' - [' + pac[ver]['fullName'] + ']')
+       print('(' + url + ')  ')
+       print(descrp + '\n')

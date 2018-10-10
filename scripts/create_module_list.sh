@@ -31,39 +31,14 @@ elif [[ $os_ver == '14.04' ]]; then
     module_dir=/app/easybuild/modules
 fi
 
+echo Collecting Inventory
 cd $base_dir
-$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules.json
+$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
 
-echo '---' > ${docs_dir}/${inventory}
-echo 'layout: post' >> ${docs_dir}/${inventory}
-echo 'title: Bio Modules' >> ${docs_dir}/${inventory}
-echo 'date: '`date +'%Y-%m-%d'` >> ${docs_dir}/${inventory}
-echo '---' >> ${docs_dir}/${inventory}
-echo '' >> ${docs_dir}/${inventory} 
+echo Generating Markdown
+json_in=${docs_dir}/modules-${os_ver}.json
+md_out=${docs_dir}/modules-${os_ver}.md
+cat ${json_in} | ${scripts_dir}/spider2post.py > ${md_out}
 
-python - <<EOF
-import json
-jfile = open('docs/modules.json', 'r')
-outfile = open('docs/${inventory}', 'a')
-data = json.load(jfile)
-packages = data.keys()
-slist = sorted(packages)
-for p in slist:
-   pac = data[p]
-   for ver in pac.keys():
-       if '-2015' in pac[ver]['full']: 
-            continue
-       descrp = ''
-       url = ''
-       if 'Description' in pac[ver]:
-           text = pac[ver]['Description'].split(' - ')[0]
-           descrp = text.encode('utf8', 'replace')
-       if 'whatis' in pac[ver]:
-           entry = [x for x in pac[ver]['whatis'] if 'Homepage: ' in x]
-           text = entry[0].split('Homepage: ')[1]
-           url = text.encode('utf8', 'replace')
-       outfile.write(' - [' + pac[ver]['full'] + ']')
-       outfile.write('(' + url + ')  ')
-       outfile.write(descrp + '\n')
-EOF
+echo Wrote inventory to ${md_out}
 
