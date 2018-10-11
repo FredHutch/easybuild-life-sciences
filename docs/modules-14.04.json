@@ -830,6 +830,22 @@
             "whatis": [
                 "Description: FastQC is a quality control application for high throughput sequence data.  It reads in sequence data in a variety of formats and can either provide an interactive  application to review the results of several different QC checks, or create an HTML based  report which can be integrated into a pipeline. - Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "
             ]
+        },
+        "/app/easybuild/modules/bio/FastQC/0.11.8-Java-1.8.lua": {
+            "Description": "FastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.",
+            "Version": "0.11.8-Java-1.8",
+            "fullName": "FastQC/0.11.8-Java-1.8",
+            "help": "\nDescription\n===========\nFastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.\n\n\nMore information\n================\n - Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/\n",
+            "hidden": false,
+            "pV": "000000000.000000011.000000008.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FastQC/0.11.8-Java-1.8": 1
+            },
+            "wV": "000000000.000000011.000000008.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: FastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.",
+                "Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+            ]
         }
     },
     "FastTree": {
@@ -2694,6 +2710,22 @@
                 "/app/easybuild/software/cellranger/2.1.1/cellranger-cs/2.1.1/bin": 1
             },
             "wV": "000000002.000000001.000000001.*zfinal",
+            "whatis": [
+                "Description: Single Cell Analysis Pipelines",
+                "Homepage: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest"
+            ]
+        },
+        "/app/easybuild/modules/bio/cellranger/2.2.0.lua": {
+            "Description": "Single Cell Analysis Pipelines",
+            "Version": "2.2.0",
+            "fullName": "cellranger/2.2.0",
+            "help": "\nDescription\n===========\nSingle Cell Analysis Pipelines\n\n\nMore information\n================\n - Homepage: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest\n",
+            "hidden": false,
+            "pV": "000000002.000000002.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cellranger/2.2.0/cellranger-cs/2.1.1/bin": 1
+            },
+            "wV": "000000002.000000002.*zfinal",
             "whatis": [
                 "Description: Single Cell Analysis Pipelines",
                 "Homepage: https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest"
