@@ -268,6 +268,24 @@
             ]
         }
     },
+    "GATK": {
+        "/app/modules/bio/GATK/4.0.10.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.0.10.0-foss-2018b-Python-3.6.6",
+            "fullName": "GATK/4.0.10.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000000.000000010.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/GATK/4.0.10.0-foss-2018b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000000.000000010.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
+        }
+    },
     "GEOS": {
         "/app/modules/math/GEOS/3.6.2-foss-2018b-Python-3.6.6.lua": {
             "Description": "GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)",
