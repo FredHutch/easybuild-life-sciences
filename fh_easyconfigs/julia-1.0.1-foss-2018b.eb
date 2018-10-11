@@ -1,0 +1,36 @@
+# EasyBuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org 
+# 
+#  Fred Hutchenson Cancer Research Center 
+#  http://fredhutch.org/
+
+easyblock = 'MakeCp'
+
+name = 'julia'
+version = '1.0.1'
+
+homepage = 'http://www.julialang.org/'
+description = """Julia is a high-level, high-performance dynamic programming
+language for technical computing, with syntax that is familiar to users of
+other technical computing environments."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+source_urls = ['https://github.com/JuliaLang/%(name)s/archive/']
+sources = ['v%(version)s.zip']
+
+builddependencies = [
+    ('CMake', '3.11.4'),
+]
+
+buildopts = 'USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 USE_SYSTEM_FFTW=1 '
+buildopts += 'MARCH=x86-64 '
+
+files_to_copy = [(['usr/*'], '.')]
+
+sanity_check_paths = {
+    'files': ['bin/julia'], 
+    'dirs': ['bin','etc','include','lib','share','tools']
+}
+
+moduleclass = 'lang'
