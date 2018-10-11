@@ -1,3 +1,9 @@
+---
+layout: post
+title: Bio Modules  14.04
+date: 2018-10-11
+---
+
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
 The AMOS consortium is committed to the development of open-source whole genome assembly software
  - [BBMap/36.62-foss-2016b-Java-1.8.0_121](https://sourceforge.net/projects/bbmap/)  
@@ -61,8 +67,12 @@ FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate softwa
   merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.
   The resulting longer reads can significantly improve genome assemblies. They can also improve
   transcriptome assembly when FLASH is used to merge RNA-seq data.
- - [FastQC/0.11.5-Java-1.8.0_92](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ )  
-FastQC is a quality control application for high throughput sequence data.  It reads in sequence data in a variety of formats and can either provide an interactive  application to review the results of several different QC checks, or create an HTML based  report which can be integrated into a pipeline.
+ - [FastQC/0.11.8-Java-1.8](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)  
+FastQC is a quality control application for high throughput
+sequence data. It reads in sequence data in a variety of formats and can either
+provide an interactive application to review the results of several different
+QC checks, or create an HTML based report which can be integrated into a
+pipeline.
  - [FastTree/2.1.9-foss-2016b](http://www.microbesonline.org/fasttree/ )  
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of  time and memory. 
  - [GATK/3.7-Java-1.8.0_92](http://www.broadinstitute.org/gatk/)  
@@ -213,7 +223,7 @@ downstream analysis.
 BreakDancerMax predicts five types of structural variants: insertions, deletions, inversions, inter- and intra-chromosomal translocations from next-generation short paired-end sequencing reads using read pairs that are mapped with unexpected separation distances or orientation.
  - [bwa/0.7.17-foss-2016b](https://bitbucket.org/statgen/xhmm/)  
 BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
- - [cellranger/2.1.1](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
+ - [cellranger/2.2.0](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
 Single Cell Analysis Pipelines
  - [conifer/0.2.2-foss-2016b-Python-2.7.12-fh2](https://sourceforge.net/projects/conifer )  
 CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes.
