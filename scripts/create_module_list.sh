@@ -37,8 +37,17 @@ $spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool
 
 echo Generating Markdown
 json_in=${docs_dir}/modules-${os_ver}.json
-md_out=${docs_dir}/modules-${os_ver}.md
-cat ${json_in} | ${scripts_dir}/spider2post.py > ${md_out}
+md_out=${docs_dir}/bio-modules-${os_ver}.md
+
+echo '---' > ${md_out}
+echo 'layout: post' >> ${md_out}
+echo 'title: Bio Modules ' $os_ver >> ${md_out}
+echo 'date: '`date +'%Y-%m-%d'` >> ${md_out}
+echo '---' >> ${md_out}
+echo '' >> ${md_out}
+
+# convert json modules spider to Markdown
+cat ${json_in} | ${scripts_dir}/spider2post.py >> ${md_out}
 
 echo Wrote inventory to ${md_out}
 
