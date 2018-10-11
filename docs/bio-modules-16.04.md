@@ -60,6 +60,14 @@ pipeline.
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide
  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of
  time and memory. 
+ - [GATK/4.0.10.0-foss-2018b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
+The Genome Analysis Toolkit or GATK is a software package
+developed at the Broad Institute to analyse next-generation resequencing
+data. The toolkit offers a wide variety of tools, with a primary focus on
+variant discovery and genotyping as well as strong emphasis on data quality
+assurance. Its robust architecture, powerful processing engine and
+high-performance computing features make it capable of taking on projects
+of any size.
  - [GEOS/3.6.2-foss-2018b-Python-3.7.0](http://trac.osgeo.org/geos)  
 GEOS (Geometry Engine
  - [GMP/6.1.2-GCCcore-7.3.0](http://gmplib.org/)  
