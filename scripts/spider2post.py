@@ -26,6 +26,5 @@ for p in slist:
        entry = [x for x in release['whatis'] if 'Homepage: ' in x]
        text = entry[0].split('Homepage: ')[1]
        url = text.encode('utf8', 'replace')
-   print(' - [' + release['fullName'] + ']')
-   print('(' + url + ')  ')
-   print(descrp + '\n')
+   print(' - [' + release['fullName'] + '](' + url + ')  ')
+   print(descrp)
