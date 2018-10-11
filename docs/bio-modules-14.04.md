@@ -1,3 +1,9 @@
+---
+layout: post
+title: Bio Modules
+date: 2018-10-09
+---
+
  - [AMOS/3.1.0-foss-2016b]
 (http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
 The AMOS consortium is committed to the development of open-source whole genome assembly software
