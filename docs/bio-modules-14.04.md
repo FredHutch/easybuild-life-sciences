@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-10-11
+date: 2018-10-15
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -145,6 +145,10 @@ NanoOK (pronounced na-nook) is a tool for extraction, alignment and analysis of 
 NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNNs) platform for research in medical image analysis and image-guided therapy.
  - [PANDAseq/2.11-foss-2016b](https://github.com/neufeld/pandaseq)  
 PANDAseq assembles Illumina Solexa overlapping pair-end reads.
+ - [PHASE/2.1.1](http://stephenslab.uchicago.edu/phase/download.html)  
+The program PHASE implements a Bayesian statistical 
+method for reconstructing haplotypes from population genotype data.
+Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
  - [ParMETIS/4.0.3-foss-2016b](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview)  
 ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning
  unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the

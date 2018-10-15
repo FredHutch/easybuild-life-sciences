@@ -29,19 +29,26 @@ posts_dir=${base_dir}/docs/_posts/
 scripts_dir=${base_dir}/scripts
 eb_dir=${base_dir}/fh_easyconfigs/
 
-  short=`echo $pkg | sed 's/-.*//'`
-  pp=${pkg%.eb}
-  pkg_name=${pp/-//}
-  cc=`grep moduleclass ${eb_dir}/${pkg}`
+eb_name=`basename $pkg`
+  short=`echo $eb_name | sed 's/-[0-9].*//'`
+  pp=${eb_name%.eb}
+  pkg_name=`echo ${pp} | sed 's;-\([0-9]\);/\1;1'` 
   ccc=${cc%\'*}
   module_class=${ccc#*\'}
+  if [[ $pkg = /* ]]; then
+      pkg_path=${pkg}
+  else
+      pkg_path=${eb_dir}/${pkg}
+  fi
+  cc=`grep moduleclass ${pkg_path}`
   # locate home URL from easyconfig
-  gg=`grep homepage ${eb_dir}${pkg}`
+  gg=`grep homepage ${pkg_path}`
   ggg=${gg%\'*}
   url=${ggg#*\'}
   # get description from easyconfig
-  dd=`awk -v RS= -v FPAT="'''.*'''|"'""".*"""' '{print $1}' ${eb_dir}${pkg}`
+  dd=`awk -v RS= -v FPAT="'''.*'''|"'""".*"""' '{print $1}' ${pkg_path}`
   description=`echo $dd | sed 's/["'\'']["'\'']["'\'']//g'`
+
 cat << EOF  >${posts_dir}${doc_date}-${short}.md
 ---
 layout: post
