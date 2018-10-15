@@ -207,7 +207,6 @@ digraph graphname {
 "Python/2.7.12-foss-2016b" -> "Tk/8.6.7-foss-2016b";
 "Python/2.7.12-foss-2016b" -> "GMP/6.1.1-foss-2016b";
 "Python/2.7.12-foss-2016b" -> "libffi/3.2.1-foss-2016b";
-"Python/2.7.12-foss-2016b" -> "OpenSSL/1.1.0f-foss-2016b";
 "Python/2.7.12-foss-2016b" -> "foss/2016b";
 "libffi/3.2.1-foss-2016b" -> "foss/2016b";
 "X11/20160819-foss-2016b" -> "freetype/2.6.5-foss-2016b";

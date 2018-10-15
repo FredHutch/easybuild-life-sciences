@@ -1691,6 +1691,25 @@
             ]
         }
     },
+    "PHASE": {
+        "/app/easybuild/modules/bio/PHASE/2.1.1.lua": {
+            "Description": "The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",
+            "Version": "2.1.1",
+            "fullName": "PHASE/2.1.1",
+            "help": "\nDescription\n===========\nThe program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf\n\n\nMore information\n================\n - Homepage: http://stephenslab.uchicago.edu/phase/download.html\n",
+            "hidden": false,
+            "pV": "000000002.000000001.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/PHASE/2.1.1": 1,
+                "/app/easybuild/software/PHASE/2.1.1/bin": 1
+            },
+            "wV": "000000002.000000001.000000001.*zfinal",
+            "whatis": [
+                "Description:  The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",
+                "Homepage: http://stephenslab.uchicago.edu/phase/download.html"
+            ]
+        }
+    },
     "ParMETIS": {
         "/app/easybuild/modules/math/ParMETIS/4.0.3-foss-2016b.lua": {
             "Description": "ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning\n unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the\n functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and\n large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way\n graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.",
