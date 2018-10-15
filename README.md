@@ -182,7 +182,7 @@ Ex:
 ---
 ## User Documentation
 
-[Easybuild packages available at the Fred Hutch](https://github.com/FredHutch/easybuild-life-sciences)
+[Easybuild packages available at the Fred Hutch](https://fredhutch.github.io/easybuild-life-sciences/)
 
 Github pages documentation is maintained for HPC users at the Fred Hutch.
  The GitHub pages have user-facing documentation about how to use modules,
