@@ -237,14 +237,23 @@ The script `easy_annotate.py` is used to create a Markdown page containing all
 
 #### Create software depenancy graph
 Depenancy graphs require EasyBuid and Graphviz.  Run easybuild from the module
- repository with robot and 'dot' in the path.
+ repository with robot and 'dot' in the path.  The final html file needs to have
+Jekly front matter at the top.
 
 ```
 module load EasyBuild
 cd ~/easybuild-life-sciences/fh_easyconfigs
 eb --dep-graph=texlive-20180531.dot ../fh_easyconfigs/texlive-20180531-foss-2016b.eb --robot .
 module load Graphviz
-dot -Tsvg texlive-20180531.dot >texlive-20180531.html
+cat << EOF >texlive-20180531.html
+> ---
+> layout: post
+> date: `date +'%Y-%M-%d'`
+> title: texlive-20180531 
+> ---
+> EOF
+
+dot -Tsvg texlive-20180531.dot >>texlive-20180531.html
 mv  texlive-20180531.html ~/easybuild-lif-sciences/docs/_Dot
 mv texlive-20180531.dot   ~/easybuild-lif-sciences/docs/_Dot
 ```
