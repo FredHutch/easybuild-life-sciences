@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-10-15
+date: 2018-10-17
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -302,6 +302,10 @@ samblaster is a fast and flexible program for marking duplicates in read-id grou
 Overview SSW is a fast implementation of the Smith-Waterman
  algorithm, which uses the Single-Instruction Multiple-Data (SIMD)
  instructions to parallelize the algorithm at the instruction level.
+ - [strelka/2.9.9-foss-2016b](https://github.com/Illumina/strelka)  
+Strelka2 is a fast and accurate small variant caller
+ optimized for analysis of germline variation in small cohorts and
+ somatic variation in tumor/normal sample pairs.
  - [svtoolkit/2.00.1678-foss-2016b](http://www.broadinstitute.org/software/genomestrip/ )  
 Genome STRiP (Genome STRucture In Populations) is a suite of tools for discovering and genotyping structural variations using sequencing data. The methods are designed to detect shared variation using data from multiple individuals.
  - [svtyper/0.0.4-foss-2016b-Python-2.7.12-fh1](https://github.com/hall-lab/svtyper )  
