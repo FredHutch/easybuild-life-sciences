@@ -3577,6 +3577,27 @@
             ]
         }
     },
+    "strelka": {
+        "/app/easybuild/modules/bio/strelka/2.9.9-foss-2016b.lua": {
+            "Description": "Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+            "Version": "2.9.9-foss-2016b",
+            "fullName": "strelka/2.9.9-foss-2016b",
+            "help": "\nDescription\n===========\nStrelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.\n\n\nMore information\n================\n - Homepage: https://github.com/Illumina/strelka\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/strelka/2.9.9-foss-2016b/lib": 1
+            },
+            "pV": "000000002.000000009.000000009.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/strelka/2.9.9-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000009.000000009.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+                "Homepage: https://github.com/Illumina/strelka"
+            ]
+        }
+    },
     "svtoolkit": {
         "/app/easybuild/modules/bio/svtoolkit/2.00.1678-foss-2016a": {
             "Description": "Genome STRiP (Genome STRucture In Populations) is a suite of tools for discovering and genotyping structural variations using sequencing data. The methods are designed to detect shared variation using data from multiple individuals. - Homepage: http://www.broadinstitute.org/software/genomestrip/ ",
