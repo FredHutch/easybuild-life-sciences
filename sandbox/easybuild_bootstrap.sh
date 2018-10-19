@@ -2,7 +2,7 @@
 
 #####
 # # bootstrap script to demo easybuild
-# # only tested on Ubuntu 14.04/16.04 
+# # only tested on Ubuntu 14.04/16.04/18.04 
 # # run as root inside fresh linux os 
 # # or inside a container
 ######
@@ -12,12 +12,12 @@
 # Internal
 
 EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
-EB_VER="3.7"      # version of EasyBuild to bootstrap in the container
+EB_VER="3.7.1"      # version of EasyBuild to bootstrap in the container
 
 # install these develop branches of easybuild-easyconfigs from github repos
 EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
 # remove all older easyconfigs with these pattern
-EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
+EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|2016b\|2017a\|2017b\|2018a\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
 
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
@@ -108,6 +108,10 @@ function install_EB_OS_pkgs {
     apt-get update
     apt-get install -y wget python-minimal python-setuptools build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
     apt-get install -y python-pygraph
+    # java ?
+    #add-apt-repository -y ppa:webupd8team/java
+    # this one is interactive, configm license
+    #apt-get install -y oracle-java8-installer    
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -249,8 +253,9 @@ printf "Installing Lmod...\n"
 lmod_install
 printf "Removing packages to clean system after dependency install...\n"
 remove_OS_pkgs
-printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
-install_missed_dependency_OS_pkgs
+# no longer required since 2018b
+#printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
+#install_missed_dependency_OS_pkgs
 printf "Bootstrapping EasyBuild...\n"
 eb_bootstrap
 printf "Downloading some extras...\n"
