@@ -66,10 +66,12 @@ function lua_install {
 
   # build and install
   cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && make install
+  
+  sleep 1
 
   # use luarocks to install luaposix and luafilesystem
-  luarocks install luaposix
-  luarocks install luafilesystem
+  /usr/local/bin/luarocks install luaposix
+  /usr/local/bin/luarocks install luafilesystem
 
 }
 
