@@ -7,7 +7,7 @@
 # # or inside a container
 ######
 
-# exit immediatlety if anything fails 
+# exit immediately if anything fails  !
 set -e 
 
 # variables
@@ -27,7 +27,7 @@ LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
 LMOD_BASE_URL="https://github.com/TACC/Lmod/archive/"
 EB_BASE_URL="https://raw.githubusercontent.com/easybuilders/easybuild-framework/master/easybuild/scripts/bootstrap_eb.py"
 
-LUA_VER="5.3.5"   # verion of lua to install into the container
+LUA_VER="5.3.5"   # version of lua to install into the container
 LUAROCKS_VER="3.0.3"   # version of luarocks package manager to install into the container
 LMOD_VER="7.8"   # version of Lmod to install into the container
 
