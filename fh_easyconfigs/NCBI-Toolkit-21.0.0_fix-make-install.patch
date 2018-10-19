@@ -1,0 +1,12 @@
+diff -ruN ncbi_cxx--21_0_0.orig/src/build-system/Makefile.in.top ncbi_cxx--21_0_0/src/build-system/Makefile.in.top
+--- ncbi_cxx--21_0_0.orig/src/build-system/Makefile.in.top	2017-02-01 08:52:02.000000000 -0800
++++ ncbi_cxx--21_0_0/src/build-system/Makefile.in.top	2018-10-18 15:28:26.435115000 -0700
+@@ -52,6 +52,8 @@
+ 	for d in $(includedir0) $(incdir); do \
+ 	    cd $$d && find * -name .svn -prune -o -print | \
+                 cpio -pd $(pincludedir) ; \
++	$(INSTALL) -m 644 $(incdir)/*.h $(pincludedir)
++	$(INSTALL) -m 644 $(incdir)/common/* $(pincludedir)/common
+ 	done
+ ## set up appropriate build and status directories somewhere under $(libdir)?
+ 

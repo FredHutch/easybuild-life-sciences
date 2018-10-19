@@ -1,3 +1,4 @@
+# easybuild easyconfig
 easyblock = 'ConfigureMake'
 
 name = 'NCBI-Toolkit'
@@ -7,7 +8,7 @@ homepage = 'http://ncbi.github.io/cxx-toolkit/'
 description = """The NCBI Toolkit is a collection of utilities developed for the
   production and distribution of GenBank, Entrez, BLAST, and related services
   by the National Center for Biotechnology Information."""
-toolchain = {'name': 'intel', 'version': '2018b'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = [
     'ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/CURRENT',
@@ -21,19 +22,21 @@ dependencies = [
     ('SAMtools', '1.9'),
     ('HTSlib', '1.9'),
     ('Python', '2.7.15'),
-    ('libxslt', '1.1.29'),
-    ('DB', '6.2.32'),
+    ('libxslt', '1.1.32', '-GCCcore-7.3.0', True),
+    ('DB', '18.1.25', '-GCCcore-7.3.0', True),
 ]
 
-preconfigopts = 'export CFLAGS="$CFLAGS -wd3377" && export CXXFLAGS="$CXXFLAGS -wd3377" && '
-preconfigopts += 'export LIBS="$LIBS -lstdc++" && '
+preconfigopts = 'export LIBS="$LIBS -lstdc++" && '
 configopts = '--with-boost=$EBROOTBOOST --with-python=$EBROOTPYTHON '
 configopts += '--with-libxml=$EBROOTLIBXML2 --with-libxslt=$EBROOTLIBXSLT '
 configopts += '--with-dll --with-bin-release --with-mt '
 configopts += '--without-debug --without-ccache'
 
-buildopts = 'SAMTOOLS=$EBROOTSAMTOOLS SAMTOOLS_INCLUDE="-I$EBROOTSAMTOOLS/include/bam -I$EBROOTHTSLIB/include" '
-buildopts += 'SAMTOOLS_LIBS="-L$EBROOTSAMTOOLS/lib -lbam -L$EBROOTHTSLIB/lib -lhts"'
+buildopts = 'SAMTOOLS=$EBROOTSAMTOOLS '
+buildopts += 'SAMTOOLS_INCLUDE="-I$EBROOTSAMTOOLS/include/bam '
+buildopts += '-I$EBROOTHTSLIB/include" '
+buildopts += 'SAMTOOLS_LIBS="-L$EBROOTSAMTOOLS/lib -lbam '
+buildopts += '-L$EBROOTHTSLIB/lib -lhts"'
 
 sanity_check_paths = {
     'files': ['bin/blastn', 'bin/blastp', 'bin/blastx', 'bin/table2asn'],
