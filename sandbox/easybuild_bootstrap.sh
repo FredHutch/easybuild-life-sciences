@@ -70,11 +70,13 @@ function lua_install {
   sleep 1
 
   # use luarocks to install luaposix and luafilesystem
-  echo "installing luaposix and luafilesystem with luarocks"
+  echo "   **** installing luaposix and luafilesystem with luarocks ****"
   luarocks install luaposix
-  luarocks show luaposix  || echo "Required Lua package not installed!"; exit 
+  sleep 1
+  luarocks show luaposix  || exit 
   luarocks install luafilesystem
-  luarocks show luafilesystem  || echo "Required Lua package not installed!"; exit 
+  sleep 1
+  luarocks show luafilesystem  || exit 
 }
 
 # install Lmod
