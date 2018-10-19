@@ -7,6 +7,9 @@
 # # or inside a container
 ######
 
+# exit immediatlety if anything fails 
+set -e 
+
 # variables
 
 # Internal
@@ -72,11 +75,9 @@ function lua_install {
   # use luarocks to install luaposix and luafilesystem
   echo "   **** installing luaposix and luafilesystem with luarocks ****"
   luarocks install luaposix
-  sleep 1
-  luarocks show luaposix  || exit 
+  luarocks show luaposix  || exit 1
   luarocks install luafilesystem
-  sleep 1
-  luarocks show luafilesystem  || exit 
+  luarocks show luafilesystem  || exit 1
 }
 
 # install Lmod
@@ -167,7 +168,7 @@ function remove_OS_pkgs {
 function download_extra_sources {
 
   /bin/su - eb -c "mkdir -p $EB_DIR/sources"
-  /bin/su - eb -c "wget -P \"${EB_DIR}/sources\" \"${SOURCE_JAVA}\""
+  # /bin/su - eb -c "wget -P \"${EB_DIR}/sources\" \"${SOURCE_JAVA}\""
 
   /bin/su - eb -c "mkdir -p $EB_DIR/github"
   /bin/su - eb -c "git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences"
