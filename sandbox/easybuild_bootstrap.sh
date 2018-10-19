@@ -29,7 +29,7 @@ EB_BASE_URL="https://raw.githubusercontent.com/easybuilders/easybuild-framework/
 
 LUA_VER="5.3.5"   # verion of lua to install into the container
 LUAROCKS_VER="3.0.3"   # version of luarocks package manager to install into the container
-LMOD_VER="7.0"   # version of Lmod to install into the container
+LMOD_VER="7.8"   # version of Lmod to install into the container
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
@@ -76,8 +76,8 @@ function lua_install {
   echo "   **** installing luaposix and luafilesystem with luarocks ****"
   luarocks install luaposix
   luarocks show luaposix  || exit 1
-  luarocks install luafilesystem
-  luarocks show luafilesystem  || exit 1
+  #luarocks install luafilesystem
+  #luarocks show luafilesystem  || exit 1
 }
 
 # install Lmod
