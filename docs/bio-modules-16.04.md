@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  16.04
-date: 2018-10-11
+date: 2018-10-20
 ---
 
  - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
@@ -38,10 +38,6 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
  - [DIAMOND/0.9.22-foss-2018b](https://github.com/bbuchfink/diamond)  
 Accelerated BLAST compatible local sequence aligner
- - [Eigen/3.3.5-foss-2018b](http://eigen.tuxfamily.org/index.php?title=Main_Page)  
-Eigen is a C++ template library for linear algebra:
- matrices, vectors, numerical solvers, and related algorithms.
-
  - [FLASH/2.2.00-foss-2018b](https://ccb.jhu.edu/software/FLASH/)  
 FLASH (Fast Length Adjustment of SHort reads) is a very fast
 and accurate software tool to merge paired-end reads from next-generation
@@ -74,6 +70,16 @@ GEOS (Geometry Engine
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
+ - [HMMER/3.2.1-foss-2018b](http://hmmer.org/)  
+HMMER is used for searching sequence databases for homologs
+ of protein sequences, and for making protein sequence alignments. It
+ implements methods using probabilistic models called profile hidden Markov
+ models (profile HMMs).  Compared to BLAST, FASTA, and other sequence
+ alignment and database search tools based on older scoring methodology,
+ HMMER aims to be significantly more accurate and more able to detect remote
+ homologs because of the strength of its underlying mathematical models. In the
+ past, this strength came at significant computational expense, but in the new
+ HMMER3 project, HMMER is now essentially as fast as BLAST.
  - [HTSlib/1.9-foss-2018b](http://www.htslib.org/)  
 A C library for reading/writing high-throughput sequencing data.
  This package includes the utilities bgzip and tabix
@@ -83,6 +89,14 @@ JAGS is Just Another Gibbs Sampler.  It is a program for analysis
  - [MUMmer/4.0.0beta2-foss-2018b](http://mummer.sourceforge.net/)  
 MUMmer is a system for rapidly aligning entire genomes,
  whether in complete or draft form. AMOS makes use of it.
+ - [PHASE/2.1.1](http://stephenslab.uchicago.edu/phase/download.html)  
+The program PHASE implements a Bayesian statistical 
+method for reconstructing haplotypes from population genotype data.
+Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
  - [SAMtools/1.9-foss-2018b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
+ - [strelka/2.9.9-foss-2018b](https://github.com/Illumina/strelka)  
+Strelka2 is a fast and accurate small variant caller
+ optimized for analysis of germline variation in small cohorts and
+ somatic variation in tumor/normal sample pairs.
