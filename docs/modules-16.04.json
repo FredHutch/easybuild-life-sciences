@@ -167,21 +167,6 @@
             ]
         }
     },
-    "Eigen": {
-        "/app/modules/math/Eigen/3.3.5-foss-2018b.lua": {
-            "Description": "Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
-            "Version": "3.3.5-foss-2018b",
-            "fullName": "Eigen/3.3.5-foss-2018b",
-            "help": "\nDescription\n===========\nEigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n\n\nMore information\n================\n - Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page\n",
-            "hidden": false,
-            "pV": "000000003.000000003.000000005.*foss.*zfinal-.000002018.*b.*zfinal",
-            "wV": "000000003.000000003.000000005.*foss.*zfinal-.000002018.*b.*zfinal",
-            "whatis": [
-                "Description: \n Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
-                "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
-            ]
-        }
-    },
     "FLASH": {
         "/app/modules/bio/FLASH/1.2.11-foss-2018b.lua": {
             "Description": "FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate software\n  tool to merge paired-end reads from next-generation sequencing experiments. FLASH is designed to\n  merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.\n  The resulting longer reads can significantly improve genome assemblies. They can also improve\n  transcriptome assembly when FLASH is used to merge RNA-seq data.",
@@ -360,6 +345,24 @@
             ]
         }
     },
+    "HMMER": {
+        "/app/modules/bio/HMMER/3.2.1-foss-2018b.lua": {
+            "Description": "HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
+            "Version": "3.2.1-foss-2018b",
+            "fullName": "HMMER/3.2.1-foss-2018b",
+            "help": "\nDescription\n===========\nHMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.\n\n\nMore information\n================\n - Homepage: http://hmmer.org/\n",
+            "hidden": false,
+            "pV": "000000003.000000002.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/HMMER/3.2.1-foss-2018b/bin": 1
+            },
+            "wV": "000000003.000000002.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
+                "Homepage: http://hmmer.org/"
+            ]
+        }
+    },
     "HTSlib": {
         "/app/modules/bio/HTSlib/1.9-foss-2018b.lua": {
             "Description": "A C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix",
@@ -423,6 +426,25 @@
             ]
         }
     },
+    "PHASE": {
+        "/app/modules/bio/PHASE/2.1.1.lua": {
+            "Description": "The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",
+            "Version": "2.1.1",
+            "fullName": "PHASE/2.1.1",
+            "help": "\nDescription\n===========\nThe program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf\n\n\nMore information\n================\n - Homepage: http://stephenslab.uchicago.edu/phase/download.html\n",
+            "hidden": false,
+            "pV": "000000002.000000001.000000001.*zfinal",
+            "pathA": {
+                "/app/software/PHASE/2.1.1": 1,
+                "/app/software/PHASE/2.1.1/bin": 1
+            },
+            "wV": "000000002.000000001.000000001.*zfinal",
+            "whatis": [
+                "Description:  The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",
+                "Homepage: http://stephenslab.uchicago.edu/phase/download.html"
+            ]
+        }
+    },
     "SAMtools": {
         "/app/modules/bio/SAMtools/1.9-foss-2018b.lua": {
             "Description": "SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
@@ -441,6 +463,27 @@
             "whatis": [
                 "Description: SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
                 "Homepage: http://www.htslib.org/"
+            ]
+        }
+    },
+    "strelka": {
+        "/app/modules/bio/strelka/2.9.9-foss-2018b.lua": {
+            "Description": "Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+            "Version": "2.9.9-foss-2018b",
+            "fullName": "strelka/2.9.9-foss-2018b",
+            "help": "\nDescription\n===========\nStrelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.\n\n\nMore information\n================\n - Homepage: https://github.com/Illumina/strelka\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/strelka/2.9.9-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000009.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/strelka/2.9.9-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000009.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+                "Homepage: https://github.com/Illumina/strelka"
             ]
         }
     }
