@@ -2,31 +2,34 @@
 
 #####
 # # bootstrap script to demo easybuild
-# # only tested on Ubuntu 14.04/16.04 
+# # only tested on Ubuntu 14.04/16.04/18.04 
 # # run as root inside fresh linux os 
 # # or inside a container
 ######
+
+# exit immediately if anything fails  !
+set -e 
 
 # variables
 
 # Internal
 
 EB_DIR="/easybuild" # root folder to install easybuild into (can be a nfs mount)
-EB_VER="3.7"      # version of EasyBuild to bootstrap in the container
+EB_VER="3.7.1"      # version of EasyBuild to bootstrap in the container
 
 # install these develop branches of easybuild-easyconfigs from github repos
 EB_CFG_DEVELOP="hpcugent"  #EB_CFG_DEVELOP="hpcugent FredHutch"
 # remove all older easyconfigs with these pattern
-EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
+EB_OLDSTUFF=".*\(2014a\|2014b\|2015a\|2015b\|2016b\|2017a\|2017b\|2018a\|goolf\|ictce\|iimpi\|ifort\|icc-\|CrayGNU\|iomkl\|gimkl\).*.eb"
 
 LUA_BASE_URL="http://www.lua.org/ftp/lua-"
 LUAROCKS_BASE_URL="http://luarocks.org/releases/luarocks-"
 LMOD_BASE_URL="https://github.com/TACC/Lmod/archive/"
 EB_BASE_URL="https://raw.githubusercontent.com/easybuilders/easybuild-framework/master/easybuild/scripts/bootstrap_eb.py"
 
-LUA_VER="5.3.5"   # verion of lua to install into the container
+LUA_VER="5.3.5"   # version of lua to install into the container
 LUAROCKS_VER="3.0.3"   # version of luarocks package manager to install into the container
-LMOD_VER="7.0"   # version of Lmod to install into the container
+LMOD_VER="7.8"   # version of Lmod to install into the container
 
 SOURCE_JAVA="http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-8u92-linux-x64.tar.gz"
 
@@ -66,11 +69,15 @@ function lua_install {
 
   # build and install
   cd /tmp/luarocks-$LUAROCKS_VER && ./configure && make build && make install
+  
+  sleep 1
 
   # use luarocks to install luaposix and luafilesystem
+  echo "   **** installing luaposix and luafilesystem with luarocks ****"
   luarocks install luaposix
-  luarocks install luafilesystem
-
+  luarocks show luaposix  || exit 1
+  #luarocks install luafilesystem
+  #luarocks show luafilesystem  || exit 1
 }
 
 # install Lmod
@@ -108,6 +115,10 @@ function install_EB_OS_pkgs {
     apt-get update
     apt-get install -y wget python-minimal python-setuptools build-essential libibverbs-dev libssl-dev libffi-dev libreadline-dev unzip tcl git
     apt-get install -y python-pygraph
+    # java ?
+    #add-apt-repository -y ppa:webupd8team/java
+    # this one is interactive, configm license
+    #apt-get install -y oracle-java8-installer    
   elif hash yum 2>/dev/null; then
     echo "redhat based install, not currently supported"
   else
@@ -157,7 +168,7 @@ function remove_OS_pkgs {
 function download_extra_sources {
 
   /bin/su - eb -c "mkdir -p $EB_DIR/sources"
-  /bin/su - eb -c "wget -P \"${EB_DIR}/sources\" \"${SOURCE_JAVA}\""
+  # /bin/su - eb -c "wget -P \"${EB_DIR}/sources\" \"${SOURCE_JAVA}\""
 
   /bin/su - eb -c "mkdir -p $EB_DIR/github"
   /bin/su - eb -c "git clone https://github.com/FredHutch/easybuild-life-sciences ${EB_DIR}/github/easybuild-life-sciences"
@@ -249,8 +260,9 @@ printf "Installing Lmod...\n"
 lmod_install
 printf "Removing packages to clean system after dependency install...\n"
 remove_OS_pkgs
-printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
-install_missed_dependency_OS_pkgs
+# no longer required since 2018b
+#printf "Installing OS pkgs to satify missing dependencies in easyconfigs...\n"
+#install_missed_dependency_OS_pkgs
 printf "Bootstrapping EasyBuild...\n"
 eb_bootstrap
 printf "Downloading some extras...\n"
