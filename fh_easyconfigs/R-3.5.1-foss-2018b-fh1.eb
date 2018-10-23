@@ -75,7 +75,7 @@ exts_list = [
         'source_urls': ['https://github.com/Azure/%(name)s/archive'],
         'source_tmpl': 'v%(version)s.tar.gz',
     }),
-    ('ssgraph', '1.5', ext_options),
+    ('ssgraph', '1.4', ext_options),
     ('pdist', '1.2', ext_options),
     ('regtools', '1.0.1', ext_options),
     ('partools', '1.1.6', ext_options),
