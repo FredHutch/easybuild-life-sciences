@@ -1,0 +1,41 @@
+easyblock = 'CMakeMake'
+
+name = 'MariaDB'
+version = '10.3.7'
+
+homepage = 'https://mariadb.org/'
+description = """MariaDB An enhanced, drop-in replacement for MySQL."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['https://downloads.mariadb.org/f/mariadb-%(version)s/source']
+sources = [SOURCELOWER_TAR_GZ]
+#patches = ['MariaDB-10.1.13-link-rt-for-jemalloc.patch']
+
+dependencies = [
+    ('binutils', '2.30'),
+    ('zlib', '1.2.11'),
+    ('ncurses', '6.1'),
+    ('jemalloc', '5.1.0', '-GCCcore-7.3.0', True),
+    ('XZ', '5.2.4'), # GCCcore
+    ('Boost', '1.68.0', '-Python-2.7.15'),
+    ('libxml2', '2.9.8'), # GCCcore
+]
+
+builddependencies = [('CMake', '3.11.4')]
+
+separate_build_dir = True
+
+# we need to use the bundled PCRE because using an external one is broken,
+# see https://bugs.exim.org/show_bug.cgi?id=2173
+configopts = "-DWITH_PCRE=bundled -DWITH_JEMALLOC=yes -DWITH_ZLIB=system -DMYSQL_MAINTAINER_MODE=ON "
+configopts += "-DWITH_EMBEDDED_SERVER=ON "  # for libmysqld.so & co
+configopts += "-DWITHOUT_TOKUDB=ON "  # not supported with Intel compilers
+
+sanity_check_paths = {
+    'files': ['bin/mysql', 'bin/mysqld_safe', 'lib/libmysqlclient.%s' % SHLIB_EXT, 'lib/libmysqld.%s' % SHLIB_EXT,
+              'scripts/mysql_install_db'],
+    'dirs': ['include', 'share'],
+}
+
+moduleclass = 'data'

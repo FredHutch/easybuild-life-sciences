@@ -1,0 +1,29 @@
+easyblock = 'ConfigureMake'
+
+name = 'GnuTLS'
+version = '3.6.4'
+
+homepage = 'http://www.gnutls.org/'
+description = "gnutls-3.0.22: GNU Transport Layer Security library"
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['ftp://ftp.gnutls.org/pub/gnutls/']
+sources = [SOURCELOWER_TAR_XZ]
+
+dependencies = [
+    ('GMP', '6.1.2'),
+    ('nettle', '3.4'),
+    ('Guile', '2.2.4'),
+]
+
+configopts = "--with-guile-site-dir=$EBROOTGUILE"
+
+sanity_check_paths = {
+    'files': ['bin/%s' % x for x in ['certtool', 'danetool', 'gnutls-cli', 'gnutls-cli-debug',
+                                     'gnutls-serv', 'ocsptool', 'psktool', 'srptool']] +
+             ['lib/libgnutls%s' % x for x in ['.a', 'xx.a', '-xssl.a', '-openssl.a']],
+    'dirs': ['include/gnutls'],
+}
+
+moduleclass = 'system'
