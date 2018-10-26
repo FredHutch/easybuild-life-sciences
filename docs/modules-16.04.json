@@ -426,6 +426,24 @@
             ]
         }
     },
+    "PEAR": {
+        "/app/modules/bio/PEAR/0.9.11-foss-2018b.lua": {
+            "Description": "PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. \n It is fully parallelized and can run with as low as just a few kilobytes of memory.",
+            "Version": "0.9.11-foss-2018b",
+            "fullName": "PEAR/0.9.11-foss-2018b",
+            "help": "\nDescription\n===========\nPEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. \n It is fully parallelized and can run with as low as just a few kilobytes of memory.\n\n\nMore information\n================\n - Homepage: http://sco.h-its.org/exelixis/web/software/pear/\n",
+            "hidden": false,
+            "pV": "000000000.000000009.000000011.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/PEAR/0.9.11-foss-2018b/bin": 1
+            },
+            "wV": "000000000.000000009.000000011.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. \n It is fully parallelized and can run with as low as just a few kilobytes of memory.",
+                "Homepage: http://sco.h-its.org/exelixis/web/software/pear/"
+            ]
+        }
+    },
     "PHASE": {
         "/app/modules/bio/PHASE/2.1.1.lua": {
             "Description": "The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",

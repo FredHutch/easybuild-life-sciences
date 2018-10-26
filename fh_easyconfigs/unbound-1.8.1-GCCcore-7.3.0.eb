@@ -1,0 +1,27 @@
+easyblock = 'ConfigureMake'
+
+name = 'unbound'
+version = '1.8.1'
+
+homepage = 'https://nlnetlabs.nl/projects/unbound'
+
+description = """Unbound is a validating, recursive, caching DNS resolver.
+ It is designed to be fast and lean and incorporates modern features based
+ on open standards."""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+source_urls = ['https://nlnetlabs.nl/downloads/unbound']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('binutils', '2.30', '', True),
+    ('expat', '2.2.5'),
+]
+
+sanity_check_paths = {
+    'files': ['lib/libunbound.%s' % x for x in ['a', SHLIB_EXT]],
+    'dirs': ['include'],
+}
+
+moduleclass = 'lib'

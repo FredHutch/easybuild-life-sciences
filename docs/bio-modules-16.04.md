@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  16.04
-date: 2018-10-20
+date: 2018-10-26
 ---
 
  - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
@@ -89,6 +89,9 @@ JAGS is Just Another Gibbs Sampler.  It is a program for analysis
  - [MUMmer/4.0.0beta2-foss-2018b](http://mummer.sourceforge.net/)  
 MUMmer is a system for rapidly aligning entire genomes,
  whether in complete or draft form. AMOS makes use of it.
+ - [PEAR/0.9.11-foss-2018b](http://sco.h-its.org/exelixis/web/software/pear/)  
+PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. 
+ It is fully parallelized and can run with as low as just a few kilobytes of memory.
  - [PHASE/2.1.1](http://stephenslab.uchicago.edu/phase/download.html)  
 The program PHASE implements a Bayesian statistical 
 method for reconstructing haplotypes from population genotype data.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-10-17
+date: 2018-10-26
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -145,6 +145,9 @@ NanoOK (pronounced na-nook) is a tool for extraction, alignment and analysis of 
 NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNNs) platform for research in medical image analysis and image-guided therapy.
  - [PANDAseq/2.11-foss-2016b](https://github.com/neufeld/pandaseq)  
 PANDAseq assembles Illumina Solexa overlapping pair-end reads.
+ - [PEAR/0.9.11-foss-2016b](http://sco.h-its.org/exelixis/web/software/pear/)  
+PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. 
+ It is fully parallelized and can run with as low as just a few kilobytes of memory.
  - [PHASE/2.1.1](http://stephenslab.uchicago.edu/phase/download.html)  
 The program PHASE implements a Bayesian statistical 
 method for reconstructing haplotypes from population genotype data.
