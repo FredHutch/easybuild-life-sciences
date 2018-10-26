@@ -35,11 +35,7 @@ eb_name=`basename $pkg`
   pkg_name=`echo ${pp} | sed 's;-\([0-9]\);/\1;1'` 
   ccc=${cc%\'*}
   module_class=${ccc#*\'}
-  if [[ $pkg = /* ]]; then
-      pkg_path=${pkg}
-  else
-      pkg_path=${eb_dir}/${pkg}
-  fi
+pkg_path=${eb_dir}/${eb_name}
   cc=`grep moduleclass ${pkg_path}`
   # locate home URL from easyconfig
   gg=`grep homepage ${pkg_path}`

@@ -1,0 +1,37 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'ConfigureMake'
+
+name = 'PEAR'
+version = '0.9.11'
+
+homepage = 'http://sco.h-its.org/exelixis/web/software/pear/'
+description = """PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger. 
+ It is fully parallelized and can run with as low as just a few kilobytes of memory."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# Needs manual download via web-form,
+# https://www.h-its.org/en/research/sco/software/#NextGenerationSequencingSequenceAnalysis
+# source_urls = ['http://sco.h-its.org/exelixis/web/software/pear/files/']
+sources = ['%(namelower)s-src-%(version)s.tar.gz']
+
+builddependencies = [
+    ('Autotools', '20150215'),
+]
+
+dependencies = [
+    ('zlib', '1.2.8'),
+    ('bzip2', '1.0.6'),
+]
+
+preconfigopts = 'autoreconf && '
+
+parallel = 1
+
+sanity_check_paths = {
+    'files': ['bin/pear'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
