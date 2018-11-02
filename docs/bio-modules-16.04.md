@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  16.04
-date: 2018-10-26
+date: 2018-11-02
 ---
 
  - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
@@ -30,6 +30,12 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  but is also a framework for testing evolutionary hypotheses without conditioning on a single 
  tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted 
  proportional to its posterior probability. 
+ - [Biopython/1.72-foss-2018b-Python-2.7.15](http://www.biopython.org)  
+Biopython is a set of freely available tools for biological
+ computation written in Python by an international team of developers. It is
+ a distributed collaborative effort to develop Python libraries and
+ applications which address the needs of current and future work in
+ bioinformatics. 
  - [Bowtie2/2.3.4.2-foss-2018b](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)  
 Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s
@@ -99,6 +105,12 @@ Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1
  - [SAMtools/1.9-foss-2018b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
+ - [Seqmagick/0.6.2-foss-2018b-Python-2.7.15](https://fhcrc.github.io/seqmagick/)  
+We often have to convert between sequence formats and do little tasks on them, and it's not worth 
+ writing scripts for that. Seqmagick is a kickass little utility built in the spirit of imagemagick to expose the 
+ file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that 
+ takes arguments.
+
  - [strelka/2.9.9-foss-2018b](https://github.com/Illumina/strelka)  
 Strelka2 is a fast and accurate small variant caller
  optimized for analysis of germline variation in small cohorts and
