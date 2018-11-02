@@ -131,6 +131,21 @@
             ]
         }
     },
+    "Biopython": {
+        "/app/modules/bio/Biopython/1.72-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.72-foss-2018b-Python-2.7.15",
+            "fullName": "Biopython/1.72-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        }
+    },
     "Bowtie2": {
         "/app/modules/bio/Bowtie2/2.3.4.2-foss-2018b.lua": {
             "Description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
@@ -481,6 +496,24 @@
             "whatis": [
                 "Description: SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
                 "Homepage: http://www.htslib.org/"
+            ]
+        }
+    },
+    "Seqmagick": {
+        "/app/modules/bio/Seqmagick/0.6.2-foss-2018b-Python-2.7.15.lua": {
+            "Description": "We often have to convert between sequence formats and do little tasks on them, and it's not worth \n writing scripts for that. Seqmagick is a kickass little utility built in the spirit of imagemagick to expose the \n file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that \n takes arguments.\n",
+            "Version": "0.6.2-foss-2018b-Python-2.7.15",
+            "fullName": "Seqmagick/0.6.2-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nWe often have to convert between sequence formats and do little tasks on them, and it's not worth \n writing scripts for that. Seqmagick is a kickass little utility built in the spirit of imagemagick to expose the \n file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that \n takes arguments.\n\n\nMore information\n================\n - Homepage: https://fhcrc.github.io/seqmagick/\n",
+            "hidden": false,
+            "pV": "000000000.000000006.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/software/Seqmagick/0.6.2-foss-2018b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000000.000000006.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: We often have to convert between sequence formats and do little tasks on them, and it's not worth \n writing scripts for that. Seqmagick is a kickass little utility built in the spirit of imagemagick to expose the \n file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that \n takes arguments.\n",
+                "Homepage: https://fhcrc.github.io/seqmagick/"
             ]
         }
     },
