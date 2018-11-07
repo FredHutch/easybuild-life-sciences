@@ -517,6 +517,27 @@
             ]
         }
     },
+    "VCFtools": {
+        "/app/modules/bio/VCFtools/0.1.16-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "The aim of VCFtools is to provide \n easily accessible methods for working with complex \n genetic variation data in the form of VCF files.",
+            "Version": "0.1.16-foss-2018b-Perl-5.28.0",
+            "fullName": "VCFtools/0.1.16-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nThe aim of VCFtools is to provide \n easily accessible methods for working with complex \n genetic variation data in the form of VCF files.\n\n\nMore information\n================\n - Homepage: https://vcftools.github.io\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/VCFtools/0.1.16-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000000.000000001.000000016.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/VCFtools/0.1.16-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000001.000000016.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: The aim of VCFtools is to provide \n easily accessible methods for working with complex \n genetic variation data in the form of VCF files.",
+                "Homepage: https://vcftools.github.io"
+            ]
+        }
+    },
     "strelka": {
         "/app/modules/bio/strelka/2.9.9-foss-2018b.lua": {
             "Description": "Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
@@ -535,6 +556,24 @@
             "whatis": [
                 "Description: Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
                 "Homepage: https://github.com/Illumina/strelka"
+            ]
+        }
+    },
+    "tabix": {
+        "/app/modules/bio/tabix/0.2.6-GCCcore-7.3.0.lua": {
+            "Description": "Generic indexer for TAB-delimited genome position files ",
+            "Version": "0.2.6-GCCcore-7.3.0",
+            "fullName": "tabix/0.2.6-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGeneric indexer for TAB-delimited genome position files\n\n\nMore information\n================\n - Homepage: http://samtools.sourceforge.net\n",
+            "hidden": false,
+            "pV": "000000000.000000002.000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/tabix/0.2.6-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000002.000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description:  Generic indexer for TAB-delimited genome position files ",
+                "Homepage: http://samtools.sourceforge.net"
             ]
         }
     }

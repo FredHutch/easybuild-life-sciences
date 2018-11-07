@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  16.04
-date: 2018-11-02
+date: 2018-11-07
 ---
 
  - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
@@ -111,7 +111,13 @@ We often have to convert between sequence formats and do little tasks on them, a
  file format conversion in Biopython in a convenient way. Instead of having a big mess of scripts, there is one that 
  takes arguments.
 
+ - [VCFtools/0.1.16-foss-2018b-Perl-5.28.0](https://vcftools.github.io)  
+The aim of VCFtools is to provide 
+ easily accessible methods for working with complex 
+ genetic variation data in the form of VCF files.
  - [strelka/2.9.9-foss-2018b](https://github.com/Illumina/strelka)  
 Strelka2 is a fast and accurate small variant caller
  optimized for analysis of germline variation in small cohorts and
  somatic variation in tumor/normal sample pairs.
+ - [tabix/0.2.6-GCCcore-7.3.0](http://samtools.sourceforge.net)  
+Generic indexer for TAB-delimited genome position files 

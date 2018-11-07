@@ -17,8 +17,8 @@ source_urls = ['https://github.com/ncw/rclone/archive']
 sources = 'v%(version)s.zip'
 
 builddepencencies = [
-    ('binutils', '2.30')
-    ('Go', '1.8.1')
+    ('binutils', '2.30'),
+    ('Go', '1.8.1'),
 ]
 
 files_to_copy = [(['rclone'], 'bin')]
