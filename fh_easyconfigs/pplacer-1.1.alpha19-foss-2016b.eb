@@ -1,0 +1,38 @@
+# easybuild easyconfig
+# 2018-11-19 john dey work in progres, there is an EB for version alpha16 
+# that is 5 years old!
+easyblock = 'MakeCp'
+
+name = 'pplacer'
+version = 'v1.1.alpha19'
+
+homepage = ['https://matsen.fhcrc.org/pplacer/']
+description = """Pplacer places reads on a phylogenetic tree. guppy (Grand
+ Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful
+ tool for working with reference packages."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/matsen/pplacer/archive']
+sources = ['v%(version)s.zip']
+
+ocaml = 'OCaml'
+ocamlver = '4.01.0'
+versionsuffix = '-%s-%s' % (ocaml, ocamlver)
+
+builddepenancedes = [
+    ('M4', '1.4.17'),
+]
+
+dependencies = [
+    (ocaml, ocamlver),
+    ('zlib', '1.2.7'),  # for CamlZIP OCaml package
+    ('GSL', '1.16'),  # for GSL-OCaml package
+    ('SQLite', '3.8.6'),  # for SQLite3-OCaml package
+]
+
+# parallel build tends to break
+parallel = 1
+
+moduelclass = 'bio'
+

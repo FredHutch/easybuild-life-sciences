@@ -1,0 +1,48 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+#
+# Copyright:: Copyright 2012-2014 Uni.Lu/LCSB, NTUA
+# Authors::   Fotis Georgatos <fotis@cern.ch>
+# License::   MIT/GPL
+# $Id$
+##
+name = 'OCaml'
+version = '4.07.1'
+
+homepage = 'http://ocaml.org/'
+description = """OCaml is a general purpose industrial-strength programming language
+ with an emphasis on expressiveness and safety. Developed for more than 20 years at Inria
+ it benefits from one of the most advanced type systems and supports functional,
+ imperative and object-oriented styles of programming."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+opam_ver = '2.0'
+source_urls = [
+    'https://github.com/ocaml/ocaml/archive',
+    'https://github.com/ocaml/opam/archive',
+]
+sources = [
+    '%(version)s.zip',
+    '%s.zip' % opam_ver,
+]
+
+builddependencies = [('Autotools', '20150215')]
+dependencies = [
+    ('ncurses', '6.0'),
+    ('libreadline', '6.3'),
+    ('GSL', '2.3'),
+]
+
+# parallel build tends to break
+parallel = 1
+
+# handled by OPAM, order matters!
+exts_list = [
+    ('ocamlfind', '1.8.0'),
+    ('batteries', '2.9.0'),
+    ('ocaml-twt', '0.94.0'),
+    ('gsl', '1.24.0'),
+]
+
+moduleclass = 'lang'
