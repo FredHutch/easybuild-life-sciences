@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-10-26
+date: 2018-11-29
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -234,6 +234,9 @@ BWA is a software package for mapping DNA sequences against a large reference ge
 Single Cell Analysis Pipelines
  - [conifer/0.2.2-foss-2016b-Python-2.7.12-fh2](https://sourceforge.net/projects/conifer )  
 CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes.
+ - [cromwell/36-Java-1.8](https://github.com/broadinstitute/cromwell)  
+Scientific workflow engine designed for simplicity &
+scalability.
  - [ctffind/4.1.8-foss-2016b](http://grigoriefflab.janelia.org/ctffind4)  
 program for finding CTFs of electron micrographs
  - [delly/0.7.6-foss-2016b](https://github.com/tobiasrausch/delly)  
@@ -326,5 +329,8 @@ data. VDJtools computes a wide set of statistics and is able to perform
 various forms of cross-sample analysis.
  - [wham/1.8.0-foss-2016a](https://github.com/zeeev/wham )  
 The wham suite consists of two programs, wham and whamg. wham, the original tool, is a very sensitive method with a high false discovery rate. The second program, whamg, is more accurate and better suited for general structural variant (SV) discovery.
+ - [womtool/36-Java-1.8](https://github.com/broadinstitute/cromwell)  
+Scientific workflow engine designed for simplicity &
+scalability.
  - [xhmm/1.0-foss-2016b](https://bitbucket.org/statgen/xhmm/ )  
 The XHMM (eXome-Hidden Markov Model) C++ software suite calls copy number variation (CNV) from next-generation sequencing projects, where exome capture was used (or targeted sequencing, more generally). Specifically, XHMM uses principal component analysis (PCA) normalization and a hidden Markov model (HMM) to detect and genotype copy number variation (CNV) from normalized read-depth data from targeted sequencing experiments.

@@ -46,6 +46,7 @@ dependencies = [
     ('libGLU', '9.0.0'), # glu
     ('Mesa', '12.0.2'),
     ('netCDF', '4.5.0'),
+    ('LLVM', '6.0.0'),
     ('OpenSSL', '1.1.0c', '-GCC-5.4.0-2.26', True),
 ]
 
@@ -1101,6 +1102,7 @@ exts_list = [
     }),
     ('ipykernel', '5.1.0', {
         'source_urls': ['https://pypi.io/packages/source/i/ipykernel/'],
+        'use_pip': True,
     }),
     ('testpath', '0.4.2', {
         'source_urls': ['https://pypi.io/packages/source/t/testpath']
@@ -1163,6 +1165,7 @@ exts_list = [
     ('jupyterlab-server', '0.2.0', {
         'source_tmpl': 'jupyterlab_server-%(version)s.tar.gz',
         'source_urls': ['https://pypi.io/packages/source/j/jupyterlab-server'],
+        'use_pip': True,
     }),
     ('jupyterlab', '0.35.4', {
         'source_urls': ['https://pypi.io/packages/source/j/jupyterlab'],

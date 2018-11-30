@@ -283,6 +283,22 @@
                 "Description: Burrows-Wheeler Aligner (BWA) is an efficient program that aligns  relatively short nucleotide sequences against a long reference sequence such as the human genome. - Homepage: http://bio-bwa.sourceforge.net/ "
             ]
         },
+        "/app/easybuild/modules/bio/BWA/0.7.17-foss-2016b.lua": {
+            "Description": "BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
+            "Version": "0.7.17-foss-2016b",
+            "fullName": "BWA/0.7.17-foss-2016b",
+            "help": "\nDescription\n===========\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.\n\n\nMore information\n================\n - Homepage: https://bitbucket.org/statgen/xhmm/\n",
+            "hidden": false,
+            "pV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BWA/0.7.17-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
+                "Homepage: https://bitbucket.org/statgen/xhmm/"
+            ]
+        },
         "/app/easybuild/modules/bio/BWA/0.7.7-foss-2015b": {
             "Version": "0.7.7-foss-2015b",
             "fullName": "BWA/0.7.7-foss-2015b",
@@ -2793,6 +2809,24 @@
             ]
         }
     },
+    "cromwell": {
+        "/app/easybuild/modules/bio/cromwell/36-Java-1.8.lua": {
+            "Description": "Scientific workflow engine designed for simplicity &\nscalability.",
+            "Version": "36-Java-1.8",
+            "fullName": "cromwell/36-Java-1.8",
+            "help": "\nDescription\n===========\nScientific workflow engine designed for simplicity &\nscalability.\n\n\nMore information\n================\n - Homepage: https://github.com/broadinstitute/cromwell\n",
+            "hidden": false,
+            "pV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cromwell/36-Java-1.8": 1
+            },
+            "wV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: Scientific workflow engine designed for simplicity &\nscalability.",
+                "Homepage: https://github.com/broadinstitute/cromwell"
+            ]
+        }
+    },
     "ctffind": {
         "/app/easybuild/modules/bio/ctffind/4.1.8-foss-2016b.lua": {
             "Description": "program for finding CTFs of electron micrographs",
@@ -3741,6 +3775,24 @@
             "wV": "000000001.000000008.*foss.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: The wham suite consists of two programs, wham and whamg. wham, the original tool, is a very sensitive method with a high false discovery rate. The second program, whamg, is more accurate and better suited for general structural variant (SV) discovery. - Homepage: https://github.com/zeeev/wham "
+            ]
+        }
+    },
+    "womtool": {
+        "/app/easybuild/modules/bio/womtool/36-Java-1.8.lua": {
+            "Description": "Scientific workflow engine designed for simplicity &\nscalability.",
+            "Version": "36-Java-1.8",
+            "fullName": "womtool/36-Java-1.8",
+            "help": "\nDescription\n===========\nScientific workflow engine designed for simplicity &\nscalability.\n\n\nMore information\n================\n - Homepage: https://github.com/broadinstitute/cromwell\n",
+            "hidden": false,
+            "pV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/womtool/36-Java-1.8": 1
+            },
+            "wV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: Scientific workflow engine designed for simplicity &\nscalability.",
+                "Homepage: https://github.com/broadinstitute/cromwell"
             ]
         }
     },
