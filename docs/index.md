@@ -11,6 +11,8 @@ bellow to see a list of available builds with a list of modules.
 
  - [R Builds]({{ site.baseurl }}{% link R.html %})
  - [Python Builds]({{ site.baseurl }}{% link Python.html %})
+ - [foss-2016b]({{ site.baseurl }}{% link foss-2016b.md %})
+ - [foss-2018b]({{ site.baseurl }}{% link foss-2018b.md %})
  - [Dependancy Graphs]({{ site.baseurl }}{% link Dot.html %})
 
 ### Scientific Software Inventory
