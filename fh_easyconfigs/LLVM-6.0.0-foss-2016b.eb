@@ -20,6 +20,7 @@ sources = ["llvm-%(version)s.src.tar.xz"]
 checksums = ['1ff53c915b4e761ef400b803f07261ade637b0c269d99569f18040f3dcee4408']
 
 builddependencies = [
+    ('GCCcore', '5.4.0', '', True),
     ('binutils', '2.26'),
     ('CMake', '3.7.2'),
     ('Python', '2.7.15'),
@@ -27,8 +28,11 @@ builddependencies = [
 
 dependencies = [
     ('ncurses', '6.0'),
-    ('zlib', '1.2.8'),
+    ('zlib', '1.2.11'),
 ]
+
+# static link to support llvmlite Python
+buildopts = 'CXXFLAGS="$CXXFLAGS -fPIC"'
 
 configopts = '-DBUILD_SHARED_LIBS=ON '
 # required to install extra tools in bin/
@@ -42,5 +46,11 @@ sanity_check_paths = {
 }
 
 separate_build_dir = True
+
+# issue: SVLM not detected
+# set the LLVM_CONFIG environment variable to the location of the
+# corresponding llvm-config. This variable must persist into the installation
+# of llvmlite—for example, into a Python environment.
+modextravars = {'LLVM_CONFIG': '%(installdir)s/bin/llvm-config'}
 
 moduleclass = 'compiler'
