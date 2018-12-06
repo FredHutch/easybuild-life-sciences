@@ -11,13 +11,13 @@ date: 2018-11-29
   * [bcrypt-3.1.4](http://pypi.org/project/bcrypt/) Modern password hashing for your software and your servers
   * [bitstring-3.1.5](https://pypi.org/project/bitstring/) Simple construction, analysis and modification of binary data.
   * [blist-1.3.6](https://pypi.org/project/blist/) a list-like type with better asymptotic performance and similar performance on small lists
-  * [certifi-2018.10.15](http://pypi.org/project/certifi/) Python package for providing Mozilla's CA Bundle.
-  * [cffi-1.11.5](https://pypi.org/project/cffi/) Foreign Function Interface for Python calling C code.
+  * [certifi-2018.10.15](https://pypi.org/project/certifi/) Python package for providing Mozilla's CA Bundle.
+  * [cffi-1.11.5](http://pypi.org/project/cffi/) Foreign Function Interface for Python calling C code.
   * [chardet-3.0.4](https://pypi.org/project/chardet/) Universal encoding detector for Python 2 and 3
   * [cryptography-2.4.2](https://pypi.org/project/cryptography/) cryptography is a package which provides cryptographic recipes and primitives to Python developers.
   * [deap-1.2.2](https://pypi.org/project/deap/) Distributed Evolutionary Algorithms in Python
   * [decorator-4.3.0](http://pypi.org/project/decorator/) Better living through Python with decorators
-  * [docopt-0.6.2](http://pypi.org/project/docopt/) Pythonic argument parser, that will make you smile
+  * [docopt-0.6.2](https://pypi.org/project/docopt/) Pythonic argument parser, that will make you smile
   * [ecdsa-0.13](https://pypi.org/project/ecdsa/) ECDSA cryptographic signature library (pure python)
   * [idna-2.7](https://pypi.org/project/idna/) Internationalized Domain Names in Applications (IDNA)
   * [joblib-0.13.0](https://pypi.org/project/joblib/) Lightweight pipelining: using Python functions as pipeline jobs.
@@ -36,11 +36,11 @@ date: 2018-11-29
   * [pip-18.1](http://pypi.org/project/pip/) The PyPA recommended tool for installing Python packages.
   * [py_expression_eval-0.3.5](https://pypi.org/project/py_expression_eval/) Python Mathematical Expression Evaluator
   * [pyasn1-0.4.4](http://pypi.org/project/pyasn1/) ASN.1 types and codecs
-  * [pycparser-2.19](https://pypi.org/project/pycparser/) C parser in Python
+  * [pycparser-2.19](http://pypi.org/project/pycparser/) C parser in Python
   * [pycrypto-2.6.1](http://pypi.org/project/pycrypto/) Cryptographic modules for Python.
-  * [pyparsing-2.3.0](http://pypi.org/project/pyparsing/) Python parsing module
+  * [pyparsing-2.3.0](https://pypi.org/project/pyparsing/) Python parsing module
   * [python-dateutil-2.7.5](https://pypi.org/project/python-dateutil/) Extensions to the standard Python datetime module
-  * [pytz-2018.7](http://pypi.org/project/pytz/) World timezone definitions, modern and historical
+  * [pytz-2018.7](https://pypi.org/project/pytz/) World timezone definitions, modern and historical
   * [requests-2.20.1](https://pypi.org/project/requests/) Python HTTP for Humans.
   * [scipy-1.1.0](https://pypi.org/project/scipy/) SciPy: Scientific Library for Python
   * [setuptools-40.6.2](https://pypi.org/project/setuptools/) Easily download, build, install, upgrade, and uninstall Python packages
