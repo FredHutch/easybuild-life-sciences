@@ -1,0 +1,51 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhutch.org
+easyblock = 'Bundle'
+
+name = 'umap-learn'
+version = '0.3.6'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/lmcinnes/umap'
+description = """Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction technique that can be used for visualisation similarly to t-SNE, but also for general non-linear dimension reduction."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+dependencies = [
+    ('Python', '3.6.6'),
+    ('LLVM', '6.0.1'),
+]
+
+exts_list = [
+    ('llvmlite', '0.25.0', {
+        'source_urls': ['https://pypi.io/packages/source/l/llvmlite'],
+        'patches': ['llvmlite-0.25.0.patch'],
+    }),
+    ('numba', '0.40.1', {
+        'source_urls': ['https://pypi.io/packages/source/n/numba'],
+    }),
+    (name, version, {
+        'modulename': 'umap_learn',
+        'source_urls': ['https://pypi.python.org/packages/source/u/umap-learn/'],
+        'checksums': ['0b6bc94ade352cedb4fb22e59a1cc536b04e686d28d2abd647f5fa0994eeba7c'],
+    }),
+]
+
+# specify that Bundle easyblock should run a full sanity check, rather than just trying to load the module
+full_sanity_check = False
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+moduleclass = 'lang'

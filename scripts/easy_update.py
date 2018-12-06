@@ -97,7 +97,7 @@ class ExtsList(object):
                 self.biocver = eb.biocver
                 if self.debug:
                     print('biocver: %s' % self.biocver)
-            except NameError:
+            except (AttributeError, NameError):
                 pass
             self.pkg_version = eb.version
             self.check_eb_package_name(args.easyconfig)
@@ -532,7 +532,7 @@ class PythonExts(ExtsList):
             req = 'https://pypi.org/pypi/%s/json' % pkg['name']
         resp = requests.get(req)
         if resp.status_code != 200:
-            msg = "API error: %s GET release %s"
+            msg = "API error: %s GET release %s\n"
             sys.stderr.write(msg % (resp.status_code, pkg['name']))
             return 'not found'
         project = resp.json()
