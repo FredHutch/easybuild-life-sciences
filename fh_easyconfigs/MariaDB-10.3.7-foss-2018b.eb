@@ -10,7 +10,7 @@ toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = ['https://downloads.mariadb.org/f/mariadb-%(version)s/source']
 sources = [SOURCELOWER_TAR_GZ]
-#patches = ['MariaDB-10.1.13-link-rt-for-jemalloc.patch']
+patches = ['MariaDB-10.1.13-link-rt-for-jemalloc.patch']
 
 dependencies = [
     ('binutils', '2.30'),
@@ -20,6 +20,7 @@ dependencies = [
     ('XZ', '5.2.4'), # GCCcore
     ('Boost', '1.68.0', '-Python-2.7.15'),
     ('libxml2', '2.9.8'), # GCCcore
+    ('Bison', '3.0.4'),
 ]
 
 builddependencies = [('CMake', '3.11.4')]
