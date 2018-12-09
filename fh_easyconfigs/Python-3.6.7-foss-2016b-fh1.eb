@@ -1787,6 +1787,14 @@ exts_list = [
         'modulename': 'cwlcli',
         'source_urls': ['https://pypi.io/packages/source/c/cwl'],
     }),
+    ('cwltool', '1.0.20181201184214', {
+        'modulename': 'cwltool',
+        'source_urls': ['https://pypi.io/packages/source/c/cwltool'],
+    }),
+    ('cwlref-runner', '1.0', {
+        'modulename': False, 
+        'source_urls': ['https://pypi.io/packages/source/c/cwlref-runner'],
+    }),
     #('umap-learn', '0.3.6', {
     #    'source_urls': ['https://pypi.io/packages/source/u/umap-learn'],
     #}),
