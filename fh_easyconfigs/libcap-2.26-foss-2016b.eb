@@ -1,0 +1,43 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutchinson Cancer Research Center - Seattle US
+#
+# What needs libcap?
+# pplace -> ocaml -> bwrap -> bubblewrap -> libcap
+
+easyblock = 'MakeCp'
+
+name = 'libcap'
+version = '2.26'
+
+homepage = 'https://libbsd.freedesktop.org/'
+description = """This library provides useful functions commonly found on BSD systems, and lacking on others like GNU systems, thus making it easier to port projects with strong BSD origins, without needing to embed the same code over and over again on each project. Part of freedesktop.org"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2']
+sources = [SOURCE_TAR_XZ]
+patches = ['libcap-2.26.patch']
+
+files_to_copy = [
+    (['libcap/libcap.so.%(version)s', 'libcap/libcap.a'], 'lib'),
+    (['libcap/include/sys/capability.h', 'libcap/include/sys/securebits.h'], 'include/sys'),
+    (['libcap/include/uapi/linux/capability.h',
+      'libcap/include/uapi/linux/prctl.h',
+      'libcap/include/uapi/linux/securebits.h'], 'include/uapi/linux'),
+    (['libcap/libcap.pc'], 'lib/pkgconfig'),
+]
+
+sanity_check_paths = {
+    'files' : ['lib/libcap.so.%(version)s',
+               'lib/pkgconfig/libcap.pc',
+               'include/sys/capability.h'],
+    'dirs': ['lib', 'include'],
+}
+
+postinstallcmds = [
+    'ln -s %(installdir)s/lib/libcab.so.%(version)s %(installdir)s/lib/libcab.so',
+    'ln -s %(installdir)s/lib/libcab.so.%(version)s %(installdir)s/lib/libcab.so.2',
+]
+moduleclass = 'lib'

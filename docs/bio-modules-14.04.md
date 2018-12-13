@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-11-29
+date: 2018-12-13
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -67,6 +67,8 @@ FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate softwa
   merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.
   The resulting longer reads can significantly improve genome assemblies. They can also improve
   transcriptome assembly when FLASH is used to merge RNA-seq data.
+ - [FastANI/1.1-foss-2016b](http://www.iodbc.org/)  
+FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies.
  - [FastQC/0.11.8-Java-1.8](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)  
 FastQC is a quality control application for high throughput
 sequence data. It reads in sequence data in a variety of formats and can either
@@ -90,6 +92,13 @@ GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences
  GSNAP: Genomic Short-read Nucleotide Alignment Program
  - [GMP/6.1.1-foss-2016b](http://gmplib.org/ )  
 GMP is a free library for arbitrary precision arithmetic,  operating on signed integers, rational numbers, and floating point numbers. 
+ - [GTDBTk/0.1.3-foss-2016b-Python-2.7.15](https://github.com/Ecogenomics/GTDBTk)  
+GTDB-Tk is a software toolkit for assigning objective
+ taxonomic classifications to bacterial and archaeal genomes. It is
+ computationally efficient and designed to work with recent advances that
+ allow hundreds or thousands of metagenome-assembled genomes (MAGs) to be
+ obtained directly from environmental samples. It can also be applied to
+ isolate and single-cell genomes.
  - [HISAT2/2.0.4-foss-2016b](https://ccb.jhu.edu/software/hisat2/index.shtml)  
 HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads
  (both DNA and RNA) against the general human population (as well as against a single reference genome).
@@ -176,7 +185,7 @@ SAM Tools provide various utilities for manipulating alignments in the SAM forma
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [SPLITREAD/0.1-foss-2016b](http://splitread.sourceforge.net/ )  
 SPLITREAD is a novel method for detecting INDELs (small insertions and deletion with size less than 50bp) as well as large deletions that are within the coding regions from the exome sequencing data. It also can be applied ot the whole genome sequencing data.
- - [SRA-Toolkit/2.9.0-ubuntu64](http://trace.ncbi.nlm.nih.gov/Traces/sra)  
+ - [SRA-Toolkit/2.9.2-ubuntu64](http://trace.ncbi.nlm.nih.gov/Traces/sra)  
 The NCBI SRA Toolkit enables reading (dumping) of sequencing files 
  from the SRA database and writing (loading) files into the .sra format 
  - [SUGEN/8.3-foss-2016b](https://github.com/dragontaoran/SUGEN/)  
@@ -298,6 +307,15 @@ Oncotator is a web application for annotating human genomic point mutations and 
 A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format.
  - [plink/1.9b_4.6-x86_64](https://www.cog-genomics.org/plink/1.9)  
 plink-1.9-x86_64: Whole-genome association analysis toolset
+ - [pplacer/1.1.alpha19-foss-2016b](['https://matsen.fhcrc.org/pplacer/'])  
+Pplacer places reads on a phylogenetic tree. guppy (Grand
+ Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful
+ tool for working with reference packages.
+ - [prodigal/2.6.3-GCC-5.4.0-2.26](http://prodigal.ornl.gov/)  
+Prodigal (Prokaryotic Dynamic Programming Genefinding
+   Algorithm) is a microbial (bacterial and archaeal) gene finding program
+   developed at Oak Ridge National Laboratory and the University of
+   Tennessee.
  - [prokka/1.13-foss-2016b-BioPerl-1.7.0](http://www.vicbioinformatics.com/software.prokka.shtml)  
 Prokka is a software tool for the rapid annotation of prokaryotic genomes.
  - [psipred/4.01-foss-2016b](http://bioinf.cs.ucl.ac.uk/psipred/)  

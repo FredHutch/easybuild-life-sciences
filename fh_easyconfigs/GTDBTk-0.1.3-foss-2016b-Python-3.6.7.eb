@@ -23,8 +23,8 @@ dependencies = [
     ('Perl', '5.24.1'),
     ('prodigal', '2.6.3', '-GCC-5.4.0-2.26', True),
     ('HMMER', '3.1b2'),
-    #(pplacer
-    #FastANI
+    ('pplacer', '1.1.alpha19'),
+    ('FastANI', '1.1'), 
     ('FastTree', '2.1.9'),
 ]
 

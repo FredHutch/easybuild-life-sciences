@@ -1,10 +1,11 @@
 # easybuild easyconfig
 # 2018-11-19 john dey work in progres, there is an EB for version alpha16 
-# that is 5 years old!
-easyblock = 'MakeCp'
+# that is 5 years old!  pplacer build from source has custom EasyBlock,
+# this release is a tarball from github
+easyblock = 'Tarball'
 
 name = 'pplacer'
-version = 'v1.1.alpha19'
+version = '1.1.alpha19'
 
 homepage = ['https://matsen.fhcrc.org/pplacer/']
 description = """Pplacer places reads on a phylogenetic tree. guppy (Grand
@@ -13,26 +14,28 @@ description = """Pplacer places reads on a phylogenetic tree. guppy (Grand
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-source_urls = ['https://github.com/matsen/pplacer/archive']
-sources = ['v%(version)s.zip']
-
-ocaml = 'OCaml'
-ocamlver = '4.01.0'
-versionsuffix = '-%s-%s' % (ocaml, ocamlver)
+source_urls = [ 'https://github.com/matsen/pplacer/releases/download/v%(version)s']
+sources = [ '%(name)s-linux-v%(version)s.zip', ]
 
 builddepenancedes = [
     ('M4', '1.4.17'),
 ]
 
 dependencies = [
-    (ocaml, ocamlver),
-    ('zlib', '1.2.7'),  # for CamlZIP OCaml package
+    ('OCaml', '4.02.3'),
+    ('zlib', '1.2.8'),  # for CamlZIP OCaml package
     ('GSL', '1.16'),  # for GSL-OCaml package
-    ('SQLite', '3.8.6'),  # for SQLite3-OCaml package
+    ('SQLite', '3.13.0'),  # for SQLite3-OCaml package
 ]
 
-# parallel build tends to break
-parallel = 1
+sanity_check_paths = {
+    'dirs': ['scripts'],
+    'files': [
+        'guppy', 'pplacer', 'rppr',
+        'scripts/classif_table.py'
+    ],
+}
 
-moduelclass = 'bio'
+modextrapaths = { 'PATH': [''] }
 
+moduleclass = 'bio'
