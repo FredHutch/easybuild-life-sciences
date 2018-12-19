@@ -22,7 +22,6 @@ builddepenancedes = [
 ]
 
 dependencies = [
-    ('OCaml', '4.02.3'),
     ('zlib', '1.2.8'),  # for CamlZIP OCaml package
     ('GSL', '1.16'),  # for GSL-OCaml package
     ('SQLite', '3.13.0'),  # for SQLite3-OCaml package

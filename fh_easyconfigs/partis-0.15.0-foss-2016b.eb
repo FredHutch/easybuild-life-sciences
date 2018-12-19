@@ -1,0 +1,36 @@
+easyblock = 'SCons'
+
+name = 'partis'
+version = '0.11.0'
+
+homepage = 'https://github.com/psathyrella/partis'
+description = """Partis is an HMM-based framework for B- and T-cell receptor sequence annotation, simulation, clonal family, and germline inference. It is built on top of the ham HMM compiler and ig-sw set of Smith-Waterman annotation tools."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+python = 'Python'
+pyver = '2.7.15'
+
+dependencies = [
+    ('Python', pyver, '-fh1'),
+    #('Miniconda', '4.5.11'),
+    ('R', '3.5.1', '-fh1'),
+    ('MAFFT', '7.305', '-with-extensions'),
+    ('Boost', '1.62.0'),
+    ('GSL', '2.4'),
+    ('ncurses', '6.0'),
+    ('libXt', '1.1.5'),  # X Toolkit Intrinsics
+    ('zlib', '1.2.8')
+]
+
+builddependencies = [
+    ('SCons', '3.0.1', '-%s-%s' % (python, pyver)),
+]
+
+common_opts = 'env_vars=all CC="$CC" CXX="$CXX" cc_flags="$CFLAGS" cxx_flags="$CXXFLAGS" '
+common_opts += 'blas_lapack_libs=mkl_rt blas_lapack_dir=$BLAS_LAPACK_LIB_DIR '
+common_opts += 'sundials_include=$EBROOTSUNDIALS/include sundials_libdir=$EBROOTSUNDIALS/lib'
+# = 'packages/ig-sw/src/ig_align/ && scons
+# packages/ham/ && scons bcrham'
+
+# RUN ./bin/build.sh

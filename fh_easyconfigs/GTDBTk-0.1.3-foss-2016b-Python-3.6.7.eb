@@ -1,3 +1,9 @@
+# easybuild easyblock
+#
+# John Dey jfdey@fredhutch.org
+#
+# download database files from: https://data.ace.uq.edu.au/public/gtdbtk/release_86/
+#
 easyblock = 'Bundle'
 
 name = 'GTDBTk'
@@ -20,7 +26,7 @@ gtdbtk_path = '/shared/biodata/humand/release86'
 
 dependencies = [
     ('Python', '2.7.15'),
-    ('Perl', '5.24.1'),
+    ('Perl', '5.28.1', '-fh1'),
     ('prodigal', '2.6.3', '-GCC-5.4.0-2.26', True),
     ('HMMER', '3.1b2'),
     ('pplacer', '1.1.alpha19'),
