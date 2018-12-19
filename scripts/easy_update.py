@@ -12,7 +12,10 @@ from pprint import pformat
 
 """
 Release Notes
-1.3.1 fix bugs with pypi
+1.3.2 2018-12-19 follow "LinkingTo" for BioConductor packages
+   reported by Maxime Boissonneault
+
+1.3.1 2018-11-28 fix bugs with pypi
   easy_update was adding incorrect package names from requests_dist.
   Verify package names and update easyconfig with name corrections.
   Package names from pypi.requests_dist are not always correct.
@@ -23,14 +26,14 @@ Release Notes
    pyncacl -> PyNaCl
 
 1.3.0 July 2018
-update to use pypi.org JSON API
+  update to use pypi.org JSON API
   Project API:  GET /pypi/<project_name>/json
   Release API: GET /pypi/<project_name>/<version>/json
 """
 
-__version__ = '1.3.1'
+__version__ = '1.3.2'
 __maintainer__ = 'John Dey jfdey@fredhutch.org'
-__date__ = 'Nov 28, 2018'
+__date__ = 'Dec 19, 2018'
 
 
 class ExtsList(object):
@@ -466,6 +469,10 @@ class R(ExtsList):
         status = 'ok'
         if pkg['name'] in self.bioc_data:
             pkg['meta']['version'] = self.bioc_data[pkg['name']]['Version']
+            if 'LinkingTo' in self.bioc_data[pkg['name']]:
+                pkg['meta']['requires'].extend(
+                    [re.split('[ (><=,]', s)[0]
+                     for s in self.bioc_data[pkg['name']]['LinkingTo']])
             if 'Depends' in self.bioc_data[pkg['name']]:
                 pkg['meta']['requires'].extend(
                     [re.split('[ (><=,]', s)[0]
