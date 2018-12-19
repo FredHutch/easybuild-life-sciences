@@ -452,6 +452,8 @@ class R(ExtsList):
         if u'License' in cran_info and u'Part of R' in cran_info[u'License']:
             return 'base package'
         pkg['meta']['requires'] = []
+        if u"LinkingTo" in cran_info:
+            pkg['meta']['requires'].extend(cran_info[u"LinkingTo"].keys())
         if u"Depends" in cran_info:
             pkg['meta']['requires'].extend(cran_info[u"Depends"].keys())
         if u"Imports" in cran_info:
