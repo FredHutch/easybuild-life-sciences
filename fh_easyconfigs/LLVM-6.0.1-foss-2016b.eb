@@ -27,11 +27,8 @@ builddependencies = [
 
 dependencies = [
     ('ncurses', '6.0'),
-    ('zlib', '1.2.11'),
+    ('zlib', '1.2.8'),
 ]
-
-# static link to support llvmlite Python
-buildopts = 'CXXFLAGS="$CXXFLAGS -fPIC"'
 
 configopts = '-DBUILD_SHARED_LIBS=ON '
 # required to install extra tools in bin/

@@ -26,7 +26,7 @@ gtdbtk_path = '/shared/biodata/humand/release86'
 
 dependencies = [
     ('Python', '2.7.15'),
-    ('Perl', '5.28.1', '-fh1'),
+    ('BioPerl', '1.7.0', '-Perl-5.24.0'),
     ('prodigal', '2.6.3', '-GCC-5.4.0-2.26', True),
     ('HMMER', '3.1b2'),
     ('pplacer', '1.1.alpha19'),
