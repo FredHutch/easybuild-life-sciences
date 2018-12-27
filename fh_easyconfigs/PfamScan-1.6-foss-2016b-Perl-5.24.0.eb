@@ -1,0 +1,39 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+#Open PfamScan/pfam_scan.pl in a text editor, and change the first line
+#of the code to point to your Perl.
+#
+#You should be good to go now!
+easyblock = 'PerlModule'
+
+name = 'PfamScan'
+version = '1.6'
+
+homepage = 'https://www.ebi.ac.uk/Tools/pfa/pfamscan/'
+description = """PfamScan is used to search a FASTA sequence against a
+ library of Pfam HMM."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['ftp://ftp.ebi.ac.uk/pub/databases/Pfam/Tools']
+sources = ['PfamScan.tar.gz']
+
+perl = 'Perl'
+perlver = '5.24.0'
+versionsuffix = '-%s-%s' % ('Perl', perlver)
+
+dependencies = [
+    ('Perl', perlver),
+]
+
+options = {'modulename': 'Bio::Pfam::Scan::PfamScan'}
+
+sanity_check_paths = {
+    'files': ['PfamScan/pfam_scan.pl'],
+    'dirs': ['PfamScan'],
+}
+
+moduleclass = 'bio'

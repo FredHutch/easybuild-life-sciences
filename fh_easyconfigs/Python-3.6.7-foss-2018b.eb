@@ -44,12 +44,12 @@ exts_download_dep_fail = True
 buildopts = 'LDFLAGS="$LDFLAGS -lssp"'
 
 # order is important!
-# package versions updated with easy_update Nov 28, 2018
+# package versions updated with easy_update Dec 27, 2018
 exts_list = [
-    ('setuptools', '40.6.2', {
+    ('setuptools', '40.6.3', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.io/packages/source/s/setuptools/'],
-        'checksums': ['86bb4d8e1b0fabad1f4642b64c335b673e53e7a381de03c9a89fe678152c4c64'],
+        'checksums': ['3b474dad69c49f0d2d86696b68105f3a6f195f7ab655af12ef9a9c326d2b08f8'],
     }),
     ('pip', '18.1', {
         'source_urls': ['https://pypi.io/packages/source/p/pip/'],
@@ -64,9 +64,9 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/n/numpy/'],
         'checksums': ['3d734559db35aa3697dadcea492a423118c5c55d176da2f3be9c98d4803fc2a7'],
     }),
-    ('scipy', '1.1.0', {
+    ('scipy', '1.2.0', {
         'source_urls': ['https://pypi.io/packages/source/s/scipy/'],
-        'checksums': ['878352408424dffaa695ffedf2f9f92844e116686923ed9aa8626fc30d32cfd1'],
+        'checksums': ['51a2424c8ed80e60bdb9a896806e7adaf24a58253b326fbad10f80a6d06f2214'],
     }),
     ('blist', '1.3.6', {
         'source_urls': ['https://pypi.io/packages/source/b/blist/'],
@@ -89,13 +89,13 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/p/pbr/'],
         'checksums': ['f59d71442f9ece3dffc17bc36575768e1ee9967756e6b6535f0ee1f0054c3d68'],
     }),
-    ('Cython', '0.29.1', {
+    ('Cython', '0.29.2', {
         'source_urls': ['https://pypi.io/packages/source/C/Cython/'],
-        'checksums': ['18ab7646985a97e02cee72e1ddba2e732d4931d4e1732494ff30c5aa084bfb97'],
+        'checksums': ['2ac187ff998a95abb7fae452b5178f91e1a713698c9ced89836c94e6b1d3f41e'],
     }),
-    ('six', '1.11.0', {
+    ('six', '1.12.0', {
         'source_urls': ['https://pypi.io/packages/source/s/six/'],
-        'checksums': ['70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9'],
+        'checksums': ['d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73'],
     }),
     ('python-dateutil', '2.7.5', {
         'modulename': 'dateutil',
@@ -136,9 +136,9 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/a/asn1crypto/'],
         'checksums': ['9d5c20441baf0cb60a4ac34cc447c6c189024b6b4c6cd7877034f4965c464e49'],
     }),
-    ('idna', '2.7', {
+    ('idna', '2.8', {
         'source_urls': ['https://pypi.io/packages/source/i/idna/'],
-        'checksums': ['684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16'],
+        'checksums': ['c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407'],
     }),
     ('cryptography', '2.4.2', {
         'source_urls': ['https://pypi.io/packages/source/c/cryptography/'],
@@ -153,9 +153,9 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/p/pynacl/'],
         'checksums': ['0c6100edd16fefd1557da078c7a31e7b7d7a52ce39fdca2bec29d4f7b6e7600c'],
     }),
-    ('bcrypt', '3.1.4', {
+    ('bcrypt', '3.1.5', {
         'source_urls': ['https://pypi.io/packages/source/b/bcrypt/'],
-        'checksums': ['67ed1a374c9155ec0840214ce804616de49c3df9c5bc66740687c1c9b1cd9e8d'],
+        'checksums': ['136243dc44e5bab9b61206bd46fff3018bd80980b1a1dfbab64a22ff5745957f'],
     }),
     ('paramiko', '2.4.2', {
         'source_urls': ['https://pypi.io/packages/source/p/paramiko/'],
@@ -206,29 +206,29 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/c/chardet/'],
         'checksums': ['84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae'],
     }),
-    ('certifi', '2018.10.15', {
+    ('certifi', '2018.11.29', {
         'source_urls': ['https://pypi.io/packages/source/c/certifi/'],
-        'checksums': ['6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a'],
+        'checksums': ['47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7'],
     }),
     ('urllib3', '1.24.1', {
         'source_urls': ['https://pypi.io/packages/source/u/urllib3/'],
         'checksums': ['de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22'],
     }),
-    ('requests', '2.20.1', {
+    ('requests', '2.21.0', {
         'source_urls': ['https://pypi.io/packages/source/r/requests/'],
-        'checksums': ['ea881206e59f41dbd0bd445437d792e43906703fff75ca8ff43ccdb11f33f263'],
+        'checksums': ['502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e'],
     }),
-    ('xlrd', '1.1.0', {
+    ('xlrd', '1.2.0', {
         'source_urls': ['https://pypi.io/packages/source/x/xlrd'],
-        'checksums': ['8a21885513e6d915fe33a8ee5fdfa675433b61405ba13e2a69e62ee36828d7e2'],
+        'checksums': ['546eb36cee8db40c3eaa46c351e67ffee6eeb5fa2650b71bc4c758a29a1b29b2'],
     }),
     ('py_expression_eval', '0.3.5', {
         'source_urls': ['https://pypi.io/packages/source/p/py_expression_eval'],
         'checksums': ['a405dff69ac96a0bd29f087605e5fc379ef50e99bdcd543f384d76ac4897bed1'],
     }),
-    ('mpmath', '1.0.0', {
+    ('mpmath', '1.1.0', {
         'source_urls': ['https://pypi.io/packages/source/m/mpmath'],
-        'checksums': ['04d14803b6875fe6d69e6dccea87d5ae5599802e4b1df7997bddd2024001050c'],
+        'checksums': ['fc17abe05fbab3382b61a123c398508183406fa132e0223874578e20946499f6'],
     }),
     ('tabulate', '0.8.2', {
         'source_urls': ['https://pypi.io/packages/source/t/tabulate/'],
