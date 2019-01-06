@@ -8,7 +8,7 @@ description = """GTS stands for the GNU Triangulated Surface Library.
  It is an Open Source Free Software Library intended to provide a set of useful
  functions to deal with 3D surfaces meshed with interconnected triangles."""
 
-toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = [SOURCEFORGE_SOURCE]
 sources = [SOURCELOWER_TAR_GZ]

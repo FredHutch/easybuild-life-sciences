@@ -2,7 +2,8 @@ name = 'R'
 version = '3.5.2'
 
 homepage = 'http://www.r-project.org/'
-description = """R is a free software environment for statistical computing and graphics."""
+description = """R is a free software environment for statistical computing
+ and graphics."""
 
 toolchain = {'name': 'foss', 'version': '2018b'}
 
@@ -42,16 +43,18 @@ dependencies = [
     ('HDF5', '1.10.2'),  # for hdf5r
     ('UDUNITS', '2.2.26'),  # for units
     ('GSL', '2.5'),  # for RcppGSL
-    ('ImageMagick', '7.0.8-22'), # for animation
-    # OS dependency should be preferred if the os version is more recent then this version,
-    # it's nice to have an up to date openssl for security reasons
+    ('ImageMagick', '7.0.8-11'),  # for animation
+    # OS dependency should be preferred if the os version is more recent then
+    # this version, it's nice to have an up to date openssl for security
+    # reasons
     # ('OpenSSL', '1.0.2h'),
 ]
 
 osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
 
 configopts = "--with-pic --enable-threads --enable-R-shlib"
-# some recommended packages may fail in a parallel build (e.g. Matrix), and we're installing them anyway below
+# some recommended packages may fail in a parallel build (e.g. Matrix), and
+# we're installing them anyway below
 configopts += " --with-recommended-packages=no"
 
 # specify that at least EasyBuild v3.5.0 is required,
@@ -68,7 +71,7 @@ exts_default_options = {
 }
 
 # !! order of packages is important !!
-# packages updated on Aug 17, 2018
+# packages updated on Dec 24, 2018
 exts_list = [
     'base',
     'datasets',
@@ -1974,6 +1977,7 @@ exts_list = [
         'checksums': ['58e36d3b8a67d01194c4e5099499657d017f77fc2081213633964b1d57a7e32f'],
     }),
     ('hdf5r', '1.0.1', {
+        'preinstallopts': "unset LIBS && ",
         'checksums': ['32f35dc26809a7e9b9335e0dc24369cf87f4c6deb430b2d9d019450a10164240'],
     }),
     ('DTRreg', '1.3', {
