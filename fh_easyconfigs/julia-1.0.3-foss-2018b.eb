@@ -1,0 +1,44 @@
+# EasyBuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org 
+# 
+#  Fred Hutchenson Cancer Research Center 
+#  http://fredhutch.org/
+
+easyblock = 'MakeCp'
+
+name = 'julia'
+version = '1.0.3'
+
+homepage = 'http://www.julialang.org/'
+description = """Julia is a high-level, high-performance dynamic programming
+language for technical computing, with syntax that is familiar to users of
+other technical computing environments."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+source_urls = ['https://github.com/JuliaLang/julia/releases/download/v%(version)s']
+sources = ['%(name)s-%(version)s-full.tar.gz']
+checksums = ['618e6d29f1fba00f5b2bebf14e69a3a536c27c3132e021cf39774e8500dd29fa']
+
+builddependencies = [
+    ('CMake', '3.11.4'),
+]
+
+dependencies = [
+    ('cURL', '7.60.0')
+]
+
+buildopts = 'USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 USE_SYSTEM_FFTW=1 '
+buildopts += 'MARCH=x86-64 '
+
+# Don't do make -j x, it loses it's head c.f., https://github.com/JuliaLang/julia/issues/12582
+maxparallel = 1
+
+files_to_copy = [(['usr/*'], '.')]
+
+sanity_check_paths = {
+    'files': ['bin/julia'], 
+    'dirs': ['bin','etc','include','lib','share','tools']
+}
+
+moduleclass = 'lang'

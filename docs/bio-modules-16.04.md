@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  16.04
-date: 2018-11-29
+date: 2019-01-05
 ---
 
  - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
