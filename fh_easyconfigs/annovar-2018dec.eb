@@ -1,0 +1,47 @@
+# EasyBuild Easyconfig 
+#
+# John Dey jfdey@fredhutch.org 
+# Fred Hutchinson Cancer Research Institue, Seattle United States
+#
+# Note: The annovar database has been move outside of the source code tree
+# To fully configure download databases
+#  Use: /shared/biodata/humandb for Annovar databases
+#
+# perl $EBROOTANNOVAR/annotate_variation.pl --buildver hg19 --downdb -webfrom annovar $a /shared/biodata/humandb
+
+name = 'annovar'
+version = '2018Dec04'
+
+easyblock = 'Tarball'
+
+homepage = 'http://annovar.openbioinformatics.org/en/latest/'
+description = """ANNOVAR is an efficient software tool to utilize update-to-date
+ information to functionally annotate genetic variants detected from diverse
+ genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,
+ yeast and many others).""" 
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/WGLab/doc-ANNOVAR/archive']
+sources = ['master.zip']
+
+# Annovar has a perl dependancy but no speicific version is mentioned in the release notes.
+dependencies = [
+    ('Perl', '5.28.0', '-GCCcore-7.3.0')
+]
+
+modloadmsg = """ANNOVAR scripts are located in \\$EBROOTANNOVAR\nTo run: perl \\$EBROOTANNOVAR/annotate_variation.pl"""
+
+sanity_check_paths = {
+    'files': ["annotate_variation.pl", 
+              "table_annovar.pl", 
+              "convert2annovar.pl", 
+              "retrieve_seq_from_fasta.pl", 
+              "coding_change.pl", 
+              "variants_reduction.pl"],
+    'dirs': ["humandb", "example"],
+}
+
+modextrapaths = {'PATH': ''}
+
+moduleclass = 'bio'
