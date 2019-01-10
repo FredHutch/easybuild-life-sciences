@@ -18,4 +18,4 @@ bellow to see a list of available builds with a list of modules.
 ### Scientific Software Inventory
 
  - [Life Science Software Inventory]({{ site.baseurl }}{% link bio-modules-14.04.md %})
- - [Not in production. Ubuntu 16.04]({{ site.baseurl }}{% link bio-modules-16.04.md %})
+ - [Packages built for Ubuntu 18.04]({{ site.baseurl }}{% link bio-modules-18.04.md %})

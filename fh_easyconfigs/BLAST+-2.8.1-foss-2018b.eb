@@ -13,7 +13,7 @@
 easyblock = 'ConfigureMake'
 
 name = 'BLAST+'
-version = '2.7.1'
+version = '2.8.1'
 
 homepage = 'http://blast.ncbi.nlm.nih.gov/'
 description = """Basic Local Alignment Search Tool, or BLAST, is an algorithm
@@ -25,11 +25,7 @@ toolchainopts = {'usempi': True}
 
 source_urls = ['http://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/%(version)s/']
 sources = ['ncbi-blast-%(version)s+-src.tar.gz']
-patches = ['%(name)s-%(version)s_boost_backport.patch']
-checksums = [
-    '10a78d3007413a6d4c983d2acbf03ef84b622b82bd9a59c6bd9fbdde9d0298ca',  # ncbi-blast-2.7.1+-src.tar.gz
-    'e3f9c80ea242dd58759f18919467d9af0e1bec5c01142d130ee479c18cecc654',  # BLAST+-2.7.1_boost_backport.patch
-]
+checksums = ['e03dd1a30e37cb8a859d3788a452c5d70ee1f9102d1ee0f93b2fbd145925118f']
 
 dependencies = [
     ('zlib', '1.2.11'),
