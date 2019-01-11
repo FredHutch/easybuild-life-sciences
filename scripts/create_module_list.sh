@@ -23,12 +23,12 @@ base_dir=${PWD%${repo}*}${repo}
 docs_dir=${base_dir}/docs
 scripts_dir=${base_dir}/scripts
 
-if [[ $os_ver == '16.04' ]]; then
-    spider=/app/lmod/lmod/libexec/spider
-    module_dir=/app/modules
-elif [[ $os_ver == '14.04' ]]; then
+if [[ $os_ver == '14.04' ]]; then
     spider=/app/Lmod/lmod/lmod/libexec/spider
     module_dir=/app/easybuild/modules
+else
+    spider=/app/lmod/lmod/libexec/spider
+    module_dir=/app/modules
 fi
 
 echo Collecting Inventory

@@ -1,0 +1,40 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Fred Hutchinson Cancer Research Center
+easyblock = 'ConfigureMake'
+
+name = 'bubblewrap'
+version = '0.3.1'
+
+homepage = 'https://github.com/projectatomic/bubblewrap/'
+description = """The goal of bubblewrap is to run an application in a sandbox,
+ where it has restricted access to parts of the operating system or user data
+ such as the home directory."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/projectatomic/bubblewrap/archive']
+sources = ['v%(version)s.zip']
+
+builddependencies = [
+    ('Autotools', '20150215'),
+    ('M4', '1.4.17'),
+    ('pkg-config', '0.29.1'),
+]
+
+dependencies = [
+    ('libcap', '2.26'),
+]
+
+preconfigopts = 'NOCONFIGURE=1 ./autogen.sh && '
+
+separate_build_dir = True
+
+sanity_check_paths = {
+    'files': ['bin/bwrap', 'share//man/man1/bwrap.1'],
+    'dirs': ['bin', 'share'],
+}
+
+moduleclass = 'lib'

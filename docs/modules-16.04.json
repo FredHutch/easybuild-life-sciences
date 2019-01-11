@@ -539,6 +539,25 @@
         }
     },
     "strelka": {
+        "/app/modules/bio/strelka/2.9.9-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+            "Version": "2.9.9-foss-2018b-Python-3.6.6",
+            "fullName": "strelka/2.9.9-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nStrelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.\n\n\nMore information\n================\n - Homepage: https://github.com/Illumina/strelka\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/strelka/2.9.9-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000009.000000009.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/strelka/2.9.9-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000009.000000009.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
+                "Homepage: https://github.com/Illumina/strelka"
+            ]
+        },
         "/app/modules/bio/strelka/2.9.9-foss-2018b.lua": {
             "Description": "Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
             "Version": "2.9.9-foss-2018b",

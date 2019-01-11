@@ -283,6 +283,22 @@
                 "Description: Burrows-Wheeler Aligner (BWA) is an efficient program that aligns  relatively short nucleotide sequences against a long reference sequence such as the human genome. - Homepage: http://bio-bwa.sourceforge.net/ "
             ]
         },
+        "/app/easybuild/modules/bio/BWA/0.7.17-foss-2016b.lua": {
+            "Description": "BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
+            "Version": "0.7.17-foss-2016b",
+            "fullName": "BWA/0.7.17-foss-2016b",
+            "help": "\nDescription\n===========\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.\n\n\nMore information\n================\n - Homepage: https://bitbucket.org/statgen/xhmm/\n",
+            "hidden": false,
+            "pV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BWA/0.7.17-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
+                "Homepage: https://bitbucket.org/statgen/xhmm/"
+            ]
+        },
         "/app/easybuild/modules/bio/BWA/0.7.7-foss-2015b": {
             "Version": "0.7.7-foss-2015b",
             "fullName": "BWA/0.7.7-foss-2015b",
@@ -802,6 +818,24 @@
             ]
         }
     },
+    "FastANI": {
+        "/app/easybuild/modules/bio/FastANI/1.1-foss-2016b.lua": {
+            "Description": "FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies.",
+            "Version": "1.1-foss-2016b",
+            "fullName": "FastANI/1.1-foss-2016b",
+            "help": "\nDescription\n===========\nFastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies.\n\n\nMore information\n================\n - Homepage: http://www.iodbc.org/\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FastANI/1.1-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies.",
+                "Homepage: http://www.iodbc.org/"
+            ]
+        }
+    },
     "FastQC": {
         "/app/easybuild/modules/bio/FastQC/0.11.5-Java-1.8.0_74": {
             "Description": "FastQC is a quality control application for high throughput sequence data.  It reads in sequence data in a variety of formats and can either provide an interactive  application to review the results of several different QC checks, or create an HTML based  report which can be integrated into a pipeline. - Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/ ",
@@ -1149,6 +1183,28 @@
             "wV": "000000005.000000000.000000005.*intel.*zfinal-.000002015.*b.*hybrid.*zfinal",
             "whatis": [
                 "GROMACS is a versatile package to perform molecular dynamics,  i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles. - Homepage: http://www.gromacs.org "
+            ]
+        }
+    },
+    "GTDBTk": {
+        "/app/easybuild/modules/bio/GTDBTk/0.1.3-foss-2016b-Python-2.7.15.lua": {
+            "Description": "GTDB-Tk is a software toolkit for assigning objective\n taxonomic classifications to bacterial and archaeal genomes. It is\n computationally efficient and designed to work with recent advances that\n allow hundreds or thousands of metagenome-assembled genomes (MAGs) to be\n obtained directly from environmental samples. It can also be applied to\n isolate and single-cell genomes.",
+            "Version": "0.1.3-foss-2016b-Python-2.7.15",
+            "fullName": "GTDBTk/0.1.3-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nGTDB-Tk is a software toolkit for assigning objective\n taxonomic classifications to bacterial and archaeal genomes. It is\n computationally efficient and designed to work with recent advances that\n allow hundreds or thousands of metagenome-assembled genomes (MAGs) to be\n obtained directly from environmental samples. It can also be applied to\n isolate and single-cell genomes.\n\n\nMore information\n================\n - Homepage: https://github.com/Ecogenomics/GTDBTk\n\n\nIncluded extensions\n===================\nbiolib-0.0.46, DendroPy-4.4.0, gtdbtk-0.1.3, Jinja2-2.10, matplotlib-2.2.2,\nmpld3-0.3\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GTDBTk/0.1.3-foss-2016b-Python-2.7.15/lib": 1
+            },
+            "pV": "000000000.000000001.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GTDBTk/0.1.3-foss-2016b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000000.000000001.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: GTDB-Tk is a software toolkit for assigning objective\n taxonomic classifications to bacterial and archaeal genomes. It is\n computationally efficient and designed to work with recent advances that\n allow hundreds or thousands of metagenome-assembled genomes (MAGs) to be\n obtained directly from environmental samples. It can also be applied to\n isolate and single-cell genomes.",
+                "Homepage: https://github.com/Ecogenomics/GTDBTk",
+                "Extensions: biolib-0.0.46, DendroPy-4.4.0, gtdbtk-0.1.3, Jinja2-2.10, matplotlib-2.2.2, mpld3-0.3"
             ]
         }
     },
@@ -2253,6 +2309,22 @@
                 "Description: The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
                 "Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra"
             ]
+        },
+        "/app/easybuild/modules/bio/SRA-Toolkit/2.9.2-ubuntu64.lua": {
+            "Description": "The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+            "Version": "2.9.2-ubuntu64",
+            "fullName": "SRA-Toolkit/2.9.2-ubuntu64",
+            "help": "\nDescription\n===========\nThe NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format\n\n\nMore information\n================\n - Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra\n",
+            "hidden": false,
+            "pV": "000000002.000000009.000000002.*ubuntu.000000064.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/SRA-Toolkit/2.9.2-ubuntu64/bin": 1
+            },
+            "wV": "000000002.000000009.000000002.*ubuntu.000000064.*zfinal",
+            "whatis": [
+                "Description: The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+                "Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra"
+            ]
         }
     },
     "STAR": {
@@ -2790,6 +2862,24 @@
             "wV": "000000000.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*fh.000000002.*zfinal",
             "whatis": [
                 "Description: CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes. - Homepage: https://sourceforge.net/projects/conifer "
+            ]
+        }
+    },
+    "cromwell": {
+        "/app/easybuild/modules/bio/cromwell/36-Java-1.8.lua": {
+            "Description": "Scientific workflow engine designed for simplicity &\nscalability.",
+            "Version": "36-Java-1.8",
+            "fullName": "cromwell/36-Java-1.8",
+            "help": "\nDescription\n===========\nScientific workflow engine designed for simplicity &\nscalability.\n\n\nMore information\n================\n - Homepage: https://github.com/broadinstitute/cromwell\n",
+            "hidden": false,
+            "pV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cromwell/36-Java-1.8": 1
+            },
+            "wV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: Scientific workflow engine designed for simplicity &\nscalability.",
+                "Homepage: https://github.com/broadinstitute/cromwell"
             ]
         }
     },
@@ -3499,6 +3589,42 @@
             ]
         }
     },
+    "pplacer": {
+        "/app/easybuild/modules/bio/pplacer/1.1.alpha19-foss-2016b.lua": {
+            "Description": "Pplacer places reads on a phylogenetic tree. guppy (Grand\n Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful\n tool for working with reference packages.",
+            "Version": "1.1.alpha19-foss-2016b",
+            "fullName": "pplacer/1.1.alpha19-foss-2016b",
+            "help": "\nDescription\n===========\nPplacer places reads on a phylogenetic tree. guppy (Grand\n Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful\n tool for working with reference packages.\n\n\nMore information\n================\n - Homepage: ['https://matsen.fhcrc.org/pplacer/']\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*alpha.000000019.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/pplacer/1.1.alpha19-foss-2016b": 1
+            },
+            "wV": "000000001.000000001.*alpha.000000019.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: Pplacer places reads on a phylogenetic tree. guppy (Grand\n Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful\n tool for working with reference packages.",
+                "Homepage: ['https://matsen.fhcrc.org/pplacer/']"
+            ]
+        }
+    },
+    "prodigal": {
+        "/app/easybuild/modules/bio/prodigal/2.6.3-GCC-5.4.0-2.26.lua": {
+            "Description": "Prodigal (Prokaryotic Dynamic Programming Genefinding\n   Algorithm) is a microbial (bacterial and archaeal) gene finding program\n   developed at Oak Ridge National Laboratory and the University of\n   Tennessee.",
+            "Version": "2.6.3-GCC-5.4.0-2.26",
+            "fullName": "prodigal/2.6.3-GCC-5.4.0-2.26",
+            "help": "\nDescription\n===========\nProdigal (Prokaryotic Dynamic Programming Genefinding\n   Algorithm) is a microbial (bacterial and archaeal) gene finding program\n   developed at Oak Ridge National Laboratory and the University of\n   Tennessee.\n\n\nMore information\n================\n - Homepage: http://prodigal.ornl.gov/\n",
+            "hidden": false,
+            "pV": "000000002.000000006.000000003.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/prodigal/2.6.3-GCC-5.4.0-2.26/bin": 1
+            },
+            "wV": "000000002.000000006.000000003.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "whatis": [
+                "Description: Prodigal (Prokaryotic Dynamic Programming Genefinding\n   Algorithm) is a microbial (bacterial and archaeal) gene finding program\n   developed at Oak Ridge National Laboratory and the University of\n   Tennessee.",
+                "Homepage: http://prodigal.ornl.gov/"
+            ]
+        }
+    },
     "prokka": {
         "/app/easybuild/modules/bio/prokka/1.11-foss-2016b-BioPerl-1.7.0": {
             "Description": "Prokka is a software tool for the rapid annotation of prokaryotic genomes. - Homepage: http://www.vicbioinformatics.com/software.prokka.shtml ",
@@ -3741,6 +3867,24 @@
             "wV": "000000001.000000008.*foss.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: The wham suite consists of two programs, wham and whamg. wham, the original tool, is a very sensitive method with a high false discovery rate. The second program, whamg, is more accurate and better suited for general structural variant (SV) discovery. - Homepage: https://github.com/zeeev/wham "
+            ]
+        }
+    },
+    "womtool": {
+        "/app/easybuild/modules/bio/womtool/36-Java-1.8.lua": {
+            "Description": "Scientific workflow engine designed for simplicity &\nscalability.",
+            "Version": "36-Java-1.8",
+            "fullName": "womtool/36-Java-1.8",
+            "help": "\nDescription\n===========\nScientific workflow engine designed for simplicity &\nscalability.\n\n\nMore information\n================\n - Homepage: https://github.com/broadinstitute/cromwell\n",
+            "hidden": false,
+            "pV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/womtool/36-Java-1.8": 1
+            },
+            "wV": "000000036.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: Scientific workflow engine designed for simplicity &\nscalability.",
+                "Homepage: https://github.com/broadinstitute/cromwell"
             ]
         }
     },

@@ -1,7 +1,7 @@
 # easybuild easyconfig
 #
 # John Dey jfdey@fredhutch.org
-# Fred Hutchinson Cancer Research Institue, Seattle US
+# Fred Hutchinson Cancer Research Institute, Seattle US
 
 easyblock = 'Tarball'
 
@@ -9,7 +9,8 @@ name = 'fast5'
 version = '0.6.2'
 
 homepage = 'http://simpsonlab.github.io/2017/02/27/packing_fast5/'
-description = """A lightweight C++ library for accessing Oxford Nanopore Technologies sequencing data."""
+description = """A lightweight C++ library for accessing Oxford Nanopore
+ Technologies sequencing data."""
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
