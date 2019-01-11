@@ -1,0 +1,25 @@
+easyblock = 'ConfigureMake'
+
+name = 'tmux'
+version = '2.8'
+
+homepage = 'http://tmux.sourceforge.net/'
+description = """tmux is a terminal multiplexer. It lets you switch easily 
+between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal."""
+
+toolchain = {'name': 'GCC', 'version': '7.3.0-2.30'}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = ['https://github.com/tmux/tmux/releases/download/%(version)s/']
+
+dependencies = [
+    ('ncurses', '6.1'),
+    ('libevent', '2.1.8'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/tmux'],
+    'dirs': []
+}
+
+moduleclass = 'tools'
