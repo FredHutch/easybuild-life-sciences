@@ -1,0 +1,544 @@
+{
+    "BCFtools": {
+        "/app/modules/bio/BCFtools/1.9-foss-2018b.lua": {
+            "Description": "Samtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants",
+            "Version": "1.9-foss-2018b",
+            "fullName": "BCFtools/1.9-foss-2018b",
+            "help": "\nDescription\n===========\nSamtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "pV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BCFtools/1.9-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Samtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants",
+                "Homepage: http://www.htslib.org/"
+            ]
+        }
+    },
+    "BEDOPS": {
+        "/app/modules/bio/BEDOPS/2.4.35-foss-2018b.lua": {
+            "Description": "BEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.",
+            "Version": "2.4.35-foss-2018b",
+            "fullName": "BEDOPS/2.4.35-foss-2018b",
+            "help": "\nDescription\n===========\nBEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.\n\n\nMore information\n================\n - Homepage: http://bedops.readthedocs.io/en/latest/index.html\n",
+            "hidden": false,
+            "pV": "000000002.000000004.000000035.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BEDOPS/2.4.35-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000004.000000035.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: BEDOPS is an open-source command-line toolkit that performs highly efficient and\n scalable Boolean and other set operations, statistical calculations, archiving, conversion and\n other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for\n distributing whole-genome analyses across a computational cluster.",
+                "Homepage: http://bedops.readthedocs.io/en/latest/index.html"
+            ]
+        }
+    },
+    "BEDTools": {
+        "/app/modules/bio/BEDTools/2.27.1-foss-2018b.lua": {
+            "Description": "The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps\n and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+            "Version": "2.27.1-foss-2018b",
+            "fullName": "BEDTools/2.27.1-foss-2018b",
+            "help": "\nDescription\n===========\nThe BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps\n and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.\n\n\nMore information\n================\n - Homepage: https://github.com/arq5x/bedtools2\n",
+            "hidden": false,
+            "pV": "000000002.000000027.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BEDTools/2.27.1-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000027.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps\n and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+                "Homepage: https://github.com/arq5x/bedtools2"
+            ]
+        }
+    },
+    "BLAST+": {
+        "/app/modules/bio/BLAST+/2.8.1-foss-2018b.lua": {
+            "Description": "Basic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.",
+            "Version": "2.8.1-foss-2018b",
+            "fullName": "BLAST+/2.8.1-foss-2018b",
+            "help": "\nDescription\n===========\nBasic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.\n\n\nMore information\n================\n - Homepage: http://blast.ncbi.nlm.nih.gov/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/BLAST+/2.8.1-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000008.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BLAST+/2.8.1-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000008.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Basic Local Alignment Search Tool, or BLAST, is an algorithm\n for comparing primary biological sequence information, such as the amino-acid\n sequences of different proteins or the nucleotides of DNA sequences.",
+                "Homepage: http://blast.ncbi.nlm.nih.gov/"
+            ]
+        }
+    },
+    "BWA": {
+        "/app/modules/bio/BWA/0.7.17-foss-2018b.lua": {
+            "Description": "Burrows-Wheeler Aligner (BWA) is an efficient program that aligns\n relatively short nucleotide sequences against a long reference sequence such as the human genome.",
+            "Version": "0.7.17-foss-2018b",
+            "fullName": "BWA/0.7.17-foss-2018b",
+            "help": "\nDescription\n===========\nBurrows-Wheeler Aligner (BWA) is an efficient program that aligns\n relatively short nucleotide sequences against a long reference sequence such as the human genome.\n\n\nMore information\n================\n - Homepage: http://bio-bwa.sourceforge.net/\n",
+            "hidden": false,
+            "pV": "000000000.000000007.000000017.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BWA/0.7.17-foss-2018b/bin": 1
+            },
+            "wV": "000000000.000000007.000000017.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Burrows-Wheeler Aligner (BWA) is an efficient program that aligns\n relatively short nucleotide sequences against a long reference sequence such as the human genome.",
+                "Homepage: http://bio-bwa.sourceforge.net/"
+            ]
+        }
+    },
+    "BamTools": {
+        "/app/modules/bio/BamTools/2.5.1-foss-2018b.lua": {
+            "Description": "BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.",
+            "Version": "2.5.1-foss-2018b",
+            "fullName": "BamTools/2.5.1-foss-2018b",
+            "help": "\nDescription\n===========\nBamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.\n\n\nMore information\n================\n - Homepage: https://github.com/pezmaster31/bamtools\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/BamTools/2.5.1-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000005.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BamTools/2.5.1-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000005.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.",
+                "Homepage: https://github.com/pezmaster31/bamtools"
+            ]
+        }
+    },
+    "Beast": {
+        "/app/modules/bio/Beast/2.5.1-foss-2018b.lua": {
+            "Description": "BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
+            "Version": "2.5.1-foss-2018b",
+            "fullName": "Beast/2.5.1-foss-2018b",
+            "help": "\nDescription\n===========\nBEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability.\n\n\nMore information\n================\n - Homepage: http://beast2.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Beast/2.5.1-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000005.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/Beast/2.5.1-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000005.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description:  BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
+                "Homepage: http://beast2.org/"
+            ]
+        }
+    },
+    "BioPerl": {
+        "/app/modules/bio/BioPerl/1.7.2-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+            "Version": "1.7.2-foss-2018b-Perl-5.28.0",
+            "fullName": "BioPerl/1.7.2-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nBioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.\n\n\nMore information\n================\n - Homepage: http://www.bioperl.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+                "Homepage: http://www.bioperl.org/"
+            ]
+        }
+    },
+    "Bowtie2": {
+        "/app/modules/bio/Bowtie2/2.3.4.2-foss-2018b.lua": {
+            "Description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
+            "Version": "2.3.4.2-foss-2018b",
+            "fullName": "Bowtie2/2.3.4.2-foss-2018b",
+            "help": "\nDescription\n===========\nBowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.\n\n\nMore information\n================\n - Homepage: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\n",
+            "hidden": false,
+            "pV": "000000002.000000003.000000004.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/Bowtie2/2.3.4.2-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000003.000000004.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description:  Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
+                "Homepage: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml"
+            ]
+        }
+    },
+    "Eigen": {
+        "/app/modules/math/Eigen/3.3.5-GCCcore-7.3.0.lua": {
+            "Description": "Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+            "Version": "3.3.5-GCCcore-7.3.0",
+            "fullName": "Eigen/3.3.5-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nEigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n\n\nMore information\n================\n - Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page\n",
+            "hidden": false,
+            "pV": "000000003.000000003.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000003.000000003.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+                "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
+            ]
+        },
+        "/app/modules/math/Eigen/3.3.5.lua": {
+            "Description": "Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+            "Version": "3.3.5",
+            "fullName": "Eigen/3.3.5",
+            "help": "\nDescription\n===========\nEigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n\n\nMore information\n================\n - Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page\n",
+            "hidden": false,
+            "pV": "000000003.000000003.000000005.*zfinal",
+            "wV": "000000003.000000003.000000005.*zfinal",
+            "whatis": [
+                "Description: \n Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+                "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
+            ]
+        }
+    },
+    "FastANI": {
+        "/app/modules/bio/FastANI/1.1-foss-2018b.lua": {
+            "Description": "FastANI is developed for fast alignment-free computation of\n whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean\n nucleotide identity of orthologous gene pairs shared between two microbial\n genomes. FastANI supports pairwise comparison of both complete and draft\n genome assemblies.",
+            "Version": "1.1-foss-2018b",
+            "fullName": "FastANI/1.1-foss-2018b",
+            "help": "\nDescription\n===========\nFastANI is developed for fast alignment-free computation of\n whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean\n nucleotide identity of orthologous gene pairs shared between two microbial\n genomes. FastANI supports pairwise comparison of both complete and draft\n genome assemblies.\n\n\nMore information\n================\n - Homepage: http://www.iodbc.org/\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/FastANI/1.1-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: FastANI is developed for fast alignment-free computation of\n whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean\n nucleotide identity of orthologous gene pairs shared between two microbial\n genomes. FastANI supports pairwise comparison of both complete and draft\n genome assemblies.",
+                "Homepage: http://www.iodbc.org/"
+            ]
+        }
+    },
+    "FastQC": {
+        "/app/modules/bio/FastQC/0.11.8-Java-1.8.lua": {
+            "Description": "FastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.",
+            "Version": "0.11.8-Java-1.8",
+            "fullName": "FastQC/0.11.8-Java-1.8",
+            "help": "\nDescription\n===========\nFastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.\n\n\nMore information\n================\n - Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/\n",
+            "hidden": false,
+            "pV": "000000000.000000011.000000008.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/FastQC/0.11.8-Java-1.8": 1
+            },
+            "wV": "000000000.000000011.000000008.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: FastQC is a quality control application for high throughput\nsequence data. It reads in sequence data in a variety of formats and can either\nprovide an interactive application to review the results of several different\nQC checks, or create an HTML based report which can be integrated into a\npipeline.",
+                "Homepage: http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+            ]
+        }
+    },
+    "GATK": {
+        "/app/modules/bio/GATK/4.0.8.1-foss-2018b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.",
+            "Version": "4.0.8.1-foss-2018b-Python-3.6.6",
+            "fullName": "GATK/4.0.8.1-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000000.000000008.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/GATK/4.0.8.1-foss-2018b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000000.000000008.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
+        }
+    },
+    "GEOS": {
+        "/app/modules/math/GEOS/3.6.2-foss-2018b-Python-3.6.6.lua": {
+            "Description": "GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)",
+            "Version": "3.6.2-foss-2018b-Python-3.6.6",
+            "fullName": "GEOS/3.6.2-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nGEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)\n\n\nMore information\n================\n - Homepage: http://trac.osgeo.org/geos\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GEOS/3.6.2-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000003.000000006.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/GEOS/3.6.2-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000003.000000006.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)",
+                "Homepage: http://trac.osgeo.org/geos"
+            ]
+        }
+    },
+    "GMP": {
+        "/app/modules/math/GMP/6.1.2-GCCcore-7.3.0.lua": {
+            "Description": "GMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n",
+            "Version": "6.1.2-GCCcore-7.3.0",
+            "fullName": "GMP/6.1.2-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n\n\nMore information\n================\n - Homepage: http://gmplib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GMP/6.1.2-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000006.000000001.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000006.000000001.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n GMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n",
+                "Homepage: http://gmplib.org/"
+            ]
+        }
+    },
+    "HTSlib": {
+        "/app/modules/bio/HTSlib/1.9-foss-2018b.lua": {
+            "Description": "A C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix",
+            "Version": "1.9-foss-2018b",
+            "fullName": "HTSlib/1.9-foss-2018b",
+            "help": "\nDescription\n===========\nA C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/HTSlib/1.9-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/HTSlib/1.9-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: A C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix",
+                "Homepage: http://www.htslib.org/"
+            ]
+        }
+    },
+    "IGV": {
+        "/app/modules/bio/IGV/2.4.16-Java-1.8.lua": {
+            "Description": "This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+            "Version": "2.4.16-Java-1.8",
+            "fullName": "IGV/2.4.16-Java-1.8",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/IGV/2.4.16-Java-1.8/lib": 1
+            },
+            "pV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/IGV/2.4.16-Java-1.8": 1
+            },
+            "wV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
+        }
+    },
+    "MiXCR": {
+        "/app/modules/bio/MiXCR/3.0.3-Java-1.8.lua": {
+            "Description": "MiXCR processes big immunome data from raw sequences \nto quantitated clonotypes ",
+            "Version": "3.0.3-Java-1.8",
+            "fullName": "MiXCR/3.0.3-Java-1.8",
+            "help": "\nDescription\n===========\nMiXCR processes big immunome data from raw sequences \nto quantitated clonotypes\n\n\nMore information\n================\n - Homepage: https://milaboratory.com/software/mixcr/\n",
+            "hidden": false,
+            "pV": "000000003.000000000.000000003.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/MiXCR/3.0.3-Java-1.8": 1
+            },
+            "wV": "000000003.000000000.000000003.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  MiXCR processes big immunome data from raw sequences \nto quantitated clonotypes ",
+                "Homepage: https://milaboratory.com/software/mixcr/"
+            ]
+        }
+    },
+    "SAMtools": {
+        "/app/modules/bio/SAMtools/1.9-foss-2018b.lua": {
+            "Description": "SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
+            "Version": "1.9-foss-2018b",
+            "fullName": "SAMtools/1.9-foss-2018b",
+            "help": "\nDescription\n===========\nSAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/SAMtools/1.9-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/SAMtools/1.9-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
+                "Homepage: http://www.htslib.org/"
+            ]
+        }
+    },
+    "SRA-Toolkit": {
+        "/app/modules/bio/SRA-Toolkit/2.9.2-ubuntu64.lua": {
+            "Description": "The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+            "Version": "2.9.2-ubuntu64",
+            "fullName": "SRA-Toolkit/2.9.2-ubuntu64",
+            "help": "\nDescription\n===========\nThe NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format\n\n\nMore information\n================\n - Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra\n",
+            "hidden": false,
+            "pV": "000000002.000000009.000000002.*ubuntu.000000064.*zfinal",
+            "pathA": {
+                "/app/software/SRA-Toolkit/2.9.2-ubuntu64/bin": 1
+            },
+            "wV": "000000002.000000009.000000002.*ubuntu.000000064.*zfinal",
+            "whatis": [
+                "Description: The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+                "Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra"
+            ]
+        }
+    },
+    "STAR": {
+        "/app/modules/bio/STAR/2.6.1c-foss-2018b.lua": {
+            "Description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+            "Version": "2.6.1c-foss-2018b",
+            "fullName": "STAR/2.6.1c-foss-2018b",
+            "help": "\nDescription\n===========\nSTAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.\n\n\nMore information\n================\n - Homepage: https://github.com/alexdobin/STAR\n",
+            "hidden": false,
+            "pV": "000000002.000000006.000000001.*c.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/STAR/2.6.1c-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000006.000000001.*c.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+                "Homepage: https://github.com/alexdobin/STAR"
+            ]
+        }
+    },
+    "VCFtools": {
+        "/app/modules/bio/VCFtools/0.1.16-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "The aim of VCFtools is to provide\n easily accessible methods for working with complex\n genetic variation data in the form of VCF files.",
+            "Version": "0.1.16-foss-2018b-Perl-5.28.0",
+            "fullName": "VCFtools/0.1.16-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nThe aim of VCFtools is to provide\n easily accessible methods for working with complex\n genetic variation data in the form of VCF files.\n\n\nMore information\n================\n - Homepage: https://vcftools.github.io\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/VCFtools/0.1.16-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000000.000000001.000000016.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/VCFtools/0.1.16-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000001.000000016.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: The aim of VCFtools is to provide\n easily accessible methods for working with complex\n genetic variation data in the form of VCF files.",
+                "Homepage: https://vcftools.github.io"
+            ]
+        }
+    },
+    "canu": {
+        "/app/modules/bio/canu/1.8-foss-2018b.lua": {
+            "Description": "Canu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing",
+            "Version": "1.8-foss-2018b",
+            "fullName": "canu/1.8-foss-2018b",
+            "help": "\nDescription\n===========\nCanu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing\n\n\nMore information\n================\n - Homepage: http://canu.readthedocs.io\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/canu/1.8-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000008.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/canu/1.8-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000008.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Canu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing",
+                "Homepage: http://canu.readthedocs.io"
+            ]
+        }
+    },
+    "nanopolish": {
+        "/app/modules/bio/nanopolish/0.10.2-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
+            "Version": "0.10.2-foss-2018b-Python-2.7.15",
+            "fullName": "nanopolish/0.10.2-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nSoftware package for signal-level analysis of Oxford Nanopore\n sequencing data.\n\n\nMore information\n================\n - Homepage: http://github.com/jts/nanopolish\n",
+            "hidden": false,
+            "pV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/software/nanopolish/0.10.2-foss-2018b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
+                "Homepage: http://github.com/jts/nanopolish"
+            ]
+        },
+        "/app/modules/bio/nanopolish/0.10.2-foss-2018b.lua": {
+            "Description": "Our computational work focuses on the development of\nalgorithms for handling very large sequencing data sets, from indexing\nand text compression, to probabilistic modeling and inference. We make\nour methods freely available as open source software.",
+            "Version": "0.10.2-foss-2018b",
+            "fullName": "nanopolish/0.10.2-foss-2018b",
+            "help": "\nDescription\n===========\nOur computational work focuses on the development of\nalgorithms for handling very large sequencing data sets, from indexing\nand text compression, to probabilistic modeling and inference. We make\nour methods freely available as open source software.\n\n\nMore information\n================\n - Homepage: http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/\n",
+            "hidden": false,
+            "pV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/nanopolish/0.10.2-foss-2018b/bin": 1
+            },
+            "wV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Our computational work focuses on the development of\nalgorithms for handling very large sequencing data sets, from indexing\nand text compression, to probabilistic modeling and inference. We make\nour methods freely available as open source software.",
+                "Homepage: http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/"
+            ]
+        }
+    },
+    "picard": {
+        "/app/modules/bio/picard/2.18.17-Java-1.8.lua": {
+            "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+            "Version": "2.18.17-Java-1.8",
+            "fullName": "picard/2.18.17-Java-1.8",
+            "help": "\nDescription\n===========\nA set of tools (in Java) for working with next generation sequencing data in the BAM format.\n\n\nMore information\n================\n - Homepage: http://sourceforge.net/projects/picard\n",
+            "hidden": false,
+            "pV": "000000002.000000018.000000017.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/picard/2.18.17-Java-1.8": 1
+            },
+            "wV": "000000002.000000018.000000017.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+                "Homepage: http://sourceforge.net/projects/picard"
+            ]
+        }
+    },
+    "samblaster": {
+        "/app/modules/bio/samblaster/v.0.1.24-foss-2018b.lua": {
+            "Description": "samblaster is a fast and flexible program for marking\n duplicates in read-id grouped1 paired-end SAM files.",
+            "Version": "v.0.1.24-foss-2018b",
+            "fullName": "samblaster/v.0.1.24-foss-2018b",
+            "help": "\nDescription\n===========\nsamblaster is a fast and flexible program for marking\n duplicates in read-id grouped1 paired-end SAM files.\n\n\nMore information\n================\n - Homepage: https://github.com/GregoryFaust/samblaster\n",
+            "hidden": false,
+            "pV": "*v.000000000.000000001.000000024.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/samblaster/v.0.1.24-foss-2018b/bin": 1
+            },
+            "wV": "*v.000000000.000000001.000000024.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: samblaster is a fast and flexible program for marking\n duplicates in read-id grouped1 paired-end SAM files.",
+                "Homepage: https://github.com/GregoryFaust/samblaster"
+            ]
+        }
+    },
+    "tabix": {
+        "/app/modules/bio/tabix/0.2.6-GCCcore-7.3.0.lua": {
+            "Description": "Generic indexer for TAB-delimited genome position files ",
+            "Version": "0.2.6-GCCcore-7.3.0",
+            "fullName": "tabix/0.2.6-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGeneric indexer for TAB-delimited genome position files\n\n\nMore information\n================\n - Homepage: http://samtools.sourceforge.net\n",
+            "hidden": false,
+            "pV": "000000000.000000002.000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/tabix/0.2.6-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000002.000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description:  Generic indexer for TAB-delimited genome position files ",
+                "Homepage: http://samtools.sourceforge.net"
+            ]
+        }
+    }
+}
