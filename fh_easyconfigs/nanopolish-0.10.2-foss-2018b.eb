@@ -9,7 +9,7 @@ easyblock = 'MakeCp'
 
 name = 'nanopolish'
 version = '0.10.2'
-versionsuffix = '-Python-2.7.15'
+versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'http://github.com/jts/nanopolish'
 description = """Software package for signal-level analysis of Oxford Nanopore
@@ -32,15 +32,20 @@ dependencies = [
     ('Eigen', '3.3.5', '', True),
     ('HTSlib', '1.9'),
     ('fast5', '0.6.5', '', True),
+    ('Python', '2.7.15'),
+    ('Biopython', '1.72', versionsuffix),
+    ('Pysam', '0.15.1', versionsuffix),
 ]
 
 files_to_copy = [(['nanopolish'], 'bin'), 'scripts']
 
+postinstallcmds = ["chmod a+rx %(installdir)s/scripts/*"]
 
 sanity_check_paths = {
     'files': ['bin/nanopolish'],
     'dirs': [],
 }
 
+modextrapaths = {'PATH': 'scripts'}
 
 moduleclass = 'bio'

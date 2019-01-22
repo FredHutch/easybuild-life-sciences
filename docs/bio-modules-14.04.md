@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bio Modules  14.04
-date: 2018-12-13
+date: 2019-01-15
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -26,7 +26,7 @@ Basic Local Alignment Search Tool, or BLAST, is an algorithm
  sequences of different proteins or the nucleotides of DNA sequences.
  - [BamTools/2.4.1-foss-2016b](https://github.com/pezmaster31/bamtools)  
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
- - [Beast/2.4.7-foss-2016a](http://beast2.org/)  
+ - [Beast/2.5.1-foss-2016b](http://beast2.org/)  
 BEAST is a cross-platform program for Bayesian MCMC analysis of molecular 
  sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using 
  strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies 
@@ -40,14 +40,16 @@ Bioperl is the product of a community effort to produce Perl code which is usefu
  - [Bowtie/1.2.1.1-foss-2016b](http://bowtie-bio.sourceforge.net/index.shtml)  
 Bowtie is an ultrafast, memory-efficient short read aligner.
  It aligns short DNA sequences (reads) to the human genome.
- - [Bowtie2/2.3.2-foss-2016b](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)  
-Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads 
- to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s 
- of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. 
- Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, 
+ - [Bowtie2/2.3.4.3-foss-2016b](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)  
+Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
+ to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s
+ of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.
+ Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
  - [CAP3/20150211](http://seq.cs.iastate.edu/)  
 CAP3 assembly program 
+ - [DANPOS2/2.2.2-foss-2016b-Python-2.7.12](https://sites.google.com/site/danposdoc)  
+A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2
  - [DIAMOND/0.9.22-foss-2016b](https://github.com/bbuchfink/diamond)  
 Accelerated BLAST compatible local sequence aligner
  - [EMBOSS/6.6.0-foss-2016b](http://emboss.sourceforge.net/)  
@@ -116,10 +118,10 @@ A C library for reading/writing high-throughput sequencing data.
  HTSlib also provides the bgzip, htsfile, and tabix utilities
  - [Homer/v4.9-foss-2016b](http://homer.ucsd.edu/homer/download.html)  
 HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for Motif Discovery and ChIP-Seq analysis. It is a collection of command line programs for unix-style operating systems written in mostly perl and c++. Homer was primarily written as a de novo motif discovery algorithm that is well suited for finding 8-12 bp motifs in large scale genomics data.
- - [IGV/2.4.14-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  
-The Integrative Genomics Viewer (IGV) is a high-performance visualization 
- tool for interactive exploration of large, integrated genomic datasets. It supports a wide 
- variety of data types, including array-based and next-generation sequence data, and genomic annotations. 
+ - [IGV/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for preprocessing, 
+ computing feature count density (coverage),  sorting, and indexing data files.
+ See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
  - [IGVTools/2.3.93-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  
 This package contains command line utilities for preprocessing, 
  computing feature count density (coverage),  sorting, and indexing data files.
@@ -145,6 +147,9 @@ The MPFR library is a C library for multiple-precision
  - [MUMmer/3.23-foss-2016b](http://mummer.sourceforge.net/)  
 MUMmer is a system for rapidly aligning entire genomes,
  whether in complete or draft form. AMOS makes use of it.
+ - [MiXCR/3.0.3-Java-1.8](https://milaboratory.com/software/mixcr/)  
+MiXCR processes big immunome data from raw sequences 
+to quantitated clonotypes 
  - [NGS/1.2.5-foss-2016b](https://github.com/ncbi/ngs)  
 NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from
  Next Generation Sequencing.
@@ -185,6 +190,12 @@ SAM Tools provide various utilities for manipulating alignments in the SAM forma
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [SPLITREAD/0.1-foss-2016b](http://splitread.sourceforge.net/ )  
 SPLITREAD is a novel method for detecting INDELs (small insertions and deletion with size less than 50bp) as well as large deletions that are within the coding regions from the exome sequencing data. It also can be applied ot the whole genome sequencing data.
+ - [SPRING_dev/1.6-foss-2016b-Python-2.7.15](http://https://github.com/AllonKleinLab/SPRING_dev)  
+SPRING is a collection of pre-processing scripts and a web
+browser-based tool for visualizing and interacting with high dimensional data.
+View an example dataset here. SPRING was developed for single cell RNA-Seq data
+but can be applied more generally. The minimal input is a matrix of high
+dimensional data points (cells) and a list of dimension names (genes).
  - [SRA-Toolkit/2.9.2-ubuntu64](http://trace.ncbi.nlm.nih.gov/Traces/sra)  
 The NCBI SRA Toolkit enables reading (dumping) of sequencing files 
  from the SRA database and writing (loading) files into the .sra format 
@@ -239,6 +250,9 @@ downstream analysis.
 BreakDancerMax predicts five types of structural variants: insertions, deletions, inversions, inter- and intra-chromosomal translocations from next-generation short paired-end sequencing reads using read pairs that are mapped with unexpected separation distances or orientation.
  - [bwa/0.7.17-foss-2016b](https://bitbucket.org/statgen/xhmm/)  
 BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.
+ - [canu/1.8-foss-2016b](http://canu.readthedocs.io)  
+Canu is a fork of the Celera Assembler designed for
+ high-noise single-molecule sequencing
  - [cellranger/2.2.0](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
 Single Cell Analysis Pipelines
  - [conifer/0.2.2-foss-2016b-Python-2.7.12-fh2](https://sourceforge.net/projects/conifer )  
@@ -303,6 +317,9 @@ Ngmlr is a long-read mapper designed to align PacBilo or Oxford Nanopore to a
 Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers.
  - [oncotator_v1_ds/April052016](http://portals.broadinstitute.org/oncotator/)  
 Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers.
+ - [ont-guppy-cpu/2.1.3](https://nanoporetech.com/products/minit)  
+Guppy software supports MinIT and MinION instruments from
+ Nanopore Technologies
  - [picard/2.7.1-Java-1.8.0_92](http://broadinstitute.github.io/picard/ )  
 A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format.
  - [plink/1.9b_4.6-x86_64](https://www.cog-genomics.org/plink/1.9)  

@@ -1,0 +1,51 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutchenson Cancer Research Center
+
+# foss-2016b OpenMPI', '1.10.3',
+# foss-2017a   2.x
+# foss-2018b 'OpenMPI', '3.1.1',
+easyblock = 'MakeCp'
+
+name = 'nanopolish'
+version = '0.10.2'
+versionsuffix = '-Python-%(pyver)s'
+
+
+homepage = 'http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/'
+description = """Our computational work focuses on the development of
+ algorithms for handling very large sequencing data sets, from indexing
+ and text compression, to probabilistic modeling and inference. We make
+ our methods freely available as open source software."""
+
+toolchain = {'name': 'foss', 'version': '2017b'}
+
+source_urls = [('https://github.com/jts/nanopolish/archive/')]
+sources = [
+    {'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}
+]
+
+buildopts = 'HDF5=noinstall EIGEN=noinstall HTS=noinstall'
+
+dependencies = [
+    ('zlib', '1.2.11'),
+    ('HDF5', '1.10.1'),
+    ('Eigen', '3.2.9'),
+    ('HTSlib', '1.9'),
+    ('fast5', '0.6.5', '', True),
+    ('Python', '2.7.15', '-fh1'),
+]
+
+files_to_copy = [(['nanopolish'], 'bin'), 'scripts']
+
+postinstallcmds = ["chmod a+rx %(installdir)s/scripts/*"]
+
+sanity_check_paths = {
+    'files': ['bin/nanopolish'],
+    'dirs': [],
+}
+
+modextrapaths = {'PATH': 'scripts'}
+
+moduleclass = 'bio'

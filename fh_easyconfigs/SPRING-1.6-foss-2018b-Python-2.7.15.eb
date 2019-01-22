@@ -1,0 +1,46 @@
+# easybuild easyconfig
+#
+# 2018.12.28 John Dey jfdey@fredhutch.org
+#
+easyblock = "Tarball"
+
+name = 'SPRING'
+version = '1.6'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://https://github.com/AllonKleinLab/SPRING_dev'
+description = """SPRING is a collection of pre-processing scripts and a web
+browser-based tool for visualizing and interacting with high dimensional data.
+View an example dataset here. SPRING was developed for single cell RNA-Seq data
+but can be applied more generally. The minimal input is a matrix of high
+dimensional data points (cells) and a list of dimension names (genes)."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['https://github.com/AllonKleinLab/SPRING_dev/archive']
+sources = [{'download_filename': 'master.zip',
+            'filename': SOURCE_ZIP
+           }]
+
+pyver = '2.7.15'
+
+exts_defaultclass = 'PythonPackage'
+dependencies = [
+    ('Python', pyver),
+    ('freetype', '2.9.1'),  # matplotlib
+    ('libpng', '1.6.34'),  # matplotlib
+    ('HDF5', '1.10.2'),  # required for h5py
+]
+
+modextrapaths = {
+    'PATH': '',
+    'PYTHONPATH': 'cgi-bin',
+}
+
+sanity_check_paths = {
+    'files': ['start_server.sh', 'stickyPage.html'],
+    'dirs': ['cgi-bin', 'data_prep', 'scripts_1_6_dev',
+             'scripts_dev_shared', 'stuff']
+}
+
+moduleclass = 'bio'
