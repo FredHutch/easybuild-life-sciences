@@ -21,14 +21,19 @@ sources = ['%(name)s-%(version)s-full.tar.gz']
 checksums = ['618e6d29f1fba00f5b2bebf14e69a3a536c27c3132e021cf39774e8500dd29fa']
 
 builddependencies = [
+    ('M4', '1.4.18'),
     ('CMake', '3.11.4'),
+    ('LLVM', '6.0.0'),
+    ('pkg-config', '0.29.2'),
 ]
 
 dependencies = [
-    ('cURL', '7.60.0')
+    ('cURL', '7.60.0'),
+    ('Qt5', '5.10.1'),
 ]
 
 buildopts = 'USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 USE_SYSTEM_FFTW=1 '
+buildopts += 'LIBBLAS=-lopenblas LIBBLASNAME=libopenblas '
 buildopts += 'MARCH=x86-64 '
 
 # Don't do make -j x, it loses it's head c.f., https://github.com/JuliaLang/julia/issues/12582

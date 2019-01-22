@@ -1,0 +1,68 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutch Cancer Research Center
+# Seattle - Washington - US
+#
+#  psipred is setup to use the old BLAST. 
+#  To use BLAST+ run the script   BLAST+/runpsipredplus
+#
+#  This was helpful: https://www.biostars.org/p/70342/
+#
+#  psiblast requires a referance database. The database needs to be setup
+#  for BLAST. psiblast is written for legacy BLAST.
+# wget ftp://ftp.uniprot.org/pub/databases/uniprot/uniref/uniref90/uniref90.fasta.gz
+# gunzip -v uniref90.fasta.gz
+#  modify runpsipred script to use /shared/biodata/ncbi-blast = BLASTDB
+#  set dbname = ${BLASTDB}/uniref90
+# 
+# Create Database for BLAST+
+# makeblastdb -in uniref90.fasta -dbtype prot -input_type fasta -out uniref90
+# called from runpsipredplus
+#
+# pfilt was found here: https://github.com/bjornwallner/proteus
+
+easyblock = 'MakeCp'
+
+name = 'psipred'
+version = '4.02'
+
+homepage = 'http://bioinf.cs.ucl.ac.uk/psipred/'
+description = """The PSIPRED Protein Sequence Analysis Workbench aggregates
+ several UCL structure prediction methods into one location."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = [
+    'http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred',
+    'http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/old_versions/'
+]
+sources = ['%(name)s.%(version)s.tar.gz']
+
+# this is not a patch. It configures BLAST with paths to referance
+# databases
+patches = ['%(name)s-%(version)s.config']
+
+dependencies = [
+    ('BLAST+', '2.8.1'),
+]
+
+start_dir = 'src'
+
+files_to_copy = ['bin', 'data', 'example',
+                 (['runpsipred', 'runpsipred_single'], 'bin'),
+                 (['BLAST+/runpsipredplus'], 'bin'),
+                 ]
+
+executables = ['chkparse', 'psipass2', 'psipred', 'seq2mtx']
+
+sanity_check_paths = {
+    'files': ['bin/%s' % x for x in executables],
+    'dirs': ['bin', 'data', 'example'],
+}
+
+modextravars = {'BLASTDB': '/shared/biodata/ncbi-blast'}
+
+moduleclass = 'bio'

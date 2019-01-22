@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+#
+#  Single Cell Analysis Pipelines
+
+easyblock = 'Tarball'
+
+name = 'cellranger'
+version = '3.0.2'
+
+homepage = 'https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest'
+description = """Single Cell Analysis Pipelines"""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# you must download this by hand after an agreement
+source_urls = ['https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest/']
+sources = ['%(name)s-%(version)s.tar.gz']
+checksums = ['882c9170703f9c57c3e1970b0bd7d679f511683c65ce8c63fcad3fcb88733f38']
+
+modextrapaths = { 'PATH': ['cellranger-cs/%(version)s/bin'] }
+
+sanity_check_paths = {
+    'files': ["cellranger"],
+    'dirs': ["cellranger-cs"],
+} 
+
+moduleclass = 'bio'

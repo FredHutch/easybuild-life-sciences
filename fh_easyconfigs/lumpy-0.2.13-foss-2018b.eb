@@ -1,0 +1,59 @@
+#
+#  easybuild easyconfig 
+#
+#  2016.07.18 John Dey jfdey@fredhutch.org
+#
+
+name = 'lumpy'
+version = '0.2.13'
+
+easyblock = 'MakeCp'
+
+homepage = 'https://github.com/pezmaster31/bamtools'
+description = '''A probabilistic framework for structural variant discovery.'''
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+builddependencies = [('Python', '2.7.15')]
+
+dependencies = [
+    ('SAMtools', '1.9'),
+    ('samblaster', '0.1.24'),
+]
+
+source_urls = ['https://github.com/arq5x/lumpy-sv/archive']
+sources = ['%(version)s.zip']
+
+executables = [
+    "lumpy", 
+    "lumpyexpress", 
+    "lumpyexpress.config"
+]
+
+data_files = [
+    "pe.pos_sorted.bam",
+    "pe.pos_sorted.histo",
+    "pe.pos_sorted.pe.bedpe",
+    "pe.pos_sorted.pesr.bedpe",
+    "sim.bedpe",
+    "sr.pos_sorted.bam",
+    "sr.pos_sorted.sr.bedpe"
+]
+
+files_to_copy = ["bin", "data", "scripts"]
+
+sanity_check_paths = {
+    'dirs': files_to_copy,
+    'files': ["bin/%s" % x for x in executables] +
+             ["data/%s" % x for x in data_files] +
+             ["scripts/%s" % x for x in [ "cnvanator_to_bedpes.py", 
+        "get_exclude_regions.py", "l_sort.py", "pairend_distro.py",
+        "split_unmapped_to_fasta.pl", "bedpe_sort.py", "extractSplitReads_BwaMem",
+        "l_bp.py", "lumpyexpress", "prob_bedpe_to_bedgraph.py",
+        "vcfToBedpe", "check_sorting.py", "get_coverages.py", 
+        "l_merge.py", "lumpyexpress.config", "run_histo.sh"]
+             ]
+} 
+
+modextrapaths = {'PATH': ''}
+moduleclass = 'bio'

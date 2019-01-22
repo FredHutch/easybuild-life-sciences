@@ -421,6 +421,25 @@
                 "Description:  BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
                 "Homepage: http://beast2.org/"
             ]
+        },
+        "/app/easybuild/modules/bio/Beast/2.5.1-foss-2016b.lua": {
+            "Description": "BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
+            "Version": "2.5.1-foss-2016b",
+            "fullName": "Beast/2.5.1-foss-2016b",
+            "help": "\nDescription\n===========\nBEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability.\n\n\nMore information\n================\n - Homepage: http://beast2.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Beast/2.5.1-foss-2016b/lib": 1
+            },
+            "pV": "000000002.000000005.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Beast/2.5.1-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000005.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description:  BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
+                "Homepage: http://beast2.org/"
+            ]
         }
     },
     "Bio-DB-HTS": {
@@ -578,6 +597,22 @@
                 "Description:  Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads \n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s \n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. \n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, \n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
                 "Homepage: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml"
             ]
+        },
+        "/app/easybuild/modules/bio/Bowtie2/2.3.4.3-foss-2016b.lua": {
+            "Description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
+            "Version": "2.3.4.3-foss-2016b",
+            "fullName": "Bowtie2/2.3.4.3-foss-2016b",
+            "help": "\nDescription\n===========\nBowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.\n\n\nMore information\n================\n - Homepage: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\n",
+            "hidden": false,
+            "pV": "000000002.000000003.000000004.000000003.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Bowtie2/2.3.4.3-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000003.000000004.000000003.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description:  Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.",
+                "Homepage: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml"
+            ]
         }
     },
     "CAP3": {
@@ -638,6 +673,24 @@
             "wV": "000000002.000000002.000000001.*intel.*zfinal-.000002015.*b.*ython.*zfinal-.000000002.000000007.000000010.*boost.*zfinal-.000000001.000000059.*zfinal",
             "whatis": [
                 "Transcript assembly, differential expression, and differential regulation for RNA-Seq - Homepage: http://cole-trapnell-lab.github.io/cufflinks/ "
+            ]
+        }
+    },
+    "DANPOS2": {
+        "/app/easybuild/modules/bio/DANPOS2/2.2.2-foss-2016b-Python-2.7.12.lua": {
+            "Description": "A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
+            "Version": "2.2.2-foss-2016b-Python-2.7.12",
+            "fullName": "DANPOS2/2.2.2-foss-2016b-Python-2.7.12",
+            "help": "\nDescription\n===========\nA toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2\n\n\nMore information\n================\n - Homepage: https://sites.google.com/site/danposdoc\n",
+            "hidden": false,
+            "pV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/DANPOS2/2.2.2-foss-2016b-Python-2.7.12": 1
+            },
+            "wV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
+            "whatis": [
+                "Description: A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
+                "Homepage: https://sites.google.com/site/danposdoc"
             ]
         }
     },
@@ -1354,6 +1407,25 @@
                 "Description:  The Integrative Genomics Viewer (IGV) is a high-performance visualization \n tool for interactive exploration of large, integrated genomic datasets. It supports a wide \n variety of data types, including array-based and next-generation sequence data, and genomic annotations. ",
                 "Homepage: http://www.broadinstitute.org/software/igv/"
             ]
+        },
+        "/app/easybuild/modules/bio/IGV/2.4.16-Java-1.8.lua": {
+            "Description": "This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+            "Version": "2.4.16-Java-1.8",
+            "fullName": "IGV/2.4.16-Java-1.8",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/IGV/2.4.16-Java-1.8/lib": 1
+            },
+            "pV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/IGV/2.4.16-Java-1.8": 1
+            },
+            "wV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
         }
     },
     "IGVTools": {
@@ -1654,6 +1726,24 @@
             "wV": "000000003.000000008.000000031.*intel.*zfinal-.000002015.*b.*zfinal",
             "whatis": [
                 " MUSCLE is one of the best-performing multiple alignment programs   according to published benchmark tests, with accuracy and speed that are consistently   better than CLUSTALW. MUSCLE can align hundreds of sequences in seconds. Most users   learn everything they need to know about MUSCLE in a few minutes\u2014only a handful of   command-line options are needed to perform common alignment tasks. - Homepage: http://drive5.com/muscle/ "
+            ]
+        }
+    },
+    "MiXCR": {
+        "/app/easybuild/modules/bio/MiXCR/3.0.3-Java-1.8.lua": {
+            "Description": "MiXCR processes big immunome data from raw sequences \nto quantitated clonotypes ",
+            "Version": "3.0.3-Java-1.8",
+            "fullName": "MiXCR/3.0.3-Java-1.8",
+            "help": "\nDescription\n===========\nMiXCR processes big immunome data from raw sequences \nto quantitated clonotypes\n\n\nMore information\n================\n - Homepage: https://milaboratory.com/software/mixcr/\n",
+            "hidden": false,
+            "pV": "000000003.000000000.000000003.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MiXCR/3.0.3-Java-1.8": 1
+            },
+            "wV": "000000003.000000000.000000003.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  MiXCR processes big immunome data from raw sequences \nto quantitated clonotypes ",
+                "Homepage: https://milaboratory.com/software/mixcr/"
             ]
         }
     },
@@ -2237,6 +2327,24 @@
             ]
         }
     },
+    "SPRING_dev": {
+        "/app/easybuild/modules/bio/SPRING_dev/1.6-foss-2016b-Python-2.7.15.lua": {
+            "Description": "SPRING is a collection of pre-processing scripts and a web\nbrowser-based tool for visualizing and interacting with high dimensional data.\nView an example dataset here. SPRING was developed for single cell RNA-Seq data\nbut can be applied more generally. The minimal input is a matrix of high\ndimensional data points (cells) and a list of dimension names (genes).",
+            "Version": "1.6-foss-2016b-Python-2.7.15",
+            "fullName": "SPRING_dev/1.6-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nSPRING is a collection of pre-processing scripts and a web\nbrowser-based tool for visualizing and interacting with high dimensional data.\nView an example dataset here. SPRING was developed for single cell RNA-Seq data\nbut can be applied more generally. The minimal input is a matrix of high\ndimensional data points (cells) and a list of dimension names (genes).\n\n\nMore information\n================\n - Homepage: http://https://github.com/AllonKleinLab/SPRING_dev\n",
+            "hidden": false,
+            "pV": "000000001.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/SPRING_dev/1.6-foss-2016b-Python-2.7.15": 1
+            },
+            "wV": "000000001.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: SPRING is a collection of pre-processing scripts and a web\nbrowser-based tool for visualizing and interacting with high dimensional data.\nView an example dataset here. SPRING was developed for single cell RNA-Seq data\nbut can be applied more generally. The minimal input is a matrix of high\ndimensional data points (cells) and a list of dimension names (genes).",
+                "Homepage: http://https://github.com/AllonKleinLab/SPRING_dev"
+            ]
+        }
+    },
     "SRA-Toolkit": {
         "/app/easybuild/modules/bio/SRA-Toolkit/2.5.7-ubuntu64": {
             "Description": "The NCBI SRA Toolkit enables reading (dumping) of sequencing files  from the SRA database and writing (loading) files into the .sra format  - Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=std ",
@@ -2788,6 +2896,27 @@
             "whatis": [
                 "Description: BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
                 "Homepage: https://bitbucket.org/statgen/xhmm/"
+            ]
+        }
+    },
+    "canu": {
+        "/app/easybuild/modules/bio/canu/1.8-foss-2016b.lua": {
+            "Description": "Canu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing",
+            "Version": "1.8-foss-2016b",
+            "fullName": "canu/1.8-foss-2016b",
+            "help": "\nDescription\n===========\nCanu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing\n\n\nMore information\n================\n - Homepage: http://canu.readthedocs.io\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/canu/1.8-foss-2016b/lib": 1
+            },
+            "pV": "000000001.000000008.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/canu/1.8-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000008.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: Canu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing",
+                "Homepage: http://canu.readthedocs.io"
             ]
         }
     },
@@ -3509,6 +3638,27 @@
             "whatis": [
                 "Description: Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers.",
                 "Homepage: http://portals.broadinstitute.org/oncotator/"
+            ]
+        }
+    },
+    "ont-guppy-cpu": {
+        "/app/easybuild/modules/bio/ont-guppy-cpu/2.1.3.lua": {
+            "Description": "Guppy software supports MinIT and MinION instruments from\n Nanopore Technologies",
+            "Version": "2.1.3",
+            "fullName": "ont-guppy-cpu/2.1.3",
+            "help": "\nDescription\n===========\nGuppy software supports MinIT and MinION instruments from\n Nanopore Technologies\n\n\nMore information\n================\n - Homepage: https://nanoporetech.com/products/minit\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ont-guppy-cpu/2.1.3/lib": 1
+            },
+            "pV": "000000002.000000001.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ont-guppy-cpu/2.1.3/bin": 1
+            },
+            "wV": "000000002.000000001.000000003.*zfinal",
+            "whatis": [
+                "Description: Guppy software supports MinIT and MinION instruments from\n Nanopore Technologies",
+                "Homepage: https://nanoporetech.com/products/minit"
             ]
         }
     },

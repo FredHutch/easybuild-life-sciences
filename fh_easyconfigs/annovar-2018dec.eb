@@ -2,6 +2,7 @@
 #
 # John Dey jfdey@fredhutch.org 
 # Fred Hutchinson Cancer Research Institue, Seattle United States
+# Software download requires registration
 #
 # Note: The annovar database has been move outside of the source code tree
 # To fully configure download databases
@@ -23,14 +24,14 @@ description = """ANNOVAR is an efficient software tool to utilize update-to-date
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
 source_urls = ['https://github.com/WGLab/doc-ANNOVAR/archive']
-sources = ['master.zip']
+sources = [{'download_filename': '%(name)s.latest.tar.gz',
+            'filename': '%(name)s-%(version)s.tar.gz',
+           }]
 
 # Annovar has a perl dependancy but no speicific version is mentioned in the release notes.
 dependencies = [
     ('Perl', '5.28.0', '-GCCcore-7.3.0')
 ]
-
-modloadmsg = """ANNOVAR scripts are located in \\$EBROOTANNOVAR\nTo run: perl \\$EBROOTANNOVAR/annotate_variation.pl"""
 
 sanity_check_paths = {
     'files': ["annotate_variation.pl", 
@@ -38,7 +39,8 @@ sanity_check_paths = {
               "convert2annovar.pl", 
               "retrieve_seq_from_fasta.pl", 
               "coding_change.pl", 
-              "variants_reduction.pl"],
+              "variants_reduction.pl",
+              ],
     'dirs': ["humandb", "example"],
 }
 
