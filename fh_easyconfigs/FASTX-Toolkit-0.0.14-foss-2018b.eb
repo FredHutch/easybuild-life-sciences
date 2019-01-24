@@ -28,7 +28,14 @@ toolchainopts = {'pic': True}
 source_urls = ['https://github.com/agordon/fastx_toolkit/releases/download/%(version)s']
 sources = ['fastx_toolkit-%(version)s.tar.bz2']
 
-builddependencies = [('libgtextutils', '0.7')]
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('M4', '1.4.18'),
+]
+
+dependencies = [('libgtextutils', '0.7')]
+
+buildopts = 'CXXFLAGS="$CXXFLAGS -Werror=implicit-fallthrough"'
 
 sanity_check_paths = {
     'files':

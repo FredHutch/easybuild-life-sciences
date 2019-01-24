@@ -1,0 +1,28 @@
+title: Fred Hutch Scientific Software
+logo: /assets/img/logo.png
+description: Fred Hutch Easybuild Easyconfigs for Scientific Software. 
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-minimal
+
+
+baseurl: "/easybuild-life-sciences"
+# baseurl: ""
+
+collections:
+  R:
+    output: true
+    layout: post
+    permalink: /:collection/:path
+  Python:
+    output: true
+    layout: post 
+    permalink: /:collection/:path/
+  Dot:
+    output: true
+    layout: post 
+    permalink: /:collection/:path/
+  release:
+    output: true
+    layout: post 
+    permalink: /:collection/:path/
