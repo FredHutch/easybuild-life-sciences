@@ -1,0 +1,30 @@
+# The Fred Hutchinson Cancer Research Center
+# Homepage: https://www.fredhutch.org
+# Author: Benjamin McGough <bmcgough@fredhutch.org>
+
+easyblock = 'JAR'
+
+name = 'cromwell'
+version = '36'
+versionsuffix = '-Java-%(javaver)s'
+
+homepage = 'https://github.com/broadinstitute/cromwell'
+description = """Scientific workflow engine designed for simplicity &
+scalability."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/broadinstitute/cromwell/releases/download/%(version)s']
+sources = ['%(name)s-%(version)s.jar']
+checksums = ['063a3f45f0f5fb3c15ee6f2fd86265fedddcd850b98877f1833defdfd3f7b988']
+
+dependencies = [('Java', '1.8')]
+
+sanity_check_paths = {
+    'files': ['cromwell-%(version)s.jar'],
+    'dirs': [],
+}
+
+modloadmsg = "To execute %(name)s run: java -jar $EBROOTCROMWELL/%(name)s-%(version)s.jar\n"
+
+moduleclass = 'bio'
