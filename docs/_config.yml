@@ -1,15 +1,17 @@
 plugins:
   - jekyll-remote-theme
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin  : "contrast"
+remote_theme: "mmistakes/minimal-mistakes"
+
+minimal_mistakes_skin: "contrast"
 
 # Site Settings
-lcale: en-US
+locale: en-US
 title: "Fred Hutch EasyBuild Life Science"
-description: "Scientific Software Inventory at the Fred Hutch"
-url                      : https://FredHutch.github.io/easybuild-life-sciences
+description: "Scientific Software Fred Hutch"
+#url                      : https://sciwiki.fredhutch.org
 baseurl                  : ""
 repository               : "FredHutch/easybuild-life-sciences"
+
 
 collections:
   r:
@@ -18,15 +20,17 @@ collections:
   python:
     output: true
     permalink: /:collection/:path/
-  dot:
+  updates:
     output: true
     permalink: /:collection/:path/
-  updates:
+  dot:
     output: true
     permalink: /:collection/:path/
   announcements:
     output: true
     permalink: /:collection/:path/
+
+
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
@@ -165,8 +169,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
-
-#  - jekyll-include-cache
+  - jekyll-include-cache
 
 
 # Archives
@@ -209,16 +212,7 @@ compress_html:
 # Defaults
 ###NOTE:  for sciwiki, share: true will turn on the "Edit this page" function at the bottom of the pages
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: updates 
-    values:
-      layout: single
-      share: true
-      sidebar:
-      nav: "docs"
-
+  # _r
   - scope:
       path: ""
       type: r 
@@ -226,8 +220,9 @@ defaults:
       layout: single
       share: true
       sidebar:
-      nav: "docs"
+        nav: "docs"
 
+  # _python
   - scope:
       path: ""
       type: python 
@@ -235,13 +230,33 @@ defaults:
       layout: single
       share: true
       sidebar:
-              nav: "docs"
+        nav: "docs"
 
+  # _updates
   - scope:
       path: ""
-      type: announcements
+      type: updates 
     values:
       layout: single
       share: true
       sidebar:
-              nav: "docs"
+        nav: "docs"
+
+# _dot
+  - scope:
+      path: ""
+      type: dot 
+    values:
+      layout: single
+      share: true
+      sidebar:
+        nav: "docs"
+
+# _announcements
+  - scope:
+      path: ""
+      type: announcements 
+    values:
+      layout: single
+      sidebar:
+        nav: "docs"
