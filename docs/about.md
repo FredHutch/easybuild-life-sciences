@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Scientific Software at Fred Hutch
-permalink: /about
+layout: single
+permalink: /about/
 ---
 
 ### Scientific Software at Fred Hutch
