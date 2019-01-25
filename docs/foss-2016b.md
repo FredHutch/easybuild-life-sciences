@@ -1,5 +1,4 @@
 ---
-layout: post
 title: foss-2016b
 ---
 
