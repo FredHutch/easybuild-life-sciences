@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Using Software 
-permalink: /software
+layout: single
+permalink: /software/
 ---
 
 ### Scientific Software Environment
