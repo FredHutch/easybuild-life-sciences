@@ -16,21 +16,24 @@ minimal_mistakes_skin  : "contrast"
 lcale: en-US
 title: "Fred Hutch EasyBuild Life Science"
 description: "Scientific Software Inventory at the Fred Hutch"
-#url                      : https://sciwiki.fredhutch.org
+url                      : https://FredHutch.github.io/easybuild-life-sciences
 baseurl                  : ""
 repository               : "FredHutch/easybuild-life-sciences"
 
 collections:
-  R:
+  r:
     output: true
     permalink: /:collection/:path/
-  Python:
+  python:
     output: true
     permalink: /:collection/:path/
-  Dot:
+  dot:
     output: true
     permalink: /:collection/:path/
-  posts:
+  updates:
+    output: true
+    permalink: /:collection/:path/
+  announcements:
     output: true
     permalink: /:collection/:path/
 
@@ -171,7 +174,8 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jemoji
-  - jekyll-include-cache
+
+#  - jekyll-include-cache
 
 
 # Archives
@@ -214,26 +218,32 @@ compress_html:
 # Defaults
 ###NOTE:  for sciwiki, share: true will turn on the "Edit this page" function at the bottom of the pages
 defaults:
-  # _computing
+  # _posts
+  - scope:
+       path: ""
+       type: updates 
+    values:
+       layout: single
+       sidebar:
+         nav: "docs"
+  - scope:
+       path: ""
+       type: r 
+    values:
+       layout: single
+       sidebar:
+         nav: "docs"
   - scope:
       path: ""
-      type: computing
+      type: python 
     values:
       layout: single
-      toc: true
-      toc_label: "On This Page"
-      share: true
       sidebar:
-        nav: "computing"
-
-# _scicompannounce
+              nav: "docs"
   - scope:
       path: ""
-      type: scicompannounce
+      type: announcements
     values:
       layout: single
-      share: false
       sidebar:
-        nav: "computing"
-
-share: true
+              nav: "docs"
