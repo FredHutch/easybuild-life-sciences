@@ -21,15 +21,3 @@ docs:
         url: /dot/
       - title: "About"
         url: /about/
-
-defaults:
-  - scope:
-      path: ""
-      type: about
-    values:
-      layout: single
-      toc: true
-      toc_table: "On This Page"
-      sidebar:
-         nav: "docs"
-
