@@ -1,12 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# Theme Settings
-#
 plugins:
   - jekyll-remote-theme
 remote_theme           : "mmistakes/minimal-mistakes"
@@ -220,30 +211,37 @@ compress_html:
 defaults:
   # _posts
   - scope:
-       path: ""
-       type: updates 
+      path: ""
+      type: updates 
     values:
-       layout: single
-       sidebar:
-         nav: "docs"
+      layout: single
+      share: true
+      sidebar:
+      nav: "docs"
+
   - scope:
-       path: ""
-       type: r 
+      path: ""
+      type: r 
     values:
-       layout: single
-       sidebar:
-         nav: "docs"
+      layout: single
+      share: true
+      sidebar:
+      nav: "docs"
+
   - scope:
       path: ""
       type: python 
     values:
       layout: single
+      share: true
       sidebar:
               nav: "docs"
+
   - scope:
       path: ""
       type: announcements
     values:
       layout: single
+      share: true
       sidebar:
               nav: "docs"
