@@ -1,5 +1,4 @@
 ---
-layout: post
 title: SPRING_dev
 catagory:  
 homepage: http://https://github.com/AllonKleinLab/SPRING_dev

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: gdc-client
 catagory:  
 homepage: https://gdc.nci.nih.gov/access-data/gdc-data-transfer-tool

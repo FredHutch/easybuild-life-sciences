@@ -1,5 +1,4 @@
 ---
-layout: post
 title: UMAP 
 catagory:  
 homepage: https://umap-learn.readthedocs.io/en/latest/ 

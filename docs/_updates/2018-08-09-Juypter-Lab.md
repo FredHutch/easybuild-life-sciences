@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Juypter Lab 
 ctagory: lang
 homepage: https://www.jupyter.org/

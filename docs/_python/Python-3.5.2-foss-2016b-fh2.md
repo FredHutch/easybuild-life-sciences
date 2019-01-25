@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-3.5.2-foss-2016b-fh2
 date: 2017-10-10
 ---

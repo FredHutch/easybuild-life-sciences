@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-2.7.9-goolf-1.7.20-fh
 date: 2017-10-10
 ---

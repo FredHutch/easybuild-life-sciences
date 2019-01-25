@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Biopython
 catagory:  
 homepage: http://www.biopython.org
