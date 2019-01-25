@@ -1,5 +1,4 @@
 ---
-layout: post
 title: beagle
 catagory:  
 homepage: https://github.com/beagle-dev/beagle-lib

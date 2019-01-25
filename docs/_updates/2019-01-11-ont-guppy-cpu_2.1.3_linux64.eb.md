@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ont-guppy-cpu_2.1.3_linux64.eb
 catagory:  
 homepage: https://nanoporetech.com/products/minit

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-2.7.10-intel-2015b
 date: 2017-10-10
 ---

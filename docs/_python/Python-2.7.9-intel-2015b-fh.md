@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-2.7.9-intel-2015b-fh
 date: 2017-10-10
 ---

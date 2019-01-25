@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-3.6.7-foss-2018b
 date: 2018-11-29
 ---

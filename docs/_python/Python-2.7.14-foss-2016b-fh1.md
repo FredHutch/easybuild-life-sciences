@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Python-2.7.14-foss-2016b-fh1
 date: 2018-02-28
 ---

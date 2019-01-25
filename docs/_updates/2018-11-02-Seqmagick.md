@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Seqmagick
 catagory:  
 homepage: https://fhcrc.github.io/seqmagick/
