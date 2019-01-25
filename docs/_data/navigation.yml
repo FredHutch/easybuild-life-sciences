@@ -1,76 +1,35 @@
-
 main:
-  - title: "Software Library"
+  - title: "Software Updates"
+    url: /updates/
+  - title: "Announcements"
+    url: /announcements/
+
+docs:        
+  - title: "Scientific Software"
     children:
-      - title: "Home"
-        url: /index
+      - title: "Overview"
+        url: /index/
+      - title: "Using Software"
+        url: /modules-howto/
+      - title: "Software Updates"
+        url: /updates/
+      - title: "R Modules"
+        url: /r/
+      - title: "Python Modules"
+        url: /python/
+      - title: "Dependancy Graphs"
+        url: /dot/
       - title: "About"
         url: /about/
-      - title: "Software Updates"
-        url: /releases/
 
-R:
-  - title: "Software Library"
-    url: /index
+defaults:
+  - scope:
+      path: ""
+      type: about
+    values:
+      layout: single
+      toc: true
+      toc_table: "On This Page"
+      sidebar:
+         nav: "docs"
 
-
-  - title: "Computing"
-    children:
-      - title: "Overview"
-        url: /computing/comp_index/
-      - title: "Resource Library"
-        url: /compdemos/
-  - title: "Access and Credentials"
-    children:
-      - title: "Overview"
-        url: /computing/access_overview/
-      - title: "Credentials"
-        url: /computing/access_credentials/
-      - title: "Methods"
-        url: /computing/access_methods/
-
-  - title: "Data Storage"
-    children:
-      - title: "Overview"
-        url: /computing/store_overview/
-      - title: "Database Systems"
-        url: /computing/store_databases/
-      - title: "File Storage Systems"
-        url: /computing/store_posix/
-      - title: "Object Storage Systems"
-        url: /computing/store_objectstore/
-      - title: "Temporary (Scratch) Storage"
-        url: /computing/store_scratch/
-      - title: "Collaborative Storage Systems"
-        url: /computing/store_collaboration/
-
-
-  - title: "Computation"
-    children:
-      - title: "Overview"
-        url: /computing/cluster_overview/
-      - title: "Resources Available"
-        url: /computing/resource_overview/
-      - title: "Linux"
-        url: /computing/linux_linux101/
-      - title: "Cluster Software"
-        url: /computing/cluster_software/
-      - title: "Using the Cluster"
-        url: /computing/cluster_rhinoGizmo/
-      - title: "Job Management with Slurm"
-        url: /computing/cluster_usingSlurm/
-      - title: "Cloud Computing"
-        url: /computing/cluster_cloudCompute/
-
-  - title: "Software, Resources and Updates"
-    children:
-      - title: "Overview"
-        url: /computing/software_overview/
-      - title: "In-Person Training and Office Hours"
-        url: /computing/training_overview/
-      - title: "Current Software"
-        url: http://fredhutch.github.io/easybuild-life-sciences/
-      - title: "Updates and Announcements"
-        url: /scicompannounce/
-      - title: "Demos/HOWTOs (Resource Library)"
-        url: /compdemos/
