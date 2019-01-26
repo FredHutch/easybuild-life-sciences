@@ -1,6 +1,8 @@
 ---
 title: Bio Modules  18.04
 date: 2019-01-10
+sidebar:
+  nav: "docs"
 ---
 
  - [BCFtools/1.9-foss-2018b](http://www.htslib.org/)  
