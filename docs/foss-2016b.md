@@ -1,5 +1,8 @@
 ---
 title: foss-2016b
+permalink: /foss-2016b/
+toc: true
+toc_label: "On This Page"
 ---
 
 Foss 2016b is currently in production on all HPC resources.  The packages are built to s
