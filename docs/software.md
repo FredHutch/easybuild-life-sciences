@@ -3,6 +3,9 @@ title: Using Software
 layout: single
 permalink: /software/
 toc: true
+toc_label: "On This Page"
+sidebar:
+ nav: "docs"
 ---
 
 ### Scientific Software Environment

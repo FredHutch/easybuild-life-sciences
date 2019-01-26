@@ -8,9 +8,9 @@ docs:
   - title: "Scientific Software"
     children:
       - title: "Overview"
-        url: /index/
+        url: /
       - title: "Using Software"
-        url: /modules-howto/
+        url: /software/
       - title: "Software Updates"
         url: /updates/
       - title: "R Modules"
