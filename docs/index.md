@@ -1,7 +1,7 @@
 ---
 title: Scientific Software 
-layout: single
-permalink: /
+layout: wide
+permalink: /index/
 sidebar:
   nav: "docs"
 ---
