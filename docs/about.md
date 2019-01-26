@@ -3,6 +3,9 @@ title: Scientific Software at Fred Hutch
 layout: single
 permalink: /about/
 toc: true
+toc_label: "On This Page"
+sidebar:
+  nav: "docs"
 ---
 
 ### Scientific Software at Fred Hutch
