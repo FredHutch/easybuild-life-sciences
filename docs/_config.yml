@@ -10,7 +10,7 @@ title: "Fred Hutch EasyBuild Life Science"
 description: "Scientific Software Fred Hutch"
 url                      : "https://fredhutch.github.io"
 baseurl                  : "/easybuild-life-sciences"
-repository               : 
+repository               : "FredHutch/easybuild-life-sciences"
 
 
 collections:
