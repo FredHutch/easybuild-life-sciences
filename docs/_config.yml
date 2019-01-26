@@ -218,7 +218,6 @@ defaults:
       type: r 
     values:
       layout: single
-      share: true
       sidebar:
         nav: "docs"
 
@@ -228,7 +227,6 @@ defaults:
       type: python 
     values:
       layout: single
-      share: true
       sidebar:
         nav: "docs"
 
@@ -238,7 +236,6 @@ defaults:
       type: updates 
     values:
       layout: single
-      share: true
       sidebar:
         nav: "docs"
 
@@ -248,7 +245,6 @@ defaults:
       type: dot 
     values:
       layout: single
-      share: true
       sidebar:
         nav: "docs"
 
