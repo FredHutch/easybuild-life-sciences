@@ -8,9 +8,9 @@ minimal_mistakes_skin: "contrast"
 locale: en-US
 title: "Fred Hutch EasyBuild Life Science"
 description: "Scientific Software Fred Hutch"
-#url                      : https://sciwiki.fredhutch.org
-baseurl                  : ""
-repository               : "FredHutch/easybuild-life-sciences"
+url                      : "https://fredhutch.github.io"
+baseurl                  : "/easybuild-life-sciences"
+repository               : 
 
 
 collections:
@@ -102,9 +102,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : UA-123256805-1
+    tracking_id          : 
 
 
 
