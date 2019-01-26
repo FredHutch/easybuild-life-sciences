@@ -1,6 +1,8 @@
 ---
-title: Bio Modules  14.04
+title: Bio Modules 14.04
 date: 2019-01-15
+sidebar:
+  nav: "docs"
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  

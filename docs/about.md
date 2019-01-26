@@ -2,6 +2,7 @@
 title: Scientific Software at Fred Hutch
 layout: single
 permalink: /about/
+toc: true
 ---
 
 ### Scientific Software at Fred Hutch

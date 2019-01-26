@@ -2,6 +2,7 @@
 title: Using Software 
 layout: single
 permalink: /software/
+toc: true
 ---
 
 ### Scientific Software Environment
