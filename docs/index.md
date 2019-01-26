@@ -3,6 +3,7 @@ title: Scientific Software
 layout: single
 permalink: /
 toc: true
+toc_label: "On This Page"
 sidebar:
   nav: "docs"
 ---
