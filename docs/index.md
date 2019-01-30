@@ -13,7 +13,7 @@ inventory of available software and information about using scientific software.
 
 ## Life Science Software Inventory
 Inventory of module class "bio" software modules.  This is a subset of all modules that are available. The full
-list of modules encompesses low level system libraries, math libraries, programming languages, visutilzation tools. 
+list of modules encompesses low level system libraries, math libraries, programming languages, and visualization tools. 
 
  - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-14.04/)
 
