@@ -15,7 +15,7 @@ inventory of available software and information about using scientific software.
 Inventory of module class "bio" software modules.  This is a subset of all modules that are available. The full
 list of modules encompesses low level system libraries, math libraries, programming languages, visutilzation tools. 
 
- - [Life Science Software Inventory](/bio-modules-14.04/)
+ - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-14.04/)
 
 ## Programming Languages
 Scientific Computing maintains custom builds for R and Python. The
