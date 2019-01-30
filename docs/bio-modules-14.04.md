@@ -1,10 +1,10 @@
 ---
 title: Bio Modules 14.04
 date: 2019-01-15
+layout: single
 sidebar:
   nav: "docs"
 ---
-
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
 The AMOS consortium is committed to the development of open-source whole genome assembly software
  - [BBMap/36.62-foss-2016b-Java-1.8.0_121](https://sourceforge.net/projects/bbmap/)  
