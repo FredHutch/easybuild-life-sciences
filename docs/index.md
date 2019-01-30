@@ -17,15 +17,15 @@ list of modules encompesses low level system libraries, math libraries, programm
 
  - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-14.04/)
 
-## Programming Languages
+## Programming Language Modules
 Scientific Computing maintains custom builds for R and Python. The
 custom R and Python modules contain hundreds of packages. The package
 list is a compilation of user requests.  Click on the links
 bellow to see a list of available builds with a list of modules.
 
- - [R Builds](/r/)
- - [Python Builds](/python/)
- - [foss-2016b](/foss-2016b/)
- - [foss-2018b](/foss-2018b/)
- - [Dependancy Graphs](/dot/)
+ - [R Modules]({{ site.baseurl }}/r/)
+ - [Python Modules]({{ site.baseurl }}/python/)
+ - [foss-2016b]({{ site.baseurl }}/foss-2016b/) (Free and Open Source Software)
+ - [foss-2018b]({{ site.baseurl }}/foss-2018b/) (Free and Open Source Software)
+ - [Dependancy Graphs]({{ site.baseurl }}/dot/)
 
