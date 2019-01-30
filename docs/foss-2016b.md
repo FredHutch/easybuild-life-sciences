@@ -2,6 +2,8 @@
 title: foss-2016b
 permalink: /foss-2016b/
 layout: single
+sidebar:
+  nav: "docs"
 ---
 
 Foss 2016b is currently in production on all HPC resources.  The packages are built to s
