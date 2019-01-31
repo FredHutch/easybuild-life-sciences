@@ -25,14 +25,23 @@ else
    exit 1
 fi
 docs_dir=${base_dir}/docs
-posts_dir=${base_dir}/docs/_posts/
+posts_dir=${base_dir}/docs/_updates/
 scripts_dir=${base_dir}/scripts
 eb_dir=${base_dir}/fh_easyconfigs/
 
 eb_name=`basename $pkg`
+
   short=`echo $eb_name | sed 's/-[0-9].*//'`
   pp=${eb_name%.eb}
   pkg_name=`echo ${pp} | sed 's;-\([0-9]\);/\1;1'` 
+if [[ $eb_name == *"foss"* ]]; then
+    full=${pkg_name//-foss*/} 
+elif [[ $eb_name == *"Java"* ]]; then
+    full=${pkg_name//-Java*/} 
+elif [[ $eb_name == *"-GCC"* ]]; then
+    full=${pkg_name//-GCC*/} 
+fi
+
   ccc=${cc%\'*}
   module_class=${ccc#*\'}
 pkg_path=${eb_dir}/${eb_name}
@@ -47,12 +56,11 @@ pkg_path=${eb_dir}/${eb_name}
 
 cat << EOF  >${posts_dir}${doc_date}-${short}.md
 ---
-layout: post
-title: $short
-catagory: $module_class 
-homepage: $url
+title: $full
 ---
 $description
+
+Project Homepage: [$short]($url)
 \`\`\`
 module load $pkg_name
 \`\`\`
