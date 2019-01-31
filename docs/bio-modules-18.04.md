@@ -1,6 +1,7 @@
 ---
 title: Bio Modules  18.04
 date: 2019-01-10
+layout: single
 sidebar:
   nav: "docs"
 ---
