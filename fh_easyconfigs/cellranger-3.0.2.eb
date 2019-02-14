@@ -8,7 +8,7 @@ easyblock = 'Tarball'
 name = 'cellranger'
 version = '3.0.2'
 
-homepage = 'https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest'
+homepage = 'https://support.10xgenomics.com/single-cell-gene-expression/software/overview/welcome'
 description = """Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform."""
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}

@@ -32,14 +32,16 @@ eb_dir=${base_dir}/fh_easyconfigs/
 eb_name=`basename $pkg`
 
   short=`echo $eb_name | sed 's/-[0-9].*//'`
-  pp=${eb_name%.eb}
-  pkg_name=`echo ${pp} | sed 's;-\([0-9]\);/\1;1'` 
+  pkg_name=${eb_name%.eb}
+  mod_name=`echo ${pkg_name} | sed 's;-\([0-9]\);/\1;1'` 
 if [[ $eb_name == *"foss"* ]]; then
     full=${pkg_name//-foss*/} 
 elif [[ $eb_name == *"Java"* ]]; then
     full=${pkg_name//-Java*/} 
 elif [[ $eb_name == *"-GCC"* ]]; then
     full=${pkg_name//-GCC*/} 
+else
+    full=${pkg_name//.eb/} 
 fi
 
   ccc=${cc%\'*}
@@ -64,7 +66,7 @@ Project Homepage: [$short]($url)
 
 Usage:
 \`\`\`
-module load $pkg_name
+module load $mod_name
 \`\`\`
 EOF
 
