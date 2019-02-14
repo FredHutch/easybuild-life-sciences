@@ -600,6 +600,9 @@ exts_list = [
         'modulename': 'mako',
         'source_urls': ['https://pypi.python.org/packages/source/m/Mako'],
     }),
+    ('matplotlib', '2.0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/matplotlib'],
+    }),
     ('matplotlib', '2.1.1', {
         'source_urls': ['https://pypi.python.org/packages/source/m/matplotlib'],
     }),

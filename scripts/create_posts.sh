@@ -25,7 +25,7 @@ else
    exit 1
 fi
 docs_dir=${base_dir}/docs
-posts_dir=${base_dir}/docs/_posts/
+posts_dir=${base_dir}/docs/_updates/
 scripts_dir=${base_dir}/scripts
 eb_dir=${base_dir}/fh_easyconfigs/
 

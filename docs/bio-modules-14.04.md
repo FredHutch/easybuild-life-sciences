@@ -1,17 +1,16 @@
 ---
-title: Bio Modules 14.04
-date: 2019-01-15
-sidebar:
-  nav: "docs"
+layout: post
+title: Bio Modules  14.04
+date: 2019-02-14
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
 The AMOS consortium is committed to the development of open-source whole genome assembly software
  - [BBMap/36.62-foss-2016b-Java-1.8.0_121](https://sourceforge.net/projects/bbmap/)  
 BBMap short read aligner, and other bioinformatic tools.
- - [BCFtools/1.8-foss-2016b](http://www.htslib.org/)  
-SAM Tools provide various utilities for manipulating alignments in the SAM format, 
- including sorting, merging, indexing and generating alignments in a per-position format.
+ - [BCFtools/1.9-foss-2016b](http://www.htslib.org/)  
+Samtools is a suite of programs for interacting with high-throughput sequencing data.
+ BCFtools
  - [BEDOPS/2.4.35-foss-2016b](http://bedops.readthedocs.io/en/latest/index.html)  
 BEDOPS is an open-source command-line toolkit that performs highly efficient and
  scalable Boolean and other set operations, statistical calculations, archiving, conversion and
@@ -80,12 +79,14 @@ QC checks, or create an HTML based report which can be integrated into a
 pipeline.
  - [FastTree/2.1.9-foss-2016b](http://www.microbesonline.org/fasttree/ )  
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of  time and memory. 
- - [GATK/3.7-Java-1.8.0_92](http://www.broadinstitute.org/gatk/)  
-The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute 
- to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,
- with a primary focus on variant discovery and genotyping as well as strong emphasis on 
- data quality assurance. Its robust architecture, powerful processing engine and 
- high-performance computing features make it capable of taking on projects of any size.
+ - [GATK/4.0.10.0-foss-2016b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
+The Genome Analysis Toolkit or GATK is a software package
+developed at the Broad Institute to analyse next-generation resequencing
+data. The toolkit offers a wide variety of tools, with a primary focus on
+variant discovery and genotyping as well as strong emphasis on data quality
+assurance. Its robust architecture, powerful processing engine and
+high-performance computing features make it capable of taking on projects
+of any size.
  - [GEOS/3.6.2-foss-2016b-Python-2.7.12](http://trac.osgeo.org/geos)  
 GEOS (Geometry Engine
  - [GISTIC/2.0.23](www.broadinstitute.org/cancer/cga/gistc)  
@@ -114,7 +115,7 @@ HMMER is used for searching sequence databases for homologs of protein sequences
  because of the strength of its underlying mathematical models. In the past, this strength
  came at significant computational expense, but in the new HMMER3 project, HMMER is now
  essentially as fast as BLAST.
- - [HTSlib/1.8-foss-2016b](http://www.htslib.org/)  
+ - [HTSlib/1.9-foss-2016b](http://www.htslib.org/)  
 A C library for reading/writing high-throughput sequencing data.
  HTSlib also provides the bgzip, htsfile, and tabix utilities
  - [Homer/v4.9-foss-2016b](http://homer.ucsd.edu/homer/download.html)  
@@ -131,6 +132,8 @@ This package contains command line utilities for preprocessing,
 Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and processing of HTS reads to identify VDJ usage and clonal origin to gain insight of the antibody repertoire of a given organism.
  - [JAGS/4.2.0-foss-2016b](http://mcmc-jags.sourceforge.net/ )  
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis   of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
+ - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)  
+Kent tools: collection of tools used by the UCSC genome browser.
  - [LAST/926-foss-2016b](http://last.cbrc.jp/)  
 LAST finds similar regions between sequences.
  - [MAFFT/7.305-foss-2016b-with-extensions](http://mafft.cbrc.jp/alignment/software/)  
@@ -186,7 +189,7 @@ R is a free software environment for statistical computing and graphics.
 RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.
  - [RepeatMasker/4-0-7-foss-2016b](www.repeatmasker.org)  
 RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked
- - [SAMtools/1.8-foss-2016b](http://www.htslib.org/)  
+ - [SAMtools/1.9-foss-2016b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [SPLITREAD/0.1-foss-2016b](http://splitread.sourceforge.net/ )  
@@ -254,8 +257,8 @@ BWA is a software package for mapping DNA sequences against a large reference ge
  - [canu/1.8-foss-2016b](http://canu.readthedocs.io)  
 Canu is a fork of the Celera Assembler designed for
  high-noise single-molecule sequencing
- - [cellranger/2.2.0](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
-Single Cell Analysis Pipelines
+ - [cellranger/3.0.2](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
+Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform.
  - [conifer/0.2.2-foss-2016b-Python-2.7.12-fh2](https://sourceforge.net/projects/conifer )  
 CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes.
  - [cromwell/36-Java-1.8](https://github.com/broadinstitute/cromwell)  
