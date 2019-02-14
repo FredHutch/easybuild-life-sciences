@@ -61,6 +61,8 @@ title: $full
 $description
 
 Project Homepage: [$short]($url)
+
+Usage:
 \`\`\`
 module load $pkg_name
 \`\`\`
