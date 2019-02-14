@@ -1,5 +1,5 @@
 ---
-title: "Python Libraries"
+title: "Available Python Modules"
 layout: collection
 classes: wide
 permalink: /python/
