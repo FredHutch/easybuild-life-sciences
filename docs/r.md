@@ -1,5 +1,5 @@
 ---
-title: "R Packages"
+title: "Available R Modules"
 layout: collection
 classes: wide
 permalink: /r/

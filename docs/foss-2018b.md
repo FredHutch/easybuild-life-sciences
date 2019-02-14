@@ -1,8 +1,9 @@
 ---
 title: foss-2018b
 permalink: /foss-2018b/
-toc: true
-toc_label: "On This Page"
+layout: single
+sidebar:
+  nav: "docs"
 ---
 
 Foss-2018b is being developed to support Ubuntu 18.04. Hutch HPC cluster will be migrating

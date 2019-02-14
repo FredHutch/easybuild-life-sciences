@@ -6,7 +6,7 @@
 
 easyblock = 'MakeCp'
 
-name = 'bwa'
+name = 'BWA'
 version = '0.7.17'
 
 homepage = 'https://bitbucket.org/statgen/xhmm/'

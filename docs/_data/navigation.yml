@@ -9,8 +9,6 @@ docs:
     children:
       - title: "Overview"
         url: /
-      - title: "Using Software"
-        url: /software/
       - title: "Software Updates"
         url: /updates/
       - title: "R Modules"
