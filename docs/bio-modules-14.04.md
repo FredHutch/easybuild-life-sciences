@@ -1,10 +1,9 @@
 ---
 title: Bio Modules  14.04
-permalink: /${md_file}
+date: 2019-02-14
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-02-14
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
