@@ -1,6 +1,5 @@
 ---
 title: All Modules  18.04
-permalink: /all-modules-18.04
 layout: single
 sidebar:
   nav: "docs"
