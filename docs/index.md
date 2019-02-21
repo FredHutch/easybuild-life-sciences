@@ -30,7 +30,7 @@ bellow to see a list of available builds with a list of modules.
  - [Python Modules]({{ site.baseurl }}/python/)
  - [foss-2016b]({{ site.baseurl }}/foss-2016b/) (Free and Open Source Software)
  - [foss-2018b]({{ site.baseurl }}/foss-2018b/) (Free and Open Source Software)
- - [Dependancy Graphs]({{ site.baseurl }}/dot/)
+ - [Dependency Graphs]({{ site.baseurl }}/dot/)
 
 ### Scientific Software Environment
 The user interface for using software is Modules.
