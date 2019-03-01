@@ -135,9 +135,9 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/c/cutadapt']
     }),
     ('Cycler', '0.10.0', {
-        'source_tmpl': 'cycler-0.10.0.tar.gz',
+        'source_tmpl': 'cycler-%(version)s0.tar.gz',
         'modulename': 'cycler',
-        'source_urls': ['https://pypi.python.org/packages/c2/4b/137dea450d6e1e3d474e1d873cd1d4f7d3beed7e0dc973b06e8e10d32488/'],
+        'source_urls': ['https://pypi.python.org/packages/source/C/Cycler'],
     }),
     ('Cython', '0.28.2', {
         'source_urls': ['https://pypi.python.org/packages/source/c/Cython']
