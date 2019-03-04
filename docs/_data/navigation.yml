@@ -15,7 +15,7 @@ docs:
         url: /r/
       - title: "Python Modules"
         url: /python/
-      - title: "Dependancy Graphs"
+      - title: "Dependency Graphs"
         url: /dot/
       - title: "About"
         url: /about/

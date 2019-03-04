@@ -1,6 +1,5 @@
 ---
 title: All Modules  18.04
-permalink: /${md_file}
 layout: single
 sidebar:
   nav: "docs"
