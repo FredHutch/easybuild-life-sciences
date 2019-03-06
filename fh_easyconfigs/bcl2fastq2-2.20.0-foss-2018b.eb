@@ -20,26 +20,18 @@ sources = [{
 checksums = ['8dd3044767d044aa4ce46de0de562b111c44e5b8b7348e04e665eb1b4f101fe3']
 
 # CMake, Boost, libxml2 and libxslt are all built and used internally with specific versions
-builddependencies = [
-    ('zlib', '1.2.11'),
-    ('libxml2', '2.9.8'),
-    ('libxslt', '1.1.32'),
-]
+dependencies = [('zlib', '1.2.11')]
 
-dependencies = [
-    ('Boost', '1.67.0'),
-]
-
-#    mkdir $SOURCE_WORKDIR/bcl2fastq/build && \
-#    cd $SOURCE_WORKDIR/bcl2fastq/build && \
-#    ../src/configure --prefix=/usr/local && \
-#    make && \
-#    make install
+#Warning: it is recommended to build BCL2FASTQ outside of the source directory:
+#    mkdir ../bcl2fastq-build
+#    cd ../bcl2fastq-build
+#    ../
 
 parallel = 1
-start_dir = 'src'
 separate_build_dir = True
-configopts = '--force-builddir -I/usr/include/x86_64-linux-gnu '
+configure_cmd_prefix = '../bcl2fastq/src/'
+
+configopts = '--force-builddir -DC_INCLUDE_PATH=/usr/include/x86_64-linux-gnu'
 
 sanity_check_paths = {
     'files': ['bin/bcl2fastq'],
