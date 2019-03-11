@@ -1,5 +1,6 @@
 name = 'R'
-version = '3.5.2'
+version = '3.5.3'
+biocver = '3.8'
 
 homepage = 'http://www.r-project.org/'
 description = """R is a free software environment for statistical computing
@@ -9,7 +10,6 @@ toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = ['https://cloud.r-project.org/src/base/R-%(version_major)s']
 sources = [SOURCE_TAR_GZ]
-checksums = ['e53d8c3cf20f2b8d7a9c1631b6f6a22874506fb392034758b3bb341c586c5b62']
 
 builddependencies = [
     ('pkg-config', '0.29.2'),
