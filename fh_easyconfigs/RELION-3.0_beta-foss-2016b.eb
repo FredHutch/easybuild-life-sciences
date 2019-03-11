@@ -26,8 +26,12 @@ dependencies = [
     ('CUDA', '9.2.148.1', '', True),
 ]
 
-configopts = "-DCMAKE_SHARED_LINKER_FLAGS='-lpthread' -DMPI_INCLUDE_PATH=$EBROOTOPENMPI/include -DMPI_CXX_FLAGS=\'OMPI_IGNORE_CXX_SEEK\'"
+configopts = "-DCMAKE_SHARED_LINKER_FLAGS='-lpthread' "
+configopts += "-DMPI_INCLUDE_PATH=$EBROOTOPENMPI/include "
+configopts += "-DMPI_CXX_FLAGS='OMPI_IGNORE_CXX_SEEK' "
 configopts += "-DCUDA=ON -DCudaTexture=ON -DFORCE_OWN_TBB=ON"
+
+buildopts = 'CXXFLAGS=$CXXFLAGS -DOMPI_IGNORE_CXX_SEEK"'
 
 sanity_check_paths = {
     'files': ['bin/relion'],
