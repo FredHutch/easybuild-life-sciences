@@ -98,15 +98,18 @@ exts_list = [
     ('magic', '1.5-9', {
         'checksums': ['fa1d5ef2d39e880f262d31b77006a2a7e76ea38e306aae4356e682b90d6cd56a'],
     }),
-    ('Rcpp', '1.0.0'),
-    ('RcppProgress', '0.4.1'),
-    ('lpSolve', '5.6.13'),
+    ('Rcpp', '1.0.0', {
+        'checksums': ['b7378bf0dda17ef72aa3f2a318a9cb5667bef50b601dc1096431e17426e18bc2'],
+    }),
+    ('RcppProgress', '0.4.1', {
+        'checksums': ['11764105922f763d4c75c502599ec7dcc2fd629a029964caf53f98b41d0c607a'],
+    }),
+    ('lpSolve', '5.6.13', {
+        'checksums': ['d5d41c53212dead4fd8e6425a9d3c5767cdc5feb19d768a4704116d791cf498d'],
+    }),
     ('geometry', '0.4.0', {
-        'patches': ['geometry-0.3-4-icc.patch'],
         'checksums': [
-            '2be231ac99171367635cd957f27da77705329df97520ab86f655839c41dc0968',  # geometry_0.3-6.tar.gz
-            'df0ea118e597f31561093e01d50698dac3345d40d082eee05360bb4f94378377',  # geometry-0.3-4-icc.patch
-        ],
+            '1ec4c1fe06ca0cfc8a542913de4144af24ec8cfbe8ec966710e0cb915480f152'],
     }),
     ('bit', '1.1-14', {
         'checksums': ['5cbaace1fb643a665a6ca69b90f7a6d624270de82420ca7a44f306753fcef254'],
@@ -118,7 +121,7 @@ exts_list = [
         'checksums': ['1c6307847275b1b8ad9e2ffdce3f4df3c9d955dc2e8a45e3fd7bfd2b0926e2f0'],
     }),
     ('bnlearn', '4.4.1', {
-        'checksums': ['b195ef12593779a6e5582dcfd8f4a580363880490675b9a0b110909b2f46d75b'],
+        'checksums': ['73689fdab937cb5ed5c8ae22607cb3038a161c91030d7e1a1a05145348aa64d9'],
     }),
     ('bootstrap', '2017.2', {
         'checksums': ['44f118c90ee226730175c467a16ac8d5b3169d610424e613da4f73348fd79522'],
@@ -133,7 +136,7 @@ exts_list = [
         'checksums': ['65f964aa768d0703ceb7a199adc5e79ca79a6d29d7bc053a262eb533697686c0'],
     }),
     ('formatR', '1.6', {
-        'checksums': ['874c197ae3720ec11b44984a055655b99a698e1912104eb9034c11fdf6104da7'],
+        'checksums': ['f5c98f0c3506ca51599671a2cdbc17738d0f326e8e3bb18b7a38e9f172122229'],
     }),
     ('gtools', '3.8.1', {
         'checksums': ['051484459bd8ad1b03425b8843d24f6828fea18f7357cfa1c192198cc3f4ba38'],
@@ -142,7 +145,7 @@ exts_list = [
         'checksums': ['4b287f59f5bbf5fcbf18db16477852faac4a605b10c5284c46b93fa6e9918d7f'],
     }),
     ('GSA', '1.03.1', {
-        'checksums': ['dfb84f92508765c74b170bb5bb2b206a11d10fdb4a74473821b0e51cec5d3ac0'],
+        'checksums': ['e192d4383f53680dbd556223ea5f8cad6bae62a80a337ba5fd8d05a8aee6a917'],
     }),
     ('highr', '0.7', {
         'checksums': ['cabba5b6f2ea82024a49c5ced5f1aa476f864bc52bc129038e319e4e26b6f3b7'],
@@ -175,7 +178,7 @@ exts_list = [
         'checksums': ['a4a31e9a832dafc860369bd4b05fdc3defd767599c159c2bfc6ea8ebb8162524'],
     }),
     ('RANN', '2.6.1', {
-        'checksums': ['31d274ff6be29a427cf9a96d7b54fd86d4a57954e0469fbfe58fa895e08ed9e4'],
+        'checksums': ['b299c3dfb7be17aa41e66eff5674fddd2992fb6dd3b10bc59ffbf0c401697182'],
     }),
     ('rmeta', '3.0', {
         'checksums': ['b9f9d405935cffcd7a5697ff13b033f9725de45f4dc7b059fd68a7536eb76b6e'],
@@ -220,7 +223,7 @@ exts_list = [
         'checksums': ['6d856d8a364bcdc499a0bf38bfd283b7c743d08f0b288174fba7dbf0a04b688d'],
     }),
     ('BH', '1.69.0-1', {
-        'checksums': ['17d9eb5512d74aa7dd02ec98953408422e728b01ce63493a6a473070b9596a92'],
+        'checksums': ['a0fd4364b7e368f09c56dec030823f52c16da0787580af7e4615eddeb99baca2'],
     }),
     ('brew', '1.0-6', {
         'checksums': ['d70d1a9a01cf4a923b4f11e4374ffd887ad3ff964f35c6f9dc0f29c8d657f0ed'],
@@ -238,7 +241,7 @@ exts_list = [
         'checksums': ['e41bd146824ec921994f1b176d0e4cca0b36dd3db32ca7a954d872a5ba214cc1'],
     }),
     ('checkmate', '1.9.1', {
-        'checksums': ['e94d2a3971908ce2a8252a9320ae7e030e0364b0ecd5385ab98e600aca7cd1e0'],
+        'checksums': ['b71c368b8ac14c0568a366e4a8a0996cb411485a3da7cefe75fece52eca79ef8'],
     }),
     ('cubature', '2.0.3', {
         'checksums': ['79bf03ebdb64b0de1ef19d24051b9d922df9310254bee459bb47764522407a73'],
@@ -271,13 +274,13 @@ exts_list = [
         'checksums': ['69318dc6b8aecc54d4f789c8105e672198363b395f1a764ebaeb54c0473d17ad'],
     }),
     ('spam', '2.2-2', {
-        'checksums': ['224f8d859c2fd1627dcc3b6a45e5406caef26363819b49e8ca7004a02ce76e11'],
+        'checksums': ['711fdbfdac1e51dc7f684b139740f1d8c8aa6c6c0ae6bfaa8f7a7727ad7b8d08'],
     }),
     ('subplex', '1.5-4', {
         'checksums': ['ff94cf6b1560f78c31712c05bc2bc1b703339e09c7fc777ee94abf15fa7a8b81'],
     }),
     ('stringi', '1.3.1', {
-        'checksums': ['01570a200a25bde62c47b241636e67d73425efa10b924b63959a867796ea86f8'],
+        'checksums': ['32df663bb6e9527e1ac265eec2116d26f7b7e62ea5ae7cc5de217cbb8defc362'],
     }),
     ('magrittr', '1.5', {
         'checksums': ['05c45943ada9443134caa0ab24db4a962b629f00b755ccf039a2a2a7b2c92ae8'],
@@ -286,13 +289,13 @@ exts_list = [
         'checksums': ['789e5a44c3635c3d3db26666e635e88adcf61cd02b75465125d95d7a12291cee'],
     }),
     ('stringr', '1.4.0', {
-        'checksums': ['7a8b8ea038e45978bd797419b16793f44f10c5355ad4c64b74d15276fef20343'],
+        'checksums': ['87604d2d3a9ad8fd68444ce0865b59e2ffbdb548a38d6634796bbd83eeb931dd'],
     }),
     ('evaluate', '0.13', {
-        'checksums': ['0f01b00123db52dbf39880eaefcdcb0e19ed70a3e2419731de6c8e1200b13787'],
+        'checksums': ['58dc412d38696ffca040adf860bb733981d24abc96eab424d7ac639d8f60fb45'],
     }),
     ('logspline', '2.1.12', {
-        'checksums': ['781e6eaf31a7000c303f7c8494160d00eaceebc31dfb6946622f4e7301ed871c'],
+        'checksums': ['53d2d3b151e8d99e651c4acbea13be51370be9310ac9160988e030c8c21698f8'],
     }),
     ('ncbit', '2013.03.29', {
         'checksums': ['4480271f14953615c8ddc2e0666866bb1d0964398ba0fab6cc29046436820738'],
@@ -331,13 +334,13 @@ exts_list = [
         'checksums': ['780695323dfadac108fb27000011c734e2927b1e0f069f247d65d27994c67ec2'],
     }),
     ('Matrix', '1.2-16', {
-        'checksums': ['7b2624036cefd22948ec8c55cd0e553488cd41ec4b5174d348b046a3a28750d7'],
+        'checksums': ['37a925d2295b909a5ca6a24fbd5069acef602f029379fa17b67b81c68307d081'],
     }),
     ('png', '0.1-7', {
         'checksums': ['e269ff968f04384fc9421d17cfc7c10cf7756b11c2d6d126e9776f5aca65553c'],
     }),
     ('RcppArmadillo', '0.9.200.7.1', {
-        'checksums': ['f3f4d24910b78e50112b18187491db15b0943b68645323a728e340aaac0c0424'],
+        'checksums': ['64fafe5fda3134ac6b41cf9ec8a0131edefea8ab16c68e1421a3b3c03ff7c3bf'],
     }),
     ('plyr', '1.8.4', {
         'checksums': ['60b522d75961007658c9806f8394db27989f1154727cb0bb970062c96ec9eac5'],
@@ -352,7 +355,7 @@ exts_list = [
         'checksums': ['31151eaf36f70bdc1172da5ff5088ee51cc0a3db4ead59c7c38c25316d580dd1'],
     }),
     ('colorspace', '1.4-0', {
-        'checksums': ['dd9fd2342b650456901d014e7ff6d2e201f8bec0b555be63b1a878d2e1513e34'],
+        'checksums': ['ce003c5958dd704697959e9dc8a108c8cb568f8d78ece113235732afc5dff556'],
     }),
     ('munsell', '0.5.0', {
         'checksums': ['d0f3a9fb30e2b5d411fa61db56d4be5733a2621c0edf017d090bdfa5e377e199'],
@@ -361,7 +364,7 @@ exts_list = [
         'checksums': ['0d8069eb48e91f6f6d6a9148f4e2dc5026cabead15dd15fc343eff9cf33f538f'],
     }),
     ('R6', '2.4.0', {
-        'checksums': ['05b5e117659796c67a16de0854661b25d0739da53a8cb93dcfc528d4c185fac9'],
+        'checksums': ['70be110174fbf5f5304049b186a6f9c05b77bfaec6d8caf980fcef5da6e0abce'],
     }),
     ('viridisLite', '0.3.0', {
         'checksums': ['780ea12e7c4024d5ba9029f3a107321c74b8d6d9165262f6e64b79e00aa0c2af'],
@@ -370,7 +373,7 @@ exts_list = [
         'checksums': ['0c1f4a14edd336a404da34a3cc71a6a9d0ca2040ba19360c41a79f36e06ca30c'],
     }),
     ('rlang', '0.3.1', {
-        'checksums': ['29451db0a3cabd75761d32df47a5d43ccadbde07ecb693ffdd73f122a0b9f348'],
+        'checksums': ['30427b2be2288e88acd30c4ea348ee06043a649fd73623a63148b1ad96317151'],
     }),
     ('assertthat', '0.2.0', {
         'checksums': ['d73ef79b1e75293ed889a99571b237a95829c099f7da094d4763f83ea6fde5f2'],
@@ -390,9 +393,11 @@ exts_list = [
     ('pillar', '1.3.1', {
         'checksums': ['b338b55f956dd7134f379d39bb94dfb25e13cf27999d6a6e6dc9f292755acbf6'],
     }),
-    ('pkgconfig', '2.0.2'),
+    ('pkgconfig', '2.0.2', {
+        'checksums': ['25997754d1adbe7a251e3bf9879bb52dced27dd8b84767d558f0f644ca8d69ca'],
+    }),
     ('tibble', '2.0.1', {
-        'checksums': ['11670353ff7059a55066dd075d1534d6a27bc5c3583fb9bc291bf750a75c5b17'],
+        'checksums': ['7ab2cc295eecf00a5310993c99853cd6622ad468e7a60d004b8a73957a713d13'],
     }),
     ('lazyeval', '0.2.1', {
         'checksums': ['83b3a43e94c40fe7977e43eb607be0a3cd64c02800eae4f2774e7866d1e93f61'],
@@ -404,7 +409,7 @@ exts_list = [
         'checksums': ['01049bb9c53826ff4ec5ba7117d766b17a0108c85f80871a5adb0c0b58ef7e87'],
     }),
     ('mgcv', '1.8-27', {
-        'checksums': ['986c81775b5fb9975ebfb13d3ffee2423b858d112db3572ff4b064570af97a09'],
+        'checksums': ['c88b99fb518decd7e9cd17a4c267e74f98a78172f056784194b5b127ca0f7d1b'],
     }),
     ('ggplot2', '3.1.0', {
         'checksums': ['49e77ccbe1ee9e4278312b001ad34aa1d93a3d98a90aaefcb595da20b2195ed7'],
@@ -437,10 +442,10 @@ exts_list = [
         'checksums': ['5ddc1249a14d69a7a39cc4ae81595ac8c0fbb1e46c911af67907baddeac35875'],
     }),
     ('class', '7.3-15', {
-        'checksums': ['18b876dbc18bebe6a00890eab7d04ef72b903ba0049d5ce50731406a82426b9c'],
+        'checksums': ['f6bf33d610c726d58622b6cea78a808c7d6a317d02409d27c17741dfd1c730f4'],
     }),
     ('e1071', '1.7-0.1', {
-        'checksums': ['93699a2e16826459221cf7c9896d99e87fdc1c0e2e270bda302670760cbf643a'],
+        'checksums': ['097b184f9f651785ade28da3ec0e7fb1aa71ed747f73f6d5a44acf0a35a9d885'],
     }),
     ('nnet', '7.3-12', {
         'checksums': ['2723523e8581cc0e2215435ac773033577a16087a3f41d111757dd96b8c5559d'],
@@ -491,16 +496,16 @@ exts_list = [
         'checksums': ['48130709eba9d133679a0e959e49a7b14acbce4f47c1e15c4ab46bd9e48ae467'],
     }),
     ('purrr', '0.3.1', {
-        'checksums': ['a4a68a453f5341ae84c3e8d77b0587ed586f36eb51f64f1315750eabfe1f8535'],
+        'checksums': ['c2a3c9901192efd8a04976676f84885a005db88deb1432e4750900c7b3b7883b'],
     }),
     ('tidyselect', '0.2.5', {
         'checksums': ['5ce2e86230fa35cfc09aa71dcdd6e05e1554a5739c863ca354d241bfccb86c74'],
     }),
     ('dplyr', '0.8.0.1', {
-        'checksums': ['37799ac5734d14b14ab9594ddec7f79e9a798907b87ff8b2d281a148a14de51a'],
+        'checksums': ['8408889d31a32527dbd846b3a6d995a2a7db7a51618ff28e61747afcb25ccd5c'],
     }),
     ('tidyr', '0.8.3', {
-        'checksums': ['99a508d0539390364789c5f4835b36c4a383927f0ec1648e2a4636c1cc6e490f'],
+        'checksums': ['a18f54ec35124110058ab23f7e0a3c037a8d50f0405520cf5cc5443ec022cc37'],
     }),
     ('mnormt', '1.5-5', {
         'checksums': ['ff78d5f935278935f1814a69e5a913d93d6dd2ac1b5681ba86b30c6773ef64ac'],
@@ -509,7 +514,7 @@ exts_list = [
         'checksums': ['3bd2392fbcd9dd4f385ac1418a5e454b9769e6414a21fbb5ae1e7ce6072760d7'],
     }),
     ('psych', '1.8.12', {
-        'checksums': ['e8901ddab14729bfccbd82a8824fbb6523c10c2cd8fb7199b1ca56a7ffcb6e58'],
+        'checksums': ['6e175e049bc1ee5b79a9e51ccafb22b962b4e6c839ce5c9cfa1ad83967037743'],
     }),
     ('generics', '0.0.2', {
         'checksums': ['71b3d1b719ce89e71dd396ac8bc6aa5f1cd99bbbf03faff61dfbbee32fec6176'],
@@ -520,9 +525,11 @@ exts_list = [
     ('nloptr', '1.2.1', {
         'checksums': ['1f86e33ecde6c3b0d2098c47591a9cd0fa41fb973ebf5145859677492730df97'],
     }),
-    ('boot', '1.3-20'),
+    ('boot', '1.3-20', {
+        'checksums': ['adcb90b72409705e3f9c69ea6c15673dcb649b464fed06723fe0930beac5212a'],
+    }),
     ('lme4', '1.1-21', {
-        'checksums': ['ee8a826fa6aabab2b9f6f5f0d3f65fd24cc9b24c1a98b4148d85ecc6e6841d49'],
+        'checksums': ['7f5554b69ff8ce9bac21e8842131ea940fb7a7dfa2de03684f236d3e3114b20c'],
     }),
     ('ucminf', '1.1-4', {
         'checksums': ['a2eb382f9b24e949d982e311578518710f8242070b3aa3314a331c1e1e7f6f07'],
@@ -531,35 +538,37 @@ exts_list = [
         'checksums': ['1b681d273697dc780a3ac5bedabb4a257785732d9ca4ef68e4e4aac8b328d11e'],
     }),
     ('ordinal', '2019.3-9', {
-        'checksums': ['70902dd51d4bcc00064ca407f2136744db71c5d4e8c35f15a443229e194c9b0d'],
+        'checksums': ['b15194d5247758495b0f952e7046bcdbfdad3c45ed742b61c101c257c2115977'],
     }),
     ('jomo', '2.6-7', {
-        'checksums': ['b21e415402c92dd4a946d212d4a154a4acc641b3bfb74e55dc3b53964c2d3881'],
+        'checksums': ['6e83dab51103511038a3e9a3c762e00cc45ae7080c0a0f64e37bcea8c488db53'],
     }),
     ('hms', '0.4.2', {
         'checksums': ['a57820b3e3221e973cba9500b4ad7953730110ee398693d150af833f26d5d0bc'],
     }),
     ('clipr', '0.5.0', {
-        'checksums': ['1bebc57ddad830c469415a99b13124aee14b91f4b1701fd20defb04623413d18'],
+        'checksums': ['fd303f8b7f29badcdf490bb2d579acdfc4f4e1aa9c90ac77ab9d05ce3d053dbf'],
     }),
     ('readr', '1.3.1', {
         'checksums': ['33f94de39bb7f2a342fbb2bd4e5afcfec08798eac39672ee18042ac0b349e4f3'],
     }),
-    ('ellipsis', '0.1.0'),
+    ('ellipsis', '0.1.0', {
+        'checksums': ['e6f1f30390182b36664b097b5fbf6e95897a766b1ddfa774d3b507f42e26895f'],
+    }),
     ('forcats', '0.4.0', {
-        'checksums': ['95814610ec18b8a8830eba63751954387f9d21400d6ab40394ed0ff22c0cb657'],
+        'checksums': ['7c83cb576aa6fe1379d7506dcc332f7560068b2025f9e3ab5cd0a5f28780d2b2'],
     }),
     ('haven', '2.1.0', {
-        'checksums': ['be792d30bffb390a82c4fb841942b1487a59b911a1671859d5b4b7a09645108b'],
+        'checksums': ['c0a1cf1b039549fb3ad833f9644ed3f142790236ad755d2ee7bd3d8109e3ae74'],
     }),
     ('pan', '1.6', {
         'checksums': ['adc0df816ae38bc188bce0aef3aeb71d19c0fc26e063107eeee71a81a49463b6'],
     }),
     ('mitml', '0.3-7', {
-        'checksums': ['bc59bdc802eb882340393752535446560c716f12c6fca2b95f03c6af30d978de'],
+        'checksums': ['c6f796d0059f1b093b599a89d955982fa257de9c45763ecc2cbbce10fdec1e7b'],
     }),
     ('mice', '3.4.0', {
-        'checksums': ['ddaf7f01f5606f3e15af05066e2f6c3ac5b6bdcc78f019e3890dab32f1ba11dc'],
+        'checksums': ['f53163ba807822b73c38bf93df557f194158cd4e87dd2362ed73fc2483acaa65'],
     }),
     ('urca', '1.3-0', {
         'checksums': ['621cc82398e25b58b4a16edf000ed0a1484d9a0bc458f734e97b6f371cc76aaa'],
@@ -583,7 +592,7 @@ exts_list = [
         'checksums': ['b10141090cf3c2b62260611a0ea822eb2f7bab9f4fd656c48bdc12b65c5c3dbf'],
     }),
     ('gclus', '1.3.2', {
-        'checksums': ['d6994ee264b464503db005450153973d75eba502e4caaaa6ff99cb95e4376a09'],
+        'checksums': ['9cc61cdff206c11213e73afca3d570a7234250cf6044a9202c2589932278e0b3'],
     }),
     ('coda', '0.19-2', {
         'checksums': ['678a7e6a87a2723089daeb780ea37ac3d4319b37eabe26928ea3fa9c9b1eda0d'],
@@ -625,7 +634,7 @@ exts_list = [
         'checksums': ['12772f6a66aab5b84b0665c470f11a3d8d8a992955c027261cfe8e6077ee13b8'],
     }),
     ('curl', '3.3', {
-        'checksums': ['1636aea6422a0ad81cfd2e2a1ccd7e6924cc486711fc8d7d72168230c2f11596'],
+        'checksums': ['0cb0b9a9280edc42ebed94708541ec86b4f48779e722171e45227eab8a88a5bd'],
     }),
     ('TTR', '0.23-4', {
         'checksums': ['eb17604da986213b3b924f0af65c3d089502a658a253ee34f6b8f6caccf6bfa2'],
@@ -634,7 +643,7 @@ exts_list = [
         'checksums': ['60fb13821c9d8d5bea34223b18757f04787f4440cb82946bb9559d6fd26b5499'],
     }),
     ('mvtnorm', '1.0-10', {
-        'checksums': ['2010cab50fb7a5117e3c61f06e4a797ea6bf92b1ab20c132cb929d453d154451'],
+        'checksums': ['31df19cd8b4cab9d9a70dba00442b7684e625d4ca143a2c023c2c5872b07ad12'],
     }),
     ('pcaPP', '1.9-73', {
         'checksums': ['ca4566b0babfbe83ef9418283b08a12b3420dc362f93c6562f265df7926b53fc'],
@@ -643,7 +652,7 @@ exts_list = [
         'checksums': ['9b89905b436f1cf3faa9e3dabc585a76299e729e85ca659bfddb4b7cba11b283'],
     }),
     ('lava', '1.6.5', {
-        'checksums': ['41c6eeb96eaef9e1bfb04b31f7203e250a5ea7e7860be4d95f7f96f2a8644718'],
+        'checksums': ['0e7439592d9ca5a07f6a6cfad44866b9ead841a14b8cc420f9967a415ec3348f'],
     }),
     ('prodlim', '2018.04.18', {
         'checksums': ['4b22b54fdf712439309be0ff74f63cde9080464667b00e19823372ac0fc254ab'],
@@ -667,7 +676,7 @@ exts_list = [
         'checksums': ['dfdc7de4f453efeed8361b7bec271a9ed7f0c00110e93c24f486e93206993cbe'],
     }),
     ('data.table', '1.12.0', {
-        'checksums': ['dc427465599cadd848b28a78e2fce3362867847b44148252054385999fe566d9'],
+        'checksums': ['611b112123dbd4ebd5200770fcdfaaeaab622adeb2b290d36018d3092742e3f7'],
     }),
     ('BatchJobs', '1.7', {
         'checksums': ['49ef69adfb42f085c7ed143a80d78566d55d794ee9a1e1c83d85dbac2a2aa60c'],
@@ -682,10 +691,10 @@ exts_list = [
         'checksums': ['624448d2ac22e1798097d09fc5dc4605908a33f490b8ec971fc6ea318a445c11'],
     }),
     ('VGAM', '1.1-1', {
-        'checksums': ['121820a167411e847b41bdcb0028b55842d0ccc0c3471755c67449837e0fe3b9'],
+        'checksums': ['de192bd65a7e8818728008de8e60e6dd3b61a13616c887a43e0ccc8147c7da52'],
     }),
     ('waveslim', '1.7.5.1', {
-        'checksums': ['31b698f7b19aadcdc02068ee69bf7676cd9dea2913420ce3caa7e507e3a41a53'],
+        'checksums': ['b323018c92674b1b49fe01ec7e3900641a1c9ce0bd1e7497cfe8f64e96057e56'],
     }),
     ('xtable', '1.8-3', {
         'checksums': ['53b2b0fff8d7a8bba434063c2a01b867f510a4389ded2691fbedbc845f08c325'],
@@ -700,7 +709,7 @@ exts_list = [
         'checksums': ['45c372d458fe4c7c11943d4c409517849b1be6782dc05bd9a74b066e67250c63'],
     }),
     ('tseriesChaos', '0.1-13.1', {
-        'checksums': ['efabf9c59548e2d22aa9763b340789d8e46e88c741ed4a831e52b1ed3bf35038'],
+        'checksums': ['23cb5fea56409a305e02a523ff8b7642ec383942d415c9cffdc92208dacfd961'],
     }),
     ('tseries', '0.10-46', {
         'checksums': ['12940afd1d466401160e46f993ed4baf28a42cef98d3757b66ee15e916e07222'],
@@ -718,7 +727,7 @@ exts_list = [
         'checksums': ['43bc02fb33c371464f9407d5e5e6419527e9360e3e394343862cca0aebe1d0f7'],
     }),
     ('R.utils', '2.8.0', {
-        'checksums': ['f640ba0019d9d6883a1c634d7c9904b013de4c0bdf5d9e3d7ba49fa248b0b033'],
+        'checksums': ['cfc54dd2a7fd7f8d840f2d58615fdba1cccc3ecde325385180ff3e191acd4ac9'],
     }),
     ('R.matlab', '3.6.2', {
         'checksums': ['1ba338f470a24b7f6ef68cadbd04eb468ead4a689f263d2642408ad591b786bb'],
@@ -727,7 +736,7 @@ exts_list = [
         'checksums': ['81b60ce6f237ec308555471ae0119158b115463df696d2eca9b177ded8988e3b'],
     }),
     ('gbm', '2.1.5', {
-        'checksums': ['91fe50345f94a42a75a789cc2c05e489610c109508896479725df810920ee152'],
+        'checksums': ['06fbde10639dfa886554379b40a7402d1f1236a9152eca517e97738895a4466f'],
     }),
     ('Formula', '1.2-3', {
         'checksums': ['1411349b20bd09611a9fd0ee6d15f780c758ad2b0e490e908facb49433823872'],
@@ -757,25 +766,25 @@ exts_list = [
         'checksums': ['f1e4ffabc29e6cfe857f627da095be3cfcbe0e1f02ae75e572f10b4a026c5a12'],
     }),
     ('xfun', '0.5', {
-        'checksums': ['9bdff1d44c3a36081162e75b2680fdf03b38d51972ce90d4525937c11ef72125'],
+        'checksums': ['8ba224bbf2490f7bb478fd0436592506cb98ec1fc2fc6a7ea2298344d85579f2'],
     }),
     ('knitr', '1.22', {
-        'checksums': ['124c95914f6039bc8801ab1ed7f9fc5beda6c2fcc92bb18a5298c6f948acfe77'],
+        'checksums': ['9ab5cfc399cb04903842e7b6b734c17abb7a0593c203e7dfce4548161e407ac6'],
     }),
     ('rstudioapi', '0.9.0', {
-        'checksums': ['93e5bc0dbe42889c47485c50837fa464b7a480e7566965b26719cc116c04d934'],
+        'checksums': ['5149a2830ae7134c396ce64764b263cf9f348d4399f53da3804f40d7d5bec13e'],
     }),
     ('htmlTable', '1.13.1', {
-        'checksums': ['42f50b8d8704460388cc55708fd9159b576261ab8d3f5968cf24d6b3b619a1d8'],
+        'checksums': ['689f32b65da6a57ad500e8d9ef3309d346401dca277c6b264a46c8d7c75884d0'],
     }),
     ('Hmisc', '4.2-0', {
-        'checksums': ['991db21cdf73ffbf5b0239a4876b2e76fd243ea33528afd88dc968792f281498'],
+        'checksums': ['9e9614673288dd00295f250fa0bf96fc9e9fed692c69bf97691081c1a01411d9'],
     }),
     ('fastcluster', '1.1.25', {
         'checksums': ['f3661def975802f3dd3cec5b2a1379f3707eacff945cf448e33aec0da1ed4205'],
     }),
     ('registry', '0.5-1', {
-        'checksums': ['5d8be59ba791987b2400e9e8eaaac614cd544c1aece785ec4782ea6d5ea00efb'],
+        'checksums': ['dfea36edb0a703ec57e111016789b47a1ba21d9c8ff30672555c81327a3372cc'],
     }),
     ('bibtex', '0.4.2', {
         'checksums': ['1f06ab3660c940405230ad16ff6e4ba38d4418a59cd9b16d78a4349f8b488372'],
@@ -796,10 +805,10 @@ exts_list = [
         'checksums': ['3b30c81c66066fab4a63c5611a0313418b840d8b63414db31ef0e932872d02e3'],
     }),
     ('irlba', '2.3.3', {
-        'checksums': ['3fdf2d8fefa6ab14cd0992740de7958f9f501c71aca93229f5eb03c54558fc38'],
+        'checksums': ['6ee233697bcd579813bd0af5e1f4e6dd1eea971e8919c748408130d970fef5c0'],
     }),
     ('igraph', '1.2.4', {
-        'checksums': ['9da2dadf9c1ed495413b32464c6a32fae9d33636822754043e708d8dd6a9efad'],
+        'checksums': ['1048eb26ab6b592815bc269c1d91e974c86c9ab827ccb80ae0a40042019592cb'],
     }),
     ('GeneNet', '1.2.13', {
         'checksums': ['3798caac3bef7dc87f97b3628eb29eb12365d571ce0837b5b6285b0be655a270'],
@@ -811,16 +820,16 @@ exts_list = [
         'checksums': ['9466c318b8648d4178e97950e47190d636b5481f0d092e0a81f80ecd22bb32a6'],
     }),
     ('caTools', '1.17.1.2', {
-        'checksums': ['d53e2c5c77f1bd4744703d7196dbc9b4671a120bbb5b9b3edc45fc57c0650c06'],
+        'checksums': ['69cc542fab5677462b1a768709d0c4a0a0790f5db53e1fe9ae7123787c18726b'],
     }),
     ('gplots', '3.0.1.1', {
-        'checksums': ['343df84327ac3d03494992e79ee3afc78ba3bdc08af9a305ee3fb0a38745cb0a'],
+        'checksums': ['7db103f903a25d174cddcdfc7b946039b61e236c95084b90ad17f1a41da3770c'],
     }),
     ('ROCR', '1.0-7', {
         'checksums': ['e7ef710f847e441a48b20fdc781dbc1377f5a060a5ee635234053f7a2a435ec9'],
     }),
     ('later', '0.8.0', {
-        'checksums': ['317cdee7555b08de27d03327f32deb2bfead0f63aa70b37e41f54f55cfb01c76'],
+        'checksums': ['6b2a28b43c619b2c7890840c62145cd3a34a7ed65b31207fdedde52efb00e521'],
     }),
     ('promises', '1.0.1', {
         'checksums': ['c2dbc7734adf009377a41e570dfe0d82afb91335c9d0ca1ef464b9bdcca65558'],
@@ -844,7 +853,7 @@ exts_list = [
         'checksums': ['9b110858456523ca0b2a63f22013c4e1fbda6674b9d84dc1f4de8bffc5260532'],
     }),
     ('deldir', '0.1-16', {
-        'checksums': ['571011c208829f47ecd9f92a19fd94a8eb59de5a2645ab8c62e73926ade30710'],
+        'checksums': ['5858e145d38f6e05f89771f97e4575a33c0ec6b5a3eaae4addbe4d0a819c8914'],
     }),
     ('gmodels', '2.18.1', {
         'checksums': ['626140a34eb8c53dd0a06511a76c71bc61c48777fa76fcc5e6934c9c276a1369'],
@@ -853,16 +862,22 @@ exts_list = [
         'checksums': ['511bac5860cc5b3888bca626cdf23241b6118eabcc82d100935386039e516412'],
     }),
     ('spData', '0.3.0', {
-        'checksums': ['87146ecfb254da881b19b9d5b639d5ec3349a23214cf3579ffe0b9f688a73615'],
+        'checksums': ['de24ea659541a6c795cd26a1f6a213e15061af9c97a24cba1c24ce30c6c24c98'],
     }),
-    ('units', '0.6-2'),
-    ('classInt', '0.3-1'),
-    ('sf', '0.7-3'),
+    ('units', '0.6-2', {
+        'checksums': ['5e286775d0712c8e15b6ae3a533d4c4349b0f6410c2d9d897ca519c3d0e5f170'],
+    }),
+    ('classInt', '0.3-1', {
+        'checksums': ['e2e6f857b544dfecb482b99346aa3ecfdc27b4d401c3537ee8fbaf91caca92b9'],
+    }),
+    ('sf', '0.7-3', {
+        'checksums': ['0d09d42aa02206a45196a17d8e8d8a946511ab88153db84b45bf56085a5c34ad'],
+    }),
     ('spdep', '1.0-2', {
-        'checksums': ['0bc1d14dbbbfad44cb83154780dafec016c76a8a49e579903719d3297ff223b0'],
+        'checksums': ['6f9efa4347d5c13b49922b75481ac403431c3c76a65a109af29954aa7bb138b2'],
     }),
     ('vegan', '2.5-4', {
-        'checksums': ['6c5c8f0ad7ba8dbb29df0e119da41d330f756e6d0ab2cba24904f808a0fd7d08'],
+        'checksums': ['5116a440111fca49b5f95cfe888b180ff29a112e6301d5e2ac5cae0e628493e0'],
     }),
     ('adegenet', '2.1.1', {
         'checksums': ['3043fe5d731a38ff0e266f090dcda448640c3d0fd61934c76da32d082e5dce7a'],
@@ -874,7 +889,7 @@ exts_list = [
         'checksums': ['daaef6874438233c73a62b59a9ee10261e1e10d7ef18b7178d2d8b517fd4880d'],
     }),
     ('XML', '3.98-1.19', {
-        'checksums': ['57da12ded81e1d6f881a9eb43a95617873752a39aca66b24b41a6552c69c815a'],
+        'checksums': ['81b1c4a2df24c5747fa8b8ec2d76b4e9c3649b56ca94f6c93fbd106c8a72beab'],
     }),
     ('praise', '1.0.0', {
         'checksums': ['5c035e74fd05dfa59b03afe0d5f4c53fbf34144e175e90c53d09c6baedf5debd'],
@@ -886,15 +901,19 @@ exts_list = [
         'checksums': ['df5665834941d8b0e377a8810a04f98552201678300f168de5f58a587b73238b'],
     }),
     ('tinytex', '0.10', {
-        'checksums': ['5efafdb2d15fc1caf7400bca0558630780b5c276ec415e5a18066a3fb0878523'],
+        'checksums': ['15e711068588c0953f918f3fd0401a40a530ab2dd69c64e30f451635d5477f09'],
     }),
     ('rmarkdown', '1.11', {
         'checksums': ['e9cca9b6989cf23c7a3219475f7b3d319c674128e8d335e5fdb8d590105cd27b'],
     }),
-    ('sys', '3.1'),
-    ('askpass', '1.1'),
+    ('sys', '3.1', {
+        'checksums': ['98088e01e7682077569ed8a5f767c59b34172d6240af3c7462270fa83ce3432a'],
+    }),
+    ('askpass', '1.1', {
+        'checksums': ['db40827d1bdbb90c0aa2846a2961d3bf9d76ad1b392302f9dd84cc2fd18c001f'],
+    }),
     ('openssl', '1.2.2', {
-        'checksums': ['fb5f8d8d856132b8c618cfec3ff19ef7a163c46c9384cb51e65cd131327bbd51'],
+        'checksums': ['df7a7ca826d5893c01977c448eacfcfd5a59948c0114d470a9c2c3ff93b2d349'],
     }),
     ('httr', '1.4.0', {
         'checksums': ['d633f1425da514f65f3b8c034ae0a8b6911995009840c6bb9657ceedb99ddb48'],
@@ -909,13 +928,13 @@ exts_list = [
         'checksums': ['bf1dd6209cea1aab24e21a85375ca473ad11c2eff400d65c6202c0fb4ef91ec3'],
     }),
     ('urltools', '1.7.2', {
-        'checksums': ['4485f81ca14199e0c66ba477019253b0e7fe414e8ab6ada3f02cfe5a26770306'],
+        'checksums': ['958b03067a2cc4888dd5220497b8a4f47f7f9344be1339305a04142a9c3197a2'],
     }),
     ('httpcode', '0.2.0', {
         'checksums': ['fbc1853db742a2cc1df11285cf27ce2ea43bc0ba5f7d393ee96c7e0ee328681a'],
     }),
     ('crul', '0.7.0', {
-        'checksums': ['004279f94ec5c2a3842c4d251c945aa4ecbb4891915c71d38a082a5c03c9d1ee'],
+        'checksums': ['9ef232116a7fd04a271a87a696732fa082c05fc74608bc1b7abc6277337ef0aa'],
     }),
     ('bold', '0.8.6', {
         'checksums': ['c697a2af76c0466c0814f328c38de203322b06cec332b437631e046e9f51015e'],
@@ -927,7 +946,7 @@ exts_list = [
         'checksums': ['74cf6dbe1b229518c25221534b20437b53cb663f1473cf9df5a59ca76b76ae84'],
     }),
     ('rotl', '3.0.7', {
-        'checksums': ['86dc67e466c3b45c681c48ffa65df5530e4677b9d3ac59b1d9369d77724838a2'],
+        'checksums': ['c94d8f1a732878f1d5c724a534dc170962a523eb4b213c27497162d748deda95'],
     }),
     ('solrium', '1.0.2', {
         'checksums': ['0daecc6ea4a8689bd032dd447171e7dda146dc3df903cb0617424cee84f53e04'],
@@ -936,10 +955,10 @@ exts_list = [
         'checksums': ['4659dec79ca78e8cd848419387ef4c5d165d34e845f57bcc24ee3f551b2138a8'],
     }),
     ('worrms', '0.3.2', {
-        'checksums': ['5325c440e3ac60b644a4295c35bb4d6d3116a06d883048bd7f25eba77c52108c'],
+        'checksums': ['ece1375e987c84f72e0f3ef23971821e265c6c253d117ecfc94d3df9c653bfcf'],
     }),
     ('natserv', '0.3.0', {
-        'checksums': ['07501608a2e79b20940cd0e22aca9db6150942eed5b6dad184ec957e153d8e63'],
+        'checksums': ['3c207d45bbba75dfd16f40d6eaaac122e40b3d3ca05b3b98aa8ed3c092638e5e'],
     }),
     ('WikipediR', '1.5.0', {
         'checksums': ['f8d0e6f04fb65f7ad9c1c068852a6a8b699ffe8d39edf1f3fa07d32d087e8ff0'],
@@ -951,16 +970,16 @@ exts_list = [
         'checksums': ['10dbabac6c56c1d0f33a66ff9b4f48b0bcb470711808a86863b48dc1140ec86c'],
     }),
     ('taxize', '0.9.6', {
-        'checksums': ['559021f1a2393df36f0173aa865332ff129d5d1700333cbe9859183c12a3b9dc'],
+        'checksums': ['6d6bf22da72c28451fb7ff76998520acc5e3ac429617036da271c41a421c94ba'],
     }),
     ('uuid', '0.1-2', {
         'checksums': ['dd71704dc336b0857981b92a75ed9877d4ca47780b1682def28839304cd3b1be'],
     }),
     ('RNeXML', '2.3.0', {
-        'checksums': ['182108109ce35f80eae67c5b5114a566fd56b69be65863e05fdb06b5036b2842'],
+        'checksums': ['8a52e141f2f47f4cfcb617c1a2866fdff26db4b56d47c914c9f12917c39edb73'],
     }),
     ('phylobase', '0.8.6', {
-        'checksums': ['d7c1a972c266ffe80345c7150608a85e6e2def4a3f079ac964ad9dbce2281002'],
+        'checksums': ['e7117b210ef406115e5523b794d8c2c5779640cee8c06e73751dc14c69322fd9'],
     }),
     ('adephylo', '1.1-11', {
         'checksums': ['154bf2645eac4493b85877933b9445442524ca4891aefe4e80c294c398cff61a'],
@@ -984,7 +1003,7 @@ exts_list = [
         'checksums': ['7c591ad95a8a9d7fb0e4d5d80dfd78f7d6a63cf7d11eb53dd3c98fdfb5b868aa'],
     }),
     ('raster', '2.8-19', {
-        'checksums': ['4ae7d25982cee248c1cf7ca2c633ed1f021a76cab32b0452e36d96daed77ec92'],
+        'checksums': ['c4cd45fc2702a9def94eea7442193b7220f75b1652ffb3e9890ae978ee71b0d2'],
     }),
     ('dismo', '1.1-4', {
         'checksums': ['f2110f716cd9e4cca5fd2b22130c6954658aaf61361d2fe688ba22bbfdfa97c8'],
@@ -1008,7 +1027,7 @@ exts_list = [
         'checksums': ['3feba6ceecaa6f2f68fdc1ceb0019395ccfadb0cf033e1709dddb690c7f210a1'],
     }),
     ('geiger', '2.0.6.1', {
-        'checksums': ['e13b2c526378eaf9356b00bbe21b3c2c956327f8062fed638ccc1f49591c3eff'],
+        'checksums': ['2a95e20a3a90c096343b014344dd97e699e954da99c151c17fc6c245c77dba0b'],
     }),
     ('glmnet', '2.0-16', {
         'checksums': ['a54ccd802fce6625f3b69d747b28efe62ed8cc23397a5f8df4777d177e2839af'],
@@ -1023,7 +1042,7 @@ exts_list = [
         'checksums': ['289193d0ccd2db0b6fe8702e8c5711e935219b17f90f01a6e9684982413e98d1'],
     }),
     ('processx', '3.3.0', {
-        'checksums': ['14a7305c4ec5a78a7a656d79e9ff0fc1d134671c924ae5941e6cab634ef472ea'],
+        'checksums': ['41b18603204b4f736eea459a9b59bf9a20c249858487669b14e903040865ed46'],
     }),
     ('callr', '3.1.1', {
         'checksums': ['c9bc22719dbc7a6746d370a2c7f353561d2f25e34fe4079f50eb453594c38196'],
@@ -1035,7 +1054,7 @@ exts_list = [
         'checksums': ['3d61a3d0cedf5c8a850a3e62ed6af38c600dc3f25b44c4ff07a5093bf9ca4ffd'],
     }),
     ('rgl', '0.100.18', {
-        'checksums': ['692a545ed2ff0f5e15289338736f0e3c092667574c43ac358d8004901d7a1a61'],
+        'checksums': ['916aa24da8b211729bee9ae19baa5abcb717580bab0f73c3333e26a092b2133d'],
     }),
     ('labdsv', '1.8-0', {
         'checksums': ['dfaeb03a6e1bab6cfd384c00671235b22f2b4254cac1129b24a348cb353b6e65'],
@@ -1050,24 +1069,28 @@ exts_list = [
         'checksums': ['740e2e20477b9fceeef767ae1002adc5ec397cb0f7daba5289a2c23b0dddaf31'],
     }),
     ('TH.data', '1.0-10', {
-        'checksums': ['d8318a172ce2b9f7f284dc297c8a8d5093de8eccbb566c8e7580e70938dfae0f'],
+        'checksums': ['618a1c67a30536d54b1e48ba3af46a6edcd6c2abef17935b5d4ba526a43aff55'],
     }),
     ('multcomp', '1.4-10', {
-        'checksums': ['a20876619312310e9523d67e9090af501383ce49dc6113c6b4ca30f9c943a73a'],
+        'checksums': ['29bcc635c0262e304551b139cd9ee655ab25a908d9693e1cacabfc2a936df5cf'],
     }),
-    ('libcoin', '1.0-4'),
-    ('matrixStats', '0.54.0'),
+    ('libcoin', '1.0-4', {
+        'checksums': ['91dcbaa0ab8c2109aa54c3eda29ad0acd67c870efcda208e27acce9d641c09c5'],
+    }),
+    ('matrixStats', '0.54.0', {
+        'checksums': ['8f0db4e181300a208b9aedbebfdf522a2626e6675d2662656efb8ba71b05a06f'],
+    }),
     ('coin', '1.3-0', {
-        'checksums': ['d518065d3e1eb00121cb4e0200e1e4ae6b68eca6e249afc38bbffa35d24105bb'],
+        'checksums': ['adcebb37e0a7dfddbf8ec1e09c12a809bd76d90b5b8ff2b1048a75252ba11ef8'],
     }),
     ('party', '1.3-3', {
-        'checksums': ['d16a2562efa42c083c6446bdef6596a0a913938551cae01aa1e98d91aa98088e'],
+        'checksums': ['9f72eea02d43a4cee105790ae7185b0478deb6011ab049cc9d31a0df3abf7ce9'],
     }),
     ('inum', '1.0-0', {
         'checksums': ['f532817a426b6a02d5ceffe01810d2103432a8defb68a0cae4318246a61a01ac'],
     }),
     ('partykit', '1.2-3', {
-        'checksums': ['6f753f617a9672f0b90d50c40c69631162806a6b28a9cae20370960092cb1f85'],
+        'checksums': ['56749b246e283f94ac2ad2cdcfc0a477e05cd44b5e8f6e462c26f4dff818da35'],
     }),
     ('mboost', '2.9-1', {
         'checksums': ['67ed26093fc2c1e57d7fac842a51a0de0162e448d4dab09c0054baee801f2a0a'],
@@ -1085,19 +1108,19 @@ exts_list = [
         'checksums': ['d35a50925cc5552a6aac0816a91dbc03e9fd77da47e06d27572fde9dcbee9de8'],
     }),
     ('polspline', '1.1.14', {
-        'checksums': ['937561842d754e40a48d2e6d0c49638739e3fdc9bb81e9d8d05adea828371f22'],
+        'checksums': ['40ed803ea25975b6fcd96292009897db22a2f346dc271396d1ce8f10b92d9a3c'],
     }),
     ('rms', '5.1-3', {
-        'checksums': ['f1cfeef466ac436105756679353a3468027d97a600e3be755b819aef30ed9207'],
+        'checksums': ['5fc7120d8a93b4aa9727d82eac368c5c47ff70f467ae2b012afac688235089eb'],
     }),
     ('RWekajars', '3.9.3-1', {
         'checksums': ['dcbd2974751a2b27953b59359497472948c67e9d518edba44ec13a9cd8dd5e9b'],
     }),
     ('RWeka', '0.4-40', {
-        'checksums': ['0dd84fffe5a216819a48f55c770d2e6672e80dd6a6b5539f22c55476cf044f03'],
+        'checksums': ['ef9b6eeb4ff60c89ef4490b9269eaeaddb701180e193514257be8000f2cab0a7'],
     }),
     ('slam', '0.1-45', {
-        'checksums': ['638085dc05c7509edc9f84e0aaa66381297bf6a0387a0c7e18099c16a729c986'],
+        'checksums': ['84ab3919c7dbac41d97d076787feacfd6861f669aa2842879dffb46ed4467277'],
     }),
     ('tm', '0.7-6', {
         'checksums': ['3995ef712ce4454d2cbaef4c1e9b2f8379c96c7edaa3de5b1eb8df25e720fb6a'],
@@ -1109,7 +1132,7 @@ exts_list = [
         'checksums': ['b705832fa167dc24b52b642f571ed1efd24c5f53ba60d02c7797986481b6186a'],
     }),
     ('FNN', '1.1.3', {
-        'checksums': ['b51a60fbbeff58c48cc90c2023c48972d5082d68efd02284c17ccd9820986326'],
+        'checksums': ['de763a25c9cfbd19d144586b9ed158135ec49cf7b812938954be54eb2dc59432'],
     }),
     ('ipred', '0.9-8', {
         'checksums': ['9c1d11c3cb0d72be7870e70a216e589e403bbfee38c796fe75cd0611d878ac07'],
@@ -1123,10 +1146,14 @@ exts_list = [
     ('maxLik', '1.3-4', {
         'checksums': ['181ab87721b1e6e3859c60d12eea2f67a7135bfa679db73c20a9ef76d82c4b4a'],
     }),
-    ('gbRd', '0.4-11'),
-    ('Rdpack', '0.10-1'),
+    ('gbRd', '0.4-11', {
+        'checksums': ['0251f6dd6ca987a74acc4765838b858f1edb08b71dbad9e563669b58783ea91b'],
+    }),
+    ('Rdpack', '0.10-1', {
+        'checksums': ['5b01a737679a7abbd8abcd7d82629a99dcd13c8a00d4f821209b148810b7722d'],
+    }),
     ('mlogit', '0.4-1', {
-        'checksums': ['c1d99d39fd411fb01d593f289325ff025bc714611818ed9310da7d1f167f2f3b'],
+        'checksums': ['bf8fb55f2591b54c059c8b7359149ce1b5c80535074f22924c00672a08ea0070'],
     }),
     ('getopt', '1.20.2', {
         'checksums': ['3d6c12d32d6cd4b2909be626e570e158b3ed960e4739510e3a251e7f172de38e'],
@@ -1135,10 +1162,10 @@ exts_list = [
         'checksums': ['e1b23b986c18b89a94c58d9db45e552d1bce484300461803740dacdf7c937fcc'],
     }),
     ('optparse', '1.6.1', {
-        'checksums': ['10e816bb8f5b08d52cfd3a0028903a8c62ef9cf7bfd85f9dae8af442e82bfbb4'],
+        'checksums': ['819be3eff54cb7f3f18703eed9714fc655290ab8e169f87605433d069b597e13'],
     }),
     ('labelled', '2.1.0', {
-        'checksums': ['05a251d1a3d87f4144135f4bbd594dd4ad786d4e80541861f59025044582c407'],
+        'checksums': ['3b64cb3ecba8d5cdebab86c957d54982de767b3b2b4cfc05bd6894dd6f5a32bc'],
     }),
     ('questionr', '0.7.0', {
         'checksums': ['c4566880a1ca8f01faad396e20d907d913f4a252acaf83a0cb508a3738874cb3'],
@@ -1177,10 +1204,10 @@ exts_list = [
         'checksums': ['3b5c4eff1cc1e456a5331084774503eaa06cf61fb7acf6b9e8a6bfabd5735494'],
     }),
     ('maptools', '0.9-5', {
-        'checksums': ['930875f598a516f0f9049fa2fae7391bc9bdf7e3e5db696059ab4ec2fc9ba39c'],
+        'checksums': ['5d9511f09fb49d57a51f28495b02239800596a4fcfad7b03ee1074d793657bdd'],
     }),
     ('zip', '2.0.0', {
-        'checksums': ['6fa9ec7b093b8c717c50f205d4335c31c43c2ecb51c0242c9a0337d8d84df965'],
+        'checksums': ['06bd15ef39d6ee552d568ea9e2d3d77360b3984a53528f529f14782694e90629'],
     }),
     ('openxlsx', '4.1.0', {
         'checksums': ['ab7b127353061a0e1cd621783366ffdd7c858c6df31cbbdd39aaa353af10ffd8'],
@@ -1192,7 +1219,7 @@ exts_list = [
         'checksums': ['5d38f288c752bbb9cea6ff830b8388bdd65a8571fd82d8d96064586bd588cf99'],
     }),
     ('readxl', '1.3.0', {
-        'checksums': ['29c8830d42ea7bf3f8671adafb62f2c6e6296f187dc3aa39838ad0a9131a95d7'],
+        'checksums': ['8379d1026dcfc662d073eb1c69ed1d90aa6439d6cb3c6fc1b5d1db4f51b3fadc'],
     }),
     ('rio', '0.5.16', {
         'checksums': ['d3eb8d5a11e0a3d26169bb9d08f834a51a6516a349854250629072d59c29d465'],
@@ -1210,10 +1237,10 @@ exts_list = [
         'checksums': ['82fe445075a795c724644864c7ee803c5dd332a89ea9e6ccf7cd1ae2d1ecfc74'],
     }),
     ('flexmix', '2.3-15', {
-        'checksums': ['837c7f175a211b3c484b2c7b81ec9729889a614c5c6e7d70c95a2c1d60ff846a'],
+        'checksums': ['ba444c0bfe33ab87d440ab590c06b03605710acd75811c1622253171bb123f43'],
     }),
     ('prabclus', '2.2-7', {
-        'checksums': ['41792980e40ba18204fab92d85120dcd468860e2204e52fb42636c6f7aee5a62'],
+        'checksums': ['eb06fdccca73eabbbc1f0119a6c1c09e9ae6a659cf9a2bb483f5889811ad5640'],
     }),
     ('diptest', '0.75-7', {
         'checksums': ['462900100ca598ef21dbe566bf1ab2ce7c49cdeab6b7a600a50489b05f61b61b'],
@@ -1249,7 +1276,7 @@ exts_list = [
         'checksums': ['20f341fca8f616c556699790814debdf2ac7aa4dd9ace2071100c66af1549d7d'],
     }),
     ('pheatmap', '1.0.12', {
-        'checksums': ['c7fde6bf25decec1945af18fbab2edcd6a129a3b31817bc50779fcc561d1fdcb'],
+        'checksums': ['579d96ee0417203b85417780eca921969cda3acc210c859bf9dfeff11539b0c1'],
     }),
     ('pvclust', '2.0-0', {
         'checksums': ['1a4615214992307fd7c786cf4607a3ae2af5c0d4067f5053e1c195798a70d741'],
@@ -1283,7 +1310,7 @@ exts_list = [
         ],
     }),
     ('forecast', '8.5', {
-        'checksums': ['695cdf0376f1f519a236bec52722c41ea5896f2064f1403d0ad4914c5611188f'],
+        'checksums': ['8c975cb50a97b8aad71774b65f8353f0a4950a227c2415f2da0301fe8cdc30b5'],
     }),
     ('fma', '2.3', {
         'checksums': ['f516eff79e14d4ffefcdc2db06d97ae57f998e37e871264457078f671384fafc'],
@@ -1310,10 +1337,10 @@ exts_list = [
         'checksums': ['121e5bb92beb7ccac920f921e760f429fd71bcfe11cb9b07a7e7326c7a72ec8c'],
     }),
     ('spatstat', '1.58-2', {
-        'checksums': ['79ffe4bde48c5e196dedc4347deccb4daa6703d72672c851a9e24af18a81fcd6'],
+        'checksums': ['228906c5910aef56c8a9c739e9df595249be6dbec7837db7f929ddd9694b4fba'],
     }),
     ('rgdal', '1.4-2', {
-        'checksums': ['b543b8ca8c2a241f8baf1d6227e0c77df2634a0e856c2042f21565f9d812d81f'],
+        'checksums': ['22d426d69d40cbbe04397603cbf7c5093dfd804e616a230d43f7f05146ea1543'],
     }),
     ('gdalUtils', '2.0.1.14', {
         'checksums': ['890a502b2eb5f1b23655fab94caad5d32adca05b93f5db1d96d9dcde3f0e7737'],
@@ -1322,7 +1349,7 @@ exts_list = [
         'checksums': ['710ed4741bdc63164e7a64513eade5bcbca76b97b22e43e15dddf25740b4f0a3'],
     }),
     ('RCurl', '1.95-4.12', {
-        'checksums': ['792a091cf5b80c460d98ed80fe1cad5d9406d0afc32e466e970ee4d2f68c97bf'],
+        'checksums': ['393779efafdf40823dac942a1e028905d65c34f3d41cfd21bcd225e411385ff4'],
     }),
     ('bio3d', '2.3-4', {
         'checksums': ['f9b39ab242cbedafcd98c1732cb1f5c0dd9ef66e28be39695e3420dd93e2bafe'],
@@ -1358,10 +1385,10 @@ exts_list = [
         'checksums': ['510ca87bd91631c395655ee5029b291e948b33df09e56f6be5839f43e3104891'],
     }),
     ('ddalpha', '1.3.8', {
-        'checksums': ['6452280613567ce7209702ea482355f15630527b27fd01191e4ef8c6939f5dba'],
+        'checksums': ['40ade3dbb098675ea948a15f9648f436f46e7e82ff6ddd7f31eec1470285203e'],
     }),
     ('gower', '0.2.0', {
-        'checksums': ['eb91b2d2784d237c7055abcf3cfa4fc0b2226b855a0c29fc5a4e8eaa689079d5'],
+        'checksums': ['f427227d8d155e78871814a8ee9a2bd4d6072c532d36f206f46abd1e2d982674'],
     }),
     ('RcppRoll', '0.3.0', {
         'checksums': ['cbff2096443a8a38a6f1dabf8c90b9e14a43d2196b412b5bfe5390393f743f6b'],
@@ -1379,7 +1406,7 @@ exts_list = [
         'checksums': ['a52d93572c1b85281e41d8e3c2db97dda5fce96c222e04171b4489ec5000cd08'],
     }),
     ('ParamHelpers', '1.12', {
-        'checksums': ['1614f4c0842cf822befc01228ab7263417f3423dd6a1dc24347b14f8491637a0'],
+        'checksums': ['b54db9e6608ba530345c380c757a60cb2b78ab08992a890b1a41914ce7abcc14'],
     }),
     ('ggvis', '0.4.4', {
         'checksums': ['1332ea122b768688c8a407a483be80febc4576de0ec8929077738421b27cafaf'],
@@ -1400,7 +1427,7 @@ exts_list = [
         'checksums': ['0bd2dcd4ee1915448d325fb5e66bee68e0497cbd91ef67a11b400b2fbe52ff59'],
     }),
     ('lhs', '1.0.1', {
-        'checksums': ['9cd199c3b5b2be1736d585ef0fd39a00e31fc015a053333a7a319668d0809425'],
+        'checksums': ['a4d5ac0c6f585f2880364c867fa94e6554698beb65d3678ba5938dd84fc6ea53'],
     }),
     ('tensorA', '0.36.1', {
         'checksums': ['c7ffe12b99867675b5e9c9f31798f9521f14305c9d9f9485b171bcbd8697d09c'],
@@ -1430,7 +1457,7 @@ exts_list = [
         'checksums': ['ed46b7e062e0dfd8de671c7a5f6d120fb2b720982e918dbeb01e6985694c0273'],
     }),
     ('git2r', '0.24.0', {
-        'checksums': ['3fd37340572ecc3ac8daf771b82a851635f8f7d416a4ab84f7d69522be044504'],
+        'checksums': ['ef813f28dcef76109e7fdc24ac00db539c253f977f5ccb12617714497e11cc6d'],
     }),
     ('rversions', '1.0.3', {
         'checksums': ['21d0809f46505de89a2be7be9449e39c39cff5bc77e584dec976ee6c0b884f44'],
@@ -1509,7 +1536,7 @@ exts_list = [
         'checksums': ['e67f6f376737e1e5cf22fdfe2769a8f674e90c886b0e43942e97d9a3e6924f1c'],
     }),
     ('ks', '1.11.4', {
-        'checksums': ['0d69e85fb4dc97045fdc273b36cf44b185ab60a6d7b17e1eb0c6dddf074be47c'],
+        'checksums': ['0beffaf8694819fba8c93af07a8782674a15fe00a04ad1d94d31238d0a41b134'],
     }),
     ('logcondens', '2.1.5', {
         'checksums': ['72e61abc1f3eb28830266fbe5b0da0999eb5520586000a3024e7c26be93c02eb'],
@@ -1524,7 +1551,7 @@ exts_list = [
         'checksums': ['940d84529ff429b315cf4ad25700f93e1156ccacee7b6c38e4bdfbe2d4c6f868'],
     }),
     ('randomForestSRC', '2.8.0', {
-        'checksums': ['2bcb2734f7a3f6e372bd234b2db23fc9c896e9663032c5f04babb54a2093988b'],
+        'checksums': ['9beb43fd4e9e2bfb1019e8862a8b521a0fef4f80027bb9ab9beb204f922b7ec9'],
     }),
     ('sm', '2.2-5.6', {
         'checksums': ['b890cd7ebe8ed711ab4a3792c204c4ecbe9e6ca1fd5bbc3925eba5833a839c30'],
@@ -1566,10 +1593,10 @@ exts_list = [
         'checksums': ['d032befeb3a414cefdbf70ba29a6c01541c54387cc0a1a98a4022d86cbe60a16'],
     }),
     ('network', '1.14-377', {
-        'checksums': ['60b71983b638c7812ccd986ead438ed7bb2bd8080c01c85d8ea70587275e73ad'],
+        'checksums': ['013c02f8d97f1f87f2c421760534df9353d2a8c2277f20b46b59fb79822d3e46'],
     }),
     ('statnet.common', '4.2.0', {
-        'checksums': ['2cea993a52f27d8a5a5e91d3a5dcffcc86523001f6f646cd26ec37c2486dbe91'],
+        'checksums': ['1176c3303436ebe858d02979cf0a0c33e4e2d1f3637516b4761d573ccd132461'],
     }),
     ('sna', '2.4', {
         'checksums': ['2292b3190e8d879e494527ae9d9d1174c31cb4183749ecb455aedd8d534048cf'],
@@ -1578,7 +1605,7 @@ exts_list = [
         'checksums': ['e6fa74139a2b5f475f134cc0d6b4000ed870beb5865294e9f1d68b4d42bf505b'],
     }),
     ('huge', '1.3.0', {
-        'checksums': ['042b771c334cf4d1a92c5c546ca025238919f772a50457594b7e0bd243498d8c'],
+        'checksums': ['9095151b4fc57f93dc5b120e2e7f51e46938756fc917c6201a5d599fd5c9faa2'],
     }),
     ('d3Network', '0.5.2.1', {
         'checksums': ['5c798dc0c87c6d574abb7c1f1903346e6b0fec8adfd1df7aef5e4f9e7e3a09be'],
@@ -1587,13 +1614,13 @@ exts_list = [
         'checksums': ['832ffe81ff87c6f1a6644e689ebbfb172924b4c4584ac8108d1244d153219ed8'],
     }),
     ('BDgraph', '2.55', {
-        'checksums': ['1751eefb75c020e0fcb18afb8b43f557f252e39de84f686e600805c5fd20ca83'],
+        'checksums': ['a8eed2a1116f073193931f9b5ac5c005682907380896dcd404b5dc8435719d01'],
     }),
     ('pbapply', '1.4-0', {
-        'checksums': ['cdfdaf9b8aecbe48daac858aecaf65a766b74a363d1eb7cd6ebf27c0549f6552'],
+        'checksums': ['f3741b625e0687f6ef80ffabd767c912cdd0def033d16c992abe9b116d52c72e'],
     }),
     ('qgraph', '1.6.1', {
-        'checksums': ['05addcd3f03736bd863c81181055e9ba6db55088cbfe6e5336338223234507d4'],
+        'checksums': ['ea2c561cd3215ec4f24cb02c84a3991937bf9816fca51aec489da0f5bf079fc7'],
     }),
     ('HWxtest', '1.1.7', {
         'checksums': ['7cfcf7860d655945f9d3bbda4590374d3100bb5da6b49956f2e701b910a20e0c'],
@@ -1638,7 +1665,7 @@ exts_list = [
         'checksums': ['737d7d585eb33de2c200da64d16781e3c9522400fe2af352e1460c6a402a0291'],
     }),
     ('imager', '0.41.2', {
-        'checksums': ['afb42fdd3f62c41007eafa205f671cc4af6d165dc813a7cac194124251bc4849'],
+        'checksums': ['9be8bc8b3190d469fcb2883045a404d3b496a0380f887ee3caea11f0a07cd8a5'],
     }),
     ('signal', '0.7-6', {
         'checksums': ['6b60277b07cf0167f8272059b128cc82f27a9bab1fd33d74c2a9e1f2abca5def'],
@@ -1653,7 +1680,7 @@ exts_list = [
         'checksums': ['4d7977783d307a88d2323466ab8511a5ea9c8ac52815bffee79b053b0815b0c6'],
     }),
     ('fftw', '1.0-5', {
-        'checksums': ['80413901ce751c0700ac53283366cfcfe3cbeec2982d29721a0275f9fb9de204'],
+        'checksums': ['afc94fe8e5bed9195c191606239cd37f1b88e24e7422e9c5249cca0781b3f20c'],
     }),
     ('seewave', '2.1.0', {
         'checksums': ['5ea4fd79fe99f094c6bb9092e6048490175e9bedcd6d6e97badc1143df861f44'],
@@ -1686,7 +1713,7 @@ exts_list = [
         'checksums': ['56376e4f0a382fad3d3d40e2cb0562224be5265b827622bcd235e8fc63df276c'],
     }),
     ('cowplot', '0.9.4', {
-        'checksums': ['3e10475fd7506ea9297ed72eb1a3acf858c6fa99d26e46fc39654eba000c3dcb'],
+        'checksums': ['fb57091f4d089797bafa4aeb71371390761bcc40de180c26f6adf94d15a76a7b'],
     }),
     ('tsne', '0.1-3', {
         'checksums': ['66fdf5d73e69594af529a9c4f261d972872b9b7bffd19f85c1adcd66afd80c69'],
@@ -1698,7 +1725,7 @@ exts_list = [
         'checksums': ['4b0be612c8ecd7b4eb19a44ab6ac8f5d40515600ae1144c55989b6b41335ad9e'],
     }),
     ('ranger', '0.11.2', {
-        'checksums': ['327ce1f603aa3a66f66494bb85ad92aaf7622bb0949976a96325d7f6663fe68b'],
+        'checksums': ['13ac8a9433fdd92f62f66de44abc52477dcbb436b2045c1947951a266bffbeeb'],
     }),
     ('hexbin', '1.27.2', {
         'checksums': ['46d47b1efef75d6f126af686a4dd614228b60418b9a5bde9e9e5d11200a0ee52'],
@@ -1710,13 +1737,13 @@ exts_list = [
         'checksums': ['2a3b81e60dafdd092d2bdd3513d7038855ca7d113dc71df1229f7518382a3e39'],
     }),
     ('laeken', '0.5.0', {
-        'checksums': ['465174263f2d495162bf1ee8ab35b362dae8088e458c162ce517813267d813e6'],
+        'checksums': ['ea529f9e45a3825e1f13f8dbd8e7c5f5a42933525ca529230c893eb08e1f39bd'],
     }),
     ('VIM', '4.8.0', {
-        'checksums': ['cdd64cbdca23c097efa8d5084bfc1c0d1449744e90a41680a5246db979d14cee'],
+        'checksums': ['3c6b4fdc10c0375e3fdc56b34a8c05661155bd3166a8b3f36b0addf73d51a423'],
     }),
     ('proxy', '0.4-23', {
-        'checksums': ['aa866ccbfc81253e3651963b5ba482feeb5d1a0449e818486271d79a23720e50'],
+        'checksums': ['9dd4eb0978f40e4fcb55c8a8a26266d32eff9c63ac9dfe70cf1f664ca9c3669d'],
     }),
     ('smoother', '1.1', {
         'checksums': ['91b55b82f805cfa1deedacc0a4e844a2132aa59df593f3b05676954cf70a195b'],
@@ -1743,19 +1770,19 @@ exts_list = [
         'checksums': ['cbd08ccce8b583a2f88946a3267c8fc494ee2b44ba749b9296a6e3d818f6f293'],
     }),
     ('WriteXLS', '4.1.0', {
-        'checksums': ['a0541da45e16bc4bf994cdf3f07a0e202c38d52386460c64e27fe6c1cd889d5b'],
+        'checksums': ['455849d9d369593c2cb313b21dbd479342ce3b09fc4e0aaf9c9d3e65811fecc1'],
     }),
     ('bst', '0.3-17', {
-        'checksums': ['d08570927d9d1b1748c8c8520546a1b591f54ac515be0c40af5a818782466708'],
+        'checksums': ['1ed161d33a7304abfa2fb23daeda2f870ad8483b7fa9b91e6fc8ced21fd8f074'],
     }),
     ('mpath', '0.3-7', {
-        'checksums': ['b5c921aaddc0b2590dfd7b011dc480836ecdae6225d2f0b263a50d780dbd64fb'],
+        'checksums': ['02c5a011d53ac0870657c9a2b6ca48d699c5a45b81612368a2b75467a43ee6a0'],
     }),
     ('timereg', '1.9.3', {
-        'checksums': ['b0b969807e72003cc537c979f01b62e6199fa335baca4cf92473babcd19cac35'],
+        'checksums': ['8c5bbfa63d83e4e1deb3b4aba7bf4865c6da540539d94b2da6e37bf7214e92c2'],
     }),
     ('peperr', '1.1-7.1', {
-        'checksums': ['73e0422c71f2df59cd4a0f820c87dd828f2952b60df2d6c58f62a35559d74605'],
+        'checksums': ['5d4eff0f0b61c0b3e479c2ac2978c8e32373b9630565bf58fee48ead6166698a'],
     }),
     ('heatmap3', '1.1.1', {
         'checksums': ['055e30a2fee0e8b6e499cdc5ccb7e37e5615ed3d52cc7058fc5ca5fc808cf393'],
@@ -1773,16 +1800,16 @@ exts_list = [
         'checksums': ['cd95b1936e57334f019063e6965382169580a1f06a3bb5859f5239fe4db42aca'],
     }),
     ('RInside', '0.2.15', {
-        'checksums': ['8de5340993fe879ca00fa559c5b1b27b408ba78bfc5f67d36d6f0b8d8e8649cf'],
+        'checksums': ['1e1d87a3584961f3aa4ca6acd4d2f3cda26abdab027ff5be2fd5cd76a98af02b'],
     }),
     ('limSolve', '1.5.5.3', {
         'checksums': ['2f27c03411e0d771ad50d5412125bf4fa0ba461051610edc77e20d28488e86d2'],
     }),
     ('dbplyr', '1.3.0', {
-        'checksums': ['9d410bb0055fffe10f1f8da55a5b24d98322c7b571d74df61427d5888332bc48'],
+        'checksums': ['15502c41ebc74811b0cfee451498b3fd38360bc8d14fd8e852449fb8fd1ee21e'],
     }),
     ('modelr', '0.1.4', {
-        'checksums': ['6a9831c510967551a6064716dfd4db48b59dc056dcf1c7f1d2cce05ef0789027'],
+        'checksums': ['b4da77c1244bbda512ce323751c8338741eeaa195283f172a0feec2917bcfdd9'],
     }),
     ('debugme', '1.1.0', {
         'checksums': ['4dae0e2450d6689a6eab560e36f8a7c63853abbab64994028220b8fd4b793ab1'],
@@ -1803,7 +1830,7 @@ exts_list = [
         'checksums': ['d3d4a99a676734ea53e96747d87857fa69615e59858804e92f8ad9ddcf62c5c1'],
     }),
     ('R.rsp', '0.43.1', {
-        'checksums': ['cd3fa03990fb3c9b0a8b8ef324fa3838d73eafc57a44f099029d7a37033aa62b'],
+        'checksums': ['d979113b4a0c6088600b9107f941311b966adddd7b7ab105fd4412d625ba0144'],
     }),
     ('listenv', '0.7.0', {
         'checksums': ['6126020b111870baea08b36afa82777cd578e88c17db5435cd137f11b3964555'],
@@ -1812,16 +1839,16 @@ exts_list = [
         'checksums': ['7985356ad75afa1f795f8267a20dee847020c0207252dc075c614cef55d8fe6b'],
     }),
     ('future', '1.12.0', {
-        'checksums': ['625ca85f4bd2cdffe4ebac0e93db88474c1e9e5ab74a3a9457f226615f59b51d'],
+        'checksums': ['f5460b8299cd03e95996c75a81aebe7f0553904ada9eb132679a36ef343c188a'],
     }),
     ('gdistance', '1.2-2', {
         'checksums': ['c8c923f02ae4e9ef8376d1b195e0246b6941356c8c790c0a5673c5009eee1753'],
     }),
     ('vioplot', '0.3.0', {
-        'checksums': ['601f043630999e0498f0fba213d3d3fefd6ff0abf8fdb22119199b3d8d58939b'],
+        'checksums': ['76aa941bfb58f1dbc6b653da5415ca8c1d9ab5b74ea15070c9db667c30aeb5b5'],
     }),
     ('emulator', '1.2-19', {
-        'checksums': ['28be9a86883e7bc319d78a53efec2e8abe445519774b723466d3aa8f537a1e94'],
+        'checksums': ['c8ae765bff32f6031b1a64027aafc04cc0cfb09ce183b4367a41704cc8e04b0d'],
     }),
     ('gmm', '1.6-2', {
         'checksums': ['b12f888276c2d480f17ae2711e4915bb253574e3fc36531349f1c2f2c8ad715d'],
@@ -1830,7 +1857,7 @@ exts_list = [
         'checksums': ['1a9f35e9b4899672e9c0b263affdc322ecb52ec198b2bb015af9d022faad73f0'],
     }),
     ('IDPmisc', '1.1.19', {
-        'checksums': ['238d640953f6fe9a24a9437dcd8e39d0debb1c830e45547fb2da1c9f8cffc509'],
+        'checksums': ['0d5e35252c7ec2654a3d64949bdc0977cc8479f8ada97bccd0d90d70aadb0c8f'],
     }),
     ('gap', '1.1-22', {
         'checksums': ['71a691aac9ce29bfcf1159eacba1866c8571b781f68fb32a3e52fb8584f03ef7'],
@@ -1842,23 +1869,25 @@ exts_list = [
         'checksums': ['facbc7cc44f993e0d827a6eb84928f8e35b0b3f263582d885a307e150b434de4'],
     }),
     ('glmmTMB', '0.2.3', {
-        'checksums': ['c5176f4f00ca4b900f49d3744bbcc6772fc31f431bcbf2431db64a5da99c97b2'],
+        'checksums': ['6b6f62addaa54b32b975bc984110e245330749ebf69bed4a297f9da1b89fb00c'],
     }),
-    ('spaMM', '2.6.1'),
+    ('spaMM', '2.6.1', {
+        'checksums': ['32dfa9d703c6ea6e12fbc3a3f2e30d039f1af304d1a86e56da0a9ae912539936'],
+    }),
     ('DHARMa', '0.2.4', {
-        'checksums': ['3422c9d733e7203d17d88761422e242a72309928bc3b01378810fde7c50f004a'],
+        'checksums': ['98ae8c47a3cccf15eb240789b7e77e53b29815ea3fc6c5e29e42cc720b707f3a'],
     }),
     ('bridgesampling', '0.6-0', {
         'checksums': ['172da757014ea804c6c55761dde29a53c82e13cf6769b124da00ca07b1a64694'],
     }),
     ('BayesianTools', '0.1.6', {
-        'checksums': ['f32548f15fe8c625823eb2098165b680e07704356525e631c7bb129f8297bc0a'],
+        'checksums': ['e5da5df8626085c3338461b23b1b96abaf25d95aadf29206094b5f52377ce784'],
     }),
     ('gomms', '1.0', {
         'checksums': ['52828c6fe9b78d66bde5474e45ff153efdb153f2bd9f0e52a20a668e842f2dc5'],
     }),
     ('feather', '0.3.2', {
-        'checksums': ['f1069bf920e9bc3da6bf43542a3a7ccc3142544d759945115ecade69dd5ccde0'],
+        'checksums': ['0686608a9fe404d1ef0dc9896d6474f0cf909ccda6af4c6af45ef10939b51b8d'],
     }),
     ('dummies', '1.5.6', {
         'checksums': ['7551bc2df0830b98c53582cac32145d5ce21f5a61d97e2bb69fd848e3323c805'],
@@ -1873,13 +1902,13 @@ exts_list = [
         'checksums': ['6f3dc30ad22e33e4fcfa37b3427c093d591c02f1b89a014d85e63203f6031dc2'],
     }),
     ('aod', '1.3.1', {
-        'checksums': ['e377effe345987850ece985eabf79750ca1979d75469d17a323c21515ad1dda8'],
+        'checksums': ['052d8802500fcfdb3b37a8e3e6f3fbd5c3a54e48c3f68122402d2ea3a15403bc'],
     }),
     ('cghFLasso', '0.2-1', {
         'checksums': ['6e697959b35a3ceb2baa1542ef81f0335006a5a9c937f0173c6483979cb4302c'],
     }),
     ('svd', '0.4.2', {
-        'checksums': ['6f585cb622cc52e2b7f3efddb7a363e91771bff80b8facb554755c2b33b7f402'],
+        'checksums': ['63c10349483109e89343316f986dab0cd1599e3d1928c7d60a20e5b70387b3c3'],
     }),
     ('Rssa', '1.0', {
         'checksums': ['9cc20a7101d8dff4c6cfb789f9bdc14e2b3bb128d7613a67b0f9633cf006902a'],
@@ -1900,7 +1929,7 @@ exts_list = [
         'checksums': ['ebd3eb754b338dc8d89a35fff149af57c1be3aa2eb6162912c7cc52a8572c292'],
     }),
     ('Matching', '4.9-5', {
-        'checksums': ['1fbf346d75a079f5b23137dd7bc112207db8d64adfd197826ae6b5748600bc02'],
+        'checksums': ['c481a47b54970ec3e02378a0f6ef7f8e35c52f0778dd207b67d257010d2352ae'],
     }),
     ('MatchIt', '3.0.2', {
         'checksums': ['782b159a2b5172e758e3993177930d604140ae668fd8a7c98c30792df80de9de'],
@@ -1945,7 +1974,7 @@ exts_list = [
         'checksums': ['01f87cdcdf2052ed9c078d9352465cdeda920a41e2ca55bc154c1574fc651c36'],
     }),
     ('metap', '1.1', {
-        'checksums': ['50a014cd52c30d55cf219cc37864323c4d1b44c3c26ff948b10e4dff1dde3fa3'],
+        'checksums': ['20120428672d39dc15829c7e66850fc4350a34df290d48cef0b1cc78d13f7b82'],
     }),
     ('lsei', '1.2-0', {
         'checksums': ['4781ebd9ef93880260d5d5f23066580ac06061e95c1048fb25e4e838963380f6'],
@@ -1954,10 +1983,10 @@ exts_list = [
         'checksums': ['404cf7135dc40a04e9b81224a543307057a8278e11109ba1fcaa28e87c6204f3'],
     }),
     ('fitdistrplus', '1.0-14', {
-        'checksums': ['861b986529d21a1c5de3e7e22848167704848f60b3f31770827fc8e2c79b0c8a'],
+        'checksums': ['85082590f62aa08d99048ea3414c5cc1e5b780d97b3779d2397c6cb435470083'],
     }),
     ('reticulate', '1.11.1', {
-        'checksums': ['58e36d3b8a67d01194c4e5099499657d017f77fc2081213633964b1d57a7e32f'],
+        'checksums': ['3b45e453543023464e8bc734e381d50b775161a90f4424a65e31a6bd9b48cbb3'],
     }),
     ('hdf5r', '1.0.1', {
         'preinstallopts': "unset LIBS && ",
@@ -1967,7 +1996,7 @@ exts_list = [
         'checksums': ['835df542d0ec55368834bc4173dc4aa90f1c0ff146ab243d6e377bba309b8484'],
     }),
     ('pulsar', '0.3.5', {
-        'checksums': ['d7230b2286d0fbfa59bbd4f7314ee6e7b77f929f41a8b42bd95af0a7e354cb1c'],
+        'checksums': ['a1cab4a9ab39c57b0a8d8fbd1a799714ac95d4de43b628027b297cd525932658'],
     }),
     ('bayesm', '3.1-1', {
         'checksums': ['4854517dec30ab7c994de862aae1998c2d0c5e71265fd9eb7ed36891d4676078'],
@@ -1985,7 +2014,7 @@ exts_list = [
         'checksums': ['efd68162cd6d5a4f6d833dbf785a2bbce1cb7b9f90ba3fb060931a4bd705096b'],
     }),
     ('ggforce', '0.2.0', {
-        'checksums': ['c4ea83a674793836eac876f8cfdf363ea677d9a947b4461226883a6d7cedcd73'],
+        'checksums': ['7ea6a74bcf75c475ee14d266c42713affdefedb7ca8d8bd2c96790be4161cef5'],
     }),
     ('ggrepel', '0.8.0', {
         'checksums': ['6386606e716d326354a29fcb6cd09f9b3d3b5e7c5ba0d5f7ff35416b1a4177d4'],
@@ -1994,10 +2023,10 @@ exts_list = [
         'checksums': ['4c24739ecabfc65c290a11980491a20bdaac675392a98dc30ccde76ac4b8f53a'],
     }),
     ('tidygraph', '1.1.2', {
-        'checksums': ['b1fad3aec61d2f594ce1fa74663eff422f168878d0d999a0b997cb9de88053bf'],
+        'checksums': ['5642001d4cccb122d66481b7c61a06c724c02007cbd356ee61cb29726a56fafe'],
     }),
     ('clustree', '0.3.0', {
-        'checksums': ['10242fbfd607e08c0eba52642a9a49dbfef461cc6f4a2ac999c66400c481c492'],
+        'checksums': ['9041c49d2900e46ee8bbd6cadf8ef33073a35652ef842dca31c38d30b0360e32'],
     }),
     ('plotly', '4.8.0', {
         'checksums': ['78f90282c831bbbb675ed4811fb506a98dd05e37251fabd42ebc263c80bae8a6'],
@@ -2009,16 +2038,16 @@ exts_list = [
         'checksums': ['35e8a8e3c0837df58b7f710d7b4c38a9b63d2522cb3e35ca6a499c30f055ed9a'],
     }),
     ('mvabund', '4.0.1', {
-        'checksums': ['d2b21443a7a791f25340c9c7cad6439b1a9cc5154ca7387be00722b67e920bfd'],
+        'checksums': ['1399fa0a5f7a3673d788abe36b520f476c05246e21f71e3f60cee7a85f194951'],
     }),
     ('fishMod', '0.29', {
         'checksums': ['5989e49ca6d6b2c5d514655e61f75b019528a8c975f0d6056143f17dc4277a5d'],
     }),
     ('gllvm', '1.1.2', {
-        'checksums': ['751a7e93b063bcd342bf5f2c3441f1bde6986493f79fffbe74221366c89ab219'],
+        'checksums': ['629b61cf2fb0b4960e5a92b2cabe8978f00dd1de97d755b3c8ec33e1f53fadd9'],
     }),
     ('grpreg', '3.2-1', {
-        'checksums': ['15ad18d851305c85ad9015fb93f132c10d2e0fb26886afdcf942e053616d734b'],
+        'checksums': ['6be37719a74d59582107273385d70963b4ccc6c394948c7617e65246d713cb88'],
     }),
 ]
 
