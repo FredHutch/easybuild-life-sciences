@@ -1,9 +1,10 @@
 ---
 title: All Modules  18.04
+permalink: /${md_file}
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-02-21
+date: 2019-03-12
 ---
 
  - [AdapterRemoval/2.2.2-foss-2018b](https://github.com/MikkelSchubert/adapterremoval)  
@@ -85,10 +86,12 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.
  Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
- - [CMake/3.12.1-GCCcore-7.3.0](http://www.cmake.org)  
+ - [CMake/3.11.4-GCCcore-7.3.0](http://www.cmake.org)  
 CMake, the cross-platform, open-source build system.  CMake is a family of
  tools designed to build, test and package software.
 
+ - [Cufflinks/2.2.1-foss-2018b](http://cole-trapnell-lab.github.io/cufflinks/)  
+Transcript assembly, differential expression, and differential regulation for RNA-Seq
  - [DBus/1.13.6-GCCcore-7.3.0](http://dbus.freedesktop.org/)  
 D-Bus is a message bus system, a simple way for applications to talk
  to one another.  In addition to interprocess communication, D-Bus helps
@@ -107,7 +110,7 @@ Doxygen is a documentation system for C++, C, Java, Objective-C, Python,
 EMBOSS is 'The European Molecular Biology Open Software Suite'.
  EMBOSS is a free Open Source software analysis package specially developed for
  the needs of the molecular biology (e.g. EMBnet) user community.
- - [EasyBuild/3.8.0](https://easybuilders.github.io/easybuild)  
+ - [EasyBuild/3.8.1](https://easybuilders.github.io/easybuild)  
 EasyBuild is a software build and installation framework
  written in Python that allows you to install software in a structured,
  repeatable and robust way.
@@ -115,6 +118,9 @@ EasyBuild is a software build and installation framework
 Eigen is a C++ template library for linear algebra:
  matrices, vectors, numerical solvers, and related algorithms.
 
+ - [FASTX-Toolkit/0.0.14-foss-2018b](http://hannonlab.cshl.edu/fastx_toolkit/)  
+The FASTX-Toolkit is a collection of command line tools for 
+ Short-Reads FASTA/FASTQ files preprocessing.
  - [FFTW/3.3.8-gompi-2018b](http://www.fftw.org)  
 FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)
  in one or more dimensions, of arbitrary input size, and of both real and complex data.
@@ -246,6 +252,8 @@ This package contains command line utilities for preprocessing,
  See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
  - [ImageMagick/7.0.8-22-GCCcore-7.3.0](http://www.imagemagick.org/)  
 ImageMagick is a software suite to create, edit, compose, or convert bitmap images
+ - [JUnit/4.12-Java-1.8](http://sourceforge.net/projects/junit)  
+A programmer-oriented testing framework for Java.
  - [JasPer/2.0.14-GCCcore-7.3.0](http://www.ece.uvic.ca/~frodo/jasper/)  
 The JasPer Project is an open-source initiative to provide a free
  software-based reference implementation of the codec specified in
@@ -374,8 +382,9 @@ Python is a programming language that lets you work more quickly and integrate y
 Qt is a comprehensive cross-platform C++ application framework.
  - [Qt5/5.10.1-foss-2018b](http://qt.io/)  
 Qt is a comprehensive cross-platform C++ application framework.
- - [R/3.5.2-foss-2018b](http://www.r-project.org/)  
-R is a free software environment for statistical computing and graphics.
+ - [R/3.5.3-foss-2018b](http://www.r-project.org/)  
+R is a free software environment for statistical computing
+ and graphics.
  - [SAMtools/1.9-foss-2018b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
@@ -439,6 +448,10 @@ Tk is an open source, cross-platform widget toolchain that provides a library of
 Tkinter module, built with the Python buildsystem
  - [TopHat/2.1.1-foss-2018b](http://ccb.jhu.edu/software/tophat/)  
 TopHat is a fast splice junction mapper for RNA-Seq reads.
+ - [Trinity/2.8.4-foss-2018b](http://trinityrnaseq.github.io)  
+Trinity represents a novel method for the efficient and robust de novo reconstruction
+ of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm,
+ Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
  - [UDUNITS/2.2.26-foss-2018b](http://www.unidata.ucar.edu/software/udunits/)  
 UDUNITS supports conversion of unit specifications between formatted and binary forms,
  arithmetic manipulation of units, and conversion of values between compatible scales of measurement.
@@ -475,8 +488,15 @@ ANNOVAR is an efficient software tool to utilize update-to-date
  information to functionally annotate genetic variants detected from diverse
  genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,
  yeast and many others).
+ - [ant/1.10.1-Java-1.8](http://ant.apache.org/)  
+Apache Ant is a Java library and command-line tool whose mission is to drive processes described in
+ build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of
+ Java applications.
  - [bam2wig/1.5](https://github.com/MikeAxtell/bam2wig)  
 Conversion of a BAM alignment to wiggle and bigwig coverage files, with flexible reporting options.
+ - [bcl2fastq2/2.20.0-foss-2018b](https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html)  
+bcl2fastq Conversion Software both demultiplexes data and converts BCL files generated by
+ Illumina sequencing systems to standard FASTQ file formats for downstream analysis.
  - [beagle-lib/3.0.2-foss-2018b](https://github.com/beagle-dev/beagle-lib)  
 beagle-lib is a high-performance library that can perform the core calculations at the heart of most
  Bayesian and Maximum Likelihood phylogenetics packages.
@@ -508,8 +528,8 @@ Cairo is a 2D graphics library with support for multiple output devices.
  - [canu/1.8-foss-2018b](http://canu.readthedocs.io)  
 Canu is a fork of the Celera Assembler designed for
  high-noise single-molecule sequencing
- - [cellranger/2.1.1](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
-Single Cell Analysis Pipelines
+ - [cellranger/3.0.2-foss-2018b](https://support.10xgenomics.com/single-cell-gene-expression/software/overview/welcome)  
+Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform.
  - [cutadapt/1.18-foss-2018b-Python-3.6.6](http://opensource.scilifelab.se/projects/cutadapt/)  
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
@@ -733,6 +753,15 @@ pkg-config is a helper tool used when compiling applications and libraries.
  for instance, rather than hard-coding values on where to find glib (or other
  libraries).
 
+ - [pplacer/1.1.alpha19-foss-2018b](['https://matsen.fhcrc.org/pplacer/'])  
+Pplacer places reads on a phylogenetic tree. guppy (Grand
+ Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful
+ tool for working with reference packages.
+ - [prodigal/2.6.3-GCCcore-7.3.0](http://prodigal.ornl.gov/)  
+Prodigal (Prokaryotic Dynamic Programming Genefinding
+   Algorithm) is a microbial (bacterial and archaeal) gene finding program
+   developed at Oak Ridge National Laboratory and the University of
+   Tennessee.
  - [prokka/1.13-foss-2018b-BioPerl-1.7.2](http://www.vicbioinformatics.com/software.prokka.shtml)  
 Prokka is a software tool for the rapid annotation of prokaryotic genomes.
  - [psipred/4.02-foss-2018b](http://bioinf.cs.ucl.ac.uk/psipred/)  
