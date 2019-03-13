@@ -1,6 +1,6 @@
 ---
 title: All Modules  14.04
-permalink: /${md_file}
+permalink: /all-modules-14.04/
 layout: single
 sidebar:
   nav: "docs"
