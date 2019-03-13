@@ -42,7 +42,7 @@ md_out=${docs_dir}/${md_file}
 
 echo '---' > ${md_out}
 echo 'title: All Modules ' $os_ver >> ${md_out}
-echo 'permalink: /${md_file}' >> ${md_out}
+echo "permalink: /${md_file}/" >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo 'sidebar:' >> ${md_out}
 echo '  nav: "docs"' >> ${md_out}
