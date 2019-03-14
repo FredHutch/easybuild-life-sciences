@@ -30,9 +30,23 @@ dependencies = [
     ('PostgreSQL', '10.3'),
     ('MariaDB', '10.3.10'),
     ('JAGS', '4.3.0'),
-    #('poppler', '0.54.0'), # pdftools
+    ('GLPK', '4.65'), # rglpk
+    ('poppler', '0.70.1'), # pdftools
+    ('GMime', '2.6.23'), # pdftools
 
-    #('MariaDB-connector-c', '2.3.7'),
+    #('PROJ', '5.0.0'),
+    ('GSL', '2.5'), # for gsl
+    ('GMP', '6.1.2'),  # for igraph
+    ('NLopt', '2.4.2'),
+    ('libGLU', '9.0.0'),
+    ('Mesa', '18.1.1'), # for rgl
+    ('cairo', '1.14.12'),
+    ('FFTW', '3.3.8'), # for fftw
+    ('ICU', '61.1'),
+    ('netCDF', '4.6.1'), # for netcdf4
+    ('ZeroMQ', '4.2.5'), # for zmq
+    ('HDF5', '1.10.2'),
+    ('UDUNITS', '2.2.26'),
 ]
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
@@ -66,6 +80,8 @@ exts_list = [
     ('RcppParallel', '4.4.2', {
         'checksums': ['28733f4ffa88b9cd46c966015af8eda8e7325c93e5886d64f522dddb1968d984'],
     }),
+    ('qpdf', '1.1'),
+    #('pdftools', '2.2'),
     ('scidb', '2.0.0', {
         'checksums': ['f494089f91055692eaafc4c38ecca06d342b58e0f981ad6551cccade759b2a1d'],
     }),
@@ -312,9 +328,9 @@ exts_list = [
     ('Rlabkey', '2.2.4', {
         'checksums': ['96843788277a2922405aa9a8267c6cebe8d166eef832d2380d997234e4c97800'],
     }),
-    ('RODBC', '1.3-15', {
-        'checksums': ['c43e5a2f0aa2f46607e664bfc0bb3caa230bbb779f4ff084e01727642da136e1'],
-    }),
+    #('RODBC', '1.3-15', {
+    #    'checksums': ['c43e5a2f0aa2f46607e664bfc0bb3caa230bbb779f4ff084e01727642da136e1'],
+    #}),
     ('RSclient', '0.7-3', {
         'checksums': ['d04c50b027b4c2a0ab3ed8c47ae54e3d8014afe0cc8f309ede31d9c8aae1ab1e'],
     }),
@@ -351,8 +367,8 @@ exts_list = [
     ('REDCapR', '0.9.8', {
         'checksums': ['e605203345f6b68cee024fa858fc8300392edb49c922939c252f7ada35e0fa92'],
     }),
-    ('synapseClient', '1.13-4', {
-        'checksums': ['1aea06203e859e77d289f04c4809e3065a327ae3a34b3c6f4f86034aa73398b8'],
+    ('synapseClient', '1.14-3', {
+        'checksums': ['fb7a366a9203dd4cd74ab63b03e84900cf94284f477cfa5077d7a9832e59063a'],
     }),
     ('GWASExactHW', '1.01', {
         'checksums': ['e850ed40fbf14b02eb3798603cfb111fe3718bb69d74c0ff4cb6f679209a15a7'],
@@ -960,5 +976,12 @@ exts_list = [
         'checksums': ['8424fbe97023746ae95a0a4b622e88e7ed0931e09ff8d89fa01bd4f88707e9d3'],
     }),
 ]
+
+sanity_check_paths = {
+    'files': ['Bhat/R/Bhat', 'Bolstad/R/Bolstad'],
+    'dirs': ['Bhat', 'Bolstad'],
+}
+
+modextrapaths = {'R_LIBS': ''}
 
 moduleclass = 'lang'
