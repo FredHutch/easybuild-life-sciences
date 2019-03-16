@@ -8,16 +8,21 @@ name = 'iODBC'
 version = '3.52.12'
 
 homepage = "http://www.iodbc.org/"
-description = """iODBC is the acronym for Independent Open DataBase Connectivity, an Open Source platform independent implementation of both the ODBC and X/Open specifications."""
+description = """iODBC is the acronym for Independent Open DataBase
+ Connectivity, an Open Source platform independent implementation of both the
+ ODBC and X/Open specifications."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
 source_urls = ['https://github.com/openlink/iODBC/archive']
 sources = ['v%(version)s.zip']
 
-preconfigopts = 'autoconf && '
+builddependencies = [
+    ('M4', '1.4.17'),
+    ('Autoconf', '2.69')
+]
 
-dependencies = [('Autoconf', '2.69')]
+#preconfigopts = 'autoreconf --install && '
 
 sanity_check_paths = {
     'dirs': ['bin', 'etc', 'include', 'lib', 'share/doc', 'share/man',

@@ -1930,12 +1930,6 @@ exts_list = [
     ('grpreg', '3.2-0', {
         'checksums': ['15ad18d851305c85ad9015fb93f132c10d2e0fb26886afdcf942e053616d734b'],
     }),
-    ('CARBayesdata', '2.1'),
-    ('leaflet', '2.0.2'),
-    ('mcmc', '0.9-5'),
-    ('MCMCpack', '1.4-4'),
-    ('truncnorm', '1.0-8'),
-    ('CARBayes', '5.1.1'),
     ('reticulate', '1.10'),
     ('breakaway', '3.0'),
 ]

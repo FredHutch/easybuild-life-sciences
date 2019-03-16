@@ -1,0 +1,35 @@
+easyblock = 'MakeCp'
+
+name = 'jbigkit'
+version = '2.1'
+
+homepage = ''
+description = """JBIG-KIT is a software implementation of the JBIG1 data
+ compression standard (ITU-T T.82), which was designed for bi-level image
+ data, such as scanned documents."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = [' https://www.cl.cam.ac.uk/~mgk25/jbigkit/download']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('binutils', '2.26'),
+    ('pkg-config', '0.29.1'),
+]
+
+files_to_copy = [(['libjbig/libjbig85.a', 'libjbig/libjbig.a'], 'lib'),
+                 (['libjbig/jbig85.h', 'libjbig/jbig.h'], 'include'),
+                 (['pbmtools/pbmtojbg', 'pbmtools/jbgtopbm'], 'bin'),
+]
+              
+
+sanity_check_paths = {
+    'files': ['lib/libjbig85.a', 'lib/libjbig.a',
+              'bin/pbmtojbg', 'bin/jbgtopbm',
+              'include/jbig.h',
+              ],
+    'dirs': ['bin', 'include', 'lib']
+}
+
+moduleclass = 'vis'

@@ -1,0 +1,70 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+# "not found"
+#    libodbc.so.2 => not found [PostgreSQL might statify]
+#    libodbcinst.so.2 => not found [PostgreSQL might statify]
+#    libjasper.so.1 => not found [ JasPer ]
+#    libproj.so.0 => not found [ PROJ ]
+#    libjbig.so.0 => not found [ JBIG-Kit ]
+#    libpq.so.5 => not found [ provided by PostgreSQL pgsql]
+#    libmpi.so.1 => not found [ OpenMPI is part of toolchain, should work ]
+#    libibverbs.so.1 => not found [ replaced by rdma-core - OS dep]
+#
+easyblock = 'Bundle'
+
+name = 'CARBayes'
+version = '5.1.1'
+versionsuffix = '-R-%(rver)s'
+biocver = '3.8'
+
+homepage = 'http://github.com/duncanplee/CARBayes'
+description = """Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+dependencies = [
+    ('R', '3.5.2'),
+    ('Xerces-C++', '3.2.0'),
+    ('JasPer', '1.900.1'),
+    ('PROJ', '4.9.2'),
+    ('PostgreSQL', '9.6.1'),
+    ('jbigkit', '2.1'), # '-GCCcore-5.4.0
+]
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on July 8th 2016
+exts_list = [
+    ('CARBayesdata', '2.1'),
+    ('leaflet', '2.0.2'),
+    ('mcmc', '0.9-6'),
+    ('MCMCpack', '1.4-4'),
+    ('truncnorm', '1.0-8'),
+    (name, version),
+]
+
+
+sanity_check_paths = {
+    'files': ['CARBayes/R/CARBayes'],
+    'dirs': ['CARBayes'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'lang'
