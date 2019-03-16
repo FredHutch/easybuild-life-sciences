@@ -1,0 +1,32 @@
+easyblock = 'ConfigureMake'
+
+name = 'libnl'
+version = '3.4.0'
+
+homepage = ''
+description = """The libnl suite is a collection of libraries providing APIs
+ to netlink protocol based Linux kernel interfaces."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = ['https://github.com/thom311/libnl/releases/download/libnl3_4_0']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('Autotools', '20150215', '-GCC-5.4.0-2.26', True),
+    ('CMake', '3.7.1'), 
+    ('binutils', '2.26', '-GCCcore-5.4.0', True),
+]
+
+sanity_check_paths = {
+    'files': ['bin/nl-cls-add',
+              'etc/libnl/classid',
+              'include/libnl3/netlink/netlink.h',
+              'lib/libnl-3.%s' % SHLIB_EXT,
+              'lib/libnl-cli-3.%s' % SHLIB_EXT,
+              'share/man/man8/nl-classid-lookup.8'
+              ],
+    'dirs': ['bin', 'etc', 'include', 'lib', 'share']
+}
+
+moduleclass = 'lib'

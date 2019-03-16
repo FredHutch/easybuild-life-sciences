@@ -34,7 +34,9 @@ builddependencies = [
 configopts = ' --with-openssl'
 
 sanity_check_paths = {
-    'files': ['bin/psql', 'bin/pg_config', 'lib/libpq.a', 'lib/libpq.%s' % SHLIB_EXT],
+    'files': ['bin/psql', 'bin/pg_config', 'lib/libpq.a',
+              'lib/libpq.%s' % SHLIB_EXT
+              ],
     'dirs': ['share/postgresql'],
 }
 

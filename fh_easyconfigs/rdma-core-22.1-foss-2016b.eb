@@ -1,0 +1,25 @@
+easyblock = 'ConfigureMake'
+
+name = 'rdma-core'
+version = '22.1'
+
+homepage = 'https://github.com/linux-rdma/rdma-core'
+description = """RDMA core userspace libraries and daemons. RDMA contains the
+ userspace libraries for the following device nodes: libibverbs, librdmacm,
+ libibumad"""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+source_urls = ['https://github.com/linux-rdma/rdma-core/releases/download/v%(version)s']
+sources = [SOURCELOWER_TAR_GZ]
+
+builddependencies = [
+    ('Python', '3.6.6'),
+]
+
+sanity_check_paths = {
+    'files': [('lib/infiniband/libibverbs.%s' % SHLIB_EXT)],
+    'dirs': ['lib'],
+}
+
+moduleclass = 'lib'
