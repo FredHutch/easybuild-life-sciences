@@ -1,0 +1,26 @@
+easyblock = 'Binary'
+
+name = 'ResMap'
+version = '1.1.4'
+versionsuffix = '-linux64'
+
+homepage = 'http://resmap.sourceforge.net/'
+
+description = """ResMap (Resolution Map) is a Python (NumPy/SciPy) application
+with a Tkinter GUI. It is an easy to use software package for computing the
+local resolution of 3D density maps studied in structural biology, primarily
+electron cryo-microscopy (cryo-EM)."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://downloads.sourceforge.net/project/resmap/']
+
+sources = ['%(name)s-%(version)s%(versionsuffix)s']
+
+install_cmd = "cp %(name)s-%(version)s%(versionsuffix)s %(installdir)s/ && "
+install_cmd += "chmod 755 %(installdir)s/%(name)s-%(version)s%(versionsuffix)s"
+
+sanity_check_paths = {
+    'files': ['%(name)s-%(version)s%(versionsuffix)s'],
+    'dirs': [],
+}

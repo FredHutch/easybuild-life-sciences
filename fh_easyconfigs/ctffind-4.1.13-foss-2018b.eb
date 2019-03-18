@@ -1,0 +1,16 @@
+
+easyblock = 'ConfigureMake'
+
+name = 'ctffind'
+version = '4.1.13'
+
+homepage = 'http://grigoriefflab.janelia.org/ctf'
+description = """CTFFIND is a programing for finding CTFs of electron
+micrographs"""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = ['http://grigoriefflab.janelia.org/sites/default/files/']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+moduleclass = 'bio'
