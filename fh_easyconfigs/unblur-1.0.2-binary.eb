@@ -1,0 +1,22 @@
+
+easyblock = 'Tarball'
+
+name = 'unblur'
+version = '1.0.2'
+versionsuffix = '-binary'
+
+homepage = 'http://grigoriefflab.janelia.org/unblur'
+description = """Unblur is used to align the frames of movies recorded on an
+ electron microscope to reduce image blurring due to beam-induced motion."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['http://grigoriefflab.janelia.org/sites/default/files/']
+sources = ['%(name)s_%(version)s.tar.gz']
+
+sanity_check_paths = {
+    'files': ['bin/unblur_openmp_7_17_15.exe'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
