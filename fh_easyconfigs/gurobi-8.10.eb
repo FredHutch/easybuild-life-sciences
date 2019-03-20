@@ -1,0 +1,40 @@
+# easybuild easyconfig
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Tarball'
+
+name = 'gurobi'
+version = '8.1.0'  # 8.10
+
+homepage = 'https://gurobi.com'
+description = """The Gurobi Optimizer allows users to state their toughest
+ business problems as mathematical models, and then automatically considers
+ billions or even trillions of possible solutions to find the best one. Our
+ solver can be used as both a decision-making assistant, to help guide the
+ choices of a skilled expert, or as a fully automated tool to make decisions
+ with no human intervention."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# Comerical software requires a license
+source_urls = ['https://urldefense.proofpoint.com/v2/url?u=http-3A__www.gurobi.com_documentation_current_quickstart-5Flinux_setting-5Fup-5Fand-5Fusing-5Fa-5Fflo.html&d=DwIGaQ&c=eRAMFD45gAfqt84VtBcfhQ&r=3TR-iteG1SyRqQ5yubQg-_2KIAToz9bj5dZrRdW36Hc&m=NMsiidJM0j96pkmVchP-szzfacZSBbr2izLZ_iCyBUo&s=kqJR6EW_0Yvsx0KF7P91I454DqiWajfg66xIDKfCta0&e=']
+sources = ['%(name)s-%(version)s_linux64.tar.gz']
+checksums = ['bf0d8369ab5fb69b2fb027c41814c8b8e6d1de32a39960aa9c52126cf15f58fa']
+
+files_to_copy = ['linux64']
+
+modextravars = {
+    'GUROBI_HOME': '%(installdir)s',
+    'GRB_LICENSE_FILE': '%(installdir)s/gurobi.lic'
+}
+modextrapaths = {
+    'PATH': 'bin', # GUROBI_HOME/bin
+    'LD_LIBRARY_PATH': 'lib' # GUROBI_HOME/lib
+}
+
+sanity_check_paths = {
+    'files': ['bin/gurobi.sh'],
+    'dirs': ['bin', 'docs', 'lib'],
+} 
+
+moduleclass = 'lib'
