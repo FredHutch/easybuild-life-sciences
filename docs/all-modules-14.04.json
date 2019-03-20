@@ -68,6 +68,22 @@
                 "Description: \n ATK provides the set of accessibility interfaces that are implemented by other\n toolkits and applications. Using the ATK interfaces, accessibility tools have\n full access to view and control running applications.\n",
                 "Homepage: https://developer.gnome.org/ATK/stable/"
             ]
+        },
+        "/app/easybuild/modules/all/ATK/2.28.1-foss-2018b.lua": {
+            "Description": "ATK provides the set of accessibility interfaces that are implemented by other\n toolkits and applications. Using the ATK interfaces, accessibility tools have\n full access to view and control running applications.\n",
+            "Version": "2.28.1-foss-2018b",
+            "fullName": "ATK/2.28.1-foss-2018b",
+            "help": "\nDescription\n===========\nATK provides the set of accessibility interfaces that are implemented by other\n toolkits and applications. Using the ATK interfaces, accessibility tools have\n full access to view and control running applications.\n\n\nMore information\n================\n - Homepage: https://developer.gnome.org/ATK/stable/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ATK/2.28.1-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000028.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000002.000000028.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: \n ATK provides the set of accessibility interfaces that are implemented by other\n toolkits and applications. Using the ATK interfaces, accessibility tools have\n full access to view and control running applications.\n",
+                "Homepage: https://developer.gnome.org/ATK/stable/"
+            ]
         }
     },
     "ATLAS": {
@@ -588,6 +604,22 @@
             "wV": "000000002.000000026.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM. - Homepage: https://github.com/arq5x/bedtools2 "
+            ]
+        },
+        "/app/easybuild/modules/all/BEDTools/2.27.1-foss-2016b.lua": {
+            "Description": "The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+            "Version": "2.27.1-foss-2016b",
+            "fullName": "BEDTools/2.27.1-foss-2016b",
+            "help": "\nDescription\n===========\nThe BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.\n\n\nMore information\n================\n - Homepage: https://github.com/arq5x/bedtools2\n",
+            "hidden": false,
+            "pV": "000000002.000000027.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BEDTools/2.27.1-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000027.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+                "Homepage: https://github.com/arq5x/bedtools2"
             ]
         }
     },
@@ -1210,6 +1242,25 @@
             "whatis": [
                 "Description: Bison is a general-purpose parser generator that converts an annotated context-free grammar  into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables. - Homepage: http://www.gnu.org/software/bison "
             ]
+        },
+        "/app/easybuild/modules/all/Bison/3.0.5-GCCcore-7.3.0.lua": {
+            "Description": "Bison is a general-purpose parser generator that converts an annotated context-free grammar\n into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.",
+            "Version": "3.0.5-GCCcore-7.3.0",
+            "fullName": "Bison/3.0.5-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nBison is a general-purpose parser generator that converts an annotated context-free grammar\n into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.\n\n\nMore information\n================\n - Homepage: http://www.gnu.org/software/bison\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Bison/3.0.5-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000003.000000000.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Bison/3.0.5-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000000.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Bison is a general-purpose parser generator that converts an annotated context-free grammar\n into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.",
+                "Homepage: http://www.gnu.org/software/bison"
+            ]
         }
     },
     "Blosc": {
@@ -1462,6 +1513,22 @@
             ]
         }
     },
+    "CARBayes": {
+        "/app/easybuild/modules/all/CARBayes/5.1.1-foss-2016b-R-3.5.2.lua": {
+            "Description": "Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+            "Version": "5.1.1-foss-2016b-R-3.5.2",
+            "fullName": "CARBayes/5.1.1-foss-2016b-R-3.5.2",
+            "help": "\nDescription\n===========\nImplements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.\n\n\nMore information\n================\n - Homepage: http://github.com/duncanplee/CARBayes\n\n\nIncluded extensions\n===================\nCARBayes-5.1.1, CARBayesdata-2.1, leaflet-2.0.2, mcmc-0.9-6, MCMCpack-1.4-4,\ntruncnorm-1.0-8\n",
+            "hidden": false,
+            "pV": "000000005.000000001.000000001.*foss.*zfinal-.000002016.*b.*r.*zfinal-.000000003.000000005.000000002.*zfinal",
+            "wV": "000000005.000000001.000000001.*foss.*zfinal-.000002016.*b.*r.*zfinal-.000000003.000000005.000000002.*zfinal",
+            "whatis": [
+                "Description: Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+                "Homepage: http://github.com/duncanplee/CARBayes",
+                "Extensions: CARBayes-5.1.1, CARBayesdata-2.1, leaflet-2.0.2, mcmc-0.9-6, MCMCpack-1.4-4, truncnorm-1.0-8"
+            ]
+        }
+    },
     "CLISP": {
         "/app/easybuild/modules/all/CLISP/2.49-GCCcore-6.4.0.lua": {
             "Description": "Common Lisp is a high-level, general-purpose, object-oriented, dynamic,\n functional programming language.\n",
@@ -1523,6 +1590,22 @@
             "wV": "000000003.*intel.*zfinal-.000002015.*b.*zfinal",
             "whatis": [
                 "CMake, the cross-platform, open-source build system.  CMake is a family of tools designed to build, test and package software. - Homepage: http://www.cmake.org "
+            ]
+        },
+        "/app/easybuild/modules/all/CMake/3.11.4-GCCcore-7.3.0.lua": {
+            "Description": "CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+            "Version": "3.11.4-GCCcore-7.3.0",
+            "fullName": "CMake/3.11.4-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nCMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n\n\nMore information\n================\n - Homepage: http://www.cmake.org\n",
+            "hidden": false,
+            "pV": "000000003.000000011.000000004.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CMake/3.11.4-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000011.000000004.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+                "Homepage: http://www.cmake.org"
             ]
         },
         "/app/easybuild/modules/all/CMake/3.2.2-intel-2015b": {
@@ -1665,6 +1748,22 @@
                 "Homepage: http://www.cmake.org"
             ]
         },
+        "/app/easybuild/modules/all/CMake/3.7.1-GCCcore-5.4.0.lua": {
+            "Description": "CMake, the cross-platform, open-source build system.\n CMake is a family of tools designed to build, test and package software.",
+            "Version": "3.7.1-GCCcore-5.4.0",
+            "fullName": "CMake/3.7.1-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nCMake, the cross-platform, open-source build system.\n CMake is a family of tools designed to build, test and package software.\n\n\nMore information\n================\n - Homepage: http://www.cmake.org\n",
+            "hidden": false,
+            "pV": "000000003.000000007.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CMake/3.7.1-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000003.000000007.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: CMake, the cross-platform, open-source build system.\n CMake is a family of tools designed to build, test and package software.",
+                "Homepage: http://www.cmake.org"
+            ]
+        },
         "/app/easybuild/modules/all/CMake/3.7.1-foss-2016b.lua": {
             "Description": "CMake, the cross-platform, open-source build system.\n CMake is a family of tools designed to build, test and package software.",
             "Version": "3.7.1-foss-2016b",
@@ -1743,6 +1842,31 @@
             "whatis": [
                 "Description: CMake, the cross-platform, open-source build system.\n CMake is a family of tools designed to build, test and package software.",
                 "Homepage: http://www.cmake.org"
+            ]
+        }
+    },
+    "CUDA": {
+        "/app/easybuild/modules/all/CUDA/9.2.148.1.lua": {
+            "Description": "CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+            "Version": "9.2.148.1",
+            "fullName": "CUDA/9.2.148.1",
+            "help": "\nDescription\n===========\nCUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.\n\n\nMore information\n================\n - Homepage: https://developer.nvidia.com/cuda-toolkit\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/CUDA/9.2.148.1/extras/CUPTI/lib64": 1,
+                "/app/easybuild/software/CUDA/9.2.148.1/lib64": 1,
+                "/app/easybuild/software/CUDA/9.2.148.1/nvvm/lib64": 1
+            },
+            "pV": "000000009.000000002.000000148.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CUDA/9.2.148.1": 1,
+                "/app/easybuild/software/CUDA/9.2.148.1/bin": 1,
+                "/app/easybuild/software/CUDA/9.2.148.1/nvvm/bin": 1
+            },
+            "wV": "000000009.000000002.000000148.000000001.*zfinal",
+            "whatis": [
+                "Description: CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+                "Homepage: https://developer.nvidia.com/cuda-toolkit"
             ]
         }
     },
@@ -2850,6 +2974,25 @@
                 "Description: FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.",
                 "Homepage: http://www.fltk.org"
             ]
+        },
+        "/app/easybuild/modules/all/FLTK/1.3.4-foss-2018b.lua": {
+            "Description": "FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.",
+            "Version": "1.3.4-foss-2018b",
+            "fullName": "FLTK/1.3.4-foss-2018b",
+            "help": "\nDescription\n===========\nFLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.\n\n\nMore information\n================\n - Homepage: http://www.fltk.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/FLTK/1.3.4-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000003.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FLTK/1.3.4-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000003.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.",
+                "Homepage: http://www.fltk.org"
+            ]
         }
     },
     "FastANI": {
@@ -2945,6 +3088,27 @@
             ]
         }
     },
+    "FriBidi": {
+        "/app/easybuild/modules/all/FriBidi/1.0.5-GCCcore-7.3.0.lua": {
+            "Description": "The Free Implementation of the Unicode Bidirectional Algorithm.\n",
+            "Version": "1.0.5-GCCcore-7.3.0",
+            "fullName": "FriBidi/1.0.5-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe Free Implementation of the Unicode Bidirectional Algorithm.\n\n\nMore information\n================\n - Homepage: https://github.com/fribidi/fribidi\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/FriBidi/1.0.5-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000000.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FriBidi/1.0.5-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000000.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n The Free Implementation of the Unicode Bidirectional Algorithm.\n",
+                "Homepage: https://github.com/fribidi/fribidi"
+            ]
+        }
+    },
     "GATK": {
         "/app/easybuild/modules/all/GATK/3.4-46-Java-1.7.0_80": {
             "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
@@ -3002,6 +3166,22 @@
                 "/app/easybuild/software/GATK/4.0.10.0-foss-2016b-Python-3.6.6": 1
             },
             "wV": "000000004.000000000.000000010.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
+        },
+        "/app/easybuild/modules/all/GATK/4.1.0.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.0.0-foss-2016b-Python-3.6.6",
+            "fullName": "GATK/4.1.0.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GATK/4.1.0.0-foss-2016b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
                 "Homepage: http://www.broadinstitute.org/gatk/"
@@ -3699,6 +3879,25 @@
             "whatis": [
                 "Description: GLib is one of the base libraries of the GTK+ project - Homepage: http://www.gtk.org/"
             ]
+        },
+        "/app/easybuild/modules/all/GLib/2.54.3-GCCcore-7.3.0.lua": {
+            "Description": "GLib is one of the base libraries of the GTK+ project",
+            "Version": "2.54.3-GCCcore-7.3.0",
+            "fullName": "GLib/2.54.3-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGLib is one of the base libraries of the GTK+ project\n\n\nMore information\n================\n - Homepage: http://www.gtk.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GLib/2.54.3-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000054.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GLib/2.54.3-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000054.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: GLib is one of the base libraries of the GTK+ project",
+                "Homepage: http://www.gtk.org/"
+            ]
         }
     },
     "GMAP-GSNAP": {
@@ -3988,6 +4187,25 @@
             "whatis": [
                 "Description: GObject introspection is a middleware layer between C libraries\n (using GObject) and language bindings. The C library can be scanned at\n compile time and generate a metadata file, in addition to the actual\n native C library. Then at runtime, language bindings can read this\n metadata and automatically provide bindings to call into the C library. - Homepage: https://wiki.gnome.org/GObjectIntrospection/"
             ]
+        },
+        "/app/easybuild/modules/all/GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15.lua": {
+            "Description": "GObject introspection is a middleware layer between C\n libraries (using GObject) and language bindings. The C library can be scanned\n at compile time and generate a metadata file, in addition to the actual\n native C library. Then at runtime, language bindings can read this\n metadata and automatically provide bindings to call into the C library.",
+            "Version": "1.54.1-foss-2018b-Python-2.7.15",
+            "fullName": "GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nGObject introspection is a middleware layer between C\n libraries (using GObject) and language bindings. The C library can be scanned\n at compile time and generate a metadata file, in addition to the actual\n native C library. Then at runtime, language bindings can read this\n metadata and automatically provide bindings to call into the C library.\n\n\nMore information\n================\n - Homepage: https://wiki.gnome.org/GObjectIntrospection/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15/lib": 1
+            },
+            "pV": "000000001.000000054.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000001.000000054.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: GObject introspection is a middleware layer between C\n libraries (using GObject) and language bindings. The C library can be scanned\n at compile time and generate a metadata file, in addition to the actual\n native C library. Then at runtime, language bindings can read this\n metadata and automatically provide bindings to call into the C library.",
+                "Homepage: https://wiki.gnome.org/GObjectIntrospection/"
+            ]
         }
     },
     "GROMACS": {
@@ -4143,6 +4361,25 @@
                 "Description: \n The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.\n",
                 "Homepage: https://developer.gnome.org/gtk+/stable/"
             ]
+        },
+        "/app/easybuild/modules/all/GTK+/2.24.32-foss-2018b.lua": {
+            "Description": "The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.\n",
+            "Version": "2.24.32-foss-2018b",
+            "fullName": "GTK+/2.24.32-foss-2018b",
+            "help": "\nDescription\n===========\nThe GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.\n\n\nMore information\n================\n - Homepage: https://developer.gnome.org/gtk+/stable/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GTK+/2.24.32-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000024.000000032.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GTK+/2.24.32-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000024.000000032.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: \n The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.\n",
+                "Homepage: https://developer.gnome.org/gtk+/stable/"
+            ]
         }
     },
     "GTS": {
@@ -4183,6 +4420,27 @@
             ]
         }
     },
+    "Gctf": {
+        "/app/easybuild/modules/all/Gctf/1.18_b2-sm70-cu9.2.lua": {
+            "Description": "Real-time CTF determination and correction.",
+            "Version": "1.18_b2-sm70-cu9.2",
+            "fullName": "Gctf/1.18_b2-sm70-cu9.2",
+            "help": "\nDescription\n===========\nReal-time CTF determination and correction.\n\n\nMore information\n================\n - Homepage: https://www.mrc-lmb.cam.ac.uk/kzhang/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Gctf/1.18_b2-sm70-cu9.2/lib": 1
+            },
+            "pV": "000000001.000000018.*_.*b.000000002.*sm.000000070.*cu.000000009.000000002.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Gctf/1.18_b2-sm70-cu9.2/bin": 1
+            },
+            "wV": "000000001.000000018.*_.*b.000000002.*sm.000000070.*cu.000000009.000000002.*zfinal",
+            "whatis": [
+                "Description: Real-time CTF determination and correction.",
+                "Homepage: https://www.mrc-lmb.cam.ac.uk/kzhang/"
+            ]
+        }
+    },
     "Gdk-Pixbuf": {
         "/app/easybuild/modules/all/Gdk-Pixbuf/2.36.0-foss-2016b.lua": {
             "Description": "The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.\n It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it\n was distributed as part of GTK+ 2 but it was split off into a separate package\n in preparation for the change to GTK+ 3.\n",
@@ -4198,6 +4456,25 @@
                 "/app/easybuild/software/Gdk-Pixbuf/2.36.0-foss-2016b/bin": 1
             },
             "wV": "000000002.000000036.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: \n The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.\n It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it\n was distributed as part of GTK+ 2 but it was split off into a separate package\n in preparation for the change to GTK+ 3.\n",
+                "Homepage: https://developer.gnome.org/gdk-pixbuf/stable/"
+            ]
+        },
+        "/app/easybuild/modules/all/Gdk-Pixbuf/2.36.12-foss-2018b.lua": {
+            "Description": "The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.\n It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it\n was distributed as part of GTK+ 2 but it was split off into a separate package\n in preparation for the change to GTK+ 3.\n",
+            "Version": "2.36.12-foss-2018b",
+            "fullName": "Gdk-Pixbuf/2.36.12-foss-2018b",
+            "help": "\nDescription\n===========\nThe Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.\n It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it\n was distributed as part of GTK+ 2 but it was split off into a separate package\n in preparation for the change to GTK+ 3.\n\n\nMore information\n================\n - Homepage: https://developer.gnome.org/gdk-pixbuf/stable/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Gdk-Pixbuf/2.36.12-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000036.000000012.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Gdk-Pixbuf/2.36.12-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000036.000000012.*foss.*zfinal-.000002018.*b.*zfinal",
             "whatis": [
                 "Description: \n The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.\n It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it\n was distributed as part of GTK+ 2 but it was split off into a separate package\n in preparation for the change to GTK+ 3.\n",
                 "Homepage: https://developer.gnome.org/gdk-pixbuf/stable/"
@@ -4868,6 +5145,25 @@
             "wV": "000000001.000000004.000000003.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: HarfBuzz is an OpenType text shaping engine. - Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz"
+            ]
+        },
+        "/app/easybuild/modules/all/HarfBuzz/2.2.0-foss-2018b.lua": {
+            "Description": "HarfBuzz is an OpenType text shaping engine.",
+            "Version": "2.2.0-foss-2018b",
+            "fullName": "HarfBuzz/2.2.0-foss-2018b",
+            "help": "\nDescription\n===========\nHarfBuzz is an OpenType text shaping engine.\n\n\nMore information\n================\n - Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/HarfBuzz/2.2.0-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/HarfBuzz/2.2.0-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: HarfBuzz is an OpenType text shaping engine.",
+                "Homepage: http://www.freedesktop.org/wiki/Software/HarfBuzz"
             ]
         }
     },
@@ -5574,6 +5870,25 @@
                 "Homepage: http://llvm.org/"
             ]
         },
+        "/app/easybuild/modules/all/LLVM/6.0.0-GCCcore-7.3.0.lua": {
+            "Description": "The LLVM Core libraries provide a modern source- and target-independent\n optimizer, along with code generation support for many popular CPUs\n (as well as some less common ones!) These libraries are built around a well\n specified code representation known as the LLVM intermediate representation\n (\"LLVM IR\"). The LLVM Core libraries are well documented, and it is\n particularly easy to invent your own language (or port an existing compiler)\n to use LLVM as an optimizer and code generator.",
+            "Version": "6.0.0-GCCcore-7.3.0",
+            "fullName": "LLVM/6.0.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe LLVM Core libraries provide a modern source- and target-independent\n optimizer, along with code generation support for many popular CPUs\n (as well as some less common ones!) These libraries are built around a well\n specified code representation known as the LLVM intermediate representation\n (\"LLVM IR\"). The LLVM Core libraries are well documented, and it is\n particularly easy to invent your own language (or port an existing compiler)\n to use LLVM as an optimizer and code generator.\n\n\nMore information\n================\n - Homepage: http://llvm.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/LLVM/6.0.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/LLVM/6.0.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000006.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: The LLVM Core libraries provide a modern source- and target-independent\n optimizer, along with code generation support for many popular CPUs\n (as well as some less common ones!) These libraries are built around a well\n specified code representation known as the LLVM intermediate representation\n (\"LLVM IR\"). The LLVM Core libraries are well documented, and it is\n particularly easy to invent your own language (or port an existing compiler)\n to use LLVM as an optimizer and code generator.",
+                "Homepage: http://llvm.org/"
+            ]
+        },
         "/app/easybuild/modules/all/LLVM/6.0.0-foss-2016b.lua": {
             "Description": "The LLVM Core libraries provide a modern source- and\n target-independent optimizer, along with code generation support for many\n popular CPUs (as well as some less common ones!) These libraries are built\n around a well specified code representation known as the LLVM intermediate\n representation (\"LLVM IR\"). The LLVM Core libraries are well documented, and\n it is particularly easy to invent your own language (or port an existing\n compiler) to use LLVM as an optimizer and code generator.",
             "Version": "6.0.0-foss-2016b",
@@ -5780,6 +6095,25 @@
             "wV": "000000004.000000000.000000006.*intel.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: tiff: Library and tools for reading and writing TIFF data files - Homepage: http://www.remotesensing.org/libtiff/ "
+            ]
+        },
+        "/app/easybuild/modules/all/LibTIFF/4.0.9-GCCcore-7.3.0.lua": {
+            "Description": "tiff: Library and tools for reading and writing TIFF data files",
+            "Version": "4.0.9-GCCcore-7.3.0",
+            "fullName": "LibTIFF/4.0.9-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\ntiff: Library and tools for reading and writing TIFF data files\n\n\nMore information\n================\n - Homepage: http://www.remotesensing.org/libtiff/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/LibTIFF/4.0.9-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000004.000000000.000000009.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/LibTIFF/4.0.9-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000004.000000000.000000009.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: tiff: Library and tools for reading and writing TIFF data files",
+                "Homepage: http://www.remotesensing.org/libtiff/"
             ]
         }
     },
@@ -6330,6 +6664,22 @@
             "whatis": [
                 "Description: A super-fast templating language that borrows the best ideas from the existing templating languages - Homepage: http://www.makotemplates.org"
             ]
+        },
+        "/app/easybuild/modules/all/Mako/1.0.7-foss-2018b-Python-2.7.15.lua": {
+            "Description": "A super-fast templating language that borrows the best ideas from the existing templating languages",
+            "Version": "1.0.7-foss-2018b-Python-2.7.15",
+            "fullName": "Mako/1.0.7-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nA super-fast templating language that borrows the best ideas from the existing templating languages\n\n\nMore information\n================\n - Homepage: http://www.makotemplates.org\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Mako/1.0.7-foss-2018b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000001.000000000.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: A super-fast templating language that borrows the best ideas from the existing templating languages",
+                "Homepage: http://www.makotemplates.org"
+            ]
         }
     },
     "MariaDB": {
@@ -6394,6 +6744,22 @@
             "wV": "000000012.000000000.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Mesa is an open-source implementation of the OpenGL specification -\n a system for rendering interactive 3D graphics. - Homepage: http://www.mesa3d.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/Mesa/18.1.1-foss-2018b.lua": {
+            "Description": "Mesa is an open-source implementation of the OpenGL specification -\n a system for rendering interactive 3D graphics.",
+            "Version": "18.1.1-foss-2018b",
+            "fullName": "Mesa/18.1.1-foss-2018b",
+            "help": "\nDescription\n===========\nMesa is an open-source implementation of the OpenGL specification -\n a system for rendering interactive 3D graphics.\n\n\nMore information\n================\n - Homepage: http://www.mesa3d.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Mesa/18.1.1-foss-2018b/lib": 1
+            },
+            "pV": "000000018.000000001.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000018.000000001.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Mesa is an open-source implementation of the OpenGL specification -\n a system for rendering interactive 3D graphics.",
+                "Homepage: http://www.mesa3d.org/"
             ]
         }
     },
@@ -6476,6 +6842,44 @@
             "whatis": [
                 "Description: Built to complement the rich, open source Python community,\nthe Anaconda platform provides an enterprise-ready data analytics platform \nthat empowers companies to adopt a modern open data science analytics architecture.\n",
                 "Homepage: https://www.continuum.io/anaconda-overview"
+            ]
+        },
+        "/app/easybuild/modules/all/Miniconda3/4.5.12.lua": {
+            "Description": "Built to complement the rich, open source Python community,\nthe Anaconda platform provides an enterprise-ready data analytics platform \nthat empowers companies to adopt a modern open data science analytics architecture.\n",
+            "Version": "4.5.12",
+            "fullName": "Miniconda3/4.5.12",
+            "help": "\nDescription\n===========\nBuilt to complement the rich, open source Python community,\nthe Anaconda platform provides an enterprise-ready data analytics platform \nthat empowers companies to adopt a modern open data science analytics architecture.\n\n\nMore information\n================\n - Homepage: https://www.continuum.io/anaconda-overview\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Miniconda3/4.5.12/lib": 1
+            },
+            "pV": "000000004.000000005.000000012.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Miniconda3/4.5.12": 1,
+                "/app/easybuild/software/Miniconda3/4.5.12/bin": 1
+            },
+            "wV": "000000004.000000005.000000012.*zfinal",
+            "whatis": [
+                "Description: Built to complement the rich, open source Python community,\nthe Anaconda platform provides an enterprise-ready data analytics platform \nthat empowers companies to adopt a modern open data science analytics architecture.\n",
+                "Homepage: https://www.continuum.io/anaconda-overview"
+            ]
+        }
+    },
+    "MotionCor2": {
+        "/app/easybuild/modules/all/MotionCor2/1.2.1-Cuda92.lua": {
+            "Description": "Based on observations that the electron beam induces doming of the thin vitreous ice layer, we developed an algorithm to correct anisotropic image motion at the single pixel level across the whole frame, suitable for both single particle and tomographic images.",
+            "Version": "1.2.1-Cuda92",
+            "fullName": "MotionCor2/1.2.1-Cuda92",
+            "help": "\nDescription\n===========\nBased on observations that the electron beam induces doming of the thin vitreous ice layer, we developed an algorithm to correct anisotropic image motion at the single pixel level across the whole frame, suitable for both single particle and tomographic images.\n\n\nMore information\n================\n - Homepage: http://msg.ucsf.edu/em/software/motioncor2.html\n",
+            "hidden": false,
+            "pV": "000000001.000000002.000000001.*cuda.000000092.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MotionCor2/1.2.1-Cuda92": 1
+            },
+            "wV": "000000001.000000002.000000001.*cuda.000000092.*zfinal",
+            "whatis": [
+                "Description: Based on observations that the electron beam induces doming of the thin vitreous ice layer, we developed an algorithm to correct anisotropic image motion at the single pixel level across the whole frame, suitable for both single particle and tomographic images.",
+                "Homepage: http://msg.ucsf.edu/em/software/motioncor2.html"
             ]
         }
     },
@@ -6591,6 +6995,22 @@
             "wV": "000000002.000000012.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: NASM: General-purpose x86 assembler - Homepage: http://www.nasm.us/ "
+            ]
+        },
+        "/app/easybuild/modules/all/NASM/2.13.03-GCCcore-7.3.0.lua": {
+            "Description": "NASM: General-purpose x86 assembler",
+            "Version": "2.13.03-GCCcore-7.3.0",
+            "fullName": "NASM/2.13.03-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nNASM: General-purpose x86 assembler\n\n\nMore information\n================\n - Homepage: http://www.nasm.us/\n",
+            "hidden": false,
+            "pV": "000000002.000000013.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/NASM/2.13.03-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000013.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: NASM: General-purpose x86 assembler",
+                "Homepage: http://www.nasm.us/"
             ]
         }
     },
@@ -7345,6 +7765,25 @@
                 "Homepage: http://www.pcre.org/"
             ]
         },
+        "/app/easybuild/modules/all/PCRE/8.41-GCCcore-7.3.0.lua": {
+            "Description": "The PCRE library is a set of functions that implement regular expression\n pattern matching using the same syntax and semantics as Perl 5.\n",
+            "Version": "8.41-GCCcore-7.3.0",
+            "fullName": "PCRE/8.41-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe PCRE library is a set of functions that implement regular expression\n pattern matching using the same syntax and semantics as Perl 5.\n\n\nMore information\n================\n - Homepage: http://www.pcre.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/PCRE/8.41-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000008.000000041.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/PCRE/8.41-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000008.000000041.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n The PCRE library is a set of functions that implement regular expression\n pattern matching using the same syntax and semantics as Perl 5.\n",
+                "Homepage: http://www.pcre.org/"
+            ]
+        },
         "/app/easybuild/modules/all/PCRE/8.41-foss-2016b.lua": {
             "Description": "The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax\n and semantics as Perl 5.\n",
             "Version": "8.41-foss-2016b",
@@ -7613,6 +8052,25 @@
             "whatis": [
                 "Description: Pango is a library for laying out and rendering of text, with an emphasis on internationalization.\nPango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the\ncontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x. - Homepage: http://www.pango.org/"
             ]
+        },
+        "/app/easybuild/modules/all/Pango/1.42.4-foss-2018b.lua": {
+            "Description": "Pango is a library for laying out and rendering of text, with an emphasis on internationalization.\nPango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the\ncontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.",
+            "Version": "1.42.4-foss-2018b",
+            "fullName": "Pango/1.42.4-foss-2018b",
+            "help": "\nDescription\n===========\nPango is a library for laying out and rendering of text, with an emphasis on internationalization.\nPango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the\ncontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.\n\n\nMore information\n================\n - Homepage: http://www.pango.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Pango/1.42.4-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000042.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Pango/1.42.4-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000042.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Pango is a library for laying out and rendering of text, with an emphasis on internationalization.\nPango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the\ncontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.",
+                "Homepage: http://www.pango.org/"
+            ]
         }
     },
     "ParMETIS": {
@@ -7858,6 +8316,26 @@
             "wV": "000000005.000000024.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Larry Wall's Practical Extraction and Report Language - Homepage: http://www.perl.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/Perl/5.28.0-GCCcore-7.3.0.lua": {
+            "Description": "Larry Wall's Practical Extraction and Report Language",
+            "Version": "5.28.0-GCCcore-7.3.0",
+            "fullName": "Perl/5.28.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nLarry Wall's Practical Extraction and Report Language\n\n\nMore information\n================\n - Homepage: https://www.perl.org/\n\n\nIncluded extensions\n===================\nAlgorithm::Dependency-1.110, Algorithm::Diff-1.1903, aliased-0.34,\nAnyData-0.12, AnyEvent-7.14, App::Cmd-0.331, AppConfig-1.71,\nArchive::Extract-0.80, Array::Utils-0.5, Authen::SASL-2.16,\nB::Hooks::EndOfScope-0.24, B::Lint-1.20, boolean-0.46, Bundle::BioPerl-2.1.9,\nCanary::Stability-2012, Capture::Tiny-0.48, Carp-1.38, Carp::Clan-6.06,\nClass::Accessor-0.51, Class::Data::Inheritable-0.08, Class::DBI-v3.0.17,\nClass::DBI::SQLite-0.11, Class::Inspector-1.32, Class::ISA-0.36,\nClass::Load-0.25, Class::Load::XS-0.10, Class::Singleton-1.5,\nClass::Trigger-0.14, Clone-0.39, Clone::Choose-0.010, Config::General-2.63,\nConfig::INI-0.025, Config::MVP-2.200011, Config::Tiny-2.23, CPANPLUS-0.9176,\nCrypt::DES-2.07, Crypt::Rijndael-1.13, Cwd::Guard-0.05, Data::Dump-1.23,\nData::Dumper::Concise-2.023, Data::Grove-0.08, Data::OptList-0.110,\nData::Section-0.200007, Data::Section::Simple-0.07, Data::Stag-0.14,\nData::Types-0.13, Data::UUID-1.221, Date::Handler-1.2, Date::Language-2.30,\nDateTime-1.49, DateTime::Locale-1.22, DateTime::TimeZone-2.19,\nDateTime::Tiny-1.07, DBD::AnyData-0.110, DBD::SQLite-1.58, DBI-1.641,\nDBIx::Admin::TableInfo-3.03, DBIx::ContextualFetch-1.03, DBIx::Simple-1.37,\nDevel::CheckCompiler-0.07, Devel::CheckLib-1.13,\nDevel::GlobalDestruction-0.14, Devel::OverloadInfo-0.005,\nDevel::StackTrace-2.03, Digest::HMAC-1.03, Digest::MD5::File-0.08,\nDigest::SHA1-2.13, Dist::CheckConflicts-0.11, Dist::Zilla-6.012,\nEmail::Date::Format-1.005, Encode::Locale-1.05, Error-0.17026,\nEval::Closure-0.14, Exception::Class-1.44, Expect-1.35, Exporter-5.72,\nExporter::Declare-0.114, Exporter::Tiny-1.000000, ExtUtils::Config-0.008,\nExtUtils::Helpers-0.026, ExtUtils::InstallPaths-0.012, Fennec::Lite-0.004,\nFile::CheckTree-4.42, File::Copy::Recursive-0.44,\nFile::Copy::Recursive::Reduced-0.006, File::Find::Rule-0.34,\nFile::Find::Rule::Perl-1.15, File::Grep-0.02, File::HomeDir-1.004,\nFile::Listing-6.04, File::Next-1.16, File::Path-2.15, File::pushd-1.016,\nFile::Remove-1.57, File::ShareDir-1.116, File::ShareDir::Install-0.13,\nFile::Slurp-9999.19, File::Slurp::Tiny-0.004, File::Slurper-0.012,\nFile::Spec-3.74, File::Temp-0.2306, File::Which-1.22, Font::TTF-1.06,\nGetopt::Long-2.50, Getopt::Long::Descriptive-0.102, Git-0.42, GO-0.04,\nGO::Utils-0.15, Graph-0.9704, Graph::ReadWrite-2.09, Hash::Merge-0.300,\nHTML::Entities::Interpolate-1.10, HTML::Form-6.03, HTML::Parser-3.72,\nHTML::Tagset-3.20, HTML::Tree-5.07, HTTP::Cookies-6.04, HTTP::Daemon-6.01,\nHTTP::Date-6.02, HTTP::Negotiate-6.01, HTTP::Request-6.18, HTTP::Tiny-0.070,\nIma::DBI-0.35, Import::Into-1.002005, IO::HTML-1.001, IO::Socket::SSL-2.056,\nIO::String-1.08, IO::Stringy-2.111, IO::Tty-1.12, IPC::Run-20180523.0,\nIPC::Run3-0.048, JSON-2.97001, Lingua::EN::PluralToSingular-0.21,\nList::AllUtils-0.14, List::MoreUtils-0.428, List::SomeUtils-0.56,\nList::UtilsBy-0.11, Log::Dispatch-2.67, Log::Dispatchouli-2.016,\nLog::Handler-0.88, Log::Log4perl-1.49, Log::Message-0.08,\nLog::Message::Simple-0.10, LWP::MediaTypes-6.02, LWP::Simple-6.34,\nMail::Util-2.20, Math::Bezier-0.01, Math::CDF-0.1, Math::Round-0.07,\nMath::VecStat-0.08, Meta::Builder-0.003, MIME::Lite-3.030, MIME::Types-2.17,\nMixin::Linewise::Readers-0.108, Mock::Quick-1.111, Module::Build-0.4224,\nModule::Build::Tiny-0.039, Module::Build::XSUtil-0.19,\nModule::Implementation-0.09, Module::Install-1.19, Module::Pluggable-5.2,\nModule::Runtime-0.016, Moo-2.003004, Moose-2.2011, MooseX::LazyRequire-0.11,\nMooseX::OneArgNew-0.005, MooseX::Role::Parameterized-1.10,\nMooseX::SetOnce-0.200002, MooseX::Types-0.50, MooseX::Types::Perl-0.101343,\nMouse-v2.5.4, MRO::Compat-0.13, namespace::autoclean-0.28,\nnamespace::clean-0.27, Net::HTTP-6.18, Net::SMTP::SSL-1.04, Net::SNMP-v6.0.1,\nNet::SSLeay-1.85, Number::Compare-0.03, Number::Format-1.75,\nObject::Accessor-0.48, Package::Constants-0.06,\nPackage::DeprecationManager-0.17, Package::Stash-0.37,\nPackage::Stash::XS-0.28, Params::Util-1.07, Params::Validate-1.29,\nParams::ValidationCompiler-0.27, Parse::RecDescent-1.967015, Path::Tiny-0.104,\nPDF::API2-2.033, PerlIO::utf8_strict-0.007, Pod::Elemental-0.103004,\nPod::Eventual-0.094001, Pod::LaTeX-0.61, Pod::Plainer-1.04, Pod::POM-2.01,\nPod::Weaver-4.015, Readonly-2.05, Regexp::Common-2017060201,\nRole::HasMessage-0.006, Role::Identifiable::HasIdent-0.007,\nRole::Tiny-2.000006, Scalar::List::Utils-1.50, Set::Array-0.30,\nSet::IntSpan-1.19, Set::IntSpan::Fast-1.15, Set::Scalar-1.29, Shell-0.73,\nSoftware::License-0.103013, Specio-0.42, SQL::Abstract-1.85,\nSQL::Statement-1.412, Statistics::Basic-1.6611,\nStatistics::Descriptive-3.0613, strictures-2.000005, String::Flogger-1.101245,\nString::RewritePrefix-0.007, String::Truncate-1.100602, Sub::Exporter-0.987,\nSub::Exporter::ForMethods-0.100052, Sub::Exporter::Progressive-0.001013,\nSub::Identify-0.14, Sub::Install-0.928, Sub::Name-0.21, Sub::Quote-2.005001,\nSub::Uplevel-0.2800, Sub::Uplevel-0.2800, SVG-2.84, Switch-2.17,\nTemplate-2.27, Template::Plugin::Number::Format-1.06, Term::Encoding-0.02,\nTerm::ReadKey-2.37, Term::UI-0.46, Test::ClassAPI-1.07, Test::Deep-1.128,\nTest::Differences-0.64, Test::Exception-0.43,\nTest::Exception::LessClever-0.009, Test::Fatal-0.014, Test::Harness-3.42,\nTest::LeakTrace-0.16, Test::Most-0.35, Test::NoWarnings-1.04,\nTest::Output-1.031, Test::Pod-1.52, Test::Requires-0.10,\nTest::Simple-1.302136, Test::Version-2.09, Test::Warn-0.36,\nTest::Warnings-0.026, Text::Aligner-0.13, Text::Balanced-2.03, Text::CSV-1.95,\nText::Diff-1.45, Text::Format-0.61, Text::Glob-0.11, Text::Iconv-1.7,\nText::Soundex-3.05, Text::Table-1.133, Text::Template-1.53,\nThrowable-0.200013, Tie::Function-0.02, Tie::IxHash-1.23, Time::Piece-1.3204,\nTime::Piece::MySQL-0.06, Tree::DAG_Node-1.31, Try::Tiny-0.30,\nUNIVERSAL::moniker-0.08, URI-1.74, version-0.9924, Want-0.29,\nWWW::RobotRules-6.02, XML::Bare-0.53, XML::DOM-1.46,\nXML::Filter::BufferText-1.01, XML::NamespaceSupport-1.12, XML::Parser-2.44_01,\nXML::RegExp-0.04, XML::SAX-1.00, XML::SAX::Base-1.09, XML::SAX::Writer-0.57,\nXML::Simple-2.25, XML::Tiny-2.07, XML::Twig-3.52, XML::XPath-1.42,\nYAML::Tiny-1.73\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Perl/5.28.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000005.000000028.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Perl/5.28.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000005.000000028.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Larry Wall's Practical Extraction and Report Language",
+                "Homepage: https://www.perl.org/",
+                "Extensions: Algorithm::Dependency-1.110, Algorithm::Diff-1.1903, aliased-0.34, AnyData-0.12, AnyEvent-7.14, App::Cmd-0.331, AppConfig-1.71, Archive::Extract-0.80, Array::Utils-0.5, Authen::SASL-2.16, B::Hooks::EndOfScope-0.24, B::Lint-1.20, boolean-0.46, Bundle::BioPerl-2.1.9, Canary::Stability-2012, Capture::Tiny-0.48, Carp-1.38, Carp::Clan-6.06, Class::Accessor-0.51, Class::Data::Inheritable-0.08, Class::DBI-v3.0.17, Class::DBI::SQLite-0.11, Class::Inspector-1.32, Class::ISA-0.36, Class::Load-0.25, Class::Load::XS-0.10, Class::Singleton-1.5, Class::Trigger-0.14, Clone-0.39, Clone::Choose-0.010, Config::General-2.63, Config::INI-0.025, Config::MVP-2.200011, Config::Tiny-2.23, CPANPLUS-0.9176, Crypt::DES-2.07, Crypt::Rijndael-1.13, Cwd::Guard-0.05, Data::Dump-1.23, Data::Dumper::Concise-2.023, Data::Grove-0.08, Data::OptList-0.110, Data::Section-0.200007, Data::Section::Simple-0.07, Data::Stag-0.14, Data::Types-0.13, Data::UUID-1.221, Date::Handler-1.2, Date::Language-2.30, DateTime-1.49, DateTime::Locale-1.22, DateTime::TimeZone-2.19, DateTime::Tiny-1.07, DBD::AnyData-0.110, DBD::SQLite-1.58, DBI-1.641, DBIx::Admin::TableInfo-3.03, DBIx::ContextualFetch-1.03, DBIx::Simple-1.37, Devel::CheckCompiler-0.07, Devel::CheckLib-1.13, Devel::GlobalDestruction-0.14, Devel::OverloadInfo-0.005, Devel::StackTrace-2.03, Digest::HMAC-1.03, Digest::MD5::File-0.08, Digest::SHA1-2.13, Dist::CheckConflicts-0.11, Dist::Zilla-6.012, Email::Date::Format-1.005, Encode::Locale-1.05, Error-0.17026, Eval::Closure-0.14, Exception::Class-1.44, Expect-1.35, Exporter-5.72, Exporter::Declare-0.114, Exporter::Tiny-1.000000, ExtUtils::Config-0.008, ExtUtils::Helpers-0.026, ExtUtils::InstallPaths-0.012, Fennec::Lite-0.004, File::CheckTree-4.42, File::Copy::Recursive-0.44, File::Copy::Recursive::Reduced-0.006, File::Find::Rule-0.34, File::Find::Rule::Perl-1.15, File::Grep-0.02, File::HomeDir-1.004, File::Listing-6.04, File::Next-1.16, File::Path-2.15, File::pushd-1.016, File::Remove-1.57, File::ShareDir-1.116, File::ShareDir::Install-0.13, File::Slurp-9999.19, File::Slurp::Tiny-0.004, File::Slurper-0.012, File::Spec-3.74, File::Temp-0.2306, File::Which-1.22, Font::TTF-1.06, Getopt::Long-2.50, Getopt::Long::Descriptive-0.102, Git-0.42, GO-0.04, GO::Utils-0.15, Graph-0.9704, Graph::ReadWrite-2.09, Hash::Merge-0.300, HTML::Entities::Interpolate-1.10, HTML::Form-6.03, HTML::Parser-3.72, HTML::Tagset-3.20, HTML::Tree-5.07, HTTP::Cookies-6.04, HTTP::Daemon-6.01, HTTP::Date-6.02, HTTP::Negotiate-6.01, HTTP::Request-6.18, HTTP::Tiny-0.070, Ima::DBI-0.35, Import::Into-1.002005, IO::HTML-1.001, IO::Socket::SSL-2.056, IO::String-1.08, IO::Stringy-2.111, IO::Tty-1.12, IPC::Run-20180523.0, IPC::Run3-0.048, JSON-2.97001, Lingua::EN::PluralToSingular-0.21, List::AllUtils-0.14, List::MoreUtils-0.428, List::SomeUtils-0.56, List::UtilsBy-0.11, Log::Dispatch-2.67, Log::Dispatchouli-2.016, Log::Handler-0.88, Log::Log4perl-1.49, Log::Message-0.08, Log::Message::Simple-0.10, LWP::MediaTypes-6.02, LWP::Simple-6.34, Mail::Util-2.20, Math::Bezier-0.01, Math::CDF-0.1, Math::Round-0.07, Math::VecStat-0.08, Meta::Builder-0.003, MIME::Lite-3.030, MIME::Types-2.17, Mixin::Linewise::Readers-0.108, Mock::Quick-1.111, Module::Build-0.4224, Module::Build::Tiny-0.039, Module::Build::XSUtil-0.19, Module::Implementation-0.09, Module::Install-1.19, Module::Pluggable-5.2, Module::Runtime-0.016, Moo-2.003004, Moose-2.2011, MooseX::LazyRequire-0.11, MooseX::OneArgNew-0.005, MooseX::Role::Parameterized-1.10, MooseX::SetOnce-0.200002, MooseX::Types-0.50, MooseX::Types::Perl-0.101343, Mouse-v2.5.4, MRO::Compat-0.13, namespace::autoclean-0.28, namespace::clean-0.27, Net::HTTP-6.18, Net::SMTP::SSL-1.04, Net::SNMP-v6.0.1, Net::SSLeay-1.85, Number::Compare-0.03, Number::Format-1.75, Object::Accessor-0.48, Package::Constants-0.06, Package::DeprecationManager-0.17, Package::Stash-0.37, Package::Stash::XS-0.28, Params::Util-1.07, Params::Validate-1.29, Params::ValidationCompiler-0.27, Parse::RecDescent-1.967015, Path::Tiny-0.104, PDF::API2-2.033, PerlIO::utf8_strict-0.007, Pod::Elemental-0.103004, Pod::Eventual-0.094001, Pod::LaTeX-0.61, Pod::Plainer-1.04, Pod::POM-2.01, Pod::Weaver-4.015, Readonly-2.05, Regexp::Common-2017060201, Role::HasMessage-0.006, Role::Identifiable::HasIdent-0.007, Role::Tiny-2.000006, Scalar::List::Utils-1.50, Set::Array-0.30, Set::IntSpan-1.19, Set::IntSpan::Fast-1.15, Set::Scalar-1.29, Shell-0.73, Software::License-0.103013, Specio-0.42, SQL::Abstract-1.85, SQL::Statement-1.412, Statistics::Basic-1.6611, Statistics::Descriptive-3.0613, strictures-2.000005, String::Flogger-1.101245, String::RewritePrefix-0.007, String::Truncate-1.100602, Sub::Exporter-0.987, Sub::Exporter::ForMethods-0.100052, Sub::Exporter::Progressive-0.001013, Sub::Identify-0.14, Sub::Install-0.928, Sub::Name-0.21, Sub::Quote-2.005001, Sub::Uplevel-0.2800, Sub::Uplevel-0.2800, SVG-2.84, Switch-2.17, Template-2.27, Template::Plugin::Number::Format-1.06, Term::Encoding-0.02, Term::ReadKey-2.37, Term::UI-0.46, Test::ClassAPI-1.07, Test::Deep-1.128, Test::Differences-0.64, Test::Exception-0.43, Test::Exception::LessClever-0.009, Test::Fatal-0.014, Test::Harness-3.42, Test::LeakTrace-0.16, Test::Most-0.35, Test::NoWarnings-1.04, Test::Output-1.031, Test::Pod-1.52, Test::Requires-0.10, Test::Simple-1.302136, Test::Version-2.09, Test::Warn-0.36, Test::Warnings-0.026, Text::Aligner-0.13, Text::Balanced-2.03, Text::CSV-1.95, Text::Diff-1.45, Text::Format-0.61, Text::Glob-0.11, Text::Iconv-1.7, Text::Soundex-3.05, Text::Table-1.133, Text::Template-1.53, Throwable-0.200013, Tie::Function-0.02, Tie::IxHash-1.23, Time::Piece-1.3204, Time::Piece::MySQL-0.06, Tree::DAG_Node-1.31, Try::Tiny-0.30, UNIVERSAL::moniker-0.08, URI-1.74, version-0.9924, Want-0.29, WWW::RobotRules-6.02, XML::Bare-0.53, XML::DOM-1.46, XML::Filter::BufferText-1.01, XML::NamespaceSupport-1.12, XML::Parser-2.44_01, XML::RegExp-0.04, XML::SAX-1.00, XML::SAX::Base-1.09, XML::SAX::Writer-0.57, XML::Simple-2.25, XML::Tiny-2.07, XML::Twig-3.52, XML::XPath-1.42, YAML::Tiny-1.73"
             ]
         },
         "/app/easybuild/modules/all/Perl/5.28.0-foss-2016b.lua": {
@@ -8473,6 +8951,25 @@
                 "Description: Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
                 "Homepage: http://python.org/",
                 "Extensions: bitstring-3.1.5, blist-1.3.6, cryptography-2.1.4, Cython-0.27.3, deap-1.2.2, decorator-4.1.2, docopt-0.6.2, ecdsa-0.13, enum34-1.1.6, funcsigs-1.0.2, ipaddress-1.0.19, joblib-0.11, liac-arff-2.1.1, mock-2.0.0, mpi4py-3.0.0, netaddr-0.7.19, netifaces-0.10.6, nose-1.3.7, numpy-1.14.0, pandas-0.22.0, paramiko-2.4.0, paycheck-1.0.2, pbr-3.1.1, pip-9.0.1, pycrypto-2.6.1, pyparsing-2.2.0, python-dateutil-2.6.1, pytz-2017.3, requests-2.18.4, scipy-1.0.0, setuptools-38.4.0, six-1.11.0, virtualenv-15.1.0"
+            ]
+        },
+        "/app/easybuild/modules/all/Python/2.7.15-GCCcore-7.3.0-bare.lua": {
+            "Description": "Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
+            "Version": "2.7.15-GCCcore-7.3.0-bare",
+            "fullName": "Python/2.7.15-GCCcore-7.3.0-bare",
+            "help": "\nDescription\n===========\nPython is a programming language that lets you work more quickly and integrate your systems\n more effectively.\n\n\nMore information\n================\n - Homepage: http://python.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Python/2.7.15-GCCcore-7.3.0-bare/lib": 1
+            },
+            "pV": "000000002.000000007.000000015.*gcccore.*zfinal-.000000007.000000003.*bare.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Python/2.7.15-GCCcore-7.3.0-bare/bin": 1
+            },
+            "wV": "000000002.000000007.000000015.*gcccore.*zfinal-.000000007.000000003.*bare.*zfinal",
+            "whatis": [
+                "Description: Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
+                "Homepage: http://python.org/"
             ]
         },
         "/app/easybuild/modules/all/Python/2.7.15-foss-2016b-fh1.lua": {
@@ -9786,6 +10283,27 @@
             ]
         }
     },
+    "RELION": {
+        "/app/easybuild/modules/all/RELION/3.0_beta-foss-2018b.lua": {
+            "Description": "RELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).",
+            "Version": "3.0_beta-foss-2018b",
+            "fullName": "RELION/3.0_beta-foss-2018b",
+            "help": "\nDescription\n===========\nRELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).\n\n\nMore information\n================\n - Homepage: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/RELION/3.0_beta-foss-2018b/lib": 1
+            },
+            "pV": "000000003.*_.*beta.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/RELION/3.0_beta-foss-2018b/bin": 1
+            },
+            "wV": "000000003.*_.*beta.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: RELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).",
+                "Homepage: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page"
+            ]
+        }
+    },
     "RSEM": {
         "/app/easybuild/modules/all/RSEM/1.2.30-foss-2015b": {
             "Description": "RNA-Seq by Expectation-Maximization) - Homepage: http://deweylab.github.io/RSEM/ ",
@@ -9817,6 +10335,24 @@
             "whatis": [
                 "Description: RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked",
                 "Homepage: www.repeatmasker.org"
+            ]
+        }
+    },
+    "ResMap": {
+        "/app/easybuild/modules/all/ResMap/1.1.4-linux64.lua": {
+            "Description": "ResMap (Resolution Map) is a Python (NumPy/SciPy) application\nwith a Tkinter GUI. It is an easy to use software package for computing the\nlocal resolution of 3D density maps studied in structural biology, primarily\nelectron cryo-microscopy (cryo-EM).",
+            "Version": "1.1.4-linux64",
+            "fullName": "ResMap/1.1.4-linux64",
+            "help": "\nDescription\n===========\nResMap (Resolution Map) is a Python (NumPy/SciPy) application\nwith a Tkinter GUI. It is an easy to use software package for computing the\nlocal resolution of 3D density maps studied in structural biology, primarily\nelectron cryo-microscopy (cryo-EM).\n\n\nMore information\n================\n - Homepage: http://resmap.sourceforge.net/\n",
+            "hidden": false,
+            "pV": "000000001.000000001.000000004.*linux.000000064.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ResMap/1.1.4-linux64": 1
+            },
+            "wV": "000000001.000000001.000000004.*linux.000000064.*zfinal",
+            "whatis": [
+                "Description: ResMap (Resolution Map) is a Python (NumPy/SciPy) application\nwith a Tkinter GUI. It is an easy to use software package for computing the\nlocal resolution of 3D density maps studied in structural biology, primarily\nelectron cryo-microscopy (cryo-EM).",
+                "Homepage: http://resmap.sourceforge.net/"
             ]
         }
     },
@@ -11989,6 +12525,25 @@
             "whatis": [
                 "Description: The X Window System (X11) is a windowing system for bitmap displays - Homepage: https://www.x.org"
             ]
+        },
+        "/app/easybuild/modules/all/X11/20180604-GCCcore-7.3.0.lua": {
+            "Description": "The X Window System (X11) is a windowing system for bitmap displays",
+            "Version": "20180604-GCCcore-7.3.0",
+            "fullName": "X11/20180604-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe X Window System (X11) is a windowing system for bitmap displays\n\n\nMore information\n================\n - Homepage: https://www.x.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/X11/20180604-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "020180604.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/X11/20180604-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "020180604.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: The X Window System (X11) is a windowing system for bitmap displays",
+                "Homepage: https://www.x.org"
+            ]
         }
     },
     "XKeyboardConfig": {
@@ -12018,6 +12573,22 @@
             },
             "pV": "000000002.000000044.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.000000001.*zfinal",
             "wV": "000000002.000000044.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.000000001.*zfinal",
+            "whatis": [
+                "Description: This is a Perl extension interface to James Clark's XML parser, expat.",
+                "Homepage: http://search.cpan.org/~toddr/XML-Parser-2.41/"
+            ]
+        },
+        "/app/easybuild/modules/all/XML-Parser/2.44_01-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "This is a Perl extension interface to James Clark's XML parser, expat.",
+            "Version": "2.44_01-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "XML-Parser/2.44_01-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nThis is a Perl extension interface to James Clark's XML parser, expat.\n\n\nMore information\n================\n - Homepage: http://search.cpan.org/~toddr/XML-Parser-2.41/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/XML-Parser/2.44_01-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000002.000000044.*_.000000001.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000002.000000044.*_.000000001.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
             "whatis": [
                 "Description: This is a Perl extension interface to James Clark's XML parser, expat.",
                 "Homepage: http://search.cpan.org/~toddr/XML-Parser-2.41/"
@@ -12395,6 +12966,40 @@
             "whatis": [
                 "Description: Universal Command Line Environment for AWS",
                 "Homepage: https://pypi.python.org/pypi/awscli"
+            ]
+        },
+        "/app/easybuild/modules/all/awscli/1.16.122-foss-2016b-Python-2.7.15.lua": {
+            "Description": "Universal Command Line Environment for AWS",
+            "Version": "1.16.122-foss-2016b-Python-2.7.15",
+            "fullName": "awscli/1.16.122-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nUniversal Command Line Environment for AWS\n\n\nMore information\n================\n - Homepage: https://pypi.python.org/pypi/awscli\n\n\nIncluded extensions\n===================\nawscli-plugin-endpoint-0.3\n",
+            "hidden": false,
+            "pV": "000000001.000000016.000000122.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/awscli/1.16.122-foss-2016b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000001.000000016.000000122.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Universal Command Line Environment for AWS",
+                "Homepage: https://pypi.python.org/pypi/awscli",
+                "Extensions: awscli-plugin-endpoint-0.3"
+            ]
+        },
+        "/app/easybuild/modules/all/awscli/1.16.122-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Universal Command Line Environment for AWS",
+            "Version": "1.16.122-foss-2016b-Python-3.6.6",
+            "fullName": "awscli/1.16.122-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nUniversal Command Line Environment for AWS\n\n\nMore information\n================\n - Homepage: https://pypi.python.org/pypi/awscli\n\n\nIncluded extensions\n===================\nawscli-plugin-endpoint-0.3\n",
+            "hidden": false,
+            "pV": "000000001.000000016.000000122.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/awscli/1.16.122-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000016.000000122.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Universal Command Line Environment for AWS",
+                "Homepage: https://pypi.python.org/pypi/awscli",
+                "Extensions: awscli-plugin-endpoint-0.3"
             ]
         },
         "/app/easybuild/modules/all/awscli/1.16.54-foss-2016b-Python-2.7.15.lua": {
@@ -13285,6 +13890,25 @@
         }
     },
     "cairo": {
+        "/app/easybuild/modules/all/cairo/1.14.12-GCCcore-7.3.0.lua": {
+            "Description": "Cairo is a 2D graphics library with support for multiple output devices.\n Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers,\n PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB",
+            "Version": "1.14.12-GCCcore-7.3.0",
+            "fullName": "cairo/1.14.12-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nCairo is a 2D graphics library with support for multiple output devices.\n Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers,\n PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB\n\n\nMore information\n================\n - Homepage: http://cairographics.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/cairo/1.14.12-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000014.000000012.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cairo/1.14.12-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000014.000000012.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Cairo is a 2D graphics library with support for multiple output devices.\n Currently supported output targets include the X Window System (via both Xlib and XCB), Quartz, Win32, image buffers,\n PostScript, PDF, and SVG file output. Experimental backends include OpenGL, BeOS, OS/2, and DirectFB",
+                "Homepage: http://cairographics.org"
+            ]
+        },
         "/app/easybuild/modules/all/cairo/1.14.2-intel-2015b": {
             "Version": "1.14.2-intel-2015b",
             "fullName": "cairo/1.14.2-intel-2015b",
@@ -13552,6 +14176,22 @@
         }
     },
     "ctffind": {
+        "/app/easybuild/modules/all/ctffind/4.1.10-foss-2018b.lua": {
+            "Description": "CTFFIND is a programing for finding CTFs of electron\nmicrographs",
+            "Version": "4.1.10-foss-2018b",
+            "fullName": "ctffind/4.1.10-foss-2018b",
+            "help": "\nDescription\n===========\nCTFFIND is a programing for finding CTFs of electron\nmicrographs\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/ctf\n",
+            "hidden": false,
+            "pV": "000000004.000000001.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ctffind/4.1.10-foss-2018b/bin": 1
+            },
+            "wV": "000000004.000000001.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: CTFFIND is a programing for finding CTFs of electron\nmicrographs",
+                "Homepage: http://grigoriefflab.janelia.org/ctf"
+            ]
+        },
         "/app/easybuild/modules/all/ctffind/4.1.8-foss-2016b.lua": {
             "Description": "program for finding CTFs of electron micrographs",
             "Version": "4.1.8-foss-2016b",
@@ -13816,6 +14456,25 @@
             "wV": "000000002.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Expat is an XML parser library written in C. It is a stream-oriented parser in which an application  registers handlers for things the parser might find in the XML document (like start tags) - Homepage: http://expat.sourceforge.net/ "
+            ]
+        },
+        "/app/easybuild/modules/all/expat/2.2.5-GCCcore-7.3.0.lua": {
+            "Description": "Expat is an XML parser library written in C. It is a stream-oriented parser\n in which an application registers handlers for things the parser might find\n in the XML document (like start tags)\n",
+            "Version": "2.2.5-GCCcore-7.3.0",
+            "fullName": "expat/2.2.5-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nExpat is an XML parser library written in C. It is a stream-oriented parser\n in which an application registers handlers for things the parser might find\n in the XML document (like start tags)\n\n\nMore information\n================\n - Homepage: http://expat.sourceforge.net/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/expat/2.2.5-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000002.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/expat/2.2.5-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000002.000000005.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n Expat is an XML parser library written in C. It is a stream-oriented parser\n in which an application registers handlers for things the parser might find\n in the XML document (like start tags)\n",
+                "Homepage: http://expat.sourceforge.net/"
             ]
         }
     },
@@ -14544,6 +15203,25 @@
             "whatis": [
                 "Description: Fontconfig is a library designed to provide system-wide font configuration, customization and\napplication access. - Homepage: http://www.freedesktop.org/software/fontconfig"
             ]
+        },
+        "/app/easybuild/modules/all/fontconfig/2.13.0-GCCcore-7.3.0.lua": {
+            "Description": "Fontconfig is a library designed to provide system-wide font configuration,\n customization and application access.\n",
+            "Version": "2.13.0-GCCcore-7.3.0",
+            "fullName": "fontconfig/2.13.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nFontconfig is a library designed to provide system-wide font configuration,\n customization and application access.\n\n\nMore information\n================\n - Homepage: http://www.freedesktop.org/software/fontconfig\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/fontconfig/2.13.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000013.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/fontconfig/2.13.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000013.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n Fontconfig is a library designed to provide system-wide font configuration,\n customization and application access.\n",
+                "Homepage: http://www.freedesktop.org/software/fontconfig"
+            ]
         }
     },
     "fontsproto": {
@@ -14949,6 +15627,25 @@
             "whatis": [
                 "Description: FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and  portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display  servers, font conversion tools, text image generation tools, and many other products as well. - Homepage: http://freetype.org "
             ]
+        },
+        "/app/easybuild/modules/all/freetype/2.9.1-GCCcore-7.3.0.lua": {
+            "Description": "FreeType 2 is a software font engine that is designed to be small, efficient,\n highly customizable, and portable while capable of producing high-quality\n output (glyph images). It can be used in graphics libraries, display servers,\n font conversion tools, text image generation tools, and many other products\n as well.\n",
+            "Version": "2.9.1-GCCcore-7.3.0",
+            "fullName": "freetype/2.9.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nFreeType 2 is a software font engine that is designed to be small, efficient,\n highly customizable, and portable while capable of producing high-quality\n output (glyph images). It can be used in graphics libraries, display servers,\n font conversion tools, text image generation tools, and many other products\n as well.\n\n\nMore information\n================\n - Homepage: http://freetype.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/freetype/2.9.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000009.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/freetype/2.9.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000009.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n FreeType 2 is a software font engine that is designed to be small, efficient,\n highly customizable, and portable while capable of producing high-quality\n output (glyph images). It can be used in graphics libraries, display servers,\n font conversion tools, text image generation tools, and many other products\n as well.\n",
+                "Homepage: http://freetype.org"
+            ]
         }
     },
     "gbench": {
@@ -15230,6 +15927,25 @@
             "wV": "000000000.000000019.000000008.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: GNU `gettext' is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools and documentation - Homepage: http://www.gnu.org/software/gettext/ "
+            ]
+        },
+        "/app/easybuild/modules/all/gettext/0.19.8.1-GCCcore-7.3.0.lua": {
+            "Description": "GNU 'gettext' is an important step for the GNU Translation Project, as it is an asset on which we may\nbuild many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools\nand documentation",
+            "Version": "0.19.8.1-GCCcore-7.3.0",
+            "fullName": "gettext/0.19.8.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGNU 'gettext' is an important step for the GNU Translation Project, as it is an asset on which we may\nbuild many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools\nand documentation\n\n\nMore information\n================\n - Homepage: http://www.gnu.org/software/gettext/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/gettext/0.19.8.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000000.000000019.000000008.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/gettext/0.19.8.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000019.000000008.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: GNU 'gettext' is an important step for the GNU Translation Project, as it is an asset on which we may\nbuild many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools\nand documentation",
+                "Homepage: http://www.gnu.org/software/gettext/"
             ]
         },
         "/app/easybuild/modules/all/gettext/0.19.8.1.lua": {
@@ -15706,6 +16422,22 @@
             "whatis": [
                 "Description: GNU gperf is a perfect hash function generator. For a given list of strings, it produces a hash  function and hash table, in form of C or C++ code, for looking up a value depending on the input string. The hash  function is perfect, which means that the hash table has no collisions, and the hash table lookup needs a single  string comparison only. - Homepage: http://www.gnu.org/software/gperf/ "
             ]
+        },
+        "/app/easybuild/modules/all/gperf/3.1-GCCcore-7.3.0.lua": {
+            "Description": "GNU gperf is a perfect hash function generator. For a given list of strings,\n it produces a hash function and hash table, in form of C or C++ code, for\n looking up a value depending on the input string. The hash function is\n perfect, which means that the hash table has no collisions, and the hash\n table lookup needs a single string comparison only.\n",
+            "Version": "3.1-GCCcore-7.3.0",
+            "fullName": "gperf/3.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGNU gperf is a perfect hash function generator. For a given list of strings,\n it produces a hash function and hash table, in form of C or C++ code, for\n looking up a value depending on the input string. The hash function is\n perfect, which means that the hash table has no collisions, and the hash\n table lookup needs a single string comparison only.\n\n\nMore information\n================\n - Homepage: http://www.gnu.org/software/gperf/\n",
+            "hidden": false,
+            "pV": "000000003.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/gperf/3.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n GNU gperf is a perfect hash function generator. For a given list of strings,\n it produces a hash function and hash table, in form of C or C++ code, for\n looking up a value depending on the input string. The hash function is\n perfect, which means that the hash table has no collisions, and the hash\n table lookup needs a single string comparison only.\n",
+                "Homepage: http://www.gnu.org/software/gperf/"
+            ]
         }
     },
     "graphite2": {
@@ -15780,6 +16512,27 @@
             "wV": "000000001.000000008.000000008.*intel.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: Guile is the GNU Ubiquitous Intelligent Language for Extensions,  the official extension language for the GNU operating system. - Homepage: http://www.gnu.org/software/guile "
+            ]
+        }
+    },
+    "gurobi": {
+        "/app/easybuild/modules/all/gurobi/8.1.0.lua": {
+            "Description": "The Gurobi Optimizer allows users to state their toughest\n business problems as mathematical models, and then automatically considers\n billions or even trillions of possible solutions to find the best one. Our\n solver can be used as both a decision-making assistant, to help guide the\n choices of a skilled expert, or as a fully automated tool to make decisions\n with no human intervention.",
+            "Version": "8.1.0",
+            "fullName": "gurobi/8.1.0",
+            "help": "\nDescription\n===========\nThe Gurobi Optimizer allows users to state their toughest\n business problems as mathematical models, and then automatically considers\n billions or even trillions of possible solutions to find the best one. Our\n solver can be used as both a decision-making assistant, to help guide the\n choices of a skilled expert, or as a fully automated tool to make decisions\n with no human intervention.\n\n\nMore information\n================\n - Homepage: https://gurobi.com\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/gurobi/8.1.0/lib": 1
+            },
+            "pV": "000000008.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/gurobi/8.1.0/bin": 1
+            },
+            "wV": "000000008.000000001.*zfinal",
+            "whatis": [
+                "Description: The Gurobi Optimizer allows users to state their toughest\n business problems as mathematical models, and then automatically considers\n billions or even trillions of possible solutions to find the best one. Our\n solver can be used as both a decision-making assistant, to help guide the\n choices of a skilled expert, or as a fully automated tool to make decisions\n with no human intervention.",
+                "Homepage: https://gurobi.com"
             ]
         }
     },
@@ -16413,6 +17166,22 @@
         }
     },
     "intltool": {
+        "/app/easybuild/modules/all/intltool/0.51.0-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "intltool is a set of tools to centralize translation of\n many different file formats using GNU gettext-compatible PO files.",
+            "Version": "0.51.0-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "intltool/0.51.0-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nintltool is a set of tools to centralize translation of\n many different file formats using GNU gettext-compatible PO files.\n\n\nMore information\n================\n - Homepage: http://freedesktop.org/wiki/Software/intltool/\n",
+            "hidden": false,
+            "pV": "000000000.000000051.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/intltool/0.51.0-GCCcore-7.3.0-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000051.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: intltool is a set of tools to centralize translation of\n many different file formats using GNU gettext-compatible PO files.",
+                "Homepage: http://freedesktop.org/wiki/Software/intltool/"
+            ]
+        },
         "/app/easybuild/modules/all/intltool/0.51.0-foss-2016b-Perl-5.24.1.lua": {
             "Description": "intltool is a set of tools to centralize translation of\n many different file formats using GNU gettext-compatible PO files.",
             "Version": "0.51.0-foss-2016b-Perl-5.24.1",
@@ -16440,6 +17209,27 @@
             "wV": "000000002.*foss.*zfinal-.000002016.*b.*fh.000000001.*zfinal",
             "whatis": [
                 "Description: Bundle used for CompBio teaching at FredHutch. - Homepage: http://scicomp.fhcrc.org "
+            ]
+        }
+    },
+    "jbigkit": {
+        "/app/easybuild/modules/all/jbigkit/2.1-GCCcore-5.4.0.lua": {
+            "Description": "JBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.",
+            "Version": "2.1-GCCcore-5.4.0",
+            "fullName": "jbigkit/2.1-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nJBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.\n\n\nMore information\n================\n - Homepage: \n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/jbigkit/2.1-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000002.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/jbigkit/2.1-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000002.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: JBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.",
+                "Homepage: "
             ]
         }
     },
@@ -16760,6 +17550,22 @@
             "wV": "000000009.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL.  - Homepage: ftp://ftp.freedesktop.org/pub/mesa/glu/"
+            ]
+        },
+        "/app/easybuild/modules/all/libGLU/9.0.0-foss-2018b.lua": {
+            "Description": "The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL. ",
+            "Version": "9.0.0-foss-2018b",
+            "fullName": "libGLU/9.0.0-foss-2018b",
+            "help": "\nDescription\n===========\nThe OpenGL Utility Library (GLU) is a computer graphics library for OpenGL.\n\n\nMore information\n================\n - Homepage: ftp://ftp.freedesktop.org/pub/mesa/glu/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libGLU/9.0.0-foss-2018b/lib": 1
+            },
+            "pV": "000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL. ",
+                "Homepage: ftp://ftp.freedesktop.org/pub/mesa/glu/"
             ]
         }
     },
@@ -18009,6 +18815,22 @@
             "whatis": [
                 "Description: Direct Rendering Manager runtime library. - Homepage: http://dri.freedesktop.org"
             ]
+        },
+        "/app/easybuild/modules/all/libdrm/2.4.92-GCCcore-7.3.0.lua": {
+            "Description": "Direct Rendering Manager runtime library.",
+            "Version": "2.4.92-GCCcore-7.3.0",
+            "fullName": "libdrm/2.4.92-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nDirect Rendering Manager runtime library.\n\n\nMore information\n================\n - Homepage: http://dri.freedesktop.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libdrm/2.4.92-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000004.000000092.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000002.000000004.000000092.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Direct Rendering Manager runtime library.",
+                "Homepage: http://dri.freedesktop.org"
+            ]
         }
     },
     "libedit": {
@@ -18574,6 +19396,46 @@
             "whatis": [
                 "Description: libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding.  - Homepage: http://sourceforge.net/projects/libjpeg-turbo/ "
             ]
+        },
+        "/app/easybuild/modules/all/libjpeg-turbo/2.0.0-GCCcore-7.3.0.lua": {
+            "Description": "libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to\n accelerate baseline JPEG compression and decompression. libjpeg is a library\n that implements JPEG image encoding, decoding and transcoding.\n",
+            "Version": "2.0.0-GCCcore-7.3.0",
+            "fullName": "libjpeg-turbo/2.0.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nlibjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to\n accelerate baseline JPEG compression and decompression. libjpeg is a library\n that implements JPEG image encoding, decoding and transcoding.\n\n\nMore information\n================\n - Homepage: http://sourceforge.net/projects/libjpeg-turbo/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libjpeg-turbo/2.0.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/libjpeg-turbo/2.0.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to\n accelerate baseline JPEG compression and decompression. libjpeg is a library\n that implements JPEG image encoding, decoding and transcoding.\n",
+                "Homepage: http://sourceforge.net/projects/libjpeg-turbo/"
+            ]
+        }
+    },
+    "libnl": {
+        "/app/easybuild/modules/all/libnl/3.4.0-GCCcore-5.4.0.lua": {
+            "Description": "The libnl suite is a collection of libraries providing APIs\n to netlink protocol based Linux kernel interfaces.",
+            "Version": "3.4.0-GCCcore-5.4.0",
+            "fullName": "libnl/3.4.0-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nThe libnl suite is a collection of libraries providing APIs\n to netlink protocol based Linux kernel interfaces.\n\n\nMore information\n================\n - Homepage: \n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libnl/3.4.0-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000003.000000004.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/libnl/3.4.0-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000003.000000004.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: The libnl suite is a collection of libraries providing APIs\n to netlink protocol based Linux kernel interfaces.",
+                "Homepage: "
+            ]
         }
     },
     "libpciaccess": {
@@ -18875,6 +19737,25 @@
             "wV": "000000001.000000006.000000026.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: libpng is the official PNG reference library - Homepage: http://www.libpng.org/pub/png/libpng.html "
+            ]
+        },
+        "/app/easybuild/modules/all/libpng/1.6.34-GCCcore-7.3.0.lua": {
+            "Description": "libpng is the official PNG reference library",
+            "Version": "1.6.34-GCCcore-7.3.0",
+            "fullName": "libpng/1.6.34-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nlibpng is the official PNG reference library\n\n\nMore information\n================\n - Homepage: http://www.libpng.org/pub/png/libpng.html\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libpng/1.6.34-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000006.000000034.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/libpng/1.6.34-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000006.000000034.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: libpng is the official PNG reference library",
+                "Homepage: http://www.libpng.org/pub/png/libpng.html"
             ]
         },
         "/app/easybuild/modules/all/libpng/1.6.6-foss-2015b": {
@@ -20666,6 +21547,25 @@
                 "Description: The Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0,  and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and  function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses. - Homepage: http://www.gnu.org/software/ncurses/ "
             ]
         },
+        "/app/easybuild/modules/all/ncurses/6.0-GCCcore-5.4.0.lua": {
+            "Description": "The Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0,\n and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and\n function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses.",
+            "Version": "6.0-GCCcore-5.4.0",
+            "fullName": "ncurses/6.0-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nThe Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0,\n and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and\n function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses.\n\n\nMore information\n================\n - Homepage: http://www.gnu.org/software/ncurses/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ncurses/6.0-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000006.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ncurses/6.0-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000006.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: The Ncurses (new curses) library is a free software emulation of curses in System V Release 4.0,\n and more. It uses Terminfo format, supports pads and color and multiple highlights and forms characters and\n function-key mapping, and has all the other SYSV-curses enhancements over BSD Curses.",
+                "Homepage: http://www.gnu.org/software/ncurses/"
+            ]
+        },
         "/app/easybuild/modules/all/ncurses/6.0-GCCcore-6.4.0.lua": {
             "Description": "The Ncurses (new curses) library is a free software emulation of curses in\n System V Release 4.0, and more. It uses Terminfo format, supports pads and\n color and multiple highlights and forms characters and function-key mapping,\n and has all the other SYSV-curses enhancements over BSD Curses.\n",
             "Version": "6.0-GCCcore-6.4.0",
@@ -21000,6 +21900,25 @@
             "wV": "000000003.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Nettle is a cryptographic library that is designed to fit easily\n in more or less any context: In crypto toolkits for object-oriented\n languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,\n or even in kernel space. - Homepage: http://www.lysator.liu.se/~nisse/nettle/"
+            ]
+        },
+        "/app/easybuild/modules/all/nettle/3.4-foss-2018b.lua": {
+            "Description": "Nettle is a cryptographic library that is designed to fit easily\n in more or less any context: In crypto toolkits for object-oriented\n languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,\n or even in kernel space.",
+            "Version": "3.4-foss-2018b",
+            "fullName": "nettle/3.4-foss-2018b",
+            "help": "\nDescription\n===========\nNettle is a cryptographic library that is designed to fit easily\n in more or less any context: In crypto toolkits for object-oriented\n languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,\n or even in kernel space.\n\n\nMore information\n================\n - Homepage: http://www.lysator.liu.se/~nisse/nettle/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/nettle/3.4-foss-2018b/lib": 1
+            },
+            "pV": "000000003.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/nettle/3.4-foss-2018b/bin": 1
+            },
+            "wV": "000000003.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Nettle is a cryptographic library that is designed to fit easily\n in more or less any context: In crypto toolkits for object-oriented\n languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,\n or even in kernel space.",
+                "Homepage: http://www.lysator.liu.se/~nisse/nettle/"
             ]
         }
     },
@@ -21576,6 +22495,22 @@
                 "Homepage: http://sourceforge.net/projects/picard"
             ]
         },
+        "/app/easybuild/modules/all/picard/2.18.29-Java.lua": {
+            "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+            "Version": "2.18.29-Java",
+            "fullName": "picard/2.18.29-Java",
+            "help": "\nDescription\n===========\nA set of tools (in Java) for working with next generation sequencing data in the BAM format.\n\n\nMore information\n================\n - Homepage: http://sourceforge.net/projects/picard\n",
+            "hidden": false,
+            "pV": "000000002.000000018.000000029.*java.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/picard/2.18.29-Java": 1
+            },
+            "wV": "000000002.000000018.000000029.*java.*zfinal",
+            "whatis": [
+                "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+                "Homepage: http://sourceforge.net/projects/picard"
+            ]
+        },
         "/app/easybuild/modules/all/picard/2.7.1-Java-1.8.0_92": {
             "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format. - Homepage: http://broadinstitute.github.io/picard/ ",
             "Version": "2.7.1-Java-1.8.0_92",
@@ -21600,6 +22535,22 @@
             "wV": "000000000.000000032.000000008.*intel.*zfinal-.000002015.*b.*zfinal",
             "whatis": [
                 "Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization. Important users of pixman are the cairo graphics library and the X server. - Homepage: http://www.pixman.org/ "
+            ]
+        },
+        "/app/easybuild/modules/all/pixman/0.34.0-GCCcore-7.3.0.lua": {
+            "Description": "Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n",
+            "Version": "0.34.0-GCCcore-7.3.0",
+            "fullName": "pixman/0.34.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nPixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n\n\nMore information\n================\n - Homepage: http://www.pixman.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/pixman/0.34.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000000.000000034.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000000.000000034.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n",
+                "Homepage: http://www.pixman.org/"
             ]
         },
         "/app/easybuild/modules/all/pixman/0.34.0-foss-2015b": {
@@ -21718,6 +22669,22 @@
                 "Description: pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the  correct compiler options on the command line so an application can use   gcc -o test test.c `pkg-config --libs --cflags glib-2.0`  for instance, rather than hard-coding values on where to find glib (or other libraries). - Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/ "
             ]
         },
+        "/app/easybuild/modules/all/pkg-config/0.29.1-GCCcore-5.4.0.lua": {
+            "Description": "pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the\n correct compiler options on the command line so an application can use\n  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other libraries).",
+            "Version": "0.29.1-GCCcore-5.4.0",
+            "fullName": "pkg-config/0.29.1-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\npkg-config is a helper tool used when compiling applications and libraries. It helps you insert the\n correct compiler options on the command line so an application can use\n  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other libraries).\n\n\nMore information\n================\n - Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/\n",
+            "hidden": false,
+            "pV": "000000000.000000029.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/pkg-config/0.29.1-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000000.000000029.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the\n correct compiler options on the command line so an application can use\n  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other libraries).",
+                "Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/"
+            ]
+        },
         "/app/easybuild/modules/all/pkg-config/0.29.1-foss-2016b.lua": {
             "Description": "pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the\n correct compiler options on the command line so an application can use\n  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other libraries). - Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/",
             "Version": "0.29.1-foss-2016b",
@@ -21731,6 +22698,22 @@
             "wV": "000000000.000000029.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the\n correct compiler options on the command line so an application can use\n  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other libraries). - Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/"
+            ]
+        },
+        "/app/easybuild/modules/all/pkg-config/0.29.2-GCCcore-7.3.0.lua": {
+            "Description": "pkg-config is a helper tool used when compiling applications and libraries.\n It helps you insert the correct compiler options on the command line so an\n application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other\n libraries).\n",
+            "Version": "0.29.2-GCCcore-7.3.0",
+            "fullName": "pkg-config/0.29.2-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\npkg-config is a helper tool used when compiling applications and libraries.\n It helps you insert the correct compiler options on the command line so an\n application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other\n libraries).\n\n\nMore information\n================\n - Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/\n",
+            "hidden": false,
+            "pV": "000000000.000000029.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/pkg-config/0.29.2-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000029.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n pkg-config is a helper tool used when compiling applications and libraries.\n It helps you insert the correct compiler options on the command line so an\n application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other\n libraries).\n",
+                "Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/"
             ]
         }
     },
@@ -22356,6 +23339,24 @@
             ]
         }
     },
+    "summovie": {
+        "/app/easybuild/modules/all/summovie/1.0.2-binary.lua": {
+            "Description": "Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur. ",
+            "Version": "1.0.2-binary",
+            "fullName": "summovie/1.0.2-binary",
+            "help": "\nDescription\n===========\nUnblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur.\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/unblur\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000002.*binary.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/summovie/1.0.2-binary/bin": 1
+            },
+            "wV": "000000001.000000000.000000002.*binary.*zfinal",
+            "whatis": [
+                "Description: Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur. ",
+                "Homepage: http://grigoriefflab.janelia.org/unblur"
+            ]
+        }
+    },
     "svtoolkit": {
         "/app/easybuild/modules/all/svtoolkit/2.00.1678-foss-2016a": {
             "Description": "Genome STRiP (Genome STRucture In Populations) is a suite of tools for discovering and genotyping structural variations using sequencing data. The methods are designed to detect shared variation using data from multiple individuals. - Homepage: http://www.broadinstitute.org/software/genomestrip/ ",
@@ -22601,6 +23602,24 @@
             ]
         }
     },
+    "unblur": {
+        "/app/easybuild/modules/all/unblur/1.0.2-binary.lua": {
+            "Description": "Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
+            "Version": "1.0.2-binary",
+            "fullName": "unblur/1.0.2-binary",
+            "help": "\nDescription\n===========\nUnblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/unblur\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000002.*binary.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/unblur/1.0.2-binary/bin": 1
+            },
+            "wV": "000000001.000000000.000000002.*binary.*zfinal",
+            "whatis": [
+                "Description: Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
+                "Homepage: http://grigoriefflab.janelia.org/unblur"
+            ]
+        }
+    },
     "unixODBC": {
         "/app/easybuild/modules/all/unixODBC/2.3.4-foss-2016b.lua": {
             "Description": "What is the unixODBC Project?\n\nThe unixODBC Project goals are to develop and promote unixODBC to be the definitive standard for ODBC on non MS Windows platforms. This is to include GUI support for both KDE and GNOME.\n\nWhat is ODBC?\n\nODBC is an open specification for providing application developers with a predictable API with which to access Data Sources. Data Sources include SQL Servers and any Data Source with an ODBC Driver.",
@@ -22640,6 +23659,26 @@
             "wV": "000000002.000000029.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Set of Linux utilities - Homepage: http://www.kernel.org/pub/linux/utils/util-linux"
+            ]
+        },
+        "/app/easybuild/modules/all/util-linux/2.32-GCCcore-7.3.0.lua": {
+            "Description": "Set of Linux utilities",
+            "Version": "2.32-GCCcore-7.3.0",
+            "fullName": "util-linux/2.32-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nSet of Linux utilities\n\n\nMore information\n================\n - Homepage: http://www.kernel.org/pub/linux/utils/util-linux\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/util-linux/2.32-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000032.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/util-linux/2.32-GCCcore-7.3.0/bin": 1,
+                "/app/easybuild/software/util-linux/2.32-GCCcore-7.3.0/sbin": 1
+            },
+            "wV": "000000002.000000032.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Set of Linux utilities",
+                "Homepage: http://www.kernel.org/pub/linux/utils/util-linux"
             ]
         }
     },
@@ -22820,6 +23859,25 @@
             "whatis": [
                 "Description: wxWidgets is a C++ library that lets developers create applications for Windows, Mac OS X, Linux and other platforms with a single code base.",
                 "Homepage: https://www.wxwidgets.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/wxWidgets/3.1.2-foss-2018b.lua": {
+            "Description": "wxWidgets is a C++ library that lets developers create\napplications for Windows, Mac OS X, Linux and other platforms with a single\ncode base. It has popular language bindings for Python, Perl, Ruby and many\nother languages, and unlike other cross-platform toolkits, wxWidgets gives\napplications a truly native look and feel because it uses the platform's native\nAPI rather than emulating the GUI. ",
+            "Version": "3.1.2-foss-2018b",
+            "fullName": "wxWidgets/3.1.2-foss-2018b",
+            "help": "\nDescription\n===========\nwxWidgets is a C++ library that lets developers create\napplications for Windows, Mac OS X, Linux and other platforms with a single\ncode base. It has popular language bindings for Python, Perl, Ruby and many\nother languages, and unlike other cross-platform toolkits, wxWidgets gives\napplications a truly native look and feel because it uses the platform's native\nAPI rather than emulating the GUI.\n\n\nMore information\n================\n - Homepage: https://www.wxwidgets.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/wxWidgets/3.1.2-foss-2018b/lib": 1
+            },
+            "pV": "000000003.000000001.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/wxWidgets/3.1.2-foss-2018b/bin": 1
+            },
+            "wV": "000000003.000000001.000000002.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description:  wxWidgets is a C++ library that lets developers create\napplications for Windows, Mac OS X, Linux and other platforms with a single\ncode base. It has popular language bindings for Python, Perl, Ruby and many\nother languages, and unlike other cross-platform toolkits, wxWidgets gives\napplications a truly native look and feel because it uses the platform's native\nAPI rather than emulating the GUI. ",
+                "Homepage: https://www.wxwidgets.org"
             ]
         }
     },
@@ -23324,6 +24382,22 @@
                 "/app/easybuild/software/xprop/1.2.2-foss-2016b/bin": 1
             },
             "wV": "000000001.000000002.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The xprop utility is for displaying window and font properties in an X server.\n One window or font is selected using the command line arguments or possibly\n in the case of a window, by clicking on the desired window. A list of\n properties is then given, possibly with formatting information.",
+                "Homepage: http://www.x.org/wiki/"
+            ]
+        },
+        "/app/easybuild/modules/all/xprop/1.2.3-GCCcore-7.3.0.lua": {
+            "Description": "The xprop utility is for displaying window and font properties in an X server.\n One window or font is selected using the command line arguments or possibly\n in the case of a window, by clicking on the desired window. A list of\n properties is then given, possibly with formatting information.",
+            "Version": "1.2.3-GCCcore-7.3.0",
+            "fullName": "xprop/1.2.3-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe xprop utility is for displaying window and font properties in an X server.\n One window or font is selected using the command line arguments or possibly\n in the case of a window, by clicking on the desired window. A list of\n properties is then given, possibly with formatting information.\n\n\nMore information\n================\n - Homepage: http://www.x.org/wiki/\n",
+            "hidden": false,
+            "pV": "000000001.000000002.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/xprop/1.2.3-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000002.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
             "whatis": [
                 "Description: The xprop utility is for displaying window and font properties in an X server.\n One window or font is selected using the command line arguments or possibly\n in the case of a window, by clicking on the desired window. A list of\n properties is then given, possibly with formatting information.",
                 "Homepage: http://www.x.org/wiki/"

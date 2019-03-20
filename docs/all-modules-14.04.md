@@ -1,15 +1,15 @@
 ---
 title: All Modules  14.04
-permalink: /all-modules-14.04/
+permalink: /all-modules-14.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-03-01
+date: 2019-03-20
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
 The AMOS consortium is committed to the development of open-source whole genome assembly software
- - [ATK/2.22.0-foss-2016b](https://developer.gnome.org/ATK/stable/)  
+ - [ATK/2.28.1-foss-2018b](https://developer.gnome.org/ATK/stable/)  
 ATK provides the set of accessibility interfaces that are implemented by other
  toolkits and applications. Using the ATK interfaces, accessibility tools have
  full access to view and control running applications.
@@ -32,8 +32,11 @@ BEDOPS is an open-source command-line toolkit that performs highly efficient and
  scalable Boolean and other set operations, statistical calculations, archiving, conversion and
  other management of genomic data of arbitrary scale. Tasks can be easily split by chromosome for
  distributing whole-genome analyses across a computational cluster.
- - [BEDTools/2.26.0-foss-2016b](https://github.com/arq5x/bedtools2 )  
-The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM.
+ - [BEDTools/2.27.1-foss-2016b](https://github.com/arq5x/bedtools2)  
+The BEDTools utilities allow one to address common genomics
+ tasks such as finding feature overlaps and computing coverage. The utilities
+ are largely based on four widely-used file formats: BED, GFF/GTF, VCF,
+ and SAM/BAM.
  - [BLAST/2.2.26-Linux_x86_64](http://blast.ncbi.nlm.nih.gov/ )  
 
  - [BLAST+/2.7.1-foss-2016b](http://blast.ncbi.nlm.nih.gov/)  
@@ -59,8 +62,9 @@ Biopython is a set of freely available tools for biological
  a distributed collaborative effort to develop Python libraries and
  applications which address the needs of current and future work in
  bioinformatics. 
- - [Bison/3.0.4-intel-2016a](http://www.gnu.org/software/bison )  
-Bison is a general-purpose parser generator that converts an annotated context-free grammar  into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
+ - [Bison/3.0.5-GCCcore-7.3.0](http://www.gnu.org/software/bison)  
+Bison is a general-purpose parser generator that converts an annotated context-free grammar
+ into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
  - [Blosc/1.14.2-foss-2016b](http://www.blosc.org/)  
 Blosc, an extremely fast, multi-threaded, meta-compressor library
  - [Boost/1.62.0-foss-2016b](http://www.boost.org/ )  
@@ -76,6 +80,8 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
  - [CAP3/20150211](http://seq.cs.iastate.edu/)  
 CAP3 assembly program 
+ - [CARBayes/5.1.1-foss-2016b-R-3.5.2](http://github.com/duncanplee/CARBayes)  
+Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.
  - [CLISP/2.49-GCCcore-6.4.0](http://www.clisp.org/)  
 Common Lisp is a high-level, general-purpose, object-oriented, dynamic,
  functional programming language.
@@ -83,6 +89,11 @@ Common Lisp is a high-level, general-purpose, object-oriented, dynamic,
  - [CMake/3.9.6](http://www.cmake.org)  
 CMake, the cross-platform, open-source build system.
  CMake is a family of tools designed to build, test and package software.
+ - [CUDA/9.2.148.1](https://developer.nvidia.com/cuda-toolkit)  
+CUDA (formerly Compute Unified Device Architecture) is a parallel
+ computing platform and programming model created by NVIDIA and implemented by the
+ graphics processing units (GPUs) that they produce. CUDA gives developers access
+ to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.
  - [Check/0.12.0-foss-2016b](https://github.com/libcheck/check)  
 A unit testing framework for C 
  - [Clairvoyante/0.1](https://github.com/aquaskyline/Clairvoyante )  
@@ -131,7 +142,7 @@ FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate softwa
   merge pairs of reads when the original DNA fragments are shorter than twice the length of reads.
   The resulting longer reads can significantly improve genome assemblies. They can also improve
   transcriptome assembly when FLASH is used to merge RNA-seq data.
- - [FLTK/1.3.3-foss-2016b](http://www.fltk.org)  
+ - [FLTK/1.3.4-foss-2018b](http://www.fltk.org)  
 FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,
  and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL
  and its built-in GLUT emulation.
@@ -145,7 +156,10 @@ QC checks, or create an HTML based report which can be integrated into a
 pipeline.
  - [FastTree/2.1.9-foss-2016b](http://www.microbesonline.org/fasttree/ )  
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of  time and memory. 
- - [GATK/4.0.10.0-foss-2016b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
+ - [FriBidi/1.0.5-GCCcore-7.3.0](https://github.com/fribidi/fribidi)  
+The Free Implementation of the Unicode Bidirectional Algorithm.
+
+ - [GATK/4.1.0.0-foss-2016b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
 The Genome Analysis Toolkit or GATK is a software package
 developed at the Broad Institute to analyse next-generation resequencing
 data. The toolkit offers a wide variety of tools, with a primary focus on
@@ -174,7 +188,7 @@ The GLPK (GNU Linear Programming Kit) package is intended for
  mixed integer programming (MIP), and other related problems.
  It is a set of routines written in ANSI C 
  and organized in the form of a callable library.
- - [GLib/2.49.5-foss-2016b](http://www.gtk.org/)  
+ - [GLib/2.54.3-GCCcore-7.3.0](http://www.gtk.org/)  
 GLib is one of the base libraries of the GTK+ project
  - [GMAP-GSNAP/2017-02-25-foss-2016b](http://research-pub.gene.com/gmap/)  
 GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences
@@ -185,10 +199,10 @@ GMP is a free library for arbitrary precision arithmetic, operating on signed
 
  - [GNU/4.9.3-2.25](http://www.gnu.org/software/ )  
 Compiler-only toolchain with GCC and binutils.
- - [GObject-Introspection/1.49.1-foss-2016b](https://wiki.gnome.org/GObjectIntrospection/)  
-GObject introspection is a middleware layer between C libraries
- (using GObject) and language bindings. The C library can be scanned at
- compile time and generate a metadata file, in addition to the actual
+ - [GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15](https://wiki.gnome.org/GObjectIntrospection/)  
+GObject introspection is a middleware layer between C
+ libraries (using GObject) and language bindings. The C library can be scanned
+ at compile time and generate a metadata file, in addition to the actual
  native C library. Then at runtime, language bindings can read this
  metadata and automatically provide bindings to call into the C library.
  - [GSL/2.5-GCCcore-5.4.0](http://www.gnu.org/software/gsl/)  
@@ -203,14 +217,16 @@ GTDB-Tk is a software toolkit for assigning objective
  allow hundreds or thousands of metagenome-assembled genomes (MAGs) to be
  obtained directly from environmental samples. It can also be applied to
  isolate and single-cell genomes.
- - [GTK+/2.24.30-foss-2016b](https://developer.gnome.org/gtk+/stable/)  
+ - [GTK+/2.24.32-foss-2018b](https://developer.gnome.org/gtk+/stable/)  
 The GTK+ 2 package contains libraries used for creating graphical user interfaces for applications.
 
  - [GTS/0.7.6-foss-2016b](http://gts.sourceforge.net/)  
 GTS stands for the GNU Triangulated Surface Library.
  It is an Open Source Free Software Library intended to provide a set of useful
  functions to deal with 3D surfaces meshed with interconnected triangles.
- - [Gdk-Pixbuf/2.36.0-foss-2016b](https://developer.gnome.org/gdk-pixbuf/stable/)  
+ - [Gctf/1.18_b2-sm70-cu9.2](https://www.mrc-lmb.cam.ac.uk/kzhang/)  
+Real-time CTF determination and correction.
+ - [Gdk-Pixbuf/2.36.12-foss-2018b](https://developer.gnome.org/gdk-pixbuf/stable/)  
 The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.
  It is used by GTK+ 2 and GTK+ 3 to load and manipulate images. In the past it
  was distributed as part of GTK+ 2 but it was split off into a separate package
@@ -246,7 +262,7 @@ HMMER is used for searching sequence databases for homologs of protein sequences
  - [HTSlib/1.9-foss-2018b](http://www.htslib.org/)  
 A C library for reading/writing high-throughput sequencing data.
  This package includes the utilities bgzip and tabix
- - [HarfBuzz/1.4.3-foss-2016b](http://www.freedesktop.org/wiki/Software/HarfBuzz)  
+ - [HarfBuzz/2.2.0-foss-2018b](http://www.freedesktop.org/wiki/Software/HarfBuzz)  
 HarfBuzz is an OpenType text shaping engine.
  - [Homer/v4.9-foss-2016b](http://homer.ucsd.edu/homer/download.html)  
 HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for Motif Discovery and ChIP-Seq analysis. It is a collection of command line programs for unix-style operating systems written in mostly perl and c++. Homer was primarily written as a de novo motif discovery algorithm that is well suited for finding 8-12 bp motifs in large scale genomics data.
@@ -288,7 +304,7 @@ OpenLDAP's Lightning Memory-Mapped Database (LMDB) library.
 
  - [LZO/2.10-foss-2016b](http://www.oberhumer.com/opensource/lzo/)  
 Portable lossless data compression library
- - [LibTIFF/4.0.6-intel-2016a](http://www.remotesensing.org/libtiff/ )  
+ - [LibTIFF/4.0.9-GCCcore-7.3.0](http://www.remotesensing.org/libtiff/)  
 tiff: Library and tools for reading and writing TIFF data files
  - [LibUUID/1.0.3-GCCcore-6.4.0](http://sourceforge.net/projects/libuuid/)  
 Portable uuid C library
@@ -317,11 +333,11 @@ The MPFR library is a C library for multiple-precision
  - [MUMmer/3.23-foss-2016b](http://mummer.sourceforge.net/)  
 MUMmer is a system for rapidly aligning entire genomes,
  whether in complete or draft form. AMOS makes use of it.
- - [Mako/1.0.4-foss-2016b-Python-2.7.12](http://www.makotemplates.org)  
+ - [Mako/1.0.7-foss-2018b-Python-2.7.15](http://www.makotemplates.org)  
 A super-fast templating language that borrows the best ideas from the existing templating languages
  - [MariaDB/10.1.17-foss-2016b](https://mariadb.org/)  
 MariaDB An enhanced, drop-in replacement for MySQL.
- - [Mesa/12.0.2-foss-2016b](http://www.mesa3d.org/)  
+ - [Mesa/18.1.1-foss-2018b](http://www.mesa3d.org/)  
 Mesa is an open-source implementation of the OpenGL specification -
  a system for rendering interactive 3D graphics.
  - [MiXCR/3.0.3-Java-1.8](https://milaboratory.com/software/mixcr/)  
@@ -332,12 +348,14 @@ Built to complement the rich, open source Python community,
 the Anaconda platform provides an enterprise-ready data analytics platform 
 that empowers companies to adopt a modern open data science analytics architecture.
 
- - [Miniconda3/4.4.10](https://www.continuum.io/anaconda-overview)  
+ - [Miniconda3/4.5.12](https://www.continuum.io/anaconda-overview)  
 Built to complement the rich, open source Python community,
 the Anaconda platform provides an enterprise-ready data analytics platform 
 that empowers companies to adopt a modern open data science analytics architecture.
 
- - [NASM/2.12.02-foss-2016b](http://www.nasm.us/ )  
+ - [MotionCor2/1.2.1-Cuda92](http://msg.ucsf.edu/em/software/motioncor2.html)  
+Based on observations that the electron beam induces doming of the thin vitreous ice layer, we developed an algorithm to correct anisotropic image motion at the single pixel level across the whole frame, suitable for both single particle and tomographic images.
+ - [NASM/2.13.03-GCCcore-7.3.0](http://www.nasm.us/)  
 NASM: General-purpose x86 assembler
  - [NGS/1.2.5-foss-2016b](https://github.com/ncbi/ngs)  
 NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from
@@ -393,7 +411,7 @@ method for reconstructing haplotypes from population genotype data.
 Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
  - [PROJ/4.9.2-intel-2016a](http://trac.osgeo.org/proj/ )  
 Program proj is a standard Unix filter function which converts  geographic longitude and latitude coordinates into cartesian coordinates
- - [Pango/1.40.5-foss-2016b](http://www.pango.org/)  
+ - [Pango/1.42.4-foss-2018b](http://www.pango.org/)  
 Pango is a library for laying out and rendering of text, with an emphasis on internationalization.
 Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the
 context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.
@@ -438,8 +456,18 @@ R is a free software environment for statistical computing
 R is a free software environment for statistical computing and graphics.
  - [RAxML/8.2.11-foss-2016b-hybrid-avx2](https://github.com/stamatak/standard-RAxML)  
 RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.
+ - [RELION/3.0_beta-foss-2018b](http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page)  
+RELION (for REgularised LIkelihood OptimisatioN, pronounce
+rely-on) is a stand-alone computer program that employs an empirical Bayesian
+approach to refinement of (multiple) 3D reconstructions or 2D class averages in
+electron cryo-microscopy (cryo-EM).
  - [RepeatMasker/4-0-7-foss-2016b](www.repeatmasker.org)  
 RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked
+ - [ResMap/1.1.4-linux64](http://resmap.sourceforge.net/)  
+ResMap (Resolution Map) is a Python (NumPy/SciPy) application
+with a Tkinter GUI. It is an easy to use software package for computing the
+local resolution of 3D density maps studied in structural biology, primarily
+electron cryo-microscopy (cryo-EM).
  - [Ruby/2.3.1](https://www.ruby-lang.org )  
 Ruby is a dynamic, open source programming language with   a focus on simplicity and productivity. It has an elegant syntax that is   natural to read and easy to write.
  - [SAMtools/1.9-foss-2016b](http://www.htslib.org/)  
@@ -518,7 +546,7 @@ Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, ins
 Variation Hunter
  - [Wandy/Feb2_2015-foss-2016b-Java-1.8.0_92](http://bioinformaticstools.mayo.edu/research/wandy/ )  
 Wandy is designed for Copy Number Variation (CNV) and Aneuploidy detection from large genomes such as human. It takes a sorted BAM file as input and report predicted chromosome regions that have amplifications or deletions using LOG2 ratio, generate graphic reports.
- - [X11/20160819-foss-2016b](https://www.x.org)  
+ - [X11/20180604-GCCcore-7.3.0](https://www.x.org)  
 The X Window System (X11) is a windowing system for bitmap displays
  - [XKeyboardConfig/2.17-foss-2016b](http://www.freedesktop.org/wiki/Software/XKeyboardConfig/)  
 The non-arch keyboard configuration database for X Window.
@@ -526,7 +554,7 @@ The non-arch keyboard configuration database for X Window.
  frequently released open source of X keyboard configuration data
  for X Window System implementations (free, open source and commercial).
  The project is targeted to XKB-based systems.
- - [XML-Parser/2.44-foss-2016b-Perl-5.24.1](http://search.cpan.org/~toddr/XML-Parser-2.41/)  
+ - [XML-Parser/2.44_01-GCCcore-7.3.0-Perl-5.28.0](http://search.cpan.org/~toddr/XML-Parser-2.41/)  
 This is a Perl extension interface to James Clark's XML parser, expat.
  - [XZ/5.2.4-GCCcore-7.3.0](http://tukaani.org/xz/)  
 xz: XZ utilities
@@ -627,8 +655,11 @@ X damage extension headers
 DELLY2: Structural variant discovery by integrated paired-end and split-read analysis
  - [eudev/3.1.5-foss-2016a](https://wiki.gentoo.org/wiki/Project:Eudev )  
 eudev is a fork of systemd-udev with the goal of obtaining  better compatibility with existing software such as  OpenRC and Upstart, older kernels, various toolchains  and anything else required by users and various distributions.
- - [expat/2.2.0-foss-2016b](http://expat.sourceforge.net/ )  
-Expat is an XML parser library written in C. It is a stream-oriented parser in which an application  registers handlers for things the parser might find in the XML document (like start tags)
+ - [expat/2.2.5-GCCcore-7.3.0](http://expat.sourceforge.net/)  
+Expat is an XML parser library written in C. It is a stream-oriented parser
+ in which an application registers handlers for things the parser might find
+ in the XML document (like start tags)
+
  - [factera/1.4.4-foss-2016b-Perl-5.24.1](https://factera.stanford.edu/)  
 (Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data.
  - [fast5/0.6.5](http://simpsonlab.github.io/2017/02/27/packing_fast5/)  
@@ -646,9 +677,10 @@ Flex (Fast Lexical Analyzer) is a tool for generating scanners. A scanner,
  sometimes called a tokenizer, is a program which recognizes lexical patterns
  in text.
 
- - [fontconfig/2.12.1-foss-2016b](http://www.freedesktop.org/software/fontconfig)  
-Fontconfig is a library designed to provide system-wide font configuration, customization and
-application access.
+ - [fontconfig/2.13.0-GCCcore-7.3.0](http://www.freedesktop.org/software/fontconfig)  
+Fontconfig is a library designed to provide system-wide font configuration,
+ customization and application access.
+
  - [fontsproto/2.1.3-foss-2016a](http://www.freedesktop.org/wiki/Software/xlibs )  
 X11 font extension wire protocol
  - [foss/2018b](https://easybuild.readthedocs.io/en/master/Common-toolchains.html#foss-toolchain)  
@@ -658,8 +690,13 @@ GNU Compiler Collection (GCC) based compiler toolchain, including
 freeglut is a completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library.
  - [freetds/1.00.9-foss-2016b](http://www.freedesktop.org/)  
 FreeTDS is a set of libraries for Unix and Linux that allows your programs to natively talk to Microsoft SQL Server and Sybase databases.
- - [freetype/2.7-foss-2016b](http://freetype.org )  
-FreeType 2 is a software font engine that is designed to be small, efficient, highly customizable, and  portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display  servers, font conversion tools, text image generation tools, and many other products as well.
+ - [freetype/2.9.1-GCCcore-7.3.0](http://freetype.org)  
+FreeType 2 is a software font engine that is designed to be small, efficient,
+ highly customizable, and portable while capable of producing high-quality
+ output (glyph images). It can be used in graphics libraries, display servers,
+ font conversion tools, text image generation tools, and many other products
+ as well.
+
  - [gbench/2.12.0-foss-2016b](https://www.ncbi.nlm.nih.gov/tools/gbench/)  
 NCBI Genome Workbench is an integrated application for viewing and analyzing sequence data. With Genome Workbench, you can view data in publically available sequence databases at NCBI, and mix this data with your own private data.
  - [gc/7.4.4-foss-2016b](http://hboehm.info/gc/)  
@@ -695,12 +732,24 @@ GNU Compiler Collection (GCC) based compiler toolchain,
  including OpenMPI for MPI support.
  - [goolf/1.7.20]((none) )  
 GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
- - [gperf/3.0.4-foss-2016a](http://www.gnu.org/software/gperf/ )  
-GNU gperf is a perfect hash function generator. For a given list of strings, it produces a hash  function and hash table, in form of C or C++ code, for looking up a value depending on the input string. The hash  function is perfect, which means that the hash table has no collisions, and the hash table lookup needs a single  string comparison only.
+ - [gperf/3.1-GCCcore-7.3.0](http://www.gnu.org/software/gperf/)  
+GNU gperf is a perfect hash function generator. For a given list of strings,
+ it produces a hash function and hash table, in form of C or C++ code, for
+ looking up a value depending on the input string. The hash function is
+ perfect, which means that the hash table has no collisions, and the hash
+ table lookup needs a single string comparison only.
+
  - [graphite2/1.3.10-foss-2016b](http://graphite.sil.org/)  
 Graphite is a "smart font" system developed specifically to handle the complexities of lesser-known languages of the world.
  - [guile/1.8.8-intel-2016a](http://www.gnu.org/software/guile )  
 Guile is the GNU Ubiquitous Intelligent Language for Extensions,  the official extension language for the GNU operating system.
+ - [gurobi/8.1.0](https://gurobi.com)  
+The Gurobi Optimizer allows users to state their toughest
+ business problems as mathematical models, and then automatically considers
+ billions or even trillions of possible solutions to find the best one. Our
+ solver can be used as both a decision-making assistant, to help guide the
+ choices of a skilled expert, or as a fully automated tool to make decisions
+ with no human intervention.
  - [help2man/1.47.4](https://www.gnu.org/software/help2man/)  
 help2man produces simple manual pages from the '--help' and '--version'
  output of other commands.
@@ -734,6 +783,10 @@ intltool is a set of tools to centralize translation of
  many different file formats using GNU gettext-compatible PO files.
  - [intro-bio-bundle/2.0-foss-2016b-fh1](http://scicomp.fhcrc.org )  
 Bundle used for CompBio teaching at FredHutch.
+ - [jbigkit/2.1-GCCcore-5.4.0]()  
+JBIG-KIT is a software implementation of the JBIG1 data
+ compression standard (ITU-T T.82), which was designed for bi-level image
+ data, such as scanned documents.
  - [jemalloc/5.0.1-foss-2016b](http://www.canonware.com/jemalloc)  
 jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and
  scalable concurrency support.
@@ -757,7 +810,7 @@ LFTP is a sophisticated ftp/http client, and a file transfer program supporting
   a number of network protocols. Like BASH, it has job control and uses the readline library for
   input. It has bookmarks, a built-in mirror command, and can transfer several files in parallel.
   It was designed with reliability in mind.
- - [libGLU/9.0.0-foss-2016b](ftp://ftp.freedesktop.org/pub/mesa/glu/)  
+ - [libGLU/9.0.0-foss-2018b](ftp://ftp.freedesktop.org/pub/mesa/glu/)  
 The OpenGL Utility Library (GLU) is a computer graphics library for OpenGL. 
  - [libICE/1.0.9-intel-2016a](http://www.freedesktop.org/wiki/Software/xlibs )  
 X Inter-Client Exchange library for freedesktop.org
@@ -810,7 +863,7 @@ libcerf is a self-contained numeric library that provides an efficient and accur
  implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions.
  - [libcroco/0.6.11-foss-2016b](http://www.gnome.org)  
 The libcroco package contains a standalone CSS2 parsing and manipulation library
- - [libdrm/2.4.70-foss-2016b](http://dri.freedesktop.org)  
+ - [libdrm/2.4.92-GCCcore-7.3.0](http://dri.freedesktop.org)  
 Direct Rendering Manager runtime library.
  - [libedit/20160903-foss-2016b](http://thrysoee.dk/editline/)  
 This BSD-style licensed command line editor library provides generic line editing,
@@ -842,8 +895,14 @@ libHaru is a free, cross platform, open source library for generating PDF files.
 Libiconv converts from one character encoding to another through Unicode conversion
  - [libidn/1.32-intel-2016a](http://www.gnu.org/software/libidn )  
 GNU Libidn is a fully documented implementation of the Stringprep, Punycode and IDNA specifications. Libidn's purpose is to encode and decode internationalized domain names.
- - [libjpeg-turbo/1.5.0-foss-2016b](http://sourceforge.net/projects/libjpeg-turbo/ )  
-libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression. libjpeg is a library that implements JPEG image encoding, decoding and transcoding. 
+ - [libjpeg-turbo/2.0.0-GCCcore-7.3.0](http://sourceforge.net/projects/libjpeg-turbo/)  
+libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to
+ accelerate baseline JPEG compression and decompression. libjpeg is a library
+ that implements JPEG image encoding, decoding and transcoding.
+
+ - [libnl/3.4.0-GCCcore-5.4.0]()  
+The libnl suite is a collection of libraries providing APIs
+ to netlink protocol based Linux kernel interfaces.
  - [libpciaccess/0.14-GCCcore-7.3.0](http://cgit.freedesktop.org/xorg/lib/libpciaccess/)  
 Generic PCI access library.
  - [libpipeline/1.5.0-foss-2016b](https://savannah.nongnu.org/projects/libpipeline)  
@@ -937,7 +996,7 @@ The Ncurses (new curses) library is a free software emulation of curses in
 NetCDF (network Common Data Form) is a set of software libraries 
  and machine-independent data formats that support the creation, access, and sharing of array-oriented 
  scientific data.
- - [nettle/3.2-foss-2016b](http://www.lysator.liu.se/~nisse/nettle/)  
+ - [nettle/3.4-foss-2018b](http://www.lysator.liu.se/~nisse/nettle/)  
 Nettle is a cryptographic library that is designed to fit easily
  in more or less any context: In crypto toolkits for object-oriented
  languages (C++, Python, Pike, ...), in applications like LSH or GNUPG,
@@ -979,11 +1038,13 @@ pgAdmin is the most popular and feature rich Open Source administration and deve
 A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format.
  - [pixman/0.34.0-intel-2016a](http://www.pixman.org/ )  
 Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization. Important users of pixman are the cairo graphics library and the X server.
- - [pkg-config/0.29.1-foss-2016b](http://www.freedesktop.org/wiki/Software/pkg-config/)  
-pkg-config is a helper tool used when compiling applications and libraries. It helps you insert the
- correct compiler options on the command line so an application can use
-  gcc -o test test.c `pkg-config --libs --cflags glib-2.0`
- for instance, rather than hard-coding values on where to find glib (or other libraries).
+ - [pkg-config/0.29.2-GCCcore-7.3.0](http://www.freedesktop.org/wiki/Software/pkg-config/)  
+pkg-config is a helper tool used when compiling applications and libraries.
+ It helps you insert the correct compiler options on the command line so an
+ application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0`
+ for instance, rather than hard-coding values on where to find glib (or other
+ libraries).
+
  - [plink/1.9b_4.6-x86_64](https://www.cog-genomics.org/plink/1.9)  
 plink-1.9-x86_64: Whole-genome association analysis toolset
  - [poppler/0.54.0-foss-2016b](https://poppler.freedesktop.org/)  
@@ -1052,6 +1113,11 @@ Squashfs is a compressed read-only filesystem for Linux.
 Strelka2 is a fast and accurate small variant caller
  optimized for analysis of germline variation in small cohorts and
  somatic variation in tumor/normal sample pairs.
+ - [summovie/1.0.2-binary](http://grigoriefflab.janelia.org/unblur)  
+Unblur is used to align the frames of movies recorded on an
+ electron microscope to reduce image blurring due to beam-induced motion. Movie
+frame sums can also be calculated using Summovie, which uses the alignment
+results from a prior run of Unblur. 
  - [svtoolkit/2.00.1678-foss-2016b](http://www.broadinstitute.org/software/genomestrip/ )  
 Genome STRiP (Genome STRucture In Populations) is a suite of tools for discovering and genotyping structural variations using sequencing data. The methods are designed to detect shared variation using data from multiple individuals.
  - [svtyper/0.0.4-foss-2016b-Python-2.7.12-fh1](https://github.com/hall-lab/svtyper )  
@@ -1077,6 +1143,9 @@ of the final typeset output, and so can be easily edited and manipulated.
 tmux is a terminal multiplexer. It lets you switch easily  between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
  - [udunits/2.2.25-foss-2016b](https://www.unidata.ucar.edu/downloads/udunits/)  
 The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units.
+ - [unblur/1.0.2-binary](http://grigoriefflab.janelia.org/unblur)  
+Unblur is used to align the frames of movies recorded on an
+ electron microscope to reduce image blurring due to beam-induced motion.
  - [unixODBC/2.3.4-foss-2016b](http://www.unixodbc.org)  
 What is the unixODBC Project?
 
@@ -1085,7 +1154,7 @@ The unixODBC Project goals are to develop and promote unixODBC to be the definit
 What is ODBC?
 
 ODBC is an open specification for providing application developers with a predictable API with which to access Data Sources. Data Sources include SQL Servers and any Data Source with an ODBC Driver.
- - [util-linux/2.29-foss-2016b](http://www.kernel.org/pub/linux/utils/util-linux)  
+ - [util-linux/2.32-GCCcore-7.3.0](http://www.kernel.org/pub/linux/utils/util-linux)  
 Set of Linux utilities
  - [vdjpuzzle2/3771ca670a3a-foss-2016b](https://bitbucket.org/kirbyvisp/vdjpuzzle2)  
 TCR and BCR reconstruction from scRNA-seq data
@@ -1103,8 +1172,13 @@ Scientific workflow engine designed for simplicity &
 scalability.
  - [wxGTK/2.8.12-foss-2016a](https://www.wxwidgets.org/ )  
 wxWidgets is a C++ library that lets developers create applications for Windows, Mac OS X, Linux and other platforms with a single code base.
- - [wxWidgets/3.1.0-foss-2016b](https://www.wxwidgets.org/)  
-wxWidgets is a C++ library that lets developers create applications for Windows, Mac OS X, Linux and other platforms with a single code base.
+ - [wxWidgets/3.1.2-foss-2018b](https://www.wxwidgets.org)  
+wxWidgets is a C++ library that lets developers create
+applications for Windows, Mac OS X, Linux and other platforms with a single
+code base. It has popular language bindings for Python, Perl, Ruby and many
+other languages, and unlike other cross-platform toolkits, wxWidgets gives
+applications a truly native look and feel because it uses the platform's native
+API rather than emulating the GUI. 
  - [x264/20160614-foss-2016b](http://www.videolan.org/developers/x264.html)  
 x264 is a free software library and application for encoding video streams into the H.264/MPEG-4
  AVC compression format, and is released under the terms of the GNU GPL.
@@ -1133,7 +1207,7 @@ The XHMM (eXome-Hidden Markov Model) C++ software suite calls copy number variat
 X protocol and ancillary headers for xinerama
  - [xorg-macros/1.19.2-GCCcore-7.3.0](http://cgit.freedesktop.org/xorg/util/macros)  
 X.org macros utilities.
- - [xprop/1.2.2-foss-2016b](http://www.x.org/wiki/)  
+ - [xprop/1.2.3-GCCcore-7.3.0](http://www.x.org/wiki/)  
 The xprop utility is for displaying window and font properties in an X server.
  One window or font is selected using the command line arguments or possibly
  in the case of a window, by clicking on the desired window. A list of
