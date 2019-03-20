@@ -1,0 +1,42 @@
+easyblock = 'Binary'
+
+name = 'Gctf'
+version = '1.18_b2'
+# Gctf is available in binary for each CUDA + compute capability
+# this installs compute capability 7.0 and CUDA 9.2
+versionsuffix = '-sm70-cu9.2'
+
+homepage = 'https://www.mrc-lmb.cam.ac.uk/kzhang/'
+
+description = """Real-time CTF determination and correction."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = [
+    'https://www.mrc-lmb.cam.ac.uk/kzhang/Gctf/Gctf_v1.18_b2/bin/',
+    'https://www.mrc-lmb.cam.ac.uk/kzhang/Gctf/Gctf_v1.18_b2/lib/',
+]
+sources = [
+    '%(name)s_v%(version)s_sm70_cu9.2',
+    'libEMcore_sm70_cu9.2.so',
+]
+
+dependencies = [
+    ('CUDA', '9.2.148.1', '', True),
+]
+
+install_cmd = "mkdir -p %(installdir)s/bin && "
+install_cmd += "mkdir -p %(installdir)s/lib && "
+install_cmd += "cp %(name)s_v%(version)s_sm70_cu9.2 %(installdir)s/bin/ && "
+install_cmd += "cp libEMcore_sm70_cu9.2.so %(installdir)s/lib/ && "
+install_cmd += "chmod 755 %(installdir)s/bin/%(name)s_v%(version)s_sm70_cu9.2"
+
+prepend_to_path = ['bin']
+
+sanity_check_paths = {
+    'files': [
+        'bin/%(name)s_v%(version)s_sm70_cu9.2',
+        'lib/libEMcore_sm70_cu9.2.so',
+    ],
+    'dirs': [],
+}
