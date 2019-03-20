@@ -1,0 +1,26 @@
+easyblock = 'Binary'
+
+name = 'MotionCor2'
+version = '1.2.1'
+versionsuffix = '-Cuda92"
+
+homepage = 'http://msg.ucsf.edu/em/software/motioncor2.html'
+# software cannot be programmatically downloaded, visit and fill form
+
+description = """Based on observations that the electron beam induces doming of the thin vitreous ice layer, we developed an algorithm to correct anisotropic image motion at the single pixel level across the whole frame, suitable for both single particle and tomographic images."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+sources = ['%(name)s_%(version)s']
+
+dependencies = [
+    ('CUDA', '9.2.148.1', '', True),
+]
+
+install_cmd = "cp %(name)s_%(version)s%(versionsuffix)s %(installdir)s/ && "
+install_cmd += "chmod 755 %(installdir)s/%(name)s_%(version)s%(versionsuffix)s"
+
+sanity_check_paths = {
+    'files': ['%(name)s_%(version)s%(versionsuffix)s'],
+    'dirs': [],
+}
