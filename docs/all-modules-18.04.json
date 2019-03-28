@@ -123,6 +123,22 @@
         }
     },
     "BEDTools": {
+        "/app/modules/all/BEDTools/2.26.0-foss-2018b.lua": {
+            "Description": "The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+            "Version": "2.26.0-foss-2018b",
+            "fullName": "BEDTools/2.26.0-foss-2018b",
+            "help": "\nDescription\n===========\nThe BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.\n\n\nMore information\n================\n - Homepage: https://github.com/arq5x/bedtools2\n",
+            "hidden": false,
+            "pV": "000000002.000000026.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/BEDTools/2.26.0-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000026.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+                "Homepage: https://github.com/arq5x/bedtools2"
+            ]
+        },
         "/app/modules/all/BEDTools/2.27.1-foss-2018b.lua": {
             "Description": "The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps\n and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
             "Version": "2.27.1-foss-2018b",
@@ -443,6 +459,22 @@
             ]
         }
     },
+    "CARBayes": {
+        "/app/modules/all/CARBayes/5.1.1-foss-2018b-R-3.5.2.lua": {
+            "Description": "Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+            "Version": "5.1.1-foss-2018b-R-3.5.2",
+            "fullName": "CARBayes/5.1.1-foss-2018b-R-3.5.2",
+            "help": "\nDescription\n===========\nImplements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.\n\n\nMore information\n================\n - Homepage: http://github.com/duncanplee/CARBayes\n\n\nIncluded extensions\n===================\nCARBayes-5.1.1, CARBayesdata-2.1, leaflet-2.0.2, mcmc-0.9-6, MCMCpack-1.4-4,\ntruncnorm-1.0-8\n",
+            "hidden": false,
+            "pV": "000000005.000000001.000000001.*foss.*zfinal-.000002018.*b.*r.*zfinal-.000000003.000000005.000000002.*zfinal",
+            "wV": "000000005.000000001.000000001.*foss.*zfinal-.000002018.*b.*r.*zfinal-.000000003.000000005.000000002.*zfinal",
+            "whatis": [
+                "Description: Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.",
+                "Homepage: http://github.com/duncanplee/CARBayes",
+                "Extensions: CARBayes-5.1.1, CARBayesdata-2.1, leaflet-2.0.2, mcmc-0.9-6, MCMCpack-1.4-4, truncnorm-1.0-8"
+            ]
+        }
+    },
     "CMake": {
         "/app/modules/all/CMake/3.11.4-GCCcore-7.3.0.lua": {
             "Description": "CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
@@ -455,6 +487,22 @@
                 "/app/software/CMake/3.11.4-GCCcore-7.3.0/bin": 1
             },
             "wV": "000000003.000000011.000000004.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+                "Homepage: http://www.cmake.org"
+            ]
+        },
+        "/app/modules/all/CMake/3.12.1-GCCcore-7.3.0.lua": {
+            "Description": "CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+            "Version": "3.12.1-GCCcore-7.3.0",
+            "fullName": "CMake/3.12.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nCMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n\n\nMore information\n================\n - Homepage: http://www.cmake.org\n",
+            "hidden": false,
+            "pV": "000000003.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/CMake/3.12.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
             "whatis": [
                 "Description: \n CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
                 "Homepage: http://www.cmake.org"
@@ -871,6 +919,22 @@
                 "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.",
                 "Homepage: http://www.broadinstitute.org/gatk/"
             ]
+        },
+        "/app/modules/all/GATK/4.1.0.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.0.0-foss-2018b-Python-3.6.6",
+            "fullName": "GATK/4.1.0.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/GATK/4.1.0.0-foss-2018b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
         }
     },
     "GCC": {
@@ -1028,6 +1092,24 @@
             "whatis": [
                 "Description: \n GMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n",
                 "Homepage: http://gmplib.org/"
+            ]
+        }
+    },
+    "GMime": {
+        "/app/modules/all/GMime/2.6.23-GCCcore-7.3.0.lua": {
+            "Description": "The GMime package contains a set of utilities for parsing and\n creating messages using the Multipurpose Internet Mail Extension (MIME) as\n defined by the applicable RFCs.",
+            "Version": "2.6.23-GCCcore-7.3.0",
+            "fullName": "GMime/2.6.23-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nThe GMime package contains a set of utilities for parsing and\n creating messages using the Multipurpose Internet Mail Extension (MIME) as\n defined by the applicable RFCs.\n\n\nMore information\n================\n - Homepage: http://spruce.sourceforge.net/gmime/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GMime/2.6.23-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000006.000000023.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000002.000000006.000000023.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: The GMime package contains a set of utilities for parsing and\n creating messages using the Multipurpose Internet Mail Extension (MIME) as\n defined by the applicable RFCs.",
+                "Homepage: http://spruce.sourceforge.net/gmime/"
             ]
         }
     },
@@ -1334,6 +1416,46 @@
                 "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
                 "Homepage: http://www.broadinstitute.org/software/igv/"
             ]
+        },
+        "/app/modules/all/IGV/2.5.0-Java-1.8.lua": {
+            "Description": "This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+            "Version": "2.5.0-Java-1.8",
+            "fullName": "IGV/2.5.0-Java-1.8",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/IGV/2.5.0-Java-1.8/lib": 1
+            },
+            "pV": "000000002.000000005.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/IGV/2.5.0-Java-1.8": 1
+            },
+            "wV": "000000002.000000005.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
+        }
+    },
+    "IGVTools": {
+        "/app/modules/all/IGVTools/2.4.16-Java-1.8.lua": {
+            "Description": "This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+            "Version": "2.4.16-Java-1.8",
+            "fullName": "IGVTools/2.4.16-Java-1.8",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/IGVTools/2.4.16-Java-1.8/lib": 1
+            },
+            "pV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/software/IGVTools/2.4.16-Java-1.8": 1
+            },
+            "wV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
         }
     },
     "ImageMagick": {
@@ -1373,6 +1495,27 @@
             "whatis": [
                 "Description: ImageMagick is a software suite to create, edit, compose, or convert bitmap images",
                 "Homepage: http://www.imagemagick.org/"
+            ]
+        }
+    },
+    "JAGS": {
+        "/app/modules/all/JAGS/4.3.0-foss-2018b.lua": {
+            "Description": "JAGS is Just Another Gibbs Sampler.  It is a program for analysis \n of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  ",
+            "Version": "4.3.0-foss-2018b",
+            "fullName": "JAGS/4.3.0-foss-2018b",
+            "help": "\nDescription\n===========\nJAGS is Just Another Gibbs Sampler.  It is a program for analysis \n of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation\n\n\nMore information\n================\n - Homepage: http://mcmc-jags.sourceforge.net/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/JAGS/4.3.0-foss-2018b/lib": 1
+            },
+            "pV": "000000004.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/JAGS/4.3.0-foss-2018b/bin": 1
+            },
+            "wV": "000000004.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: JAGS is Just Another Gibbs Sampler.  It is a program for analysis \n of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  ",
+                "Homepage: http://mcmc-jags.sourceforge.net/"
             ]
         }
     },
@@ -1760,6 +1903,27 @@
             ]
         }
     },
+    "MariaDB": {
+        "/app/modules/all/MariaDB/10.3.10-foss-2018b.lua": {
+            "Description": "MariaDB An enhanced, drop-in replacement for MySQL.",
+            "Version": "10.3.10-foss-2018b",
+            "fullName": "MariaDB/10.3.10-foss-2018b",
+            "help": "\nDescription\n===========\nMariaDB An enhanced, drop-in replacement for MySQL.\n\n\nMore information\n================\n - Homepage: https://mariadb.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/MariaDB/10.3.10-foss-2018b/lib": 1
+            },
+            "pV": "000000010.000000003.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/MariaDB/10.3.10-foss-2018b/bin": 1
+            },
+            "wV": "000000010.000000003.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: MariaDB An enhanced, drop-in replacement for MySQL.",
+                "Homepage: https://mariadb.org/"
+            ]
+        }
+    },
     "Mesa": {
         "/app/modules/all/Mesa/18.1.1-foss-2018b.lua": {
             "Description": "Mesa is an open-source implementation of the OpenGL specification -\n a system for rendering interactive 3D graphics.",
@@ -1931,6 +2095,27 @@
             ]
         }
     },
+    "OpenJPEG": {
+        "/app/modules/all/OpenJPEG/2.3.0-GCCcore-7.3.0.lua": {
+            "Description": "OpenJPEG is an open-source JPEG 2000 codec written in\n C language. It has been developed in order to promote the use of JPEG 2000,\n a still-image compression standard from the Joint Photographic Experts Group\n (JPEG). Since may 2015, it is officially recognized by ISO/IEC and ITU-T as\n a JPEG 2000 Reference Software.",
+            "Version": "2.3.0-GCCcore-7.3.0",
+            "fullName": "OpenJPEG/2.3.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nOpenJPEG is an open-source JPEG 2000 codec written in\n C language. It has been developed in order to promote the use of JPEG 2000,\n a still-image compression standard from the Joint Photographic Experts Group\n (JPEG). Since may 2015, it is officially recognized by ISO/IEC and ITU-T as\n a JPEG 2000 Reference Software.\n\n\nMore information\n================\n - Homepage: http://www.openjpeg.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/OpenJPEG/2.3.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/OpenJPEG/2.3.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000003.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: OpenJPEG is an open-source JPEG 2000 codec written in\n C language. It has been developed in order to promote the use of JPEG 2000,\n a still-image compression standard from the Joint Photographic Experts Group\n (JPEG). Since may 2015, it is officially recognized by ISO/IEC and ITU-T as\n a JPEG 2000 Reference Software.",
+                "Homepage: http://www.openjpeg.org/"
+            ]
+        }
+    },
     "OpenMPI": {
         "/app/modules/all/OpenMPI/3.1.1-GCC-7.3.0-2.30.lua": {
             "Description": "The Open MPI Project is an open source MPI-3 implementation.",
@@ -1949,6 +2134,24 @@
             "whatis": [
                 "Description: The Open MPI Project is an open source MPI-3 implementation.",
                 "Homepage: http://www.open-mpi.org/"
+            ]
+        }
+    },
+    "OpenPGM": {
+        "/app/modules/all/OpenPGM/5.2.122-GCCcore-7.3.0.lua": {
+            "Description": "OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n",
+            "Version": "5.2.122-GCCcore-7.3.0",
+            "fullName": "OpenPGM/5.2.122-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nOpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n\n\nMore information\n================\n - Homepage: http://code.google.com/p/openpgm/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/OpenPGM/5.2.122-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000005.000000002.000000122.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000005.000000002.000000122.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n",
+                "Homepage: http://code.google.com/p/openpgm/"
             ]
         }
     },
@@ -2109,6 +2312,27 @@
                 "Description: Larry Wall's Practical Extraction and Report Language",
                 "Homepage: https://www.perl.org/",
                 "Extensions: Algorithm::Dependency-1.110, Algorithm::Diff-1.1903, aliased-0.34, AnyData-0.12, AnyEvent-7.14, App::Cmd-0.331, AppConfig-1.71, Archive::Extract-0.80, Array::Utils-0.5, Authen::SASL-2.16, B::Hooks::EndOfScope-0.24, B::Lint-1.20, boolean-0.46, Bundle::BioPerl-2.1.9, Canary::Stability-2012, Capture::Tiny-0.48, Carp-1.38, Carp::Clan-6.06, Class::Accessor-0.51, Class::Data::Inheritable-0.08, Class::DBI-v3.0.17, Class::DBI::SQLite-0.11, Class::Inspector-1.32, Class::ISA-0.36, Class::Load-0.25, Class::Load::XS-0.10, Class::Singleton-1.5, Class::Trigger-0.14, Clone-0.39, Clone::Choose-0.010, Config::General-2.63, Config::INI-0.025, Config::MVP-2.200011, Config::Tiny-2.23, CPANPLUS-0.9176, Crypt::DES-2.07, Crypt::Rijndael-1.13, Cwd::Guard-0.05, Data::Dump-1.23, Data::Dumper::Concise-2.023, Data::Grove-0.08, Data::OptList-0.110, Data::Section-0.200007, Data::Section::Simple-0.07, Data::Stag-0.14, Data::Types-0.13, Data::UUID-1.221, Date::Handler-1.2, Date::Language-2.30, DateTime-1.49, DateTime::Locale-1.22, DateTime::TimeZone-2.19, DateTime::Tiny-1.07, DBD::AnyData-0.110, DBD::SQLite-1.58, DBI-1.641, DBIx::Admin::TableInfo-3.03, DBIx::ContextualFetch-1.03, DBIx::Simple-1.37, Devel::CheckCompiler-0.07, Devel::CheckLib-1.13, Devel::GlobalDestruction-0.14, Devel::OverloadInfo-0.005, Devel::StackTrace-2.03, Digest::HMAC-1.03, Digest::MD5::File-0.08, Digest::SHA1-2.13, Dist::CheckConflicts-0.11, Dist::Zilla-6.012, Email::Date::Format-1.005, Encode::Locale-1.05, Error-0.17026, Eval::Closure-0.14, Exception::Class-1.44, Expect-1.35, Exporter-5.72, Exporter::Declare-0.114, Exporter::Tiny-1.000000, ExtUtils::Config-0.008, ExtUtils::Helpers-0.026, ExtUtils::InstallPaths-0.012, Fennec::Lite-0.004, File::CheckTree-4.42, File::Copy::Recursive-0.44, File::Copy::Recursive::Reduced-0.006, File::Find::Rule-0.34, File::Find::Rule::Perl-1.15, File::Grep-0.02, File::HomeDir-1.004, File::Listing-6.04, File::Path-2.15, File::pushd-1.016, File::Remove-1.57, File::ShareDir-1.116, File::ShareDir::Install-0.13, File::Slurp-9999.19, File::Slurp::Tiny-0.004, File::Slurper-0.012, File::Spec-3.74, File::Temp-0.2306, File::Which-1.22, Font::TTF-1.06, Getopt::Long-2.50, Getopt::Long::Descriptive-0.102, Git-0.42, GO-0.04, GO::Utils-0.15, Graph-0.9704, Graph::ReadWrite-2.09, Hash::Merge-0.300, HTML::Entities::Interpolate-1.10, HTML::Form-6.03, HTML::Parser-3.72, HTML::Tagset-3.20, HTML::Tree-5.07, HTTP::Cookies-6.04, HTTP::Daemon-6.01, HTTP::Date-6.02, HTTP::Negotiate-6.01, HTTP::Request-6.18, HTTP::Tiny-0.070, Ima::DBI-0.35, Import::Into-1.002005, IO::HTML-1.001, IO::Socket::SSL-2.056, IO::String-1.08, IO::Stringy-2.111, IO::Tty-1.12, IPC::Run-20180523.0, IPC::Run3-0.048, JSON-2.97001, Lingua::EN::PluralToSingular-0.21, List::AllUtils-0.14, List::MoreUtils-0.428, List::SomeUtils-0.56, List::UtilsBy-0.11, Log::Dispatch-2.67, Log::Dispatchouli-2.016, Log::Handler-0.88, Log::Log4perl-1.49, Log::Message-0.08, Log::Message::Simple-0.10, LWP::MediaTypes-6.02, LWP::Simple-6.34, Mail::Util-2.20, Math::Bezier-0.01, Math::CDF-0.1, Math::Round-0.07, Math::VecStat-0.08, Meta::Builder-0.003, MIME::Lite-3.030, MIME::Types-2.17, Mixin::Linewise::Readers-0.108, Mock::Quick-1.111, Module::Build-0.4224, Module::Build::Tiny-0.039, Module::Build::XSUtil-0.19, Module::Implementation-0.09, Module::Install-1.19, Module::Pluggable-5.2, Module::Runtime-0.016, Moo-2.003004, Moose-2.2011, MooseX::LazyRequire-0.11, MooseX::OneArgNew-0.005, MooseX::Role::Parameterized-1.10, MooseX::SetOnce-0.200002, MooseX::Types-0.50, MooseX::Types::Perl-0.101343, Mouse-v2.5.4, MRO::Compat-0.13, namespace::autoclean-0.28, namespace::clean-0.27, Net::HTTP-6.18, Net::SMTP::SSL-1.04, Net::SNMP-v6.0.1, Net::SSLeay-1.85, Number::Compare-0.03, Number::Format-1.75, Object::Accessor-0.48, Package::Constants-0.06, Package::DeprecationManager-0.17, Package::Stash-0.37, Package::Stash::XS-0.28, Params::Util-1.07, Params::Validate-1.29, Params::ValidationCompiler-0.27, Parse::RecDescent-1.967015, Path::Tiny-0.104, PDF::API2-2.033, PerlIO::utf8_strict-0.007, Pod::Elemental-0.103004, Pod::Eventual-0.094001, Pod::LaTeX-0.61, Pod::Plainer-1.04, Pod::POM-2.01, Pod::Weaver-4.015, Readonly-2.05, Regexp::Common-2017060201, Role::HasMessage-0.006, Role::Identifiable::HasIdent-0.007, Role::Tiny-2.000006, Scalar::List::Utils-1.50, Set::Array-0.30, Set::IntSpan-1.19, Set::IntSpan::Fast-1.15, Set::Scalar-1.29, Shell-0.73, Software::License-0.103013, Specio-0.42, SQL::Abstract-1.85, SQL::Statement-1.412, Statistics::Basic-1.6611, Statistics::Descriptive-3.0613, strictures-2.000005, String::Flogger-1.101245, String::RewritePrefix-0.007, String::Truncate-1.100602, Sub::Exporter-0.987, Sub::Exporter::ForMethods-0.100052, Sub::Exporter::Progressive-0.001013, Sub::Identify-0.14, Sub::Install-0.928, Sub::Name-0.21, Sub::Quote-2.005001, Sub::Uplevel-0.2800, Sub::Uplevel-0.2800, SVG-2.84, Switch-2.17, Template-2.27, Template::Plugin::Number::Format-1.06, Term::Encoding-0.02, Term::ReadKey-2.37, Term::UI-0.46, Test::ClassAPI-1.07, Test::Deep-1.128, Test::Differences-0.64, Test::Exception-0.43, Test::Exception::LessClever-0.009, Test::Fatal-0.014, Test::Harness-3.42, Test::LeakTrace-0.16, Test::Most-0.35, Test::NoWarnings-1.04, Test::Output-1.031, Test::Pod-1.52, Test::Requires-0.10, Test::Simple-1.302136, Test::Version-2.09, Test::Warn-0.36, Test::Warnings-0.026, Text::Aligner-0.13, Text::Balanced-2.03, Text::CSV-1.95, Text::Diff-1.45, Text::Format-0.61, Text::Glob-0.11, Text::Iconv-1.7, Text::Soundex-3.05, Text::Table-1.133, Text::Template-1.53, Throwable-0.200013, Tie::Function-0.02, Tie::IxHash-1.23, Time::Piece-1.3204, Time::Piece::MySQL-0.06, Tree::DAG_Node-1.31, Try::Tiny-0.30, UNIVERSAL::moniker-0.08, URI-1.74, version-0.9924, Want-0.29, WWW::RobotRules-6.02, XML::Bare-0.53, XML::DOM-1.46, XML::Filter::BufferText-1.01, XML::NamespaceSupport-1.12, XML::Parser-2.44_01, XML::RegExp-0.04, XML::SAX-1.00, XML::SAX::Base-1.09, XML::SAX::Writer-0.57, XML::Simple-2.25, XML::Tiny-2.07, XML::Twig-3.52, XML::XPath-1.42, YAML::Tiny-1.73"
+            ]
+        }
+    },
+    "PostgreSQL": {
+        "/app/modules/all/PostgreSQL/10.3-foss-2018b.lua": {
+            "Description": "PostgreSQL is a powerful, open source object-relational database system.\n It is fully ACID compliant, has full support for foreign keys,\n joins, views, triggers, and stored procedures (in multiple languages).\n It includes most SQL:2008 data types, including INTEGER,\n NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.\n It also supports storage of binary large objects, including pictures,\n sounds, or video. It has native programming interfaces for C/C++, Java,\n .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.",
+            "Version": "10.3-foss-2018b",
+            "fullName": "PostgreSQL/10.3-foss-2018b",
+            "help": "\nDescription\n===========\nPostgreSQL is a powerful, open source object-relational database system.\n It is fully ACID compliant, has full support for foreign keys,\n joins, views, triggers, and stored procedures (in multiple languages).\n It includes most SQL:2008 data types, including INTEGER,\n NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.\n It also supports storage of binary large objects, including pictures,\n sounds, or video. It has native programming interfaces for C/C++, Java,\n .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.\n\n\nMore information\n================\n - Homepage: https://www.postgresql.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/PostgreSQL/10.3-foss-2018b/lib": 1
+            },
+            "pV": "000000010.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/PostgreSQL/10.3-foss-2018b/bin": 1
+            },
+            "wV": "000000010.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: PostgreSQL is a powerful, open source object-relational database system.\n It is fully ACID compliant, has full support for foreign keys,\n joins, views, triggers, and stored procedures (in multiple languages).\n It includes most SQL:2008 data types, including INTEGER,\n NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.\n It also supports storage of binary large objects, including pictures,\n sounds, or video. It has native programming interfaces for C/C++, Java,\n .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.",
+                "Homepage: https://www.postgresql.org/"
             ]
         }
     },
@@ -2311,7 +2535,7 @@
             "Description": "R is a free software environment for statistical computing and graphics.",
             "Version": "3.5.1-foss-2018b",
             "fullName": "R/3.5.1-foss-2018b",
-            "help": "\nDescription\n===========\nR is a free software environment for statistical computing and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\nabc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-11,\nadegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, akima-0.6-2,\nAlgDesign-1.1-7.3, animation-2.5, aod-1.3, ape-5.1, arm-1.10-1,\nassertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.2, base64-2.0,\nbase64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.5, bayesm-3.1-0.1,\nBB-2014.10-1, BBmisc-1.11, BDgraph-2.51, beanplot-1.2, beeswarm-0.2.3,\nBH-1.66.0-1, BiasedUrn-1.07, bibtex-0.4.2, bibtex-0.4.2, bigmemory-4.5.33,\nbigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12,\nbit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.3,\nbold-0.5.0, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1,\nbridgesampling-0.4-0, Brobdingnag-1.2-6, broom-0.5.0, bst-0.3-15, Cairo-1.5-9,\ncalibrate-1.7.2, callr-2.0.4, car-3.0-0, carData-3.0-1, caret-6.0-80,\ncaTools-1.17.1.1, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1,\ncheckmate-1.8.5, chemometrics-1.4.2, chron-2.3-52, circlize-0.4.4,\nclass-7.3-14, classInt-0.2-3, cli-1.0.0, clipr-0.4.1, cluster-2.0.7-1,\nclusterGeneration-1.3.4, clusterRepro-0.5-1.1, clustree-0.2.2, clValid-0.6-6,\ncoda-0.19-1, codetools-0.2-15, coin-1.2-2, colorspace-1.3-2, combinat-0.0-8,\ncommonmark-1.5, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.3,\ncrayon-1.3.4, crosstalk-1.0.0, crul-0.6.0, cubature-1.4, curl-3.2,\ncvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.11.4, DBI-1.0.0,\ndbplyr-1.2.2, ddalpha-1.3.4, deal-1.2-37, debugme-1.1.0, deldir-0.1-15,\ndendextend-1.8.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21,\ndevtools-1.13.6, DHARMa-0.2.0, diagram-1.6.4, DiagrammeR-1.0.0,\ndichromat-2.0-0, digest-0.6.15, dimRed-0.1.0, diptest-0.75-7,\nDiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0,\nDistributionUtils-0.5-1, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.11,\ndoRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.7.6,\nDRR-0.0.3, DT-0.4, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6,\ndynamicTreeCut-1.63-1, e1071-1.7-0, EasyABC-1.5, ellipse-0.4.1,\nemulator-1.2-17, energy-1.7-5, evaluate-0.11, expm-0.999-2, expsmooth-2.3,\nextrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3,\nfansi-0.3.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0,\nfdrtool-1.2.15, feather-0.3.1, ff-2.2-14, ffbase-0.12.3, fftw-1.0-4,\nfields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-11,\nflashClust-1.01-2, flexclust-1.3-5, flexmix-2.3-14, fma-2.3, FME-1.3.5,\nFNN-1.1.2.1, forcats-0.3.0, foreach-1.4.4, forecast-8.4, foreign-0.8-71,\nformatR-1.5, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5,\nfracdiff-1.4-2, futile.logger-1.4.3, futile.options-1.0.1, future-1.9.0, g-r,\ng-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.0-1, gamlss.dist-5.0-6,\ngamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.3, gbRd-0.4-11,\ngclus-1.3.1, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19,\ngeepack-1.2-1, geiger-2.0.6, GeneNet-1.2.13, geometry-0.3-6, getopt-1.20.2,\nGetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.1.3, ggm-2.3,\nggplot2-3.0.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.0, ggvis-0.4.3,\nGillespieSSA-0.5-4, git2r-0.23.0, glasso-1.10, gllvm-1.0, glmmML-1.0.3,\nglmmTMB-0.2.2.0, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.1,\nglue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.1.2,\ngplots-3.0.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-0, GSA-1.03,\ngsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, haven-1.1.2, hdf5r-1.0.0,\nheatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.1-1, hms-0.4.2,\nhtmlTable-1.12, htmltools-0.3.6, htmlwidgets-1.2, httpcode-0.2.0,\nhttpuv-1.4.5, httr-1.3.1, huge-1.2.7, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2,\nIDPmisc-1.1.17, igraph-1.2.2, imager-0.41.1, ineq-0.2-13, influenceR-0.1.0,\ninfotheo-1.2.0, interpretR-0.2.4, inum-1.0-0, ipred-0.9-7, irace-3.1,\nirlba-2.3.2, Iso-0.0-17, iterators-1.0.10, JBTools-0.7.2.9, jomo-2.6-3,\njpeg-0.1-8, jsonlite-1.5, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14,\nknitr-1.20, KODAMA-1.4, kohonen-3.0.6, ks-1.11.3, labdsv-1.8-0, labeling-0.3,\nlabelled-1.1.0, laeken-0.4.6, lambda.r-1.2.3, lars-1.2, later-0.7.3,\nlater-0.7.4, lattice-0.20-35, latticeExtra-0.6-28, lava-1.6.3, lavaan-0.6-2,\nlazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-0.16,\nlibcoin-1.0-1, limSolve-1.5.5.3, listenv-0.7.0, lme4-1.1-18-1, Lmoments-1.2-3,\nlmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23,\nlogspline-2.1.11, longitudinal-1.1.12, longmemo-1.0-0, lpSolve-5.6.13,\nlsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-8, magrittr-1.5,\nmanipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-3, markdown-0.8,\nMASS-7.3-50, Matching-4.9-3, MatchIt-3.0.2, Matrix-1.2-14, matrixcalc-1.0-3,\nMatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-0,\nmclust-5.4.1, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.0,\nmgcv-1.8-24, mi-1.0, mice-3.3.0, mime-0.5, miniUI-0.1.1.1, minpack.lm-1.2-1,\nminqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, mitml-0.3-6, mixtools-1.1.0,\nmlbench-2.1-1, mlogit-0.3-0, mlr-2.12.1, mnormt-1.5-5, ModelMetrics-1.2.0,\nmodelr-0.1.2, modeltools-0.2-22, moments-0.14, mpath-0.3-5, msm-1.6.6,\nmultcomp-1.4-8, multicool-0.1-10, munsell-0.5.0, mvabund-3.13.1,\nmvtnorm-1.0-8, natserv-0.1.4, ncbit-2013.03.29, network-1.13.0.1,\nneuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.0.4, NLP-0.1-11,\nNMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-8, npsurv-0.4-0,\nnumDeriv-2016.8-1, oce-0.9-23, OceanView-1.0.4, openssl-1.0.2, openxlsx-4.1.0,\noptmatch-0.9-10, optparse-1.6.0, ordinal-2018.4-19, pan-1.6, parallelMap-1.3,\nParamHelpers-1.11, party-1.3-1, partykit-1.2-2, pastecs-1.3.21, pbapply-1.3-4,\npbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7,\npermute-0.9-4, phangorn-2.4.0, pheatmap-1.0.10, phylobase-0.8.4, pillar-1.3.0,\npim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.0, pkgconfig-2.0.2,\npkgload-1.0.0, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1,\nplotly-4.8.0, plotrix-3.7-2, pls-2.6-0, plyr-1.8.4, png-0.1-7,\nPoissonSeq-1.1.2, polspline-1.1.13, polyclip-1.9-1, polynom-1.3-9,\nprabclus-2.2-6, pracma-2.1.4, praise-1.0.0, prettyunits-1.0.2, pROC-1.12.1,\nprocessx-3.2.0, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0,\npromises-1.0.1, promises-1.0.1, proto-1.0.0, proxy-0.4-22, pryr-0.1.4,\nps-1.1.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.4, pulsar-0.3.4, purrr-0.2.5,\npvclust-2.0-0, qgraph-1.5, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13,\nquantreg-5.36, questionr-0.6.3, R.cache-0.13.0, R.matlab-3.6.1,\nR.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.42.0, R.utils-2.6.0, R6-2.2.2,\nrandomForest-4.6-14, randomForestSRC-2.7.0, ranger-0.10.1, RANN-2.6,\nraster-2.6-7, RCircos-1.2.0, RColorBrewer-1.1-2, Rcpp-0.12.18,\nRcppArmadillo-0.9.100.5.0, RcppEigen-0.3.3.4.0, RcppGSL-0.3.6,\nRcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.11, Rdpack-0.9-0,\nreadbitmap-0.1.5, readr-1.1.1, readxl-1.1.0, recipes-0.1.3, registry-0.5,\nrematch-1.0.1, rentrez-1.2.1, reprex-0.2.0, reshape-0.8.7, reshape2-1.4.3,\nreticulate-1.10, RGCCA-2.1.2, rgdal-1.3-4, rgexf-0.15.3, rgl-0.99.16,\nRInside-0.2.14, rio-0.5.10, ritis-0.7.2, RItools-0.1-16, rJava-0.9-10,\nrjson-0.2.20, RJSONIO-1.3-0, rlang-0.2.2, rlecuyer-0.3-4, rmarkdown-1.10,\nrmeta-3.0, Rmpi-0.6-7, rms-5.1-2, RMTstat-0.3, rncl-0.8.3, RNeXML-2.1.2,\nrngtools-1.3.1, robustbase-0.93-2, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7,\nrotl-3.0.4, roxygen2-6.1.0, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-4,\nrredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.7,\nRtsne-0.13, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2,\nRWeka-0.4-38, RWekajars-3.9.2-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0,\nscatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0,\nselectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sfsmisc-1.1-2,\nshape-1.4.4, shapefiles-0.7, shiny-1.1.0, shinydashboard-0.7.0, signal-0.7-6,\nSimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-43, sm-2.2-5.5, smoother-1.1, sn-1.5-2,\nsna-2.4, snow-0.4-2, snowfall-1.84-6.1, solrium-1.0.0, som-0.3-5.1,\nsoundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-0, SparseM-1.77,\nspatial-7.3-11, spatstat-1.56-1, spatstat.data-1.3-1, spatstat.utils-1.9-0,\nspData-0.2.9.3, spdep-0.7-8, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3,\nstartupmsg-0.9.5, statmod-1.4.30, statnet.common-4.1.4, stringi-1.2.4,\nstringr-1.3.1, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24,\nSuppDists-1.1-9.4, survival-2.42-6, survivalROC-1.0.3, svd-0.4.1, t-o,\ntaxize-0.9.4, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1,\ntestthat-2.0.0, TH.data-1.0-9, tibble-1.4.2, tidygraph-1.1.0, tidyr-0.8.1,\ntidyselect-0.2.4, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102,\ntimereg-1.9.2, tinytex-0.6, tkrplot-0.0-24, tm-0.7-5, TMB-1.7.14,\ntmvtnorm-1.4-10, TraMineR-2.0-8, tree-1.0-39, triebeard-0.3.0,\ntrimcluster-0.1-2.1, tripack-1.3-8, tseries-0.10-45, tseriesChaos-0.1-13,\ntsne-0.1-3, TTR-0.23-3, tuneR-1.3.3, tweedie-2.3.2, tweenr-0.1.5, u-t,\nucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-1, urca-1.3-0,\nurltools-1.7.1, uroot-2.0-9, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0,\nvegan-2.5-2, VennDiagram-1.6.20, VGAM-1.0-5, VIM-4.7.0, vioplot-0.2,\nvipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.4,\nwaveslim-1.7.5, webshot-0.5.0, whisker-0.3-2, WikidataR-1.4.0,\nWikipediR-1.5.0, wikitaxa-0.2.0, withr-2.1.2, worrms-0.2.8, WriteXLS-4.0.0,\nxfun-0.3, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.15, xml2-1.2.0, xtable-1.8-2,\nxts-0.11-0, yaml-2.2.0, zip-1.0.0, zoo-1.8-3\n",
+            "help": "\nDescription\n===========\nR is a free software environment for statistical computing and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\nabc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-11,\nadegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, aggregation-1.0.1,\nakima-0.6-2, AlgDesign-1.1-7.3, animation-2.5, aod-1.3, ape-5.1, arm-1.10-1,\nasnipe-1.1.11, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a,\nbackports-1.1.2, bartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0,\nbase64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.5, bayesm-3.1-0.1,\nBB-2014.10-1, BBmisc-1.11, BDgraph-2.51, beanplot-1.2, beeswarm-0.2.3,\nBH-1.66.0-1, BiasedUrn-1.07, bibtex-0.4.2, bibtex-0.4.2, bigmemory-4.5.33,\nbigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12,\nbit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.3,\nbold-0.5.0, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1,\nbridgedist-0.1.0, bridgesampling-0.4-0, Brobdingnag-1.2-6, broom-0.5.0,\nbst-0.3-15, Cairo-1.5-9, calibrate-1.7.2, callr-2.0.4, car-3.0-0,\ncarData-3.0-1, caret-6.0-80, caTools-1.17.1.1, cellranger-1.1.0, cgdsr-1.2.10,\ncghFLasso-0.2-1, checkmate-1.8.5, chemometrics-1.4.2, chron-2.3-52,\ncirclize-0.4.4, class-7.3-14, classInt-0.2-3, cli-1.0.0, clipr-0.4.1,\ncluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.5-1.1,\nclustree-0.2.2, clValid-0.6-6, coda-0.19-1, codetools-0.2-15, coin-1.2-2,\ncolorspace-1.3-2, combinat-0.0-8, ComICS-1.0.4, commonmark-1.5,\ncompositions-1.40-2, corpcor-1.6.9, cowplot-0.9.3, crayon-1.3.4,\ncrosstalk-1.0.0, crul-0.6.0, csSAM-1.2.4, cubature-1.4, curl-3.2, cvAUC-1.1.0,\nCVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.11.4, DBI-1.0.0,\ndbplyr-1.2.2, ddalpha-1.3.4, deal-1.2-37, debugme-1.1.0, deldir-0.1-15,\ndendextend-1.8.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21,\ndevtools-1.13.6, DHARMa-0.2.0, diagram-1.6.4, DiagrammeR-1.0.0,\ndichromat-2.0-0, digest-0.6.15, dimRed-0.1.0, diptest-0.75-7,\nDiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0,\nDistributionUtils-0.5-1, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.11,\ndoRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.7.6,\nDRR-0.0.3, DT-0.4, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6,\ndynamicTreeCut-1.63-1, e1071-1.7-0, EasyABC-1.5, ellipse-0.4.1,\nemulator-1.2-17, energy-1.7-5, ergm-3.9.4, ergm.count-3.3.0, evaluate-0.11,\nexpm-0.999-2, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9,\nFactoMineR-1.41, fail-1.3, fansi-0.3.0, fastcluster-1.1.25, fastICA-1.2-1,\nfastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.1, ff-2.2-14, ffbase-0.12.3,\nfftw-1.0-4, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-11,\nflashClust-1.01-2, flexclust-1.3-5, flexmix-2.3-14, fma-2.3, FME-1.3.5,\nFNN-1.1.2.1, forcats-0.3.0, foreach-1.4.4, forecast-8.4, foreign-0.8-71,\nformatR-1.5, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5,\nfracdiff-1.4-2, futile.logger-1.4.3, futile.options-1.0.1, future-1.9.0, g-r,\ng-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.0-1, gamlss.dist-5.0-6,\ngamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.3, gbRd-0.4-11,\ngclus-1.3.1, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19,\ngeepack-1.2-1, geiger-2.0.6, GeneNet-1.2.13, GenSA-1.1.7, geometry-0.3-6,\ngetopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0,\nggforce-0.1.3, ggm-2.3, ggplot2-3.0.0, ggraph-1.0.2, ggrepel-0.8.0,\nggridges-0.5.0, ggvis-0.4.3, GillespieSSA-0.5-4, git2r-0.23.0, glasso-1.10,\ngllvm-1.0, glmmML-1.0.3, glmmTMB-0.2.2.0, glmnet-2.0-16, GlobalOptions-0.1.0,\nglobals-0.12.1, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1,\ngomms-1.0, gower-0.1.2, gplots-3.0.1, gridBase-0.4-7, gridExtra-2.3,\ngrpreg-3.2-0, GSA-1.03, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1,\nGUTS-1.1.0, h2o-3.22.1.1, haven-1.1.2, hdf5r-1.0.0, heatmap3-1.1.1,\nhexbin-1.27.2, highr-0.7, Hmisc-4.1-1, hms-0.4.2, htmlTable-1.12,\nhtmltools-0.3.6, htmlwidgets-1.2, httpcode-0.2.0, httpuv-1.4.5, httr-1.3.1,\nhuge-1.2.7, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.17,\nigraph-1.2.2, imager-0.41.1, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0,\ninterpretR-0.2.4, inum-1.0-0, ipred-0.9-7, irace-3.1, irlba-2.3.2, Iso-0.0-17,\niterators-1.0.10, itertools-0.1-3, JBTools-0.7.2.9, jomo-2.6-3, jpeg-0.1-8,\njsonlite-1.5, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.20,\nKODAMA-1.4, kohonen-3.0.6, ks-1.11.3, labdsv-1.8-0, labeling-0.3,\nlabelled-1.1.0, laeken-0.4.6, lambda.r-1.2.3, lars-1.2, later-0.7.3,\nlater-0.7.4, lattice-0.20-35, latticeExtra-0.6-28, lava-1.6.3, lavaan-0.6-2,\nlazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-0.16,\nlibcoin-1.0-1, limSolve-1.5.5.3, liquidSVM-1.2.2, listenv-0.7.0,\nlme4-1.1-18-1, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1,\nlogcondens-2.1.5, logistf-1.23, logspline-2.1.11, longitudinal-1.1.12,\nlongmemo-1.0-0, lpSolve-5.6.13, lqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e,\nmagic-1.5-8, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0,\nmaptools-0.9-3, markdown-0.8, MASS-7.3-50, Matching-4.9-3, MatchIt-3.0.2,\nMatrix-1.2-14, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0,\nmaxLik-1.3-4, mboost-2.9-0, mclust-5.4.1, mcmc-0.9-5, MCMCpack-1.4-4,\nmediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.0, mgcv-1.8-24, mi-1.0,\nmice-3.3.0, mime-0.5, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4,\nmisc3d-0.8-4, miscTools-0.6-22, missForest-1.4, mitml-0.3-6, mixtools-1.1.0,\nmlbench-2.1-1, mlegp-3.1.7, mlogit-0.3-0, mlr-2.12.1, mltools-0.3.5,\nmnormt-1.5-5, ModelMetrics-1.2.0, modelr-0.1.2, modeltools-0.2-22,\nmoments-0.14, mpath-0.3-5, msm-1.6.6, multcomp-1.4-8, multicool-0.1-10,\nmunsell-0.5.0, mvabund-3.13.1, mvtnorm-1.0-8, natserv-0.1.4, ncbit-2013.03.29,\nnetwork-1.13.0.1, networkDynamic-0.9.0, neuRosim-0.2-12, nleqslv-3.3.2,\nnlme-3.1-137, nloptr-1.0.4, NLP-0.1-11, NMF-0.21.0, NMF-0.21.0, nnet-7.3-12,\nnnls-1.4, nor1mix-1.2-3, np-0.60-8, npsurv-0.4-0, numDeriv-2016.8-1,\noce-0.9-23, OceanView-1.0.4, oddsratio-1.0.3, openssl-1.0.2, openxlsx-4.1.0,\noptmatch-0.9-10, optparse-1.6.0, ordinal-2018.4-19, pan-1.6, parallelMap-1.3,\nParamHelpers-1.11, parsedate-1.1.3, party-1.3-1, partykit-1.2-2,\npastecs-1.3.21, pbapply-1.3-4, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73,\npenalized-0.9-51, peperr-1.1-7, permute-0.9-4, phangorn-2.4.0,\npheatmap-1.0.10, phylobase-0.8.4, pillar-1.3.0, pim-2.0.1, pinfsc50-1.1.0,\npixmap-0.4-11, pkgbuild-1.0.0, pkgconfig-2.0.2, pkgload-1.0.0, pkgmaker-0.27,\nplogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-2,\npls-2.6-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.13,\npolyclip-1.9-1, polynom-1.3-9, prabclus-2.2-6, pracma-2.1.4, praise-1.0.0,\nPresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.12.1, processx-3.2.0,\nprodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1,\npromises-1.0.1, proto-1.0.0, proxy-0.4-22, pryr-0.1.4, ps-1.1.0, pscl-1.5.2,\npspline-1.0-18, psych-1.8.4, pulsar-0.3.4, purrr-0.2.5, pvclust-2.0-0,\nqgraph-1.5, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.36,\nquestionr-0.6.3, R.cache-0.13.0, R.matlab-3.6.1, R.methodsS3-1.7.1,\nR.oo-1.22.0, R.rsp-0.42.0, R.utils-2.6.0, R6-2.2.2, randomForest-4.6-14,\nrandomForestSRC-2.7.0, ranger-0.10.1, RANN-2.6, raster-2.6-7, RCircos-1.2.0,\nRColorBrewer-1.1-2, Rcpp-0.12.18, RcppArmadillo-0.9.100.5.0,\nRcppEigen-0.3.3.4.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0,\nRCurl-1.95-4.11, Rdpack-0.9-0, readbitmap-0.1.5, readr-1.1.1, readxl-1.1.0,\nrecipes-0.1.3, registry-0.5, rematch-1.0.1, rentrez-1.2.1, reprex-0.2.0,\nreshape-0.8.7, reshape2-1.4.3, reticulate-1.10, RGCCA-2.1.2, rgdal-1.3-4,\nrgexf-0.15.3, rgl-0.99.16, RInside-0.2.14, rio-0.5.10, ritis-0.7.2,\nRItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-0, rlang-0.2.2,\nrlecuyer-0.3-4, rmarkdown-1.10, rmeta-3.0, Rmpi-0.6-7, rms-5.1-2, RMTstat-0.3,\nrncl-0.8.3, RNeXML-2.1.2, rngtools-1.3.1, robustbase-0.93-2, ROCR-1.0-7,\nRook-1.1-1, rootSolve-1.7, rotl-3.0.4, roxygen2-6.1.0, rpart-4.1-13,\nrprojroot-1.3-2, rrcov-1.4-4, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1,\nRssa-1.0, rstudioapi-0.7, Rtsne-0.13, Rttf2pt1-1.3.7, RUnit-0.4.32,\nrversions-1.0.3, rvest-0.3.2, RWeka-0.4-38, RWekajars-3.9.2-1, s-p, s-t, s-t,\nsandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221,\nseewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1,\nseqinr-3.4-5, sfsmisc-1.1-2, shape-1.4.4, shapefiles-0.7, shiny-1.1.0,\nshinydashboard-0.7.0, shinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0,\nSKAT-1.3.2.1, slam-0.1-43, sm-2.2-5.5, smoother-1.1, sn-1.5-2, sna-2.4,\nsnow-0.4-2, snowfall-1.84-6.1, solrium-1.0.0, som-0.3-5.1, soundecology-1.3.3,\nsourcetools-0.1.7, sp-1.3-1, spam-2.2-0, SparseM-1.77, spatial-7.3-11,\nspatstat-1.56-1, spatstat.data-1.3-1, spatstat.utils-1.9-0, spData-0.2.9.3,\nspdep-0.7-8, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3,\nstartupmsg-0.9.5, statmod-1.4.30, statnet-2018.10, statnet.common-4.1.4,\nstringi-1.2.4, stringr-1.3.1, strucchange-1.5-1, subplex-1.5-4,\nSuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.42-6, survivalROC-1.0.3,\nsvd-0.4.1, t-o, taxize-0.9.4, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5,\ntensorA-0.36.1, tergm-3.5.2, testthat-2.0.0, TH.data-1.0-9, tibble-1.4.2,\ntidygraph-1.1.0, tidyr-0.8.1, tidyselect-0.2.4, tidyverse-1.2.1, tiff-0.1-5,\ntimeDate-3043.102, timereg-1.9.2, tinytex-0.6, tkrplot-0.0-24, tm-0.7-5,\nTMB-1.7.14, tmvtnorm-1.4-10, TraMineR-2.0-8, tree-1.0-39, triebeard-0.3.0,\ntrimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-45,\ntseriesChaos-0.1-13, tsna-0.2.0, tsne-0.1-3, TTR-0.23-3, tuneR-1.3.3,\ntweedie-2.3.2, tweenr-0.1.5, u-t, ucminf-1.1-4, unbalanced-2.0,\nuniqueAtomMat-0.1-3-2, units-0.6-1, urca-1.3-0, urltools-1.7.1, uroot-2.0-9,\nutf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-2,\nVennDiagram-1.6.20, VGAM-1.0-5, VIM-4.7.0, vioplot-0.2, vipor-0.4.5,\nviridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.4, waveslim-1.7.5,\nwebshot-0.5.0, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0,\nwikitaxa-0.2.0, withr-2.1.2, worrms-0.2.8, WriteXLS-4.0.0, xfun-0.3,\nxlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.15, xml2-1.2.0, xtable-1.8-2,\nxts-0.11-0, yaml-2.2.0, zip-1.0.0, zoo-1.8-3\n",
             "hidden": false,
             "lpathA": {
                 "/app/software/R/3.5.1-foss-2018b/lib": 1,
@@ -2325,7 +2549,7 @@
             "whatis": [
                 "Description: R is a free software environment for statistical computing and graphics.",
                 "Homepage: http://www.r-project.org/",
-                "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-11, adegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.5, aod-1.3, ape-5.1, arm-1.10-1, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.2, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.5, bayesm-3.1-0.1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.51, beanplot-1.2, beeswarm-0.2.3, BH-1.66.0-1, BiasedUrn-1.07, bibtex-0.4.2, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.3, bold-0.5.0, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1, bridgesampling-0.4-0, Brobdingnag-1.2-6, broom-0.5.0, bst-0.3-15, Cairo-1.5-9, calibrate-1.7.2, callr-2.0.4, car-3.0-0, carData-3.0-1, caret-6.0-80, caTools-1.17.1.1, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.8.5, chemometrics-1.4.2, chron-2.3-52, circlize-0.4.4, class-7.3-14, classInt-0.2-3, cli-1.0.0, clipr-0.4.1, cluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.5-1.1, clustree-0.2.2, clValid-0.6-6, coda-0.19-1, codetools-0.2-15, coin-1.2-2, colorspace-1.3-2, combinat-0.0-8, commonmark-1.5, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.3, crayon-1.3.4, crosstalk-1.0.0, crul-0.6.0, cubature-1.4, curl-3.2, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.11.4, DBI-1.0.0, dbplyr-1.2.2, ddalpha-1.3.4, deal-1.2-37, debugme-1.1.0, deldir-0.1-15, dendextend-1.8.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-1.13.6, DHARMa-0.2.0, diagram-1.6.4, DiagrammeR-1.0.0, dichromat-2.0-0, digest-0.6.15, dimRed-0.1.0, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0, DistributionUtils-0.5-1, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.11, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.7.6, DRR-0.0.3, DT-0.4, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-0, EasyABC-1.5, ellipse-0.4.1, emulator-1.2-17, energy-1.7-5, evaluate-0.11, expm-0.999-2, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3, fansi-0.3.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.1, ff-2.2-14, ffbase-0.12.3, fftw-1.0-4, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-11, flashClust-1.01-2, flexclust-1.3-5, flexmix-2.3-14, fma-2.3, FME-1.3.5, FNN-1.1.2.1, forcats-0.3.0, foreach-1.4.4, forecast-8.4, foreign-0.8-71, formatR-1.5, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5, fracdiff-1.4-2, futile.logger-1.4.3, futile.options-1.0.1, future-1.9.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.0-1, gamlss.dist-5.0-6, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.3, gbRd-0.4-11, gclus-1.3.1, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6, GeneNet-1.2.13, geometry-0.3-6, getopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.1.3, ggm-2.3, ggplot2-3.0.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.0, ggvis-0.4.3, GillespieSSA-0.5-4, git2r-0.23.0, glasso-1.10, gllvm-1.0, glmmML-1.0.3, glmmTMB-0.2.2.0, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.1, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.1.2, gplots-3.0.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-0, GSA-1.03, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, haven-1.1.2, hdf5r-1.0.0, heatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.1-1, hms-0.4.2, htmlTable-1.12, htmltools-0.3.6, htmlwidgets-1.2, httpcode-0.2.0, httpuv-1.4.5, httr-1.3.1, huge-1.2.7, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.17, igraph-1.2.2, imager-0.41.1, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, interpretR-0.2.4, inum-1.0-0, ipred-0.9-7, irace-3.1, irlba-2.3.2, Iso-0.0-17, iterators-1.0.10, JBTools-0.7.2.9, jomo-2.6-3, jpeg-0.1-8, jsonlite-1.5, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.20, KODAMA-1.4, kohonen-3.0.6, ks-1.11.3, labdsv-1.8-0, labeling-0.3, labelled-1.1.0, laeken-0.4.6, lambda.r-1.2.3, lars-1.2, later-0.7.3, later-0.7.4, lattice-0.20-35, latticeExtra-0.6-28, lava-1.6.3, lavaan-0.6-2, lazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-0.16, libcoin-1.0-1, limSolve-1.5.5.3, listenv-0.7.0, lme4-1.1-18-1, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.11, longitudinal-1.1.12, longmemo-1.0-0, lpSolve-5.6.13, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-8, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-3, markdown-0.8, MASS-7.3-50, Matching-4.9-3, MatchIt-3.0.2, Matrix-1.2-14, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-0, mclust-5.4.1, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.0, mgcv-1.8-24, mi-1.0, mice-3.3.0, mime-0.5, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, mitml-0.3-6, mixtools-1.1.0, mlbench-2.1-1, mlogit-0.3-0, mlr-2.12.1, mnormt-1.5-5, ModelMetrics-1.2.0, modelr-0.1.2, modeltools-0.2-22, moments-0.14, mpath-0.3-5, msm-1.6.6, multcomp-1.4-8, multicool-0.1-10, munsell-0.5.0, mvabund-3.13.1, mvtnorm-1.0-8, natserv-0.1.4, ncbit-2013.03.29, network-1.13.0.1, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.0.4, NLP-0.1-11, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-8, npsurv-0.4-0, numDeriv-2016.8-1, oce-0.9-23, OceanView-1.0.4, openssl-1.0.2, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.0, ordinal-2018.4-19, pan-1.6, parallelMap-1.3, ParamHelpers-1.11, party-1.3-1, partykit-1.2-2, pastecs-1.3.21, pbapply-1.3-4, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7, permute-0.9-4, phangorn-2.4.0, pheatmap-1.0.10, phylobase-0.8.4, pillar-1.3.0, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.0, pkgconfig-2.0.2, pkgload-1.0.0, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-2, pls-2.6-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.13, polyclip-1.9-1, polynom-1.3-9, prabclus-2.2-6, pracma-2.1.4, praise-1.0.0, prettyunits-1.0.2, pROC-1.12.1, processx-3.2.0, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1, promises-1.0.1, proto-1.0.0, proxy-0.4-22, pryr-0.1.4, ps-1.1.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.4, pulsar-0.3.4, purrr-0.2.5, pvclust-2.0-0, qgraph-1.5, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.36, questionr-0.6.3, R.cache-0.13.0, R.matlab-3.6.1, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.42.0, R.utils-2.6.0, R6-2.2.2, randomForest-4.6-14, randomForestSRC-2.7.0, ranger-0.10.1, RANN-2.6, raster-2.6-7, RCircos-1.2.0, RColorBrewer-1.1-2, Rcpp-0.12.18, RcppArmadillo-0.9.100.5.0, RcppEigen-0.3.3.4.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.11, Rdpack-0.9-0, readbitmap-0.1.5, readr-1.1.1, readxl-1.1.0, recipes-0.1.3, registry-0.5, rematch-1.0.1, rentrez-1.2.1, reprex-0.2.0, reshape-0.8.7, reshape2-1.4.3, reticulate-1.10, RGCCA-2.1.2, rgdal-1.3-4, rgexf-0.15.3, rgl-0.99.16, RInside-0.2.14, rio-0.5.10, ritis-0.7.2, RItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-0, rlang-0.2.2, rlecuyer-0.3-4, rmarkdown-1.10, rmeta-3.0, Rmpi-0.6-7, rms-5.1-2, RMTstat-0.3, rncl-0.8.3, RNeXML-2.1.2, rngtools-1.3.1, robustbase-0.93-2, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.4, roxygen2-6.1.0, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-4, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.7, Rtsne-0.13, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2, RWeka-0.4-38, RWekajars-3.9.2-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sfsmisc-1.1-2, shape-1.4.4, shapefiles-0.7, shiny-1.1.0, shinydashboard-0.7.0, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-43, sm-2.2-5.5, smoother-1.1, sn-1.5-2, sna-2.4, snow-0.4-2, snowfall-1.84-6.1, solrium-1.0.0, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-0, SparseM-1.77, spatial-7.3-11, spatstat-1.56-1, spatstat.data-1.3-1, spatstat.utils-1.9-0, spData-0.2.9.3, spdep-0.7-8, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.5, statmod-1.4.30, statnet.common-4.1.4, stringi-1.2.4, stringr-1.3.1, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.42-6, survivalROC-1.0.3, svd-0.4.1, t-o, taxize-0.9.4, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, testthat-2.0.0, TH.data-1.0-9, tibble-1.4.2, tidygraph-1.1.0, tidyr-0.8.1, tidyselect-0.2.4, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.2, tinytex-0.6, tkrplot-0.0-24, tm-0.7-5, TMB-1.7.14, tmvtnorm-1.4-10, TraMineR-2.0-8, tree-1.0-39, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, tseries-0.10-45, tseriesChaos-0.1-13, tsne-0.1-3, TTR-0.23-3, tuneR-1.3.3, tweedie-2.3.2, tweenr-0.1.5, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-1, urca-1.3-0, urltools-1.7.1, uroot-2.0-9, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-2, VennDiagram-1.6.20, VGAM-1.0-5, VIM-4.7.0, vioplot-0.2, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.4, waveslim-1.7.5, webshot-0.5.0, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.2.0, withr-2.1.2, worrms-0.2.8, WriteXLS-4.0.0, xfun-0.3, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.15, xml2-1.2.0, xtable-1.8-2, xts-0.11-0, yaml-2.2.0, zip-1.0.0, zoo-1.8-3"
+                "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-11, adegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.5, aod-1.3, ape-5.1, arm-1.10-1, asnipe-1.1.11, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.2, bartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.5, bayesm-3.1-0.1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.51, beanplot-1.2, beeswarm-0.2.3, BH-1.66.0-1, BiasedUrn-1.07, bibtex-0.4.2, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.3, bold-0.5.0, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1, bridgedist-0.1.0, bridgesampling-0.4-0, Brobdingnag-1.2-6, broom-0.5.0, bst-0.3-15, Cairo-1.5-9, calibrate-1.7.2, callr-2.0.4, car-3.0-0, carData-3.0-1, caret-6.0-80, caTools-1.17.1.1, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.8.5, chemometrics-1.4.2, chron-2.3-52, circlize-0.4.4, class-7.3-14, classInt-0.2-3, cli-1.0.0, clipr-0.4.1, cluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.5-1.1, clustree-0.2.2, clValid-0.6-6, coda-0.19-1, codetools-0.2-15, coin-1.2-2, colorspace-1.3-2, combinat-0.0-8, ComICS-1.0.4, commonmark-1.5, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.3, crayon-1.3.4, crosstalk-1.0.0, crul-0.6.0, csSAM-1.2.4, cubature-1.4, curl-3.2, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.11.4, DBI-1.0.0, dbplyr-1.2.2, ddalpha-1.3.4, deal-1.2-37, debugme-1.1.0, deldir-0.1-15, dendextend-1.8.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-1.13.6, DHARMa-0.2.0, diagram-1.6.4, DiagrammeR-1.0.0, dichromat-2.0-0, digest-0.6.15, dimRed-0.1.0, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0, DistributionUtils-0.5-1, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.11, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.7.6, DRR-0.0.3, DT-0.4, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-0, EasyABC-1.5, ellipse-0.4.1, emulator-1.2-17, energy-1.7-5, ergm-3.9.4, ergm.count-3.3.0, evaluate-0.11, expm-0.999-2, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3, fansi-0.3.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.1, ff-2.2-14, ffbase-0.12.3, fftw-1.0-4, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-11, flashClust-1.01-2, flexclust-1.3-5, flexmix-2.3-14, fma-2.3, FME-1.3.5, FNN-1.1.2.1, forcats-0.3.0, foreach-1.4.4, forecast-8.4, foreign-0.8-71, formatR-1.5, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5, fracdiff-1.4-2, futile.logger-1.4.3, futile.options-1.0.1, future-1.9.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.0-1, gamlss.dist-5.0-6, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.3, gbRd-0.4-11, gclus-1.3.1, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6, GeneNet-1.2.13, GenSA-1.1.7, geometry-0.3-6, getopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.1.3, ggm-2.3, ggplot2-3.0.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.0, ggvis-0.4.3, GillespieSSA-0.5-4, git2r-0.23.0, glasso-1.10, gllvm-1.0, glmmML-1.0.3, glmmTMB-0.2.2.0, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.1, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.1.2, gplots-3.0.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-0, GSA-1.03, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, GUTS-1.1.0, h2o-3.22.1.1, haven-1.1.2, hdf5r-1.0.0, heatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.1-1, hms-0.4.2, htmlTable-1.12, htmltools-0.3.6, htmlwidgets-1.2, httpcode-0.2.0, httpuv-1.4.5, httr-1.3.1, huge-1.2.7, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.17, igraph-1.2.2, imager-0.41.1, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, interpretR-0.2.4, inum-1.0-0, ipred-0.9-7, irace-3.1, irlba-2.3.2, Iso-0.0-17, iterators-1.0.10, itertools-0.1-3, JBTools-0.7.2.9, jomo-2.6-3, jpeg-0.1-8, jsonlite-1.5, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.20, KODAMA-1.4, kohonen-3.0.6, ks-1.11.3, labdsv-1.8-0, labeling-0.3, labelled-1.1.0, laeken-0.4.6, lambda.r-1.2.3, lars-1.2, later-0.7.3, later-0.7.4, lattice-0.20-35, latticeExtra-0.6-28, lava-1.6.3, lavaan-0.6-2, lazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-0.16, libcoin-1.0-1, limSolve-1.5.5.3, liquidSVM-1.2.2, listenv-0.7.0, lme4-1.1-18-1, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.11, longitudinal-1.1.12, longmemo-1.0-0, lpSolve-5.6.13, lqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-8, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-3, markdown-0.8, MASS-7.3-50, Matching-4.9-3, MatchIt-3.0.2, Matrix-1.2-14, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-0, mclust-5.4.1, mcmc-0.9-5, MCMCpack-1.4-4, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.0, mgcv-1.8-24, mi-1.0, mice-3.3.0, mime-0.5, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, missForest-1.4, mitml-0.3-6, mixtools-1.1.0, mlbench-2.1-1, mlegp-3.1.7, mlogit-0.3-0, mlr-2.12.1, mltools-0.3.5, mnormt-1.5-5, ModelMetrics-1.2.0, modelr-0.1.2, modeltools-0.2-22, moments-0.14, mpath-0.3-5, msm-1.6.6, multcomp-1.4-8, multicool-0.1-10, munsell-0.5.0, mvabund-3.13.1, mvtnorm-1.0-8, natserv-0.1.4, ncbit-2013.03.29, network-1.13.0.1, networkDynamic-0.9.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.0.4, NLP-0.1-11, NMF-0.21.0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-8, npsurv-0.4-0, numDeriv-2016.8-1, oce-0.9-23, OceanView-1.0.4, oddsratio-1.0.3, openssl-1.0.2, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.0, ordinal-2018.4-19, pan-1.6, parallelMap-1.3, ParamHelpers-1.11, parsedate-1.1.3, party-1.3-1, partykit-1.2-2, pastecs-1.3.21, pbapply-1.3-4, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7, permute-0.9-4, phangorn-2.4.0, pheatmap-1.0.10, phylobase-0.8.4, pillar-1.3.0, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.0, pkgconfig-2.0.2, pkgload-1.0.0, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-2, pls-2.6-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.13, polyclip-1.9-1, polynom-1.3-9, prabclus-2.2-6, pracma-2.1.4, praise-1.0.0, PresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.12.1, processx-3.2.0, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1, promises-1.0.1, proto-1.0.0, proxy-0.4-22, pryr-0.1.4, ps-1.1.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.4, pulsar-0.3.4, purrr-0.2.5, pvclust-2.0-0, qgraph-1.5, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.36, questionr-0.6.3, R.cache-0.13.0, R.matlab-3.6.1, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.42.0, R.utils-2.6.0, R6-2.2.2, randomForest-4.6-14, randomForestSRC-2.7.0, ranger-0.10.1, RANN-2.6, raster-2.6-7, RCircos-1.2.0, RColorBrewer-1.1-2, Rcpp-0.12.18, RcppArmadillo-0.9.100.5.0, RcppEigen-0.3.3.4.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.11, Rdpack-0.9-0, readbitmap-0.1.5, readr-1.1.1, readxl-1.1.0, recipes-0.1.3, registry-0.5, rematch-1.0.1, rentrez-1.2.1, reprex-0.2.0, reshape-0.8.7, reshape2-1.4.3, reticulate-1.10, RGCCA-2.1.2, rgdal-1.3-4, rgexf-0.15.3, rgl-0.99.16, RInside-0.2.14, rio-0.5.10, ritis-0.7.2, RItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-0, rlang-0.2.2, rlecuyer-0.3-4, rmarkdown-1.10, rmeta-3.0, Rmpi-0.6-7, rms-5.1-2, RMTstat-0.3, rncl-0.8.3, RNeXML-2.1.2, rngtools-1.3.1, robustbase-0.93-2, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.4, roxygen2-6.1.0, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-4, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.7, Rtsne-0.13, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2, RWeka-0.4-38, RWekajars-3.9.2-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sfsmisc-1.1-2, shape-1.4.4, shapefiles-0.7, shiny-1.1.0, shinydashboard-0.7.0, shinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-43, sm-2.2-5.5, smoother-1.1, sn-1.5-2, sna-2.4, snow-0.4-2, snowfall-1.84-6.1, solrium-1.0.0, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-0, SparseM-1.77, spatial-7.3-11, spatstat-1.56-1, spatstat.data-1.3-1, spatstat.utils-1.9-0, spData-0.2.9.3, spdep-0.7-8, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.5, statmod-1.4.30, statnet-2018.10, statnet.common-4.1.4, stringi-1.2.4, stringr-1.3.1, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.42-6, survivalROC-1.0.3, svd-0.4.1, t-o, taxize-0.9.4, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.5.2, testthat-2.0.0, TH.data-1.0-9, tibble-1.4.2, tidygraph-1.1.0, tidyr-0.8.1, tidyselect-0.2.4, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.2, tinytex-0.6, tkrplot-0.0-24, tm-0.7-5, TMB-1.7.14, tmvtnorm-1.4-10, TraMineR-2.0-8, tree-1.0-39, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-45, tseriesChaos-0.1-13, tsna-0.2.0, tsne-0.1-3, TTR-0.23-3, tuneR-1.3.3, tweedie-2.3.2, tweenr-0.1.5, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-1, urca-1.3-0, urltools-1.7.1, uroot-2.0-9, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-2, VennDiagram-1.6.20, VGAM-1.0-5, VIM-4.7.0, vioplot-0.2, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.4, waveslim-1.7.5, webshot-0.5.0, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.2.0, withr-2.1.2, worrms-0.2.8, WriteXLS-4.0.0, xfun-0.3, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.15, xml2-1.2.0, xtable-1.8-2, xts-0.11-0, yaml-2.2.0, zip-1.0.0, zoo-1.8-3"
             ]
         },
         "/app/modules/all/R/3.5.2-foss-2018b.lua": {
@@ -2349,6 +2573,20 @@
                 "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13, adegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.6, aod-1.3, ape-5.2, arm-1.10-1, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.3, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.5, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.53, beanplot-1.2, beeswarm-0.2.3, BH-1.66.0-1, BiasedUrn-1.07, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4, bold-0.8.6, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1, bridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.1, bst-0.3-15, Cairo-1.5-9, calibrate-1.7.2, callr-3.1.1, car-3.0-2, carData-3.0-2, caret-6.0-81, caTools-1.17.1.1, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.8.5, chemometrics-1.4.2, chron-2.3-53, circlize-0.4.5, class-7.3-14, classInt-0.3-1, cli-1.0.1, clipr-0.4.1, clisymbols-1.2.0, cluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.9, clustree-0.2.2, clValid-0.6-6, coda-0.19-2, codetools-0.2-16, coin-1.2-2, colorspace-1.3-2, combinat-0.0-8, commonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.3, crayon-1.3.4, crosstalk-1.0.0, crul-0.6.0, cubature-2.0.3, curl-3.2, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.11.8, DBI-1.0.0, dbplyr-1.2.2, ddalpha-1.3.7, deal-1.2-39, debugme-1.1.0, deldir-0.1-15, dendextend-1.9.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-2.0.1, DHARMa-0.2.0, diagram-1.6.4, DiagrammeR-1.0.0, dichromat-2.0-0, digest-0.6.18, dimRed-0.2.2, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0, DistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.7.8, DRR-0.0.3, DT-0.5, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-0, EasyABC-1.5, ellipse-0.4.1, emulator-1.2-17, energy-1.7-5, evaluate-0.12, expm-0.999-3, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3, fansi-0.4.0, farver-1.1.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.1, ff-2.2-14, ffbase-0.12.7, fftw-1.0-4, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-11, flashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-14, fma-2.3, FME-1.3.5, FNN-1.1.2.2, forcats-0.3.0, foreach-1.4.4, forecast-8.4, foreign-0.8-71, formatR-1.5, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5, fracdiff-1.4-2, fs-1.2.6, futile.logger-1.4.3, futile.options-1.0.1, future-1.10.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.1-0, gamlss.dist-5.1-1, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.4, gbRd-0.4-11, gclus-1.3.1, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6, GeneNet-1.2.13, generics-0.0.2, geometry-0.3-6, getopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.1.3, ggm-2.3, ggplot2-3.1.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.23.0, glasso-1.10, gllvm-1.1.0, glmmML-1.0.3, glmmTMB-0.2.2.0, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.1.2, gplots-3.0.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-0, GSA-1.03, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, haven-2.0.0, hdf5r-1.0.1, heatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.1-1, hms-0.4.2, htmlTable-1.12, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0, httpuv-1.4.5.1, httr-1.4.0, huge-1.2.7, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.18, igraph-1.2.2, imager-0.41.1, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-0, ipred-0.9-8, irace-3.1, irlba-2.3.2, Iso-0.0-17, iterators-1.0.10, JBTools-0.7.2.9, jomo-2.6-5, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.21, KODAMA-1.5, kohonen-3.0.8, ks-1.11.3, labdsv-1.8-0, labeling-0.3, labelled-2.0.1, laeken-0.4.6, lambda.r-1.2.3, lars-1.2, later-0.7.5, lattice-0.20-38, latticeExtra-0.6-28, lava-1.6.4, lavaan-0.6-3, lazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-0.16, libcoin-1.0-2, limSolve-1.5.5.3, listenv-0.7.0, lme4-1.1-19, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.11, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-4, markdown-0.9, MASS-7.3-51.1, Matching-4.9-3, MatchIt-3.0.2, Matrix-1.2-15, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-1, mclust-5.4.2, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.0, mgcv-1.8-26, mi-1.0, mice-3.3.0, mime-0.6, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, mitml-0.3-6, mixtools-1.1.0, mlbench-2.1-1, mlogit-0.3-0, mlr-2.13, mnormt-1.5-5, ModelMetrics-1.2.2, modelr-0.1.2, modeltools-0.2-22, moments-0.14, mpath-0.3-5, msm-1.6.6, multcomp-1.4-8, multicool-0.1-10, munsell-0.5.0, mvabund-3.13.1, mvtnorm-1.0-8, natserv-0.1.4, ncbit-2013.03.29, network-1.13.0.1, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1, oce-1.0-1, OceanView-1.0.4, openssl-1.1, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.0, ordinal-2018.8-25, pan-1.6, parallelMap-1.3, ParamHelpers-1.11, party-1.3-1, partykit-1.2-2, pastecs-1.3.21, pbapply-1.3-4, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7, permute-0.9-4, phangorn-2.4.0, pheatmap-1.0.10, phylobase-0.8.4, pillar-1.3.1, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.2, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-4, pls-2.7-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.13, polyclip-1.9-1, polynom-1.3-9, prabclus-2.2-6, pracma-2.2.2, praise-1.0.0, prettyunits-1.0.2, pROC-1.13.0, processx-3.2.1, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1, proto-1.0.0, proxy-0.4-22, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.10, pulsar-0.3.4, purrr-0.2.5, pvclust-2.0-0, qgraph-1.5, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.38, questionr-0.7.0, R.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.0, R.utils-2.7.0, R6-2.3.0, randomForest-4.6-14, randomForestSRC-2.7.0, ranger-0.10.1, RANN-2.6, raster-2.8-4, RCircos-1.2.0, rcmdcheck-1.3.2, RColorBrewer-1.1-2, Rcpp-1.0.0, RcppArmadillo-0.9.200.5.0, RcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.11, Rdpack-0.10-1, readbitmap-0.1.5, readr-1.3.1, readxl-1.2.0, recipes-0.1.4, registry-0.5, rematch-1.0.1, remotes-2.0.2, rentrez-1.2.1, reprex-0.2.1, reshape-0.8.8, reshape2-1.4.3, reticulate-1.10, RGCCA-2.1.2, rgdal-1.3-6, rgexf-0.15.3, rgl-0.99.16, RInside-0.2.14, rio-0.5.16, ritis-0.7.6, RItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-1.1, rlang-0.3.0.1, rlecuyer-0.3-4, rmarkdown-1.11, rmeta-3.0, Rmpi-0.6-9, rms-5.1-2, RMTstat-0.3, rncl-0.8.3, RNeXML-2.2.0, rngtools-1.3.1, robustbase-0.93-3, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.5, roxygen2-6.1.1, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.8, Rtsne-0.15, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2, RWeka-0.4-39, RWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1, sfsmisc-1.1-3, shape-1.4.4, shapefiles-0.7, shiny-1.2.0, shinydashboard-0.7.1, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-44, sm-2.2-5.6, smoother-1.1, sn-1.5-3, sna-2.4, snow-0.4-3, snowfall-1.84-6.1, solrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-1, SparseM-1.77, spatial-7.3-11, spatstat-1.57-1, spatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.2.9.6, spdep-0.8-1, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.5, statmod-1.4.30, statnet.common-4.1.4, stringi-1.2.4, stringr-1.3.1, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.43-3, survivalROC-1.0.3, svd-0.4.1, t-o, taxize-0.9.4, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, testthat-2.0.1, TH.data-1.0-9, tibble-1.4.2, tidygraph-1.1.1, tidyr-0.8.2, tidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.2, tinytex-0.9, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15, tmvtnorm-1.4-10, TraMineR-2.0-10, tree-1.0-39, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, tseries-0.10-46, tseriesChaos-0.1-13, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3, tweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-2, urca-1.3-0, urltools-1.7.1, uroot-2.0-9, usethis-1.4.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-3, VennDiagram-1.6.20, VGAM-1.0-6, VIM-4.7.0, vioplot-0.2, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.5, waveslim-1.7.5, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.0, WriteXLS-4.0.0, xfun-0.4, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.16, xml2-1.2.0, xopen-1.0.0, xtable-1.8-3, xts-0.11-2, yaml-2.2.0, zip-1.0.0, zoo-1.8-4"
             ]
         },
+        "/app/modules/all/R/3.5.3-foss-2018b-fh1.lua": {
+            "Description": "R is a free software environment for statistical computing and graphics.",
+            "Version": "3.5.3-foss-2018b-fh1",
+            "fullName": "R/3.5.3-foss-2018b-fh1",
+            "help": "\nDescription\n===========\nR is a free software environment for statistical computing and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\naffy-1.60.0, affycoretools-1.54.0, affyio-1.52.0, AgiMicroRna-2.32.0,\nALDEx2-1.14.1, alr3-2.0.8, amap-0.8-16, annaffy-1.54.0, annotate-1.60.1,\nAnnotationDbi-1.44.0, AnnotationFilter-1.6.0, AnnotationForge-1.24.0,\nAnnotationHub-2.14.4, argparser-0.4, ASCAT-2.5.2, aws.ec2metadata-0.1.5,\naws.s3-0.3.12, aws.signature-0.4.4, baySeq-2.16.0, bdsmatrix-1.3-3,\nbenchmark-0.3-6, Bhat-0.9-10, biglm-0.9-1, Biobase-2.42.0,\nBiocGenerics-0.28.0, BiocInstaller-1.32.1, BiocManager-1.30.4,\nBiocParallel-1.16.6, biomaRt-2.38.0, Biostrings-2.50.2, biovizBase-1.30.1,\nBivarP-1.0, Bolstad-0.2-40, Bolstad2-1.0-28, BradleyTerry2-1.0-9,\nBSgenome-1.50.0, BSgenome.Hsapiens.UCSC.hg19-1.4.0, bumphunter-1.24.5,\ncatdata-1.2.1, Category-2.48.1, CGEN-3.18.0, CGHbase-1.42.0, chipseq-1.32.0,\nclue-0.3-57, colourpicker-1.0, compare-0.2-6, CompQuadForm-1.4.3, config-0.3,\ncopula-0.999-19, coxme-2.2-10, cummeRbund-2.24.0, cytolib-1.4.1, DAAG-1.22.1,\ndada2-1.10.1, degreenet-1.3-3, DEGseq-1.36.1, DelayedArray-0.8.0,\nDelayedMatrixStats-1.4.0, derfinder-1.16.1, derfinderHelper-1.16.1,\ndescr-1.1.4, DESeq-1.34.1, DESeq2-1.22.2, dfoptim-2018.2-1, diamonds-1.0-5,\nDiffBind-2.10.0, DNAcopy-1.56.0, doMPI-0.2.2, DynDoc-1.60.0, EBImage-4.24.0,\nedgeR-3.24.3, elasticnet-1.1.1, ensembldb-2.6.7, EpiModel-1.7.2, ergm-3.9.4,\nergm.count-3.3.0, fastseg-1.28.0, fasttime-1.0-2, fda-2.4.8,\nFDb.InfiniumMethylation.hg19-2.2.0, fftwtools-0.9-8, fit.models-0.5-14,\nflowClust-3.20.1, flowCore-1.48.1, flowStats-3.40.1, flowViz-1.46.1,\nflowWorkspace-3.30.2, forge-0.2.0, fts-0.9.9.2, gage-2.32.1, gamm4-0.2-5,\ngcrma-2.54.0, gdsfmt-1.18.1, genefilter-1.64.0, geneLenDataBase-1.18.0,\ngeneplotter-1.60.0, GENESIS-2.12.4, GenomeGraphs-1.42.0, GenomeInfoDb-1.18.2,\nGenomeInfoDbData-1.2.0, GenomicAlignments-1.18.1, GenomicFeatures-1.34.4,\nGenomicFiles-1.18.0, GenomicRanges-1.34.0, genoset-1.38.0, GEOquery-2.50.5,\nggbio-1.30.0, ggExtra-0.8, ggthemes-4.1.0, ggtree-1.14.6, glmpath-0.98,\nGO.db-3.7.0, goseq-1.34.1, GOstats-2.48.0, graph-1.60.0, GSEABase-1.44.0,\ngsl-1.9-10.3, gsubfn-0.7, Gviz-1.26.5, GWASExactHW-1.01, GWASTools-1.28.0,\nhapassoc-1.2-8, haplo.stats-1.7.9, HaploSim-1.8.4, HCsnip-1.16.0,\nHDF5Array-1.10.1, hgu133plus2.db-3.2.3, HMMcopy-1.24.0, Homo.sapiens-1.3.1,\nhopach-2.42.0, idr-1.2, igraphdata-1.0.1,\nIlluminaHumanMethylation450kmanifest-0.4.0, illuminaio-0.24.0, impute-1.56.0,\ninferference-1.0.0, inline-0.3.15, interactiveDisplayBase-1.20.0,\nIRanges-2.16.0, IRdisplay-0.7.0, itertools-0.1-3, its-1.1.8, KEGG.db-3.2.3,\nKEGGgraph-1.42.0, KEGGprofile-1.24.0, KEGGREST-1.22.0, kin.cohort-0.7,\nkinship2-1.6.4, kyotil-2018.10-17, lasso2-1.2-20, latentnet-2.9.0,\nlimma-3.38.3, lintr-1.0.3, LogicReg-1.5.10, lokern-1.1-8, lpridge-1.0-8,\nlumi-2.34.0, LymphoSeq-1.10.0, LymphoSeqDB-0.99.2, mapdata-2.3.0,\nmapproj-1.2.6, marray-1.60.0, maSigPro-1.54.0, mcmc-0.9-6, MCMCglmm-2.28,\nMCMCpack-1.4-4, metagenomeSeq-1.24.1, methylumi-2.28.0, mets-1.2.5,\nMfuzz-2.42.0, minfi-1.28.4, mixOmics-6.6.2, mondate-0.10.01.02, MotIV-1.38.0,\nMPV-1.53, msa-1.14.0, multtest-2.38.0, ncdf4-1.16.1, ncdfFlow-2.28.1,\nndtv-0.12.3, networkDynamic-0.9.0, networksis-2.1-3, NOISeq-2.26.1,\nnws-1.7.0.1, oligoClasses-1.44.0, openCyto-1.20.2, org.Hs.eg.db-3.7.0,\nOrganismDbi-1.24.0, packrat-0.5.0, partools-1.1.6, pbs-1.1,\nPBSddesolve-1.12.4, pcaMethods-1.74.0, pdist-1.2, pedigree-1.4,\npedigreemm-0.3-3, perm-1.0-0.0, PFAM.db-3.7.0, PICS-2.26.0, PKI-0.1-5.1,\npolyester-1.18.0, PolynomF-1.0-2, preprocessCore-1.44.0, ProtGenerics-1.14.0,\npsychotools-0.5-0, qpdf-1.1, qtl-1.44-9, quantsmooth-1.48.0, qvalue-2.14.1,\nqvcalc-0.9-1, r2d3-0.2.3, R2jags-0.5-7, R2WinBUGS-2.1-21, rappdirs-0.3.1,\nrARPACK-0.11-0, rbenchmark-1.0.0, RBGL-1.58.1, RcppParallel-4.4.2,\nREDCapR-0.9.8, refund-0.1-17, regress-1.3-15, regtools-1.0.1, relations-0.6-8,\nrelevent-1.0-4, ReportingTools-2.22.1, repr-0.19.2, rex-1.1.2, rGADEM-2.30.0,\nrgenoud-5.8-3.0, Rglpk-0.6-4, Rgraphviz-2.26.0, rhdf5-2.26.2, Rhdf5lib-1.4.2,\nRhpc-0.18-204, Ringo-1.46.0, rjags-4-8, Rlabkey-2.2.4, RLRsim-3.1-3,\nRMySQL-0.10.17, RNASeqPower-1.22.1, RPostgreSQL-0.6-2, RProtoBufLib-1.4.0,\nRsamtools-1.34.1, RSclient-0.7-3, rsconnect-0.8.13, rslurm-0.4.0,\nRSpectra-0.13-1, Rsubread-1.32.4, rtracklayer-1.42.2, rvcheck-0.1.3,\nrzmq-0.9.6, S4Vectors-0.20.1, samr-3.0, scidb-2.0.0, SeqArray-1.22.6,\nseqLogo-1.48.0, SeqVarTools-1.20.2, sets-1.0-18, shinyBS-0.61,\nshinycssloaders-0.2.0, shinyFiles-0.7.2, shinyjs-1.0, shinythemes-1.1.2,\nShortRead-1.40.0, sigaR-1.30.0, siggenes-1.56.0, SNPRelate-1.16.0,\nsnpStats-1.32.0, sparklyr-1.0.0, SPIA-2.34.0, sqldf-0.4-11, ssgraph-1.7,\nStanHeaders-2.18.1, statnet-2018.10, stringdist-0.9.5.1,\nSummarizedExperiment-1.12.0, survey-3.35-1, synapseClient-1.13-4,\nsystemPipeR-1.16.1, tables-0.8.7, tergm-3.5.2, tidytree-0.2.4,\ntilingArray-1.60.0, timeSeries-3042.102, TitanCNA-1.20.1, tkWidgets-1.60.0,\ntmle-1.3.0-2, treeio-1.6.2, trust-0.1-7, tsna-0.2.0,\nTxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2, udunits2-0.13, UpSetR-1.3.3,\nVariantAnnotation-1.28.11, venn-1.7, vsn-3.50.0, wavethresh-4.6.8, webp-1.0,\nwidgetTools-1.60.0, XVector-0.22.0, zlibbioc-1.28.0\n",
+            "hidden": false,
+            "pV": "000000003.000000005.000000003.*foss.*zfinal-.000002018.*b.*fh.000000001.*zfinal",
+            "wV": "000000003.000000005.000000003.*foss.*zfinal-.000002018.*b.*fh.000000001.*zfinal",
+            "whatis": [
+                "Description: R is a free software environment for statistical computing and graphics.",
+                "Homepage: http://www.r-project.org/",
+                "Extensions: affy-1.60.0, affycoretools-1.54.0, affyio-1.52.0, AgiMicroRna-2.32.0, ALDEx2-1.14.1, alr3-2.0.8, amap-0.8-16, annaffy-1.54.0, annotate-1.60.1, AnnotationDbi-1.44.0, AnnotationFilter-1.6.0, AnnotationForge-1.24.0, AnnotationHub-2.14.4, argparser-0.4, ASCAT-2.5.2, aws.ec2metadata-0.1.5, aws.s3-0.3.12, aws.signature-0.4.4, baySeq-2.16.0, bdsmatrix-1.3-3, benchmark-0.3-6, Bhat-0.9-10, biglm-0.9-1, Biobase-2.42.0, BiocGenerics-0.28.0, BiocInstaller-1.32.1, BiocManager-1.30.4, BiocParallel-1.16.6, biomaRt-2.38.0, Biostrings-2.50.2, biovizBase-1.30.1, BivarP-1.0, Bolstad-0.2-40, Bolstad2-1.0-28, BradleyTerry2-1.0-9, BSgenome-1.50.0, BSgenome.Hsapiens.UCSC.hg19-1.4.0, bumphunter-1.24.5, catdata-1.2.1, Category-2.48.1, CGEN-3.18.0, CGHbase-1.42.0, chipseq-1.32.0, clue-0.3-57, colourpicker-1.0, compare-0.2-6, CompQuadForm-1.4.3, config-0.3, copula-0.999-19, coxme-2.2-10, cummeRbund-2.24.0, cytolib-1.4.1, DAAG-1.22.1, dada2-1.10.1, degreenet-1.3-3, DEGseq-1.36.1, DelayedArray-0.8.0, DelayedMatrixStats-1.4.0, derfinder-1.16.1, derfinderHelper-1.16.1, descr-1.1.4, DESeq-1.34.1, DESeq2-1.22.2, dfoptim-2018.2-1, diamonds-1.0-5, DiffBind-2.10.0, DNAcopy-1.56.0, doMPI-0.2.2, DynDoc-1.60.0, EBImage-4.24.0, edgeR-3.24.3, elasticnet-1.1.1, ensembldb-2.6.7, EpiModel-1.7.2, ergm-3.9.4, ergm.count-3.3.0, fastseg-1.28.0, fasttime-1.0-2, fda-2.4.8, FDb.InfiniumMethylation.hg19-2.2.0, fftwtools-0.9-8, fit.models-0.5-14, flowClust-3.20.1, flowCore-1.48.1, flowStats-3.40.1, flowViz-1.46.1, flowWorkspace-3.30.2, forge-0.2.0, fts-0.9.9.2, gage-2.32.1, gamm4-0.2-5, gcrma-2.54.0, gdsfmt-1.18.1, genefilter-1.64.0, geneLenDataBase-1.18.0, geneplotter-1.60.0, GENESIS-2.12.4, GenomeGraphs-1.42.0, GenomeInfoDb-1.18.2, GenomeInfoDbData-1.2.0, GenomicAlignments-1.18.1, GenomicFeatures-1.34.4, GenomicFiles-1.18.0, GenomicRanges-1.34.0, genoset-1.38.0, GEOquery-2.50.5, ggbio-1.30.0, ggExtra-0.8, ggthemes-4.1.0, ggtree-1.14.6, glmpath-0.98, GO.db-3.7.0, goseq-1.34.1, GOstats-2.48.0, graph-1.60.0, GSEABase-1.44.0, gsl-1.9-10.3, gsubfn-0.7, Gviz-1.26.5, GWASExactHW-1.01, GWASTools-1.28.0, hapassoc-1.2-8, haplo.stats-1.7.9, HaploSim-1.8.4, HCsnip-1.16.0, HDF5Array-1.10.1, hgu133plus2.db-3.2.3, HMMcopy-1.24.0, Homo.sapiens-1.3.1, hopach-2.42.0, idr-1.2, igraphdata-1.0.1, IlluminaHumanMethylation450kmanifest-0.4.0, illuminaio-0.24.0, impute-1.56.0, inferference-1.0.0, inline-0.3.15, interactiveDisplayBase-1.20.0, IRanges-2.16.0, IRdisplay-0.7.0, itertools-0.1-3, its-1.1.8, KEGG.db-3.2.3, KEGGgraph-1.42.0, KEGGprofile-1.24.0, KEGGREST-1.22.0, kin.cohort-0.7, kinship2-1.6.4, kyotil-2018.10-17, lasso2-1.2-20, latentnet-2.9.0, limma-3.38.3, lintr-1.0.3, LogicReg-1.5.10, lokern-1.1-8, lpridge-1.0-8, lumi-2.34.0, LymphoSeq-1.10.0, LymphoSeqDB-0.99.2, mapdata-2.3.0, mapproj-1.2.6, marray-1.60.0, maSigPro-1.54.0, mcmc-0.9-6, MCMCglmm-2.28, MCMCpack-1.4-4, metagenomeSeq-1.24.1, methylumi-2.28.0, mets-1.2.5, Mfuzz-2.42.0, minfi-1.28.4, mixOmics-6.6.2, mondate-0.10.01.02, MotIV-1.38.0, MPV-1.53, msa-1.14.0, multtest-2.38.0, ncdf4-1.16.1, ncdfFlow-2.28.1, ndtv-0.12.3, networkDynamic-0.9.0, networksis-2.1-3, NOISeq-2.26.1, nws-1.7.0.1, oligoClasses-1.44.0, openCyto-1.20.2, org.Hs.eg.db-3.7.0, OrganismDbi-1.24.0, packrat-0.5.0, partools-1.1.6, pbs-1.1, PBSddesolve-1.12.4, pcaMethods-1.74.0, pdist-1.2, pedigree-1.4, pedigreemm-0.3-3, perm-1.0-0.0, PFAM.db-3.7.0, PICS-2.26.0, PKI-0.1-5.1, polyester-1.18.0, PolynomF-1.0-2, preprocessCore-1.44.0, ProtGenerics-1.14.0, psychotools-0.5-0, qpdf-1.1, qtl-1.44-9, quantsmooth-1.48.0, qvalue-2.14.1, qvcalc-0.9-1, r2d3-0.2.3, R2jags-0.5-7, R2WinBUGS-2.1-21, rappdirs-0.3.1, rARPACK-0.11-0, rbenchmark-1.0.0, RBGL-1.58.1, RcppParallel-4.4.2, REDCapR-0.9.8, refund-0.1-17, regress-1.3-15, regtools-1.0.1, relations-0.6-8, relevent-1.0-4, ReportingTools-2.22.1, repr-0.19.2, rex-1.1.2, rGADEM-2.30.0, rgenoud-5.8-3.0, Rglpk-0.6-4, Rgraphviz-2.26.0, rhdf5-2.26.2, Rhdf5lib-1.4.2, Rhpc-0.18-204, Ringo-1.46.0, rjags-4-8, Rlabkey-2.2.4, RLRsim-3.1-3, RMySQL-0.10.17, RNASeqPower-1.22.1, RPostgreSQL-0.6-2, RProtoBufLib-1.4.0, Rsamtools-1.34.1, RSclient-0.7-3, rsconnect-0.8.13, rslurm-0.4.0, RSpectra-0.13-1, Rsubread-1.32.4, rtracklayer-1.42.2, rvcheck-0.1.3, rzmq-0.9.6, S4Vectors-0.20.1, samr-3.0, scidb-2.0.0, SeqArray-1.22.6, seqLogo-1.48.0, SeqVarTools-1.20.2, sets-1.0-18, shinyBS-0.61, shinycssloaders-0.2.0, shinyFiles-0.7.2, shinyjs-1.0, shinythemes-1.1.2, ShortRead-1.40.0, sigaR-1.30.0, siggenes-1.56.0, SNPRelate-1.16.0, snpStats-1.32.0, sparklyr-1.0.0, SPIA-2.34.0, sqldf-0.4-11, ssgraph-1.7, StanHeaders-2.18.1, statnet-2018.10, stringdist-0.9.5.1, SummarizedExperiment-1.12.0, survey-3.35-1, synapseClient-1.13-4, systemPipeR-1.16.1, tables-0.8.7, tergm-3.5.2, tidytree-0.2.4, tilingArray-1.60.0, timeSeries-3042.102, TitanCNA-1.20.1, tkWidgets-1.60.0, tmle-1.3.0-2, treeio-1.6.2, trust-0.1-7, tsna-0.2.0, TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2, udunits2-0.13, UpSetR-1.3.3, VariantAnnotation-1.28.11, venn-1.7, vsn-3.50.0, wavethresh-4.6.8, webp-1.0, widgetTools-1.60.0, XVector-0.22.0, zlibbioc-1.28.0"
+            ]
+        },
         "/app/modules/all/R/3.5.3-foss-2018b.lua": {
             "Description": "R is a free software environment for statistical computing\n and graphics.",
             "Version": "3.5.3-foss-2018b",
@@ -2368,6 +2606,24 @@
                 "Description: R is a free software environment for statistical computing\n and graphics.",
                 "Homepage: http://www.r-project.org/",
                 "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13, adegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.6, aod-1.3.1, ape-5.2, arm-1.10-1, askpass-1.1, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.3, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.55, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.8.6, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1, bridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.1, bst-0.3-17, Cairo-1.5-9, calibrate-1.7.2, callr-3.1.1, car-3.0-2, carData-3.0-2, caret-6.0-81, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.9.1, chemometrics-1.4.2, chron-2.3-53, circlize-0.4.5, class-7.3-15, classInt-0.3-1, cli-1.0.1, clipr-0.5.0, clisymbols-1.2.0, cluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.9, clustree-0.3.0, clValid-0.6-6, coda-0.19-2, codetools-0.2-16, coin-1.3-0, colorspace-1.4-0, combinat-0.0-8, commonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4, crayon-1.3.4, crosstalk-1.0.0, crul-0.7.0, cubature-2.0.3, curl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.0, DBI-1.0.0, dbplyr-1.3.0, ddalpha-1.3.8, deal-1.2-39, debugme-1.1.0, deldir-0.1-16, dendextend-1.9.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-2.0.1, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.0, dichromat-2.0-0, digest-0.6.18, dimRed-0.2.2, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0, DistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.0.1, DRR-0.0.3, DT-0.5, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-0.1, EasyABC-1.5, ellipse-0.4.1, ellipsis-0.1.0, emulator-1.2-19, energy-1.7-5, evaluate-0.13, expm-0.999-3, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3, fansi-0.4.0, farver-1.1.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.2, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-14, flashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5, FNN-1.1.3, forcats-0.4.0, foreach-1.4.4, forecast-8.5, foreign-0.8-71, formatR-1.6, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5, fracdiff-1.4-2, fs-1.2.6, futile.logger-1.4.3, futile.options-1.0.1, future-1.12.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.1-0, gamlss.dist-5.1-1, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11, gclus-1.3.2, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6.1, GeneNet-1.2.13, generics-0.0.2, geometry-0.4.0, getopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.2.0, ggm-2.3, ggplot2-3.1.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.24.0, glasso-1.10, gllvm-1.1.2, glmmML-1.0.3, glmmTMB-0.2.3, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.2.0, gplots-3.0.1.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-1, GSA-1.03.1, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, haven-2.1.0, hdf5r-1.0.1, heatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.2-0, hms-0.4.2, htmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0, httpuv-1.4.5.1, httr-1.4.0, huge-1.3.0, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.19, igraph-1.2.4, imager-0.41.2, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-0, ipred-0.9-8, irace-3.1, irlba-2.3.3, Iso-0.0-17, iterators-1.0.10, JBTools-0.7.2.9, jomo-2.6-7, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.22, KODAMA-1.5, kohonen-3.0.8, ks-1.11.4, labdsv-1.8-0, labeling-0.3, labelled-2.1.0, laeken-0.5.0, lambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38, latticeExtra-0.6-28, lava-1.6.5, lavaan-0.6-3, lazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3, listenv-0.7.0, lme4-1.1-21, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.12, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5, markdown-0.9, MASS-7.3-51.1, Matching-4.9-5, MatchIt-3.0.2, Matrix-1.2-16, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-1, mclust-5.4.2, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-27, mi-1.0, mice-3.4.0, mime-0.6, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1, mlogit-0.4-1, mlr-2.13, mnormt-1.5-5, ModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14, mpath-0.3-7, msm-1.6.6, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0, mvabund-4.0.1, mvtnorm-1.0-10, natserv-0.3.0, ncbit-2013.03.29, network-1.14-377, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1, oce-1.0-1, OceanView-1.0.4, openssl-1.2.2, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.1, ordinal-2019.3-9, pan-1.6, parallelMap-1.3, ParamHelpers-1.12, party-1.3-3, partykit-1.2-3, pastecs-1.3.21, pbapply-1.4-0, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7.1, permute-0.9-4, phangorn-2.4.0, pheatmap-1.0.12, phylobase-0.8.6, pillar-1.3.1, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.2, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-4, pls-2.7-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.14, polyclip-1.9-1, polynom-1.3-9, prabclus-2.2-7, pracma-2.2.2, praise-1.0.0, prettyunits-1.0.2, pROC-1.13.0, processx-3.3.0, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1, proto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.12, pulsar-0.3.5, purrr-0.3.1, pvclust-2.0-0, qgraph-1.6.1, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.38, questionr-0.7.0, R.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1, R.utils-2.8.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.8.0, ranger-0.11.2, RANN-2.6.1, raster-2.8-19, RCircos-1.2.0, rcmdcheck-1.3.2, RColorBrewer-1.1-2, Rcpp-1.0.0, RcppArmadillo-0.9.200.7.1, RcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.12, Rdpack-0.10-1, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.0, recipes-0.1.4, registry-0.5-1, rematch-1.0.1, remotes-2.0.2, rentrez-1.2.1, reprex-0.2.1, reshape-0.8.8, reshape2-1.4.3, reticulate-1.11.1, RGCCA-2.1.2, rgdal-1.4-2, rgexf-0.15.3, rgl-0.100.18, RInside-0.2.15, rio-0.5.16, ritis-0.7.6, RItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-1.1, rlang-0.3.1, rlecuyer-0.3-4, rmarkdown-1.11, rmeta-3.0, Rmpi-0.6-9, rms-5.1-3, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.3.1, robustbase-0.93-3, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.7, roxygen2-6.1.1, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.9.0, Rtsne-0.15, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2, RWeka-0.4-40, RWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1, sf-0.7-3, sfsmisc-1.1-3, shape-1.4.4, shapefiles-0.7, shiny-1.2.0, shinydashboard-0.7.1, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45, sm-2.2-5.6, smoother-1.1, sn-1.5-3, sna-2.4, snow-0.4-3, snowfall-1.84-6.1, solrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-2, spaMM-2.6.1, SparseM-1.77, spatial-7.3-11, spatstat-1.58-2, spatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, spdep-1.0-2, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.5, statmod-1.4.30, statnet.common-4.2.0, stringi-1.3.1, stringr-1.4.0, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.43-3, survivalROC-1.0.3, svd-0.4.2, sys-3.1, t-o, taxize-0.9.6, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, testthat-2.0.1, TH.data-1.0-10, tibble-2.0.1, tidygraph-1.1.2, tidyr-0.8.3, tidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.3, tinytex-0.10, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15, tmvtnorm-1.4-10, TraMineR-2.0-10, tree-1.0-39, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, tseries-0.10-46, tseriesChaos-0.1-13.1, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3, tweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-2, urca-1.3-0, urltools-1.7.2, uroot-2.0-9, usethis-1.4.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-4, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.5, waveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0, xfun-0.5, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0, xtable-1.8-3, xts-0.11-2, yaml-2.2.0, zip-2.0.0, zoo-1.8-4"
+            ]
+        }
+    },
+    "RepeatMasker": {
+        "/app/modules/all/RepeatMasker/4.0.8-foss-2018b-Perl-5.28.0-HMMER.lua": {
+            "Description": "RepeatMasker is a program that screens DNA sequences for interspersed repeats\n and low complexity DNA sequences.",
+            "Version": "4.0.8-foss-2018b-Perl-5.28.0-HMMER",
+            "fullName": "RepeatMasker/4.0.8-foss-2018b-Perl-5.28.0-HMMER",
+            "help": "\nDescription\n===========\nRepeatMasker is a program that screens DNA sequences for interspersed repeats\n and low complexity DNA sequences.\n\n\nMore information\n================\n - Homepage: http://www.repeatmasker.org/\n",
+            "hidden": false,
+            "pV": "000000004.000000000.000000008.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*hmmer.*zfinal",
+            "pathA": {
+                "/app/software/RepeatMasker/4.0.8-foss-2018b-Perl-5.28.0-HMMER": 1
+            },
+            "wV": "000000004.000000000.000000008.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*hmmer.*zfinal",
+            "whatis": [
+                "Description: RepeatMasker is a program that screens DNA sequences for interspersed repeats\n and low complexity DNA sequences.",
+                "Homepage: http://www.repeatmasker.org/"
             ]
         }
     },
@@ -2702,6 +2958,24 @@
             ]
         }
     },
+    "TRF": {
+        "/app/modules/all/TRF/4.09-linux64.lua": {
+            "Description": "Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
+            "Version": "4.09-linux64",
+            "fullName": "TRF/4.09-linux64",
+            "help": "\nDescription\n===========\nTandem repeats finder: a program to analyze DNA sequences. Legacy version.\n\n\nMore information\n================\n - Homepage: https://tandem.bu.edu/trf/trf.html\n",
+            "hidden": false,
+            "pV": "000000004.000000009.*linux.000000064.*zfinal",
+            "pathA": {
+                "/app/software/TRF/4.09-linux64": 1
+            },
+            "wV": "000000004.000000009.*linux.000000064.*zfinal",
+            "whatis": [
+                "Description: Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
+                "Homepage: https://tandem.bu.edu/trf/trf.html"
+            ]
+        }
+    },
     "Tcl": {
         "/app/modules/all/Tcl/8.6.8-GCCcore-7.3.0.lua": {
             "Description": "Tcl (Tool Command Language) is a very powerful but easy to learn dynamic\n programming language, suitable for a very wide range of uses, including web\n and desktop applications, networking, administration, testing and many more.\n",
@@ -3013,6 +3287,48 @@
             ]
         }
     },
+    "Xerces-C++": {
+        "/app/modules/all/Xerces-C++/3.2.0-GCCcore-7.3.0.lua": {
+            "Description": "Xerces-C++ is a validating XML parser written in a portable\nsubset of C++. Xerces-C++ makes it easy to give your application the ability to\nread and write XML data. A shared library is provided for parsing, generating,\nmanipulating, and validating XML documents using the DOM, SAX, and SAX2\nAPIs.",
+            "Version": "3.2.0-GCCcore-7.3.0",
+            "fullName": "Xerces-C++/3.2.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nXerces-C++ is a validating XML parser written in a portable\nsubset of C++. Xerces-C++ makes it easy to give your application the ability to\nread and write XML data. A shared library is provided for parsing, generating,\nmanipulating, and validating XML documents using the DOM, SAX, and SAX2\nAPIs.\n\n\nMore information\n================\n - Homepage: http://xerces.apache.org/xerces-c/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Xerces-C++/3.2.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000003.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/Xerces-C++/3.2.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Xerces-C++ is a validating XML parser written in a portable\nsubset of C++. Xerces-C++ makes it easy to give your application the ability to\nread and write XML data. A shared library is provided for parsing, generating,\nmanipulating, and validating XML documents using the DOM, SAX, and SAX2\nAPIs.",
+                "Homepage: http://xerces.apache.org/xerces-c/"
+            ]
+        }
+    },
+    "ZeroMQ": {
+        "/app/modules/all/ZeroMQ/4.2.5-foss-2018b.lua": {
+            "Description": "ZeroMQ looks like an embeddable networking library but acts like a concurrency framework.\n It gives you sockets that carry atomic messages across various transports like in-process,\n inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout,\n pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered\n products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous\n message-processing tasks. It has a score of language APIs and runs on most operating systems.",
+            "Version": "4.2.5-foss-2018b",
+            "fullName": "ZeroMQ/4.2.5-foss-2018b",
+            "help": "\nDescription\n===========\nZeroMQ looks like an embeddable networking library but acts like a concurrency framework.\n It gives you sockets that carry atomic messages across various transports like in-process,\n inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout,\n pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered\n products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous\n message-processing tasks. It has a score of language APIs and runs on most operating systems.\n\n\nMore information\n================\n - Homepage: http://www.zeromq.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/ZeroMQ/4.2.5-foss-2018b/lib": 1
+            },
+            "pV": "000000004.000000002.000000005.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/ZeroMQ/4.2.5-foss-2018b/bin": 1
+            },
+            "wV": "000000004.000000002.000000005.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: ZeroMQ looks like an embeddable networking library but acts like a concurrency framework.\n It gives you sockets that carry atomic messages across various transports like in-process,\n inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout,\n pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered\n products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous\n message-processing tasks. It has a score of language APIs and runs on most operating systems.",
+                "Homepage: http://www.zeromq.org/"
+            ]
+        }
+    },
     "annovar": {
         "/app/modules/all/annovar/2018Dec04.lua": {
             "Description": "ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
@@ -3248,6 +3564,25 @@
         }
     },
     "canu": {
+        "/app/modules/all/canu/1.8-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Canu is a fork of the Celera Assembler designed for high-noise single-molecule sequencing",
+            "Version": "1.8-foss-2018b-Perl-5.28.0",
+            "fullName": "canu/1.8-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nCanu is a fork of the Celera Assembler designed for high-noise single-molecule sequencing\n\n\nMore information\n================\n - Homepage: http://canu.readthedocs.io\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/canu/1.8-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000008.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/canu/1.8-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000001.000000008.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Canu is a fork of the Celera Assembler designed for high-noise single-molecule sequencing",
+                "Homepage: http://canu.readthedocs.io"
+            ]
+        },
         "/app/modules/all/canu/1.8-foss-2018b.lua": {
             "Description": "Canu is a fork of the Celera Assembler designed for\n high-noise single-molecule sequencing",
             "Version": "1.8-foss-2018b",
@@ -3766,6 +4101,48 @@
             ]
         }
     },
+    "jbigkit": {
+        "/app/modules/all/jbigkit/2.1-GCCcore-7.3.0.lua": {
+            "Description": "JBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.",
+            "Version": "2.1-GCCcore-7.3.0",
+            "fullName": "jbigkit/2.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nJBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.\n\n\nMore information\n================\n - Homepage: \n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/jbigkit/2.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000002.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/jbigkit/2.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000002.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: JBIG-KIT is a software implementation of the JBIG1 data\n compression standard (ITU-T T.82), which was designed for bi-level image\n data, such as scanned documents.",
+                "Homepage: "
+            ]
+        }
+    },
+    "jemalloc": {
+        "/app/modules/all/jemalloc/5.1.0-GCCcore-7.3.0.lua": {
+            "Description": "jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.",
+            "Version": "5.1.0-GCCcore-7.3.0",
+            "fullName": "jemalloc/5.1.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\njemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.\n\n\nMore information\n================\n - Homepage: http://www.canonware.com/jemalloc\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/jemalloc/5.1.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000005.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/jemalloc/5.1.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000005.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.",
+                "Homepage: http://www.canonware.com/jemalloc"
+            ]
+        }
+    },
     "kallisto": {
         "/app/modules/all/kallisto/0.45.0-foss-2018b.lua": {
             "Description": "kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally\n of target sequences using high-throughput sequencing reads.",
@@ -3917,6 +4294,27 @@
             "whatis": [
                 "Description: Library for reading and writing coordinate system information from/to GeoTIFF files",
                 "Homepage: https://directory.fsf.org/wiki/Libgeotiff"
+            ]
+        }
+    },
+    "libgpg-error": {
+        "/app/modules/all/libgpg-error/1.35-GCCcore-7.3.0.lua": {
+            "Description": "Libgpg-error is a small library that defines common error\n values for all GnuPG components.",
+            "Version": "1.35-GCCcore-7.3.0",
+            "fullName": "libgpg-error/1.35-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nLibgpg-error is a small library that defines common error\n values for all GnuPG components.\n\n\nMore information\n================\n - Homepage: https://gnupg.org/related_software/libgpg-error/index.html\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/libgpg-error/1.35-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000035.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/libgpg-error/1.35-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000035.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Libgpg-error is a small library that defines common error\n values for all GnuPG components.",
+                "Homepage: https://gnupg.org/related_software/libgpg-error/index.html"
             ]
         }
     },
@@ -4076,6 +4474,24 @@
             ]
         }
     },
+    "libsodium": {
+        "/app/modules/all/libsodium/1.0.16-GCCcore-7.3.0.lua": {
+            "Description": "Sodium is a modern, easy-to-use software library for encryption, decryption,\n signatures, password hashing and more.\n",
+            "Version": "1.0.16-GCCcore-7.3.0",
+            "fullName": "libsodium/1.0.16-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nSodium is a modern, easy-to-use software library for encryption, decryption,\n signatures, password hashing and more.\n\n\nMore information\n================\n - Homepage: http://doc.libsodium.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/libsodium/1.0.16-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000000.000000016.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000001.000000000.000000016.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n Sodium is a modern, easy-to-use software library for encryption, decryption,\n signatures, password hashing and more.\n",
+                "Homepage: http://doc.libsodium.org/"
+            ]
+        }
+    },
     "libtool": {
         "/app/modules/all/libtool/2.4.6-GCCcore-7.3.0.lua": {
             "Description": "GNU libtool is a generic library support script. Libtool hides the complexity\n of using shared libraries behind a consistent, portable interface.\n",
@@ -4112,6 +4528,27 @@
             "whatis": [
                 "Description: \n This library provides functions for manipulating Unicode strings and for\n manipulating C strings according to the Unicode standard.\n",
                 "Homepage: http://www.gnu.org/software/libunistring/"
+            ]
+        }
+    },
+    "libwebp": {
+        "/app/modules/all/libwebp/1.0.0-foss-2018b.lua": {
+            "Description": "WebP is a modern image format that provides superior\n lossless and lossy compression for images on the web. Using WebP, webmasters\n and web developers can create smaller, richer images that make the web\n faster.",
+            "Version": "1.0.0-foss-2018b",
+            "fullName": "libwebp/1.0.0-foss-2018b",
+            "help": "\nDescription\n===========\nWebP is a modern image format that provides superior\n lossless and lossy compression for images on the web. Using WebP, webmasters\n and web developers can create smaller, richer images that make the web\n faster.\n\n\nMore information\n================\n - Homepage: https://developers.google.com/speed/webp\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/libwebp/1.0.0-foss-2018b/lib": 1
+            },
+            "pV": "000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/libwebp/1.0.0-foss-2018b/bin": 1
+            },
+            "wV": "000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: WebP is a modern image format that provides superior\n lossless and lossy compression for images on the web. Using WebP, webmasters\n and web developers can create smaller, richer images that make the web\n faster.",
+                "Homepage: https://developers.google.com/speed/webp"
             ]
         }
     },
@@ -4154,6 +4591,24 @@
             "whatis": [
                 "Description: Libxslt is the XSLT C library developed for the GNOME project\n (but usable outside of the Gnome platform).",
                 "Homepage: http://xmlsoft.org/"
+            ]
+        }
+    },
+    "libyaml": {
+        "/app/modules/all/libyaml/0.2.1-GCCcore-7.3.0.lua": {
+            "Description": "LibYAML is a YAML parser and emitter written in C.",
+            "Version": "0.2.1-GCCcore-7.3.0",
+            "fullName": "libyaml/0.2.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nLibYAML is a YAML parser and emitter written in C.\n\n\nMore information\n================\n - Homepage: http://pyyaml.org/wiki/LibYAML\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/libyaml/0.2.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000000.000000002.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000000.000000002.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: LibYAML is a YAML parser and emitter written in C.",
+                "Homepage: http://pyyaml.org/wiki/LibYAML"
             ]
         }
     },
@@ -4428,6 +4883,27 @@
             ]
         }
     },
+    "parasail": {
+        "/app/modules/all/parasail/2.4-foss-2018b.lua": {
+            "Description": "parasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms. ",
+            "Version": "2.4-foss-2018b",
+            "fullName": "parasail/2.4-foss-2018b",
+            "help": "\nDescription\n===========\nparasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms.\n\n\nMore information\n================\n - Homepage: https://github.com/jeffdaily/parasail\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/parasail/2.4-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/parasail/2.4-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: parasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms. ",
+                "Homepage: https://github.com/jeffdaily/parasail"
+            ]
+        }
+    },
     "picard": {
         "/app/modules/all/picard/2.18.17-Java-1.8.lua": {
             "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
@@ -4440,6 +4916,22 @@
                 "/app/software/picard/2.18.17-Java-1.8": 1
             },
             "wV": "000000002.000000018.000000017.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+                "Homepage: http://sourceforge.net/projects/picard"
+            ]
+        },
+        "/app/modules/all/picard/2.18.29-Java.lua": {
+            "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+            "Version": "2.18.29-Java",
+            "fullName": "picard/2.18.29-Java",
+            "help": "\nDescription\n===========\nA set of tools (in Java) for working with next generation sequencing data in the BAM format.\n\n\nMore information\n================\n - Homepage: http://sourceforge.net/projects/picard\n",
+            "hidden": false,
+            "pV": "000000002.000000018.000000029.*java.*zfinal",
+            "pathA": {
+                "/app/software/picard/2.18.29-Java": 1
+            },
+            "wV": "000000002.000000018.000000029.*java.*zfinal",
             "whatis": [
                 "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
                 "Homepage: http://sourceforge.net/projects/picard"
@@ -4479,6 +4971,42 @@
             "whatis": [
                 "Description: \n pkg-config is a helper tool used when compiling applications and libraries.\n It helps you insert the correct compiler options on the command line so an\n application can use gcc -o test test.c `pkg-config --libs --cflags glib-2.0`\n for instance, rather than hard-coding values on where to find glib (or other\n libraries).\n",
                 "Homepage: http://www.freedesktop.org/wiki/Software/pkg-config/"
+            ]
+        }
+    },
+    "pkgconfig": {
+        "/app/modules/all/pkgconfig/1.3.1-foss-2018b-Python-2.7.15.lua": {
+            "Description": "pkgconfig is a Python module to interface with the pkg-config command line tool",
+            "Version": "1.3.1-foss-2018b-Python-2.7.15",
+            "fullName": "pkgconfig/1.3.1-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\npkgconfig is a Python module to interface with the pkg-config command line tool\n\n\nMore information\n================\n - Homepage: http://github.com/matze/pkgconfig\n",
+            "hidden": false,
+            "pV": "000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: pkgconfig is a Python module to interface with the pkg-config command line tool",
+                "Homepage: http://github.com/matze/pkgconfig"
+            ]
+        }
+    },
+    "poppler": {
+        "/app/modules/all/poppler/0.70.1-foss-2018b.lua": {
+            "Description": "Poppler is a PDF rendering library based on the xpdf-3.0 code\n base.",
+            "Version": "0.70.1-foss-2018b",
+            "fullName": "poppler/0.70.1-foss-2018b",
+            "help": "\nDescription\n===========\nPoppler is a PDF rendering library based on the xpdf-3.0 code\n base.\n\n\nMore information\n================\n - Homepage: https://poppler.freedesktop.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/poppler/0.70.1-foss-2018b/lib": 1
+            },
+            "pV": "000000000.000000070.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/poppler/0.70.1-foss-2018b/bin": 1
+            },
+            "wV": "000000000.000000070.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Poppler is a PDF rendering library based on the xpdf-3.0 code\n base.",
+                "Homepage: https://poppler.freedesktop.org/"
             ]
         }
     },
@@ -4570,6 +5098,28 @@
             "whatis": [
                 "Description: pybedtools wraps and extends BEDTools and offers feature-level manipulations from within Python.",
                 "Homepage: https://daler.github.io/pybedtools"
+            ]
+        }
+    },
+    "qcat": {
+        "/app/modules/all/qcat/1.0.1-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+            "Version": "1.0.1-foss-2018b-Python-3.6.6",
+            "fullName": "qcat/1.0.1-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nQcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech/\n\n\nIncluded extensions\n===================\nbiopython-1.73, parasail-1.1.16, PyYAML-3.12, qcat-1.0.1, wheel-0.33.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/qcat/1.0.1-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000000.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/qcat/1.0.1-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+                "Homepage: https://github.com/nanoporetech/",
+                "Extensions: biopython-1.73, parasail-1.1.16, PyYAML-3.12, qcat-1.0.1, wheel-0.33.1"
             ]
         }
     },

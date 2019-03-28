@@ -1,10 +1,10 @@
 ---
 title: All Modules  18.04
-permalink: /all-modules-18.04/
+permalink: /all-modules-18.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-03-12
+date: 2019-03-28
 ---
 
  - [AdapterRemoval/2.2.2-foss-2018b](https://github.com/MikkelSchubert/adapterremoval)  
@@ -86,7 +86,9 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.
  Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
- - [CMake/3.11.4-GCCcore-7.3.0](http://www.cmake.org)  
+ - [CARBayes/5.1.1-foss-2018b-R-3.5.2](http://github.com/duncanplee/CARBayes)  
+Implements a class of univariate and multivariate spatial generalised linear mixed models for areal unit data, with inference in a Bayesian setting using Markov chain Monte Carlo (MCMC) simulation.
+ - [CMake/3.12.1-GCCcore-7.3.0](http://www.cmake.org)  
 CMake, the cross-platform, open-source build system.  CMake is a family of
  tools designed to build, test and package software.
 
@@ -154,12 +156,14 @@ FastTree infers approximately-maximum-likelihood phylogenetic
  - [FriBidi/1.0.5-GCCcore-7.3.0](https://github.com/fribidi/fribidi)  
 The Free Implementation of the Unicode Bidirectional Algorithm.
 
- - [GATK/4.0.8.1-foss-2018b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
-The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute
- to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,
- with a primary focus on variant discovery and genotyping as well as strong emphasis on
- data quality assurance. Its robust architecture, powerful processing engine and
- high-performance computing features make it capable of taking on projects of any size.
+ - [GATK/4.1.0.0-foss-2018b-Python-3.6.6](http://www.broadinstitute.org/gatk/)  
+The Genome Analysis Toolkit or GATK is a software package
+developed at the Broad Institute to analyse next-generation resequencing
+data. The toolkit offers a wide variety of tools, with a primary focus on
+variant discovery and genotyping as well as strong emphasis on data quality
+assurance. Its robust architecture, powerful processing engine and
+high-performance computing features make it capable of taking on projects
+of any size.
  - [GCC/7.3.0-2.30](http://gcc.gnu.org/)  
 The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,
  as well as libraries for these languages (libstdc++, libgcj,...).
@@ -188,6 +192,10 @@ GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
+ - [GMime/2.6.23-GCCcore-7.3.0](http://spruce.sourceforge.net/gmime/)  
+The GMime package contains a set of utilities for parsing and
+ creating messages using the Multipurpose Internet Mail Extension (MIME) as
+ defined by the applicable RFCs.
  - [GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15](https://wiki.gnome.org/GObjectIntrospection/)  
 GObject introspection is a middleware layer between C
  libraries (using GObject) and language bindings. The C library can be scanned
@@ -246,12 +254,19 @@ IDBA-UD is a iterative De Bruijn Graph De Novo Assembler for Short Reads
  locally to generate some missing k-mers in low-depth regions. With these technologies, IDBA-UD
  can iterate k value of de Bruijn graph to a very large value with less gaps and less branches
  to form long contigs in both low-depth and high-depth regions.
- - [IGV/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
+ - [IGV/2.5.0-Java-1.8](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for preprocessing, 
+ computing feature count density (coverage),  sorting, and indexing data files.
+ See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+ - [IGVTools/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
 This package contains command line utilities for preprocessing, 
  computing feature count density (coverage),  sorting, and indexing data files.
  See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
  - [ImageMagick/7.0.8-22-GCCcore-7.3.0](http://www.imagemagick.org/)  
 ImageMagick is a software suite to create, edit, compose, or convert bitmap images
+ - [JAGS/4.3.0-foss-2018b](http://mcmc-jags.sourceforge.net/)  
+JAGS is Just Another Gibbs Sampler.  It is a program for analysis 
+ of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
  - [JUnit/4.12-Java-1.8](http://sourceforge.net/projects/junit)  
 A programmer-oriented testing framework for Java.
  - [JasPer/2.0.14-GCCcore-7.3.0](http://www.ece.uvic.ca/~frodo/jasper/)  
@@ -305,6 +320,8 @@ MUSCLE is one of the best-performing multiple alignment programs
  command-line options are needed to perform common alignment tasks.
  - [Mako/1.0.7-foss-2018b-Python-2.7.15](http://www.makotemplates.org)  
 A super-fast templating language that borrows the best ideas from the existing templating languages
+ - [MariaDB/10.3.10-foss-2018b](https://mariadb.org/)  
+MariaDB An enhanced, drop-in replacement for MySQL.
  - [Mesa/18.1.1-foss-2018b](http://www.mesa3d.org/)  
 Mesa is an open-source implementation of the OpenGL specification -
  a system for rendering interactive 3D graphics.
@@ -331,8 +348,23 @@ Network Security Services (NSS) is a set of libraries designed to support cross-
  of security-enabled client and server applications.
  - [OpenBLAS/0.3.1-GCC-7.3.0-2.30](http://xianyi.github.com/OpenBLAS/)  
 OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+ - [OpenJPEG/2.3.0-GCCcore-7.3.0](http://www.openjpeg.org/)  
+OpenJPEG is an open-source JPEG 2000 codec written in
+ C language. It has been developed in order to promote the use of JPEG 2000,
+ a still-image compression standard from the Joint Photographic Experts Group
+ (JPEG). Since may 2015, it is officially recognized by ISO/IEC and ITU-T as
+ a JPEG 2000 Reference Software.
  - [OpenMPI/3.1.1-GCC-7.3.0-2.30](http://www.open-mpi.org/)  
 The Open MPI Project is an open source MPI-3 implementation.
+ - [OpenPGM/5.2.122-GCCcore-7.3.0](http://code.google.com/p/openpgm/)  
+OpenPGM is an open source implementation of the Pragmatic General Multicast
+ (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable
+ and scalable multicast protocol that enables receivers to detect loss, request
+ retransmission of lost data, or notify an application of unrecoverable loss.
+ PGM is a receiver-reliable protocol, which means the receiver is responsible
+ for ensuring all data is received, absolving the sender of reception
+ responsibility.
+
  - [OptiType/1.3.2-foss-2018b-Python-2.7.15](https://github.com/FRED-2/OptiType)  
 OptiType is a novel HLA genotyping algorithm based on integer linear programming,
  capable of producing accurate 4-digit HLA genotyping predictions from NGS data
@@ -359,6 +391,15 @@ Pango can be used anywhere that text layout is needed, though most of the work o
 context of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.
  - [Perl/5.28.0-GCCcore-7.3.0](https://www.perl.org/)  
 Larry Wall's Practical Extraction and Report Language
+ - [PostgreSQL/10.3-foss-2018b](https://www.postgresql.org/)  
+PostgreSQL is a powerful, open source object-relational database system.
+ It is fully ACID compliant, has full support for foreign keys,
+ joins, views, triggers, and stored procedures (in multiple languages).
+ It includes most SQL:2008 data types, including INTEGER,
+ NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.
+ It also supports storage of binary large objects, including pictures,
+ sounds, or video. It has native programming interfaces for C/C++, Java,
+ .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
  - [PyQt5/5.11.3-foss-2018b-Python-3.6.6](http://www.riverbankcomputing.co.uk/software/pyqt)  
 PyQt5 is a set of Python bindings for v5 of the Qt application framework from The Qt Company.
  - [PyTables/3.4.4-foss-2018b-Python-2.7.15](http://www.pytables.org)  
@@ -385,6 +426,9 @@ Qt is a comprehensive cross-platform C++ application framework.
  - [R/3.5.3-foss-2018b](http://www.r-project.org/)  
 R is a free software environment for statistical computing
  and graphics.
+ - [RepeatMasker/4.0.8-foss-2018b-Perl-5.28.0-HMMER](http://www.repeatmasker.org/)  
+RepeatMasker is a program that screens DNA sequences for interspersed repeats
+ and low complexity DNA sequences.
  - [SAMtools/1.9-foss-2018b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
@@ -436,6 +480,8 @@ Sphinx is a tool that makes it easy to create intelligent and beautiful document
  - [Szip/2.1.1-GCCcore-7.3.0](http://www.hdfgroup.org/doc_resource/SZIP/)  
 Szip compression software, providing lossless compression of scientific data
 
+ - [TRF/4.09-linux64](https://tandem.bu.edu/trf/trf.html)  
+Tandem repeats finder: a program to analyze DNA sequences. Legacy version.
  - [Tcl/8.6.8-GCCcore-7.3.0](http://www.tcl.tk/)  
 Tcl (Tool Command Language) is a very powerful but easy to learn dynamic
  programming language, suitable for a very wide range of uses, including web
@@ -483,6 +529,19 @@ Perl binding for libxml2
 This is a Perl extension interface to James Clark's XML parser, expat.
  - [XZ/5.2.4-GCCcore-7.3.0](http://tukaani.org/xz/)  
 xz: XZ utilities
+ - [Xerces-C++/3.2.0-GCCcore-7.3.0](http://xerces.apache.org/xerces-c/)  
+Xerces-C++ is a validating XML parser written in a portable
+subset of C++. Xerces-C++ makes it easy to give your application the ability to
+read and write XML data. A shared library is provided for parsing, generating,
+manipulating, and validating XML documents using the DOM, SAX, and SAX2
+APIs.
+ - [ZeroMQ/4.2.5-foss-2018b](http://www.zeromq.org/)  
+ZeroMQ looks like an embeddable networking library but acts like a concurrency framework.
+ It gives you sockets that carry atomic messages across various transports like in-process,
+ inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout,
+ pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered
+ products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous
+ message-processing tasks. It has a score of language APIs and runs on most operating systems.
  - [annovar/2018Dec04](http://annovar.openbioinformatics.org/en/latest/)  
 ANNOVAR is an efficient software tool to utilize update-to-date
  information to functionally annotate genetic variants detected from diverse
@@ -614,6 +673,13 @@ iCount: protein-RNA interaction analysis
  - [intltool/0.51.0-GCCcore-7.3.0-Perl-5.28.0](http://freedesktop.org/wiki/Software/intltool/)  
 intltool is a set of tools to centralize translation of
  many different file formats using GNU gettext-compatible PO files.
+ - [jbigkit/2.1-GCCcore-7.3.0]()  
+JBIG-KIT is a software implementation of the JBIG1 data
+ compression standard (ITU-T T.82), which was designed for bi-level image
+ data, such as scanned documents.
+ - [jemalloc/5.1.0-GCCcore-7.3.0](http://www.canonware.com/jemalloc)  
+jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and
+ scalable concurrency support.
  - [kallisto/0.45.0-foss-2018b](http://pachterlab.github.io/kallisto/)  
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally
  of target sequences using high-throughput sequencing reads.
@@ -641,6 +707,9 @@ The libffi library provides a portable, high level programming interface to
 GD is an open source code library for the dynamic creation of images by programmers.
  - [libgeotiff/1.4.2-foss-2018b](https://directory.fsf.org/wiki/Libgeotiff)  
 Library for reading and writing coordinate system information from/to GeoTIFF files
+ - [libgpg-error/1.35-GCCcore-7.3.0](https://gnupg.org/related_software/libgpg-error/index.html)  
+Libgpg-error is a small library that defines common error
+ values for all GnuPG components.
  - [libgtextutils/0.7-GCCcore-7.3.0](http://hannonlab.cshl.edu/fastx_toolkit/)  
 ligtextutils is a dependency of fastx-toolkit and is provided
  via the same upstream
@@ -671,6 +740,10 @@ The GNU Readline library provides a set of functions for use by applications
  - [libsndfile/1.0.28-GCCcore-7.3.0](http://www.mega-nerd.com/libsndfile)  
 Libsndfile is a C library for reading and writing files containing sampled sound
  (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.
+ - [libsodium/1.0.16-GCCcore-7.3.0](http://doc.libsodium.org/)  
+Sodium is a modern, easy-to-use software library for encryption, decryption,
+ signatures, password hashing and more.
+
  - [libtool/2.4.6-GCCcore-7.3.0](http://www.gnu.org/software/libtool)  
 GNU libtool is a generic library support script. Libtool hides the complexity
  of using shared libraries behind a consistent, portable interface.
@@ -679,6 +752,11 @@ GNU libtool is a generic library support script. Libtool hides the complexity
 This library provides functions for manipulating Unicode strings and for
  manipulating C strings according to the Unicode standard.
 
+ - [libwebp/1.0.0-foss-2018b](https://developers.google.com/speed/webp)  
+WebP is a modern image format that provides superior
+ lossless and lossy compression for images on the web. Using WebP, webmasters
+ and web developers can create smaller, richer images that make the web
+ faster.
  - [libxml2/2.9.8-GCCcore-7.3.0](http://xmlsoft.org/)  
 Libxml2 is the XML C parser and toolchain developed for the Gnome project
  (but usable outside of the Gnome platform).
@@ -686,6 +764,8 @@ Libxml2 is the XML C parser and toolchain developed for the Gnome project
  - [libxslt/1.1.32-GCCcore-7.3.0](http://xmlsoft.org/)  
 Libxslt is the XSLT C library developed for the GNOME project
  (but usable outside of the Gnome platform).
+ - [libyaml/0.2.1-GCCcore-7.3.0](http://pyyaml.org/wiki/LibYAML)  
+LibYAML is a YAML parser and emitter written in C.
  - [lumpy/0.2.13-foss-2018b](https://github.com/pezmaster31/bamtools)  
 A probabilistic framework for structural variant discovery.
  - [matplotlib/3.0.0-foss-2018b-Python-3.6.6](http://matplotlib.org)  
@@ -739,7 +819,11 @@ The numexpr package evaluates multiple-operator array expressions many times fas
  - [ont-guppy-cpu/2.1.3](https://nanoporetech.com/products/minit)  
 Guppy software supports MinIT and MinION instruments from
  Nanopore Technologies
- - [picard/2.18.17-Java-1.8](http://sourceforge.net/projects/picard)  
+ - [parasail/2.4-foss-2018b](https://github.com/jeffdaily/parasail)  
+parasail is a SIMD C (C99) library containing implementations
+ of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global
+ pairwise sequence alignment algorithms. 
+ - [picard/2.18.29-Java](http://sourceforge.net/projects/picard)  
 A set of tools (in Java) for working with next generation sequencing data in the BAM format.
  - [pixman/0.34.0-GCCcore-7.3.0](http://www.pixman.org/)  
 Pixman is a low-level software library for pixel manipulation, providing
@@ -753,6 +837,11 @@ pkg-config is a helper tool used when compiling applications and libraries.
  for instance, rather than hard-coding values on where to find glib (or other
  libraries).
 
+ - [pkgconfig/1.3.1-foss-2018b-Python-2.7.15](http://github.com/matze/pkgconfig)  
+pkgconfig is a Python module to interface with the pkg-config command line tool
+ - [poppler/0.70.1-foss-2018b](https://poppler.freedesktop.org/)  
+Poppler is a PDF rendering library based on the xpdf-3.0 code
+ base.
  - [pplacer/1.1.alpha19-foss-2018b](['https://matsen.fhcrc.org/pplacer/'])  
 Pplacer places reads on a phylogenetic tree. guppy (Grand
  Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful
@@ -769,6 +858,9 @@ The PSIPRED Protein Sequence Analysis Workbench aggregates
  several UCL structure prediction methods into one location.
  - [pybedtools/0.7.10-foss-2018b-Python-3.6.6](https://daler.github.io/pybedtools)  
 pybedtools wraps and extends BEDTools and offers feature-level manipulations from within Python.
+ - [qcat/1.0.1-foss-2018b-Python-3.6.6](https://github.com/nanoporetech/)  
+Qcat is Python command-line tool for demultiplexing Oxford
+ Nanopore reads from FASTQ files.
  - [samblaster/0.1.24-foss-2018b](https://github.com/GregoryFaust/samblaster)  
 samblaster is a fast and flexible program for marking
  duplicates in read-id grouped1 paired-end SAM files.

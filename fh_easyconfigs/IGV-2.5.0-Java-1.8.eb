@@ -7,8 +7,8 @@
 
 easyblock = 'Tarball'
 
-name = 'IGVTools'
-version = '2.4.16'
+name = 'IGV'
+version = '2.5.0'
 versionsuffix = '-Java-%(javaver)s'
 
 homepage = 'http://www.broadinstitute.org/software/igv/'
@@ -18,21 +18,21 @@ description = """ This package contains command line utilities for preprocessing
 
 toolchain = {'name': 'dummy', 'version': ''}
 
-source_urls = ['http://data.broadinstitute.org/igv/projects/downloads/']
-sources = ['%(namelower)s_%(version)s.zip']
+source_urls = ['http://data.broadinstitute.org/igv/projects/downloads/%(version_major)s.%(version_minor)s']
+sources = ['%(name)s_%(version)s.zip']
 
-dependencies = [('Java', '1.8')]
+dependencies = [('Java', '1.8', '', True)]
 
 # add the installation dir to PATH
 modextrapaths = { 
     'PATH': '',
 }
 
-modloadmsg = "To run GUI: java -Xmx1500m  -jar $EBROOTIGVTOOLS/igvtools.jar gui\n"
-
 sanity_check_paths = {
-    'files': ["igvtools.jar", "igvtools"],
+    'files': ['%(namelower)s.sh', 'lib/%(namelower)s.jar'],
     'dirs': [],
 }
+
+modextrapaths = { 'PATH': '' }
 
 moduleclass = 'bio'
