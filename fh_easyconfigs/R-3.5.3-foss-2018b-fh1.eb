@@ -41,11 +41,9 @@ dependencies = [
     ('libGLU', '9.0.0'),
     ('Mesa', '18.1.1'), # for rgl
     ('cairo', '1.14.12'),
-    ('FFTW', '3.3.8'), # for fftw
     ('ICU', '61.1'),
     ('netCDF', '4.6.1'), # for netcdf4
     ('ZeroMQ', '4.2.5'), # for zmq
-    ('HDF5', '1.10.2'),
     ('UDUNITS', '2.2.26'),
 ]
 
@@ -975,6 +973,13 @@ exts_list = [
     ('refund', '0.1-17', {
         'checksums': ['8424fbe97023746ae95a0a4b622e88e7ed0931e09ff8d89fa01bd4f88707e9d3'],
     }),
+    ('ellipsis', '0.1.0', {
+    }),
+    ('sf', '0.7-2', {
+    }),
+    ('askpass', '1.1', {
+    }),
+    ('breakaway', '3.0'),
 ]
 
 sanity_check_paths = {

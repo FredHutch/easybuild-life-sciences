@@ -1,0 +1,57 @@
+# easybuild easyconfig
+easyblock = 'PythonBundle'
+
+name = 'qcat'
+version = '1.0.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/nanoporetech/'
+description = """Qcat is Python command-line tool for demultiplexing Oxford
+ Nanopore reads from FASTQ files."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
+dependencies = [
+    ('Python', '3.6.6'),
+    ('parasail', '2.4'),
+]
+
+exts_list = [
+    ('wheel', '0.33.1', {
+        'source_urls': ['https://pypi.io/packages/source/w/wheel'],
+    }),
+    ('biopython', '1.73', {
+        'modulename': 'Bio',
+        'source_urls': ['https://pypi.io/packages/source/b/biopython'],
+    }),
+    ('parasail', '1.1.16', {
+        'source_urls': ['https://pypi.io/packages/source/p/parasail'],
+        'patches': ['parasail-1.1.16.patch'],
+    }),
+    ('PyYAML', '3.12', {
+        'modulename': 'yaml',
+        'source_urls': ['https://pypi.io/packages/source/P/PyYAML'],
+    }),
+    (name, version, {
+        'filename': '%(name)s-%(version)s.tar.gz',
+        'source_urls': ['https://github.com/nanoporetech/qcat/archive'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+    }),
+]
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+sanity_check_paths = {
+    'files': ['bin/qcat'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,37 @@
+easyblock = 'ConfigureMake'
+
+name = 'GMime'
+version = '2.6.23'
+
+homepage = 'http://spruce.sourceforge.net/gmime/'
+description = """The GMime package contains a set of utilities for parsing and
+ creating messages using the Multipurpose Internet Mail Extension (MIME) as
+ defined by the applicable RFCs."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = ['http://ftp.gnome.org/pub/gnome/sources/%(namelower)s/%(version_major_minor)s/']
+sources = ['%(namelower)s-%(version)s.tar.xz']
+
+builddependencies = [
+    ('M4', '1.4.17'),
+    ('CMake', '3.7.1'),
+    ('binutils', '2.26'),
+    ('pkg-config', '0.29.1'),
+]
+
+dependencies = [
+    ('GLib', '2.49.5', '-foss-2016b', True),
+    ('zlib', '1.2.8'),
+    ('libgpg-error', '1.27'),
+]
+
+sanity_check_paths = {
+    'files': ['include/gmime-2.6/gmime/gmime.h',
+              'lib/libgmime-2.6.%s' % SHLIB_EXT,
+              'share/gtk-doc/html/gmime-2.6/index.html'
+              ],
+    'dirs': ['include', 'lib', 'share']
+}
+
+moduleclass = 'lib'
