@@ -33,10 +33,10 @@ exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
 dependencies = [
     ('R', '3.5.2'),
     ('Xerces-C++', '3.2.0'),
-    ('JasPer', '1.900.1'),
-    ('PROJ', '4.9.2'),
+    ('JasPer', '2.0.14'),
+    ('PROJ', '5.0.0'),
     ('PostgreSQL', '10.3'),
-    ('jbigkit', '2.1'), # '-GCCcore-5.4.0
+    ('jbigkit', '2.1'),
 ]
 
 exts_default_options = {
