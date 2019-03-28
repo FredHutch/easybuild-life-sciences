@@ -4,7 +4,7 @@ permalink: /all-modules-14.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-03-20
+date: 2019-03-28
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -134,7 +134,7 @@ The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/
  - [FFTW/3.3.8-gompi-2018b](http://www.fftw.org)  
 FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)
  in one or more dimensions, of arbitrary input size, and of both real and complex data.
- - [FFmpeg/3.1.3-foss-2016b](https://www.ffmpeg.org/)  
+ - [FFmpeg/3.3.1-foss-2016b](https://www.ffmpeg.org/)  
 A complete, cross-platform solution to record, convert and stream audio and video.
  - [FLASH/2.2.00-foss-2016b](https://ccb.jhu.edu/software/FLASH/)  
 FLASH (Fast Length Adjustment of SHort reads) is a very fast and accurate software
@@ -178,7 +178,7 @@ GDAL is a translator library for raster geospatial data formats that is released
  Open Source license by the Open Source Geospatial Foundation. As a library, it presents a single abstract data model
  to the calling application for all supported formats. It also comes with a variety of useful commandline utilities for
  data translation and processing.
- - [GEOS/3.6.2-foss-2016b-Python-2.7.12](http://trac.osgeo.org/geos)  
+ - [GEOS/3.6.2-foss-2016b-Python-3.6.6](http://trac.osgeo.org/geos)  
 GEOS (Geometry Engine
  - [GISTIC/2.0.23](www.broadinstitute.org/cancer/cga/gistc)  
 GISTIC is a tool to identify genes targeted by somatic copy-number alterations (SCNAs) that drive cancer growth. By separating SCNA profiles into underlying arm-level and focal alterations, GISTIC estimates the background rates for each category as well as defines the boundaries of SCNA regions.
@@ -197,6 +197,10 @@ GMAP: A Genomic Mapping and Alignment Program for mRNA and EST Sequences
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
+ - [GMime/2.6.23-GCCcore-5.4.0](http://spruce.sourceforge.net/gmime/)  
+The GMime package contains a set of utilities for parsing and
+ creating messages using the Multipurpose Internet Mail Extension (MIME) as
+ defined by the applicable RFCs.
  - [GNU/4.9.3-2.25](http://www.gnu.org/software/ )  
 Compiler-only toolchain with GCC and binutils.
  - [GObject-Introspection/1.54.1-foss-2018b-Python-2.7.15](https://wiki.gnome.org/GObjectIntrospection/)  
@@ -232,6 +236,9 @@ The Gdk Pixbuf is a toolkit for image loading and pixel buffer manipulation.
  was distributed as part of GTK+ 2 but it was split off into a separate package
  in preparation for the change to GTK+ 3.
 
+ - [Ghostscript/9.20-foss-2016b](http://ghostscript.com)  
+Ghostscript is a versatile processor for PostScript data with the ability to render PostScript to
+ different targets. It used to be part of the cups printing stack, but is no longer used for that.
  - [Go/1.9.4](http://www.golang.org)  
 Go is an open source programming language that makes it easy to build
  simple, reliable, and efficient software.
@@ -277,16 +284,23 @@ This package contains command line utilities for preprocessing,
 This package contains command line utilities for preprocessing, 
  computing feature count density (coverage),  sorting, and indexing data files.
  See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+ - [ImageMagick/7.0.5-10-foss-2016b](http://www.imagemagick.org/)  
+ImageMagick is a software suite to create, edit, compose, or convert bitmap images
  - [ImmunediveRsity/1.0.9-foss-2016b](https://bitbucket.org/ImmunediveRsity/immunediversity)  
 Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and processing of HTS reads to identify VDJ usage and clonal origin to gain insight of the antibody repertoire of a given organism.
  - [JAGS/4.2.0-foss-2016b](http://mcmc-jags.sourceforge.net/ )  
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis   of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
  - [JUnit/4.12-Java-1.8.0_92](http://sourceforge.net/projects/junit)  
 A programmer-oriented testing framework for Java.
+ - [JasPer/2.0.12-foss-2016b](http://www.ece.uvic.ca/~frodo/jasper/)  
+The JasPer Project is an open-source initiative to provide a free
+ software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
  - [Java/1.8.0_92](http://java.com/ )  
 Java Platform, Standard Edition (Java SE) lets you develop and deploy  Java applications on desktops and servers.
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)  
 Kent tools: collection of tools used by the UCSC genome browser.
+ - [LAME/3.99.5-foss-2016b](http://lame.sourceforge.net/)  
+LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
  - [LAST/926-foss-2016b](http://last.cbrc.jp/)  
 LAST finds similar regions between sequences.
  - [LEMON/1.3.1-foss-2016b](http://lemon.cs.elte.hu/trac/lemon)  
@@ -308,6 +322,9 @@ Portable lossless data compression library
 tiff: Library and tools for reading and writing TIFF data files
  - [LibUUID/1.0.3-GCCcore-6.4.0](http://sourceforge.net/projects/libuuid/)  
 Portable uuid C library
+ - [LittleCMS/2.8-foss-2016b](http://www.littlecms.com/)  
+Little CMS intends to be an OPEN SOURCE small-footprint color management engine,
+ with special focus on accuracy and performance. 
  - [Lmod/5.9-GCC-4.8.4](http://sourceforge.net/projects/lmod/ )  
 Lmod is a Lua based module system. Modules allow for dynamic modification  of a user's environment under Unix systems. See www.tacc.utexas.edu/tacc-projects/lmod  for a complete description. Lmod is a new implementation that easily handles the MODULEPATH  Hierarchical problem. It is drop-in replacement for TCL/C modules and reads TCL modulefiles directly.
  - [Lua/5.1.4-8-GCC-4.8.4](http://www.lua.org/ )  
@@ -449,7 +466,7 @@ Qt is a comprehensive cross-platform C++ application framework.
 Qt is a comprehensive cross-platform C++ application framework.
  - [Queue/3.5-Java-1.8.0_66](http://www.broadinstitute.org/gatk/ )  
 The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size.
- - [R/3.5.2-foss-2016b](http://www.r-project.org/)  
+ - [R/3.5.3-foss-2016b](http://www.r-project.org/)  
 R is a free software environment for statistical computing
  and graphics.
  - [R-bundle-Bioconductor/3.5-foss-2016b-R-3.4.0-fh1](http://www.r-project.org/)  
@@ -535,6 +552,8 @@ Trimmomatic performs a variety of useful trimming tasks for illumina
 Trinity represents a novel method for the efficient and robust de novo reconstruction
  of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm,
  Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
+ - [UDUNITS/2.2.25-foss-2016b](https://www.unidata.ucar.edu/downloads/udunits/)  
+The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units.
  - [VCFtools/0.1.15-foss-2016b-Perl-5.24.1](https://vcftools.github.io)  
 The aim of VCFtools is to provide 
  easily accessible methods for working with complex 
@@ -764,6 +783,10 @@ C and C++ compiler from Intel
 Intel Cluster Toolkit Compiler Edition provides Intel C,C++ and fortran compilers, Intel MPI and Intel MKL
  - [ifort/2016.1.150-GCC-4.9.3-2.25](http://software.intel.com/en-us/intel-compilers/ )  
 C and C++ compiler from Intel
+ - [igraph/1.2.4-foss-2016b-R-3.5.2](https://igraph.org/r/)  
+igraph is a collection of network analysis tools with the emphasis on 
+efficiency, portability and ease of use. igraph is open source and free. igraph can be 
+programmed in R, Python and C/C++.
  - [iimpi/8.1.5-GCC-4.9.3-2.25](http://software.intel.com/en-us/intel-cluster-toolkit-compiler/ )  
 Intel C/C++ and Fortran compilers, alongside Intel MPI.
  - [imake/1.0.5-goolf-1.7.20](http://www.x.org/ )  
@@ -1028,6 +1051,10 @@ Provides a way to load and enumerate PKCS#11 modules.  Provides a standard confi
 If you need to convert files from one markup format into another, pandoc is your swiss-army knife.
  - [parallel/20170222-foss-2016b](http://savannah.gnu.org/projects/parallel/)  
 parallel: Build and execute shell commands in parallel
+ - [parasail/2.4-foss-2016b](https://github.com/jeffdaily/parasail)  
+parasail is a SIMD C (C99) library containing implementations
+ of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global
+ pairwise sequence alignment algorithms. 
  - [patchelf/0.9-foss-2016b](http://nixos.org/patchelf.html)  
 PatchELF is a small utility to modify the dynamic linker and RPATH of ELF executables.
  - [pdfgrep/2.0.1-foss-2016b](https://pdfgrep.org/)  
@@ -1064,6 +1091,9 @@ Prodigal (Prokaryotic Dynamic Programming Genefinding
 Prokka is a software tool for the rapid annotation of prokaryotic genomes.
  - [psipred/4.01-foss-2016b](http://bioinf.cs.ucl.ac.uk/psipred/)  
 The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.
+ - [qcat/1.0.1-foss-2016b-Python-3.6.6](https://github.com/nanoporetech/)  
+Qcat is Python command-line tool for demultiplexing Oxford
+ Nanopore reads from FASTQ files.
  - [ragel/6.9-foss-2016b](http://www.colm.net/open-source/ragel/)  
 Ragel compiles executable finite state machines from regular
 languages. Ragel targets C, C++ and ASM. Ragel state machines can not only
@@ -1181,6 +1211,9 @@ applications a truly native look and feel because it uses the platform's native
 API rather than emulating the GUI. 
  - [x264/20160614-foss-2016b](http://www.videolan.org/developers/x264.html)  
 x264 is a free software library and application for encoding video streams into the H.264/MPEG-4
+ AVC compression format, and is released under the terms of the GNU GPL.
+ - [x265/2.4-foss-2016b](http://x265.org/)  
+x265 is a free software library and application for encoding video streams into the H.265
  AVC compression format, and is released under the terms of the GNU GPL.
  - [xbitmaps/1.1.1-goolf-1.7.20](http://www.freedesktop.org/wiki/Software/xlibs )  
 

@@ -38,6 +38,7 @@ dependencies = [
     ('GDAL', '2.2.3'),  # for rgdal
     ('PROJ', '4.9.2'),  # for rgdal
     ('GMP', '6.1.1'),  # for igraph
+    ('GLPK', '4.61'), # for igraph
     ('NLopt', '2.4.2'),  # for nloptr
     #('FFTW', '3.3.7'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
@@ -447,9 +448,9 @@ exts_list = [
     ('nnet', '7.3-12', {
         'checksums': ['2723523e8581cc0e2215435ac773033577a16087a3f41d111757dd96b8c5559d'],
     }),
-    ('minqa', '1.2.4', {
-        'checksums': ['cfa193a4a9c55cb08f3faf4ab09c11b70412523767f19894e4eafc6e94cccd0c'],
-    }),
+    #('minqa', '1.2.4', {
+    #    'checksums': ['cfa193a4a9c55cb08f3faf4ab09c11b70412523767f19894e4eafc6e94cccd0c'],
+    #}),
     ('RcppEigen', '0.3.3.5.0', {
         'checksums': ['e5c6af17770c5f57b7cf2fba04ad1a519901b446e8138bfff221952458207f05'],
     }),
@@ -525,9 +526,9 @@ exts_list = [
     ('boot', '1.3-20', {
         'checksums': ['adcb90b72409705e3f9c69ea6c15673dcb649b464fed06723fe0930beac5212a'],
     }),
-    ('lme4', '1.1-21', {
-        'checksums': ['7f5554b69ff8ce9bac21e8842131ea940fb7a7dfa2de03684f236d3e3114b20c'],
-    }),
+#    ('lme4', '1.1-21', {
+#        'checksums': ['7f5554b69ff8ce9bac21e8842131ea940fb7a7dfa2de03684f236d3e3114b20c'],
+#    }),
     ('ucminf', '1.1-4', {
         'checksums': ['a2eb382f9b24e949d982e311578518710f8242070b3aa3314a331c1e1e7f6f07'],
     }),
@@ -537,9 +538,9 @@ exts_list = [
     ('ordinal', '2019.3-9', {
         'checksums': ['b15194d5247758495b0f952e7046bcdbfdad3c45ed742b61c101c257c2115977'],
     }),
-    ('jomo', '2.6-7', {
-        'checksums': ['6e83dab51103511038a3e9a3c762e00cc45ae7080c0a0f64e37bcea8c488db53'],
-    }),
+#    ('jomo', '2.6-7', {
+#        'checksums': ['6e83dab51103511038a3e9a3c762e00cc45ae7080c0a0f64e37bcea8c488db53'],
+#    }),
     ('hms', '0.4.2', {
         'checksums': ['a57820b3e3221e973cba9500b4ad7953730110ee398693d150af833f26d5d0bc'],
     }),

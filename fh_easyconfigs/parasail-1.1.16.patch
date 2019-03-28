@@ -1,0 +1,24 @@
+Search LD_LIBRARY_PATH for libparasail.so
+
+diff -ruN parasail-1.1.16.orig/setup.py parasail-1.1.16/setup.py
+--- parasail-1.1.16.orig/setup.py	2019-02-14 08:52:25.000000000 -0800
++++ parasail-1.1.16/setup.py	2019-03-28 09:23:07.797699000 -0700
+@@ -6,6 +6,7 @@
+ import stat
+ import subprocess
+ import time
++from ctypes.util import find_library 
+ try:
+     from urllib import urlretrieve
+ except ImportError:
+@@ -406,6 +407,10 @@
+     shutil.copy(src,dst)
+ 
+ def prepare_shared_lib():
++    library = find_library('parasail')
++    if library is not None:
++        print("Found parasail library: {}".format(library))
++        return
+     libname = get_libname()
+     libpath = os.path.join("parasail", libname)
+     if not os.path.exists(libpath):
