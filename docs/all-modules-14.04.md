@@ -4,7 +4,7 @@ permalink: /all-modules-14.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-03-28
+date: 2019-04-02
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -276,14 +276,14 @@ HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for 
  - [ICU/61.1-foss-2016b](http://site.icu-project.org/home)  
 ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization
  support for software applications.
- - [IGV/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
-This package contains command line utilities for preprocessing, 
+ - [IGV/2.5.0-Java-1.8](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for preprocessing,
  computing feature count density (coverage),  sorting, and indexing data files.
  See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
- - [IGVTools/2.3.93-Java-1.8.0_121](http://www.broadinstitute.org/software/igv/)  
-This package contains command line utilities for preprocessing, 
- computing feature count density (coverage),  sorting, and indexing data files.
- See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+ - [IGVTools/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for
+ preprocessing, computing feature count density (coverage),  sorting, and
+ indexing data files. 
  - [ImageMagick/7.0.5-10-foss-2016b](http://www.imagemagick.org/)  
 ImageMagick is a software suite to create, edit, compose, or convert bitmap images
  - [ImmunediveRsity/1.0.9-foss-2016b](https://bitbucket.org/ImmunediveRsity/immunediversity)  
@@ -426,8 +426,9 @@ PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.
 The program PHASE implements a Bayesian statistical 
 method for reconstructing haplotypes from population genotype data.
 Documentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf
- - [PROJ/4.9.2-intel-2016a](http://trac.osgeo.org/proj/ )  
-Program proj is a standard Unix filter function which converts  geographic longitude and latitude coordinates into cartesian coordinates
+ - [PROJ/5.0.0-foss-2016b](http://trac.osgeo.org/proj/)  
+Program proj is a standard Unix filter function which converts 
+geographic longitude and latitude coordinates into cartesian coordinates
  - [Pango/1.42.4-foss-2018b](http://www.pango.org/)  
 Pango is a library for laying out and rendering of text, with an emphasis on internationalization.
 Pango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the
