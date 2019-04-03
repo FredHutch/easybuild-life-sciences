@@ -25,7 +25,6 @@ builddependencies = [('pkg-config', '0.29.2')]
 
 dependencies = [
     ('R', '3.5.3'),
-    ('HDF5', '1.10.2'),
     ('libwebp', '1.0.0'), # webp
     ('PostgreSQL', '10.3'),
     ('MariaDB', '10.3.10'),
@@ -33,10 +32,6 @@ dependencies = [
     ('GLPK', '4.65'), # rglpk
     ('poppler', '0.70.1'), # pdftools
     ('GMime', '2.6.23'), # pdftools
-
-    #('PROJ', '5.0.0'),
-    ('GSL', '2.5'), # for gsl
-    ('GMP', '6.1.2'),  # for igraph
     ('NLopt', '2.4.2'),
     ('libGLU', '9.0.0'),
     ('Mesa', '18.1.1'), # for rgl
@@ -44,7 +39,6 @@ dependencies = [
     ('ICU', '61.1'),
     ('netCDF', '4.6.1'), # for netcdf4
     ('ZeroMQ', '4.2.5'), # for zmq
-    ('UDUNITS', '2.2.26'),
 ]
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
@@ -163,27 +157,6 @@ exts_list = [
     }),
     ('elasticnet', '1.1.1', {
         'checksums': ['abde7cd63a3057169bad154de5d2185281f6325f4e19ea84261f89ab2dbd2d5d'],
-    }),
-    ('trust', '0.1-7', {
-        'checksums': ['e3d15aa84a71becd2824253d4a8156bdf1ab9ac3b72ced0cd53f3bb370ac6f04'],
-    }),
-    ('ergm', '3.9.4', {
-        'checksums': ['548d783b8f752984436b8ebf7fd828e1afb3d3e6642bcdd2d4209a6b8c82bd2e'],
-    }),
-    ('ergm.count', '3.3.0', {
-        'checksums': ['e14b4c973d3bde3adc15ebbda5443866678f3919bf5e942bf7a8b6bcd4ea93a0'],
-    }),
-    ('networkDynamic', '0.9.0', {
-        'checksums': ['e951d4bc892f96d867a8f5822d662633f9206f2dadf46caaa6083fc0d97289a4'],
-    }),
-    ('tergm', '3.5.2', {
-        'checksums': ['65b4f80799342a596ea5b14371f3982f1b611faa02ecabbfd5c79a9b4a66f85c'],
-    }),
-    ('tsna', '0.2.0', {
-        'checksums': ['a26b0564490e78cdb55bc4ad36fda6e7cedc0bb6b21d278513dbe620bf0c0027'],
-    }),
-    ('statnet', '2018.10', {
-        'checksums': ['387ae8294b6d41d747a62d726a21e10a70ad2a9e612c311658e97f6ce54214ec'],
     }),
     ('EpiModel', '1.7.2', {
         'checksums': ['eb11e6f72355b87a1340727d1adc320a063d81165d2bfab2f0c46abde709727e'],
@@ -435,9 +408,6 @@ exts_list = [
     }),
     ('shinyBS', '0.61', {
         'checksums': ['51be29541e066d30c66e243393f20b0da705eba1b7ce7eeadea993bb2aa91166'],
-    }),
-    ('shinythemes', '1.1.2', {
-        'checksums': ['2e13d4d5317fc61082e8f3128b15e0b10ed9736ce81e152dd7ae7f6109f9b18a'],
     }),
     ('descr', '1.1.4', {
         'checksums': ['73d1932b92fa12453bf1d620136699f81aef691bfa01748faf10238a78dcaa16'],
@@ -943,12 +913,6 @@ exts_list = [
     ('flowStats', '3.40.1', {
         'checksums': ['f75f906dfa2e2cba34ba5f8ca68f308608d7ea63ecac8ab7ca86fe2b4b0f324f'],
     }),
-    ('mcmc', '0.9-6', {
-        'checksums': ['443a189fff907830627029dd55d925db9a70562d8bda7bfae97414ab955186b9'],
-    }),
-    ('MCMCpack', '1.4-4', {
-        'checksums': ['97e193d628f7161e59288ed594a313af3a520bf30d5a95f1ede0cb2a567cf9f7'],
-    }),
     ('clue', '0.3-57', {
         'checksums': ['6e369d07b464a9624209a06b5078bf988f01f7963076e946649d76aea0622d17'],
     }),
@@ -972,12 +936,6 @@ exts_list = [
     }),
     ('refund', '0.1-17', {
         'checksums': ['8424fbe97023746ae95a0a4b622e88e7ed0931e09ff8d89fa01bd4f88707e9d3'],
-    }),
-    ('ellipsis', '0.1.0', {
-    }),
-    ('sf', '0.7-2', {
-    }),
-    ('askpass', '1.1', {
     }),
     ('breakaway', '3.0'),
 ]
