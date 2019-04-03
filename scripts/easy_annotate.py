@@ -9,9 +9,11 @@ from datetime import date
 import requests
 import urllib2
 import xmlrpclib
+from pprint import pprint
 
 __author__ = "John Dey"
-__version__ = "2.0.0"
+__version__ = "2.0.1"
+__date__ = "April 3, 2019"
 __email__ = "jfdey@fredhutch.org"
 
 """Versioin 1.x create HTML output
@@ -26,6 +28,7 @@ class ExtsList(object):
     """
 
     def __init__(self, file_path, verbose=False):
+        self.debug = False 
         self.verbose = verbose
         self.pkg_count = 0
 
@@ -39,6 +42,11 @@ class ExtsList(object):
         try:
             self.pkg_name += eb.versionsuffix
         except (AttributeError, NameError):
+            pass
+        try:
+            self.biocver = eb.biocver
+        except (AttributeError, NameError):
+            print("biocver not set")
             pass
         file_name = os.path.basename(file_path)
         f_name = os.path.basename(file_name)[:-3]
@@ -109,6 +117,7 @@ class ExtsList(object):
                                                 pkg_info[key]['url'],
                                                 pkg_info[key]['description'])
                 self.out.write(msg)
+        self.out.close()
 
     def get_package_url(self, pkg_name):
         pass
@@ -125,39 +134,29 @@ class R(ExtsList):
         self.bioc_data = {}
         self.bioc_urls = []
 
-        if 'bioconductor' in self.pkg_name.lower():
-            self.bioconductor = True
+        if self.biocver :
             self.read_bioconductor_pacakges()
-        else:
-            self.bioconductor = False
+            self.bioconductor = True
 
     def read_bioconductor_pacakges(self):
         """ read the Bioconductor package list into bio_data dict
             """
+        base_url = 'https://bioconductor.org/packages/json/%s' % self.biocver
         self.bioc_urls = [
-            ['packages',
-             'https://bioconductor.org/packages/json/3.4/bioc/packages.json',
-             'https://bioconductor.org/packages/release/bioc/html/'
-             ],
-            ['annotation',
-             'https://bioconductor.org/packages/json/3.4/data/annotation/packages.json',
-             'https://bioconductor.org/packages/release/data/annotation/html/'
-             ],
-            ['experiment',
-             'https://bioconductor.org/packages/json/3.4/data/experiment/packages.json',
-             'https://bioconductor.org/packages/release/data/experiment/html/'
-             ]
+             '%s/bioc/packages.json' % base_url,
+             '%s/data/annotation/packages.json' % base_url,
+             '%s/data/experiment/packages.json' % base_url,
         ]
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
         for url in self.bioc_urls:
-            try:
-                response = urllib2.urlopen(url[1], context=ctx)
-            except IOError as e:
-                print('URL request: %s' % url[1])
-                sys.exit(e)
-            self.bioc_data[url[0]] = json.loads(response.read())
+            resp = requests.get(url)
+            if resp.status_code != 200:
+                print('Error: %s %s' % (resp.status_code, url))
+                sys.exit(1)
+            self.bioc_data.update(resp.json())
+            if self.debug:
+                print('reading Bioconductor Package inf: %s' % url)
+                pkgcount = len(self.bioc_data.keys())
+                print('size: %s' % pkgcount)
 
     @staticmethod
     def check_CRAN(pkg_name):
@@ -183,22 +182,25 @@ class R(ExtsList):
                      ['Imports']
                      ['Biobase', 'graphics', 'grDevices', 'venn', 'mclust',
                       'utils', 'MASS']
+            some fun fields in the MetaData:
+            ['Description', 'MD5sum', 'Package', 'URL', 'Version',etc...]
         """
         url = 'not found'
-        for bioc_pkg in self.bioc_urls:
-            if pkg_name in self.bioc_data[bioc_pkg[0]]:
-                url = bioc_pkg[2] + pkg_name + '.html'
-                description = self.bioc_data[bioc_pkg[0]][pkg_name]['Title']
+        base_url = 'https://www.bioconductor.org/packages/release/bioc/html/%s.html'
+        if pkg_name in self.bioc_data.keys():
+            url = base_url % pkg_name
+            description = self.bioc_data[pkg_name]['Title']
         if url == 'not found':
             url, description = self.check_CRAN(pkg_name)
             description = '[CRAN]&emsp;' + description
         return url, description
 
     def get_package_url(self, pkg_name):
-        if self.bioconductor:
+        url, description = self.check_CRAN(pkg_name)
+        if url == 'not found':
+            if self.debug:
+                print('package %s not found in CRAN, check Bioconductor' % pkg_name)
             url, description = self.check_BioC(pkg_name)
-        else:
-            url, description = self.check_CRAN(pkg_name)
         return url, description
 
 
