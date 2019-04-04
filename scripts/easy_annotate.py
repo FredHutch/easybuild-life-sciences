@@ -86,7 +86,7 @@ class ExtsList(object):
         """
         today = date.today() 
         date_string = '%d-%02d-%02d' % (today.year, today.month, today.day) 
-        block = '---\nlayout: post\ntitle: %s\n' % self.pkg_name
+        block = '---\ntitle: %s\n' % self.pkg_name
         block += 'date: %s\n---\n\n' % date_string
         self.out.write(block)
 
