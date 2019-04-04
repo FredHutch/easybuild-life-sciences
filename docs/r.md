@@ -2,8 +2,8 @@
 title: "Available R Modules"
 layout: collection
 classes: wide
-permalink: /R/
-collection: R
+permalink: /r/
+collection: r
 entries_layout: list # list or grid (default),
 show_excerpts:  true #(default), false
 sort_by: date # date or title (default)
