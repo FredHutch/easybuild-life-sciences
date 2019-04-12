@@ -12,20 +12,24 @@ toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
 
 source_urls = [' https://www.cl.cam.ac.uk/~mgk25/jbigkit/download']
 sources = [SOURCE_TAR_GZ]
+patches = ['%(name)s-%(version)s_libpath.patch']
+checksums = [
+    'de7106b6bfaf495d6865c7dd7ac6ca1381bd12e0d81405ea81e7f2167263d932', # jbigkit-2.1.tar.gz
+    '97933926b88c5c6c4b0cf48ed81672e8607cdb4d3edb345001f989a37f8ac55a', # jbigkit-2.1_libpath.patch
+]
+
+buildopts = ' && make install'
 
 builddependencies = [
     ('binutils', '2.26'),
+    ('Autotools', '20150215', '-GCC-5.4.0-2.26', True),
     ('pkg-config', '0.29.1'),
 ]
 
-files_to_copy = [(['libjbig/libjbig85.a', 'libjbig/libjbig.a'], 'lib'),
-                 (['libjbig/jbig85.h', 'libjbig/jbig.h'], 'include'),
-                 (['pbmtools/pbmtojbg', 'pbmtools/jbgtopbm'], 'bin'),
-]
-              
+files_to_copy = ['bin', 'include', 'lib']
 
 sanity_check_paths = {
-    'files': ['lib/libjbig85.a', 'lib/libjbig.a',
+    'files': ['lib/libjbig.%s' % SHLIB_EXT,
               'bin/pbmtojbg', 'bin/jbgtopbm',
               'include/jbig.h',
               ],

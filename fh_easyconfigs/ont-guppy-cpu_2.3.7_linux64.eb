@@ -1,0 +1,34 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+#
+#  Guppy from Nanopore Technologies 
+#  Requires account for download
+
+easyblock = 'Tarball'
+
+name = 'ont-guppy-cpu'
+version = '2.3.7'
+
+homepage = 'https://nanoporetech.com/products/minit'
+description = """Guppy is a production basecaller provided by Oxford Nanopore,
+ and uses a command-line interface."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# you must download this by hand after an agreement
+source_urls = ['https://nanoporetech.com/products']
+sources = ['%(name)s_%(version)s_linux64.tar.gz']
+
+sanity_check_paths = {
+    'files': ['bin/guppy_basecaller',
+              'data/barcoding/barcodes_v3.fasta',
+              'lib/libhdf5.so.100.2.0'],
+    'dirs': ['bin', 'data', 'lib'],
+} 
+
+#modextrapaths = { 'PATH': 'bin'] }
+
+moduleclass = 'bio'

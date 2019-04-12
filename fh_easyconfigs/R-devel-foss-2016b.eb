@@ -1,0 +1,73 @@
+name = 'R'
+version = 'devel'
+biocver = '3.8'
+
+homepage = 'http://www.r-project.org/'
+description = """Development version of R. Use at your own Risk! This
+ package can change without notice and is not versioned. Built
+ without any additional packages.""" 
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [' https://stat.ethz.ch/R/daily']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('pkg-config', '0.29.1'),
+]
+
+dependencies = [
+    ('X11', '20160819'),
+    ('Mesa', '12.0.2'),
+    ('libGLU', '9.0.0'),
+    ('ncurses', '6.0'),
+    ('cairo', '1.14.6'),
+    ('libreadline', '6.3'),
+    ('jbigkit', '2.1'),
+    ('ncurses', '6.0'),
+    ('bzip2', '1.0.6'),
+    ('XZ', '5.2.2'),
+    ('zlib', '1.2.8'),
+    #('SQLite', '3.13.0'),
+    ('PCRE', '8.38'),
+    ('libpng', '1.6.24'),  # for plotting in R
+    ('libjpeg-turbo', '1.5.0'),  # for plottting in R
+    ('LibTIFF', '4.0.6'),
+    #('Java', '1.8', '', True),
+    #('Tk', '8.6.7'),  # for tcltk
+    ('cURL', '7.49.1'),  # for RCurl
+    ('libxml2', '2.9.4'),  # for XML
+    ('GLPK', '4.61'), # for igraph
+    ('NLopt', '2.4.2'),  # for nloptr
+    ('ICU', '61.1'),  # for rJava & gdsfmt
+    ('HDF5', '1.8.18'),  # for hdf5r
+    ('UDUNITS', '2.1.24'),  # for units
+]
+
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
+configopts = "--with-pic --enable-threads --enable-R-shlib"
+# some recommended packages may fail in a parallel build (e.g. Matrix), and
+# we're installing them anyway below
+configopts += " --with-recommended-packages=no"
+
+# specify that at least EasyBuild v3.5.0 is required,
+# since we rely on the updated easyblock for R to configure correctly w.r.t. BLAS/LAPACK
+easybuild_version = '3.5.0'
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on March 11, 2019
+exts_list = [
+
+]
+
+moduleclass = 'lang'
