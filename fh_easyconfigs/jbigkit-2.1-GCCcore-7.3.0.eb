@@ -19,8 +19,11 @@ checksums = [
     '97933926b88c5c6c4b0cf48ed81672e8607cdb4d3edb345001f989a37f8ac55a', # jbigkit-2.1_libpath.patch
 ]
 
+buildopts = ' && make install'
+
 builddependencies = [
     ('binutils', '2.30'),
+    ('Autotools', '20180311'),
     ('pkg-config', '0.29.2'),
 ]
 
