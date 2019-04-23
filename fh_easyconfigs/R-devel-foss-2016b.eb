@@ -9,7 +9,7 @@ description = """Development version of R. Use at your own Risk! This
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-source_urls = [' https://stat.ethz.ch/R/daily']
+source_urls = ['https://stat.ethz.ch/R/daily']
 sources = [SOURCE_TAR_GZ]
 
 builddependencies = [
