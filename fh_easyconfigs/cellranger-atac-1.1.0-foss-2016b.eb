@@ -1,0 +1,50 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+#
+#  Download requires registration
+easyblock = 'Tarball'
+
+name = 'cellranger-atac'
+version = '1.1.0'
+
+homepage = 'https://support.10xgenomics.com/single-cell-atac/software/overview/welcome'
+description = """The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# you must download this by hand after an agreement
+source_urls = ['https://support.10xgenomics.com/single-cell-atac/software/downloads/latest']
+sources = ['%(name)s-%(version)s.tar.gz']
+checksums = ['17d81c93d12dcf5b41cb2ace3c2def012b6475c64dc037af0af7c3a7e9d2023a']
+
+dependencies = {('bcl2fastq2', '2.20.0')}
+
+unpack_options = ' && cd %(builddir)s && '
+unpack_options += 'cd %(name)s-%(version)s/miniconda-atac-cs/4.3.21-miniconda-atac-cs-c10/lib && '
+unpack_options += 'rm libstdc++.so.6.0.21 && '
+unpack_options += 'ln -s libstdc++.so.6.0.25 libstdc++.so.6.0.21 && '
+
+unpack_options += ' cd %(builddir)s/%(name)s-%(version)s/martian-cs/v3.2.1/jobmanagers && '
+unpack_options += ' cp slurm.template.example slurm.template '
+
+modextrapaths = { 'PATH': ['']}
+
+# /shared/biodata/ngs/Reference/10X/
+sanity_check_paths = {
+    'files': ["cellranger-atac"],
+    'dirs': ["bwa", 'cellranger-atac-cs', 'cellranger-atac-tiny-fastq',
+        'cellranger-atac-tiny-ref', 'lz4', 'martian-cs',
+        'miniconda-atac-cs'],
+} 
+
+#sanity_check_commands = [('source', 'sourceme.bash'), ('%(name)s', 'sitecheck')]
+
+modloadmsg = """To complete the environment setup for cellranger-atac run this command:
+source sourceme.bash
+Referance data filepath: /shared/biodata/ngs/Reference/10X
+Use the reference files with version: %(version)s"""
+
+moduleclass = 'bio'
