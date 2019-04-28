@@ -30,7 +30,7 @@ sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
 - and then simply launch the bootstrap process:
 
 ```
-curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/easybuild_bootstrap.sh | bash
+curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh | bash
 ```
 - after easybuild is installed simply log  out and login again and as an example (installing R) execute this
 
