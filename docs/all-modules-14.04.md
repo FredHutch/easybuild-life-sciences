@@ -4,7 +4,7 @@ permalink: /all-modules-14.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-04-02
+date: 2019-04-27
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS)  
@@ -22,7 +22,7 @@ Automake: GNU Standards-compliant Makefile generator
 This bundle collect the standard GNU build tools: Autoconf, Automake
  and libtool
 
- - [BBMap/36.62-foss-2016b-Java-1.8.0_121](https://sourceforge.net/projects/bbmap/)  
+ - [BBMap/38.44-foss-2016b](https://sourceforge.net/projects/bbmap/)  
 BBMap short read aligner, and other bioinformatic tools.
  - [BCFtools/1.9-foss-2016b](http://www.htslib.org/)  
 Samtools is a suite of programs for interacting with high-throughput sequencing data.
@@ -67,7 +67,7 @@ Bison is a general-purpose parser generator that converts an annotated context-f
  into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
  - [Blosc/1.14.2-foss-2016b](http://www.blosc.org/)  
 Blosc, an extremely fast, multi-threaded, meta-compressor library
- - [Boost/1.62.0-foss-2016b](http://www.boost.org/ )  
+ - [Boost/1.67.0-foss-2016b](http://www.boost.org/)  
 Boost provides free peer-reviewed portable C++ source libraries.
  - [Bowtie/1.2.1.1-foss-2016b](http://bowtie-bio.sourceforge.net/index.shtml)  
 Bowtie is an ultrafast, memory-efficient short read aligner.
@@ -98,6 +98,10 @@ CUDA (formerly Compute Unified Device Architecture) is a parallel
 A unit testing framework for C 
  - [Clairvoyante/0.1](https://github.com/aquaskyline/Clairvoyante )  
 multi-task convolutional deep neural network for variant calling
+ - [Coreutils/8.27-GCCcore-5.4.0](http://www.gnu.org/software/coreutils/)  
+The GNU Core Utilities are the basic file, shell and text manipulation utilities of the
+ GNU operating system.  These are the core utilities which are expected to exist on every operating system.
+
  - [DANPOS2/2.2.2-foss-2016b-Python-2.7.12](https://sites.google.com/site/danposdoc)  
 A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2
  - [DB/6.2.32-foss-2016b](http://www.oracle.com/technetwork/products/berkeleydb)  
@@ -117,7 +121,7 @@ EMBOSS is 'The European Molecular Biology Open Software Suite'.
 EPACTS is a versatile software pipeline to perform various statistical tests for identifying genome-wide association from sequence data through a user-friendly interface, both to scientific analysts and to method developer.s
  - [ESS/16.10](http://ess.r-project.org/)  
 Emacs Speaks Statistics (ESS) is an add-on package for emacs text editors such as GNU Emacs and XEmacs. It is designed to support editing of scripts and interaction with various statistical analysis programs such as R, S-Plus, SAS, Stata and OpenBUGS/JAGS.
- - [EasyBuild/3.8.1](https://easybuilders.github.io/easybuild)  
+ - [EasyBuild/3.9.0](https://easybuilders.github.io/easybuild)  
 EasyBuild is a software build and installation framework
  written in Python that allows you to install software in a structured,
  repeatable and robust way.
@@ -276,10 +280,10 @@ HOMER (Hypergeometric Optimization of Motif EnRichment) is a suite of tools for 
  - [ICU/61.1-foss-2016b](http://site.icu-project.org/home)  
 ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization
  support for software applications.
- - [IGV/2.5.0-Java-1.8](http://www.broadinstitute.org/software/igv/)  
-This package contains command line utilities for preprocessing,
- computing feature count density (coverage),  sorting, and indexing data files.
- See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+ - [IGV/2.5.0-Java-11](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for
+ preprocessing, computing feature count density (coverage),  sorting, and
+ indexing data files.
  - [IGVTools/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
 This package contains command line utilities for
  preprocessing, computing feature count density (coverage),  sorting, and
@@ -295,8 +299,10 @@ A programmer-oriented testing framework for Java.
  - [JasPer/2.0.12-foss-2016b](http://www.ece.uvic.ca/~frodo/jasper/)  
 The JasPer Project is an open-source initiative to provide a free
  software-based reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
- - [Java/1.8.0_92](http://java.com/ )  
-Java Platform, Standard Edition (Java SE) lets you develop and deploy  Java applications on desktops and servers.
+ - [Java/12](https://jdk.java.net/)  
+The official Reference Implementation for Java SE 11 (JSR 384)
+ is based solely upon open-source code available from the JDK 11 Project in
+ the OpenJDK Community.
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)  
 Kent tools: collection of tools used by the UCSC genome browser.
  - [LAME/3.99.5-foss-2016b](http://lame.sourceforge.net/)  
@@ -397,6 +403,10 @@ OCaml is a general purpose industrial-strength programming
  programming.
  - [OpenBLAS/0.3.1-GCC-7.3.0-2.30](http://xianyi.github.com/OpenBLAS/)  
 OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+ - [OpenJDK/11.0.2](https://jdk.java.net/)  
+The official Reference Implementation for Java SE 11 (JSR 384)
+ is based solely upon open-source code available from the JDK 11 Project in
+ the OpenJDK Community.
  - [OpenMPI/3.1.1-GCC-7.3.0-2.30](http://www.open-mpi.org/)  
 The Open MPI Project is an open source MPI-3 implementation.
  - [OpenPGM/5.2.122-foss-2016b](http://code.google.com/p/openpgm/)  
@@ -467,9 +477,10 @@ Qt is a comprehensive cross-platform C++ application framework.
 Qt is a comprehensive cross-platform C++ application framework.
  - [Queue/3.5-Java-1.8.0_66](http://www.broadinstitute.org/gatk/ )  
 The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size.
- - [R/3.5.3-foss-2016b](http://www.r-project.org/)  
-R is a free software environment for statistical computing
- and graphics.
+ - [R/devel-foss-2016b](http://www.r-project.org/)  
+Development version of R. Use at your own Risk! This
+ package can change without notice and is not versioned. Built
+ without any additional packages.
  - [R-bundle-Bioconductor/3.5-foss-2016b-R-3.4.0-fh1](http://www.r-project.org/)  
 R is a free software environment for statistical computing and graphics.
  - [RAxML/8.2.11-foss-2016b-hybrid-avx2](https://github.com/stamatak/standard-RAxML)  
@@ -656,6 +667,8 @@ Canu is a fork of the Celera Assembler designed for
  high-noise single-molecule sequencing
  - [cellranger/3.0.2](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)  
 Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform.
+ - [cellranger-atac/1.1.0-foss-2016b](https://support.10xgenomics.com/single-cell-atac/software/overview/welcome)  
+The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.
  - [cisTEM/1.0.0-beta-bin-foss-2016b](https://cistem.org)  
 cisTEM is user-friendly software to process cryo-EM images of
 macromolecular complexes and obtain high-resolution 3D reconstructions from
@@ -964,8 +977,11 @@ Libtasn1 is the ASN.1 library used by GnuTLS, GNU Shishi and some other packages
 GNU libtool is a generic library support script. Libtool hides the complexity of using shared libraries  behind a consistent, portable interface.
  - [libunistring/0.9.3-intel-2016a](http://www.gnu.org/software/libunistring/ )  
 This library provides functions for manipulating Unicode strings and for manipulating C strings  according to the Unicode standard.
- - [libwebp/0.6.1-foss-2016b](https://developers.google.com/speed/webp)  
-WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
+ - [libwebp/1.0.0-foss-2016b](https://developers.google.com/speed/webp)  
+WebP is a modern image format that provides superior
+ lossless and lossy compression for images on the web. Using WebP, webmasters
+ and web developers can create smaller, richer images that make the web
+ faster.
  - [libxcb/1.8-goolf-1.7.20-Python-2.7.3](http://xcb.freedesktop.org/ )  
 
  - [libxkbcommon/0.6.1-foss-2016b](http://xkbcommon.org/)  
@@ -1043,7 +1059,7 @@ The numactl program allows you to run your application program on specific cpu's
 Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers.
  - [oncotator_v1_ds/April052016](http://portals.broadinstitute.org/oncotator/)  
 Oncotator is a web application for annotating human genomic point mutations and indels with data relevant to cancer researchers.
- - [ont-guppy-cpu/2.1.3](https://nanoporetech.com/products/minit)  
+ - [ont-guppy-cpu/2.3.7](https://nanoporetech.com/products/minit)  
 Guppy software supports MinIT and MinION instruments from
  Nanopore Technologies
  - [p11-kit/0.23.2-intel-2016a](http://p11-glue.freedesktop.org/p11-kit.html )  
