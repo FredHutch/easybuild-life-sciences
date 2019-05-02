@@ -1,0 +1,31 @@
+# easyconfig
+
+easyblock = 'Conda'
+
+name = "nextflow"
+version = "19.04.0"
+
+homepage = "https://github.com/nextflow-io/nextflow"
+description = """Nextflow is a bioinformatics workflow manager that enables the development
+ of portable and reproducible workflows. It supports deploying workflows on a variety of
+ execution platforms including local, HPC schedulers, AWS Batch, Google Genomics Pipelines,
+ and Kubernetes."""
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+source_urls = ['https://github.com/nextflow-io/nextflow/archive']
+sources = ['v%(version)s-edge.tar.gz']
+
+builddependencies = [('Anaconda3', '5.3.0')]
+channels = ['bioconda']
+
+# Use one of the following  - either an environment.yml file or a remote environment definition
+# environment_file = '/path/to/conda-environment.yml'
+#remote_environment = "nyuad-cgsb/%(name)s_%(version)s"
+
+sanity_check_paths = {
+    'files': ["bin/conda"],
+    'dirs': []
+}
+
+moduleclass = 'tools'
