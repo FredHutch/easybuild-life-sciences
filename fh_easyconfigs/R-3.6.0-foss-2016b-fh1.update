@@ -329,7 +329,7 @@ exts_list = [
     }),
     ('zlibbioc', '1.28.0', {
     }),
-    ('BiocGenerics', '0.29.2', {
+    ('BiocGenerics', '0.28.0', {
     }),
     ('Biobase', '2.42.0', {
     }),
@@ -337,7 +337,7 @@ exts_list = [
     }),
     ('BiocManager', '1.30.4', {
     }),
-    ('flowCore', '1.49.10', {
+    ('flowCore', '1.48.1', {
     }),
     ('flowViz', '1.46.1', {
     }),
@@ -398,7 +398,7 @@ exts_list = [
     ('impute', '1.56.0', {
     }),
     ('fs', '1.2.7'),
-    ('shinyFiles', '0.7.2', {
+    ('shinyFiles', '0.7.3', {
     }),
     ('samr', '3.0', {
     }),
@@ -482,7 +482,7 @@ exts_list = [
     }),
     ('OrganismDbi', '1.24.0', {
     }),
-    ('ggbio', '1.31.2', { # devel 3.9
+    ('ggbio', '1.30.0', { # devel 3.9
     }),
     ('ReportingTools', '2.22.1', {
     }),

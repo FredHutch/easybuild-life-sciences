@@ -1,0 +1,58 @@
+May-01 16:09:51.149 [main] DEBUG nextflow.cli.Launcher - $> nextflow run hello
+May-01 16:09:51.269 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.04.0
+May-01 16:09:51.485 [main] DEBUG nextflow.scm.AssetManager - Listing projects in folder: /home/jfdey/.nextflow/assets
+May-01 16:09:52.240 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/jfdey/.nextflow/assets/nextflow-io/hello/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/hello.git
+May-01 16:09:52.250 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/jfdey/.nextflow/assets/nextflow-io/hello/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/hello.git
+May-01 16:09:52.557 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/jfdey/.nextflow/assets/nextflow-io/hello/.git/config; branch: master; remote: origin; url: https://github.com/nextflow-io/hello.git
+May-01 16:09:52.558 [main] INFO  nextflow.cli.CmdRun - Launching `nextflow-io/hello` [soggy_raman] - revision: a9012339ce [master]
+May-01 16:09:54.203 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/jfdey/.nextflow/assets/nextflow-io/hello/nextflow.config
+May-01 16:09:54.205 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jfdey/.nextflow/assets/nextflow-io/hello/nextflow.config
+May-01 16:09:54.216 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+May-01 16:09:54.291 [main] DEBUG nextflow.Session - Session uuid: f22fc0ed-405b-4d26-98ff-224a435ceb15
+May-01 16:09:54.291 [main] DEBUG nextflow.Session - Run name: soggy_raman
+May-01 16:09:54.292 [main] DEBUG nextflow.Session - Executor pool size: 56
+May-01 16:09:54.318 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.04.0 build 5069
+  Modified: 17-04-2019 06:25 UTC (16-04-2019 23:25 PDT)
+  System: Linux 3.13.0-143-generic
+  Runtime: Groovy 2.5.6 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_181-b13
+  Encoding: UTF-8 (UTF-8)
+  Process: 48161@rhino2.fhcrc.org [140.107.221.187]
+  CPUs: 56 - Mem: 377.5 GB (2.3 GB) - Swap: 109.5 GB (51.5 GB)
+May-01 16:09:54.348 [main] DEBUG nextflow.Session - Work-dir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/work [nfs]
+May-01 16:09:54.349 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jfdey/.nextflow/assets/nextflow-io/hello/bin
+May-01 16:09:54.619 [main] DEBUG nextflow.Session - Session start invoked
+May-01 16:09:54.623 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+May-01 16:09:54.639 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+May-01 16:09:54.785 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+May-01 16:09:54.917 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+May-01 16:09:54.917 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+May-01 16:09:54.923 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+May-01 16:09:54.925 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+May-01 16:09:54.930 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=56; memory=377.5 GB; capacity=56; pollInterval=100ms; dumpInterval=5m
+May-01 16:09:54.934 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+May-01 16:09:54.934 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+May-01 16:09:54.937 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+May-01 16:09:54.974 [main] DEBUG nextflow.Session - >>> barrier register (process: sayHello)
+May-01 16:09:54.977 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > sayHello -- maxForks: 56
+May-01 16:09:55.008 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+May-01 16:09:55.009 [main] DEBUG nextflow.Session - Session await
+May-01 16:09:55.217 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-01 16:09:55.226 [Task submitter] INFO  nextflow.Session - [6f/267c8d] Submitted process > sayHello (3)
+May-01 16:09:55.241 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-01 16:09:55.242 [Task submitter] INFO  nextflow.Session - [27/b2e11f] Submitted process > sayHello (4)
+May-01 16:09:55.250 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-01 16:09:55.251 [Task submitter] INFO  nextflow.Session - [51/7a6470] Submitted process > sayHello (1)
+May-01 16:09:55.269 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+May-01 16:09:55.271 [Task submitter] INFO  nextflow.Session - [07/55e8cf] Submitted process > sayHello (2)
+May-01 16:09:55.278 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: sayHello (3); status: COMPLETED; exit: 0; error: -; workDir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/work/6f/267c8df45a63e95c9ea82840980595]
+May-01 16:09:55.303 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: sayHello (4); status: COMPLETED; exit: 0; error: -; workDir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/work/27/b2e11fb2826999b05c9b9084a99dc1]
+May-01 16:09:55.315 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: sayHello (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/work/51/7a647054ef800746bd0db00d7b9f33]
+May-01 16:09:55.373 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: sayHello (2); status: COMPLETED; exit: 0; error: -; workDir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/work/07/55e8cfba25ea3489e91461749cf94a]
+May-01 16:09:55.377 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: sayHello)
+May-01 16:09:55.378 [main] DEBUG nextflow.Session - Session await > all process finished
+May-01 16:09:55.469 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+May-01 16:09:55.470 [main] DEBUG nextflow.Session - Session await > all barriers passed
+May-01 16:09:55.478 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=4; failedCount=0; ignoredCount=0; cachedCount=0; succeedDuration=39ms; failedDuration=0ms; cachedDuration=0ms]
+May-01 16:09:55.664 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+May-01 16:09:55.704 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
