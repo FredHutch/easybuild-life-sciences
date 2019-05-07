@@ -4,7 +4,7 @@ permalink: /all-modules-18.04.md/
 layout: single
 sidebar:
   nav: "docs"
-date: 2019-03-28
+date: 2019-04-23
 ---
 
  - [AdapterRemoval/2.2.2-foss-2018b](https://github.com/MikkelSchubert/adapterremoval)  
@@ -25,7 +25,7 @@ Automake: GNU Standards-compliant Makefile generator
 This bundle collect the standard GNU build tools: Autoconf, Automake
  and libtool
 
- - [BBMap/38.26-foss-2018b](https://sourceforge.net/projects/bbmap/)  
+ - [BBMap/38.44-foss-2018b](https://sourceforge.net/projects/bbmap/)  
 BBMap short read aligner, and other bioinformatic tools.
  - [BCFtools/1.9-foss-2018b](http://www.htslib.org/)  
 Samtools is a suite of programs for interacting with high-throughput sequencing data.
@@ -109,7 +109,7 @@ Doxygen is a documentation system for C++, C, Java, Objective-C, Python,
  extent D.
 
  - [EMBOSS/6.6.0-foss-2018b](http://emboss.sourceforge.net/)  
-EMBOSS is 'The European Molecular Biology Open Software Suite'.
+EMBOSS is 'The European Molecular Biology Open Software Suite'
  EMBOSS is a free Open Source software analysis package specially developed for
  the needs of the molecular biology (e.g. EMBnet) user community.
  - [EasyBuild/3.8.1](https://easybuilders.github.io/easybuild)  
@@ -221,6 +221,12 @@ Ghostscript is a versatile processor for PostScript data with the ability to ren
  different targets. It used to be part of the cups printing stack, but is no longer used for that.
  - [GraphicsMagick/1.3.31-foss-2018b](http://www.graphicsmagick.org/)  
 GraphicsMagick is the swiss army knife of image processing.
+ - [Graphviz/2.40.1-foss-2018b](http://www.graphviz.org/)  
+Graphviz is open source graph visualization software. Graph
+ visualization is a way of representing structural information as diagrams of
+ abstract graphs and networks. It has important applications in networking,
+ bioinformatics,  software engineering, database and web design, machine
+ learning, and in visual interfaces for other technical domains.
  - [HDF5/1.10.2-foss-2018b](https://portal.hdfgroup.org/display/support)  
 HDF5 is a data model, library, and file format for storing and managing data.
  It supports an unlimited variety of datatypes, and is designed for flexible
@@ -254,10 +260,10 @@ IDBA-UD is a iterative De Bruijn Graph De Novo Assembler for Short Reads
  locally to generate some missing k-mers in low-depth regions. With these technologies, IDBA-UD
  can iterate k value of de Bruijn graph to a very large value with less gaps and less branches
  to form long contigs in both low-depth and high-depth regions.
- - [IGV/2.5.0-Java-1.8](http://www.broadinstitute.org/software/igv/)  
-This package contains command line utilities for preprocessing, 
- computing feature count density (coverage),  sorting, and indexing data files.
- See also http://www.broadinstitute.org/software/igv/igvtools_commandline. 
+ - [IGV/2.5.0-Java-11](http://www.broadinstitute.org/software/igv/)  
+This package contains command line utilities for
+ preprocessing, computing feature count density (coverage),  sorting, and
+ indexing data files.
  - [IGVTools/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)  
 This package contains command line utilities for preprocessing, 
  computing feature count density (coverage),  sorting, and indexing data files.
@@ -274,9 +280,10 @@ The JasPer Project is an open-source initiative to provide a free
  software-based reference implementation of the codec specified in
  the JPEG-2000 Part-1 standard.
 
- - [Java/1.8.0_181](http://java.com/)  
-Java Platform, Standard Edition (Java SE) lets you develop and deploy
- Java applications on desktops and servers.
+ - [Java/11.0.2](https://openjdk.java.net/)  
+The official Reference Implementation for Java SE 11 (JSR 384)
+ is based solely upon open-source code available from the JDK 11 Project in
+ the OpenJDK Community.
  - [Jellyfish/2.2.10-foss-2018b](http://www.genome.umd.edu/jellyfish.html)  
 Jellyfish is a tool for fast, memory-efficient counting of k-mers in DNA.
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)  
@@ -432,6 +439,8 @@ RepeatMasker is a program that screens DNA sequences for interspersed repeats
  - [SAMtools/1.9-foss-2018b](http://www.htslib.org/)  
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
+ - [SCons/3.0.1-foss-2018b-Python-3.6.6](http://www.scons.org/)  
+SCons is a software construction tool.
  - [SKESA/2.3.0-foss-2018b](https://github.com/ncbi/SKESA)  
 SKESA is a de-novo sequence read assembler for cultured single isolate genomes based on DeBruijn graphs.
  - [SPAdes/3.13.0-foss-2018b](http://cab.spbu.ru/software/spades/)  
@@ -589,6 +598,8 @@ Canu is a fork of the Celera Assembler designed for
  high-noise single-molecule sequencing
  - [cellranger/3.0.2-foss-2018b](https://support.10xgenomics.com/single-cell-gene-expression/software/overview/welcome)  
 Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform.
+ - [cellranger-atac/1.1.0-foss-2018b](https://support.10xgenomics.com/single-cell-atac/software/overview/welcome)  
+The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.
  - [cutadapt/1.18-foss-2018b-Python-3.6.6](http://opensource.scilifelab.se/projects/cutadapt/)  
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
@@ -652,6 +663,9 @@ GNU gperf is a perfect hash function generator. For a given list of strings,
  perfect, which means that the hash table has no collisions, and the hash
  table lookup needs a single string comparison only.
 
+ - [graphite2/1.3.13-GCCcore-7.3.0](http://graphite.sil.org/)  
+Graphite is a "smart font" system developed specifically to
+ handle the complexities of lesser-known languages of the world.
  - [help2man/1.47.4](https://www.gnu.org/software/help2man/)  
 help2man produces simple manual pages from the '--help' and '--version'
  output of other commands.
