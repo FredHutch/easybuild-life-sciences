@@ -40,7 +40,7 @@ dependencies = [
     ('FFTW', '3.3.8'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
     ('ICU', '61.1'),  # for rJava & gdsfmt
-    ('HDF5', '1.10.2'),  # for hdf5r
+    ('HDF5', '1.10.5'),  # for hdf5r
     ('UDUNITS', '2.2.26'),  # for units
     ('GSL', '2.5'),  # for RcppGSL
     ('ImageMagick', '7.0.8-11'),  # for animation
