@@ -1,0 +1,78 @@
+# Built with EasyBuild version 3.8.0 on 2018-12-30_12-47-19
+easyblock = 'ConfigureMake'
+
+name = 'GDAL'
+version = '2.2.3'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://www.gdal.org/'
+description = """GDAL is a translator library for raster geospatial data formats that is released under an X/MIT style
+ Open Source license by the Open Source Geospatial Foundation. As a library, it presents a single abstract data model
+ to the calling application for all supported formats. It also comes with a variety of useful commandline utilities for
+ data translation and processing."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+toolchainopts = {'usempi': True}
+
+source_urls = ['http://download.osgeo.org/gdal/%(version)s/']
+sources = [SOURCELOWER_TAR_XZ]
+checksums = ['a328d63d476b3653f5a25b5f7971e87a15cdf8860ab0729d4b1157ba988b8d0b']
+
+dependencies = [
+    ('Python', '3.6.6'),
+    ('netCDF', '4.6.1'),
+    ('expat', '2.2.5'),
+    ('GEOS', '3.6.2', '-Python-%(pyver)s'),
+    ('SQLite', '3.24.0'),
+    ('libxml2', '2.9.8'),
+    ('libpng', '1.6.34'),
+    ('libjpeg-turbo', '2.0.0'),
+    ('JasPer', '2.0.14'),
+    ('LibTIFF', '4.0.9'),
+    ('zlib', '1.2.11'),
+    ('cURL', '7.60.0'),
+    ('PCRE', '8.41'),
+    ('PROJ', '5.0.0'),
+    ('libgeotiff', '1.4.2'),
+]
+
+configopts = '--with-expat=$EBROOTEXPAT --with-libz=$EBROOTLIBZ --with-hdf5=$EBROOTHDF5 --with-netcdf=$EBROOTNETCDF'
+configopts += ' --with-xml2=$EBROOTLIBXML2 --with-geos=$EBROOTGEOS/bin/geos-config --with-jpeg=$EBROOTLIBJPEGMINTURBO'
+configopts += ' --with-png=$EBROOTLIBPNG --with-sqlite3=$EBROOTSQLITE --with-jasper=$EBROOTJASPER'
+configopts += ' --with-libtiff=$EBROOTLIBTIFF --with-pcre=$EBROOTPCRE --with-python=$EBROOTPYTHON/bin/python'
+configopts += ' --with-libgeotiff=$EBROOTLIBGEOTIFF'
+
+modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/site-packages'}
+
+sanity_check_paths = {
+    'files': ['lib/libgdal.a', 'lib/libgdal.%s' % SHLIB_EXT],
+    'dirs': ['bin', 'include', 'lib/python%(pyshortver)s/site-packages']
+}
+
+moduleclass = 'data'
+
+# Build statistics
+buildstats = [{
+    "build_time": 439.45,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='/app/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--robot='/app/fh_easyconfigs:/app/software/EasyBuild/3.8.0/lib/python2.7/site-packages/easybuild_easyconfigs-3.8.0-py2.7.egg/easybuild/easyconfigs'", "--robot-paths='/app/fh_easyconfigs:'", "--sourcepath='/app/sources'", "--umask='002'", 'GDAL-2.2.3-foss-2018b-Python-3.6.6.eb'],
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.8.0",
+    "easybuild-framework_version": "3.8.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/7.3.0/libexec/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/7.3.0 --with-local-prefix=/app/software/GCCcore/7.3.0 --enable-bootstrap --with-isl=/app/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage2_stuff; Thread model: posix; gcc version 7.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "c754fde3657d",
+    "install_size": 100835418,
+    "modules_tool": ('Lmod', '/app/lmod/lmod/libexec/lmod', '7.8'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.15rc1 (default, Nov 12 2018, 14:31:15) ; [GCC 7.3.0]",
+    "system_gcc_path": "/app/software/GCCcore/7.3.0/bin/gcc",
+    "system_python_path": "/app/software/Python/3.6.6-foss-2018b/bin/python",
+    "timestamp": 1546202839,
+    "total_memory": 32135,
+}]
