@@ -1,0 +1,42 @@
+# easyconfig
+#
+# build the leading edge of nextflow,
+easyblock = 'MakeCp'
+
+name = "nextflow"
+version = "devel"
+
+homepage = "https://github.com/nextflow-io/nextflow"
+description = """Nextflow is a bioinformatics workflow manager that enables the development
+ of portable and reproducible workflows. It supports deploying workflows on a variety of
+ execution platforms including local, HPC schedulers, AWS Batch, Google Genomics Pipelines,
+ and Kubernetes."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/nextflow-io/nextflow/archive']
+sources = ['master.zip']
+
+builddependencies = [
+    ('cURL', '7.49.1', '-GCC-5.4.0-2.26'),
+    ('Java', '1.8'),
+]
+
+dependencies = [
+    ('Java', '1.8')
+]
+
+buildopts = 'make compile && make pack '
+skipsteps = ['build']
+
+files_to_copy = ['%(builddir)s/nextflow-master']
+postinstallcmds = [ 'chmod +x %(installdir)s/nextflow-master/%(name)s' ]
+
+sanity_check_paths = {
+    'files': ["nextflow-master/nextflow"],
+    'dirs': []
+}
+
+modextrapaths = { 'PATH': ['nextflow-master'] }
+
+moduleclass = 'tools'
