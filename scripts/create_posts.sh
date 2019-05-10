@@ -46,7 +46,7 @@ fi
 
   ccc=${cc%\'*}
   module_class=${ccc#*\'}
-pkg_path=${eb_dir}/${eb_name}
+pkg_path=$1
   cc=`grep moduleclass ${pkg_path}`
   # locate home URL from easyconfig
   gg=`grep homepage ${pkg_path}`

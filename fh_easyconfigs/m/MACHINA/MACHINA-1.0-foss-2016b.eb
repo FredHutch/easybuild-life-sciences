@@ -11,6 +11,7 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 
 source_urls = ['https://github.com/raphael-group/machina/archive']
 sources = ['master.zip']
+patches = ['machina-1.0_findGurobi.patch']
 
 builddependencies = [
     ('CMake', '3.7.2'),
@@ -24,8 +25,8 @@ dependencies = [
 
 configopts = "-DLIBLEMON_ROOT=$EBROOTLEMON "
 configopts += "-DGUROBI_INCLUDE_DIR=$EBROOTGUROBI/include "
-configopts += "-DGUROBI_CPP_LIB=$EBROOTGUROBI/lib/libgurobi_c++.a "
-configopts += "-DGUROBI_LIB=$EBROOTGUROBI/lib/libgurobi81.so "
+configopts += "-DGUROBI_CPP_LIB=$EBROOTGUROBI/lib "
+configopts += "-DGUROBI_LIB=$EBROOTGUROBI/lib "
 
 separate_build_dir = True
 

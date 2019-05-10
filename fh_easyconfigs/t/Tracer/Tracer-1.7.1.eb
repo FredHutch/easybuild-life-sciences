@@ -15,8 +15,12 @@ description = """Tracer is a program for analysing the trace files generated
 
 toolchain = {'name': 'dummy', 'version': 'dummy'}
 
-sources = ['%(name)s_v%(version)s.tgz']
-checksums = ['200d7ffa1e48994b71245994e299847ac2be72d3d5c37d9048418557e1d8c12e']
+source_urls = ['https://github.com/beast-dev/tracer/archive']
+sources = [{
+    'download_filename': 'v%(version)s.tar.gz',
+    'filename': SOURCE_TAR_GZ
+}]
+checksums = ['947d51c5afa52354099b9b182ba6036e352356bd62df94031f33cdcb7e8effd3']
 
 dependencies = [
     ('Java', '1.8'),

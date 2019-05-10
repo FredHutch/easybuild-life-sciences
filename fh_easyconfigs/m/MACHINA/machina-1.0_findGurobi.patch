@@ -1,0 +1,19 @@
+add gurobi linux library names
+diff -ruN machina-1.0.orig/FindGUROBI.cmake machina-1.0/FindGUROBI.cmake
+--- machina-1.0.orig/FindGUROBI.cmake	2018-05-14 14:14:39.000000000 -0700
++++ machina-1.0/FindGUROBI.cmake	2019-05-09 06:28:36.126106000 -0700
+@@ -5,12 +5,12 @@
+           DOC "Gurobi include directory")
+ 
+ FIND_LIBRARY(GUROBI_CPP_LIB
+-             NAMES gurobi_c++ 
++             NAMES gurobi_c++ libgurobi_c++ libgurobi_g++
+              PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
+              DOC "Gurobi C++ Libraries")
+ 
+ FIND_LIBRARY(GUROBI_LIB
+-             NAMES gurobi65
++             NAMES gurobi65 libgurobi libgurobi81
+              PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
+              DOC "Gurobi C Libraries")
+ 

@@ -669,6 +669,22 @@
                 "Description: EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
                 "Homepage: https://easybuilders.github.io/easybuild"
             ]
+        },
+        "/app/modules/all/EasyBuild/3.9.0.lua": {
+            "Description": "EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
+            "Version": "3.9.0",
+            "fullName": "EasyBuild/3.9.0",
+            "help": "\nDescription\n===========\nEasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.\n\n\nMore information\n================\n - Homepage: https://easybuilders.github.io/easybuild\n",
+            "hidden": false,
+            "pV": "000000003.000000009.*zfinal",
+            "pathA": {
+                "/app/software/EasyBuild/3.9.0/bin": 1
+            },
+            "wV": "000000003.000000009.*zfinal",
+            "whatis": [
+                "Description: EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
+                "Homepage: https://easybuilders.github.io/easybuild"
+            ]
         }
     },
     "Eigen": {
@@ -3181,6 +3197,27 @@
             ]
         }
     },
+    "Tracer": {
+        "/app/modules/all/Tracer/1.7.1.lua": {
+            "Description": "Tracer is a program for analysing the trace files generated\n by Bayesian MCMC runs (that is, the continuous parameter values sampled from\n the chain). It can be used to analyse runs of BEAST, MrBayes, LAMARC and\n possibly other MCMC programs.",
+            "Version": "1.7.1",
+            "fullName": "Tracer/1.7.1",
+            "help": "\nDescription\n===========\nTracer is a program for analysing the trace files generated\n by Bayesian MCMC runs (that is, the continuous parameter values sampled from\n the chain). It can be used to analyse runs of BEAST, MrBayes, LAMARC and\n possibly other MCMC programs.\n\n\nMore information\n================\n - Homepage: http://beast.community/tracer\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Tracer/1.7.1/lib": 1
+            },
+            "pV": "000000001.000000007.000000001.*zfinal",
+            "pathA": {
+                "/app/software/Tracer/1.7.1/bin": 1
+            },
+            "wV": "000000001.000000007.000000001.*zfinal",
+            "whatis": [
+                "Description: Tracer is a program for analysing the trace files generated\n by Bayesian MCMC runs (that is, the continuous parameter values sampled from\n the chain). It can be used to analyse runs of BEAST, MrBayes, LAMARC and\n possibly other MCMC programs.",
+                "Homepage: http://beast.community/tracer"
+            ]
+        }
+    },
     "Trinity": {
         "/app/modules/all/Trinity/2.8.4-foss-2018b.lua": {
             "Description": "Trinity represents a novel method for the efficient and robust de novo reconstruction\n of transcriptomes from RNA-Seq data. Trinity combines three independent software modules: Inchworm,\n Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.",
@@ -3608,6 +3645,24 @@
             "whatis": [
                 "Description:  Bioawk is an extension to Brian Kernighan's awk,\n adding the support of several common biological data formats,\n including optionally gzip'ed BED, GFF, SAM, VCF, FASTA/Q and TAB-delimited formats with column names. ",
                 "Homepage: https://github.com/lh3/bioawk"
+            ]
+        }
+    },
+    "biobambam2": {
+        "/app/modules/all/biobambam2/2.0.95-foss-2018b.lua": {
+            "Description": "Tools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq",
+            "Version": "2.0.95-foss-2018b",
+            "fullName": "biobambam2/2.0.95-foss-2018b",
+            "help": "\nDescription\n===========\nTools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq\n\n\nMore information\n================\n - Homepage: https://github.com/gt1/biobambam2\n",
+            "hidden": false,
+            "pV": "000000002.000000000.000000095.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/biobambam2/2.0.95-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000000.000000095.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Tools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq",
+                "Homepage: https://github.com/gt1/biobambam2"
             ]
         }
     },
@@ -4522,6 +4577,24 @@
             "whatis": [
                 "Description: \n libjpeg-turbo is a fork of the original IJG libjpeg which uses SIMD to\n accelerate baseline JPEG compression and decompression. libjpeg is a library\n that implements JPEG image encoding, decoding and transcoding.\n",
                 "Homepage: http://sourceforge.net/projects/libjpeg-turbo/"
+            ]
+        }
+    },
+    "libmaus2": {
+        "/app/modules/all/libmaus2/2.0.611-foss-2018b.lua": {
+            "Description": "libmaus2 is a collection of data structures and algorithms.",
+            "Version": "2.0.611-foss-2018b",
+            "fullName": "libmaus2/2.0.611-foss-2018b",
+            "help": "\nDescription\n===========\nlibmaus2 is a collection of data structures and algorithms.\n\n\nMore information\n================\n - Homepage: https://github.com/gt1/libmaus2\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/libmaus2/2.0.611-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000000.000000611.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000002.000000000.000000611.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: libmaus2 is a collection of data structures and algorithms.",
+                "Homepage: https://github.com/gt1/libmaus2"
             ]
         }
     },

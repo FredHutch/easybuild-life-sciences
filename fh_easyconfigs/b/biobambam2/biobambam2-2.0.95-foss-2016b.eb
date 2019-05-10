@@ -1,0 +1,38 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center - Seattle WA US
+easyblock = 'ConfigureMake'
+
+name = 'biobambam2'
+version = '2.0.95'
+#commit = '20190320141403'
+
+homepage = 'https://github.com/gt1/biobambam2'
+description = """Tools for processing BAM files; 
+ bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,
+ bamsort, bamtofastq"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://gitlab.com/german.tischler/biobambam2/-/archive/%(version)s-release-20190320141403']
+sources = ['%(name)s-%(version)s-release-20190320141403.tar.gz']
+checksums = ['1233613df164856bbeb4079f6d64de5890b2428cdcc5fa1e47366a73c5f70fae']
+
+#preconfigopts = 'autoconf -i -f && '
+
+#builddependencies = [('Autoconf', '2.69')]
+
+dependencies = [
+    ('libmaus2', '2.0.611'),
+]
+
+configopts = "--with-libmaus2=$EBROOTLIBMAUS2"
+
+sanity_check_paths = {
+    'files': ['bin/bamcollate2', 'bin/bammarkduplicates', 'bin/bammaskflags', 'bin/bamrecompress',
+              'bin/bamsormadup', 'bin/bamsort', 'bin/bamtofastq'],
+    'dirs': ['share/man'],
+}
+
+moduleclass = 'bio'

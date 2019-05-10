@@ -4,7 +4,10 @@ name = 'ESS'
 version = '16.10'
 
 homepage = 'http://ess.r-project.org/'
-description = """Emacs Speaks Statistics (ESS) is an add-on package for emacs text editors such as GNU Emacs and XEmacs. It is designed to support editing of scripts and interaction with various statistical analysis programs such as R, S-Plus, SAS, Stata and OpenBUGS/JAGS."""
+description = """Emacs Speaks Statistics (ESS) is an add-on package for emacs
+ text editors such as GNU Emacs and XEmacs. It is designed to support editing
+ of scripts and interaction with various statistical analysis programs such as
+ R, S-Plus, SAS, Stata and OpenBUGS/JAGS."""
 
 toolchain = {'name': 'dummy', 'version': ''}
 
@@ -12,9 +15,10 @@ source_urls = ['http://ess.r-project.org/downloads/ess/']
 sources = [SOURCELOWER_ZIP]   # 1610 release .tgz file is not gzipped
 
 modloadmsg = """To use ESS, you must add to your emacs config:\n
-(load \"ess-site\")\n"""
+(load \"ess-site\")\n
+"""
 
-modextravars = {'EMACSLOADPATH': '$EBROOTESS/lisp/:'}
+modextravars = {'EMACSLOADPATH': '%(installdir)s/lisp/'}
 
 sanity_check_paths = {
     'files': [],

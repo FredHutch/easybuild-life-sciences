@@ -7,6 +7,7 @@
 # Used to create software Inventory
 
 repo='easybuild-life-sciences'
+github-repo='https://github.com/FredHutch/easybuild-life-sciences/'
 
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Can not find github pages docs directory."
