@@ -36,6 +36,22 @@
                 "Description: BBMap short read aligner, and other bioinformatic tools.",
                 "Homepage: https://sourceforge.net/projects/bbmap/"
             ]
+        },
+        "/app/easybuild/modules/bio/BBMap/38.44-foss-2016b.lua": {
+            "Description": "BBMap short read aligner, and other bioinformatic tools.",
+            "Version": "38.44-foss-2016b",
+            "fullName": "BBMap/38.44-foss-2016b",
+            "help": "\nDescription\n===========\nBBMap short read aligner, and other bioinformatic tools.\n\n\nMore information\n================\n - Homepage: https://sourceforge.net/projects/bbmap/\n",
+            "hidden": false,
+            "pV": "000000038.000000044.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BBMap/38.44-foss-2016b": 1
+            },
+            "wV": "000000038.000000044.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: BBMap short read aligner, and other bioinformatic tools.",
+                "Homepage: https://sourceforge.net/projects/bbmap/"
+            ]
         }
     },
     "BCFtools": {
@@ -84,6 +100,22 @@
             "wV": "000000001.000000008.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
+                "Homepage: http://www.htslib.org/"
+            ]
+        },
+        "/app/easybuild/modules/bio/BCFtools/1.9-foss-2016b-fh1.lua": {
+            "Description": "Samtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants",
+            "Version": "1.9-foss-2016b-fh1",
+            "fullName": "BCFtools/1.9-foss-2016b-fh1",
+            "help": "\nDescription\n===========\nSamtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "pV": "000000001.000000009.*foss.*zfinal-.000002016.*b.*fh.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BCFtools/1.9-foss-2016b-fh1/bin": 1
+            },
+            "wV": "000000001.000000009.*foss.*zfinal-.000002016.*b.*fh.000000001.*zfinal",
+            "whatis": [
+                "Description: Samtools is a suite of programs for interacting with high-throughput sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising SNP and short indel sequence\n variants",
                 "Homepage: http://www.htslib.org/"
             ]
         },
@@ -188,6 +220,22 @@
             "wV": "000000002.000000026.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: The BEDTools utilities allow one to address common genomics tasks such as finding feature overlaps  and computing coverage. The utilities are largely based on four widely-used file formats: BED, GFF/GTF, VCF,  and SAM/BAM. - Homepage: https://github.com/arq5x/bedtools2 "
+            ]
+        },
+        "/app/easybuild/modules/bio/BEDTools/2.27.1-foss-2016b.lua": {
+            "Description": "The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+            "Version": "2.27.1-foss-2016b",
+            "fullName": "BEDTools/2.27.1-foss-2016b",
+            "help": "\nDescription\n===========\nThe BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.\n\n\nMore information\n================\n - Homepage: https://github.com/arq5x/bedtools2\n",
+            "hidden": false,
+            "pV": "000000002.000000027.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BEDTools/2.27.1-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000027.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+                "Homepage: https://github.com/arq5x/bedtools2"
             ]
         }
     },
@@ -509,6 +557,34 @@
             "wV": "000000001.000000007.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
             "whatis": [
                 "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.  Examples include Sequence objects, Alignment objects and database searching objects. - Homepage: http://www.bioperl.org/ "
+            ]
+        }
+    },
+    "Biopython": {
+        "/app/easybuild/modules/bio/Biopython/1.72-foss-2016b-Python-2.7.15.lua": {
+            "Description": "Biopython is a set of freely available tools for biological computation written\nin Python by an international team of developers. It is a distributed collaborative effort to\ndevelop Python libraries and applications which address the needs of current and future work in\nbioinformatics. ",
+            "Version": "1.72-foss-2016b-Python-2.7.15",
+            "fullName": "Biopython/1.72-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological computation written\nin Python by an international team of developers. It is a distributed collaborative effort to\ndevelop Python libraries and applications which address the needs of current and future work in\nbioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000072.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000001.000000072.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological computation written\nin Python by an international team of developers. It is a distributed collaborative effort to\ndevelop Python libraries and applications which address the needs of current and future work in\nbioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        },
+        "/app/easybuild/modules/bio/Biopython/1.72-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.72-foss-2018b-Python-2.7.15",
+            "fullName": "Biopython/1.72-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
             ]
         }
     },
@@ -835,6 +911,19 @@
                 "Description: Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.",
                 "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
             ]
+        },
+        "/app/easybuild/modules/math/Eigen/3.3.5.lua": {
+            "Description": "Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+            "Version": "3.3.5",
+            "fullName": "Eigen/3.3.5",
+            "help": "\nDescription\n===========\nEigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n\n\nMore information\n================\n - Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page\n",
+            "hidden": false,
+            "pV": "000000003.000000003.000000005.*zfinal",
+            "wV": "000000003.000000003.000000005.*zfinal",
+            "whatis": [
+                "Description: \n Eigen is a C++ template library for linear algebra:\n matrices, vectors, numerical solvers, and related algorithms.\n",
+                "Homepage: http://eigen.tuxfamily.org/index.php?title=Main_Page"
+            ]
         }
     },
     "FASTX-Toolkit": {
@@ -1041,6 +1130,22 @@
                 "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
                 "Homepage: http://www.broadinstitute.org/gatk/"
             ]
+        },
+        "/app/easybuild/modules/bio/GATK/4.1.0.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.0.0-foss-2016b-Python-3.6.6",
+            "fullName": "GATK/4.1.0.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GATK/4.1.0.0-foss-2016b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
         }
     },
     "GEOS": {
@@ -1079,6 +1184,25 @@
             "wV": "000000003.000000006.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
             "whatis": [
                 "Description: GEOS (Geometry Engine - Open Source) is a C++ port of the  Java Topology Suite (JTS)",
+                "Homepage: http://trac.osgeo.org/geos"
+            ]
+        },
+        "/app/easybuild/modules/math/GEOS/3.6.2-foss-2016b-Python-3.6.6.lua": {
+            "Description": "GEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)",
+            "Version": "3.6.2-foss-2016b-Python-3.6.6",
+            "fullName": "GEOS/3.6.2-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nGEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)\n\n\nMore information\n================\n - Homepage: http://trac.osgeo.org/geos\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GEOS/3.6.2-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000003.000000006.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GEOS/3.6.2-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000003.000000006.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: GEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)",
                 "Homepage: http://trac.osgeo.org/geos"
             ]
         }
@@ -1251,6 +1375,22 @@
             "whatis": [
                 "Description: GMP is a free library for arbitrary precision arithmetic,  operating on signed integers, rational numbers, and floating point numbers.  - Homepage: http://gmplib.org/ "
             ]
+        },
+        "/app/easybuild/modules/math/GMP/6.1.2-GCCcore-7.3.0.lua": {
+            "Description": "GMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n",
+            "Version": "6.1.2-GCCcore-7.3.0",
+            "fullName": "GMP/6.1.2-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n\n\nMore information\n================\n - Homepage: http://gmplib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GMP/6.1.2-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000006.000000001.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "wV": "000000006.000000001.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n GMP is a free library for arbitrary precision arithmetic, operating on signed\n integers, rational numbers, and floating point numbers.\n",
+                "Homepage: http://gmplib.org/"
+            ]
         }
     },
     "GROMACS": {
@@ -1403,6 +1543,25 @@
                 "Description: A C library for reading/writing high-throughput sequencing data.\n HTSlib also provides the bgzip, htsfile, and tabix utilities",
                 "Homepage: http://www.htslib.org/"
             ]
+        },
+        "/app/easybuild/modules/bio/HTSlib/1.9-foss-2018b.lua": {
+            "Description": "A C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix",
+            "Version": "1.9-foss-2018b",
+            "fullName": "HTSlib/1.9-foss-2018b",
+            "help": "\nDescription\n===========\nA C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/HTSlib/1.9-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/HTSlib/1.9-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000009.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: A C library for reading/writing high-throughput sequencing data.\n This package includes the utilities bgzip and tabix",
+                "Homepage: http://www.htslib.org/"
+            ]
         }
     },
     "Homer": {
@@ -1477,6 +1636,25 @@
                 "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
                 "Homepage: http://www.broadinstitute.org/software/igv/"
             ]
+        },
+        "/app/easybuild/modules/bio/IGV/2.5.0-Java-11.lua": {
+            "Description": "This package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files.",
+            "Version": "2.5.0-Java-11",
+            "fullName": "IGV/2.5.0-Java-11",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/IGV/2.5.0-Java-11/lib": 1
+            },
+            "pV": "000000002.000000005.*java.*zfinal-.000000011.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/IGV/2.5.0-Java-11": 1
+            },
+            "wV": "000000002.000000005.*java.*zfinal-.000000011.*zfinal",
+            "whatis": [
+                "Description: This package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files.",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
         }
     },
     "IGVTools": {
@@ -1493,6 +1671,25 @@
             "wV": "000000002.000000003.000000093.*java.*zfinal-.000000001.000000008.*_.000000121.*zfinal",
             "whatis": [
                 "Description:  This package contains command line utilities for preprocessing, \n computing feature count density (coverage),  sorting, and indexing data files.\n See also http://www.broadinstitute.org/software/igv/igvtools_commandline. ",
+                "Homepage: http://www.broadinstitute.org/software/igv/"
+            ]
+        },
+        "/app/easybuild/modules/bio/IGVTools/2.4.16-Java-1.8.lua": {
+            "Description": "This package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files. ",
+            "Version": "2.4.16-Java-1.8",
+            "fullName": "IGVTools/2.4.16-Java-1.8",
+            "help": "\nDescription\n===========\nThis package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/software/igv/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/IGVTools/2.4.16-Java-1.8/lib": 1
+            },
+            "pV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/IGVTools/2.4.16-Java-1.8": 1
+            },
+            "wV": "000000002.000000004.000000016.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: This package contains command line utilities for\n preprocessing, computing feature count density (coverage),  sorting, and\n indexing data files. ",
                 "Homepage: http://www.broadinstitute.org/software/igv/"
             ]
         }
@@ -2032,6 +2229,34 @@
             ]
         }
     },
+    "Pysam": {
+        "/app/easybuild/modules/bio/Pysam/0.15.1-foss-2016b-Python-2.7.15.lua": {
+            "Description": "Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+            "Version": "0.15.1-foss-2016b-Python-2.7.15",
+            "fullName": "Pysam/0.15.1-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nPysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.\n\n\nMore information\n================\n - Homepage: https://github.com/pysam-developers/pysam\n",
+            "hidden": false,
+            "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+                "Homepage: https://github.com/pysam-developers/pysam"
+            ]
+        },
+        "/app/easybuild/modules/bio/Pysam/0.15.1-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+            "Version": "0.15.1-foss-2018b-Python-2.7.15",
+            "fullName": "Pysam/0.15.1-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nPysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.\n\n\nMore information\n================\n - Homepage: https://github.com/pysam-developers/pysam\n",
+            "hidden": false,
+            "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+                "Homepage: https://github.com/pysam-developers/pysam"
+            ]
+        }
+    },
     "Queue": {
         "/app/easybuild/modules/bio/Queue/3.5-Java-1.8.0_66": {
             "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
@@ -2118,6 +2343,27 @@
             "whatis": [
                 "Description: RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.",
                 "Homepage: https://github.com/stamatak/standard-RAxML"
+            ]
+        }
+    },
+    "RELION": {
+        "/app/easybuild/modules/bio/RELION/3.0_beta-foss-2018b.lua": {
+            "Description": "RELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).",
+            "Version": "3.0_beta-foss-2018b",
+            "fullName": "RELION/3.0_beta-foss-2018b",
+            "help": "\nDescription\n===========\nRELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).\n\n\nMore information\n================\n - Homepage: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/RELION/3.0_beta-foss-2018b/lib": 1
+            },
+            "pV": "000000003.*_.*beta.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/RELION/3.0_beta-foss-2018b/bin": 1
+            },
+            "wV": "000000003.*_.*beta.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: RELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).",
+                "Homepage: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page"
             ]
         }
     },
@@ -2536,6 +2782,44 @@
             "whatis": [
                 " STAR aligns RNA-seq reads to a reference genome using   uncompressed suffix arrays.  - Homepage: https://code.google.com/p/rna-star/ "
             ]
+        },
+        "/app/easybuild/modules/bio/STAR/2.6.1c-foss-2016b.lua": {
+            "Description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+            "Version": "2.6.1c-foss-2016b",
+            "fullName": "STAR/2.6.1c-foss-2016b",
+            "help": "\nDescription\n===========\nSTAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.\n\n\nMore information\n================\n - Homepage: https://github.com/alexdobin/STAR\n",
+            "hidden": false,
+            "pV": "000000002.000000006.000000001.*c.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/STAR/2.6.1c-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000006.000000001.*c.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+                "Homepage: https://github.com/alexdobin/STAR"
+            ]
+        }
+    },
+    "STAR-Fusion": {
+        "/app/easybuild/modules/bio/STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0.lua": {
+            "Description": "STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.",
+            "Version": "1.5.0-foss-2016b-Perl-5.28.0",
+            "fullName": "STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nSTAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.\n\n\nMore information\n================\n - Homepage: https://github.com/STAR-Fusion/STAR-Fusion\n\n\nIncluded extensions\n===================\nDB_File-1.835, Set::IntervalTree-0.10\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000005.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0": 1
+            },
+            "wV": "000000001.000000005.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.",
+                "Homepage: https://github.com/STAR-Fusion/STAR-Fusion",
+                "Extensions: DB_File-1.835, Set::IntervalTree-0.10"
+            ]
         }
     },
     "SUGEN": {
@@ -2937,6 +3221,24 @@
             ]
         }
     },
+    "biobambam2": {
+        "/app/easybuild/modules/bio/biobambam2/2.0.95-foss-2016b.lua": {
+            "Description": "Tools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq",
+            "Version": "2.0.95-foss-2016b",
+            "fullName": "biobambam2/2.0.95-foss-2016b",
+            "help": "\nDescription\n===========\nTools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq\n\n\nMore information\n================\n - Homepage: https://github.com/gt1/biobambam2\n",
+            "hidden": false,
+            "pV": "000000002.000000000.000000095.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/biobambam2/2.0.95-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000000.000000095.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: Tools for processing BAM files; \n bamsormadup, bamcollate2, bammarkduplicates, bammaskflags, bamrecompress,\n bamsort, bamtofastq",
+                "Homepage: https://github.com/gt1/biobambam2"
+            ]
+        }
+    },
     "biopython": {
         "/app/easybuild/modules/bio/biopython/1.66-foss-2015b-Python-2.7.9": {
             "Version": "1.66-foss-2015b-Python-2.7.9",
@@ -3074,6 +3376,24 @@
             ]
         }
     },
+    "cellranger-atac": {
+        "/app/easybuild/modules/bio/cellranger-atac/1.1.0-foss-2016b.lua": {
+            "Description": "The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.",
+            "Version": "1.1.0-foss-2016b",
+            "fullName": "cellranger-atac/1.1.0-foss-2016b",
+            "help": "\nDescription\n===========\nThe Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.\n\n\nMore information\n================\n - Homepage: https://support.10xgenomics.com/single-cell-atac/software/overview/welcome\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cellranger-atac/1.1.0-foss-2016b": 1
+            },
+            "wV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.",
+                "Homepage: https://support.10xgenomics.com/single-cell-atac/software/overview/welcome"
+            ]
+        }
+    },
     "conifer": {
         "/app/easybuild/modules/bio/conifer/0.2.2-foss-2015b-Python-2.7.9": {
             "Description": "CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes. - Homepage: https://sourceforge.net/projects/conifer ",
@@ -3117,6 +3437,22 @@
         }
     },
     "ctffind": {
+        "/app/easybuild/modules/bio/ctffind/4.1.10-foss-2018b.lua": {
+            "Description": "CTFFIND is a programing for finding CTFs of electron\nmicrographs",
+            "Version": "4.1.10-foss-2018b",
+            "fullName": "ctffind/4.1.10-foss-2018b",
+            "help": "\nDescription\n===========\nCTFFIND is a programing for finding CTFs of electron\nmicrographs\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/ctf\n",
+            "hidden": false,
+            "pV": "000000004.000000001.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ctffind/4.1.10-foss-2018b/bin": 1
+            },
+            "wV": "000000004.000000001.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: CTFFIND is a programing for finding CTFs of electron\nmicrographs",
+                "Homepage: http://grigoriefflab.janelia.org/ctf"
+            ]
+        },
         "/app/easybuild/modules/bio/ctffind/4.1.8-foss-2016b.lua": {
             "Description": "program for finding CTFs of electron micrographs",
             "Version": "4.1.8-foss-2016b",
@@ -3381,6 +3717,27 @@
             ]
         }
     },
+    "lemon": {
+        "/app/easybuild/modules/math/lemon/1.3.1-foss-2016b.lua": {
+            "Description": "LEMON stands for Library for Efficient Modeling and\n Optimization in Networks. It is a C++ template library providing efficient\n implementations of common data structures and algorithms with focus on\n combinatorial optimization tasks connected mainly with graphs and networks.",
+            "Version": "1.3.1-foss-2016b",
+            "fullName": "lemon/1.3.1-foss-2016b",
+            "help": "\nDescription\n===========\nLEMON stands for Library for Efficient Modeling and\n Optimization in Networks. It is a C++ template library providing efficient\n implementations of common data structures and algorithms with focus on\n combinatorial optimization tasks connected mainly with graphs and networks.\n\n\nMore information\n================\n - Homepage: http://lemon.cs.elte.hu/trac/lemon\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/lemon/1.3.1-foss-2016b/lib": 1
+            },
+            "pV": "000000001.000000003.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/lemon/1.3.1-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000003.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: LEMON stands for Library for Efficient Modeling and\n Optimization in Networks. It is a C++ template library providing efficient\n implementations of common data structures and algorithms with focus on\n combinatorial optimization tasks connected mainly with graphs and networks.",
+                "Homepage: http://lemon.cs.elte.hu/trac/lemon"
+            ]
+        }
+    },
     "libcerf": {
         "/app/easybuild/modules/math/libcerf/1.5-foss-2016b.lua": {
             "Description": "libcerf is a self-contained numeric library that provides an efficient and accurate\n implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions. - Homepage: http://gnuplot.sourceforge.net/",
@@ -3533,6 +3890,23 @@
         }
     },
     "nanopolish": {
+        "/app/easybuild/modules/bio/nanopolish/0.10.2-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
+            "Version": "0.10.2-foss-2018b-Python-2.7.15",
+            "fullName": "nanopolish/0.10.2-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nSoftware package for signal-level analysis of Oxford Nanopore\n sequencing data.\n\n\nMore information\n================\n - Homepage: http://github.com/jts/nanopolish\n",
+            "hidden": false,
+            "pV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/nanopolish/0.10.2-foss-2018b-Python-2.7.15/bin": 1,
+                "/app/easybuild/software/nanopolish/0.10.2-foss-2018b-Python-2.7.15/scripts": 1
+            },
+            "wV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
+                "Homepage: http://github.com/jts/nanopolish"
+            ]
+        },
         "/app/easybuild/modules/bio/nanopolish/0.6.0-foss-2016b.lua": {
             "Description": "Our computational work focuses on the development of\nalgorithms for handling very large sequencing data sets, from indexing\nand text compression, to probabilistic modeling and inference. We make\nour methods freely available as open source software. - Homepage: http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/",
             "Version": "0.6.0-foss-2016b",
@@ -3764,6 +4138,46 @@
                 "Description: Guppy software supports MinIT and MinION instruments from\n Nanopore Technologies",
                 "Homepage: https://nanoporetech.com/products/minit"
             ]
+        },
+        "/app/easybuild/modules/bio/ont-guppy-cpu/2.3.7.lua": {
+            "Description": "Guppy software supports MinIT and MinION instruments from\n Nanopore Technologies",
+            "Version": "2.3.7",
+            "fullName": "ont-guppy-cpu/2.3.7",
+            "help": "\nDescription\n===========\nGuppy software supports MinIT and MinION instruments from\n Nanopore Technologies\n\n\nMore information\n================\n - Homepage: https://nanoporetech.com/products/minit\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ont-guppy-cpu/2.3.7/lib": 1
+            },
+            "pV": "000000002.000000003.000000007.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ont-guppy-cpu/2.3.7/bin": 1
+            },
+            "wV": "000000002.000000003.000000007.*zfinal",
+            "whatis": [
+                "Description: Guppy software supports MinIT and MinION instruments from\n Nanopore Technologies",
+                "Homepage: https://nanoporetech.com/products/minit"
+            ]
+        }
+    },
+    "parasail": {
+        "/app/easybuild/modules/bio/parasail/2.4-foss-2016b.lua": {
+            "Description": "parasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms. ",
+            "Version": "2.4-foss-2016b",
+            "fullName": "parasail/2.4-foss-2016b",
+            "help": "\nDescription\n===========\nparasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms.\n\n\nMore information\n================\n - Homepage: https://github.com/jeffdaily/parasail\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/parasail/2.4-foss-2016b/lib": 1
+            },
+            "pV": "000000002.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/parasail/2.4-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: parasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms. ",
+                "Homepage: https://github.com/jeffdaily/parasail"
+            ]
         }
     },
     "picard": {
@@ -3808,6 +4222,22 @@
                 "/app/easybuild/software/picard/2.18.1-Java-1.8.0_121": 1
             },
             "wV": "000000002.000000018.000000001.*java.*zfinal-.000000001.000000008.*_.000000121.*zfinal",
+            "whatis": [
+                "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+                "Homepage: http://sourceforge.net/projects/picard"
+            ]
+        },
+        "/app/easybuild/modules/bio/picard/2.18.29-Java.lua": {
+            "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
+            "Version": "2.18.29-Java",
+            "fullName": "picard/2.18.29-Java",
+            "help": "\nDescription\n===========\nA set of tools (in Java) for working with next generation sequencing data in the BAM format.\n\n\nMore information\n================\n - Homepage: http://sourceforge.net/projects/picard\n",
+            "hidden": false,
+            "pV": "000000002.000000018.000000029.*java.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/picard/2.18.29-Java": 1
+            },
+            "wV": "000000002.000000018.000000029.*java.*zfinal",
             "whatis": [
                 "Description: A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
                 "Homepage: http://sourceforge.net/projects/picard"
@@ -3931,6 +4361,28 @@
             ]
         }
     },
+    "qcat": {
+        "/app/easybuild/modules/bio/qcat/1.0.1-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+            "Version": "1.0.1-foss-2016b-Python-3.6.6",
+            "fullName": "qcat/1.0.1-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nQcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech/\n\n\nIncluded extensions\n===================\nbiopython-1.73, parasail-1.1.16, PyYAML-3.12, qcat-1.0.1, wheel-0.33.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/qcat/1.0.1-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000000.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/qcat/1.0.1-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+                "Homepage: https://github.com/nanoporetech/",
+                "Extensions: biopython-1.73, parasail-1.1.16, PyYAML-3.12, qcat-1.0.1, wheel-0.33.1"
+            ]
+        }
+    },
     "samblaster": {
         "/app/easybuild/modules/bio/samblaster/0.1.22-foss-2016a": {
             "Description": "samblaster is a fast and flexible program for marking duplicates in read-id grouped1 paired-end SAM files. - Homepage: https://github.com/GregoryFaust/samblaster ",
@@ -3993,6 +4445,24 @@
             "whatis": [
                 "Description: Strelka2 is a fast and accurate small variant caller\n optimized for analysis of germline variation in small cohorts and\n somatic variation in tumor/normal sample pairs.",
                 "Homepage: https://github.com/Illumina/strelka"
+            ]
+        }
+    },
+    "summovie": {
+        "/app/easybuild/modules/bio/summovie/1.0.2-binary.lua": {
+            "Description": "Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur. ",
+            "Version": "1.0.2-binary",
+            "fullName": "summovie/1.0.2-binary",
+            "help": "\nDescription\n===========\nUnblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur.\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/unblur\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000002.*binary.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/summovie/1.0.2-binary/bin": 1
+            },
+            "wV": "000000001.000000000.000000002.*binary.*zfinal",
+            "whatis": [
+                "Description: Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion. Movie\nframe sums can also be calculated using Summovie, which uses the alignment\nresults from a prior run of Unblur. ",
+                "Homepage: http://grigoriefflab.janelia.org/unblur"
             ]
         }
     },
@@ -4068,6 +4538,24 @@
             "wV": "000000017.*zfinal-.000000001.*zfinal-.000000001.*zfinal-.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: X! Tandem open source is software that can match tandem mass spectra with peptide sequences, in a process that has come to be known as protein identification. - Homepage: http://www.thegpm.org/TANDEM/instructions.html "
+            ]
+        }
+    },
+    "unblur": {
+        "/app/easybuild/modules/bio/unblur/1.0.2-binary.lua": {
+            "Description": "Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
+            "Version": "1.0.2-binary",
+            "fullName": "unblur/1.0.2-binary",
+            "help": "\nDescription\n===========\nUnblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.\n\n\nMore information\n================\n - Homepage: http://grigoriefflab.janelia.org/unblur\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000002.*binary.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/unblur/1.0.2-binary/bin": 1
+            },
+            "wV": "000000001.000000000.000000002.*binary.*zfinal",
+            "whatis": [
+                "Description: Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
+                "Homepage: http://grigoriefflab.janelia.org/unblur"
             ]
         }
     },
