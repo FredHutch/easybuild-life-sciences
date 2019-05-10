@@ -1,10 +1,11 @@
 ---
 title: All Modules  14.04
-permalink: /all-modules-14.04.md/
+permalink: /all-modules-14.04/
 layout: single
+toc: true
+toc_lable: "On This Page"
 sidebar:
   nav: "docs"
-date: 2019-05-10
 ---
 
  - [AMOS/3.1.0-foss-2016b](http://sourceforge.net/apps/mediawiki/amos/index.php?title=AMOS) 
