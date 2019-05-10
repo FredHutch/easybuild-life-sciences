@@ -27,7 +27,7 @@ dependencies = [
     ('R', rver),
     ('libwebp', '1.0.0'), # webp
     ('PostgreSQL', '10.1'),
-    ('MariaDB', '10.1.17'),
+    ('MariaDB', '10.3.10'), # RMySQL
     ('JAGS', '4.2.0'),
     ('GLPK', '4.61'), # rglpk
     ('poppler', '0.54.0'), # pdftools
