@@ -11,8 +11,10 @@ docs:
         url: /
       - title: "Software Updates"
         url: /updates/
-      - title: "Software Inventory"
+      - title: "Bio Software Inventory"
         url: /bio-modules-14.04/
+      - title: "Full Software Inventory"
+        url: /all-modules-14.04/
       - title: "R Modules"
         url: /r/
       - title: "Python Modules"
