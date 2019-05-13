@@ -19,19 +19,19 @@ sources = [SOURCELOWER_TAR_XZ]
 dependencies = [
     ('Python', '3.7.2'),
     ('netCDF', '4.6.2'),
-    ('expat', '2.2.5'),
+    ('expat', '2.2.6'),
     ('GEOS', '3.7.2', '-Python-%(pyver)s'),
-    ('SQLite', '3.24.0'),
+    ('SQLite', '3.27.2'),
     ('libxml2', '2.9.8'),
     ('libpng', '1.6.36'),
-    ('libjpeg-turbo', '2.0.0'),
+    ('libjpeg-turbo', '2.0.2'),
     ('JasPer', '2.0.14'),
     ('LibTIFF', '4.0.10'),
     ('zlib', '1.2.11'),
     ('cURL', '7.60.0'),
     ('PCRE', '8.41'),
-    ('PROJ', '5.0.0'),
-    ('libgeotiff', '1.4.2'),
+    ('PROJ', '6.0.0'),
+    ('libgeotiff', '1.5.1'),
 ]
 
 configopts = '--with-expat=$EBROOTEXPAT --with-libz=$EBROOTLIBZ --with-hdf5=$EBROOTHDF5 --with-netcdf=$EBROOTNETCDF'

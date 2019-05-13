@@ -36,7 +36,7 @@ dependencies = [
     ('GDAL', '2.4.1', '-Python-3.7.3'),  # for rgdal
     ('PROJ', '5.0.0'),  # for rgdal
     ('GMP', '6.1.2'),  # for igraph
-    ('NLopt', '2.4.2'),  # for nloptr
+    ('NLopt', '2.6.1'),  # for nloptr
     ('FFTW', '3.3.8'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
     ('ICU', '61.1'),  # for rJava & gdsfmt
