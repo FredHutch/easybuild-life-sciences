@@ -51,7 +51,7 @@ for p in slist:
        entry = [x for x in release['whatis'] if 'Homepage: ' in x]
        text = entry[0].split('Homepage: ')[1]
        url = text.encode('utf8', 'replace')
-   print(' - [' + release['fullName'] + '](' + url + ') '),
+   print(' - [' + release['fullName'] + '](' + url + ')  '),
    if easyconfig_url:
        print('[easyconfig](' + easyconfig_url + ')  ')
    else:
