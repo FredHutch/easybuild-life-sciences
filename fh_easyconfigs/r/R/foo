@@ -1,0 +1,9 @@
+#docker cp 2019a:/ls2/cairo-1.16.0-GCCcore-8.2.0.eb ../../c/cairo
+#docker cp 2019a:/ls2/libsndfile-1.0.28-GCCcore-8.2.0.eb ../../l/libsndfile
+#docker cp 2019a:/ls2/ICU-64.2-GCCcore-8.2.0.eb ../../i/ICU
+#docker cp 2019a:/ls2/UDUNITS-2.2.26-GCCcore-8.2.0.eb ../../u/UDUNITS
+#docker cp 2019a:/ls2/ImageMagick-7.0.8-45-GCCcore-8.2.0.eb ../../i/ImageMagick
+
+docker cp 2019a:/ls2/GLib-2.60.1-GCCcore-8.2.0.eb ../../g/GLib
+docker cp 2019a:/ls2/Ghostscript-9.27-GCCcore-8.2.0.eb ../../g/Ghostscript
+docker cp 2019a:/ls2/LittleCMS-2.9-GCCcore-8.2.0.eb ../../l/LittleCMS

@@ -15,6 +15,7 @@ toolchainopts = {'usempi': True}
 
 source_urls = ['http://download.osgeo.org/gdal/%(version)s/']
 sources = [SOURCELOWER_TAR_XZ]
+checksums = ['fd51b4900b2fc49b98d8714f55fc8a78ebfd07218357f93fb796791115a5a1ad']
 
 dependencies = [
     ('Python', '3.7.2'),
