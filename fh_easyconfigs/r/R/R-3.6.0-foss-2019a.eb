@@ -33,17 +33,17 @@ dependencies = [
     ('Tk', '8.6.9'),  # for tcltk
     ('cURL', '7.63.0'),  # for RCurl
     ('libxml2', '2.9.8'),  # for XML
-    ('GDAL', '2.4.1', '-Python-3.7.3'),  # for rgdal
-    ('PROJ', '5.0.0'),  # for rgdal
+    ('GDAL', '2.4.1', '-Python-3.7.2'),  # for rgdal
+    ('PROJ', '6.0.0'),  # for rgdal
     ('GMP', '6.1.2'),  # for igraph
     ('NLopt', '2.6.1'),  # for nloptr
     ('FFTW', '3.3.8'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
-    ('ICU', '61.1'),  # for rJava & gdsfmt
+    ('ICU', '64.2'),  # for rJava & gdsfmt
     ('HDF5', '1.10.5'),  # for hdf5r
     ('UDUNITS', '2.2.26'),  # for units
     ('GSL', '2.5'),  # for RcppGSL
-    ('ImageMagick', '7.0.8-11'),  # for animation
+    ('ImageMagick', '7.0.8-45'),  # for animation
     # OS dependency should be preferred if the os version is more recent then
     # this version, it's nice to have an up to date openssl for security
     # reasons
