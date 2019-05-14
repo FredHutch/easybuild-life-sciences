@@ -34,8 +34,6 @@ dependencies = [
     ('Tk', '8.6.9'),  # for tcltk
     ('cURL', '7.63.0'),  # for RCurl
     ('libxml2', '2.9.8'),  # for XML
-    ('GDAL', '2.4.1', '-Python-3.7.2'),  # for rgdal
-    ('PROJ', '6.0.0'),  # for rgdal
     ('GMP', '6.1.2'),  # for igraph
     ('NLopt', '2.6.1'),  # for nloptr
     ('FFTW', '3.3.8'),  # for fftw
@@ -871,17 +869,8 @@ exts_list = [
     ('classInt', '0.3-3', {
         'checksums': ['a93e685ef9c40d5977bb91d7116505a25303b229897a20544722a94ea1365f30'],
     }),
-    ('sf', '0.7-4', {
-        'checksums': ['2112281803b2f87dfb33cf20825d960cb4e9084533acbc26128932e7fbc9de6e'],
-    }),
-    ('spdep', '1.1-2', {
-        'checksums': ['ba0ca3a0ad6b9cc1dc46cadd9e79259949ad38c88f738e98e482d6c06640b31a'],
-    }),
     ('vegan', '2.5-5', {
         'checksums': ['876b5266f29f3034fed881020d16f476e62d145a00cb450a1a213e019e056971'],
-    }),
-    ('adegenet', '2.1.1', {
-        'checksums': ['3043fe5d731a38ff0e266f090dcda448640c3d0fd61934c76da32d082e5dce7a'],
     }),
     ('progress', '1.2.1', {
         'checksums': ['7401e86ff76bef4d26508b74ee8bd169a0377b2738d9ec79ebff0b7fd5c55326'],
@@ -984,9 +973,6 @@ exts_list = [
     }),
     ('phylobase', '0.8.6', {
         'checksums': ['e7117b210ef406115e5523b794d8c2c5779640cee8c06e73751dc14c69322fd9'],
-    }),
-    ('adephylo', '1.1-11', {
-        'checksums': ['154bf2645eac4493b85877933b9445442524ca4891aefe4e80c294c398cff61a'],
     }),
     ('magick', '2.0', {
         'checksums': ['559cd274b0148e89f66ccbf111a4123f600e67fa7258293a220ed6224631c4a3'],
@@ -1338,12 +1324,6 @@ exts_list = [
     }),
     ('spatstat', '1.59-0', {
         'checksums': ['a78485f3693f606a473c74f0e395458b67766202499d60a02135b9a33cf9470d'],
-    }),
-    ('rgdal', '1.4-3', {
-        'checksums': ['69ce1cb3ff7221482114f964b5636d5e5b1677f13431161ce9d5cca123b54805'],
-    }),
-    ('gdalUtils', '2.0.1.14', {
-        'checksums': ['890a502b2eb5f1b23655fab94caad5d32adca05b93f5db1d96d9dcde3f0e7737'],
     }),
     ('pracma', '2.2.5', {
         'checksums': ['2fe83e3a556f5aab3ba4c9867630283c78c9a13912c04991daf55712811e4d47'],
