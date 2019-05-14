@@ -37,16 +37,17 @@ $spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool
 
 echo Generating Markdown
 json_in=${docs_dir}/modules-${os_ver}.json
-md_file=bio-modules-${os_ver}.md
-md_out=${docs_dir}/${md_file}
+md_file=bio-modules-${os_ver}
+md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
-echo 'title: Bio Modules ' $os_ver >> ${md_out}
-echo 'permalink: /${md_file}' >> ${md_out}
+echo 'title: Bio Modules' $os_ver >> ${md_out}
 echo 'layout: single' >> ${md_out}
+echo "permalink: /${md_file}/" >> ${md_out}
+echo 'toc: true' >> ${md_out}
+echo 'toc_label: "On This Page"' >> ${md_out}
 echo 'sidebar:' >> ${md_out}
 echo '  nav: "docs"' >> ${md_out}
-echo 'date: '`date +'%Y-%m-%d'` >> ${md_out}
 echo '---' >> ${md_out}
 echo '' >> ${md_out}
 

@@ -7,7 +7,6 @@
 # Used to create software Inventory
 
 repo='easybuild-life-sciences'
-github-repo='https://github.com/FredHutch/easybuild-life-sciences/'
 
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Can not find github pages docs directory."
@@ -38,16 +37,17 @@ $spider -o spider-json ${module_dir}/all | python -mjson.tool >${docs_dir}/all-m
 
 echo Generating Markdown
 json_in=${docs_dir}/all-modules-${os_ver}.json
-md_file=all-modules-${os_ver}.md
-md_out=${docs_dir}/${md_file}
+md_file=all-modules-${os_ver}
+md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
-echo 'title: All Modules ' $os_ver >> ${md_out}
+echo 'title: All Modules' $os_ver >> ${md_out}
 echo "permalink: /${md_file}/" >> ${md_out}
 echo 'layout: single' >> ${md_out}
+echo 'toc: true' >> ${md_out}
+echo 'toc_label: "On This Page"' >> ${md_out}
 echo 'sidebar:' >> ${md_out}
 echo '  nav: "docs"' >> ${md_out}
-echo 'date: '`date +'%Y-%m-%d'` >> ${md_out}
 echo '---' >> ${md_out}
 echo '' >> ${md_out}
 
