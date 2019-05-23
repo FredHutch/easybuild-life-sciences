@@ -26,22 +26,12 @@ Adding every user request for libraries is becoming a challenge to support.
  request for libraries that require system libraries.
 
 ### User Installed Libraries ###
-R looks for libraries based on two environment variables; a system path,
- and a user path. Check your environment after starting R with the command
- `Sys.getenv('R_LIBS_USER')`. `R_LIBS_USER` path starts with a Tilda
- to point to your directory. The output should look like this
+Use `install.packages("package-name")` to install packages in your home directory.
+ Newer versions of R set the search path for user installed libraries. The
+ search path is based on Major and Minor version numbers. Packages installed for
+ R-3.4.x will not be loaded by R-3.5.x. If you are having install issues verify
+ that your install library path is defined correctly. 
 ```
 > Sys.getenv('R_LIBS_USER')
 [1] "~/R/x86_64-pc-linux-gnu-library/3.6"
 ``` 
-The major and minor version numbers are part of the user search path.
- User installed libraries for 3.5.x R need to be re-installed for use with 3.6.x.
- **Note:** There is a bug since R-3.5.3 which does not set the default path for
- installing local libraries. When installing local libraries, explicitly set
- the install path:
-```
-# CRAN example
-install.packages("ggplot2", lib=Sys.getenv("R_LIBS_USER"))
-# Github Example
-devtools::install_github('FredHutch/tgR', lib=Sys.getenv("R_LIBS_USER"))
-```
