@@ -1,19 +1,50 @@
-add gurobi linux library names
+diff -ruN machina-1.0.orig/CMakeLists.txt machina-1.0/CMakeLists.txt
+--- machina-1.0.orig/CMakeLists.txt	2018-05-14 14:14:39.000000000 -0700
++++ machina-1.0/CMakeLists.txt	2019-05-17 16:39:15.111033000 -0700
+@@ -506,6 +506,7 @@
+ )
+ 
+ find_package( GUROBI REQUIRED )
++set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GUROBI_CPP_LIB}" )
+ 
+ set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG" )
+ 
 diff -ruN machina-1.0.orig/FindGUROBI.cmake machina-1.0/FindGUROBI.cmake
 --- machina-1.0.orig/FindGUROBI.cmake	2018-05-14 14:14:39.000000000 -0700
-+++ machina-1.0/FindGUROBI.cmake	2019-05-09 06:28:36.126106000 -0700
-@@ -5,12 +5,12 @@
++++ machina-1.0/FindGUROBI.cmake	2019-05-17 16:37:11.182039000 -0700
+@@ -1,20 +1,27 @@
+ # copied from https://searchcode.com/codesearch/raw/30585458/
++# Gurobi does not have pkg_config, manualy search LD_LIBRARY_PATH and CPATH
++#  to locate libs and include.
++find_package(PkgConfig)
++string(REPLACE ":" ";" LIBRARY_DIRS $ENV{LD_LIBRARY_PATH})
++string(REPLACE ":" ";" INCLUDE_DIRS $ENV{CPATH})
++
+ FIND_PATH(GUROBI_INCLUDE_DIR
+-          NAMES "gurobi_c++.h" "gurobi_c.h"
+-          PATHS /Library/gurobi651/mac64/include/ /usr/local/gurobi651/linux64/include/
++          NAMES gurobi_c++.h gurobi_c.h
++          PATHS ${INCLUDE_DIRS} 
            DOC "Gurobi include directory")
  
- FIND_LIBRARY(GUROBI_CPP_LIB
+-FIND_LIBRARY(GUROBI_CPP_LIB
 -             NAMES gurobi_c++ 
-+             NAMES gurobi_c++ libgurobi_c++ libgurobi_g++
-              PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
+-             PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
++FIND_LIBRARY(GUROBI_CPP_LIB gurobi_c++
++             NAMES gurobi_c++ gurobi65 gurob81
++             PATHS ${LIBRARY_DIRS} 
               DOC "Gurobi C++ Libraries")
  
- FIND_LIBRARY(GUROBI_LIB
+-FIND_LIBRARY(GUROBI_LIB
 -             NAMES gurobi65
-+             NAMES gurobi65 libgurobi libgurobi81
-              PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
+-             PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/
++FIND_LIBRARY(GUROBI_LIB gurobi
++             NAMES gurobi
++             PATHS ${LIBRARY_DIRS} 
               DOC "Gurobi C Libraries")
+ 
+ set(GUROBI_LIBRARIES ${GUROBI_CPP_LIB} ${GUROBI_LIB})
+ 
+ set(GUROBI_FOUND TRUE)
++message(STATUS "GUROBI_CPP flags: ${GUROBI_CPP_LIB}")
  
