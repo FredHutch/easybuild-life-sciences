@@ -25,13 +25,5 @@ Adding every user request for libraries is becoming a challenge to support.
  to install custom R libraries in their home directories. Users can submit install
  request for libraries that require system libraries.
 
-### User Installed Libraries ###
-Use `install.packages("package-name")` to install packages in your home directory.
- Newer versions of R set the search path for user installed libraries. The
- search path is based on Major and Minor version numbers. Packages installed for
- R-3.4.x will not be loaded by R-3.5.x. If you are having install issues verify
- that your install library path is defined correctly. 
-```
-> Sys.getenv('R_LIBS_USER')
-[1] "~/R/x86_64-pc-linux-gnu-library/3.6"
-``` 
+
+[R Issues and Solutions]({{ site.baseurl }}/rissues/)
