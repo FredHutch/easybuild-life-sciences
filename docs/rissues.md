@@ -18,6 +18,7 @@ Use `install.packages("package-name")` to install packages in your home director
  search path is based on Major and Minor version numbers. Packages installed for
  R-3.4.x will not be loaded by R-3.5.x. If you are having install issues verify
  that your install library path is defined correctly.
+
 ```
 > Sys.getenv('R_LIBS_USER')
 [1] "~/R/x86_64-pc-linux-gnu-library/3.6"
