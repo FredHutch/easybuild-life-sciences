@@ -17,6 +17,9 @@ collections:
   r:
     output: true
     permalink: /:collection/:path/
+  rissues:
+    output: true
+    permalink: /:collection/:path/
   python:
     output: true
     permalink: /:collection/:path/
