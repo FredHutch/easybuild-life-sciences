@@ -224,6 +224,15 @@ defaults:
       sidebar:
         nav: "docs"
 
+  # _rissues
+  - scope:
+      path: ""
+      type: rissues 
+    values:
+      layout: single
+      sidebar:
+        nav: "docs"
+
   # _python
   - scope:
       path: ""
