@@ -25,5 +25,4 @@ Adding every user request for libraries is becoming a challenge to support.
  to install custom R libraries in their home directories. Users can submit install
  request for libraries that require system libraries.
 
-
-[R Issues and Solutions]({{ site.baseurl }}/rissues/)
+### [R Issues and Solutions]({{ site.baseurl }}/rissues/)
