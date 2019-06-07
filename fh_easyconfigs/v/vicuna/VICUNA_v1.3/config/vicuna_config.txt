@@ -1,0 +1,150 @@
+============================================================================
+=				 Configuration file of Diversifier
+============================================================================
+		
+/* -----------------------------------------------------------------------
+ *							Trimmer 
+ * -----------------------------------------------------------------------
+ */
+		
+// The path to the Fasta file storing vectors used for trimming; [default ""]
+//vectorFileName	/seq/viral/analysis/xyang/data/exp_1/vector.fa
+
+// minimum prefix/suffix length of a read that matches a vector
+// for trimming to be applied; [default 7]
+minMSize	9
+
+// minimum length of an internal sub-read that matches a vector
+// for the read to be discarded; has to be shorter than any read 
+// [default 15]
+// minInternalMSize	15
+
+// a sub-read is considered internal if the distance between either of its
+// ends and the ends of the full read exceeding this value; [default 4]
+maxOverhangSize	2
+
+// minimum length of a read that will be retained after trimming; 
+// [default 25]
+// minReadSize	25
+
+/* -----------------------------------------------------------------------
+ * 							Profiler 
+ * -----------------------------------------------------------------------
+ */
+
+// Fasta file storing Multiple Sequence Alignment (MSA) of HIV
+// genomes from database
+//MSAFileName	result/LANL-HIV-1B-07082011/hiv-1B-cleaned.algn
+
+// number of bins for dividing MSA, in the range of [10, 256] [default 20] 
+//binNumber	20
+
+// [default 15]
+//kmerLength	15
+
+// maximum Hamming variation allowed in each kmer [default 1]
+//maxHD	1
+
+// minimum spanning of kmers on a read to call a valid mapping [default 75]  
+//minSpan	80
+
+// number of blocks for dividing kmer indices
+// has to be >= MaxHD and <= KmerLength, [default 5] 
+//blockNumber	5
+
+// output file storing IDs of reads that have been mapped to bins; 
+// [default ""]
+//rMapFileName	output/rmap.txt	
+
+/* -----------------------------------------------------------------------
+ * 							Contiger 
+ * -----------------------------------------------------------------------
+ */
+
+// word size for shingling [default 12]
+//w1	12	
+
+// word size for super-shingling [default 5]
+//w2	8	
+
+// maxmum % of divergence between read & consensus [default 10]
+Divergence	8
+
+// number of base pairs that can be ignored towards either end of a read,
+// this accounts for insufficient trimming, PCR artifacts, 
+// sequencing errors, etc. [default 4]
+max_read_overhang	2
+
+
+/* The following 3 parameters are used to determine the reliable interval
+ * start/end positions of a consensus
+ */  
+ 
+// minimum weight of a profile column [default 5]
+//min_profile_col_weight	5
+
+// minimum percentage ratio between the weight of the consensus base and 
+// the total weight of the profile column [default 85]
+//min_consensus_base_ratio	85
+
+// max length of unreliable region in either end of the consensus [default 10]
+max_contig_overhang	10
+
+/* The following 2 parameters are used to determine low frequent variants
+ * of a contig, which will be removed b4 aligning two contigs
+ */
+// min frequency of length polymorphic region to be considered for contig
+// alignment [default 5]
+//min_perc_polymorphism	5
+
+// maximum length of any variant that will be removed b4 contig alignment  
+// [default 20]
+//max_variant_len	20 
+
+// seed kmer length to computer overlap between two contigs 
+// has to be in the range of [9, 16] [default 12]
+//seed_kmer_len	12
+
+// minimum length of overlap to merge two contigs in lieu of insufficient
+// paired links [default 25]
+//min_contig_overlap	25
+
+// minimum number of paired links to merge two contigs in lieu of 
+// insufficient overlap: [seed_kmer_len, min_reliable_overlap) 
+// [default 3]
+//min_contig_links	2
+
+// minimum percent identity to merge two contigs
+//min_identify	90
+
+/* -----------------------------------------------------------------------
+ *			General Parameters for Assembly
+ * -----------------------------------------------------------------------
+ */
+
+// Input folder for paired fastq files, note dir has to end with '/' [default ""]
+pFqDir	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/pNL43/
+
+// Input folder for non-paired fastq files [default ""]
+//npFqDir	input/single/
+
+// Input folder for paired fasta files [default ""]
+//pFaDir	""
+
+// Input folder for non-paired fasta files [default ""]
+//npFaDir	""
+
+// Number of total reads to be processed per batch [default 2M]
+batchSize	1000000	
+
+// [default -1]
+LibSizeLowerBound	100
+// [default -1]
+LibSizeUpperBound	800
+
+// min length of contig that will be included in the output [default 300]
+min_output_contig_len	200
+
+// output directory [default "./"]
+//outputDIR	/seq/viral/analysis/xyang/TMP/454/2599/
+outputDIR 	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/pNL43/

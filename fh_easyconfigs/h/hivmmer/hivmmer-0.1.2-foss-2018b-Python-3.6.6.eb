@@ -11,7 +11,7 @@ homepage = 'https://github.com/kantorlab/hivmmer'
 description = """An alignment and variant-calling pipeline for Illumina deep
  sequencing of HIV-1, based on the probabilistic aligner HMMER"""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = ['https://github.com/kantorlab/hivmmer/archive']
 sources = ['v%(version)s.tar.gz']
@@ -23,6 +23,7 @@ sources = ['v%(version)s.tar.gz']
 
 dependencies = [
     ('Python', '3.6.6'),
+    ('Biopython', '1.73', versionsuffix),
     ('FASTX-Toolkit', '0.0.14'),
     ('HMMER', '3.2.1'),
     ('PEAR', '0.9.11'),

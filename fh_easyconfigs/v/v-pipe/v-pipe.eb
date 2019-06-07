@@ -1,0 +1,42 @@
+# EasyBuild easyconfig
+#
+# John Dey jfdey@fredhutch.org fizwit@github.com
+easyblock = 'Tarball'
+
+name = 'v-pipe'
+version = '1.0'
+
+homepage = 'https://github.com/cbg-ethz/V-pipe'
+description = """V-pipe is a workflow designed for analysis of next generation
+ sequencing (NGS) data from viral pathogens. It produces a number of results
+ in a curated format."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/cbg-ethz/V-pipe/archive']
+sources = [{
+    'download_filename': 'master.zip',
+    'filename': SOURCE_ZIP
+}] 
+
+dependencies = [
+    ('snakemake', '5.2.4', '-Python-3.6.6'),
+    ('FastQC', '0.11.8', '-Java-1.8', True),
+    ('PRINSEQ', '0.20.4', '-Perl-5.28.0'),
+    #('Vicuna', ''),
+    #('ngshmmalign', '0.1.1'),
+    ('bwa', '0.7.17'),
+    ('MAFFT', '7.305', '-with-extensions'),
+    #('QuasiRecomb', ''),
+    ('SAMtools', '1.9'),
+    #('SmallGenomeUtilities'),
+]
+
+sanity_check_paths = {
+    'files': ['vpipe.snake'],
+    'dirs': ['envs', 'references', 'testdata' ]
+}
+
+moduleclass = 'bio'
+
+

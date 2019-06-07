@@ -1,0 +1,4 @@
+[2019-06-07T04:13:04.419599Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] [wrapperSignal] wrapperStart
+[2019-06-07T04:13:04.450374Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] [wrapperSignal] taskStart
+[2019-06-07T04:13:04.464324Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] [wrapperSignal] taskExitCode 0
+[2019-06-07T04:13:04.465366Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] [wrapperSignal] taskElapsedSec 0

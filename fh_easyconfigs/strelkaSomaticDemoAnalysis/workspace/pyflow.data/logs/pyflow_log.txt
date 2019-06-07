@@ -1,0 +1,70 @@
+[2019-06-07T04:13:04.306799Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Initiating pyFlow run
+[2019-06-07T04:13:04.307270Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] pyFlowClientWorkflowClass: StrelkaSomaticWorkflow
+[2019-06-07T04:13:04.307626Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] pyFlowVersion: 1.1.20
+[2019-06-07T04:13:04.308022Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] pythonVersion: 2.7.6.final.0
+[2019-06-07T04:13:04.308360Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] WorkingDir: '/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs'
+[2019-06-07T04:13:04.308734Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] ProcessCmdLine: './strelkaSomaticDemoAnalysis/runWorkflow.py -m local -j 1 -g 4'
+[2019-06-07T04:13:04.309138Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] mode: local
+[2019-06-07T04:13:04.309582Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] nCores: 1
+[2019-06-07T04:13:04.309996Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] memMb: 4096
+[2019-06-07T04:13:04.310358Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] dataDir: /home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/pyflow.data
+[2019-06-07T04:13:04.310758Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] isDryRun: False
+[2019-06-07T04:13:04.311104Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] isContinue: False
+[2019-06-07T04:13:04.311545Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] isForceContinue: True
+[2019-06-07T04:13:04.311963Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] [RunParameters] mailTo: ''
+[2019-06-07T04:13:04.312852Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:masterWorkflow] Starting task specification for master workflow
+[2019-06-07T04:13:04.313647Z] [rhino1.fhcrc.org] [7989_1] [StrelkaSomaticWorkflow] Initiating Strelka somatic workflow version: 2.9.9
+[2019-06-07T04:13:04.314812Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding sub-workflow task 'CallGenome' to master workflow
+[2019-06-07T04:13:04.332122Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:masterWorkflow] Finished task specification for master workflow
+[2019-06-07T04:13:04.333001Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching sub-workflow task: 'CallGenome' from master workflow
+[2019-06-07T04:13:04.333652Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome] Starting task specification for sub-workflow
+[2019-06-07T04:13:04.334622Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+makeTmpDir' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.336199Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+callGenomeSegment_chromId_000_demo20_0000' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.337389Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+fixVcfHeader_chromId_000_demo20_0000' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.338699Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+compressSegmentOutput_chromId_000_demo20_0000' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.339336Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+makeTmpDir' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.340198Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+completedAllGenomeSegments' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.341337Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+SNV_concat_vcf' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.342484Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+SNV_index_vcf' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.343076Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+Indel_concat_vcf' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.343675Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+Indel_index_vcf' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.344398Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+mergeRunStats' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.345100Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Adding command task 'CallGenome+removeTmpDir' to sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.346020Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome] Finished task specification for sub-workflow
+[2019-06-07T04:13:04.358147Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+makeTmpDir] Task initiated on local node
+[2019-06-07T04:13:04.510868Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+makeTmpDir' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.512064Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+callGenomeSegment_chromId_000_demo20_0000' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.533622Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+callGenomeSegment_chromId_000_demo20_0000] Task initiated on local node
+[2019-06-07T04:13:04.977342Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+callGenomeSegment_chromId_000_demo20_0000' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.978612Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+fixVcfHeader_chromId_000_demo20_0000' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:04.984829Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+fixVcfHeader_chromId_000_demo20_0000] Task initiated on local node
+[2019-06-07T04:13:05.143912Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+fixVcfHeader_chromId_000_demo20_0000' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.144963Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+compressSegmentOutput_chromId_000_demo20_0000' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.151835Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+compressSegmentOutput_chromId_000_demo20_0000] Task initiated on local node
+[2019-06-07T04:13:05.310252Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+compressSegmentOutput_chromId_000_demo20_0000' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.311103Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+completedAllGenomeSegments' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.311950Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+Indel_concat_vcf' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.319023Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+Indel_concat_vcf] Task initiated on local node
+[2019-06-07T04:13:05.376440Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+Indel_concat_vcf' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.377550Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+Indel_index_vcf' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.385437Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+Indel_index_vcf] Task initiated on local node
+[2019-06-07T04:13:05.492268Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+Indel_index_vcf' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.493380Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+mergeRunStats' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.500950Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+mergeRunStats] Task initiated on local node
+[2019-06-07T04:13:05.658019Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+mergeRunStats' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.659076Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+SNV_concat_vcf' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.665533Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+SNV_concat_vcf] Task initiated on local node
+[2019-06-07T04:13:05.723683Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+SNV_concat_vcf' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.724756Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+SNV_index_vcf' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.742174Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+SNV_index_vcf] Task initiated on local node
+[2019-06-07T04:13:05.839543Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+SNV_index_vcf' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.840586Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Launching command task: 'CallGenome+removeTmpDir' from sub-workflow 'CallGenome'
+[2019-06-07T04:13:05.848271Z] [rhino1.fhcrc.org] [7989_1] [TaskRunner:CallGenome+removeTmpDir] Task initiated on local node
+[2019-06-07T04:13:05.905309Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed command task: 'CallGenome+removeTmpDir' launched from sub-workflow 'CallGenome'
+[2019-06-07T04:13:07.072327Z] [rhino1.fhcrc.org] [7989_1] [TaskManager] Completed sub-workflow task: 'CallGenome' launched from master workflow
+[2019-06-07T04:13:09.943230Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Strelka somatic workflow successfully completed.
+[2019-06-07T04:13:09.943230Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] 
+[2019-06-07T04:13:09.943230Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] 	workflow version: 2.9.9
+[2019-06-07T04:13:09.943687Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] 
+[2019-06-07T04:13:09.944119Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Workflow successfully completed all tasks
+[2019-06-07T04:13:09.944472Z] [rhino1.fhcrc.org] [7989_1] [WorkflowRunner] Elapsed time for full workflow: 5 sec

@@ -1,0 +1,21 @@
+[2019-06-07T04:13:04.464838Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] Task: 'CallGenome+makeTmpDir' exit code: '0'
+[2019-06-07T04:13:04.465798Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+makeTmpDir] Task: 'CallGenome+makeTmpDir' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:04.653549Z] [rhino1.fhcrc.org] [7989_1] [CallGenome+callGenomeSegment_chromId_000_demo20_0000] WARNING: theta parameter file was not given. Using internal theta values.
+[2019-06-07T04:13:04.936112Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] Task: 'CallGenome+callGenomeSegment_chromId_000_demo20_0000' exit code: '0'
+[2019-06-07T04:13:04.937074Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] Task: 'CallGenome+callGenomeSegment_chromId_000_demo20_0000' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.095592Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_demo20_0000] Task: 'CallGenome+fixVcfHeader_chromId_000_demo20_0000' exit code: '0'
+[2019-06-07T04:13:05.096484Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+fixVcfHeader_chromId_000_demo20_0000] Task: 'CallGenome+fixVcfHeader_chromId_000_demo20_0000' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.273960Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+compressSegmentOutput_chromId_000_demo20_0000] Task: 'CallGenome+compressSegmentOutput_chromId_000_demo20_0000' exit code: '0'
+[2019-06-07T04:13:05.274800Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+compressSegmentOutput_chromId_000_demo20_0000] Task: 'CallGenome+compressSegmentOutput_chromId_000_demo20_0000' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.365293Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] Task: 'CallGenome+Indel_concat_vcf' exit code: '0'
+[2019-06-07T04:13:05.366232Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+Indel_concat_vcf] Task: 'CallGenome+Indel_concat_vcf' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.448346Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+Indel_index_vcf] Task: 'CallGenome+Indel_index_vcf' exit code: '0'
+[2019-06-07T04:13:05.449196Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+Indel_index_vcf] Task: 'CallGenome+Indel_index_vcf' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.637852Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] Task: 'CallGenome+mergeRunStats' exit code: '0'
+[2019-06-07T04:13:05.638802Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] Task: 'CallGenome+mergeRunStats' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.706133Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] Task: 'CallGenome+SNV_concat_vcf' exit code: '0'
+[2019-06-07T04:13:05.706993Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] Task: 'CallGenome+SNV_concat_vcf' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.788584Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_index_vcf] Task: 'CallGenome+SNV_index_vcf' exit code: '0'
+[2019-06-07T04:13:05.789589Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_index_vcf] Task: 'CallGenome+SNV_index_vcf' complete. elapsedSec: 0 elapsedCoreSec: 0
+[2019-06-07T04:13:05.892505Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] Task: 'CallGenome+removeTmpDir' exit code: '0'
+[2019-06-07T04:13:05.893425Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] Task: 'CallGenome+removeTmpDir' complete. elapsedSec: 0 elapsedCoreSec: 0
