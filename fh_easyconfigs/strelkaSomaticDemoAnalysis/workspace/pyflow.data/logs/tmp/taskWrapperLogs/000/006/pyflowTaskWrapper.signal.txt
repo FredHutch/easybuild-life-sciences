@@ -1,0 +1,4 @@
+[2019-06-07T04:13:05.689295Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] wrapperStart
+[2019-06-07T04:13:05.699410Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskStart
+[2019-06-07T04:13:05.705594Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskExitCode 0
+[2019-06-07T04:13:05.706571Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+SNV_concat_vcf] [wrapperSignal] taskElapsedSec 0

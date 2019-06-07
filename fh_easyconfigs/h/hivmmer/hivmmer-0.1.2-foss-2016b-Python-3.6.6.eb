@@ -23,6 +23,7 @@ sources = ['v%(version)s.tar.gz']
 
 dependencies = [
     ('Python', '3.6.6'),
+    ('Biopython', '1.73', versionsuffix),
     ('FASTX-Toolkit', '0.0.14'),
     ('HMMER', '3.2.1'),
     ('PEAR', '0.9.11'),

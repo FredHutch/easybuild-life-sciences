@@ -1,0 +1,43 @@
+# EasyBuild EasyConfig 
+#
+# John Dey jfdey@fredhutch.org fizwit@github.com
+easyblock = 'PythonPackage'
+
+name = 'smallgenomeutilities'
+version = '1.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/cbg-ethz/smallgenomeutilities'
+description = """The smallgenomeutilities are a collection of scripts that is
+ useful for dealing and manipulating NGS data of small viral genomes. They
+ are written in Python 3 with a small number of dependencies."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/cbg-ethz/smallgenomeutilities/archive']
+sources = [{
+    'download_filename': 'master.zip',
+    'filename': SOURCE_ZIP
+}]
+
+python = 'Python'
+pythonversion = '3.6.6'
+
+dependencies = [
+    ('Python', pyver, '-fh1'),
+    ('Biopython', '1.73', '-Python-%(pyver)s'),
+]
+
+download_dep_fail = True
+
+use_pip = True
+
+sanity_check_paths = {
+    'files': ['bin/compute_mds'],
+    'dirs': ['bin','lib/python%(pyshortver)s/site-packages/%(name)s-%(version)s-py%(pyshortver)s.egg-info'] 
+}
+
+sanity_check_commands = [('compute_mds')]
+options = {'modulename': False}
+
+moduleclass = 'bio'

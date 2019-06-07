@@ -1,0 +1,23 @@
+[[[Version 1.3 -- Dec, 2012]]]
+
+1. Bug fix -- Contiger.cpp line 429, in ideal case, no singleton contig
+exists, no resizing of _contigs should be allowed
+
+[[[Version 1.2 -- Oct, 2012]]]
+
+Compared to version 1.1, the following changes have been made:
+
+1. A folder named "executable" is added and statically created exe file
+for linux 64 system is added to this folder. 
+
+[[[Version 1.1 -- Aug, 2012]]]
+
+Compared to version 1.0, the following changes have been made:
+
+1. Documentation has been updated to include the usage of 454 data, 
+a perl script that prepares 454 data input to Vicuna "fakePairedReads.pl"
+was added into "scripts/" folder.
+
+2. "seq_manip.hpp" file in src/xny/ folder has been updated to include
+<inttypes.h> folder to eliminate the compiling errors in some platform.
+

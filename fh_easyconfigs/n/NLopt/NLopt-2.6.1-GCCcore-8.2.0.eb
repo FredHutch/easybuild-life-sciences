@@ -2,7 +2,7 @@
 # Author: Pablo Escobar Lopez
 # Swiss Institute of Bioinformatics
 # Biozentrum - University of Basel
-
+# 2019-06-05 John Dey jfdey@fredhutch.org fizwit@github.com - updated for CMake
 easyblock = 'CMakeMake'
 
 name = 'NLopt'
@@ -28,10 +28,13 @@ builddependencies = [
     ('binutils', '2.31.1'),
 ]
 
-configopts = '--enable-shared --without-matlab --without-octave'
+configopts = [
+    '-DBUILD_SHARED_LIBS=ON',
+    '-DBUILD_SHARED_LIBS=OFF'
+]
 
 sanity_check_paths = {
-    'files': ['lib/libnlopt.%s' % SHLIB_EXT, 'include/nlopt.h'],
+    'files': ['lib/libnlopt.a', 'lib/libnlopt.%s' % SHLIB_EXT, 'include/nlopt.h'],
     'dirs': ['lib/pkgconfig'],
 }
 
