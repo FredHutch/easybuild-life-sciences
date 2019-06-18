@@ -522,6 +522,22 @@
                 "Description: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
                 "Homepage: https://metacpan.org/release/Bio-DB-HTS"
             ]
+        },
+        "/app/easybuild/modules/bio/Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
+            "Version": "2.11-foss-2018b-Perl-5.28.0",
+            "fullName": "Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nRead files using HTSlib including BAM/CRAM, Tabix and BCF database files\n\n\nMore information\n================\n - Homepage: https://metacpan.org/release/Bio-DB-HTS\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000002.000000011.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000002.000000011.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
+                "Homepage: https://metacpan.org/release/Bio-DB-HTS"
+            ]
         }
     },
     "BioPerl": {
@@ -558,6 +574,25 @@
             "whatis": [
                 "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.  Examples include Sequence objects, Alignment objects and database searching objects. - Homepage: http://www.bioperl.org/ "
             ]
+        },
+        "/app/easybuild/modules/bio/BioPerl/1.7.2-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+            "Version": "1.7.2-foss-2018b-Perl-5.28.0",
+            "fullName": "BioPerl/1.7.2-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nBioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.\n\n\nMore information\n================\n - Homepage: http://www.bioperl.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+                "Homepage: http://www.bioperl.org/"
+            ]
         }
     },
     "Biopython": {
@@ -582,6 +617,19 @@
             "hidden": false,
             "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        },
+        "/app/easybuild/modules/bio/Biopython/1.73-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.73-foss-2016b-Python-3.6.6",
+            "fullName": "Biopython/1.73-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000073.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000073.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
                 "Homepage: http://www.biopython.org"
@@ -939,6 +987,22 @@
             "wV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/FASTQ files preprocessing. - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/ "
+            ]
+        },
+        "/app/easybuild/modules/bio/FASTX-Toolkit/0.0.14-foss-2016b.lua": {
+            "Description": "The FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.",
+            "Version": "0.0.14-foss-2016b",
+            "fullName": "FASTX-Toolkit/0.0.14-foss-2016b",
+            "help": "\nDescription\n===========\nThe FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.\n\n\nMore information\n================\n - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/\n",
+            "hidden": false,
+            "pV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FASTX-Toolkit/0.0.14-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.",
+                "Homepage: http://hannonlab.cshl.edu/fastx_toolkit/"
             ]
         }
     },
@@ -1470,6 +1534,22 @@
                 "Description: HMMER is used for searching sequence databases for homologs of protein sequences,\n and for making protein sequence alignments. It implements methods using probabilistic models\n called profile hidden Markov models (profile HMMs).  Compared to BLAST, FASTA, and other\n sequence alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote homologs\n because of the strength of its underlying mathematical models. In the past, this strength\n came at significant computational expense, but in the new HMMER3 project, HMMER is now\n essentially as fast as BLAST.",
                 "Homepage: http://hmmer.org/"
             ]
+        },
+        "/app/easybuild/modules/bio/HMMER/3.2.1-foss-2016b.lua": {
+            "Description": "HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
+            "Version": "3.2.1-foss-2016b",
+            "fullName": "HMMER/3.2.1-foss-2016b",
+            "help": "\nDescription\n===========\nHMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.\n\n\nMore information\n================\n - Homepage: http://hmmer.org/\n",
+            "hidden": false,
+            "pV": "000000003.000000002.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/HMMER/3.2.1-foss-2016b/bin": 1
+            },
+            "wV": "000000003.000000002.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
+                "Homepage: http://hmmer.org/"
+            ]
         }
     },
     "HTSlib": {
@@ -1766,6 +1846,25 @@
             ]
         }
     },
+    "Keras": {
+        "/app/easybuild/modules/math/Keras/2.2.4-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+            "Version": "2.2.4-foss-2016b-Python-3.6.6",
+            "fullName": "Keras/2.2.4-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nKeras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.\n\n\nMore information\n================\n - Homepage: https://keras.io/\n\n\nIncluded extensions\n===================\nKeras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Keras/2.2.4-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000002.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+                "Homepage: https://keras.io/",
+                "Extensions: Keras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5"
+            ]
+        }
+    },
     "LAST": {
         "/app/easybuild/modules/bio/LAST/926-foss-2016b.lua": {
             "Description": "LAST finds similar regions between sequences.",
@@ -1829,6 +1928,25 @@
             "wV": "000000007.000000305.*foss.*zfinal-.000002016.*b.*with.*extensions.*zfinal",
             "whatis": [
                 "Description: MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/"
+            ]
+        }
+    },
+    "MATLAB": {
+        "/app/easybuild/modules/math/MATLAB/2019a.lua": {
+            "Description": "MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
+            "Version": "2019a",
+            "fullName": "MATLAB/2019a",
+            "help": "\nDescription\n===========\nMATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.\n\n\nMore information\n================\n - Homepage: http://www.mathworks.com/products/matlab\n",
+            "hidden": false,
+            "pV": "000002019.*a.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MATLAB/2019a": 1,
+                "/app/easybuild/software/MATLAB/2019a/bin": 1
+            },
+            "wV": "000002019.*a.*zfinal",
+            "whatis": [
+                "Description: MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
+                "Homepage: http://www.mathworks.com/products/matlab"
             ]
         }
     },
@@ -2140,6 +2258,29 @@
             ]
         }
     },
+    "PRINSEQ": {
+        "/app/easybuild/modules/bio/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0.lua": {
+            "Description": "A bioinformatics tool to PRe-process and show INformation of SEQuence data.",
+            "Version": "0.20.4-foss-2016b-Perl-5.28.0",
+            "fullName": "PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nA bioinformatics tool to PRe-process and show INformation of SEQuence data.\n\n\nMore information\n================\n - Homepage: http://prinseq.sourceforge.net\n\n\nIncluded extensions\n===================\nCairo-1.106, Contextual::Return-0.004014, ExtUtils::Depends-0.405,\nExtUtils::PkgConfig-1.16, Math::Cephes::Matrix-0.5305, Math::MatrixReal-2.13,\nMIME::Base64-3.15, Pod::Usage-1.69, Statistics::PCA-0.0.1,\nText::SimpleTable-2.07\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000000.000000020.000000004.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0": 1,
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000020.000000004.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: A bioinformatics tool to PRe-process and show INformation of SEQuence data.",
+                "Homepage: http://prinseq.sourceforge.net",
+                "Extensions: Cairo-1.106, Contextual::Return-0.004014, ExtUtils::Depends-0.405, ExtUtils::PkgConfig-1.16, Math::Cephes::Matrix-0.5305, Math::MatrixReal-2.13, MIME::Base64-3.15, Pod::Usage-1.69, Statistics::PCA-0.0.1, Text::SimpleTable-2.07"
+            ]
+        }
+    },
     "ParMETIS": {
         "/app/easybuild/modules/math/ParMETIS/4.0.3-foss-2016b.lua": {
             "Description": "ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning\n unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the\n functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and\n large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way\n graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.",
@@ -2238,6 +2379,19 @@
             "hidden": false,
             "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+                "Homepage: https://github.com/pysam-developers/pysam"
+            ]
+        },
+        "/app/easybuild/modules/bio/Pysam/0.15.1-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+            "Version": "0.15.1-foss-2016b-Python-3.6.6",
+            "fullName": "Pysam/0.15.1-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nPysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.\n\n\nMore information\n================\n - Homepage: https://github.com/pysam-developers/pysam\n",
+            "hidden": false,
+            "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
                 "Homepage: https://github.com/pysam-developers/pysam"
@@ -2798,6 +2952,22 @@
                 "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
                 "Homepage: https://github.com/alexdobin/STAR"
             ]
+        },
+        "/app/easybuild/modules/bio/STAR/2.7.1a-foss-2016b.lua": {
+            "Description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+            "Version": "2.7.1a-foss-2016b",
+            "fullName": "STAR/2.7.1a-foss-2016b",
+            "help": "\nDescription\n===========\nSTAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.\n\n\nMore information\n================\n - Homepage: https://github.com/alexdobin/STAR\n",
+            "hidden": false,
+            "pV": "000000002.000000007.000000001.*a.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/STAR/2.7.1a-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000007.000000001.*a.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+                "Homepage: https://github.com/alexdobin/STAR"
+            ]
         }
     },
     "STAR-Fusion": {
@@ -2872,6 +3042,24 @@
             "whatis": [
                 "Description: Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
                 "Homepage: https://tandem.bu.edu/trf/trf.html"
+            ]
+        }
+    },
+    "Theano": {
+        "/app/easybuild/modules/math/Theano/1.0.3-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+            "Version": "1.0.3-foss-2016b-Python-3.6.6",
+            "fullName": "Theano/1.0.3-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nTheano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.\n\n\nMore information\n================\n - Homepage: http://deeplearning.net/software/theano\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Theano/1.0.3-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+                "Homepage: http://deeplearning.net/software/theano"
             ]
         }
     },
@@ -2992,6 +3180,22 @@
                 "Description: Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
                 "Homepage: https://www.ensembl.org/info/docs/tools/vep"
             ]
+        },
+        "/app/easybuild/modules/bio/VEP/96.0-foss-2016b-Perl-5.24.0.lua": {
+            "Description": "Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
+            "Version": "96.0-foss-2016b-Perl-5.24.0",
+            "fullName": "VEP/96.0-foss-2016b-Perl-5.24.0",
+            "help": "\nDescription\n===========\nVariant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.\n\n\nMore information\n================\n - Homepage: https://www.ensembl.org/info/docs/tools/vep\n",
+            "hidden": false,
+            "pV": "000000096.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/VEP/96.0-foss-2016b-Perl-5.24.0": 1
+            },
+            "wV": "000000096.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "whatis": [
+                "Description: Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
+                "Homepage: https://www.ensembl.org/info/docs/tools/vep"
+            ]
         }
     },
     "VariationHunter": {
@@ -3021,6 +3225,27 @@
             "wV": "000000000.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Variation Hunter - CommonLaw is a tool for discovery of structural variation in one or more individuals simultaneously using high throughput technologies. - Homepage: http://variationhunter.sourceforge.net/Home "
+            ]
+        }
+    },
+    "ViennaRNA": {
+        "/app/easybuild/modules/bio/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+            "Version": "2.4.13-foss-2016b-Python-3.6.6",
+            "fullName": "ViennaRNA/2.4.13-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.\n\n\nMore information\n================\n - Homepage: http://www.tbi.univie.ac.at/RNA/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+                "Homepage: http://www.tbi.univie.ac.at/RNA/"
             ]
         }
     },
@@ -3635,6 +3860,24 @@
             ]
         }
     },
+    "hivmmer": {
+        "/app/easybuild/modules/bio/hivmmer/0.1.2-foss-2016b-Python-3.6.6.lua": {
+            "Description": "An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+            "Version": "0.1.2-foss-2016b-Python-3.6.6",
+            "fullName": "hivmmer/0.1.2-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER\n\n\nMore information\n================\n - Homepage: https://github.com/kantorlab/hivmmer\n",
+            "hidden": false,
+            "pV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/hivmmer/0.1.2-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+                "Homepage: https://github.com/kantorlab/hivmmer"
+            ]
+        }
+    },
     "hmmcopy": {
         "/app/easybuild/modules/bio/hmmcopy/master-foss-2016b.lua": {
             "Description": "Tools for extracting read counts and gc and mappability statistics in preparation for running HMMCopy.",
@@ -3752,6 +3995,24 @@
             "wV": "000000001.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: libcerf is a self-contained numeric library that provides an efficient and accurate\n implementation of complex error functions, along with Dawson, Faddeeva, and Voigt functions. - Homepage: http://gnuplot.sourceforge.net/"
+            ]
+        }
+    },
+    "libgtextutils": {
+        "/app/easybuild/modules/bio/libgtextutils/0.7-GCCcore-5.4.0.lua": {
+            "Description": "ligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream",
+            "Version": "0.7-GCCcore-5.4.0",
+            "fullName": "libgtextutils/0.7-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream\n\n\nMore information\n================\n - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libgtextutils/0.7-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000000.000000007.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "wV": "000000000.000000007.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: ligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream",
+                "Homepage: http://hannonlab.cshl.edu/fastx_toolkit/"
             ]
         }
     },
@@ -3886,6 +4147,24 @@
             "wV": "000000003.000000003.000000008.*foss.*zfinal-.000002015.*b.*zfinal",
             "whatis": [
                 "Description: mrsFAST is designed to map short reads to reference genome assemblies; in a fast and memory-efficient manner. mrsFAST is a cache-oblivous short read mapper that optimizes cache usage to get higher performance. - Homepage: http://sfu-compbio.github.io/mrsfast/ "
+            ]
+        }
+    },
+    "nanofilt": {
+        "/app/easybuild/modules/bio/nanofilt/2.5.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.5.0-foss-2016b-Python-3.6.6",
+            "fullName": "nanofilt/2.5.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+            "hidden": false,
+            "pV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/nanofilt/2.5.0-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
             ]
         }
     },
@@ -4556,6 +4835,21 @@
             "whatis": [
                 "Description: Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
                 "Homepage: http://grigoriefflab.janelia.org/unblur"
+            ]
+        }
+    },
+    "v-pipe": {
+        "/app/easybuild/modules/bio/v-pipe/1.0-foss-2016b.lua": {
+            "Description": "V-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.",
+            "Version": "1.0-foss-2016b",
+            "fullName": "v-pipe/1.0-foss-2016b",
+            "help": "\nDescription\n===========\nV-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.\n\n\nMore information\n================\n - Homepage: https://github.com/cbg-ethz/V-pipe\n",
+            "hidden": false,
+            "pV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "wV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: V-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.",
+                "Homepage: https://github.com/cbg-ethz/V-pipe"
             ]
         }
     },
