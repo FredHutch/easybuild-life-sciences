@@ -868,6 +868,22 @@
                 "Description: Bazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.",
                 "Homepage: http://bazel.io/"
             ]
+        },
+        "/app/easybuild/modules/all/Bazel/0.20.0-GCCcore-5.4.0.lua": {
+            "Description": "Bazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.",
+            "Version": "0.20.0-GCCcore-5.4.0",
+            "fullName": "Bazel/0.20.0-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nBazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.\n\n\nMore information\n================\n - Homepage: http://bazel.io/\n",
+            "hidden": false,
+            "pV": "000000000.000000020.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Bazel/0.20.0-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000000.000000020.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: Bazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.",
+                "Homepage: http://bazel.io/"
+            ]
         }
     },
     "Beast": {
@@ -978,6 +994,22 @@
                 "Description: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
                 "Homepage: https://metacpan.org/release/Bio-DB-HTS"
             ]
+        },
+        "/app/easybuild/modules/all/Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
+            "Version": "2.11-foss-2018b-Perl-5.28.0",
+            "fullName": "Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nRead files using HTSlib including BAM/CRAM, Tabix and BCF database files\n\n\nMore information\n================\n - Homepage: https://metacpan.org/release/Bio-DB-HTS\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Bio-DB-HTS/2.11-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000002.000000011.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000002.000000011.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Read files using HTSlib including BAM/CRAM, Tabix and BCF database files",
+                "Homepage: https://metacpan.org/release/Bio-DB-HTS"
+            ]
         }
     },
     "BioPerl": {
@@ -1031,6 +1063,25 @@
             "whatis": [
                 "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.  Examples include Sequence objects, Alignment objects and database searching objects. - Homepage: http://www.bioperl.org/ "
             ]
+        },
+        "/app/easybuild/modules/all/BioPerl/1.7.2-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+            "Version": "1.7.2-foss-2018b-Perl-5.28.0",
+            "fullName": "BioPerl/1.7.2-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nBioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.\n\n\nMore information\n================\n - Homepage: http://www.bioperl.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000001.000000007.000000002.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+                "Homepage: http://www.bioperl.org/"
+            ]
         }
     },
     "Biopython": {
@@ -1055,6 +1106,19 @@
             "hidden": false,
             "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        },
+        "/app/easybuild/modules/all/Biopython/1.73-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.73-foss-2016b-Python-3.6.6",
+            "fullName": "Biopython/1.73-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000073.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000073.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
                 "Homepage: http://www.biopython.org"
@@ -1462,6 +1526,22 @@
                 "Description: Boost provides free peer-reviewed portable C++ source libraries.",
                 "Homepage: http://www.boost.org/"
             ]
+        },
+        "/app/easybuild/modules/all/Boost/1.67.0-foss-2018b.lua": {
+            "Description": "Boost provides free peer-reviewed portable C++ source libraries.",
+            "Version": "1.67.0-foss-2018b",
+            "fullName": "Boost/1.67.0-foss-2018b",
+            "help": "\nDescription\n===========\nBoost provides free peer-reviewed portable C++ source libraries.\n\n\nMore information\n================\n - Homepage: http://www.boost.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Boost/1.67.0-foss-2018b/lib": 1
+            },
+            "pV": "000000001.000000067.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000001.000000067.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Boost provides free peer-reviewed portable C++ source libraries.",
+                "Homepage: http://www.boost.org/"
+            ]
         }
     },
     "Bowtie": {
@@ -1691,6 +1771,22 @@
                 "/app/easybuild/software/CMake/3.11.4-GCCcore-7.3.0/bin": 1
             },
             "wV": "000000003.000000011.000000004.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: \n CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+                "Homepage: http://www.cmake.org"
+            ]
+        },
+        "/app/easybuild/modules/all/CMake/3.12.1-GCCcore-7.3.0.lua": {
+            "Description": "CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
+            "Version": "3.12.1-GCCcore-7.3.0",
+            "fullName": "CMake/3.12.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nCMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n\n\nMore information\n================\n - Homepage: http://www.cmake.org\n",
+            "hidden": false,
+            "pV": "000000003.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CMake/3.12.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
             "whatis": [
                 "Description: \n CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
                 "Homepage: http://www.cmake.org"
@@ -1934,6 +2030,29 @@
         }
     },
     "CUDA": {
+        "/app/easybuild/modules/all/CUDA/10.1.105-GCC-5.4.0-2.26.lua": {
+            "Description": "CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+            "Version": "10.1.105-GCC-5.4.0-2.26",
+            "fullName": "CUDA/10.1.105-GCC-5.4.0-2.26",
+            "help": "\nDescription\n===========\nCUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.\n\n\nMore information\n================\n - Homepage: https://developer.nvidia.com/cuda-toolkit\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26/extras/CUPTI/lib64": 1,
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26/lib64": 1,
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26/nvvm/lib64": 1
+            },
+            "pV": "000000010.000000001.000000105.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26": 1,
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26/bin": 1,
+                "/app/easybuild/software/CUDA/10.1.105-GCC-5.4.0-2.26/nvvm/bin": 1
+            },
+            "wV": "000000010.000000001.000000105.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "whatis": [
+                "Description: CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+                "Homepage: https://developer.nvidia.com/cuda-toolkit"
+            ]
+        },
         "/app/easybuild/modules/all/CUDA/9.2.148.1.lua": {
             "Description": "CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
             "Version": "9.2.148.1",
@@ -2730,6 +2849,22 @@
                 "Description: EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
                 "Homepage: https://easybuilders.github.io/easybuild"
             ]
+        },
+        "/app/easybuild/modules/all/EasyBuild/3.9.1.lua": {
+            "Description": "EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
+            "Version": "3.9.1",
+            "fullName": "EasyBuild/3.9.1",
+            "help": "\nDescription\n===========\nEasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.\n\n\nMore information\n================\n - Homepage: https://easybuilders.github.io/easybuild\n",
+            "hidden": false,
+            "pV": "000000003.000000009.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/EasyBuild/3.9.1/bin": 1
+            },
+            "wV": "000000003.000000009.000000001.*zfinal",
+            "whatis": [
+                "Description: EasyBuild is a software build and installation framework\n written in Python that allows you to install software in a structured,\n repeatable and robust way.",
+                "Homepage: https://easybuilders.github.io/easybuild"
+            ]
         }
     },
     "Eigen": {
@@ -2848,6 +2983,24 @@
             ]
         }
     },
+    "ExtUtils-CppGuess": {
+        "/app/easybuild/modules/all/ExtUtils-CppGuess/0.19-foss-2016b-Perl-5.24.0.lua": {
+            "Description": "guess C++ compiler and flags",
+            "Version": "0.19-foss-2016b-Perl-5.24.0",
+            "fullName": "ExtUtils-CppGuess/0.19-foss-2016b-Perl-5.24.0",
+            "help": "\nDescription\n===========\nguess C++ compiler and flags\n\n\nMore information\n================\n - Homepage: https://metacpan.org/pod/ExtUtils::CppGuess\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ExtUtils-CppGuess/0.19-foss-2016b-Perl-5.24.0/lib": 1
+            },
+            "pV": "000000000.000000019.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "wV": "000000000.000000019.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "whatis": [
+                "Description: guess C++ compiler and flags",
+                "Homepage: https://metacpan.org/pod/ExtUtils::CppGuess"
+            ]
+        }
+    },
     "FASTX-Toolkit": {
         "/app/easybuild/modules/all/FASTX-Toolkit/0.0.14-foss-2016a": {
             "Description": "The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/FASTQ files preprocessing. - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/ ",
@@ -2861,6 +3014,22 @@
             "wV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*a.*zfinal",
             "whatis": [
                 "Description: The FASTX-Toolkit is a collection of command line tools for   Short-Reads FASTA/FASTQ files preprocessing. - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/ "
+            ]
+        },
+        "/app/easybuild/modules/all/FASTX-Toolkit/0.0.14-foss-2016b.lua": {
+            "Description": "The FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.",
+            "Version": "0.0.14-foss-2016b",
+            "fullName": "FASTX-Toolkit/0.0.14-foss-2016b",
+            "help": "\nDescription\n===========\nThe FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.\n\n\nMore information\n================\n - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/\n",
+            "hidden": false,
+            "pV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FASTX-Toolkit/0.0.14-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000000000.000000014.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The FASTX-Toolkit is a collection of command line tools for \n Short-Reads FASTA/FASTQ files preprocessing.",
+                "Homepage: http://hannonlab.cshl.edu/fastx_toolkit/"
             ]
         }
     },
@@ -3035,6 +3204,25 @@
                 "/app/easybuild/software/FFTW/3.3.8-gompi-2018b/bin": 1
             },
             "wV": "000000003.000000003.000000008.*gompi.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
+                "Homepage: http://www.fftw.org"
+            ]
+        },
+        "/app/easybuild/modules/all/FFTW/3.3.8-gompic-2016b.lua": {
+            "Description": "FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
+            "Version": "3.3.8-gompic-2016b",
+            "fullName": "FFTW/3.3.8-gompic-2016b",
+            "help": "\nDescription\n===========\nFFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.\n\n\nMore information\n================\n - Homepage: http://www.fftw.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/FFTW/3.3.8-gompic-2016b/lib": 1
+            },
+            "pV": "000000003.000000003.000000008.*gompic.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/FFTW/3.3.8-gompic-2016b/bin": 1
+            },
+            "wV": "000000003.000000003.000000008.*gompic.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
                 "Homepage: http://www.fftw.org"
@@ -4735,6 +4923,25 @@
             ]
         }
     },
+    "GitPython": {
+        "/app/easybuild/modules/all/GitPython/2.1.11-foss-2016b-Python-3.6.6.lua": {
+            "Description": "GitPython is a python library used to interact with Git repositories ",
+            "Version": "2.1.11-foss-2016b-Python-3.6.6",
+            "fullName": "GitPython/2.1.11-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nGitPython is a python library used to interact with Git repositories\n\n\nMore information\n================\n - Homepage: https://github.com/gitpython-developers/GitPython\n\n\nIncluded extensions\n===================\ngitdb2-2.0.4, GitPython-2.1.11, smmap2-2.0.4\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GitPython/2.1.11-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000001.000000011.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000002.000000001.000000011.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description:  GitPython is a python library used to interact with Git repositories ",
+                "Homepage: https://github.com/gitpython-developers/GitPython",
+                "Extensions: gitdb2-2.0.4, GitPython-2.1.11, smmap2-2.0.4"
+            ]
+        }
+    },
     "Go": {
         "/app/easybuild/modules/all/Go/1.11.2.lua": {
             "Description": "Go is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.",
@@ -5183,6 +5390,22 @@
             "wV": "000000003.000000001.*b.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: HMMER is used for searching sequence databases for homologs of protein sequences,\n and for making protein sequence alignments. It implements methods using probabilistic models\n called profile hidden Markov models (profile HMMs).  Compared to BLAST, FASTA, and other\n sequence alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote homologs\n because of the strength of its underlying mathematical models. In the past, this strength\n came at significant computational expense, but in the new HMMER3 project, HMMER is now\n essentially as fast as BLAST.",
+                "Homepage: http://hmmer.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/HMMER/3.2.1-foss-2016b.lua": {
+            "Description": "HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
+            "Version": "3.2.1-foss-2016b",
+            "fullName": "HMMER/3.2.1-foss-2016b",
+            "help": "\nDescription\n===========\nHMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.\n\n\nMore information\n================\n - Homepage: http://hmmer.org/\n",
+            "hidden": false,
+            "pV": "000000003.000000002.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/HMMER/3.2.1-foss-2016b/bin": 1
+            },
+            "wV": "000000003.000000002.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.",
                 "Homepage: http://hmmer.org/"
             ]
         }
@@ -6115,6 +6338,25 @@
             ]
         }
     },
+    "Keras": {
+        "/app/easybuild/modules/all/Keras/2.2.4-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+            "Version": "2.2.4-foss-2016b-Python-3.6.6",
+            "fullName": "Keras/2.2.4-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nKeras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.\n\n\nMore information\n================\n - Homepage: https://keras.io/\n\n\nIncluded extensions\n===================\nKeras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Keras/2.2.4-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000002.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+                "Homepage: https://keras.io/",
+                "Extensions: Keras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5"
+            ]
+        }
+    },
     "LAME": {
         "/app/easybuild/modules/all/LAME/3.99.5-foss-2016b.lua": {
             "Description": "LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.",
@@ -6901,6 +7143,25 @@
             ]
         }
     },
+    "MATLAB": {
+        "/app/easybuild/modules/all/MATLAB/2019a.lua": {
+            "Description": "MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
+            "Version": "2019a",
+            "fullName": "MATLAB/2019a",
+            "help": "\nDescription\n===========\nMATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.\n\n\nMore information\n================\n - Homepage: http://www.mathworks.com/products/matlab\n",
+            "hidden": false,
+            "pV": "000002019.*a.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MATLAB/2019a": 1,
+                "/app/easybuild/software/MATLAB/2019a/bin": 1
+            },
+            "wV": "000002019.*a.*zfinal",
+            "whatis": [
+                "Description: MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
+                "Homepage: http://www.mathworks.com/products/matlab"
+            ]
+        }
+    },
     "MCR": {
         "/app/easybuild/modules/all/MCR/R2014a-Java-1.8.0_121.lua": {
             "Description": "The MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.",
@@ -7131,6 +7392,25 @@
                 "/app/easybuild/software/MariaDB/10.3.10-foss-2016b/bin": 1
             },
             "wV": "000000010.000000003.000000010.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: MariaDB An enhanced, drop-in replacement for MySQL.",
+                "Homepage: https://mariadb.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/MariaDB/10.3.10-foss-2018b.lua": {
+            "Description": "MariaDB An enhanced, drop-in replacement for MySQL.",
+            "Version": "10.3.10-foss-2018b",
+            "fullName": "MariaDB/10.3.10-foss-2018b",
+            "help": "\nDescription\n===========\nMariaDB An enhanced, drop-in replacement for MySQL.\n\n\nMore information\n================\n - Homepage: https://mariadb.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/MariaDB/10.3.10-foss-2018b/lib": 1
+            },
+            "pV": "000000010.000000003.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MariaDB/10.3.10-foss-2018b/bin": 1
+            },
+            "wV": "000000010.000000003.000000010.*foss.*zfinal-.000002018.*b.*zfinal",
             "whatis": [
                 "Description: MariaDB An enhanced, drop-in replacement for MySQL.",
                 "Homepage: https://mariadb.org/"
@@ -7748,6 +8028,25 @@
                 "Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version. - Homepage: http://xianyi.github.com/OpenBLAS/ "
             ]
         },
+        "/app/easybuild/modules/all/OpenBLAS/0.3.1-GCC-5.4.0-2.26.lua": {
+            "Description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+            "Version": "0.3.1-GCC-5.4.0-2.26",
+            "fullName": "OpenBLAS/0.3.1-GCC-5.4.0-2.26",
+            "help": "\nDescription\n===========\nOpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.\n\n\nMore information\n================\n - Homepage: http://xianyi.github.com/OpenBLAS/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/OpenBLAS/0.3.1-GCC-5.4.0-2.26/lib": 1
+            },
+            "pV": "000000000.000000003.000000001.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/OpenBLAS/0.3.1-GCC-5.4.0-2.26/bin": 1
+            },
+            "wV": "000000000.000000003.000000001.*gcc.*zfinal-.000000005.000000004.*zfinal-.000000002.000000026.*zfinal",
+            "whatis": [
+                "Description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
+                "Homepage: http://xianyi.github.com/OpenBLAS/"
+            ]
+        },
         "/app/easybuild/modules/all/OpenBLAS/0.3.1-GCC-7.3.0-2.30.lua": {
             "Description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
             "Version": "0.3.1-GCC-7.3.0-2.30",
@@ -7981,6 +8280,25 @@
             "whatis": [
                 "Description: The Open MPI Project is an open source MPI-3 implementation.",
                 "Homepage: http://www.open-mpi.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/OpenMPI/3.1.1-gcccuda-2016b.lua": {
+            "Description": "The Open MPI Project is an open source MPI-3 implementation.",
+            "Version": "3.1.1-gcccuda-2016b",
+            "fullName": "OpenMPI/3.1.1-gcccuda-2016b",
+            "help": "\nDescription\n===========\nThe Open MPI Project is an open source MPI-3 implementation.\n\n\nMore information\n================\n - Homepage: https://www.open-mpi.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/OpenMPI/3.1.1-gcccuda-2016b/lib": 1
+            },
+            "pV": "000000003.000000001.000000001.*gcccuda.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/OpenMPI/3.1.1-gcccuda-2016b/bin": 1
+            },
+            "wV": "000000003.000000001.000000001.*gcccuda.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The Open MPI Project is an open source MPI-3 implementation.",
+                "Homepage: https://www.open-mpi.org/"
             ]
         }
     },
@@ -8333,6 +8651,29 @@
             "whatis": [
                 "Description:  The program PHASE implements a Bayesian statistical \nmethod for reconstructing haplotypes from population genotype data.\nDocumentation: http://stephenslab.uchicago.edu/assets/software/phase/instruct2.1.pdf",
                 "Homepage: http://stephenslab.uchicago.edu/phase/download.html"
+            ]
+        }
+    },
+    "PRINSEQ": {
+        "/app/easybuild/modules/all/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0.lua": {
+            "Description": "A bioinformatics tool to PRe-process and show INformation of SEQuence data.",
+            "Version": "0.20.4-foss-2016b-Perl-5.28.0",
+            "fullName": "PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nA bioinformatics tool to PRe-process and show INformation of SEQuence data.\n\n\nMore information\n================\n - Homepage: http://prinseq.sourceforge.net\n\n\nIncluded extensions\n===================\nCairo-1.106, Contextual::Return-0.004014, ExtUtils::Depends-0.405,\nExtUtils::PkgConfig-1.16, Math::Cephes::Matrix-0.5305, Math::MatrixReal-2.13,\nMIME::Base64-3.15, Pod::Usage-1.69, Statistics::PCA-0.0.1,\nText::SimpleTable-2.07\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000000.000000020.000000004.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0": 1,
+                "/app/easybuild/software/PRINSEQ/0.20.4-foss-2016b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000020.000000004.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: A bioinformatics tool to PRe-process and show INformation of SEQuence data.",
+                "Homepage: http://prinseq.sourceforge.net",
+                "Extensions: Cairo-1.106, Contextual::Return-0.004014, ExtUtils::Depends-0.405, ExtUtils::PkgConfig-1.16, Math::Cephes::Matrix-0.5305, Math::MatrixReal-2.13, MIME::Base64-3.15, Pod::Usage-1.69, Statistics::PCA-0.0.1, Text::SimpleTable-2.07"
             ]
         }
     },
@@ -9055,6 +9396,21 @@
             ]
         }
     },
+    "PyYAML": {
+        "/app/easybuild/modules/all/PyYAML/3.13-foss-2016b-Python-3.6.6.lua": {
+            "Description": "PyYAML is a YAML parser and emitter for the Python programming language.",
+            "Version": "3.13-foss-2016b-Python-3.6.6",
+            "fullName": "PyYAML/3.13-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nPyYAML is a YAML parser and emitter for the Python programming language.\n\n\nMore information\n================\n - Homepage: https://pypi.python.org/pypi/PyYAML/\n",
+            "hidden": false,
+            "pV": "000000003.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000003.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: PyYAML is a YAML parser and emitter for the Python programming language.",
+                "Homepage: https://pypi.python.org/pypi/PyYAML/"
+            ]
+        }
+    },
     "Pysam": {
         "/app/easybuild/modules/all/Pysam/0.15.1-foss-2016b-Python-2.7.15.lua": {
             "Description": "Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
@@ -9064,6 +9420,19 @@
             "hidden": false,
             "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+                "Homepage: https://github.com/pysam-developers/pysam"
+            ]
+        },
+        "/app/easybuild/modules/all/Pysam/0.15.1-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
+            "Version": "0.15.1-foss-2016b-Python-3.6.6",
+            "fullName": "Pysam/0.15.1-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nPysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.\n\n\nMore information\n================\n - Homepage: https://github.com/pysam-developers/pysam\n",
+            "hidden": false,
+            "pV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000000.000000015.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: Pysam is a python module for reading and manipulating Samfiles. \n It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.",
                 "Homepage: https://github.com/pysam-developers/pysam"
@@ -9980,6 +10349,26 @@
                 "Description: Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
                 "Homepage: http://python.org/",
                 "Extensions: abcpy-0.5.0, absl-py-0.2.2, abstract_rendering-0.5.1, aenum-2.1.2, agfusion-1.2, alabaster-0.7.10, albacore-2.3.1, altair-2.0.1, amqp-2.2.2, anndata-0.6.1, ansible-2.5.3, AnyQt-0.0.8, apiwrapper-0.1.8, appdirs-1.4.3, APScheduler-3.5.1, argcomplete-1.9.4, argh-0.26.2, astor-0.6.2, astroid-1.6.4, atomicwrites-1.1.5, attrs-18.1.0, autopep8-1.3.5, awscli-1.15.25, Babel-2.5.3, backcall-0.1.0, backports.weakref-1.0.post1, bcbio-gff-0.6.4, bcrypt-3.1.4, bd2k-python-lib-1.14a1.dev48, beautifulsoup4-4.6.0, billiard-3.5.0.3, biom-format-2.1.6, biopython-1.71, bitarray-0.8.1, bitstring-3.1.5, blaze-0.10.1, bleach-2.1.3, blessings-1.6.1, blinker-1.4, blist-1.3.6, bokeh-0.12.16, boto3-1.7.32, botocore-1.10.32, bpython-0.17.1, burrito-0.9.1, burrito-fillings-0.1.1, bz2file-0.98, CacheControl-0.12.4, celery-4.1.1, certifi-2018.4.16, cffi-1.11.5, cftime-1.0.0, changeo-0.3.12, chardet-3.0.4, click-6.7, cliff-2.11.0, cloudpickle-0.5.3, clyent-1.2.1, cmd2-0.8.5, colorama-0.3.9, ConfigArgParse-0.13.0, configobj-5.0.6, contextlib2-0.5.5, coverage-4.5.1, cryptography-2.2.2, curtsies-0.3.0, cutadapt-1.16, cx_Freeze-5.1.1, cycler-0.10.0, Cython-0.26, cytoolz-0.9.0.1, daemonize-2.4.7, darkslide-4.0.1, dask-0.17.5, dask-ml-0.4.1, dask-searchcv-0.2.0, dask-tensorflow-0.0.2, dask-xgboost-0.1.5, datacache-0.5.5, datashape-0.5.2, dbf-0.97.4, deap-1.2.2, debtcollector-1.19.0, decorator-4.3.0, deepTools-3.0.2, deprecation-2.0.2, dill-0.2.7.1, distributed-1.21.8, dnspython-1.15.0, docutils-0.14, dogpile.cache-0.6.5, dominate-2.3.1, DriverPower-1.0.1, drmaa-0.7.8, easygui-0.98.1, easygui_qt-0.9.3, ecdsa-0.13, entrypoints-0.2.3, epydoc-3.0.1, et_xmlfile-1.0.1, eventlet-0.23.0, fastcache-1.0.2, fasteners-0.14.1, feather-format-0.4.0, findspark-1.2.0, Flask-1.0.2, flask-appconfig-0.11.1, Flask-Bootstrap-3.3.7.1, Flask-Cors-3.0.4, Flask-Debug-0.4.3, Flask-Migrate-2.1.1, flask-nav-0.6, Flask-Script-2.0.6, Flask-SQLAlchemy-2.3.2, Flask-WTF-0.14.2, freezer-6.0.0, funcsigs-1.0.2, gast-0.2.0, gitdb2-2.0.3, GitPython-2.1.10, google-2.0.1, greenlet-0.4.13, grpcio-1.12.0, gtfparse-1.0.7, h5py-2.7.1, HeapDict-1.0.0, html5lib-1.0.1, HTSeq-0.10.0, httpie-0.9.9, httplib2-0.11.3, idna-2.6, imagesize-1.0.0, inflection-0.3.1, ip_associations_python_novaclient_ext-0.2, ipaddress-1.0.22, ipdb-0.11, ipykernel-4.8.2, ipython-6.4.0, ipython-genutils-0.2.0, ipywidgets-7.2.1, iso8601-0.1.12, isort-4.3.4, itsdangerous-0.24, jdcal-1.4, jedi-0.12.0, jellyfish-0.6.1, Jinja2-2.10, jmespath-0.9.3, joblib-0.11, json2html-1.2.1, jsonpatch-1.23, jsonpointer-2.0, jsonschema-2.6.0, jupyter-1.0.0, jupyter-contrib-core-0.3.3, jupyter-highlight-selected-word-0.2.0, jupyter-js-widgets-nbextension-0.0.2.dev0, jupyter-latex-envs-1.4.4, jupyter_client-5.2.3, jupyter_contrib_nbextensions-0.5.0, jupyter_core-4.4.0, jupyter_nbextensions_configurator-0.4.0, jupyterlab-0.33.7, jupyterlab_launcher-0.11.2, Keras-2.1.6, keyring-12.2.1, keystoneauth1-3.7.0, Kivy-1.10.0, kivy-garden-0.1.4, kombu-4.2.0, lazr.uri-1.0.3, lazy-object-proxy-1.3.1, ldap3-2.5, liac-arff-2.2.1, locket-0.2.0, lockfile-0.12.2, logilab-common-1.4.1, lxml-4.2.1, Mako-1.0.7, Markdown-2.6.11, MarkupSafe-1.0, matplotlib-2.2.2, mccabe-0.6.1, memoized-property-1.0.3, messytables-0.15.2, misopy-0.5.4, mistune-0.8.3, mock-2.0.0, monotonic-1.5, more-itertools-4.1.0, mpi4py-3.0.0, mpmath-1.0.0, msgpack-0.5.6, msgpack-python-0.5.6, multipledispatch-0.5.0, munch-2.3.2, NanoComp-0.19.0, NanoFilt-2.2.0, nanoget-1.5.0, NanoLyse-1.1.0, nanomath-0.21.0, NanoPlot-1.13.0, nanoplotter-0.38.0, NanoStat-1.1.0, natsort-5.3.2, nbconvert-5.3.1, nbformat-4.4.0, ndg-httpsclient-0.5.0, neo4j-driver-1.5.3, netaddr-0.7.19, netCDF4-1.4.0, netifaces-0.10.7, networkx-2.1, nltk-3.3.0, nose-1.3.7, notebook-5.5.0, novaclient-auth-secretkey-0.1, npyscreen-4.10.5, Nuitka-0.5.30, numexpr-2.6.5, numpy-1.14.3, numpydoc-0.8.0, oauth-1.0.1, olefile-0.45.1, oncodrivefml-2.0.3, ont-fast5-api-0.4.1, opencv_python-3.4.1.15, openpyxl-2.5.3, openstacksdk-0.13.0, os-brick-2.5.0, os-client-config-1.31.1, os-service-types-1.2.0, os-win-4.0.0, os_diskconfig_python_novaclient_ext-0.1.3, os_networksv2_python_novaclient_ext-0.26, os_virtual_interfacesv2_python_novaclient_ext-0.20, osc-lib-1.10.0, oslo.concurrency-3.27.0, oslo.config-6.2.1, oslo.context-2.20.0, oslo.i18n-3.20.0, oslo.log-3.38.1, oslo.privsep-1.29.0, oslo.serialization-2.25.0, oslo.service-1.31.2, oslo.utils-3.36.2, packaging-17.1, pandas-0.23.0, pandocfilters-1.4.2, paramiko-2.4.1, parse-1.8.2, parso-0.2.1, Paste-2.0.3, PasteDeploy-1.5.2, path.py-11.0.1, pathlib2-2.3.2, pathtools-0.1.2, patsy-0.5.0, paycheck-1.0.2, pbr-4.0.3, pep8-1.7.1, pexpect-4.5.0, pickleshare-0.7.4, Pillow-5.1.0, pip-10.0.1, pipenv-2018.5.18, plotly-2.5.1, pluggy-0.6.0, ply-3.11, porechop-0.2.0, positional-1.2.1, presto-0.5.7, PrettyTable-0.7, profilehooks-1.10.0, progressbar33-2.4, prompt_toolkit-1.0.15, protobuf-3.5.2.post1, psutil-5.4.5, psycopg2-2.7.4, ptyprocess-0.5.2, py-1.5.2, py2bit-0.3.0, pyarrow-0.9.0, pyasn1-0.4.2, pybedtools-0.7.10, pyBigWig-0.3.11, PyChef-0.3.0, PyClone-0.12.9, pycodestyle-2.4.0, pycosat-0.6.3, pycparser-2.18, pycrypto-2.6.1, pycurl-7.43.0.1, pydicom-1.0.2, PyDP-0.2.2, pyensembl-1.2.6, pyflakes-2.0.0, PyGithub-1.39, pygithub3-0.5.1, Pygments-2.2.0, PyGreSQL-5.0.4, pyinotify-0.9.6, PyInstaller-3.3.1, pymongo-3.6.1, pymssql-2.1.3, PyMySQL-0.8.1, PyNaCl-1.2.1, pynast-1.2.2, pyodbc-4.0.23, PyOpenGL-3.1.0, pyOpenSSL-18.0.0, pypandoc-1.4, pyparsing-2.2.0, PyQt5-5.10.1, pysam-0.14.1, pyserial-3.4, pytest-3.5.1, python-cinderclient-3.5.0, python-dateutil-2.7.3, python-editor-1.0.3, python-freezerclient-1.7.0, python-glanceclient-2.11.0, python-hostlist-1.17, python-keystoneclient-3.16.0, python-neutronclient-6.8.0, python-novaclient-10.2.0, python-openstackclient-3.15.0, python-pam-1.8.3, python-swiftclient-3.5.0, pytz-2018.4, PyVCF-0.6.8, PyWavelets-0.5.2, pyxdg-0.26, PyYAML-3.12, pyzmq-17.0.0, qrcode-6.0, qtconsole-4.3.1, QtPy-1.4.2, rackspace-auth-openstack-1.3, rackspace-novaclient-2.1, rax_default_network_flags_python_novaclient_ext-0.4.0, rax_scheduled_images_python_novaclient_ext-0.3.1, redis-2.10.6, reportlab-3.4.0, repoze.lru-0.7, requests-2.18.4, requestsexceptions-1.4.0, retrying-1.3.3, rfc3986-1.1.0, roman-2.0.0, rope-0.10.7, Routes-2.4.1, rsa-3.4.2, ruffus-2.6.3, s3fs-0.1.5, s3transfer-0.1.13, scandir-1.7, scanpy-1.0.4, scikit-bio-0.5.2, scikit-image-0.13.1, scikit-learn-0.19.1, scipy-1.1.0, seaborn-0.8.1, Send2Trash-1.5.0, serializable-0.1.1, setuptools-39.2.0, shap-0.24.0, shove-0.6.6, simplegeneric-0.8.1, SimpleITK-1.1.0, simplejson-3.15.0, singledispatch-3.4.0.3, sip-4.19.8, six-1.11.0, sklearn-0.0, slurm-pipeline-2.0.12, smmap2-2.0.3, snakemake-5.1.3, snowballstemmer-1.2.1, sockjs-tornado-1.0.3, sortedcollections-1.0.1, sortedcontainers-2.0.2, Sphinx-1.7.4, sphinx_rtd_theme-0.3.1, SQLAlchemy-1.2.7, ssh-import-id-5.6, statsmodels-0.9.0, stdeb-0.8.5, stevedore-1.28.0, stuf-0.9.16, swiftly-2.06, sympy-1.1.1, synapseclient-1.8.1, tblib-1.3.2, tensorboard-1.8.0, tensorflow-1.8.0, tensorflow-tensorboard-1.5.1, termcolor-1.1.0, terminado-0.8.1, testpath-0.3.1, textblob-0.15.1, Theano-1.0.1, tinytimer-0.0.0, toolz-0.9.0, tornado-5.0.2, tqdm-4.23.4, traitlets-4.3.2, twobitreader-3.1.6, typechecks-0.1.0, tzlocal-1.5.1, ujson-1.35, umi_tools-0.5.3, unicodecsv-0.14.1, uritemplate-3.0.0, uritemplate.py-3.0.2, urllib3-1.22, urwid-2.0.1, utils-0.9.0, vctools-0.1.6.1, vega-1.0.1, vega3-0.13.0, vine-1.1.4, virtualenv-16.0.0, virtualenv-clone-0.3.0, visitor-0.1.3, wadllib-1.3.2, warlock-1.3.0, watchdog-0.8.3, wcwidth-0.1.7, webencodings-0.5.1, WebOb-1.8.1, Werkzeug-0.14.1, whatshap-0.14.1, wheel-0.31.1, widgetsnbextension-3.2.1, wrapt-1.10.11, WTForms-2.1, xlrd-1.1.0, XlsxWriter-1.0.5, xlwt-1.3.0, xopen-0.3.3, ZConfig-3.2.0, zict-0.1.3, zope.interface-4.5.0"
+            ]
+        },
+        "/app/easybuild/modules/all/Python/3.6.6-foss-2016b-fh1.lua": {
+            "Description": "Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
+            "Version": "3.6.6-foss-2016b-fh1",
+            "fullName": "Python/3.6.6-foss-2016b-fh1",
+            "help": "\nDescription\n===========\nPython is a programming language that lets you work more quickly and integrate your systems\n more effectively.\n\n\nMore information\n================\n - Homepage: http://python.org/\n\n\nIncluded extensions\n===================\nabsl-py-0.7.1, abstract_rendering-0.5.1, adal-1.2.1, aenum-2.1.2,\nagfusion-1.231, aiodns-2.0.0, aiohttp-3.5.4, aiohttp_cors-0.7.0, airr-1.2.1,\nalabaster-0.7.12, albacore-2.3.1, alembic-1.0.10, altair-3.0.1,\naltgraph-0.16.1, amqp-2.5.0, anndata-0.6.20, ansible-2.8.0, AnyQt-0.0.10,\napipkg-1.5, apiwrapper-0.1.8, appdirs-1.4.3, APScheduler-3.6.0,\nargcomplete-1.10.0, argh-0.26.2, argon2-cffi-19.1.0, astor-0.8.0,\nastroid-2.2.5, astropy-3.1.2, async_generator-1.10, async_timeout-3.0.1,\natomicwrites-1.3.0, attrs-19.1.0, autopep8-1.4.4, awscli-1.16.170, azure-\ncommon-1.1.21, azure-nspkg-3.0.2, azure-servicebus-0.50.0, azure-\nstorage-0.36.0, azure-storage-common-2.0.0, azure-storage-queue-2.0.1,\nBabel-2.7.0, backcall-0.1.0, backports.functools_lru_cache-1.5,\nbackports.lzma-0.0.13, backports.shutil_get_terminal_size-1.0.0,\nbackports.shutil_which-3.5.2, backports.weakref-1.0.post1, bagit-1.7.0,\nbandit-1.6.0, bcbio-gff-0.6.6, bd2k-python-lib-1.14a1.dev48,\nbeautifulsoup4-4.7.1, betamax-0.8.1, billiard-3.6.0.0, biolib-0.0.46, biom-\nformat-2.1.7, biopython-1.73, bitarray-0.9.3, black-19.3b0, blaze-0.10.1,\nbleach-3.1.0, blessings-1.7, blinker-1.4, blosc-1.8.1, bokeh-1.2.0,\nboltons-19.1.0, boto3-1.9.160, botocore-1.12.160, bpython-0.18, Brotli-1.0.7,\nbrotlipy-0.7.0, burrito-0.9.1, burrito-fillings-0.1.1, bz2file-0.98,\nCacheControl-0.12.5, cached-property-1.5.1, capturer-2.4, cassandra-\ndriver-3.18.0, cchardet-2.1.4, celery-4.3.0, cftime-1.0.3.4, changeo-0.4.5,\nclick-7.0, cliff-2.14.1, cloudpickle-1.1.1, clyent-1.2.1, cmarkgfm-0.4.2,\ncmd2-0.9.12, codecov-2.0.15, collective.checkdocs-0.2, colorama-0.4.1,\ncoloredlogs-10.0, ConfigArgParse-0.14.0, configobj-5.0.6, configparser-3.7.4,\ncontextlib2-0.5.5, couchbase-2.5.4, coverage-4.5.3, coveralls-1.8.0,\ncssselect-1.0.3, curtsies-0.3.0, cutadapt-2.3, cwl-0.0.1, cwlref-runner-1.0,\ncwltool-1.0.20190603140227, cx_Freeze-5.1.1, Cycler-0.10.0, cytoolz-0.9.0.1,\ndaemonize-2.5.0, daiquiri-1.5.0, darkslide-4.0.1, datacache-1.1.5,\ndatashape-0.5.2, datrie-0.7.1, dbf-0.98.0, ddt-1.2.1, debtcollector-1.21.0,\ndeepTools-3.3.0, defusedxml-0.6.0, DendroPy-4.4.0, deprecation-2.0.6,\ndill-0.2.9, distlib-0.2.9.post0, distributed-1.28.1, Django-2.2.2, django-\nconfigurations-2.1, dnaio-0.3, dnspython-1.16.0, doc8-0.8.0, docutils-0.14,\ndocutils-stubs-0.0.21, dogpile.cache-0.7.1, drmaa-0.7.9, dulwich-0.19.11,\neasygui-0.98.1, easygui_qt-0.9.3, elasticsearch-7.0.2, entrypoints-0.3,\nephem-3.7.6.0, epydoc-3.0.1, et_xmlfile-1.0.1, eventlet-0.25.0, execnet-1.6.0,\nextras-1.0.0, fastcache-1.1.0, fasteners-0.15, fastnumbers-2.2.1,\nfaulthandler-3.1, feather-format-0.4.0, fields-5.0.0, findspark-1.3.0,\nfirst-2.0.2, fixtures-3.0.0, flake8-3.7.7, flake8-docstrings-1.3.0, flake8\n-import-order-0.18.1, flake8-polyfill-1.0.2, flaky-3.5.3, Flask-1.0.3, flask-\nappconfig-0.11.1, Flask-Bootstrap-3.3.7.1, Flask-Cors-3.0.7, Flask-\nDebug-0.4.3, Flask-Migrate-2.5.2, flask-nav-0.6, Flask-Script-2.0.6, Flask-\nSQLAlchemy-2.4.0, Flask-WTF-0.14.2, flup-1.0.3, freezer-7.1.0, funcsigs-1.0.2,\nfuture-0.17.1, galaxy-lib-19.5.2, gast-0.2.2, Genshi-0.7.3, gensim-3.7.3,\ngevent-1.4.0, gitdb2-2.0.5, GitPython-2.1.11, gnureadline-6.3.8, google-2.0.2,\ngraphviz-0.11, greenlet-0.4.15, grpcio-1.21.1, gtfparse-1.2.0, h5py-2.9.0,\nhacking-1.1.0, HeapDict-1.0.0, hiredis-1.0.0, html5lib-1.0.1, HTSeq-0.11.2,\nhttpie-1.0.2, httplib2-0.12.3, humanfriendly-4.18, hunter-2.2.1,\nhypothesis-4.24.0, idna_ssl-1.1.0, imagecodecs-2019.5.22, imageio-2.5.0,\nimagesize-1.1.0, importlib-metadata-0.17, incremental-17.5.0,\ninflection-0.3.1, ip_associations_python_novaclient_ext-0.2, ipaddress-1.0.22,\nipdb-0.12, ipykernel-5.1.1, ipyparallel-6.2.4, ipython-7.5.0,\nipython_genutils-0.2.0, ipywidgets-7.4.2, iso8601-0.1.12, isodate-0.6.0,\nisort-4.3.20, itsdangerous-1.1.0, jdcal-1.4.1, jedi-0.13.3, jeepney-0.4,\njellyfish-0.7.1, Jinja2-2.10.1, jmespath-0.9.4, json2html-1.2.1,\njsonpatch-1.23, jsonpointer-2.0, jsonschema-3.0.1, jupyter-1.0.0, jupyter-\ncontrib-core-0.3.3, jupyter-highlight-selected-word-0.2.0, jupyter-js-widgets-\nnbextension-0.0.2.dev0, jupyter-latex-envs-1.4.6, jupyter_client-5.2.4,\njupyter_contrib_nbextensions-0.5.1, jupyter_core-4.4.0,\njupyter_nbextensions_configurator-0.4.1, jupyterlab-0.35.6, jupyterlab-\nserver-0.3.3, jupyterlab_launcher-0.13.1, kazoo-2.6.1, keepalive-0.5,\nkeyring-19.0.2, keystoneauth1-3.14.0, Kivy-1.10.1, kivy-garden-0.1.4,\nkombu-4.6.0, lazr.uri-1.0.3, lazy-object-proxy-1.4.1, ldap3-2.6,\nlibrabbitmq-2.0.0, llvmlite-0.29.0, locket-0.2.0, lockfile-0.12.2, logilab-\ncommon-1.4.2, lxml-4.3.3, macholib-1.11, Mako-1.0.11, manuel-1.10.1,\nMarkdown-3.1.1, MarkupSafe-1.1.1, matplotlib-3.1.0, memoized-property-1.0.3,\nmessytables-0.15.2, misopy-0.5.4, mistune-0.8.4, MonkeyType-19.5.0,\nmonotonic-1.5, more-itertools-7.0.0, Morfessor-2.0.4, mox3-0.27.0, mpld3-0.3,\nmsgpack-python-0.5.6, msrest-0.6.6, msrestazure-0.6.0, multidict-4.5.2,\nmultipledispatch-0.6.0, munch-2.3.2, mypy-0.701, mypy_extensions-0.4.1,\nmypytools-0.1.15, NanoComp-1.6.0, NanoFilt-2.3.0, nanoget-1.8.0,\nNanoLyse-1.1.0, nanomath-0.23.1, NanoPlot-1.24.0, nanoplotter-1.8.1,\nNanoStat-1.1.2, natsort-6.0.0, nbconvert-5.5.0, nbformat-4.4.0,\nnbsphinx-0.4.2, nbval-0.9.1, ndg-httpsclient-0.5.1, neo4j-driver-1.7.4,\nnetCDF4-1.5.1.2, networkx-2.3, nltk-3.4.1, nose-exclude-0.5.0,\nnose_warnings_filters-0.1.5, notebook-5.7.8, novaclient-auth-secretkey-0.1,\nnpyscreen-4.10.5, Nuitka-0.6.3.1, numba-0.44.0, numpydoc-0.9.1, oauth-1.0.1,\noauthlib-3.0.1, objgraph-3.4.1, olefile-0.46, oncodrivefml-2.2.0, ont-\nfast5-api-1.4.0, opencv_python-4.1.0.25, openpyxl-2.6.2,\nopenstackdocstheme-1.30.0, openstacksdk-0.29.0, ordereddict-1.1,\norderedmultidict-1.0, os-brick-2.8.1, os-client-config-1.32.0, os-service-\ntypes-1.7.0, os-testr-1.0.0, os_diskconfig_python_novaclient_ext-0.1.3,\nos_networksv2_python_novaclient_ext-0.26,\nos_virtual_interfacesv2_python_novaclient_ext-0.20, osc-lib-1.12.1,\noscpy-0.4.0, oslo.concurrency-3.29.1, oslo.config-6.9.0, oslo.context-2.22.1,\noslo.db-5.0.0, oslo.i18n-3.23.1, oslo.log-3.44.0, oslo.privsep-1.33.1,\noslo.serialization-2.29.1, oslo.service-1.39.0, oslo.utils-3.41.0,\noslosphinx-4.18.0, oslotest-3.7.1, packaging-19.0, pandocfilters-1.4.2,\nparse-1.12.0, parso-0.4.0, partd-0.3.10, Paste-3.0.8, PasteDeploy-2.0.1,\npath.py-12.0.1, pathlib-1.0.1, pathlib2-2.3.3, pathtools-0.1.2, patsy-0.5.1,\npefile-2019.4.18, pep517-0.5.0, pep8-naming-0.8.2, persistent-4.5.0,\npexpect-4.7.0, pickleshare-0.7.5, pifpaf-2.2.2, Pillow-6.0.0, pip-api-0.0.8,\npip-shims-0.3.2, pipenv-2018.11.26, pipreqs-0.4.9, pkgconfig-1.5.1,\npkginfo-1.5.0.1, plotly-3.10.0, pluggy-0.12.0, ply-3.11, porechop-0.2.0,\npositional-1.2.1, presto-0.5.11, pretend-1.0.9, PrettyTable-0.7, process-\ntests-2.0.2, profilehooks-1.11.0, progressbar33-2.4, prometheus_client-0.6.0,\nprompt_toolkit-2.0.9, protobuf-3.8.0, prov-1.5.3, psutil-5.6.2,\npsycopg2-2.8.2, ptyprocess-0.6.0, pure-sasl-0.6.1, purl-1.5, py-1.8.0,\npy2bit-0.3.0, pyamg-4.0.0, pyArango-1.3.2, pyarrow-0.13.0, pybedtools-0.8.0,\npyBigWig-0.3.16, pybind11-2.2.4, pyblake2-1.1.2, pycares-3.0.0, PyChef-0.3.0,\nPyClone-0.13.1, pycodestyle-2.5.0, pycosat-0.6.3, pycouchdb-1.14,\npycryptodome-3.8.2, pycurl-7.43.0.2, pydicom-1.2.2, pydocstyle-3.0.0,\npydocumentdb-2.3.3, pydot-1.4.1, PyDP-0.2.4, pyemd-0.5.1, pyensembl-1.7.4,\npyfaidx-0.5.5.2, PyGithub-1.43.7, pygithub3-0.5.1, Pygments-2.4.2,\nPyGreSQL-5.1, PyICU-2.3.1, pyinotify-0.9.6, PyInstaller-3.4, PyJWT-1.7.1,\npykerberos-1.2.1, pylibmc-1.6.0, pylint-2.3.1, pymongo-3.8.0, pymssql-2.1.4,\nPyMySQL-0.9.3, pynast-1.2.2, pyodbc-4.0.26, PyOpenGL-3.1.0, pyOpenSSL-19.0.0,\npypandoc-1.4, pyperclip-1.7.0, PyQt5-5.12.2, PyQt5-sip-4.19.17, Pyro4-4.75,\npyrsistent-0.15.2, pysam-0.15.1, pyserial-3.4, pytables-3.4.4, pytest-4.6.2,\npytest-astropy-0.5.0, pytest-asyncio-0.10.0, pytest-black-0.3.7, pytest-black-\nmultipy-1.0.0, pytest-check-links-0.3.0, pytest-checkdocs-1.2.0, pytest-\ncov-2.7.1, pytest-cover-3.0.0, pytest-django-3.5.0, pytest-faulthandler-1.6.0,\npytest-fixture-config-1.7.0, pytest-flake8-1.0.4, pytest-forked-1.0.2, pytest-\nlocalserver-0.5.0, pytest-mock-1.10.4, pytest-rerunfailures-7.0, pytest-\nrunner-5.1, pytest-shutil-1.7.0, pytest-tornado5-2.0.0, pytest-\nvirtualenv-1.7.0, pytest-xdist-1.28.0, python-cinderclient-4.2.0, python-\nconsul-1.1.0, python-dotenv-0.10.3, python-editor-1.0.4, python-\nfreezerclient-2.1.0, python-glanceclient-2.16.0, python-hostlist-1.18, python-\njson-logger-0.1.11, python-keystoneclient-3.19.0, python-Levenshtein-0.12.0,\npython-memcached-1.59, python-neutronclient-6.12.0, python-novaclient-14.1.0,\npython-openid-2.2.5, python-openstackclient-3.18.0, python-pam-1.8.4, python-\nsnappy-0.5.4, python-subunit-1.3.0, python-swiftclient-3.7.0, pytoml-0.1.20,\npytype-2019.5.31, PyVCF-0.6.8, PyWavelets-1.0.3, pyxdg-0.26, PyYAML-5.1,\npyzmq-18.0.1, qpid-python-1.36.0-1, qpid-tools-1.36.0-1, qrcode-6.1,\nqtconsole-4.5.1, QtPy-1.7.1, rackspace-auth-openstack-1.3, rackspace-\nnovaclient-2.1, rax_default_network_flags_python_novaclient_ext-0.4.0,\nrax_scheduled_images_python_novaclient_ext-0.3.1, rdflib-4.2.2, rdflib-\njsonld-0.4.0, readme_renderer-24.0, redis-3.2.1, regex-2019.06.02,\nreno-2.11.3, reportlab-3.5.23, repoze.lru-0.7,\nrepoze.sphinx.autointerface-0.8, requests-kerberos-0.12.0, requests-\nmock-1.6.0, requests-oauthlib-1.2.0, requests-toolbelt-0.9.1,\nrequestsexceptions-1.4.0, requirementslib-1.5.1, restructuredtext-lint-1.3.0,\nrethinkdb-2.4.2.post1, retrying-1.3.3, retype-17.12.0, rfc3986-1.3.2,\nrfc3987-1.3.8, riak-2.7.0, roman-3.2, rope-0.14.0, Routes-2.4.1, rsa-4.0,\nruamel.yaml-0.15.96, ruffus-2.8.1, s3fs-0.2.1, scandir-1.10.0, scanpy-1.4.3,\nschema-salad-4.3.20190603183756, sci-0.1.5, scikit-bio-0.5.5, scikit-\nbuild-0.10.0, scikit-image-0.15.0, scikit-learn-0.21.2, seaborn-0.9.0,\nSecretStorage-3.1.1, selenium-3.141.0, Send2Trash-1.5.0, serializable-0.1.1,\nsetuptools-git-1.2, shap-0.29.1, shellescape-3.4.1, shove-0.6.6,\nsimplegeneric-0.8.1, SimpleITK-1.2.0, simplejson-3.16.0,\nsingledispatch-3.4.0.3, sip-4.19.8, sklearn-0.0, slurm-pipeline-3.1.0,\nslurmpy-0.0.7, smart_open-1.8.4, smmap2-2.0.5, snakemake-5.5.0,\nsnowballstemmer-1.2.1, sockjs-tornado-1.0.6, softlayer_messaging-1.0.3,\nsortedcollections-1.1.2, sortedcontainers-2.1.0, soupsieve-1.9.1,\nSPARQLWrapper-1.8.4, Sphinx-2.1.0, sphinx-rtd-theme-0.4.3,\nsphinx_rtd_theme-0.4.3, sphinxcontrib-applehelp-1.0.1, sphinxcontrib-\ndevhelp-1.0.1, sphinxcontrib-htmlhelp-1.0.2, sphinxcontrib-jsmath-1.0.1,\nsphinxcontrib-qthelp-1.0.2, sphinxcontrib-serializinghtml-1.1.3,\nsphinxcontrib-websupport-1.1.2, sphinxcontrib_github_alt-1.1,\nSQLAlchemy-1.3.4, sqlalchemy-migrate-0.12.0, sqlparse-0.3.0, ssh-import-\nid-5.6, statsmodels-0.9.0, stdeb-0.8.5, stestr-2.3.1, stevedore-1.30.1,\nstrict-rfc3339-0.7, stuf-0.9.16, subprocess32-3.5.4, subunit2sql-1.10.0,\nswiftly-2.06, sybil-1.2.0, sympy-1.4, synapseclient-1.9.2, tblib-1.4.0,\nTempita-0.5.2, termcolor-1.1.0, terminado-0.8.2, testfixtures-6.8.2,\ntestpath-0.4.2, testrepository-0.0.20, testresources-2.0.1,\ntestscenarios-0.5.0, testtools-2.3.0, textblob-0.15.3, Theano-1.0.4,\ntifffile-2019.5.30, tinytimer-0.0.0, toml-0.10.0, tomlkit-0.5.3, toolz-0.9.0,\ntornado-6.0.2, tqdm-4.32.1, traitlets-4.3.2, treq-18.6.0, trollius-2.2,\ntwine-1.13.0, Twisted-19.2.0, twobitreader-3.1.7, typechecks-0.1.0, typed-\nast-1.3.5, typing-3.6.6, typing-extensions-3.7.2, tzlocal-1.5.1, uamqp-1.1.0,\nujson-1.35, umap-learn-0.3.9, umi_tools-1.0.0, unicodecsv-0.14.1,\nunittest2-1.1.0, uritemplate-3.0.0, uritemplatepy-0.1.1, urwid-2.0.1,\nutils-0.9.0, vctools-0.1.6.1, vega-2.1.0, vega3-0.13.0, vine-1.3.0,\nvirtualenv-clone-0.5.3, visdom-0.1.8.8, visitor-0.1.3, vistir-0.4.2,\nvoluptuous-0.11.5, wadllib-1.3.3, warlock-1.3.3, watchdog-0.9.0,\nwcwidth-0.1.7, webcolors-1.9, webencodings-0.5.1, WebOb-1.8.5,\nWerkzeug-0.15.4, whatshap-0.18, wheel-0.33.4, widgetsnbextension-3.4.2,\nwrapt-1.11.1, WTForms-2.2.1, xattr-0.9.6, xgboost-0.90, XlsxWriter-1.1.8,\nxlwt-1.3.0, xopen-0.6.0, yappi-1.0, yarl-1.3.0, yaspin-0.14.3, ZConfig-3.4.0,\nzict-0.1.4, zipp-0.5.1, zope.component-4.5, zope.configuration-4.3.1,\nzope.copy-4.2, zope.deferredimport-4.3, zope.deprecation-4.4.0,\nzope.event-4.4, zope.exceptions-4.3, zope.hookable-4.2.0,\nzope.i18nmessageid-4.3.1, zope.interface-4.6.0, zope.location-4.2,\nzope.proxy-4.3.1, zope.schema-4.9.3, zope.security-4.3.1, zope.testing-4.7,\nzope.testrunner-5.0, zstandard-0.11.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Python/3.6.6-foss-2016b-fh1/lib": 1
+            },
+            "pV": "000000003.000000006.000000006.*foss.*zfinal-.000002016.*b.*fh.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Python/3.6.6-foss-2016b-fh1/bin": 1
+            },
+            "wV": "000000003.000000006.000000006.*foss.*zfinal-.000002016.*b.*fh.000000001.*zfinal",
+            "whatis": [
+                "Description: Python is a programming language that lets you work more quickly and integrate your systems\n more effectively.",
+                "Homepage: http://python.org/",
+                "Extensions: absl-py-0.7.1, abstract_rendering-0.5.1, adal-1.2.1, aenum-2.1.2, agfusion-1.231, aiodns-2.0.0, aiohttp-3.5.4, aiohttp_cors-0.7.0, airr-1.2.1, alabaster-0.7.12, albacore-2.3.1, alembic-1.0.10, altair-3.0.1, altgraph-0.16.1, amqp-2.5.0, anndata-0.6.20, ansible-2.8.0, AnyQt-0.0.10, apipkg-1.5, apiwrapper-0.1.8, appdirs-1.4.3, APScheduler-3.6.0, argcomplete-1.10.0, argh-0.26.2, argon2-cffi-19.1.0, astor-0.8.0, astroid-2.2.5, astropy-3.1.2, async_generator-1.10, async_timeout-3.0.1, atomicwrites-1.3.0, attrs-19.1.0, autopep8-1.4.4, awscli-1.16.170, azure-common-1.1.21, azure-nspkg-3.0.2, azure-servicebus-0.50.0, azure-storage-0.36.0, azure-storage-common-2.0.0, azure-storage-queue-2.0.1, Babel-2.7.0, backcall-0.1.0, backports.functools_lru_cache-1.5, backports.lzma-0.0.13, backports.shutil_get_terminal_size-1.0.0, backports.shutil_which-3.5.2, backports.weakref-1.0.post1, bagit-1.7.0, bandit-1.6.0, bcbio-gff-0.6.6, bd2k-python-lib-1.14a1.dev48, beautifulsoup4-4.7.1, betamax-0.8.1, billiard-3.6.0.0, biolib-0.0.46, biom-format-2.1.7, biopython-1.73, bitarray-0.9.3, black-19.3b0, blaze-0.10.1, bleach-3.1.0, blessings-1.7, blinker-1.4, blosc-1.8.1, bokeh-1.2.0, boltons-19.1.0, boto3-1.9.160, botocore-1.12.160, bpython-0.18, Brotli-1.0.7, brotlipy-0.7.0, burrito-0.9.1, burrito-fillings-0.1.1, bz2file-0.98, CacheControl-0.12.5, cached-property-1.5.1, capturer-2.4, cassandra-driver-3.18.0, cchardet-2.1.4, celery-4.3.0, cftime-1.0.3.4, changeo-0.4.5, click-7.0, cliff-2.14.1, cloudpickle-1.1.1, clyent-1.2.1, cmarkgfm-0.4.2, cmd2-0.9.12, codecov-2.0.15, collective.checkdocs-0.2, colorama-0.4.1, coloredlogs-10.0, ConfigArgParse-0.14.0, configobj-5.0.6, configparser-3.7.4, contextlib2-0.5.5, couchbase-2.5.4, coverage-4.5.3, coveralls-1.8.0, cssselect-1.0.3, curtsies-0.3.0, cutadapt-2.3, cwl-0.0.1, cwlref-runner-1.0, cwltool-1.0.20190603140227, cx_Freeze-5.1.1, Cycler-0.10.0, cytoolz-0.9.0.1, daemonize-2.5.0, daiquiri-1.5.0, darkslide-4.0.1, datacache-1.1.5, datashape-0.5.2, datrie-0.7.1, dbf-0.98.0, ddt-1.2.1, debtcollector-1.21.0, deepTools-3.3.0, defusedxml-0.6.0, DendroPy-4.4.0, deprecation-2.0.6, dill-0.2.9, distlib-0.2.9.post0, distributed-1.28.1, Django-2.2.2, django-configurations-2.1, dnaio-0.3, dnspython-1.16.0, doc8-0.8.0, docutils-0.14, docutils-stubs-0.0.21, dogpile.cache-0.7.1, drmaa-0.7.9, dulwich-0.19.11, easygui-0.98.1, easygui_qt-0.9.3, elasticsearch-7.0.2, entrypoints-0.3, ephem-3.7.6.0, epydoc-3.0.1, et_xmlfile-1.0.1, eventlet-0.25.0, execnet-1.6.0, extras-1.0.0, fastcache-1.1.0, fasteners-0.15, fastnumbers-2.2.1, faulthandler-3.1, feather-format-0.4.0, fields-5.0.0, findspark-1.3.0, first-2.0.2, fixtures-3.0.0, flake8-3.7.7, flake8-docstrings-1.3.0, flake8-import-order-0.18.1, flake8-polyfill-1.0.2, flaky-3.5.3, Flask-1.0.3, flask-appconfig-0.11.1, Flask-Bootstrap-3.3.7.1, Flask-Cors-3.0.7, Flask-Debug-0.4.3, Flask-Migrate-2.5.2, flask-nav-0.6, Flask-Script-2.0.6, Flask-SQLAlchemy-2.4.0, Flask-WTF-0.14.2, flup-1.0.3, freezer-7.1.0, funcsigs-1.0.2, future-0.17.1, galaxy-lib-19.5.2, gast-0.2.2, Genshi-0.7.3, gensim-3.7.3, gevent-1.4.0, gitdb2-2.0.5, GitPython-2.1.11, gnureadline-6.3.8, google-2.0.2, graphviz-0.11, greenlet-0.4.15, grpcio-1.21.1, gtfparse-1.2.0, h5py-2.9.0, hacking-1.1.0, HeapDict-1.0.0, hiredis-1.0.0, html5lib-1.0.1, HTSeq-0.11.2, httpie-1.0.2, httplib2-0.12.3, humanfriendly-4.18, hunter-2.2.1, hypothesis-4.24.0, idna_ssl-1.1.0, imagecodecs-2019.5.22, imageio-2.5.0, imagesize-1.1.0, importlib-metadata-0.17, incremental-17.5.0, inflection-0.3.1, ip_associations_python_novaclient_ext-0.2, ipaddress-1.0.22, ipdb-0.12, ipykernel-5.1.1, ipyparallel-6.2.4, ipython-7.5.0, ipython_genutils-0.2.0, ipywidgets-7.4.2, iso8601-0.1.12, isodate-0.6.0, isort-4.3.20, itsdangerous-1.1.0, jdcal-1.4.1, jedi-0.13.3, jeepney-0.4, jellyfish-0.7.1, Jinja2-2.10.1, jmespath-0.9.4, json2html-1.2.1, jsonpatch-1.23, jsonpointer-2.0, jsonschema-3.0.1, jupyter-1.0.0, jupyter-contrib-core-0.3.3, jupyter-highlight-selected-word-0.2.0, jupyter-js-widgets-nbextension-0.0.2.dev0, jupyter-latex-envs-1.4.6, jupyter_client-5.2.4, jupyter_contrib_nbextensions-0.5.1, jupyter_core-4.4.0, jupyter_nbextensions_configurator-0.4.1, jupyterlab-0.35.6, jupyterlab-server-0.3.3, jupyterlab_launcher-0.13.1, kazoo-2.6.1, keepalive-0.5, keyring-19.0.2, keystoneauth1-3.14.0, Kivy-1.10.1, kivy-garden-0.1.4, kombu-4.6.0, lazr.uri-1.0.3, lazy-object-proxy-1.4.1, ldap3-2.6, librabbitmq-2.0.0, llvmlite-0.29.0, locket-0.2.0, lockfile-0.12.2, logilab-common-1.4.2, lxml-4.3.3, macholib-1.11, Mako-1.0.11, manuel-1.10.1, Markdown-3.1.1, MarkupSafe-1.1.1, matplotlib-3.1.0, memoized-property-1.0.3, messytables-0.15.2, misopy-0.5.4, mistune-0.8.4, MonkeyType-19.5.0, monotonic-1.5, more-itertools-7.0.0, Morfessor-2.0.4, mox3-0.27.0, mpld3-0.3, msgpack-python-0.5.6, msrest-0.6.6, msrestazure-0.6.0, multidict-4.5.2, multipledispatch-0.6.0, munch-2.3.2, mypy-0.701, mypy_extensions-0.4.1, mypytools-0.1.15, NanoComp-1.6.0, NanoFilt-2.3.0, nanoget-1.8.0, NanoLyse-1.1.0, nanomath-0.23.1, NanoPlot-1.24.0, nanoplotter-1.8.1, NanoStat-1.1.2, natsort-6.0.0, nbconvert-5.5.0, nbformat-4.4.0, nbsphinx-0.4.2, nbval-0.9.1, ndg-httpsclient-0.5.1, neo4j-driver-1.7.4, netCDF4-1.5.1.2, networkx-2.3, nltk-3.4.1, nose-exclude-0.5.0, nose_warnings_filters-0.1.5, notebook-5.7.8, novaclient-auth-secretkey-0.1, npyscreen-4.10.5, Nuitka-0.6.3.1, numba-0.44.0, numpydoc-0.9.1, oauth-1.0.1, oauthlib-3.0.1, objgraph-3.4.1, olefile-0.46, oncodrivefml-2.2.0, ont-fast5-api-1.4.0, opencv_python-4.1.0.25, openpyxl-2.6.2, openstackdocstheme-1.30.0, openstacksdk-0.29.0, ordereddict-1.1, orderedmultidict-1.0, os-brick-2.8.1, os-client-config-1.32.0, os-service-types-1.7.0, os-testr-1.0.0, os_diskconfig_python_novaclient_ext-0.1.3, os_networksv2_python_novaclient_ext-0.26, os_virtual_interfacesv2_python_novaclient_ext-0.20, osc-lib-1.12.1, oscpy-0.4.0, oslo.concurrency-3.29.1, oslo.config-6.9.0, oslo.context-2.22.1, oslo.db-5.0.0, oslo.i18n-3.23.1, oslo.log-3.44.0, oslo.privsep-1.33.1, oslo.serialization-2.29.1, oslo.service-1.39.0, oslo.utils-3.41.0, oslosphinx-4.18.0, oslotest-3.7.1, packaging-19.0, pandocfilters-1.4.2, parse-1.12.0, parso-0.4.0, partd-0.3.10, Paste-3.0.8, PasteDeploy-2.0.1, path.py-12.0.1, pathlib-1.0.1, pathlib2-2.3.3, pathtools-0.1.2, patsy-0.5.1, pefile-2019.4.18, pep517-0.5.0, pep8-naming-0.8.2, persistent-4.5.0, pexpect-4.7.0, pickleshare-0.7.5, pifpaf-2.2.2, Pillow-6.0.0, pip-api-0.0.8, pip-shims-0.3.2, pipenv-2018.11.26, pipreqs-0.4.9, pkgconfig-1.5.1, pkginfo-1.5.0.1, plotly-3.10.0, pluggy-0.12.0, ply-3.11, porechop-0.2.0, positional-1.2.1, presto-0.5.11, pretend-1.0.9, PrettyTable-0.7, process-tests-2.0.2, profilehooks-1.11.0, progressbar33-2.4, prometheus_client-0.6.0, prompt_toolkit-2.0.9, protobuf-3.8.0, prov-1.5.3, psutil-5.6.2, psycopg2-2.8.2, ptyprocess-0.6.0, pure-sasl-0.6.1, purl-1.5, py-1.8.0, py2bit-0.3.0, pyamg-4.0.0, pyArango-1.3.2, pyarrow-0.13.0, pybedtools-0.8.0, pyBigWig-0.3.16, pybind11-2.2.4, pyblake2-1.1.2, pycares-3.0.0, PyChef-0.3.0, PyClone-0.13.1, pycodestyle-2.5.0, pycosat-0.6.3, pycouchdb-1.14, pycryptodome-3.8.2, pycurl-7.43.0.2, pydicom-1.2.2, pydocstyle-3.0.0, pydocumentdb-2.3.3, pydot-1.4.1, PyDP-0.2.4, pyemd-0.5.1, pyensembl-1.7.4, pyfaidx-0.5.5.2, PyGithub-1.43.7, pygithub3-0.5.1, Pygments-2.4.2, PyGreSQL-5.1, PyICU-2.3.1, pyinotify-0.9.6, PyInstaller-3.4, PyJWT-1.7.1, pykerberos-1.2.1, pylibmc-1.6.0, pylint-2.3.1, pymongo-3.8.0, pymssql-2.1.4, PyMySQL-0.9.3, pynast-1.2.2, pyodbc-4.0.26, PyOpenGL-3.1.0, pyOpenSSL-19.0.0, pypandoc-1.4, pyperclip-1.7.0, PyQt5-5.12.2, PyQt5-sip-4.19.17, Pyro4-4.75, pyrsistent-0.15.2, pysam-0.15.1, pyserial-3.4, pytables-3.4.4, pytest-4.6.2, pytest-astropy-0.5.0, pytest-asyncio-0.10.0, pytest-black-0.3.7, pytest-black-multipy-1.0.0, pytest-check-links-0.3.0, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-cover-3.0.0, pytest-django-3.5.0, pytest-faulthandler-1.6.0, pytest-fixture-config-1.7.0, pytest-flake8-1.0.4, pytest-forked-1.0.2, pytest-localserver-0.5.0, pytest-mock-1.10.4, pytest-rerunfailures-7.0, pytest-runner-5.1, pytest-shutil-1.7.0, pytest-tornado5-2.0.0, pytest-virtualenv-1.7.0, pytest-xdist-1.28.0, python-cinderclient-4.2.0, python-consul-1.1.0, python-dotenv-0.10.3, python-editor-1.0.4, python-freezerclient-2.1.0, python-glanceclient-2.16.0, python-hostlist-1.18, python-json-logger-0.1.11, python-keystoneclient-3.19.0, python-Levenshtein-0.12.0, python-memcached-1.59, python-neutronclient-6.12.0, python-novaclient-14.1.0, python-openid-2.2.5, python-openstackclient-3.18.0, python-pam-1.8.4, python-snappy-0.5.4, python-subunit-1.3.0, python-swiftclient-3.7.0, pytoml-0.1.20, pytype-2019.5.31, PyVCF-0.6.8, PyWavelets-1.0.3, pyxdg-0.26, PyYAML-5.1, pyzmq-18.0.1, qpid-python-1.36.0-1, qpid-tools-1.36.0-1, qrcode-6.1, qtconsole-4.5.1, QtPy-1.7.1, rackspace-auth-openstack-1.3, rackspace-novaclient-2.1, rax_default_network_flags_python_novaclient_ext-0.4.0, rax_scheduled_images_python_novaclient_ext-0.3.1, rdflib-4.2.2, rdflib-jsonld-0.4.0, readme_renderer-24.0, redis-3.2.1, regex-2019.06.02, reno-2.11.3, reportlab-3.5.23, repoze.lru-0.7, repoze.sphinx.autointerface-0.8, requests-kerberos-0.12.0, requests-mock-1.6.0, requests-oauthlib-1.2.0, requests-toolbelt-0.9.1, requestsexceptions-1.4.0, requirementslib-1.5.1, restructuredtext-lint-1.3.0, rethinkdb-2.4.2.post1, retrying-1.3.3, retype-17.12.0, rfc3986-1.3.2, rfc3987-1.3.8, riak-2.7.0, roman-3.2, rope-0.14.0, Routes-2.4.1, rsa-4.0, ruamel.yaml-0.15.96, ruffus-2.8.1, s3fs-0.2.1, scandir-1.10.0, scanpy-1.4.3, schema-salad-4.3.20190603183756, sci-0.1.5, scikit-bio-0.5.5, scikit-build-0.10.0, scikit-image-0.15.0, scikit-learn-0.21.2, seaborn-0.9.0, SecretStorage-3.1.1, selenium-3.141.0, Send2Trash-1.5.0, serializable-0.1.1, setuptools-git-1.2, shap-0.29.1, shellescape-3.4.1, shove-0.6.6, simplegeneric-0.8.1, SimpleITK-1.2.0, simplejson-3.16.0, singledispatch-3.4.0.3, sip-4.19.8, sklearn-0.0, slurm-pipeline-3.1.0, slurmpy-0.0.7, smart_open-1.8.4, smmap2-2.0.5, snakemake-5.5.0, snowballstemmer-1.2.1, sockjs-tornado-1.0.6, softlayer_messaging-1.0.3, sortedcollections-1.1.2, sortedcontainers-2.1.0, soupsieve-1.9.1, SPARQLWrapper-1.8.4, Sphinx-2.1.0, sphinx-rtd-theme-0.4.3, sphinx_rtd_theme-0.4.3, sphinxcontrib-applehelp-1.0.1, sphinxcontrib-devhelp-1.0.1, sphinxcontrib-htmlhelp-1.0.2, sphinxcontrib-jsmath-1.0.1, sphinxcontrib-qthelp-1.0.2, sphinxcontrib-serializinghtml-1.1.3, sphinxcontrib-websupport-1.1.2, sphinxcontrib_github_alt-1.1, SQLAlchemy-1.3.4, sqlalchemy-migrate-0.12.0, sqlparse-0.3.0, ssh-import-id-5.6, statsmodels-0.9.0, stdeb-0.8.5, stestr-2.3.1, stevedore-1.30.1, strict-rfc3339-0.7, stuf-0.9.16, subprocess32-3.5.4, subunit2sql-1.10.0, swiftly-2.06, sybil-1.2.0, sympy-1.4, synapseclient-1.9.2, tblib-1.4.0, Tempita-0.5.2, termcolor-1.1.0, terminado-0.8.2, testfixtures-6.8.2, testpath-0.4.2, testrepository-0.0.20, testresources-2.0.1, testscenarios-0.5.0, testtools-2.3.0, textblob-0.15.3, Theano-1.0.4, tifffile-2019.5.30, tinytimer-0.0.0, toml-0.10.0, tomlkit-0.5.3, toolz-0.9.0, tornado-6.0.2, tqdm-4.32.1, traitlets-4.3.2, treq-18.6.0, trollius-2.2, twine-1.13.0, Twisted-19.2.0, twobitreader-3.1.7, typechecks-0.1.0, typed-ast-1.3.5, typing-3.6.6, typing-extensions-3.7.2, tzlocal-1.5.1, uamqp-1.1.0, ujson-1.35, umap-learn-0.3.9, umi_tools-1.0.0, unicodecsv-0.14.1, unittest2-1.1.0, uritemplate-3.0.0, uritemplatepy-0.1.1, urwid-2.0.1, utils-0.9.0, vctools-0.1.6.1, vega-2.1.0, vega3-0.13.0, vine-1.3.0, virtualenv-clone-0.5.3, visdom-0.1.8.8, visitor-0.1.3, vistir-0.4.2, voluptuous-0.11.5, wadllib-1.3.3, warlock-1.3.3, watchdog-0.9.0, wcwidth-0.1.7, webcolors-1.9, webencodings-0.5.1, WebOb-1.8.5, Werkzeug-0.15.4, whatshap-0.18, wheel-0.33.4, widgetsnbextension-3.4.2, wrapt-1.11.1, WTForms-2.2.1, xattr-0.9.6, xgboost-0.90, XlsxWriter-1.1.8, xlwt-1.3.0, xopen-0.6.0, yappi-1.0, yarl-1.3.0, yaspin-0.14.3, ZConfig-3.4.0, zict-0.1.4, zipp-0.5.1, zope.component-4.5, zope.configuration-4.3.1, zope.copy-4.2, zope.deferredimport-4.3, zope.deprecation-4.4.0, zope.event-4.4, zope.exceptions-4.3, zope.hookable-4.2.0, zope.i18nmessageid-4.3.1, zope.interface-4.6.0, zope.location-4.2, zope.proxy-4.3.1, zope.schema-4.9.3, zope.security-4.3.1, zope.testing-4.7, zope.testrunner-5.0, zstandard-0.11.1"
             ]
         },
         "/app/easybuild/modules/all/Python/3.6.6-foss-2016b.lua": {
@@ -10913,6 +11302,22 @@
             ]
         }
     },
+    "Rkeras": {
+        "/app/easybuild/modules/all/Rkeras/3.6.0-foss-2016b.lua": {
+            "Description": "R is a free software environment for statistical computing and graphics.",
+            "Version": "3.6.0-foss-2016b",
+            "fullName": "Rkeras/3.6.0-foss-2016b",
+            "help": "\nDescription\n===========\nR is a free software environment for statistical computing and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\nbayesplot-1.7.0, colourpicker-1.0, config-0.3, dials-0.0.2, dygraphs-1.1.1.6,\nhunspell-3.0, infer-0.4.0.1, inline-0.3.15, ISOcodes-2019.04.22,\njaneaustenr-0.1.5, keras-2.2.4.1, loo-2.1.0, packrat-0.5.0, parsnip-0.0.2,\nrsample-0.0.4, rsconnect-0.8.13, rstan-2.18.2, rstanarm-2.18.2,\nrstantools-1.5.1, shinyjs-1.0, shinystan-2.5.0, SnowballC-0.6.0,\nStanHeaders-2.18.1, stopwords-0.9.0, tensorflow-1.13.1, tfruns-1.4,\nthreejs-0.3.1, tidymodels-0.0.2, tidyposterior-0.0.2, tidypredict-0.3.0,\ntidytext-0.2.0, tokenizers-0.2.1, yardstick-0.0.3, zeallot-0.1.0\n",
+            "hidden": false,
+            "pV": "000000003.000000006.*foss.*zfinal-.000002016.*b.*zfinal",
+            "wV": "000000003.000000006.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: R is a free software environment for statistical computing and graphics.",
+                "Homepage: http://www.r-project.org/",
+                "Extensions: bayesplot-1.7.0, colourpicker-1.0, config-0.3, dials-0.0.2, dygraphs-1.1.1.6, hunspell-3.0, infer-0.4.0.1, inline-0.3.15, ISOcodes-2019.04.22, janeaustenr-0.1.5, keras-2.2.4.1, loo-2.1.0, packrat-0.5.0, parsnip-0.0.2, rsample-0.0.4, rsconnect-0.8.13, rstan-2.18.2, rstanarm-2.18.2, rstantools-1.5.1, shinyjs-1.0, shinystan-2.5.0, SnowballC-0.6.0, StanHeaders-2.18.1, stopwords-0.9.0, tensorflow-1.13.1, tfruns-1.4, threejs-0.3.1, tidymodels-0.0.2, tidyposterior-0.0.2, tidypredict-0.3.0, tidytext-0.2.0, tokenizers-0.2.1, yardstick-0.0.3, zeallot-0.1.0"
+            ]
+        }
+    },
     "Rosetta": {
         "/app/easybuild/modules/all/Rosetta/2016.13.58602-foss-2015b": {
             "Description": "Rosetta is the premier software suite for modeling macromolecular structures. As a flexible, multi-purpose application, it includes tools for structure prediction, design, and remodeling of proteins and nucleic acids. - Homepage: https://www.rosettacommons.org ",
@@ -11685,6 +12090,22 @@
                 "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
                 "Homepage: https://github.com/alexdobin/STAR"
             ]
+        },
+        "/app/easybuild/modules/all/STAR/2.7.1a-foss-2016b.lua": {
+            "Description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+            "Version": "2.7.1a-foss-2016b",
+            "fullName": "STAR/2.7.1a-foss-2016b",
+            "help": "\nDescription\n===========\nSTAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.\n\n\nMore information\n================\n - Homepage: https://github.com/alexdobin/STAR\n",
+            "hidden": false,
+            "pV": "000000002.000000007.000000001.*a.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/STAR/2.7.1a-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000007.000000001.*a.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+                "Homepage: https://github.com/alexdobin/STAR"
+            ]
         }
     },
     "STAR-Fusion": {
@@ -11769,6 +12190,22 @@
             "wV": "000000003.000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000013.*zfinal",
             "whatis": [
                 "Description: SWIG is a software development tool that connects programs written in C and C++ with a variety of high-level programming languages.",
+                "Homepage: http://www.swig.org/"
+            ]
+        },
+        "/app/easybuild/modules/all/SWIG/3.0.12-foss-2016b-Python-3.6.6.lua": {
+            "Description": "SWIG is a software development tool that connects programs\n written in C and C++ with a variety of high-level programming languages.",
+            "Version": "3.0.12-foss-2016b-Python-3.6.6",
+            "fullName": "SWIG/3.0.12-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nSWIG is a software development tool that connects programs\n written in C and C++ with a variety of high-level programming languages.\n\n\nMore information\n================\n - Homepage: http://www.swig.org/\n",
+            "hidden": false,
+            "pV": "000000003.000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/SWIG/3.0.12-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000003.000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: SWIG is a software development tool that connects programs\n written in C and C++ with a variety of high-level programming languages.",
                 "Homepage: http://www.swig.org/"
             ]
         },
@@ -11949,6 +12386,40 @@
             "whatis": [
                 "Description: The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
                 "Homepage: http://www.netlib.org/scalapack/"
+            ]
+        },
+        "/app/easybuild/modules/all/ScaLAPACK/2.0.2-gompic-2016b-OpenBLAS-0.3.1.lua": {
+            "Description": "The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
+            "Version": "2.0.2-gompic-2016b-OpenBLAS-0.3.1",
+            "fullName": "ScaLAPACK/2.0.2-gompic-2016b-OpenBLAS-0.3.1",
+            "help": "\nDescription\n===========\nThe ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.\n\n\nMore information\n================\n - Homepage: http://www.netlib.org/scalapack/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ScaLAPACK/2.0.2-gompic-2016b-OpenBLAS-0.3.1/lib": 1
+            },
+            "pV": "000000002.000000000.000000002.*gompic.*zfinal-.000002016.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
+            "wV": "000000002.000000000.000000002.*gompic.*zfinal-.000002016.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
+            "whatis": [
+                "Description: The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
+                "Homepage: http://www.netlib.org/scalapack/"
+            ]
+        }
+    },
+    "Set-IntervalTree": {
+        "/app/easybuild/modules/all/Set-IntervalTree/0.12-foss-2016b-Perl-5.24.0.lua": {
+            "Description": "Perform range-based lookups on sets of ranges",
+            "Version": "0.12-foss-2016b-Perl-5.24.0",
+            "fullName": "Set-IntervalTree/0.12-foss-2016b-Perl-5.24.0",
+            "help": "\nDescription\n===========\nPerform range-based lookups on sets of ranges\n\n\nMore information\n================\n - Homepage: https://metacpan.org/pod/Set::IntervalTree\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Set-IntervalTree/0.12-foss-2016b-Perl-5.24.0/lib": 1
+            },
+            "pV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "wV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "whatis": [
+                "Description: Perform range-based lookups on sets of ranges",
+                "Homepage: https://metacpan.org/pod/Set::IntervalTree"
             ]
         }
     },
@@ -12589,6 +13060,68 @@
             ]
         }
     },
+    "TensorFlow": {
+        "/app/easybuild/modules/all/TensorFlow/1.13.1-foss-2016b-Python-3.6.6.lua": {
+            "Description": "An open-source software library for Machine Intelligence",
+            "Version": "1.13.1-foss-2016b-Python-3.6.6",
+            "fullName": "TensorFlow/1.13.1-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn open-source software library for Machine Intelligence\n\n\nMore information\n================\n - Homepage: https://www.tensorflow.org/\n\n\nIncluded extensions\n===================\nabsl-py-0.7.0, astor-0.7.1, gast-0.2.2, grpcio-1.19.0, Keras-\nApplications-1.0.7, Keras-Preprocessing-1.0.9, Markdown-3.0.1, protobuf-\npython-3.6.1, tensorboard-1.13.0, TensorFlow-1.13.1, tensorflow-\nestimator-1.13.0, termcolor-1.1.0, Werkzeug-0.14.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/TensorFlow/1.13.1-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000013.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/TensorFlow/1.13.1-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000013.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An open-source software library for Machine Intelligence",
+                "Homepage: https://www.tensorflow.org/",
+                "Extensions: absl-py-0.7.0, astor-0.7.1, gast-0.2.2, grpcio-1.19.0, Keras-Applications-1.0.7, Keras-Preprocessing-1.0.9, Markdown-3.0.1, protobuf-python-3.6.1, tensorboard-1.13.0, TensorFlow-1.13.1, tensorflow-estimator-1.13.0, termcolor-1.1.0, Werkzeug-0.14.1"
+            ]
+        }
+    },
+    "TensorFlowCUDA": {
+        "/app/easybuild/modules/all/TensorFlowCUDA/1.13.1-foss-2016b-Python-3.6.6.lua": {
+            "Description": "An open-source software library for Machine Intelligence",
+            "Version": "1.13.1-foss-2016b-Python-3.6.6",
+            "fullName": "TensorFlowCUDA/1.13.1-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn open-source software library for Machine Intelligence\n\n\nMore information\n================\n - Homepage: https://www.tensorflow.org/\n\n\nIncluded extensions\n===================\nabsl-py-0.7.0, astor-0.7.1, gast-0.2.2, grpcio-1.19.0, Keras-\nApplications-1.0.7, Keras-Preprocessing-1.0.9, Markdown-3.0.1, protobuf-\npython-3.6.1, tensorboard-1.13.0, TensorFlow-1.13.1, tensorflow-\nestimator-1.13.0, termcolor-1.1.0, Werkzeug-0.14.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/TensorFlowCUDA/1.13.1-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000013.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/TensorFlowCUDA/1.13.1-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000013.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An open-source software library for Machine Intelligence",
+                "Homepage: https://www.tensorflow.org/",
+                "Extensions: absl-py-0.7.0, astor-0.7.1, gast-0.2.2, grpcio-1.19.0, Keras-Applications-1.0.7, Keras-Preprocessing-1.0.9, Markdown-3.0.1, protobuf-python-3.6.1, tensorboard-1.13.0, TensorFlow-1.13.1, tensorflow-estimator-1.13.0, termcolor-1.1.0, Werkzeug-0.14.1"
+            ]
+        }
+    },
+    "Theano": {
+        "/app/easybuild/modules/all/Theano/1.0.3-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+            "Version": "1.0.3-foss-2016b-Python-3.6.6",
+            "fullName": "Theano/1.0.3-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nTheano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.\n\n\nMore information\n================\n - Homepage: http://deeplearning.net/software/theano\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Theano/1.0.3-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+                "Homepage: http://deeplearning.net/software/theano"
+            ]
+        }
+    },
     "Tk": {
         "/app/easybuild/modules/all/Tk/8.6.3-foss-2015a-no-X11": {
             "Description": "Tk is an open source, cross-platform widget toolchain that provides a library of basic elements for building  a graphical user interface (GUI) in many different programming languages. - Homepage: http://www.tcl.tk/ ",
@@ -13038,6 +13571,22 @@
                 "Description: Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
                 "Homepage: https://www.ensembl.org/info/docs/tools/vep"
             ]
+        },
+        "/app/easybuild/modules/all/VEP/96.0-foss-2016b-Perl-5.24.0.lua": {
+            "Description": "Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
+            "Version": "96.0-foss-2016b-Perl-5.24.0",
+            "fullName": "VEP/96.0-foss-2016b-Perl-5.24.0",
+            "help": "\nDescription\n===========\nVariant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.\n\n\nMore information\n================\n - Homepage: https://www.ensembl.org/info/docs/tools/vep\n",
+            "hidden": false,
+            "pV": "000000096.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/VEP/96.0-foss-2016b-Perl-5.24.0": 1
+            },
+            "wV": "000000096.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
+            "whatis": [
+                "Description: Variant Effect Predictor (VEP) determines the effect of your variants (SNPs, insertions, deletions,\n CNVs or structural variants) on genes, transcripts, and protein sequence, as well as regulatory regions.",
+                "Homepage: https://www.ensembl.org/info/docs/tools/vep"
+            ]
         }
     },
     "VariationHunter": {
@@ -13067,6 +13616,27 @@
             "wV": "000000000.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Variation Hunter - CommonLaw is a tool for discovery of structural variation in one or more individuals simultaneously using high throughput technologies. - Homepage: http://variationhunter.sourceforge.net/Home "
+            ]
+        }
+    },
+    "ViennaRNA": {
+        "/app/easybuild/modules/all/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+            "Version": "2.4.13-foss-2016b-Python-3.6.6",
+            "fullName": "ViennaRNA/2.4.13-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.\n\n\nMore information\n================\n - Homepage: http://www.tbi.univie.ac.at/RNA/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+                "Homepage: http://www.tbi.univie.ac.at/RNA/"
             ]
         }
     },
@@ -13153,6 +13723,24 @@
             ]
         }
     },
+    "XML-LibXML": {
+        "/app/easybuild/modules/all/XML-LibXML/2.0132-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "Perl binding for libxml2",
+            "Version": "2.0132-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "XML-LibXML/2.0132-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nPerl binding for libxml2\n\n\nMore information\n================\n - Homepage: http://search.cpan.org/src/SHLOMIF/XML-LibXML-2.0018/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/XML-LibXML/2.0132-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000002.000000132.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000002.000000132.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Perl binding for libxml2",
+                "Homepage: http://search.cpan.org/src/SHLOMIF/XML-LibXML-2.0018/"
+            ]
+        }
+    },
     "XML-Parser": {
         "/app/easybuild/modules/all/XML-Parser/2.44-foss-2016b-Perl-5.24.1.lua": {
             "Description": "This is a Perl extension interface to James Clark's XML parser, expat.",
@@ -13220,6 +13808,25 @@
             "wV": "000000005.000000002.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: xz: XZ utilities - Homepage: http://tukaani.org/xz/ "
+            ]
+        },
+        "/app/easybuild/modules/all/XZ/5.2.4-GCCcore-5.4.0.lua": {
+            "Description": "xz: XZ utilities",
+            "Version": "5.2.4-GCCcore-5.4.0",
+            "fullName": "XZ/5.2.4-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nxz: XZ utilities\n\n\nMore information\n================\n - Homepage: https://tukaani.org/xz/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/XZ/5.2.4-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000005.000000002.000000004.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/XZ/5.2.4-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000005.000000002.000000004.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: xz: XZ utilities",
+                "Homepage: https://tukaani.org/xz/"
             ]
         },
         "/app/easybuild/modules/all/XZ/5.2.4-GCCcore-7.3.0.lua": {
@@ -15964,6 +16571,21 @@
             ]
         }
     },
+    "fosscuda": {
+        "/app/easybuild/modules/all/fosscuda/2016b.lua": {
+            "Description": "GCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.",
+            "Version": "2016b",
+            "fullName": "fosscuda/2016b",
+            "help": "\nDescription\n===========\nGCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002016.*b.*zfinal",
+            "wV": "000002016.*b.*zfinal",
+            "whatis": [
+                "Description: GCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.",
+                "Homepage: (none)"
+            ]
+        }
+    },
     "freebayes": {
         "/app/easybuild/modules/all/freebayes/0.9.9-foss-2015b": {
             "Description": "FreeBayes is a Bayesian genetic variant detector designed to find small polymorphisms, specifically SNPs (single-nucleotide polymorphisms), indels (insertions and deletions), MNPs (multi-nucleotide polymorphisms), and complex events (composite insertion and substitution events) smaller than the length of a short-read sequencing alignment. - Homepage: http://github/ekg/freebayes ",
@@ -16312,6 +16934,21 @@
             "whatis": [
                 "Description: The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage collecting \n replacement for C malloc or C++ new.",
                 "Homepage: http://hboehm.info/gc/"
+            ]
+        }
+    },
+    "gcccuda": {
+        "/app/easybuild/modules/all/gcccuda/2016b.lua": {
+            "Description": "GNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.",
+            "Version": "2016b",
+            "fullName": "gcccuda/2016b",
+            "help": "\nDescription\n===========\nGNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002016.*b.*zfinal",
+            "wV": "000002016.*b.*zfinal",
+            "whatis": [
+                "Description: GNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.",
+                "Homepage: (none)"
             ]
         }
     },
@@ -17000,6 +17637,21 @@
             ]
         }
     },
+    "gompic": {
+        "/app/easybuild/modules/all/gompic/2016b.lua": {
+            "Description": "GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.",
+            "Version": "2016b",
+            "fullName": "gompic/2016b",
+            "help": "\nDescription\n===========\nGNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002016.*b.*zfinal",
+            "wV": "000002016.*b.*zfinal",
+            "whatis": [
+                "Description: GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.",
+                "Homepage: (none)"
+            ]
+        }
+    },
     "goolf": {
         "/app/easybuild/modules/all/goolf/1.5.14": {
             "Version": "1.5.14",
@@ -17238,6 +17890,24 @@
             "whatis": [
                 "Description: \n help2man produces simple manual pages from the '--help' and '--version'\n output of other commands.\n",
                 "Homepage: https://www.gnu.org/software/help2man/"
+            ]
+        }
+    },
+    "hivmmer": {
+        "/app/easybuild/modules/all/hivmmer/0.1.2-foss-2016b-Python-3.6.6.lua": {
+            "Description": "An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+            "Version": "0.1.2-foss-2016b-Python-3.6.6",
+            "fullName": "hivmmer/0.1.2-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER\n\n\nMore information\n================\n - Homepage: https://github.com/kantorlab/hivmmer\n",
+            "hidden": false,
+            "pV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/hivmmer/0.1.2-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+                "Homepage: https://github.com/kantorlab/hivmmer"
             ]
         }
     },
@@ -17929,6 +18599,25 @@
                 "/app/easybuild/software/jemalloc/5.0.1-foss-2016b/bin": 1
             },
             "wV": "000000005.000000000.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.",
+                "Homepage: http://www.canonware.com/jemalloc"
+            ]
+        },
+        "/app/easybuild/modules/all/jemalloc/5.1.0-GCCcore-7.3.0.lua": {
+            "Description": "jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.",
+            "Version": "5.1.0-GCCcore-7.3.0",
+            "fullName": "jemalloc/5.1.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\njemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.\n\n\nMore information\n================\n - Homepage: http://www.canonware.com/jemalloc\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/jemalloc/5.1.0-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000005.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/jemalloc/5.1.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000005.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
             "whatis": [
                 "Description: jemalloc is a general purpose malloc(3) implementation that emphasizes fragmentation avoidance and\n scalable concurrency support.",
                 "Homepage: http://www.canonware.com/jemalloc"
@@ -19841,6 +20530,22 @@
         }
     },
     "libgtextutils": {
+        "/app/easybuild/modules/all/libgtextutils/0.7-GCCcore-5.4.0.lua": {
+            "Description": "ligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream",
+            "Version": "0.7-GCCcore-5.4.0",
+            "fullName": "libgtextutils/0.7-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream\n\n\nMore information\n================\n - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libgtextutils/0.7-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000000.000000007.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "wV": "000000000.000000007.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: ligtextutils is a dependency of fastx-toolkit and is provided\n via the same upstream",
+                "Homepage: http://hannonlab.cshl.edu/fastx_toolkit/"
+            ]
+        },
         "/app/easybuild/modules/all/libgtextutils/0.7-foss-2016a": {
             "Description": "ligtextutils is a dependency of fastx-toolkit and is provided via the same upstream - Homepage: http://hannonlab.cshl.edu/fastx_toolkit/ ",
             "Version": "0.7-foss-2016a",
@@ -21605,6 +22310,25 @@
                 "Description: Libxml2 is the XML C parser and toolchain developed for the Gnome project (but usable\n outside of the Gnome platform). - Homepage: http://xmlsoft.org/"
             ]
         },
+        "/app/easybuild/modules/all/libxml2/2.9.8-GCCcore-5.4.0.lua": {
+            "Description": "Libxml2 is the XML C parser and toolchain developed for the Gnome project\n (but usable outside of the Gnome platform).\n",
+            "Version": "2.9.8-GCCcore-5.4.0",
+            "fullName": "libxml2/2.9.8-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nLibxml2 is the XML C parser and toolchain developed for the Gnome project\n (but usable outside of the Gnome platform).\n\n\nMore information\n================\n - Homepage: http://xmlsoft.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libxml2/2.9.8-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000002.000000009.000000008.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/libxml2/2.9.8-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000002.000000009.000000008.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: \n Libxml2 is the XML C parser and toolchain developed for the Gnome project\n (but usable outside of the Gnome platform).\n",
+                "Homepage: http://xmlsoft.org/"
+            ]
+        },
         "/app/easybuild/modules/all/libxml2/2.9.8-GCCcore-7.3.0.lua": {
             "Description": "Libxml2 is the XML C parser and toolchain developed for the Gnome project\n (but usable outside of the Gnome platform).\n",
             "Version": "2.9.8-GCCcore-7.3.0",
@@ -22037,6 +22761,24 @@
             "whatis": [
                 "Description: MultiTail allows you to monitor logfiles and command\noutput in multiple windows in a terminal, colorize, filter and merge.",
                 "Homepage: http://www.vanheusden.com/multitail/"
+            ]
+        }
+    },
+    "nanofilt": {
+        "/app/easybuild/modules/all/nanofilt/2.5.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.5.0-foss-2016b-Python-3.6.6",
+            "fullName": "nanofilt/2.5.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+            "hidden": false,
+            "pV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/nanofilt/2.5.0-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
             ]
         }
     },
@@ -23902,6 +24644,24 @@
             ]
         }
     },
+    "revbayes": {
+        "/app/easybuild/modules/all/revbayes/1.0.11-foss-2016b.lua": {
+            "Description": "RevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.",
+            "Version": "1.0.11-foss-2016b",
+            "fullName": "revbayes/1.0.11-foss-2016b",
+            "help": "\nDescription\n===========\nRevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.\n\n\nMore information\n================\n - Homepage: https://revbayes.github.io/\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000011.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/revbayes/1.0.11-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000000.000000011.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: RevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.",
+                "Homepage: https://revbayes.github.io/"
+            ]
+        }
+    },
     "rgeos": {
         "/app/easybuild/modules/all/rgeos/0.3-26-foss-2016b-R-3.5.0.lua": {
             "Description": "R interface to Geometry Engine - Open Source (GEOS) using the C API for topology operations on geometries",
@@ -24135,6 +24895,28 @@
             "wV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Overview SSW is a fast implementation of the Smith-Waterman\n algorithm, which uses the Single-Instruction Multiple-Data (SIMD)\n instructions to parallelize the algorithm at the instruction level. - Homepage: https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library"
+            ]
+        }
+    },
+    "snakemake": {
+        "/app/easybuild/modules/all/snakemake/5.2.4-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Snakemake workflow management system is a tool to create reproducible and scalable data analyses.",
+            "Version": "5.2.4-foss-2016b-Python-3.6.6",
+            "fullName": "snakemake/5.2.4-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Snakemake workflow management system is a tool to create reproducible and scalable data analyses.\n\n\nMore information\n================\n - Homepage: https://snakemake.readthedocs.io\n\n\nIncluded extensions\n===================\nappdirs-1.4.3, ConfigArgParse-0.13.0, datrie-0.7.1, docutils-0.14,\njsonschema-2.6.0, ratelimiter-1.2.0.post0, snakemake-5.2.4, wrapt-1.10.11\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/snakemake/5.2.4-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000005.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/snakemake/5.2.4-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000005.000000002.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Snakemake workflow management system is a tool to create reproducible and scalable data analyses.",
+                "Homepage: https://snakemake.readthedocs.io",
+                "Extensions: appdirs-1.4.3, ConfigArgParse-0.13.0, datrie-0.7.1, docutils-0.14, jsonschema-2.6.0, ratelimiter-1.2.0.post0, snakemake-5.2.4, wrapt-1.10.11"
             ]
         }
     },
@@ -24569,6 +25351,21 @@
             "whatis": [
                 "Description: Set of Linux utilities",
                 "Homepage: http://www.kernel.org/pub/linux/utils/util-linux"
+            ]
+        }
+    },
+    "v-pipe": {
+        "/app/easybuild/modules/all/v-pipe/1.0-foss-2016b.lua": {
+            "Description": "V-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.",
+            "Version": "1.0-foss-2016b",
+            "fullName": "v-pipe/1.0-foss-2016b",
+            "help": "\nDescription\n===========\nV-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.\n\n\nMore information\n================\n - Homepage: https://github.com/cbg-ethz/V-pipe\n",
+            "hidden": false,
+            "pV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "wV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: V-pipe is a workflow designed for analysis of next generation\n sequencing (NGS) data from viral pathogens. It produces a number of results\n in a curated format.",
+                "Homepage: https://github.com/cbg-ethz/V-pipe"
             ]
         }
     },
