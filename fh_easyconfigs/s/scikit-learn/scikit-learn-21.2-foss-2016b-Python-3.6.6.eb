@@ -17,7 +17,7 @@ sources = [SOURCE_TAR_GZ]
 
 dependencies = [
     ('Python', '3.6.6'),
-    ('matplotlib', '3.0.2', versionsuffix),
+    ('matplotlib', '3.0.0', versionsuffix),
 ]
 
 options = {'modulename': 'sklearn'}

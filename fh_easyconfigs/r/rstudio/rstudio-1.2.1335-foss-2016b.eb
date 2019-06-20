@@ -18,29 +18,25 @@ source_urls = [('https://github.com/rstudio/rstudio/archive')]
 sources = [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
 
 builddependencies = [
+    ('R', '3.5.3'),
     ('CMake', '3.6.1'),
     ('Boost', '1.67.0'),
     ('Qt5', '5.9.1'),
 ]
 
 dependencies = [
-    ('R', '3.5.3', '-fh1'),
 ]
 
-# unpack_options = ' && mkdir breakdancer/build '
-#srcdir = '..'
 separate_build_dir = True
-# start_dir = 'build'
-configopts = ' .. -DCMAKE_BUILD_TYPE=release '
+
+configopts += '-DCMAKE_BUILD_TYPE=release '
+configopts += '-DRSTUDIO_TARGET=Server '
 maxparallel = 1
 
 sanity_check_paths = {
     'dirs': ['bin', 'lib'],
-    'files': ['bin/breakdancer-max',
-              'lib/breakdancer-maxunstable/AlnParser.pm',
-              'lib/breakdancer-maxunstable/Poisson.pm',
-              'lib/breakdancer-maxunstable/bam2cfg.pl',
+    'files': ['bin/rstudio',
               ],
 }
 
-moduleclass = 'bio'
+moduleclass = 'tools'
