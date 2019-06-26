@@ -65,6 +65,11 @@ configopts += '--with-freetype2=yes '
 
 prebuildopts = 'qmake -o cmd/gvedit/qMakefile cmd/gvedit/gvedit.pro && '
 
+sanity_check_commands = [
+    ("test ! -d $EBROOTTCL/lib/*/graphviz", ''),
+    ("test ! -d $EBROOTTCL/lib64/*/graphviz", ''),
+]
+
 sanity_check_paths = {
     'files': ['bin/cluster', 'bin/dot', 'bin/gvmap',
               'lib/libcdt.%s' % SHLIB_EXT,
