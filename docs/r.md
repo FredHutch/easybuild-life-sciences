@@ -18,6 +18,7 @@ Beginning with R-3.5.1 there are two modudles for each release of R. The two
  to the Hutch, and contains libraries that have been requested by Hutch users.
  The Fred Hutch module inherits the modules from the base module. The base
  module is maintained by the EasyBuild community. 
+ Users should use and load the 'fh' versions of R.
 
 ### Requesting Modules ###
 Adding every user request for libraries is becoming a challenge to support.
