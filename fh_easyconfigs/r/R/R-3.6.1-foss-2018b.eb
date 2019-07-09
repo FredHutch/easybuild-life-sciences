@@ -70,7 +70,7 @@ exts_default_options = {
 }
 
 # !! order of packages is important !!
-# packages updated on May 14, 2019
+# packages updated on July 8, 2019
 exts_list = [
     'base',
     'datasets',
