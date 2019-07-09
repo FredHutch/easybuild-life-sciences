@@ -1,0 +1,83 @@
+# EasyBuild EasyConfig 
+#
+# John Dey jfdey@fredhutch.org fizwit@github.com
+easyblock = 'PythonPackage'
+
+name = 'CITE-seq-Count'
+version = '1.4.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://hoohm.github.io/CITE-seq-Count'
+description = """A python package that allows to count antibody TAGS from a CITE-seq and/or cell hashing experiment."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/Hoohm/CITE-seq-Count/archive']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.6.6'),
+    ('GCCcore', '5.4.0', '', True), # for libssp
+]
+
+download_dep_fail = True
+use_pip = True
+
+exts_defaultclass = 'PythonPackage'
+exts_list = [
+     ('hypothesis', '4.24.6', {
+        'source_urls': ['https://pypi.io/packages/source/h/hypothesis'],
+    }),
+    ('configparser', '3.7.4', {
+        'source_urls': ['https://pypi.io/packages/source/c/configparser'],
+    }),
+    ('importlib_metadata', '0.18', {
+        'source_urls': ['https://pypi.io/packages/source/i/importlib_metadata']
+    }),
+    ('umi_tools', '1.0.0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.io/packages/source/u/umi_tools']
+    }),
+    ('pluggy', '0.12.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/pluggy']
+    }),
+    ('pytest', '4.1.0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.io/packages/source/p/pytest']
+    }),
+    ('pytest-dependency', '0.4.0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.io/packages/source/p/pytest-dependency']
+    }),
+    ('pybktree', '1.1', {
+        'source_urls': ['https://pypi.io/packages/source/p/pybktree']
+    }),
+    ('multiprocess', '0.70.6.1', {
+        'source_urls': ['https://pypi.io/packages/source/m/multiprocess']
+    }),
+    ('python-Levenshtein', '0.12.0', {
+        'modulename': 'Levenshtein',
+        'source_urls': ['https://pypi.io/packages/source/p/python-Levenshtein']
+    }),
+
+]
+
+sanity_check_paths = {
+    'files': ['bin/CITE-seq-Count'],
+    'dirs': [
+    'lib/python%(pyshortver)s/site-packages/cite_seq_count',
+    'lib/python3.6/site-packages/CITE_seq_Count-%(version)s-py%(pyshortver)s.egg-info',
+     ],
+}
+
+sanity_check_commands = []
+#('%(name)s', '--help')]
+options = {'modulename': False}
+
+moduleclass = 'bio'
+
+#sanity_check_paths = {
+#    'files': [],
+#    'dirs': ['lib/python%(pyshortver)s/site-packages/Bio',
+#             'lib/python%(pyshortver)s/site-packages/BioSQL']
+#}
