@@ -22,18 +22,22 @@ dependencies = [
 ]
 
 postinstallcmds = [
-    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/datasets .'),
-    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/db .'),
-    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/external .'),
-    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/testing_ref .'),
+    'chmod o+x %(installdir)s/*py',
+    'ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/datasets %(installdir)s/.',
+    'ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/db %(installdir)s/.',
+    'ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/external %(installdir)s/.',
+    'ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/testing_ref %(installdir)s/.',
 ]
 
 sanity_check_paths = {
     'files': ['tcr_sampler.py',
-              'tcrdist/plotting.py'],
+              'README.md'],
     'dirs': ['tcrdist']
 }
 
-modextrapaths = {'PATH': ''}
+modextrapaths = {
+    'PATH': [''],
+    'PYTHONPATH': ['tcrdit'],
+}
 
 moduleclass = 'bio'
