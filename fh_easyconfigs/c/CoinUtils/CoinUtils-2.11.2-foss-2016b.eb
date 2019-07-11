@@ -1,0 +1,29 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhtuch.org fizwit@github
+easyblock = 'ConfigureMake'
+
+name = 'CoinUtils'
+version = '2.11.2'
+
+homepage = 'https://www.coin-or.org/Doxygen/CoinUtils/'
+description = """CoinUtils (Coin-OR Utilities) is an open-source collection of classes
+ and functions that are generally useful to more than one COIN-OR project. A collection
+ of routines for manipulating sparse matrices and other matrix operations"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/coin-or/CoinUtils/archive/releases']
+sources = ['%(version)s.tar.gz']
+
+configopts = ""
+
+sanity_check_paths = {
+    'dirs':  ['include',
+              'lib/pkgconfig',
+              'share'],
+    'files': ['include/coin/CoinUtility.hpp',
+              'share/coin/doc/CoinUtils/README',
+              'lib/libCoinUtils.%s' % SHLIB_EXT]
+}
+
+moduleclass = 'math'

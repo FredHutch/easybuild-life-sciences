@@ -1,0 +1,39 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhutch.org fizwit@github
+easyblock = 'Tarball'
+
+name = 'tcr-dist'
+version = '0.0.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/phbradley/tcr-dist'
+description = """Quantifiable predictive features define epitope-specific T cell receptor repertoires"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/phbradley/tcr-dist/archive']
+sources = [{'download_filename': 'master.zip', 'filename': SOURCE_ZIP}]
+
+dependencies = [
+    ('Python', '2.7.15', '-fh1'),
+    ('ImageMagick', '7.0.5-10'),
+    ('BLAST', '2.2.26-Linux_x86_64', '', True),
+    ('cURL', '7.49.1'),
+]
+
+postinstallcmds = [
+    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/datasets .'),
+    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/db .'),
+    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/external .'),
+    ('ln -s /shared/biodata/ngs/Reference/tcrdist/tcrdist_extras_v2/testing_ref .'),
+]
+
+sanity_check_paths = {
+    'files': ['tcr_sampler.py',
+              'tcrdist/plotting.py'],
+    'dirs': ['tcrdist']
+}
+
+modextrapaths = {'PATH': ''}
+
+moduleclass = 'bio'
