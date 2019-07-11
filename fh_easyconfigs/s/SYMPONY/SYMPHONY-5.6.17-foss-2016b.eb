@@ -10,6 +10,7 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 
 source_urls = ['https://github.com/coin-or/SYMPHONY/archive/releases']
 sources = ['%(version)s.tar.gz']
+checksums = ['f6c2b9c9e60ebff4a665e243e765649334c5d0680f536d3d9c0c372025ab96dc']
 
 builddependencies = [
     ('pkg-config', '0.29.1'),
