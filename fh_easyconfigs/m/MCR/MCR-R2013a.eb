@@ -1,0 +1,17 @@
+name = 'MCR'
+version = 'R2013a'
+
+homepage = 'http://www.mathworks.com/products/compiler/mcr/'
+description = """The MATLAB Runtime is a standalone set of shared libraries
+ that enables the execution of compiled MATLAB applications
+ or components on computers that do not have MATLAB installed."""
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+source_urls = ['http://ssd.mathworks.com/supportfiles/MCR_Runtime/%(version)s/']
+sources = ['%(name)s_%(version)s_glnxa64_installer.zip']
+
+# Add libjvm to library path
+modextrapaths = {'LD_LIBRARY_PATH': 'v81/sys/java/jre/glnxa64/jre/lib/amd64/server'}
+
+moduleclass = 'math'
