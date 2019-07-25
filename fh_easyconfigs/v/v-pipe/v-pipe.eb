@@ -20,7 +20,8 @@ sources = [{
 }] 
 
 dependencies = [
-    ('snakemake', '5.2.4', '-Python-3.6.6'),
+    ('Python', '3.6.6'),
+    ('snakemake', '5.2.4', '-Python-%(pyver)s'),
     ('FastQC', '0.11.8', '-Java-1.8', True),
     ('PRINSEQ', '0.20.4', '-Perl-5.28.0'),
     #('Vicuna', ''),
@@ -29,7 +30,7 @@ dependencies = [
     ('MAFFT', '7.305', '-with-extensions'),
     #('QuasiRecomb', ''),
     ('SAMtools', '1.9'),
-    #('SmallGenomeUtilities'),
+    ('smallgenomeutilities/1.0', '-Python-%(pyver)'),
 ]
 
 sanity_check_paths = {
