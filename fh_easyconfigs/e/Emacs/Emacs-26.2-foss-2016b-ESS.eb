@@ -2,6 +2,7 @@ easyblock = 'ConfigureMake'
 
 name = 'Emacs'
 version = '26.2'
+versionsuffix = '-ESS'
 
 homepage = 'http://www.gnu.org/software/emacs/'
 description = """GNU Emacs is an extensible, customizable text editor—and more.
@@ -21,6 +22,7 @@ dependencies = [
     ('LibTIFF', '4.0.6'),
     ('zlib', '1.2.8'),
     ('X11','20160819'),
+    ('ESS','16.10','',True)
 ]
 
 configopts = '--without-all --with-gif --with-tiff --with-jpeg --with-modules --with-zlib --with-png'

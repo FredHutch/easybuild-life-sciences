@@ -1,0 +1,33 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhutch.org fizwit@github
+easyblock = 'PythonPackage'
+
+name = 'python-Levenshtein'
+version = '0.12.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/ztane/python-Levenshtein'
+description = """The Levenshtein Python C extension module contains functions for fast computation of;
+ Levenshtein (edit) distance, and edit operations
+ string similarity
+ approximate median strings, and generally string averaging
+ string sequence and set similarity."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://pypi.org/project/python-Levenshtein']
+sources = [SOURCE_TAR_GZ]
+checksums = ['033a11de5e3d19ea25c9302d11224e1a1898fe5abd23c61c7c360c25195e3eb1']
+
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+options = {'modulename': False}
+
+sanity_check_paths = {
+    'files': ['bin/easy_install'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'
