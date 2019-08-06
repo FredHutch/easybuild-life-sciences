@@ -29,9 +29,6 @@ dependencies = [
     ('matplotlib', '3.0.0', versionsuffix),
 ]
 
-download_dep_fail = True
-use_pip = True
-
 exts_defaultclass = 'PythonPackage'
 exts_list = [
     ('scandir', '1.10.0', {
@@ -141,7 +138,12 @@ exts_list = [
         'modulename': 'lark',
         'source_urls': ['https://pypi.io/packages/source/l/lark-parser'],
     }),
+    ('python-dateutil', '2.8.0', {
+        'modulename': 'dateutil',
+        'source_urls': ['https://pypi.io/packages/source/p/python-dateutil'],
+    }),
     ('hypothesis', '4.31.0', {
+        'use_pip': False,
         'source_urls': ['https://pypi.io/packages/source/h/hypothesis'],
     }),
     ('pytest', '5.0.1', {
@@ -165,9 +167,6 @@ exts_list = [
         'modulename': 'importlib_metadata',
         'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
         'source_urls': ['https://pypi.io/packages/source/i/importlib-metadata'],
-    }),
-    ('hypothesis', '4.24.6', {
-        'source_urls': ['https://pypi.io/packages/source/h/hypothesis'],
     }),
     ('regex', '2019.06.08', {
         'source_urls': ['https://pypi.io/packages/source/r/regex'],
@@ -194,26 +193,19 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/p/python-Levenshtein']
     }),
     ('pysam', '0.15.2', {
+        'modulename': False,
         'source_urls': ['https://pypi.io/packages/source/p/pysam']
     }),
 ]
 
 sanity_check_paths = {
-    'files': ['bin/CITE-seq-Count'],
-    'dirs': [
-    'lib/python%(pyshortver)s/site-packages/cite_seq_count',
-    'lib/python3.6/site-packages/CITE_seq_Count-%(version)s-py%(pyshortver)s.egg-info',
-     ],
+    'files': ['bin/CITE-seq-Count',
+        'lib/python3.6/site-packages/CITE_seq_Count-%(version)s-py%(pyshortver)s.egg',
+    ],
+    'dirs': ['bin', 'lib']
 }
 
 sanity_check_commands = []
-#('%(name)s', '--help')]
 options = {'modulename': False}
 
 moduleclass = 'bio'
-
-#sanity_check_paths = {
-#    'files': [],
-#    'dirs': ['lib/python%(pyshortver)s/site-packages/Bio',
-#             'lib/python%(pyshortver)s/site-packages/BioSQL']
-#}
