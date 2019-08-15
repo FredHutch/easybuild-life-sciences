@@ -231,6 +231,17 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/t/tabulate/'],
         'checksums': ['e4ca13f26d0a6be2a2915428dc21e732f1e44dad7f76d7030b2ef1ec251cf7f2'],
     }),
+    ('future-fstrings', '1.2.0', {
+        'modulename': 'future_fstrings',
+        'source_urls': ['https://pypi.io/packages/source/f/future-fstrings'],
+        'source_tmpl': 'future_fstrings-%(version)s.tar.gz',
+    }),
+    ('get_version', '2.0.6', {
+        'source_urls': ['https://pypi.io/packages/source/g/get_version'],
+    }),
+    ('scanpydoc', '0.3.4', {
+        'source_urls': ['https://pypi.io/packages/source/s/scanpydoc'],
+    }),
 ]
 
 moduleclass = 'lang'
