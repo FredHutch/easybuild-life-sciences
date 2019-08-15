@@ -11,20 +11,22 @@ programmed in R, Python and C/C++."""
 toolchain = {'name': 'foss', 'version': '2016b'}
 toolchainopts = {'pic': True}
 
-source_urls = ['https://github.com/igraph/igraph/releases/download/%(version)s']
 sources = ['igraph-%(version)s.tar.gz']
-checksums = ['d978030e27369bf698f3816ab70aa9141e9baf81c56cc4f55efbe5489b46b0df']
+source_urls = ['https://github.com/igraph/igraph/releases/download/%(version)s']
 
 builddependencies = [('Autotools', '20150215')]
-dependencies = [
-    ('zlib', '1.2.8'),
-    ('libxml2', '2.9.4'),
+
+patches = [
+    'igraph-%(version)s-no-lapack-no-blas.patch',
+    'igraph-%(version)s-fix-aclocal-version.patch'
 ]
 
-preconfigopts = 'autoreconf -i && '
+# link against MKL rather than blas/lapack
+preconfigopts = "env LDFLAGS='-lpthread -lm'"
+configopts = "--with-external-blas=yes --with-external-lapack=yes"
 
 sanity_check_paths = {
-    'files': ['lib/libigraph.%s' % SHLIB_EXT, 'lib/libigraph.la', 'lib/pkgconfig/igraph.pc'] +
+    'files': ['lib/libigraph.so', 'lib/libigraph.la', 'lib/pkgconfig/igraph.pc'] +
              ['include/igraph/%s' % x for x in ['igraph_version.h', 'igraph_types.h', 'igraph_constants.h']],
     'dirs': [],
 }

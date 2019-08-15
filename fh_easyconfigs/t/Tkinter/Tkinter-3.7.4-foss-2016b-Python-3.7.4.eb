@@ -1,0 +1,20 @@
+name = 'Tkinter'
+version = '3.7.4'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://python.org/'
+description = """Tkinter module, built with the Python buildsystem"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['http://www.python.org/ftp/python/%(version)s/']
+sources = ['Python-%(version)s.tgz']
+
+dependencies = [
+    ('Python', version),
+    ('Tk', '8.6.7'),
+    ('zlib', '1.2.11'),
+]
+
+moduleclass = 'lang'

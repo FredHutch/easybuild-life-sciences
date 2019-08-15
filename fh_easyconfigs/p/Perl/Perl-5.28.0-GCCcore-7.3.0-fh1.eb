@@ -1,0 +1,64 @@
+# easybuild easyconfig
+easyblock = 'Bundle'
+
+name = 'Perl'
+version = '5.28.0'
+versionsuffix = '-fh1'
+
+homepage = 'http://www.perl.org/'
+description = """Fred Hutch Custom Perl"""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Perl', '5.28.0'),
+    ('BioPerl', '1.7.2', '-Perl-%(perlver)s'),
+    ('File-ReadBackwards', '1.05', '-Perl-%(perlver)s'),
+]
+
+exts_defaultclass = 'PerlModule'
+exts_filter = ("perldoc -lm %(ext_name)s ", "")
+
+exts_list = [
+    #('Crypt::RC4', '2.02', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT'],
+    #    'source_tmpl': ['Crypt-RC4-%(version)s.tar.gz'],
+    #}),
+    #('Digest::Perl::MD5', '1.9', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/D/DE/DELTA'],
+    #    'source_tmpl': ['Digest-Perl-MD5-%(version)s.tar.gz'],
+    #}),
+    #('IO::File', '1.39', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/T/TO/TODDR'],
+    #    'source_tmpl': ['IO-%(version)s.tar.gz'],
+    #}),
+    #('IO::Scalar', '2.111', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/D/DS/DSKOLL'],
+    #    'srouce_tmpl': ['IO-stringy-%(version)s.tar.gz'],
+    #}),
+    #('OLE::Storage_Lite', '0.19', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA'],
+    #    'source_tmpl' : ['OLE-Storage_Liste-%(version)s.tar.gz'],
+    #}),
+    #('Scalar::Util', '1.51', {
+    #    'source_urls': ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
+    #    'source_tmpl': ['Scalar-List-Utils-%(version)s.tar.gz']
+    #}),
+    #('Spreadsheet::ParseExcel', '0.65', {
+    #    'source_tmpl': 'Spreadsheet-ParseExcel-0.65.tar.gz',
+    #    'source_urls': ['http://search.cpan.org/CPAN/authors/id/D/DO/DOUGW/'],
+    #}),
+    ('Statistics::Descriptive', '3.0612', {
+        'source_tmpl': 'Statistics-Descriptive-3.0612.tar.gz',
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/'],
+        'modulename': 'False',
+    }),
+]
+
+modextrapaths = {
+    'PATH': '',
+    'PERL5LIB': 'lib/perl5/site_perl/%(perlver)s/',
+}
+
+moduleclass = 'lang'

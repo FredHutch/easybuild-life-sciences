@@ -686,6 +686,15 @@ exts_list = [
     ('tidytext', '0.2.1'),
     ('parsnip', '0.0.2'),
     ('tidymodels', '0.0.2'),
+    ('GSVA', '1.32.0'),
+    ('xCell', '1.2', {
+        'source_urls': ['https://github.com/dviraran/xCell/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'filename': '%(name)s_%(version)s.tar.gz',
+    }),
+    # MCPcounter
+    # install_github("ebecht/MCPcounter",ref="master", subdir="Source")
+    ('ComICS', '1.0.4'),
 ]
 
 sanity_check_paths = {
