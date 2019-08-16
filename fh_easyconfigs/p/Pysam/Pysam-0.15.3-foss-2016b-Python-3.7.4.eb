@@ -26,7 +26,7 @@ sources = ['v%(version)s.tar.gz']
 dependencies = [
     ('Python', '3.7.4'),
     ('ncurses', '6.0'),
-    ('cURL', '7.49.1'),
+    ('cURL', '7.65.3'),
     ('XZ', '5.2.2'),
 ]
 
