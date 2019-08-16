@@ -33,6 +33,7 @@ dependencies = [
     ('matplotlib', '3.1.1', '-Python-%(pyver)s'),
     ('Biopython', '1.74', '-Python-%(pyver)s'),
     ('Pysam', '0.15.3', '-Python-%(pyver)s'),
+    ('pybedtools', '0.8.0', '-Python-%(pyver)s'),
     ('freetds', '1.00.9'), # pymssql
     ('libjpeg-turbo', '1.5.0'),  # required for Pillow
     ('OpenJPEG', '2.3.0', '-GCCcore-5.4.0', True), # imagecodecs
@@ -663,9 +664,6 @@ exts_list = [
     ('oslo.db', '5.0.1', {
         'modulename': 'oslo_db',
         'source_urls': ['https://pypi.io/packages/source/o/oslo.db'],
-    }),
-    ('matplotlib', '3.1.1', {
-        'source_urls': ['https://pypi.io/packages/source/m/matplotlib'],
     }),
     ('llvmlite', '0.29.0', {
         'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite'],
@@ -2078,9 +2076,6 @@ exts_list = [
     }),
     ('textblob', '0.15.3', {
         'source_urls': ['https://pypi.python.org/packages/source/T/TextBlob/'],
-    }),
-    ('pybedtools', '0.8.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pybedtools/'],
     }),
     ('virtualenv-clone', '0.5.3', {
         'modulename': 'clonevirtualenv',

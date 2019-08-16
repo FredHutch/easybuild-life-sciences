@@ -1,6 +1,6 @@
 ---
 title: Python-3.7.4-foss-2016b-fh1
-date: 2019-08-15
+date: 2019-08-16
 ---
 
 ### Known Issues
@@ -10,9 +10,11 @@ date: 2019-08-15
   * [APScheduler-3.6.1](http://pypi.org/project/APScheduler/) In-process task scheduler with Cron-like capabilities
   * [AnyQt-0.0.10](https://pypi.org/project/AnyQt/) PyQt4/PyQt5 compatibility layer.
   * [Babel-2.7.0](https://pypi.org/project/Babel/) Internationalization utilities
+  * [Biopython-1.74](https://pypi.org/project/biopython/) Freely available tools for computational molecular biology.
   * [Brotli-1.0.7](https://pypi.org/project/Brotli/) Python bindings for the Brotli compression library
   * [CacheControl-0.12.5](https://pypi.org/project/CacheControl/) httplib2 caching for requests
   * [ConfigArgParse-0.14.0](https://pypi.org/project/ConfigArgParse/) A drop-in replacement for argparse that allows options to also be set via config files and/or environment variables.
+  * [Cycler-0.10.0](https://pypi.org/project/Cycler/) Composable style cycles
   * [Cython-0.28.5](https://pypi.org/project/Cython/) The Cython compiler for writing C extensions for the Python language.
   * [DataShape-0.5.2](https://pypi.org/project/DataShape/) A data description language.
   * [DendroPy-4.4.0](https://pypi.org/project/DendroPy/) A Python library for phylogenetics and phylogenetic computing: reading, writing, simulation, processing and manipulation of phylogenetic trees (phylogenies) and characters.
@@ -65,6 +67,7 @@ date: 2019-08-15
   * [PyYAML-5.1.2](https://pypi.org/project/PyYAML/) YAML parser and emitter for Python
   * [Pygments-2.4.2](https://pypi.org/project/Pygments/) Pygments is a syntax highlighting package written in Python.
   * [Pyro4-4.76](https://pypi.org/project/Pyro4/) distributed object middleware for Python (RPC)
+  * [Pysam-0.15.3](https://pypi.org/project/pysam/) pysam
   * [QtPy-1.9.0](https://pypi.org/project/QtPy/) Provides an abstraction layer on top of the various Qt bindings (PyQt5, PyQt4 and PySide) and additional custom QWidgets.
   * [Routes-2.4.1](https://pypi.org/project/Routes/) Routing Recognition and Generation Tools
   * [SIP-4.19.8](https://pypi.org/project/SIP/) Python extension module generator for C and C++ libraries
@@ -109,6 +112,8 @@ date: 2019-08-15
   * [astropy-3.2.1](https://pypi.org/project/astropy/) Community-developed python astronomy tools
   * [async_generator-1.10](https://pypi.org/project/async_generator/) Async generators and context managers for Python 3.5+
   * [async_timeout-3.0.1](https://pypi.org/project/async_timeout/) Timeout context manager for asyncio programs
+  * [atomicwrites-1.3.0](https://pypi.org/project/atomicwrites/) Atomic file writes.
+  * [attrs-19.1.0](https://pypi.org/project/attrs/) Classes Without Boilerplate
   * [autopep8-1.4.4](https://pypi.org/project/autopep8/) A tool that automatically formats Python code to conform to the PEP 8 style guide
   * [awscli-1.16.211](https://pypi.org/project/awscli/) Universal Command Line Environment for AWS.
   * [azure-4.0.0](https://pypi.org/project/azure/) Microsoft Azure Client Libraries for Python
@@ -270,6 +275,7 @@ date: 2019-08-15
   * [idna_ssl-1.1.0](https://pypi.org/project/idna_ssl/) Patch ssl.match_hostname for Unicode(idna) domains support
   * [imageio-2.5.0](https://pypi.org/project/imageio/) Library for reading and writing a wide range of image, video, scientific, and volumetric data formats.
   * [imagesize-1.1.0](https://pypi.org/project/imagesize/) Getting image size from png/jpeg/jpeg2000/gif file
+  * [importlib-metadata-0.19](https://pypi.org/project/importlib-metadata/) Read metadata from Python packages
   * [incremental-17.5.0](https://pypi.org/project/incremental/) 
   * [inflection-0.3.1](https://pypi.org/project/inflection/) A port of Ruby on Rails inflector to Python
   * [ip_associations_python_novaclient_ext-0.2](https://pypi.org/project/ip_associations_python_novaclient_ext/) Adds Rackspace ip_associations support to python-novaclient
@@ -301,6 +307,7 @@ date: 2019-08-15
   * [keyring-19.0.2](https://pypi.org/project/keyring/) Store and access your passwords safely.
   * [keystoneauth1-3.15.0](https://pypi.org/project/keystoneauth1/) Authentication Library for OpenStack Identity
   * [kivy-garden-0.1.4](https://pypi.org/project/kivy-garden/) Garden tool for kivy flowers.
+  * [kiwisolver-1.1.0](https://pypi.org/project/kiwisolver/) A fast implementation of the Cassowary constraint solver
   * [kombu-4.6.3](https://pypi.org/project/kombu/) Messaging library for Python.
   * [lark-parser-0.7.2](https://pypi.org/project/lark-parser/) a modern parsing library
   * [lazr.uri-1.0.3](https://pypi.org/project/lazr.uri/) A self-contained, easily reusable library for parsing, manipulating,
@@ -326,6 +333,7 @@ date: 2019-08-15
   * [mistune-0.8.4](https://pypi.org/project/mistune/) The fastest markdown parser in pure Python
   * [mock-2.0.0](https://pypi.org/project/mock/) Rolling backport of unittest.mock for all Pythons
   * [monotonic-1.5](https://pypi.org/project/monotonic/) An implementation of time.monotonic() for Python 2 & < 3.3
+  * [more-itertools-7.2.0](https://pypi.org/project/more-itertools/) More routines for operating on iterables, beyond itertools
   * [mox3-0.27.0](https://pypi.org/project/mox3/) Mock object framework for Python
   * [mpi4py-3.0.0](https://pypi.org/project/mpi4py/) Python bindings for MPI
   * [mpld3-0.3](https://pypi.org/project/mpld3/) D3 Viewer for Matplotlib
@@ -395,6 +403,7 @@ date: 2019-08-15
   * [oslo.utils-3.41.0](https://pypi.org/project/oslo.utils/) Oslo Utility library
   * [oslosphinx-4.18.0](https://pypi.org/project/oslosphinx/) OpenStack Sphinx Extensions and Theme
   * [oslotest-3.8.0](https://pypi.org/project/oslotest/) Oslo test framework
+  * [packaging-19.1](https://pypi.org/project/packaging/) Core utilities for Python packages
   * [pandas-0.23.4](https://pypi.org/project/pandas/) Powerful data structures for data analysis, time series, and statistics
   * [pandocfilters-1.4.2](https://pypi.org/project/pandocfilters/) Utilities for writing pandoc filters in python
   * [paramiko-2.4.1](https://pypi.org/project/paramiko/) SSH2 protocol library
@@ -421,6 +430,7 @@ date: 2019-08-15
   * [pkginfo-1.5.0.1](https://pypi.org/project/pkginfo/) Query metadatdata from sdists / bdists / installed packages.
   * [plette-0.2.2](https://pypi.org/project/plette/) Structured Pipfile and Pipfile.lock models.
   * [plotly-4.0.0](https://pypi.org/project/plotly/) An open-source, interactive graphing library for Python
+  * [pluggy-0.12.0](https://pypi.org/project/pluggy/) plugin and hook calling mechanisms for python
   * [ply-3.11](https://pypi.org/project/ply/) Python Lex & Yacc
   * porechop 0.2.0
   * [positional-1.2.1](https://pypi.org/project/positional/) Library to enforce positional or key-word arguments (deprecated/unmaintained)
@@ -438,6 +448,7 @@ date: 2019-08-15
   * [ptyprocess-0.6.0](https://pypi.org/project/ptyprocess/) Run a subprocess in a pseudo terminal
   * [pure-sasl-0.6.1](https://pypi.org/project/pure-sasl/) Pure Python client SASL implementation
   * [purl-1.5](https://pypi.org/project/purl/) An immutable URL class for easy URL-building and manipulation
+  * [py-1.8.0](https://pypi.org/project/py/) library with cross-python path, ini-parsing, io, code, log facilities
   * [py2bit-0.3.0](https://pypi.org/project/py2bit/) A package for accessing 2bit files using lib2bit
   * [pyArango-1.3.2](https://pypi.org/project/pyArango/) An easy to use python driver for ArangoDB with built-in validation
   * [pyBigWig-0.3.17](https://pypi.org/project/pyBigWig/) A package for accessing bigWig files using libBigWig
@@ -476,6 +487,7 @@ date: 2019-08-15
   * [pyrsistent-0.15.4](https://pypi.org/project/pyrsistent/) Persistent/Functional/Immutable data structures
   * [pyserial-3.4](https://pypi.org/project/pyserial/) Python Serial Port Extension
   * pytables 3.4.4
+  * [pytest-5.0.1](https://pypi.org/project/pytest/) pytest: simple powerful testing with Python
   * [pytest-checkdocs-1.2.0](https://pypi.org/project/pytest-checkdocs/) check the README when running tests
   * [pytest-cov-2.7.1](https://pypi.org/project/pytest-cov/) Pytest plugin for measuring coverage.
   * [pytest-flake8-1.0.4](https://pypi.org/project/pytest-flake8/) pytest plugin to check FLAKE8 requirements
@@ -644,6 +656,7 @@ date: 2019-08-15
   * [wadllib-1.3.3](https://pypi.org/project/wadllib/) Navigate HTTP resources using WADL files as guides.
   * [warlock-1.3.3](https://pypi.org/project/warlock/) Python object model built on JSON schema and JSON patch.
   * [watchdog-0.9.0](https://pypi.org/project/watchdog/) Filesystem events monitoring
+  * [wcwidth-0.1.7](https://pypi.org/project/wcwidth/) Measures number of Terminal column cells of wide-character codes
   * [webcolors-1.9.1](https://pypi.org/project/webcolors/) A library for working with color names and color values formats defined by HTML and CSS.
   * [webencodings-0.5.1](https://pypi.org/project/webencodings/) Character encoding aliases for legacy web content
   * [websocket-0.2.1](https://pypi.org/project/websocket/) Websocket implementation for gevent
