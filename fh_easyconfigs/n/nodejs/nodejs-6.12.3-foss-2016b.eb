@@ -5,7 +5,7 @@
 easyblock = 'ConfigureMake'
 
 name = 'nodejs'
-version = '9.8.0'
+version = '6.12.3'
 
 homepage = 'http://nodejs.org'
 

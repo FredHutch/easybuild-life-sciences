@@ -55,6 +55,7 @@ dependencies = [
     ('LZO', '2.10'), # pytables
     ('Blosc', '1.14.2'),
     ('igraph', '0.7.1'),
+    ('nodejs', '9.8.0'),
     ('OpenSSL', '1.1.0f'), # OpenSSL on Ubuntu 14.04 is out of date
 ]
 
@@ -76,6 +77,12 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/i/ipython_genutils'],
     }),
     ('colorama', '0.4.1', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('elementpath', '1.2.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('xmlschema', '1.0.13', {
         'source_urls': [PYPI_SOURCE],
     }),
     ('traitlets', '4.3.2', {
@@ -291,9 +298,6 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/z/zict/'],
     }),
     # https://github.com/bokeh/bokeh/issues/7308 - downgraded too 4.5.2
-    ('tornado', '6.0.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/t/tornado/'],
-    }),
     ('toolz', '0.10.0', {
         'source_urls': ['https://pypi.python.org/packages/source/t/toolz/'],
     }),
@@ -1282,16 +1286,6 @@ exts_list = [
         'modulename': 'zmq',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyzmq'],
     }),
-    ('jupyter', '1.0.0', {
-        'source_urls': ['https://pypi.io/packages/source/j/jupyter'],
-    }),
-    #('jupyter-client', '5.3.1', {
-    #    'source_urls': ['https://pypi.io/packages/source/j/jupyter-client'],
-    #    'source_tmpl': 'jupyter_client-%(version)s.tar.gz',
-    #}),
-    ('widgetsnbextension', '3.5.1', {
-        'source_urls': ['https://pypi.io/packages/source/w/widgetsnbextension'],
-    }),
     ('sphinxcontrib_github_alt', '1.1', {
         'source_urls': ['https://pypi.io/packages/source/s/sphinxcontrib_github_alt'],
     }),
@@ -1321,17 +1315,11 @@ exts_list = [
     ('selenium', '3.141.0', {
         'source_urls': ['https://pypi.io/packages/source/s/selenium'],
     }),
-    #('notebook', '6.0.0', {
-    #    'source_urls': ['https://pypi.io/packages/source/n/notebook'],
-    #}),
     ('qtconsole', '4.5.2', {
         'source_urls': ['https://pypi.io/packages/source/q/qtconsole'],
     }),
     #('ipython', '7.7.0', {
     #    'source_urls': ['https://pypi.io/packages/source/i/ipython'],
-    #}),
-    #('ipykernel', '5.1.1', {
-    #    'source_urls': ['https://pypi.io/packages/source/i/ipykernel'],
     #}),
     ('pipreqs', '0.4.9', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pipreqs'],
@@ -1435,6 +1423,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/f/fastnumbers'],
     }),
     ('PyICU', '2.3.1', {
+        'modulename': 'icu',
         'source_urls': ['https://pypi.python.org/packages/source/P/PyICU'],
     }),
     ('natsort', '6.0.0', {
@@ -1504,14 +1493,35 @@ exts_list = [
         'modulename': 'xdg',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyxdg/'],
     }),
-    #('jupyter-contrib-core', '0.3.3', {
-    #    'modulename': 'jupyter_contrib_core',
-    #    'source_urls': ['https://pypi.python.org/packages/source/j/jupyter_contrib_core'],
-    #    'source_tmpl': 'jupyter_contrib_core-%(version)s.tar.gz',
-    #}),
-    #('jupyter_nbextensions_configurator', '0.4.1', {
-    #    'source_urls': ['https://pypi.python.org/packages/source/j/jupyter_nbextensions_configurator'],
-    #}),
+    ('json5', '0.8.5', {
+        'source_urls': ['https://pypi.io/packages/source/j/json5'],
+    }),
+    ('nbformat', '4.4.0', {
+        'source_urls': ['https://pypi.io/packages/source/n/nbformat'],
+    }),
+    ('nbconvert', '5.6.0', {
+        'source_urls': ['https://pypi.io/packages/source/n/nbconvert'],
+    }),
+    ('widgetsnbextension', '3.5.1', {
+        'source_urls': ['https://pypi.io/packages/source/w/widgetsnbextension'],
+    }),
+    ('tornado', '6.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/tornado/'],
+    }),
+    ('notebook', '6.0.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('jupyter-server', '0.1.1', {
+        'modulename': 'jupyter_server',
+        'source_urls': [PYPI_SOURCE],
+        'source_tmpl': 'jupyter_server-%(version)s.tar.gz',
+    }),
+    ('jupyterlab', '1.0.6', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/jupyterlab'],
+    }),
+    ('jupyter', '1.0.0', {
+        'source_urls': ['https://pypi.io/packages/source/j/jupyter'],
+    }),
     ('jupyter-core', '4.5.0', { # depreicated, needed for notebook
         'modulename': 'jupyter_core',
         'source_tmpl': 'jupyter_core-%(version)s.tar.gz',
@@ -1534,11 +1544,18 @@ exts_list = [
 #-        'source_tmpl': 'jupyter_js_widgets_nbextension-%(version)s-py2.py3-none-any.whl',
 #-        'unpack_sources': False,
 #-    }),
-    ('json5', '0.8.5', {
-        'source_urls': ['https://pypi.io/packages/source/j/json5'],
+    ('jupyter-client', '5.3.1', {
+        'modulename': 'jupyter_client',
+        'source_urls': [PYPI_SOURCE],
+        'source_tmpl': 'jupyter_client-%(version)s.tar.gz',
     }),
-    ('jupyterlab', '1.0.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/j/jupyterlab'],
+    ('jupyterlab-server', '1.0.4', {
+        'modulename': 'jupyterlab_server',
+        'source_urls': [PYPI_SOURCE],
+        'source_tmpl': 'jupyterlab_server-%(version)s.tar.gz',
+    }),
+    ('ipykernel', '5.1.2', {
+        'source_urls': ['https://pypi.io/packages/source/i/ipykernel'],
     }),
     ('novaclient-auth-secretkey', '0.1', {
         'modulename': 'novaclient',
@@ -1740,6 +1757,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/m/macholib'],
     }),
     ('PyInstaller', '3.5', {
+        'modulename': 'PyInstaller',
         'source_urls': ['https://pypi.python.org/packages/source/P/PyInstaller/'],
     }),
     ('slurm-pipeline', '3.1.0', {
@@ -2015,6 +2033,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/l/librabbitmq'],
     }),
     ('Pyro4', '4.76', {
+        'modulename': 'Pyro4',
         'source_urls': ['https://pypi.python.org/packages/source/P/Pyro4'],
     }),
     #('qpid-python', '1.36.0-1', { # Python 2
@@ -2031,7 +2050,9 @@ exts_list = [
     }),
     ('billiard', '3.6.0.0', {
         'source_urls': ['https://pypi.python.org/packages/source/b/billiard/'],
-    }),     ('pyArango', '1.3.2', {
+    }),
+    ('pyArango', '1.3.2', {
+        'modulename': 'pyArango',
         'source_urls': ['https://pypi.python.org/packages/source/p/pyArango'],
     }),
     ('Brotli', '1.0.7', {
@@ -2168,7 +2189,7 @@ exts_list = [
         'unpack_sources': False,
     }),
     ('feather-format', '0.4.0', { # loads without error but fails sanity
-        'modulename': False,
+        'modulename': 'feather',
         'source_urls': ['https://pypi.python.org/packages/source/f/feather-format/'],
     }),
     ('altair', '3.1.0', {
@@ -2305,6 +2326,7 @@ exts_list = [
         'source_urls': ['https://pypi.io/packages/source/r/rdflib'],
     }),
     ('SPARQLWrapper', '1.8.4', {
+        'modulename': 'SPARQLWrapper',
         'source_urls': ['https://pypi.python.org/packages/source/S/SPARQLWrapper'],
     }),
     ('shellescape', '3.4.1', {
@@ -2351,5 +2373,6 @@ exts_list = [
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+modextravars = {'JUPYTERLAB_DIR': ['lib/python%(pyshortver)s/site-packages/jupyterlab']}
 
 moduleclass = 'lang'
