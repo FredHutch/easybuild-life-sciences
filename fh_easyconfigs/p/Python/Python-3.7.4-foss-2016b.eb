@@ -25,7 +25,7 @@ dependencies = [
     # it's nice to have an up to date OpenSSL for security reasons;
     # Python 3.7.0 requires OpenSSL >= 1.0.2, uncomment line below if OS version is too old (e.g. CentOS 6)
     # ('OpenSSL', '1.1.0h'),
-    ('OpenSSL', '1.1.0c', '-GCC-5.4.0-2.26', True),
+    ('OpenSSL', '1.1.0f'),
 ]
 
 # osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]

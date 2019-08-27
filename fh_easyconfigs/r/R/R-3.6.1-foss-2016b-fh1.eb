@@ -39,6 +39,7 @@ dependencies = [
     ('netCDF', '4.5.0'), # for netcdf4
     ('ZeroMQ', '4.1.4'), # for zmq
     ('SYMPHONY', '5.6.17'), # for lpsymphony
+    ('igraph', '0.7.1'), # for igraph
 ]
 
 name_tmpl = '%(name)s_%(version)s.tar.gz'
@@ -296,9 +297,7 @@ exts_list = [
     }),
     ('aws.ec2metadata', '0.1.6', {
     }),
-    ('aws.signature', '0.4.4', {
-        'modulename': False
-    }),
+    ('aws.signature', '0.4.4'),
     ('aws.s3', '0.3.12', {
     }),
     ('shinyBS', '0.61', {
@@ -692,9 +691,29 @@ exts_list = [
         'source_tmpl': '%(version)s.tar.gz',
         'filename': '%(name)s_%(version)s.tar.gz',
     }),
+    ('HSMMSingleCell', '1.4.0'),
+    # Monocle 3
+    ('grr', '0.9.5'),
+    ('Matrix.utils', '0.9.7'),
+    ('pbmcapply', '1.5.0'),
+    ('RhpcBLASctl', '0.18-205'),
+    ('speedglm', '0.3-2'),
+    ('RcppAnnoy', '0.0.12'),
+    ('sitmo', '2.0.1'),
+    ('dqrng', '0.2.1'), 
+    ('uwot', '0.1.3'),
+    ('BiocGenerics', '0.30.0'),
+    ('SingleCellExperiment', '1.6.0'),
+    ('monocle3', '0.1.3', {
+        'source_urls': ['https://github.com/cole-trapnell-lab/monocle3/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'filename': '%(name)s_%(version)s.tar.gz',
+    }),
     # MCPcounter
     # install_github("ebecht/MCPcounter",ref="master", subdir="Source")
     ('ComICS', '1.0.4'),
+    ('regioneR', '1.16.2'),
+    ('ChIPpeakAnno', '3.18.2'),
 ]
 
 sanity_check_paths = {

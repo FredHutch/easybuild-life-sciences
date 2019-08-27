@@ -9,7 +9,10 @@ homepage = 'http://www.perl.org/'
 description = """Fred Hutch Custom Perl"""
 
 toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
-toolchainopts = {'pic': True}
+
+builddependencies = [
+    ('binutils', '2.30'),
+]
 
 dependencies = [
     ('Perl', '5.28.0'),
@@ -18,43 +21,55 @@ dependencies = [
 ]
 
 exts_defaultclass = 'PerlModule'
-exts_filter = ("perldoc -lm %(ext_name)s ", "")
+exts_filter = ("perl -e 'require %(ext_name)s'", "")
 
 exts_list = [
-    #('Crypt::RC4', '2.02', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT'],
-    #    'source_tmpl': ['Crypt-RC4-%(version)s.tar.gz'],
-    #}),
-    #('Digest::Perl::MD5', '1.9', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/D/DE/DELTA'],
-    #    'source_tmpl': ['Digest-Perl-MD5-%(version)s.tar.gz'],
-    #}),
-    #('IO::File', '1.39', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/T/TO/TODDR'],
-    #    'source_tmpl': ['IO-%(version)s.tar.gz'],
-    #}),
-    #('IO::Scalar', '2.111', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/D/DS/DSKOLL'],
-    #    'srouce_tmpl': ['IO-stringy-%(version)s.tar.gz'],
-    #}),
-    #('OLE::Storage_Lite', '0.19', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA'],
-    #    'source_tmpl' : ['OLE-Storage_Liste-%(version)s.tar.gz'],
-    #}),
-    #('Scalar::Util', '1.51', {
-    #    'source_urls': ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
-    #    'source_tmpl': ['Scalar-List-Utils-%(version)s.tar.gz']
-    #}),
-    #('Spreadsheet::ParseExcel', '0.65', {
-    #    'source_tmpl': 'Spreadsheet-ParseExcel-0.65.tar.gz',
-    #    'source_urls': ['http://search.cpan.org/CPAN/authors/id/D/DO/DOUGW/'],
-    #}),
+    ('IO::File', '1.39', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/T/TO/TODDR/'],
+        'source_tmpl': 'IO-%(version)s.tar.gz',
+    }),
+    ('IO::Scalar', '2.111', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DS/DSKOLL'],
+        'source_tmpl': 'IO-stringy-%(version)s.tar.gz',
+    }),
+    ('OLE::Storage_Lite', '0.19', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/J/JM/JMCNAMARA'],
+        'source_tmpl' : 'OLE-Storage_Lite-%(version)s.tar.gz',
+    }),
+    ('Scalar::Util', '1.51', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
+        'source_tmpl': 'Scalar-List-Utils-%(version)s.tar.gz',
+    }),
+    ('Digest::Perl::MD5', '1.9', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DE/DELTA'],
+        'source_tmpl': 'Digest-Perl-MD5-%(version)s.tar.gz'
+    }),
+    ('Crypt::RC4', '2.02', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SI/SIFUKURT'],
+        'source_tmpl': 'Crypt-RC4-%(version)s.tar.gz',
+    }),
+    ('Spreadsheet::ParseExcel', '0.65', {
+        'source_urls': ['http://search.cpan.org/CPAN/authors/id/D/DO/DOUGW/'],
+        'source_tmpl': 'Spreadsheet-ParseExcel-0.65.tar.gz',
+    }),
+    ('List::Util', '0.11', {
+        'source_tmpl': 'Scalar-List-Utils-1.52.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/P/PE/PEVANS'],
+    }),
+    ('Time::HiRes', '1.9760', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC'],
+        'source_tmpl': 'Time-HiRes-1.9760.tar.gz',
+    }),
     ('Statistics::Descriptive', '3.0612', {
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/'],
         'source_tmpl': 'Statistics-Descriptive-3.0612.tar.gz',
-        'source_urls': ['http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/'],
-        'modulename': 'False',
     }),
 ]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/perl5/site_perl/%(perlver)s/Statistics', 'man'],
+}
 
 modextrapaths = {
     'PATH': '',
