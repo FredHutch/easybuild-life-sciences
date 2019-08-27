@@ -253,6 +253,24 @@
             ]
         }
     },
+    "Bazel": {
+        "/app/modules/all/Bazel/0.18.0-GCCcore-7.3.0.lua": {
+            "Description": "Bazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.",
+            "Version": "0.18.0-GCCcore-7.3.0",
+            "fullName": "Bazel/0.18.0-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nBazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.\n\n\nMore information\n================\n - Homepage: http://bazel.io/\n",
+            "hidden": false,
+            "pV": "000000000.000000018.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/Bazel/0.18.0-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000018.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Bazel is a build tool that builds code quickly and reliably. \nIt is used to build the majority of Google's software.",
+                "Homepage: http://bazel.io/"
+            ]
+        }
+    },
     "Beast": {
         "/app/modules/all/Beast/2.5.1-foss-2018b.lua": {
             "Description": "BEAST is a cross-platform program for Bayesian MCMC analysis of molecular \n sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using \n strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies \n but is also a framework for testing evolutionary hypotheses without conditioning on a single \n tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted \n proportional to its posterior probability. ",
@@ -304,6 +322,32 @@
             "hidden": false,
             "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        },
+        "/app/modules/all/Biopython/1.72-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.72-foss-2018b-Python-3.6.6",
+            "fullName": "Biopython/1.72-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000072.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+                "Homepage: http://www.biopython.org"
+            ]
+        },
+        "/app/modules/all/Biopython/1.73-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
+            "Version": "1.73-foss-2018b-Python-3.6.6",
+            "fullName": "Biopython/1.73-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nBiopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics.\n\n\nMore information\n================\n - Homepage: http://www.biopython.org\n",
+            "hidden": false,
+            "pV": "000000001.000000073.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000073.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
                 "Homepage: http://www.biopython.org"
@@ -491,6 +535,25 @@
             ]
         }
     },
+    "CITE-seq-Count": {
+        "/app/modules/all/CITE-seq-Count/1.4.2-foss-2018b-Python-3.6.6.lua": {
+            "Description": "A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
+            "Version": "1.4.2-foss-2018b-Python-3.6.6",
+            "fullName": "CITE-seq-Count/1.4.2-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nA python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.\n\n\nMore information\n================\n - Homepage: https://hoohm.github.io/CITE-seq-Count\n\n\nIncluded extensions\n===================\nargcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0,\ncolorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3,\ndocutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0,\nflake8-3.7.8, future-0.17.1, hunter-3.0.1, hypothesis-4.31.0, importlib-\nmetadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-\nitertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4,\npexpect-4.7.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0,\npybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pysam-0.15.2, pytest-5.0.1,\npytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, pytest-\nflake8-1.0.4, python-dateutil-2.8.0, python-Levenshtein-0.12.0,\nregex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, typing-3.7.4,\numi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2\n",
+            "hidden": false,
+            "pV": "000000001.000000004.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/CITE-seq-Count/1.4.2-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000004.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
+                "Homepage: https://hoohm.github.io/CITE-seq-Count",
+                "Extensions: argcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0, colorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3, docutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0, flake8-3.7.8, future-0.17.1, hunter-3.0.1, hypothesis-4.31.0, importlib-metadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pysam-0.15.2, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, pytest-flake8-1.0.4, python-dateutil-2.8.0, python-Levenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, typing-3.7.4, umi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2"
+            ]
+        }
+    },
     "CMake": {
         "/app/modules/all/CMake/3.11.4-GCCcore-7.3.0.lua": {
             "Description": "CMake, the cross-platform, open-source build system.  CMake is a family of\n tools designed to build, test and package software.\n",
@@ -525,6 +588,73 @@
             ]
         }
     },
+    "CUDA": {
+        "/app/modules/all/CUDA/9.2.88-GCC-7.3.0-2.30.lua": {
+            "Description": "CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+            "Version": "9.2.88-GCC-7.3.0-2.30",
+            "fullName": "CUDA/9.2.88-GCC-7.3.0-2.30",
+            "help": "\nDescription\n===========\nCUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.\n\n\nMore information\n================\n - Homepage: https://developer.nvidia.com/cuda-toolkit\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30/extras/CUPTI/lib64": 1,
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30/lib64": 1,
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30/nvvm/lib64": 1
+            },
+            "pV": "000000009.000000002.000000088.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "pathA": {
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30": 1,
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30/bin": 1,
+                "/app/software/CUDA/9.2.88-GCC-7.3.0-2.30/nvvm/bin": 1
+            },
+            "wV": "000000009.000000002.000000088.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "whatis": [
+                "Description: CUDA (formerly Compute Unified Device Architecture) is a parallel\n computing platform and programming model created by NVIDIA and implemented by the\n graphics processing units (GPUs) that they produce. CUDA gives developers access\n to the virtual instruction set and memory of the parallel computational elements in CUDA GPUs.",
+                "Homepage: https://developer.nvidia.com/cuda-toolkit"
+            ]
+        }
+    },
+    "Circos": {
+        "/app/modules/all/Circos/0.69-6-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "Circos is a software package for visualizing data and information.\n It visualizes data in a circular layout - this makes Circos ideal for exploring\n relationships between objects or positions.",
+            "Version": "0.69-6-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "Circos/0.69-6-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nCircos is a software package for visualizing data and information.\n It visualizes data in a circular layout - this makes Circos ideal for exploring\n relationships between objects or positions.\n\n\nMore information\n================\n - Homepage: http://www.circos.ca/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Circos/0.69-6-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000000.000000069.*zfinal-.000000006.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/Circos/0.69-6-GCCcore-7.3.0-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000000.000000069.*zfinal-.000000006.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Circos is a software package for visualizing data and information.\n It visualizes data in a circular layout - this makes Circos ideal for exploring\n relationships between objects or positions.",
+                "Homepage: http://www.circos.ca/"
+            ]
+        }
+    },
+    "Clang": {
+        "/app/modules/all/Clang/6.0.1-GCC-7.3.0-2.30.lua": {
+            "Description": "C, C++, Objective-C compiler, based on LLVM.  Does not\n include C++ standard library -- use libstdc++ from GCC.",
+            "Version": "6.0.1-GCC-7.3.0-2.30",
+            "fullName": "Clang/6.0.1-GCC-7.3.0-2.30",
+            "help": "\nDescription\n===========\nC, C++, Objective-C compiler, based on LLVM.  Does not\n include C++ standard library -- use libstdc++ from GCC.\n\n\nMore information\n================\n - Homepage: http://clang.llvm.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Clang/6.0.1-GCC-7.3.0-2.30/lib": 1
+            },
+            "pV": "000000006.000000000.000000001.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "pathA": {
+                "/app/software/Clang/6.0.1-GCC-7.3.0-2.30/bin": 1
+            },
+            "wV": "000000006.000000000.000000001.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "whatis": [
+                "Description: C, C++, Objective-C compiler, based on LLVM.  Does not\n include C++ standard library -- use libstdc++ from GCC.",
+                "Homepage: http://clang.llvm.org/"
+            ]
+        }
+    },
     "Cufflinks": {
         "/app/modules/all/Cufflinks/2.2.1-foss-2018b.lua": {
             "Description": "Transcript assembly, differential expression, and differential regulation for RNA-Seq",
@@ -540,6 +670,27 @@
             "whatis": [
                 "Description: Transcript assembly, differential expression, and differential regulation for RNA-Seq",
                 "Homepage: http://cole-trapnell-lab.github.io/cufflinks/"
+            ]
+        }
+    },
+    "DB": {
+        "/app/modules/all/DB/18.1.25-GCCcore-7.3.0.lua": {
+            "Description": "Berkeley DB enables the development of custom data management\n solutions, without the overhead traditionally associated with such custom\nprojects.",
+            "Version": "18.1.25-GCCcore-7.3.0",
+            "fullName": "DB/18.1.25-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nBerkeley DB enables the development of custom data management\n solutions, without the overhead traditionally associated with such custom\nprojects.\n\n\nMore information\n================\n - Homepage: http://www.oracle.com/technetwork/products/berkeleydb\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/DB/18.1.25-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000018.000000001.000000025.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/DB/18.1.25-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000018.000000001.000000025.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Berkeley DB enables the development of custom data management\n solutions, without the overhead traditionally associated with such custom\nprojects.",
+                "Homepage: http://www.oracle.com/technetwork/products/berkeleydb"
             ]
         }
     },
@@ -752,6 +903,43 @@
                 "Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
                 "Homepage: http://www.fftw.org"
             ]
+        },
+        "/app/modules/all/FFTW/3.3.8-gompic-2018b.lua": {
+            "Description": "FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
+            "Version": "3.3.8-gompic-2018b",
+            "fullName": "FFTW/3.3.8-gompic-2018b",
+            "help": "\nDescription\n===========\nFFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.\n\n\nMore information\n================\n - Homepage: http://www.fftw.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/FFTW/3.3.8-gompic-2018b/lib": 1
+            },
+            "pV": "000000003.000000003.000000008.*gompic.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/FFTW/3.3.8-gompic-2018b/bin": 1
+            },
+            "wV": "000000003.000000003.000000008.*gompic.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT)\n in one or more dimensions, of arbitrary input size, and of both real and complex data.",
+                "Homepage: http://www.fftw.org"
+            ]
+        }
+    },
+    "FIt-SNE": {
+        "/app/modules/all/FIt-SNE/1.1.0-gompi-2018b.lua": {
+            "Description": "t-distributed stochastic neighbor embedding (t-SNE) is widely used for\n visualizing single-cell RNA-sequencing (scRNA-seq) data, but it scales poorly to large\n datasets. We dramatically accelerate t-SNE, obviating the need for data downsampling, and\n hence allowing visualization of rare cell populations. Furthermore, we implement a\n heatmap-style visualization for scRNA-seq based on one-dimensional t-SNE for simultaneously\n visualizing the expression patterns of thousands of genes.",
+            "Version": "1.1.0-gompi-2018b",
+            "fullName": "FIt-SNE/1.1.0-gompi-2018b",
+            "help": "\nDescription\n===========\nt-distributed stochastic neighbor embedding (t-SNE) is widely used for\n visualizing single-cell RNA-sequencing (scRNA-seq) data, but it scales poorly to large\n datasets. We dramatically accelerate t-SNE, obviating the need for data downsampling, and\n hence allowing visualization of rare cell populations. Furthermore, we implement a\n heatmap-style visualization for scRNA-seq based on one-dimensional t-SNE for simultaneously\n visualizing the expression patterns of thousands of genes.\n\n\nMore information\n================\n - Homepage: https://github.com/KlugerLab/FIt-SNE\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*gompi.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/FIt-SNE/1.1.0-gompi-2018b/bin": 1
+            },
+            "wV": "000000001.000000001.*gompi.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: t-distributed stochastic neighbor embedding (t-SNE) is widely used for\n visualizing single-cell RNA-sequencing (scRNA-seq) data, but it scales poorly to large\n datasets. We dramatically accelerate t-SNE, obviating the need for data downsampling, and\n hence allowing visualization of rare cell populations. Furthermore, we implement a\n heatmap-style visualization for scRNA-seq based on one-dimensional t-SNE for simultaneously\n visualizing the expression patterns of thousands of genes.",
+                "Homepage: https://github.com/KlugerLab/FIt-SNE"
+            ]
         }
     },
     "FLASH": {
@@ -882,6 +1070,24 @@
             ]
         }
     },
+    "File-ReadBackwards": {
+        "/app/modules/all/File-ReadBackwards/1.05-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "This Perl module reads a file backwards line by line.",
+            "Version": "1.05-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "File-ReadBackwards/1.05-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nThis Perl module reads a file backwards line by line.\n\n\nMore information\n================\n - Homepage: https://metacpan.org/pod/File::ReadBackwards\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/File-ReadBackwards/1.05-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000005.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000001.000000005.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: This Perl module reads a file backwards line by line.",
+                "Homepage: https://metacpan.org/pod/File::ReadBackwards"
+            ]
+        }
+    },
     "FriBidi": {
         "/app/modules/all/FriBidi/1.0.5-GCCcore-7.3.0.lua": {
             "Description": "The Free Implementation of the Unicode Bidirectional Algorithm.\n",
@@ -1004,6 +1210,45 @@
             "whatis": [
                 "Description: The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada,\n as well as libraries for these languages (libstdc++, libgcj,...).",
                 "Homepage: http://gcc.gnu.org/"
+            ]
+        }
+    },
+    "GCTA": {
+        "/app/modules/all/GCTA/1.92.2beta.lua": {
+            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+            "Version": "1.92.2beta",
+            "fullName": "GCTA/1.92.2beta",
+            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
+            "hidden": false,
+            "pV": "000000001.000000092.000000002.*beta.*zfinal",
+            "pathA": {
+                "/app/software/GCTA/1.92.2beta": 1
+            },
+            "wV": "000000001.000000092.000000002.*beta.*zfinal",
+            "whatis": [
+                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+                "Homepage: https://cnsgenomics.com/software/gcta"
+            ]
+        }
+    },
+    "GD": {
+        "/app/modules/all/GD/2.69-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "Description": "GD.pm - Interface to Gd Graphics Library",
+            "Version": "2.69-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "GD/2.69-GCCcore-7.3.0-Perl-5.28.0",
+            "help": "\nDescription\n===========\nGD.pm - Interface to Gd Graphics Library\n\n\nMore information\n================\n - Homepage: https://github.com/lstein/Perl-GD\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: GD.pm - Interface to Gd Graphics Library",
+                "Homepage: https://github.com/lstein/Perl-GD"
             ]
         }
     },
@@ -1246,6 +1491,25 @@
                 "Description: GTS stands for the GNU Triangulated Surface Library.\n It is an Open Source Free Software Library intended to provide a set of useful\n functions to deal with 3D surfaces meshed with interconnected triangles.",
                 "Homepage: http://gts.sourceforge.net/"
             ]
+        },
+        "/app/modules/all/GTS/0.7.6-foss-2018b.lua": {
+            "Description": "GTS stands for the GNU Triangulated Surface Library.\n It is an Open Source Free Software Library intended to provide a set of useful\n functions to deal with 3D surfaces meshed with interconnected triangles.",
+            "Version": "0.7.6-foss-2018b",
+            "fullName": "GTS/0.7.6-foss-2018b",
+            "help": "\nDescription\n===========\nGTS stands for the GNU Triangulated Surface Library.\n It is an Open Source Free Software Library intended to provide a set of useful\n functions to deal with 3D surfaces meshed with interconnected triangles.\n\n\nMore information\n================\n - Homepage: http://gts.sourceforge.net/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GTS/0.7.6-foss-2018b/lib": 1
+            },
+            "pV": "000000000.000000007.000000006.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/GTS/0.7.6-foss-2018b/bin": 1
+            },
+            "wV": "000000000.000000007.000000006.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: GTS stands for the GNU Triangulated Surface Library.\n It is an Open Source Free Software Library intended to provide a set of useful\n functions to deal with 3D surfaces meshed with interconnected triangles.",
+                "Homepage: http://gts.sourceforge.net/"
+            ]
         }
     },
     "Ghostscript": {
@@ -1266,6 +1530,65 @@
             "whatis": [
                 "Description: Ghostscript is a versatile processor for PostScript data with the ability to render PostScript to\n different targets. It used to be part of the cups printing stack, but is no longer used for that.",
                 "Homepage: http://ghostscript.com"
+            ]
+        }
+    },
+    "GitPython": {
+        "/app/modules/all/GitPython/2.1.11-foss-2018b-Python-3.6.6.lua": {
+            "Description": "GitPython is a python library used to interact with Git repositories ",
+            "Version": "2.1.11-foss-2018b-Python-3.6.6",
+            "fullName": "GitPython/2.1.11-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nGitPython is a python library used to interact with Git repositories\n\n\nMore information\n================\n - Homepage: https://github.com/gitpython-developers/GitPython\n\n\nIncluded extensions\n===================\ngitdb2-2.0.4, GitPython-2.1.11, smmap2-2.0.4\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/GitPython/2.1.11-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000001.000000011.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000002.000000001.000000011.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description:  GitPython is a python library used to interact with Git repositories ",
+                "Homepage: https://github.com/gitpython-developers/GitPython",
+                "Extensions: gitdb2-2.0.4, GitPython-2.1.11, smmap2-2.0.4"
+            ]
+        }
+    },
+    "Go": {
+        "/app/modules/all/Go/1.12.1-GCCcore-7.3.0.lua": {
+            "Description": "Go is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.",
+            "Version": "1.12.1-GCCcore-7.3.0",
+            "fullName": "Go/1.12.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGo is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.\n\n\nMore information\n================\n - Homepage: http://www.golang.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Go/1.12.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000001.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/Go/1.12.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000001.000000012.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Go is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.",
+                "Homepage: http://www.golang.org"
+            ]
+        },
+        "/app/modules/all/Go/1.12.lua": {
+            "Description": "Go is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.",
+            "Version": "1.12",
+            "fullName": "Go/1.12",
+            "help": "\nDescription\n===========\nGo is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.\n\n\nMore information\n================\n - Homepage: http://www.golang.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Go/1.12/lib": 1
+            },
+            "pV": "000000001.000000012.*zfinal",
+            "pathA": {
+                "/app/software/Go/1.12/bin": 1
+            },
+            "wV": "000000001.000000012.*zfinal",
+            "whatis": [
+                "Description: Go is an open source programming language that makes it easy to build\n simple, reliable, and efficient software.",
+                "Homepage: http://www.golang.org"
             ]
         }
     },
@@ -1290,28 +1613,6 @@
             ]
         }
     },
-    "Graphviz": {
-        "/app/modules/all/Graphviz/2.40.1-foss-2018b.lua": {
-            "Description": "Graphviz is open source graph visualization software. Graph\n visualization is a way of representing structural information as diagrams of\n abstract graphs and networks. It has important applications in networking,\n bioinformatics,  software engineering, database and web design, machine\n learning, and in visual interfaces for other technical domains.",
-            "Version": "2.40.1-foss-2018b",
-            "fullName": "Graphviz/2.40.1-foss-2018b",
-            "help": "\nDescription\n===========\nGraphviz is open source graph visualization software. Graph\n visualization is a way of representing structural information as diagrams of\n abstract graphs and networks. It has important applications in networking,\n bioinformatics,  software engineering, database and web design, machine\n learning, and in visual interfaces for other technical domains.\n\n\nMore information\n================\n - Homepage: http://www.graphviz.org/\n",
-            "hidden": false,
-            "lpathA": {
-                "/app/software/Graphviz/2.40.1-foss-2018b/lib": 1,
-                "/app/software/Graphviz/2.40.1-foss-2018b/lib/graphviz/java": 1
-            },
-            "pV": "000000002.000000040.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
-            "pathA": {
-                "/app/software/Graphviz/2.40.1-foss-2018b/bin": 1
-            },
-            "wV": "000000002.000000040.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
-            "whatis": [
-                "Description: Graphviz is open source graph visualization software. Graph\n visualization is a way of representing structural information as diagrams of\n abstract graphs and networks. It has important applications in networking,\n bioinformatics,  software engineering, database and web design, machine\n learning, and in visual interfaces for other technical domains.",
-                "Homepage: http://www.graphviz.org/"
-            ]
-        }
-    },
     "HDF5": {
         "/app/modules/all/HDF5/1.10.2-foss-2018b.lua": {
             "Description": "HDF5 is a data model, library, and file format for storing and managing data.\n It supports an unlimited variety of datatypes, and is designed for flexible\n and efficient I/O and for high volume and complex data.",
@@ -1330,6 +1631,24 @@
             "whatis": [
                 "Description: HDF5 is a data model, library, and file format for storing and managing data.\n It supports an unlimited variety of datatypes, and is designed for flexible\n and efficient I/O and for high volume and complex data.",
                 "Homepage: https://portal.hdfgroup.org/display/support"
+            ]
+        }
+    },
+    "HISAT2": {
+        "/app/modules/all/HISAT2/2.1.0-foss-2018b.lua": {
+            "Description": "HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads\n (both DNA and RNA) against the general human population (as well as against a single reference genome).",
+            "Version": "2.1.0-foss-2018b",
+            "fullName": "HISAT2/2.1.0-foss-2018b",
+            "help": "\nDescription\n===========\nHISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads\n (both DNA and RNA) against the general human population (as well as against a single reference genome).\n\n\nMore information\n================\n - Homepage: https://ccb.jhu.edu/software/hisat2/index.shtml\n",
+            "hidden": false,
+            "pV": "000000002.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/HISAT2/2.1.0-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: HISAT2 is a fast and sensitive alignment program for mapping next-generation sequencing reads\n (both DNA and RNA) against the general human population (as well as against a single reference genome).",
+                "Homepage: https://ccb.jhu.edu/software/hisat2/index.shtml"
             ]
         }
     },
@@ -1732,6 +2051,25 @@
             ]
         }
     },
+    "Keras": {
+        "/app/modules/all/Keras/2.2.4-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+            "Version": "2.2.4-foss-2018b-Python-3.6.6",
+            "fullName": "Keras/2.2.4-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nKeras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.\n\n\nMore information\n================\n - Homepage: https://keras.io/\n\n\nIncluded extensions\n===================\nKeras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Keras/2.2.4-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000002.000000004.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000002.000000002.000000004.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+                "Homepage: https://keras.io/",
+                "Extensions: Keras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5"
+            ]
+        }
+    },
     "LAST": {
         "/app/modules/all/LAST/963-foss-2018b.lua": {
             "Description": "LAST finds similar regions between sequences.",
@@ -1831,6 +2169,27 @@
             ]
         }
     },
+    "LightGBM": {
+        "/app/modules/all/LightGBM/2.2.3-foss-2018b.lua": {
+            "Description": "A fast, distributed, high performance gradient boosting (GBT, GBDT, GBRT,\n GBM or MART) framework based on decision tree algorithms, used for ranking, classification\n and many other machine learning tasks.",
+            "Version": "2.2.3-foss-2018b",
+            "fullName": "LightGBM/2.2.3-foss-2018b",
+            "help": "\nDescription\n===========\nA fast, distributed, high performance gradient boosting (GBT, GBDT, GBRT,\n GBM or MART) framework based on decision tree algorithms, used for ranking, classification\n and many other machine learning tasks.\n\n\nMore information\n================\n - Homepage: https://github.com/microsoft/LightGBM\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/LightGBM/2.2.3-foss-2018b/lib": 1
+            },
+            "pV": "000000002.000000002.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/LightGBM/2.2.3-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000002.000000003.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: A fast, distributed, high performance gradient boosting (GBT, GBDT, GBRT,\n GBM or MART) framework based on decision tree algorithms, used for ranking, classification\n and many other machine learning tasks.",
+                "Homepage: https://github.com/microsoft/LightGBM"
+            ]
+        }
+    },
     "LittleCMS": {
         "/app/modules/all/LittleCMS/2.9-GCCcore-7.3.0.lua": {
             "Description": "Little CMS intends to be an OPEN SOURCE small-footprint color management engine,\n with special focus on accuracy and performance. ",
@@ -1868,6 +2227,27 @@
             "whatis": [
                 "Description:  Little CMS intends to be an OPEN SOURCE small-footprint\n color management engine, with special focus on accuracy and performance. ",
                 "Homepage: http://www.littlecms.com/"
+            ]
+        }
+    },
+    "LoFreq": {
+        "/app/modules/all/LoFreq/2.1.3.1-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Fast and sensitive variant calling from next-gen sequencing data",
+            "Version": "2.1.3.1-foss-2018b-Python-2.7.15",
+            "fullName": "LoFreq/2.1.3.1-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nFast and sensitive variant calling from next-gen sequencing data\n\n\nMore information\n================\n - Homepage: http://csb5.github.io/lofreq\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/LoFreq/2.1.3.1-foss-2018b-Python-2.7.15/lib": 1
+            },
+            "pV": "000000002.000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/software/LoFreq/2.1.3.1-foss-2018b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000002.000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Fast and sensitive variant calling from next-gen sequencing data",
+                "Homepage: http://csb5.github.io/lofreq"
             ]
         }
     },
@@ -2167,6 +2547,27 @@
             ]
         }
     },
+    "Nim": {
+        "/app/modules/all/Nim/0.19.2-GCCcore-7.3.0.lua": {
+            "Description": "Nim is a systems and applications programming language.",
+            "Version": "0.19.2-GCCcore-7.3.0",
+            "fullName": "Nim/0.19.2-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nNim is a systems and applications programming language.\n\n\nMore information\n================\n - Homepage: https://nim-lang.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/Nim/0.19.2-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000000.000000019.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/Nim/0.19.2-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000000.000000019.000000002.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Nim is a systems and applications programming language.",
+                "Homepage: https://nim-lang.org/"
+            ]
+        }
+    },
     "OpenBLAS": {
         "/app/modules/all/OpenBLAS/0.3.1-GCC-7.3.0-2.30.lua": {
             "Description": "OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.",
@@ -2227,6 +2628,25 @@
             "whatis": [
                 "Description: The Open MPI Project is an open source MPI-3 implementation.",
                 "Homepage: http://www.open-mpi.org/"
+            ]
+        },
+        "/app/modules/all/OpenMPI/3.1.1-gcccuda-2018b.lua": {
+            "Description": "The Open MPI Project is an open source MPI-3 implementation.",
+            "Version": "3.1.1-gcccuda-2018b",
+            "fullName": "OpenMPI/3.1.1-gcccuda-2018b",
+            "help": "\nDescription\n===========\nThe Open MPI Project is an open source MPI-3 implementation.\n\n\nMore information\n================\n - Homepage: https://www.open-mpi.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/OpenMPI/3.1.1-gcccuda-2018b/lib": 1
+            },
+            "pV": "000000003.000000001.000000001.*gcccuda.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/OpenMPI/3.1.1-gcccuda-2018b/bin": 1
+            },
+            "wV": "000000003.000000001.000000001.*gcccuda.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: The Open MPI Project is an open source MPI-3 implementation.",
+                "Homepage: https://www.open-mpi.org/"
             ]
         }
     },
@@ -2365,6 +2785,24 @@
             ]
         }
     },
+    "Pandoc": {
+        "/app/modules/all/Pandoc/2.1.3.lua": {
+            "Description": "If you need to convert files from one markup format into another, pandoc is your swiss-army knife",
+            "Version": "2.1.3",
+            "fullName": "Pandoc/2.1.3",
+            "help": "\nDescription\n===========\nIf you need to convert files from one markup format into another, pandoc is your swiss-army knife\n\n\nMore information\n================\n - Homepage: http://pandoc.org\n",
+            "hidden": false,
+            "pV": "000000002.000000001.000000003.*zfinal",
+            "pathA": {
+                "/app/software/Pandoc/2.1.3/bin": 1
+            },
+            "wV": "000000002.000000001.000000003.*zfinal",
+            "whatis": [
+                "Description: If you need to convert files from one markup format into another, pandoc is your swiss-army knife",
+                "Homepage: http://pandoc.org"
+            ]
+        }
+    },
     "Pango": {
         "/app/modules/all/Pango/1.42.4-foss-2018b.lua": {
             "Description": "Pango is a library for laying out and rendering of text, with an emphasis on internationalization.\nPango can be used anywhere that text layout is needed, though most of the work on Pango so far has been done in the\ncontext of the GTK+ widget toolkit. Pango forms the core of text and font handling for GTK+-2.x.",
@@ -2405,6 +2843,24 @@
                 "Description: Larry Wall's Practical Extraction and Report Language",
                 "Homepage: https://www.perl.org/",
                 "Extensions: Algorithm::Dependency-1.110, Algorithm::Diff-1.1903, aliased-0.34, AnyData-0.12, AnyEvent-7.14, App::Cmd-0.331, AppConfig-1.71, Archive::Extract-0.80, Array::Utils-0.5, Authen::SASL-2.16, B::Hooks::EndOfScope-0.24, B::Lint-1.20, boolean-0.46, Bundle::BioPerl-2.1.9, Canary::Stability-2012, Capture::Tiny-0.48, Carp-1.38, Carp::Clan-6.06, Class::Accessor-0.51, Class::Data::Inheritable-0.08, Class::DBI-v3.0.17, Class::DBI::SQLite-0.11, Class::Inspector-1.32, Class::ISA-0.36, Class::Load-0.25, Class::Load::XS-0.10, Class::Singleton-1.5, Class::Trigger-0.14, Clone-0.39, Clone::Choose-0.010, Config::General-2.63, Config::INI-0.025, Config::MVP-2.200011, Config::Tiny-2.23, CPANPLUS-0.9176, Crypt::DES-2.07, Crypt::Rijndael-1.13, Cwd::Guard-0.05, Data::Dump-1.23, Data::Dumper::Concise-2.023, Data::Grove-0.08, Data::OptList-0.110, Data::Section-0.200007, Data::Section::Simple-0.07, Data::Stag-0.14, Data::Types-0.13, Data::UUID-1.221, Date::Handler-1.2, Date::Language-2.30, DateTime-1.49, DateTime::Locale-1.22, DateTime::TimeZone-2.19, DateTime::Tiny-1.07, DBD::AnyData-0.110, DBD::SQLite-1.58, DBI-1.641, DBIx::Admin::TableInfo-3.03, DBIx::ContextualFetch-1.03, DBIx::Simple-1.37, Devel::CheckCompiler-0.07, Devel::CheckLib-1.13, Devel::GlobalDestruction-0.14, Devel::OverloadInfo-0.005, Devel::StackTrace-2.03, Digest::HMAC-1.03, Digest::MD5::File-0.08, Digest::SHA1-2.13, Dist::CheckConflicts-0.11, Dist::Zilla-6.012, Email::Date::Format-1.005, Encode::Locale-1.05, Error-0.17026, Eval::Closure-0.14, Exception::Class-1.44, Expect-1.35, Exporter-5.72, Exporter::Declare-0.114, Exporter::Tiny-1.000000, ExtUtils::Config-0.008, ExtUtils::Helpers-0.026, ExtUtils::InstallPaths-0.012, Fennec::Lite-0.004, File::CheckTree-4.42, File::Copy::Recursive-0.44, File::Copy::Recursive::Reduced-0.006, File::Find::Rule-0.34, File::Find::Rule::Perl-1.15, File::Grep-0.02, File::HomeDir-1.004, File::Listing-6.04, File::Path-2.15, File::pushd-1.016, File::Remove-1.57, File::ShareDir-1.116, File::ShareDir::Install-0.13, File::Slurp-9999.19, File::Slurp::Tiny-0.004, File::Slurper-0.012, File::Spec-3.74, File::Temp-0.2306, File::Which-1.22, Font::TTF-1.06, Getopt::Long-2.50, Getopt::Long::Descriptive-0.102, Git-0.42, GO-0.04, GO::Utils-0.15, Graph-0.9704, Graph::ReadWrite-2.09, Hash::Merge-0.300, HTML::Entities::Interpolate-1.10, HTML::Form-6.03, HTML::Parser-3.72, HTML::Tagset-3.20, HTML::Tree-5.07, HTTP::Cookies-6.04, HTTP::Daemon-6.01, HTTP::Date-6.02, HTTP::Negotiate-6.01, HTTP::Request-6.18, HTTP::Tiny-0.070, Ima::DBI-0.35, Import::Into-1.002005, IO::HTML-1.001, IO::Socket::SSL-2.056, IO::String-1.08, IO::Stringy-2.111, IO::Tty-1.12, IPC::Run-20180523.0, IPC::Run3-0.048, JSON-2.97001, Lingua::EN::PluralToSingular-0.21, List::AllUtils-0.14, List::MoreUtils-0.428, List::SomeUtils-0.56, List::UtilsBy-0.11, Log::Dispatch-2.67, Log::Dispatchouli-2.016, Log::Handler-0.88, Log::Log4perl-1.49, Log::Message-0.08, Log::Message::Simple-0.10, LWP::MediaTypes-6.02, LWP::Simple-6.34, Mail::Util-2.20, Math::Bezier-0.01, Math::CDF-0.1, Math::Round-0.07, Math::VecStat-0.08, Meta::Builder-0.003, MIME::Lite-3.030, MIME::Types-2.17, Mixin::Linewise::Readers-0.108, Mock::Quick-1.111, Module::Build-0.4224, Module::Build::Tiny-0.039, Module::Build::XSUtil-0.19, Module::Implementation-0.09, Module::Install-1.19, Module::Pluggable-5.2, Module::Runtime-0.016, Moo-2.003004, Moose-2.2011, MooseX::LazyRequire-0.11, MooseX::OneArgNew-0.005, MooseX::Role::Parameterized-1.10, MooseX::SetOnce-0.200002, MooseX::Types-0.50, MooseX::Types::Perl-0.101343, Mouse-v2.5.4, MRO::Compat-0.13, namespace::autoclean-0.28, namespace::clean-0.27, Net::HTTP-6.18, Net::SMTP::SSL-1.04, Net::SNMP-v6.0.1, Net::SSLeay-1.85, Number::Compare-0.03, Number::Format-1.75, Object::Accessor-0.48, Package::Constants-0.06, Package::DeprecationManager-0.17, Package::Stash-0.37, Package::Stash::XS-0.28, Params::Util-1.07, Params::Validate-1.29, Params::ValidationCompiler-0.27, Parse::RecDescent-1.967015, Path::Tiny-0.104, PDF::API2-2.033, PerlIO::utf8_strict-0.007, Pod::Elemental-0.103004, Pod::Eventual-0.094001, Pod::LaTeX-0.61, Pod::Plainer-1.04, Pod::POM-2.01, Pod::Weaver-4.015, Readonly-2.05, Regexp::Common-2017060201, Role::HasMessage-0.006, Role::Identifiable::HasIdent-0.007, Role::Tiny-2.000006, Scalar::List::Utils-1.50, Set::Array-0.30, Set::IntSpan-1.19, Set::IntSpan::Fast-1.15, Set::Scalar-1.29, Shell-0.73, Software::License-0.103013, Specio-0.42, SQL::Abstract-1.85, SQL::Statement-1.412, Statistics::Basic-1.6611, Statistics::Descriptive-3.0613, strictures-2.000005, String::Flogger-1.101245, String::RewritePrefix-0.007, String::Truncate-1.100602, Sub::Exporter-0.987, Sub::Exporter::ForMethods-0.100052, Sub::Exporter::Progressive-0.001013, Sub::Identify-0.14, Sub::Install-0.928, Sub::Name-0.21, Sub::Quote-2.005001, Sub::Uplevel-0.2800, Sub::Uplevel-0.2800, SVG-2.84, Switch-2.17, Template-2.27, Template::Plugin::Number::Format-1.06, Term::Encoding-0.02, Term::ReadKey-2.37, Term::UI-0.46, Test::ClassAPI-1.07, Test::Deep-1.128, Test::Differences-0.64, Test::Exception-0.43, Test::Exception::LessClever-0.009, Test::Fatal-0.014, Test::Harness-3.42, Test::LeakTrace-0.16, Test::Most-0.35, Test::NoWarnings-1.04, Test::Output-1.031, Test::Pod-1.52, Test::Requires-0.10, Test::Simple-1.302136, Test::Version-2.09, Test::Warn-0.36, Test::Warnings-0.026, Text::Aligner-0.13, Text::Balanced-2.03, Text::CSV-1.95, Text::Diff-1.45, Text::Format-0.61, Text::Glob-0.11, Text::Iconv-1.7, Text::Soundex-3.05, Text::Table-1.133, Text::Template-1.53, Throwable-0.200013, Tie::Function-0.02, Tie::IxHash-1.23, Time::Piece-1.3204, Time::Piece::MySQL-0.06, Tree::DAG_Node-1.31, Try::Tiny-0.30, UNIVERSAL::moniker-0.08, URI-1.74, version-0.9924, Want-0.29, WWW::RobotRules-6.02, XML::Bare-0.53, XML::DOM-1.46, XML::Filter::BufferText-1.01, XML::NamespaceSupport-1.12, XML::Parser-2.44_01, XML::RegExp-0.04, XML::SAX-1.00, XML::SAX::Base-1.09, XML::SAX::Writer-0.57, XML::Simple-2.25, XML::Tiny-2.07, XML::Twig-3.52, XML::XPath-1.42, YAML::Tiny-1.73"
+            ]
+        }
+    },
+    "Porechop": {
+        "/app/modules/all/Porechop/0.2.4-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.\n Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,\n it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments\n to effectively find adapters, even at low sequence identity",
+            "Version": "0.2.4-foss-2018b-Python-3.6.6",
+            "fullName": "Porechop/0.2.4-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nPorechop is a tool for finding and removing adapters from Oxford Nanopore reads.\n Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,\n it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments\n to effectively find adapters, even at low sequence identity\n\n\nMore information\n================\n - Homepage: https://github.com/rrwick/Porechop\n",
+            "hidden": false,
+            "pV": "000000000.000000002.000000004.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/Porechop/0.2.4-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000002.000000004.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.\n Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,\n it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments\n to effectively find adapters, even at low sequence identity",
+                "Homepage: https://github.com/rrwick/Porechop"
             ]
         }
     },
@@ -2465,6 +2921,21 @@
             "whatis": [
                 "Description: PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope\n with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the\n NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical\n parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browse,\n process and search very large amounts of data. One important feature of PyTables is that it optimizes memory and disk\n resources so that data takes much less space (specially if on-flight compression is used) than other solutions such as\n relational or object oriented databases.",
                 "Homepage: http://www.pytables.org"
+            ]
+        }
+    },
+    "PyYAML": {
+        "/app/modules/all/PyYAML/3.13-foss-2018b-Python-3.6.6.lua": {
+            "Description": "PyYAML is a YAML parser and emitter for the Python programming language.",
+            "Version": "3.13-foss-2018b-Python-3.6.6",
+            "fullName": "PyYAML/3.13-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nPyYAML is a YAML parser and emitter for the Python programming language.\n\n\nMore information\n================\n - Homepage: https://pypi.python.org/pypi/PyYAML/\n",
+            "hidden": false,
+            "pV": "000000003.000000013.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000003.000000013.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: PyYAML is a YAML parser and emitter for the Python programming language.",
+                "Homepage: https://pypi.python.org/pypi/PyYAML/"
             ]
         }
     },
@@ -2700,6 +3171,48 @@
                 "Homepage: http://www.r-project.org/",
                 "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13, adegenet-2.1.1, adephylo-1.1-11, ADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.6, aod-1.3.1, ape-5.2, arm-1.10-1, askpass-1.1, assertthat-0.2.0, AUC-0.3.0, audio-0.1-5.1, b-a, backports-1.1.3, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.55, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.8.6, boot-1.3-20, bootstrap-2017.2, brew-1.0-6, brglm-0.6.1, bridgedist-0.1.0, bridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.1, bst-0.3-17, Cairo-1.5-9, calibrate-1.7.2, callr-3.1.1, car-3.0-2, carData-3.0-2, caret-6.0-81, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.9.1, chemometrics-1.4.2, chron-2.3-53, circlize-0.4.5, class-7.3-15, classInt-0.3-1, cli-1.0.1, clipr-0.5.0, clisymbols-1.2.0, cluster-2.0.7-1, clusterGeneration-1.3.4, clusterRepro-0.9, clustree-0.3.0, clValid-0.6-6, coda-0.19-2, codetools-0.2-16, coin-1.3-0, colorspace-1.4-0, combinat-0.0-8, ComICS-1.0.4, commonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4, crayon-1.3.4, crosstalk-1.0.0, crul-0.7.0, csSAM-1.2.4, cubature-2.0.3, curl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.0, DBI-1.0.0, dbplyr-1.3.0, ddalpha-1.3.8, deal-1.2-39, debugme-1.1.0, deldir-0.1-16, dendextend-1.9.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-2.0.1, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.0, dichromat-2.0-0, digest-0.6.18, dimRed-0.2.2, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-4, distr-2.7.0, distrEx-2.7.0, DistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.0.1, DRR-0.0.3, DT-0.5, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-0.1, EasyABC-1.5, ellipse-0.4.1, ellipsis-0.1.0, emulator-1.2-19, energy-1.7-5, ergm-3.9.4, ergm.count-3.3.0, evaluate-0.13, expm-0.999-3, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-9, FactoMineR-1.41, fail-1.3, fansi-0.4.0, farver-1.1.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.2, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5, fields-9.6, filehash-2.4-1, fishMod-0.29, fitdistrplus-1.0-14, flashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5, FNN-1.1.3, forcats-0.4.0, foreach-1.4.4, forecast-8.5, foreign-0.8-71, formatR-1.6, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.1, fpp-0.5, fracdiff-1.4-2, fs-1.2.6, futile.logger-1.4.3, futile.options-1.0.1, future-1.12.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-2, gamlss.data-5.1-0, gamlss.dist-5.1-1, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11, gclus-1.3.2, gdalUtils-2.0.1.14, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6.1, GeneNet-1.2.13, generics-0.0.2, geometry-0.4.0, getopt-1.20.2, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.2.0, ggm-2.3, ggplot2-3.1.0, ggraph-1.0.2, ggrepel-0.8.0, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.24.0, glasso-1.10, gllvm-1.1.2, glmmML-1.0.3, glmmTMB-0.2.3, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.0, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.2.0, gplots-3.0.1.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-1, GSA-1.03.1, gsalib-2.1, gsw-1.0-5, gtable-0.2.0, gtools-3.8.1, haven-2.1.0, hdf5r-1.0.1, heatmap3-1.1.1, hexbin-1.27.2, highr-0.7, Hmisc-4.2-0, hms-0.4.2, htmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0, httpuv-1.4.5.1, httr-1.4.0, huge-1.3.0, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.19, igraph-1.2.4, imager-0.41.2, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-0, ipred-0.9-8, irace-3.1, irlba-2.3.3, Iso-0.0-17, iterators-1.0.10, JBTools-0.7.2.9, jomo-2.6-7, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.22, KODAMA-1.5, kohonen-3.0.8, ks-1.11.4, labdsv-1.8-0, labeling-0.3, labelled-2.1.0, laeken-0.5.0, lambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38, latticeExtra-0.6-28, lava-1.6.5, lavaan-0.6-3, lazy-1.2-16, lazyeval-0.2.1, leaps-3.0, LearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3, listenv-0.7.0, lme4-1.1-21, Lmoments-1.2-3, lmtest-0.9-36, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.12, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5, markdown-0.9, MASS-7.3-51.1, Matching-4.9-5, MatchIt-3.0.2, Matrix-1.2-16, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-1, mclust-5.4.2, mcmc-0.9-6, MCMCpack-1.4-4, mediation-4.4.6, memoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-27, mi-1.0, mice-3.4.0, mime-0.6, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1, mlogit-0.4-1, mlr-2.13, mnormt-1.5-5, ModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14, mpath-0.3-7, msm-1.6.6, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0, mvabund-4.0.1, mvtnorm-1.0-10, natserv-0.3.0, ncbit-2013.03.29, network-1.14-377, networkDynamic-0.9.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-137, nloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1, oce-1.0-1, OceanView-1.0.4, openssl-1.2.2, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.1, ordinal-2019.3-9, pan-1.6, parallelMap-1.3, ParamHelpers-1.12, party-1.3-3, partykit-1.2-3, pastecs-1.3.21, pbapply-1.4-0, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7.1, permute-0.9-4, phangorn-2.4.0, pheatmap-1.0.12, phylobase-0.8.6, pillar-1.3.1, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.2, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.8.0, plotrix-3.7-4, pls-2.7-0, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.14, polyclip-1.9-1, polynom-1.3-9, prabclus-2.2-7, pracma-2.2.2, praise-1.0.0, prettyunits-1.0.2, pROC-1.13.0, processx-3.3.0, prodlim-2018.04.18, profileModel-0.5-9, progress-1.2.0, promises-1.0.1, proto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.12, pulsar-0.3.5, purrr-0.3.1, pvclust-2.0-0, qgraph-1.6.1, qrnn-2.0.3, quadprog-1.5-5, quantmod-0.4-13, quantreg-5.38, questionr-0.7.0, R.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1, R.utils-2.8.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.8.0, ranger-0.11.2, RANN-2.6.1, raster-2.8-19, RCircos-1.2.0, rcmdcheck-1.3.2, RColorBrewer-1.1-2, Rcpp-1.0.0, RcppArmadillo-0.9.200.7.1, RcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.12, Rdpack-0.10-1, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.0, recipes-0.1.4, registry-0.5-1, rematch-1.0.1, remotes-2.0.2, rentrez-1.2.1, reprex-0.2.1, reshape-0.8.8, reshape2-1.4.3, reticulate-1.11.1, RGCCA-2.1.2, rgdal-1.4-2, rgexf-0.15.3, rgl-0.100.18, RInside-0.2.15, rio-0.5.16, ritis-0.7.6, RItools-0.1-16, rJava-0.9-10, rjson-0.2.20, RJSONIO-1.3-1.1, rlang-0.3.1, rlecuyer-0.3-4, rmarkdown-1.11, rmeta-3.0, Rmpi-0.6-9, rms-5.1-3, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.3.1, robustbase-0.93-3, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.7, roxygen2-6.1.1, rpart-4.1-13, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.9.0, Rtsne-0.15, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-1.0.3, rvest-0.3.2, RWeka-0.4-40, RWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-0, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221, seewave-2.1.0, segmented-0.5-3.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1, sf-0.7-3, sfsmisc-1.1-3, shape-1.4.4, shapefiles-0.7, shiny-1.2.0, shinydashboard-0.7.1, shinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45, sm-2.2-5.6, smoother-1.1, sn-1.5-3, sna-2.4, snow-0.4-3, snowfall-1.84-6.1, solrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-2, spaMM-2.6.1, SparseM-1.77, spatial-7.3-11, spatstat-1.58-2, spatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, spdep-1.0-2, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.5, statmod-1.4.30, statnet-2018.10, statnet.common-4.2.0, stringi-1.3.1, stringr-1.4.0, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.43-3, survivalROC-1.0.3, svd-0.4.2, sys-3.1, t-o, taxize-0.9.6, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.5.2, testthat-2.0.1, TH.data-1.0-10, tibble-2.0.1, tidygraph-1.1.2, tidyr-0.8.3, tidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.3, tinytex-0.10, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15, tmvtnorm-1.4-10, TraMineR-2.0-10, tree-1.0-39, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-46, tseriesChaos-0.1-13.1, tsna-0.2.0, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3, tweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-2, urca-1.3-0, urltools-1.7.2, uroot-2.0-9, usethis-1.4.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vegan-2.5-4, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.5, waveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0, xfun-0.5, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0, xtable-1.8-3, xts-0.11-2, yaml-2.2.0, zip-2.0.0, zoo-1.8-4"
             ]
+        },
+        "/app/modules/all/R/3.6.0-foss-2018b.lua": {
+            "Description": "R is a free software environment for statistical computing\n and graphics.",
+            "Version": "3.6.0-foss-2018b",
+            "fullName": "R/3.6.0-foss-2018b",
+            "help": "\nDescription\n===========\nR is a free software environment for statistical computing\n and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\nabc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13,\nADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3,\nanimation-2.6, aod-1.3.1, ape-5.3, arm-1.10-1, askpass-1.1, asnipe-1.1.11,\nassertthat-0.2.1, AUC-0.3.0, audio-0.1-6, b-a, backports-1.1.4,\nbartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0, base64enc-0.1-3,\nBatchJobs-1.7, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11,\nBDgraph-2.59, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07,\nbibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1,\nbindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7,\nbitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.8.6, boot-1.3-22,\nbootstrap-2017.2, brew-1.0-6, brglm-0.6.2, bridgedist-0.1.0,\nbridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.2, bst-0.3-17,\nCairo-1.5-10, calibrate-1.7.2, callr-3.2.0, car-3.0-2, carData-3.0-2,\ncaret-6.0-84, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.2.10,\ncghFLasso-0.2-1, checkmate-1.9.3, chemometrics-1.4.2, chron-2.3-53,\ncirclize-0.4.6, circular-0.4-93, class-7.3-15, classInt-0.3-3, cli-1.1.0,\nclipr-0.6.0, clisymbols-1.2.0, cluster-2.0.9, clusterGeneration-1.3.4,\nclusterRepro-0.9, clustree-0.4.0, clValid-0.6-6, coda-0.19-2,\ncodetools-0.2-16, coin-1.3-0, colorspace-1.4-1, combinat-0.0-8, ComICS-1.0.4,\ncommonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4,\ncrayon-1.3.4, crosstalk-1.0.0, crul-0.7.4, csSAM-1.2.4, cubature-2.0.3,\ncurl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.2,\nDBI-1.0.0, dbplyr-1.4.0, ddalpha-1.3.9, deal-1.2-39, debugme-1.1.0,\ndeldir-0.1-16, dendextend-1.12.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0,\ndeSolve-1.21, devtools-2.0.2, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.1,\ndichromat-2.0-0, digest-0.6.18, dimRed-0.2.3, diptest-0.75-7,\nDiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-6, distr-2.8.0, distrEx-2.8.0,\nDistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14,\ndoRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.0.1,\nDRR-0.0.3, DT-0.6, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6,\ndynamicTreeCut-1.63-1, e1071-1.7-1, EasyABC-1.5, ellipse-0.4.1,\nellipsis-0.1.0, emulator-1.2-20, energy-1.7-5, ergm-3.9.4, ergm.count-3.3.0,\nevaluate-0.13, expm-0.999-4, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0,\nextRemes-2.0-10, FactoMineR-1.41, fail-1.3, fansi-0.4.0, farver-1.1.0,\nfastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15,\nfeather-0.3.3, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5, fields-9.7,\nfilehash-2.4-2, fishMod-0.29, fitdistrplus-1.0-14, flashClust-1.01-2,\nflexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5, FNN-1.1.3, forcats-0.4.0,\nforeach-1.4.4, forecast-8.7, foreign-0.8-71, formatR-1.6, Formula-1.2-3,\nfossil-0.3.7, fpc-2.1-11.2, fpp-0.5, fracdiff-1.4-2, fs-1.3.1,\nfutile.logger-1.4.3, futile.options-1.0.1, future-1.13.0, g-r, g-r, g-r,\ngam-1.16, gamlss-5.1-3, gamlss.data-5.1-3, gamlss.dist-5.1-3, gamlss.tr-5.1-0,\ngap-1.1-22, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11, gclus-1.3.2, gdata-2.18.0,\ngdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6.1, GeneNet-1.2.13,\ngenerics-0.0.2, GenSA-1.1.7, geometry-0.4.1, getopt-1.20.3, GetoptLong-0.1.7,\nGGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.2.2, ggm-2.3, ggplot2-3.1.1,\nggraph-1.0.2, ggrepel-0.8.1, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1,\nGillespieSSA-0.5-4, git2r-0.25.2, glasso-1.10, gllvm-1.1.3, glmmML-1.1.0,\nglmmTMB-0.2.3, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.1,\ngmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.2.0,\ngplots-3.0.1.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-1, GSA-1.03.1,\ngsalib-2.1, gsw-1.0-5, gtable-0.3.0, gtools-3.8.1, GUTS-1.1.0, h2o-3.22.1.1,\nhaven-2.1.0, hdf5r-1.2.0, heatmap3-1.1.6, hexbin-1.27.2, highr-0.8,\nHmisc-4.2-0, hms-0.4.2, htmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3,\nhttpcode-0.2.0, httpuv-1.5.1, httr-1.4.0, huge-1.3.2, hwriter-1.3.2,\nHWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.19, igraph-1.2.4.1, imager-0.41.2,\nineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4,\ninum-1.0-1, ipred-0.9-9, irace-3.3, irlba-2.3.3, Iso-0.0-17, iterators-1.0.10,\nitertools-0.1-3, JBTools-0.7.2.9, jomo-2.6-7, jpeg-0.1-8, jsonlite-1.6,\nkernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.22, KODAMA-1.5,\nkohonen-3.0.8, ks-1.11.4, labdsv-1.8-0, labeling-0.3, labelled-2.2.0,\nlaeken-0.5.0, lambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38,\nlatticeExtra-0.6-28, lava-1.6.5, lavaan-0.6-3, lazy-1.2-16, lazyeval-0.2.2,\nleaps-3.0, LearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3,\nliquidSVM-1.2.2.1, listenv-0.7.0, lme4-1.1-21, Lmoments-1.3-1, lmtest-0.9-37,\nlocfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23,\nlogspline-2.1.12, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13,\nlqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0,\nmagrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5,\nmarkdown-0.9, MASS-7.3-51.4, Matching-4.9-6, MatchIt-3.0.2, Matrix-1.2-17,\nmatrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4,\nmboost-2.9-1, mclust-5.4.3, mcmc-0.9-6, MCMCpack-1.4-4, mediation-4.4.7,\nmemoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-28, mi-1.0, mice-3.5.0,\nmime-0.6, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4,\nmiscTools-0.6-22, missForest-1.4, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1,\nmlegp-3.1.7, mlogit-0.4-1, mlr-2.14.0, mltools-0.3.5, mnormt-1.5-5,\nModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14,\nmpath-0.3-12, msm-1.6.7, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0,\nmvabund-4.0.1, mvtnorm-1.0-10, natserv-0.3.0, ncbit-2013.03.29, network-1.15,\nnetworkDynamic-0.10.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-140,\nnloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3,\nnp-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1, oce-1.0-1, OceanView-1.0.4,\noddsratio-1.0.3, openssl-1.3, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.2,\nordinal-2019.4-25, pan-1.6, parallelMap-1.3, ParamHelpers-1.12,\nparsedate-1.2.0, party-1.3-3, partykit-1.2-3, pastecs-1.3.21, pbapply-1.4-0,\npbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51,\npeperr-1.1-7.1, permute-0.9-5, phangorn-2.5.3, pheatmap-1.0.12,\nphylobase-0.8.6, pillar-1.4.0, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11,\npkgbuild-1.0.3, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0,\nplot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.9.0, plotrix-3.7-5, pls-2.7-1,\nplyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.14, polyclip-1.10-0,\npolynom-1.4-0, prabclus-2.2-7, pracma-2.2.5, praise-1.0.0,\nPresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.14.0, processx-3.3.1,\nprodlim-2018.04.18, profileModel-0.6.0, progress-1.2.1, promises-1.0.1,\nproto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18,\npsych-1.8.12, pulsar-0.3.5, purrr-0.3.2, pvclust-2.0-0, qgraph-1.6.2,\nqrnn-2.0.3, quadprog-1.5-7, quantmod-0.4-14, quantreg-5.38, questionr-0.7.0,\nR.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1,\nR.utils-2.8.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.9.0,\nranger-0.11.2, RANN-2.6.1, raster-2.8-19, RCircos-1.2.1, rcmdcheck-1.3.3,\nRColorBrewer-1.1-2, Rcpp-1.0.1, RcppArmadillo-0.9.400.3.0,\nRcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0,\nRCurl-1.95-4.12, Rdpack-0.11-0, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.1,\nrecipes-0.1.5, registry-0.5-1, rematch-1.0.1, rematch2-2.0.1, remotes-2.0.4,\nrentrez-1.2.2, reprex-0.2.1, reshape-0.8.8, reshape2-1.4.3, reticulate-1.12,\nRGCCA-2.1.2, rgexf-0.15.3, rgl-0.100.19, RInside-0.2.15, rio-0.5.16,\nritis-0.7.6, RItools-0.1-16, rJava-0.9-11, rjson-0.2.20, RJSONIO-1.3-1.1,\nrlang-0.3.4, rlecuyer-0.3-4, rmarkdown-1.12, rmeta-3.0, Rmpi-0.6-9,\nrms-5.1-3.1, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.3.1.1,\nrobustbase-0.93-5, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.7,\nroxygen2-6.1.1, rpart-4.1-15, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0,\nRSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.10, Rtsne-0.15,\nRttf2pt1-1.3.7, RUnit-0.4.32, rversions-2.0.0, rvest-0.3.3, RWeka-0.4-40,\nRWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-1, scales-1.0.0,\nscatterplot3d-0.3-41, SDMTools-1.1-221.1, seewave-2.1.3, segmented-0.5-4.0,\nselectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1,\nsfsmisc-1.1-4, shape-1.4.4, shapefiles-0.7, shiny-1.3.2, shinydashboard-0.7.1,\nshinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45,\nsm-2.2-5.6, smoother-1.1, sn-1.5-3, sna-2.4, snow-0.4-3, snowfall-1.84-6.1,\nsolrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1,\nspam-2.2-2, spaMM-2.7.1, SparseM-1.77, spatial-7.3-11, spatstat-1.59-0,\nspatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, SQUAREM-2017.10-1,\nstabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.6, statmod-1.4.30,\nstatnet-2018.10, statnet.common-4.2.0, stringi-1.4.3, stringr-1.4.0,\nstrucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4,\nsurvival-2.44-1.1, survivalROC-1.0.3, svd-0.4.3, sys-3.2, t-o, taxize-0.9.7,\ntclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.5.2,\ntestthat-2.1.1, TH.data-1.0-10, tibble-2.1.1, tidygraph-1.1.2, tidyr-0.8.3,\ntidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102,\ntimereg-1.9.3, tinytex-0.13, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15,\ntmvtnorm-1.4-10, TraMineR-2.0-11.1, tree-1.0-40, triebeard-0.3.0,\ntrimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-46,\ntseriesChaos-0.1-13.1, tsna-0.2.0, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3,\ntweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0,\nuniqueAtomMat-0.1-3-2, units-0.6-3, urca-1.3-0, urltools-1.7.3, uroot-2.0-9.1,\nusethis-1.5.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vctrs-0.1.0,\nvegan-2.5-5, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0,\nvipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.6,\nwaveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0,\nWikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0,\nxfun-0.7, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0,\nxtable-1.8-4, xts-0.11-2, yaml-2.2.0, zeallot-0.1.0, zip-2.0.2, zoo-1.8-5\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/R/3.6.0-foss-2018b/lib": 1,
+                "/app/software/R/3.6.0-foss-2018b/lib/R/lib": 1
+            },
+            "pV": "000000003.000000006.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/R/3.6.0-foss-2018b/bin": 1
+            },
+            "wV": "000000003.000000006.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: R is a free software environment for statistical computing\n and graphics.",
+                "Homepage: http://www.r-project.org/",
+                "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13, ADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.6, aod-1.3.1, ape-5.3, arm-1.10-1, askpass-1.1, asnipe-1.1.11, assertthat-0.2.1, AUC-0.3.0, audio-0.1-6, b-a, backports-1.1.4, bartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0, base64enc-0.1-3, BatchJobs-1.7, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.59, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.8.6, boot-1.3-22, bootstrap-2017.2, brew-1.0-6, brglm-0.6.2, bridgedist-0.1.0, bridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.2, bst-0.3-17, Cairo-1.5-10, calibrate-1.7.2, callr-3.2.0, car-3.0-2, carData-3.0-2, caret-6.0-84, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.2.10, cghFLasso-0.2-1, checkmate-1.9.3, chemometrics-1.4.2, chron-2.3-53, circlize-0.4.6, circular-0.4-93, class-7.3-15, classInt-0.3-3, cli-1.1.0, clipr-0.6.0, clisymbols-1.2.0, cluster-2.0.9, clusterGeneration-1.3.4, clusterRepro-0.9, clustree-0.4.0, clValid-0.6-6, coda-0.19-2, codetools-0.2-16, coin-1.3-0, colorspace-1.4-1, combinat-0.0-8, ComICS-1.0.4, commonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4, crayon-1.3.4, crosstalk-1.0.0, crul-0.7.4, csSAM-1.2.4, cubature-2.0.3, curl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.2, DBI-1.0.0, dbplyr-1.4.0, ddalpha-1.3.9, deal-1.2-39, debugme-1.1.0, deldir-0.1-16, dendextend-1.12.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.21, devtools-2.0.2, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.1, dichromat-2.0-0, digest-0.6.18, dimRed-0.2.3, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-6, distr-2.8.0, distrEx-2.8.0, DistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.0.1, DRR-0.0.3, DT-0.6, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-1, EasyABC-1.5, ellipse-0.4.1, ellipsis-0.1.0, emulator-1.2-20, energy-1.7-5, ergm-3.9.4, ergm.count-3.3.0, evaluate-0.13, expm-0.999-4, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-10, FactoMineR-1.41, fail-1.3, fansi-0.4.0, farver-1.1.0, fastcluster-1.1.25, fastICA-1.2-1, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.3, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5, fields-9.7, filehash-2.4-2, fishMod-0.29, fitdistrplus-1.0-14, flashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5, FNN-1.1.3, forcats-0.4.0, foreach-1.4.4, forecast-8.7, foreign-0.8-71, formatR-1.6, Formula-1.2-3, fossil-0.3.7, fpc-2.1-11.2, fpp-0.5, fracdiff-1.4-2, fs-1.3.1, futile.logger-1.4.3, futile.options-1.0.1, future-1.13.0, g-r, g-r, g-r, gam-1.16, gamlss-5.1-3, gamlss.data-5.1-3, gamlss.dist-5.1-3, gamlss.tr-5.1-0, gap-1.1-22, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11, gclus-1.3.2, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6.1, GeneNet-1.2.13, generics-0.0.2, GenSA-1.1.7, geometry-0.4.1, getopt-1.20.3, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.2.2, ggm-2.3, ggplot2-3.1.1, ggraph-1.0.2, ggrepel-0.8.1, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.25.2, glasso-1.10, gllvm-1.1.3, glmmML-1.1.0, glmmTMB-0.2.3, glmnet-2.0-16, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.1, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.2.0, gplots-3.0.1.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-1, GSA-1.03.1, gsalib-2.1, gsw-1.0-5, gtable-0.3.0, gtools-3.8.1, GUTS-1.1.0, h2o-3.22.1.1, haven-2.1.0, hdf5r-1.2.0, heatmap3-1.1.6, hexbin-1.27.2, highr-0.8, Hmisc-4.2-0, hms-0.4.2, htmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0, httpuv-1.5.1, httr-1.4.0, huge-1.3.2, hwriter-1.3.2, HWxtest-1.1.7, ica-1.0-2, IDPmisc-1.1.19, igraph-1.2.4.1, imager-0.41.2, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-1, ipred-0.9-9, irace-3.3, irlba-2.3.3, Iso-0.0-17, iterators-1.0.10, itertools-0.1-3, JBTools-0.7.2.9, jomo-2.6-7, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.22, KODAMA-1.5, kohonen-3.0.8, ks-1.11.4, labdsv-1.8-0, labeling-0.3, labelled-2.2.0, laeken-0.5.0, lambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38, latticeExtra-0.6-28, lava-1.6.5, lavaan-0.6-3, lazy-1.2-16, lazyeval-0.2.2, leaps-3.0, LearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3, liquidSVM-1.2.2.1, listenv-0.7.0, lme4-1.1-21, Lmoments-1.3-1, lmtest-0.9-37, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.12, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13, lqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5, markdown-0.9, MASS-7.3-51.4, Matching-4.9-6, MatchIt-3.0.2, Matrix-1.2-17, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-4, mboost-2.9-1, mclust-5.4.3, mcmc-0.9-6, MCMCpack-1.4-4, mediation-4.4.7, memoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-28, mi-1.0, mice-3.5.0, mime-0.6, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, missForest-1.4, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1, mlegp-3.1.7, mlogit-0.4-1, mlr-2.14.0, mltools-0.3.5, mnormt-1.5-5, ModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14, mpath-0.3-12, msm-1.6.7, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0, mvabund-4.0.1, mvtnorm-1.0-10, natserv-0.3.0, ncbit-2013.03.29, network-1.15, networkDynamic-0.10.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-140, nloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.2-3, np-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1, oce-1.0-1, OceanView-1.0.4, oddsratio-1.0.3, openssl-1.3, openxlsx-4.1.0, optmatch-0.9-10, optparse-1.6.2, ordinal-2019.4-25, pan-1.6, parallelMap-1.3, ParamHelpers-1.12, parsedate-1.2.0, party-1.3-3, partykit-1.2-3, pastecs-1.3.21, pbapply-1.4-0, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7.1, permute-0.9-5, phangorn-2.5.3, pheatmap-1.0.12, phylobase-0.8.6, pillar-1.4.0, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.3, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.9.0, plotrix-3.7-5, pls-2.7-1, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.14, polyclip-1.10-0, polynom-1.4-0, prabclus-2.2-7, pracma-2.2.5, praise-1.0.0, PresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.14.0, processx-3.3.1, prodlim-2018.04.18, profileModel-0.6.0, progress-1.2.1, promises-1.0.1, proto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.12, pulsar-0.3.5, purrr-0.3.2, pvclust-2.0-0, qgraph-1.6.2, qrnn-2.0.3, quadprog-1.5-7, quantmod-0.4-14, quantreg-5.38, questionr-0.7.0, R.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1, R.utils-2.8.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.9.0, ranger-0.11.2, RANN-2.6.1, raster-2.8-19, RCircos-1.2.1, rcmdcheck-1.3.3, RColorBrewer-1.1-2, Rcpp-1.0.1, RcppArmadillo-0.9.400.3.0, RcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.12, Rdpack-0.11-0, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.1, recipes-0.1.5, registry-0.5-1, rematch-1.0.1, rematch2-2.0.1, remotes-2.0.4, rentrez-1.2.2, reprex-0.2.1, reshape-0.8.8, reshape2-1.4.3, reticulate-1.12, RGCCA-2.1.2, rgexf-0.15.3, rgl-0.100.19, RInside-0.2.15, rio-0.5.16, ritis-0.7.6, RItools-0.1-16, rJava-0.9-11, rjson-0.2.20, RJSONIO-1.3-1.1, rlang-0.3.4, rlecuyer-0.3-4, rmarkdown-1.12, rmeta-3.0, Rmpi-0.6-9, rms-5.1-3.1, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.3.1.1, robustbase-0.93-5, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.7, roxygen2-6.1.1, rpart-4.1-15, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.10, Rtsne-0.15, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-2.0.0, rvest-0.3.3, RWeka-0.4-40, RWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-1, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221.1, seewave-2.1.3, segmented-0.5-4.0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1, sfsmisc-1.1-4, shape-1.4.4, shapefiles-0.7, shiny-1.3.2, shinydashboard-0.7.1, shinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45, sm-2.2-5.6, smoother-1.1, sn-1.5-3, sna-2.4, snow-0.4-3, snowfall-1.84-6.1, solrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-2, spaMM-2.7.1, SparseM-1.77, spatial-7.3-11, spatstat-1.59-0, spatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.6, statmod-1.4.30, statnet-2018.10, statnet.common-4.2.0, stringi-1.4.3, stringr-1.4.0, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.44-1.1, survivalROC-1.0.3, svd-0.4.3, sys-3.2, t-o, taxize-0.9.7, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.5.2, testthat-2.1.1, TH.data-1.0-10, tibble-2.1.1, tidygraph-1.1.2, tidyr-0.8.3, tidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.3, tinytex-0.13, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15, tmvtnorm-1.4-10, TraMineR-2.0-11.1, tree-1.0-40, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-46, tseriesChaos-0.1-13.1, tsna-0.2.0, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3, tweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-3, urca-1.3-0, urltools-1.7.3, uroot-2.0-9.1, usethis-1.5.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vctrs-0.1.0, vegan-2.5-5, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.6, waveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0, xfun-0.7, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0, xtable-1.8-4, xts-0.11-2, yaml-2.2.0, zeallot-0.1.0, zip-2.0.2, zoo-1.8-5"
+            ]
+        },
+        "/app/modules/all/R/3.6.1-foss-2018b.lua": {
+            "Description": "R is a free software environment for statistical computing\n and graphics.",
+            "Version": "3.6.1-foss-2018b",
+            "fullName": "R/3.6.1-foss-2018b",
+            "help": "\nDescription\n===========\nR is a free software environment for statistical computing\n and graphics.\n\n\nMore information\n================\n - Homepage: http://www.r-project.org/\n\n\nIncluded extensions\n===================\nabc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13,\nADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3,\nanimation-2.6, aod-1.3.1, ape-5.3, arm-1.10-1, askpass-1.1, asnipe-1.1.11,\nassertthat-0.2.1, AUC-0.3.0, audio-0.1-6, b-a, backports-1.1.4,\nbartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0, base64enc-0.1-3,\nBatchJobs-1.8, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11,\nBDgraph-2.59, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07,\nbibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1,\nbindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7,\nbitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.9.0, boot-1.3-23,\nbootstrap-2019.6, brew-1.0-6, brglm-0.6.2, bridgedist-0.1.0,\nbridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.2, bst-0.3-17,\nCairo-1.5-10, calibrate-1.7.2, callr-3.3.0, car-3.0-3, carData-3.0-2,\ncaret-6.0-84, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.3.0,\ncghFLasso-0.2-1, checkmate-1.9.4, chemometrics-1.4.2, chron-2.3-53,\ncirclize-0.4.6, circular-0.4-93, class-7.3-15, classInt-0.3-3, cli-1.1.0,\nclipr-0.6.0, clisymbols-1.2.0, cluster-2.1.0, clusterGeneration-1.3.4,\nclusterRepro-0.9, clustree-0.4.0, clValid-0.6-6, coda-0.19-3,\ncodetools-0.2-16, coin-1.3-0, colorspace-1.4-1, combinat-0.0-8, ComICS-1.0.4,\ncommonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4,\ncrayon-1.3.4, crosstalk-1.0.0, crul-0.8.0, csSAM-1.2.4, cubature-2.0.3,\ncurl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.2,\nDBI-1.0.0, dbplyr-1.4.2, ddalpha-1.3.9, deal-1.2-39, debugme-1.1.0,\ndeldir-0.1-22, dendextend-1.12.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0,\ndeSolve-1.23, devtools-2.1.0, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.1,\ndichromat-2.0-0, digest-0.6.20, dimRed-0.2.3, diptest-0.75-7,\nDiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-6, distr-2.8.0, distrEx-2.8.0,\nDistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14,\ndoRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.3,\nDRR-0.0.3, DT-0.7, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6,\ndynamicTreeCut-1.63-1, e1071-1.7-2, EasyABC-1.5, ellipse-0.4.1,\nellipsis-0.2.0.1, emulator-1.2-20, energy-1.7-6, ergm-3.10.4,\nergm.count-3.4.0, evaluate-0.14, expm-0.999-4, expsmooth-2.3, extrafont-0.17,\nextrafontdb-1.0, extRemes-2.0-10, FactoMineR-1.42, fail-1.3, fansi-0.4.0,\nfarver-1.1.0, fastcluster-1.1.25, fastICA-1.2-2, fastmatch-1.1-0,\nfdrtool-1.2.15, feather-0.3.3, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5,\nfields-9.8-3, filehash-2.4-2, fishMod-0.29, fitdistrplus-1.0-14,\nflashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5,\nFNN-1.1.3, forcats-0.4.0, foreach-1.4.4, forecast-8.7, foreign-0.8-71,\nformatR-1.7, Formula-1.2-3, fossil-0.3.7, fpc-2.2-3, fpp-0.5, fracdiff-1.4-2,\nfs-1.3.1, futile.logger-1.4.3, futile.options-1.0.1, future-1.14.0, g-r, g-r,\ng-r, gam-1.16.1, gamlss-5.1-4, gamlss.data-5.1-4, gamlss.dist-5.1-4,\ngamlss.tr-5.1-0, gap-1.2.1, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11,\ngclus-1.3.2, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1,\ngeiger-2.0.6.2, GeneNet-1.2.13, generics-0.0.2, GenSA-1.1.7, geometry-0.4.1.1,\ngetopt-1.20.3, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0,\nggforce-0.2.2, ggm-2.3, ggplot2-3.2.0, ggraph-1.0.2, ggrepel-0.8.1,\nggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.26.1,\nglasso-1.10, gllvm-1.1.3, glmmML-1.1.0, glmmTMB-0.2.3, glmnet-2.0-18,\nGlobalOptions-0.1.0, globals-0.12.4, glue-1.3.1, gmm-1.6-2, gmodels-2.18.1,\ngoftest-1.1-1, gomms-1.0, gower-0.2.1, gplots-3.0.1.1, gridBase-0.4-7,\ngridExtra-2.3, grpreg-3.2-1, GSA-1.03.1, gsalib-2.1, gsw-1.0-5, gtable-0.3.0,\ngtools-3.8.1, GUTS-1.1.1, h2o-3.24.0.5, haven-2.1.1, hdf5r-1.2.0,\nheatmap3-1.1.6, hexbin-1.27.3, highr-0.8, Hmisc-4.2-0, hms-0.4.2,\nhtmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0,\nhttpuv-1.5.1, httr-1.4.0, huge-1.3.2, hwriter-1.3.2, HWxtest-1.1.9, ica-1.0-2,\nIDPmisc-1.1.19, igraph-1.2.4.1, imager-0.41.2, ineq-0.2-13, influenceR-0.1.0,\ninfotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-1, ipred-0.9-9,\nirace-3.3, irlba-2.3.3, Iso-0.0-18, iterators-1.0.10, itertools-0.1-3,\nJBTools-0.7.2.9, jomo-2.6-8, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27,\nKernSmooth-2.23-15, klaR-0.6-14, knitr-1.23, KODAMA-1.5, kohonen-3.0.8,\nks-1.11.5, labdsv-1.8-0, labeling-0.3, labelled-2.2.1, laeken-0.5.0,\nlambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38, latticeExtra-0.6-28,\nlava-1.6.5, lavaan-0.6-4, lazy-1.2-16, lazyeval-0.2.2, leaps-3.0,\nLearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3,\nliquidSVM-1.2.2.1, listenv-0.7.0, lme4-1.1-21, Lmoments-1.3-1, lmtest-0.9-37,\nlocfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23,\nlogspline-2.1.13, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13.1,\nlqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0,\nmagrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5,\nmarkdown-1.0, MASS-7.3-51.4, Matching-4.9-6, MatchIt-3.0.2, Matrix-1.2-17,\nmatrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-6,\nmboost-2.9-1, mclust-5.4.4, mcmc-0.9-6, MCMCpack-1.4-4, mediation-4.4.7,\nmemoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-28, mi-1.0, mice-3.5.0,\nmime-0.7, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4,\nmiscTools-0.6-22, missForest-1.4, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1,\nmlegp-3.1.7, mlogit-0.4-2, mlr-2.14.0, mltools-0.3.5, mnormt-1.5-5,\nModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14,\nmpath-0.3-15, msm-1.6.7, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0,\nmvabund-4.0.1, mvtnorm-1.0-11, natserv-0.3.0, ncbit-2013.03.29, network-1.15,\nnetworkDynamic-0.10.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-140,\nnloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.3-0,\nnp-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1.1, oce-1.1-1, OceanView-1.0.4,\noddsratio-2.0.0, openssl-1.4, openxlsx-4.1.0.1, optmatch-0.9-10,\noptparse-1.6.2, ordinal-2019.4-25, pan-1.6, parallelMap-1.4,\nParamHelpers-1.12, parsedate-1.2.0, party-1.3-3, partykit-1.2-4,\npastecs-1.3.21, pbapply-1.4-0, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73,\npenalized-0.9-51, peperr-1.1-7.1, permute-0.9-5, phangorn-2.5.5,\npheatmap-1.0.12, phylobase-0.8.6, pillar-1.4.2, pim-2.0.1, pinfsc50-1.1.0,\npixmap-0.4-11, pkgbuild-1.0.3, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27,\nplogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.9.0, plotrix-3.7-6,\npls-2.7-1, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.15,\npolyclip-1.10-0, polynom-1.4-0, prabclus-2.3-1, pracma-2.2.5, praise-1.0.0,\nPresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.15.0, processx-3.4.0,\nprodlim-2018.04.18, profileModel-0.6.0, progress-1.2.2, promises-1.0.1,\nproto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18,\npsych-1.8.12, pulsar-0.3.5, purrr-0.3.2, pvclust-2.0-0, qgraph-1.6.3,\nqrnn-2.0.4, quadprog-1.5-7, quantmod-0.4-15, quantreg-5.41, questionr-0.7.0,\nR.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1,\nR.utils-2.9.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.9.0,\nranger-0.11.2, RANN-2.6.1, raster-2.9-5, RCircos-1.2.1, rcmdcheck-1.3.3,\nRColorBrewer-1.1-2, Rcpp-1.0.1, RcppArmadillo-0.9.500.2.0,\nRcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0,\nRCurl-1.95-4.12, Rdpack-0.11-0, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.1,\nrecipes-0.1.6, registry-0.5-1, rematch-1.0.1, rematch2-2.0.1, remotes-2.1.0,\nrentrez-1.2.2, reprex-0.3.0, reshape-0.8.8, reshape2-1.4.3, reticulate-1.12,\nRGCCA-2.1.2, rgexf-0.15.3, rgl-0.100.24, RInside-0.2.15, rio-0.5.16,\nritis-0.7.6, RItools-0.1-16.1, rJava-0.9-11, rjson-0.2.20, RJSONIO-1.3-1.2,\nrlang-0.4.0, rlecuyer-0.3-4, rmarkdown-1.13, rmeta-3.0, Rmpi-0.6-9,\nrms-5.1-3.1, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.4,\nrobustbase-0.93-5, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.9,\nroxygen2-6.1.1, rpart-4.1-15, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0,\nRSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.10, Rtsne-0.15,\nRttf2pt1-1.3.7, RUnit-0.4.32, rversions-2.0.0, rvest-0.3.4, RWeka-0.4-40,\nRWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-1, scales-1.0.0,\nscatterplot3d-0.3-41, SDMTools-1.1-221.1, seewave-2.1.3, segmented-1.0-0,\nselectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1,\nsfsmisc-1.1-4, shape-1.4.4, shapefiles-0.7, shiny-1.3.2, shinydashboard-0.7.1,\nshinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45,\nsm-2.2-5.6, smoother-1.1, sn-1.5-4, sna-2.4, snow-0.4-3, snowfall-1.84-6.1,\nsolrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1,\nspam-2.2-2, spaMM-3.0.0, SparseM-1.77, spatial-7.3-11, spatstat-1.60-1,\nspatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, SQUAREM-2017.10-1,\nstabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.6, statmod-1.4.32,\nstatnet-2019.6, statnet.common-4.3.0, stringi-1.4.3, stringr-1.4.0,\nstrucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4,\nsurvival-2.44-1.1, survivalROC-1.0.3, svd-0.4.3, sys-3.2, t-o, taxize-0.9.8,\ntclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.6.1,\ntestthat-2.1.1, TH.data-1.0-10, tibble-2.1.3, tidygraph-1.1.2, tidyr-0.8.3,\ntidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102,\ntimereg-1.9.3, tinytex-0.14, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15,\ntmvtnorm-1.4-10, TraMineR-2.0-12, tree-1.0-40, triebeard-0.3.0,\ntrimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-47,\ntseriesChaos-0.1-13.1, tsna-0.3.0, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3,\ntweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0,\nuniqueAtomMat-0.1-3-2, units-0.6-3, urca-1.3-0, urltools-1.7.3, uroot-2.0-9.1,\nusethis-1.5.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vctrs-0.1.0,\nvegan-2.5-5, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0,\nvipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.6,\nwaveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0,\nWikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0,\nxfun-0.7, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0,\nxtable-1.8-4, xts-0.11-2, yaml-2.2.0, zeallot-0.1.0, zip-2.0.2, zoo-1.8-5\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/R/3.6.1-foss-2018b/lib": 1,
+                "/app/software/R/3.6.1-foss-2018b/lib/R/lib": 1
+            },
+            "pV": "000000003.000000006.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/R/3.6.1-foss-2018b/bin": 1
+            },
+            "wV": "000000003.000000006.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: R is a free software environment for statistical computing\n and graphics.",
+                "Homepage: http://www.r-project.org/",
+                "Extensions: abc-2.1, abc.data-1.0, abind-1.4-5, acepack-1.4.1, adabag-4.2, ade4-1.7-13, ADGofTest-0.3, aggregation-1.0.1, akima-0.6-2, AlgDesign-1.1-7.3, animation-2.6, aod-1.3.1, ape-5.3, arm-1.10-1, askpass-1.1, asnipe-1.1.11, assertthat-0.2.1, AUC-0.3.0, audio-0.1-6, b-a, backports-1.1.4, bartMachine-1.2.4.2, bartMachineJARs-1.1, base64-2.0, base64enc-0.1-3, BatchJobs-1.8, BayesianTools-0.1.6, bayesm-3.1-1, BB-2014.10-1, BBmisc-1.11, BDgraph-2.59, beanplot-1.2, beeswarm-0.2.3, BH-1.69.0-1, BiasedUrn-1.07, bibtex-0.4.2, bigmemory-4.5.33, bigmemory.sri-0.1.3, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.3-4, biom-0.3.12, bit-1.1-14, bit64-0.9-7, bitops-1.0-6, blob-1.1.1, bmp-0.3, bnlearn-4.4.1, bold-0.9.0, boot-1.3-23, bootstrap-2019.6, brew-1.0-6, brglm-0.6.2, bridgedist-0.1.0, bridgesampling-0.6-0, Brobdingnag-1.2-6, broom-0.5.2, bst-0.3-17, Cairo-1.5-10, calibrate-1.7.2, callr-3.3.0, car-3.0-3, carData-3.0-2, caret-6.0-84, caTools-1.17.1.2, cellranger-1.1.0, cgdsr-1.3.0, cghFLasso-0.2-1, checkmate-1.9.4, chemometrics-1.4.2, chron-2.3-53, circlize-0.4.6, circular-0.4-93, class-7.3-15, classInt-0.3-3, cli-1.1.0, clipr-0.6.0, clisymbols-1.2.0, cluster-2.1.0, clusterGeneration-1.3.4, clusterRepro-0.9, clustree-0.4.0, clValid-0.6-6, coda-0.19-3, codetools-0.2-16, coin-1.3-0, colorspace-1.4-1, combinat-0.0-8, ComICS-1.0.4, commonmark-1.7, compositions-1.40-2, corpcor-1.6.9, cowplot-0.9.4, crayon-1.3.4, crosstalk-1.0.0, crul-0.8.0, csSAM-1.2.4, cubature-2.0.3, curl-3.3, cvAUC-1.1.0, CVST-0.2-2, d-a, d3Network-0.5.2.1, data.table-1.12.2, DBI-1.0.0, dbplyr-1.4.2, ddalpha-1.3.9, deal-1.2-39, debugme-1.1.0, deldir-0.1-22, dendextend-1.12.0, DEoptimR-1.0-8, Deriv-3.8.5, desc-1.2.0, deSolve-1.23, devtools-2.1.0, DHARMa-0.2.4, diagram-1.6.4, DiagrammeR-1.0.1, dichromat-2.0-0, digest-0.6.20, dimRed-0.2.3, diptest-0.75-7, DiscriMiner-0.1-29, dismo-1.1-4, distillery-1.0-6, distr-2.8.0, distrEx-2.8.0, DistributionUtils-0.6-0, diveRsity-1.9.90, doMC-1.3.5, doParallel-1.0.14, doRNG-1.7.1, doSNOW-1.0.16, dotCall64-1.0-0, downloader-0.4, dplyr-0.8.3, DRR-0.0.3, DT-0.7, dtangle-0.3.1, DTRreg-1.3, dtw-1.20-1, dummies-1.5.6, dynamicTreeCut-1.63-1, e1071-1.7-2, EasyABC-1.5, ellipse-0.4.1, ellipsis-0.2.0.1, emulator-1.2-20, energy-1.7-6, ergm-3.10.4, ergm.count-3.4.0, evaluate-0.14, expm-0.999-4, expsmooth-2.3, extrafont-0.17, extrafontdb-1.0, extRemes-2.0-10, FactoMineR-1.42, fail-1.3, fansi-0.4.0, farver-1.1.0, fastcluster-1.1.25, fastICA-1.2-2, fastmatch-1.1-0, fdrtool-1.2.15, feather-0.3.3, ff-2.2-14, ffbase-0.12.7, fftw-1.0-5, fields-9.8-3, filehash-2.4-2, fishMod-0.29, fitdistrplus-1.0-14, flashClust-1.01-2, flexclust-1.4-0, flexmix-2.3-15, fma-2.3, FME-1.3.5, FNN-1.1.3, forcats-0.4.0, foreach-1.4.4, forecast-8.7, foreign-0.8-71, formatR-1.7, Formula-1.2-3, fossil-0.3.7, fpc-2.2-3, fpp-0.5, fracdiff-1.4-2, fs-1.3.1, futile.logger-1.4.3, futile.options-1.0.1, future-1.14.0, g-r, g-r, g-r, gam-1.16.1, gamlss-5.1-4, gamlss.data-5.1-4, gamlss.dist-5.1-4, gamlss.tr-5.1-0, gap-1.2.1, gapfill-0.9.6, gbm-2.1.5, gbRd-0.4-11, gclus-1.3.2, gdata-2.18.0, gdistance-1.2-2, gee-4.13-19, geepack-1.2-1, geiger-2.0.6.2, GeneNet-1.2.13, generics-0.0.2, GenSA-1.1.7, geometry-0.4.1.1, getopt-1.20.3, GetoptLong-0.1.7, GGally-1.4.0, ggbeeswarm-0.6.0, ggforce-0.2.2, ggm-2.3, ggplot2-3.2.0, ggraph-1.0.2, ggrepel-0.8.1, ggridges-0.5.1, ggvis-0.4.4, gh-1.0.1, GillespieSSA-0.5-4, git2r-0.26.1, glasso-1.10, gllvm-1.1.3, glmmML-1.1.0, glmmTMB-0.2.3, glmnet-2.0-18, GlobalOptions-0.1.0, globals-0.12.4, glue-1.3.1, gmm-1.6-2, gmodels-2.18.1, goftest-1.1-1, gomms-1.0, gower-0.2.1, gplots-3.0.1.1, gridBase-0.4-7, gridExtra-2.3, grpreg-3.2-1, GSA-1.03.1, gsalib-2.1, gsw-1.0-5, gtable-0.3.0, gtools-3.8.1, GUTS-1.1.1, h2o-3.24.0.5, haven-2.1.1, hdf5r-1.2.0, heatmap3-1.1.6, hexbin-1.27.3, highr-0.8, Hmisc-4.2-0, hms-0.4.2, htmlTable-1.13.1, htmltools-0.3.6, htmlwidgets-1.3, httpcode-0.2.0, httpuv-1.5.1, httr-1.4.0, huge-1.3.2, hwriter-1.3.2, HWxtest-1.1.9, ica-1.0-2, IDPmisc-1.1.19, igraph-1.2.4.1, imager-0.41.2, ineq-0.2-13, influenceR-0.1.0, infotheo-1.2.0, ini-0.3.1, interpretR-0.2.4, inum-1.0-1, ipred-0.9-9, irace-3.3, irlba-2.3.3, Iso-0.0-18, iterators-1.0.10, itertools-0.1-3, JBTools-0.7.2.9, jomo-2.6-8, jpeg-0.1-8, jsonlite-1.6, kernlab-0.9-27, KernSmooth-2.23-15, klaR-0.6-14, knitr-1.23, KODAMA-1.5, kohonen-3.0.8, ks-1.11.5, labdsv-1.8-0, labeling-0.3, labelled-2.2.1, laeken-0.5.0, lambda.r-1.2.3, lars-1.2, later-0.8.0, lattice-0.20-38, latticeExtra-0.6-28, lava-1.6.5, lavaan-0.6-4, lazy-1.2-16, lazyeval-0.2.2, leaps-3.0, LearnBayes-2.15.1, lhs-1.0.1, libcoin-1.0-4, limSolve-1.5.5.3, liquidSVM-1.2.2.1, listenv-0.7.0, lme4-1.1-21, Lmoments-1.3-1, lmtest-0.9-37, locfdr-1.1-8, locfit-1.5-9.1, logcondens-2.1.5, logistf-1.23, logspline-2.1.13, longitudinal-1.1.12, longmemo-1.1-1, lpSolve-5.6.13.1, lqa-1.0-3, lsei-1.2-0, lubridate-1.7.4, m-e, magic-1.5-9, magick-2.0, magrittr-1.5, manipulateWidget-0.10.0, maps-3.3.0, maptools-0.9-5, markdown-1.0, MASS-7.3-51.4, Matching-4.9-6, MatchIt-3.0.2, Matrix-1.2-17, matrixcalc-1.0-3, MatrixModels-0.4-1, matrixStats-0.54.0, maxLik-1.3-6, mboost-2.9-1, mclust-5.4.4, mcmc-0.9-6, MCMCpack-1.4-4, mediation-4.4.7, memoise-1.1.0, memuse-4.0-0, metap-1.1, mgcv-1.8-28, mi-1.0, mice-3.5.0, mime-0.7, miniUI-0.1.1.1, minpack.lm-1.2-1, minqa-1.2.4, misc3d-0.8-4, miscTools-0.6-22, missForest-1.4, mitml-0.3-7, mixtools-1.1.0, mlbench-2.1-1, mlegp-3.1.7, mlogit-0.4-2, mlr-2.14.0, mltools-0.3.5, mnormt-1.5-5, ModelMetrics-1.2.2, modelr-0.1.4, modeltools-0.2-22, moments-0.14, mpath-0.3-15, msm-1.6.7, multcomp-1.4-10, multicool-0.1-10, munsell-0.5.0, mvabund-4.0.1, mvtnorm-1.0-11, natserv-0.3.0, ncbit-2013.03.29, network-1.15, networkDynamic-0.10.0, neuRosim-0.2-12, nleqslv-3.3.2, nlme-3.1-140, nloptr-1.2.1, NLP-0.2-0, NMF-0.21.0, nnet-7.3-12, nnls-1.4, nor1mix-1.3-0, np-0.60-9, npsurv-0.4-0, numDeriv-2016.8-1.1, oce-1.1-1, OceanView-1.0.4, oddsratio-2.0.0, openssl-1.4, openxlsx-4.1.0.1, optmatch-0.9-10, optparse-1.6.2, ordinal-2019.4-25, pan-1.6, parallelMap-1.4, ParamHelpers-1.12, parsedate-1.2.0, party-1.3-3, partykit-1.2-4, pastecs-1.3.21, pbapply-1.4-0, pbivnorm-0.6.0, pbkrtest-0.4-7, pcaPP-1.9-73, penalized-0.9-51, peperr-1.1-7.1, permute-0.9-5, phangorn-2.5.5, pheatmap-1.0.12, phylobase-0.8.6, pillar-1.4.2, pim-2.0.1, pinfsc50-1.1.0, pixmap-0.4-11, pkgbuild-1.0.3, pkgconfig-2.0.2, pkgload-1.0.2, pkgmaker-0.27, plogr-0.2.0, plot3D-1.1.1, plot3Drgl-1.0.1, plotly-4.9.0, plotrix-3.7-6, pls-2.7-1, plyr-1.8.4, png-0.1-7, PoissonSeq-1.1.2, polspline-1.1.15, polyclip-1.10-0, polynom-1.4-0, prabclus-2.3-1, pracma-2.2.5, praise-1.0.0, PresenceAbsence-1.1.9, prettyunits-1.0.2, pROC-1.15.0, processx-3.4.0, prodlim-2018.04.18, profileModel-0.6.0, progress-1.2.2, promises-1.0.1, proto-1.0.0, proxy-0.4-23, pryr-0.1.4, ps-1.3.0, pscl-1.5.2, pspline-1.0-18, psych-1.8.12, pulsar-0.3.5, purrr-0.3.2, pvclust-2.0-0, qgraph-1.6.3, qrnn-2.0.4, quadprog-1.5-7, quantmod-0.4-15, quantreg-5.41, questionr-0.7.0, R.cache-0.13.0, R.matlab-3.6.2, R.methodsS3-1.7.1, R.oo-1.22.0, R.rsp-0.43.1, R.utils-2.9.0, R6-2.4.0, randomForest-4.6-14, randomForestSRC-2.9.0, ranger-0.11.2, RANN-2.6.1, raster-2.9-5, RCircos-1.2.1, rcmdcheck-1.3.3, RColorBrewer-1.1-2, Rcpp-1.0.1, RcppArmadillo-0.9.500.2.0, RcppEigen-0.3.3.5.0, RcppGSL-0.3.6, RcppProgress-0.4.1, RcppRoll-0.3.0, RCurl-1.95-4.12, Rdpack-0.11-0, readbitmap-0.1.5, readr-1.3.1, readxl-1.3.1, recipes-0.1.6, registry-0.5-1, rematch-1.0.1, rematch2-2.0.1, remotes-2.1.0, rentrez-1.2.2, reprex-0.3.0, reshape-0.8.8, reshape2-1.4.3, reticulate-1.12, RGCCA-2.1.2, rgexf-0.15.3, rgl-0.100.24, RInside-0.2.15, rio-0.5.16, ritis-0.7.6, RItools-0.1-16.1, rJava-0.9-11, rjson-0.2.20, RJSONIO-1.3-1.2, rlang-0.4.0, rlecuyer-0.3-4, rmarkdown-1.13, rmeta-3.0, Rmpi-0.6-9, rms-5.1-3.1, RMTstat-0.3, rncl-0.8.3, RNeXML-2.3.0, rngtools-1.4, robustbase-0.93-5, ROCR-1.0-7, Rook-1.1-1, rootSolve-1.7, rotl-3.0.9, roxygen2-6.1.1, rpart-4.1-15, rprojroot-1.3-2, rrcov-1.4-7, rredlist-0.5.0, RSNNS-0.4-11, RSQLite-2.1.1, Rssa-1.0, rstudioapi-0.10, Rtsne-0.15, Rttf2pt1-1.3.7, RUnit-0.4.32, rversions-2.0.0, rvest-0.3.4, RWeka-0.4-40, RWekajars-3.9.3-1, s-p, s-t, s-t, sandwich-2.5-1, scales-1.0.0, scatterplot3d-0.3-41, SDMTools-1.1-221.1, seewave-2.1.3, segmented-1.0-0, selectr-0.4-1, sem-3.1-9, sendmailR-1.2-1, seqinr-3.4-5, sessioninfo-1.1.1, sfsmisc-1.1-4, shape-1.4.4, shapefiles-0.7, shiny-1.3.2, shinydashboard-0.7.1, shinythemes-1.1.2, signal-0.7-6, SimSeq-1.4.0, SKAT-1.3.2.1, slam-0.1-45, sm-2.2-5.6, smoother-1.1, sn-1.5-4, sna-2.4, snow-0.4-3, snowfall-1.84-6.1, solrium-1.0.2, som-0.3-5.1, soundecology-1.3.3, sourcetools-0.1.7, sp-1.3-1, spam-2.2-2, spaMM-3.0.0, SparseM-1.77, spatial-7.3-11, spatstat-1.60-1, spatstat.data-1.4-0, spatstat.utils-1.13-0, spData-0.3.0, SQUAREM-2017.10-1, stabledist-0.7-1, stabs-0.6-3, startupmsg-0.9.6, statmod-1.4.32, statnet-2019.6, statnet.common-4.3.0, stringi-1.4.3, stringr-1.4.0, strucchange-1.5-1, subplex-1.5-4, SuperLearner-2.0-24, SuppDists-1.1-9.4, survival-2.44-1.1, survivalROC-1.0.3, svd-0.4.3, sys-3.2, t-o, taxize-0.9.8, tclust-1.4-1, TeachingDemos-2.10, tensor-1.5, tensorA-0.36.1, tergm-3.6.1, testthat-2.1.1, TH.data-1.0-10, tibble-2.1.3, tidygraph-1.1.2, tidyr-0.8.3, tidyselect-0.2.5, tidyverse-1.2.1, tiff-0.1-5, timeDate-3043.102, timereg-1.9.3, tinytex-0.14, tkrplot-0.0-24, tm-0.7-6, TMB-1.7.15, tmvtnorm-1.4-10, TraMineR-2.0-12, tree-1.0-40, triebeard-0.3.0, trimcluster-0.1-2.1, tripack-1.3-8, trust-0.1-7, tseries-0.10-47, tseriesChaos-0.1-13.1, tsna-0.3.0, tsne-0.1-3, TTR-0.23-4, tuneR-1.3.3, tweedie-2.3.2, tweenr-1.0.1, u-t, ucminf-1.1-4, unbalanced-2.0, uniqueAtomMat-0.1-3-2, units-0.6-3, urca-1.3-0, urltools-1.7.3, uroot-2.0-9.1, usethis-1.5.0, utf8-1.1.4, uuid-0.1-2, vcd-1.4-4, vcfR-1.8.0, vctrs-0.1.0, vegan-2.5-5, VennDiagram-1.6.20, VGAM-1.1-1, VIM-4.8.0, vioplot-0.3.0, vipor-0.4.5, viridis-0.5.1, viridisLite-0.3.0, visNetwork-2.0.6, waveslim-1.7.5.1, webshot-0.5.1, whisker-0.3-2, WikidataR-1.4.0, WikipediR-1.5.0, wikitaxa-0.3.0, withr-2.1.2, worrms-0.3.2, WriteXLS-4.1.0, xfun-0.7, xlsx-0.6.1, xlsxjars-0.6.1, XML-3.98-1.19, xml2-1.2.0, xopen-1.0.0, xtable-1.8-4, xts-0.11-2, yaml-2.2.0, zeallot-0.1.0, zip-2.0.2, zoo-1.8-5"
+            ]
         }
     },
     "RepeatMasker": {
@@ -2919,6 +3432,44 @@
                 "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
                 "Homepage: https://github.com/alexdobin/STAR"
             ]
+        },
+        "/app/modules/all/STAR/2.7.0d-foss-2018b.lua": {
+            "Description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+            "Version": "2.7.0d-foss-2018b",
+            "fullName": "STAR/2.7.0d-foss-2018b",
+            "help": "\nDescription\n===========\nSTAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.\n\n\nMore information\n================\n - Homepage: https://github.com/alexdobin/STAR\n",
+            "hidden": false,
+            "pV": "000000002.000000007.*d.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/STAR/2.7.0d-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000007.*d.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+                "Homepage: https://github.com/alexdobin/STAR"
+            ]
+        }
+    },
+    "STAR-Fusion": {
+        "/app/modules/all/STAR-Fusion/1.5.0-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.",
+            "Version": "1.5.0-foss-2018b-Perl-5.28.0",
+            "fullName": "STAR-Fusion/1.5.0-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nSTAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.\n\n\nMore information\n================\n - Homepage: https://github.com/STAR-Fusion/STAR-Fusion\n\n\nIncluded extensions\n===================\nDB_File-1.835, Set::IntervalTree-0.10\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/STAR-Fusion/1.5.0-foss-2018b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000005.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/STAR-Fusion/1.5.0-foss-2018b-Perl-5.28.0": 1
+            },
+            "wV": "000000001.000000005.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts \n supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner \n to map junction reads and spanning reads to a reference annotation set.",
+                "Homepage: https://github.com/STAR-Fusion/STAR-Fusion",
+                "Extensions: DB_File-1.835, Set::IntervalTree-0.10"
+            ]
         }
     },
     "SWIG": {
@@ -2967,6 +3518,22 @@
             },
             "pV": "000000002.000000000.000000002.*gompi.*zfinal-.000002018.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
             "wV": "000000002.000000000.000000002.*gompi.*zfinal-.000002018.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
+            "whatis": [
+                "Description: The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
+                "Homepage: http://www.netlib.org/scalapack/"
+            ]
+        },
+        "/app/modules/all/ScaLAPACK/2.0.2-gompic-2018b-OpenBLAS-0.3.1.lua": {
+            "Description": "The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
+            "Version": "2.0.2-gompic-2018b-OpenBLAS-0.3.1",
+            "fullName": "ScaLAPACK/2.0.2-gompic-2018b-OpenBLAS-0.3.1",
+            "help": "\nDescription\n===========\nThe ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.\n\n\nMore information\n================\n - Homepage: http://www.netlib.org/scalapack/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/ScaLAPACK/2.0.2-gompic-2018b-OpenBLAS-0.3.1/lib": 1
+            },
+            "pV": "000000002.000000000.000000002.*gompic.*zfinal-.000002018.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
+            "wV": "000000002.000000000.000000002.*gompic.*zfinal-.000002018.*b.*openblas.*zfinal-.000000000.000000003.000000001.*zfinal",
             "whatis": [
                 "Description: The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK routines\n redesigned for distributed memory MIMD parallel computers.",
                 "Homepage: http://www.netlib.org/scalapack/"
@@ -3121,6 +3688,46 @@
             "whatis": [
                 "Description: \n Tcl (Tool Command Language) is a very powerful but easy to learn dynamic\n programming language, suitable for a very wide range of uses, including web\n and desktop applications, networking, administration, testing and many more.\n",
                 "Homepage: http://www.tcl.tk/"
+            ]
+        }
+    },
+    "TensorFlow": {
+        "/app/modules/all/TensorFlow/1.12.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "An open-source software library for Machine Intelligence",
+            "Version": "1.12.0-foss-2018b-Python-3.6.6",
+            "fullName": "TensorFlow/1.12.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn open-source software library for Machine Intelligence\n\n\nMore information\n================\n - Homepage: https://www.tensorflow.org/\n\n\nIncluded extensions\n===================\nabsl-py-0.6.1, astor-0.7.1, gast-0.2.0, grpcio-1.16.0, Keras-\nApplications-1.0.6, Keras-Preprocessing-1.0.5, Markdown-3.0.1, protobuf-\npython-3.6.1, tensorboard-1.12.0, TensorFlow-1.12.0, termcolor-1.1.0,\nWerkzeug-0.14.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/TensorFlow/1.12.0-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000012.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/TensorFlow/1.12.0-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000012.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An open-source software library for Machine Intelligence",
+                "Homepage: https://www.tensorflow.org/",
+                "Extensions: absl-py-0.6.1, astor-0.7.1, gast-0.2.0, grpcio-1.16.0, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5, Markdown-3.0.1, protobuf-python-3.6.1, tensorboard-1.12.0, TensorFlow-1.12.0, termcolor-1.1.0, Werkzeug-0.14.1"
+            ]
+        }
+    },
+    "Theano": {
+        "/app/modules/all/Theano/1.0.3-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+            "Version": "1.0.3-foss-2018b-Python-3.6.6",
+            "fullName": "Theano/1.0.3-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nTheano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.\n\n\nMore information\n================\n - Homepage: http://deeplearning.net/software/theano\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000003.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/Theano/1.0.3-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000003.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+                "Homepage: http://deeplearning.net/software/theano"
             ]
         }
     },
@@ -3351,6 +3958,25 @@
                 "/app/software/ViennaRNA/2.4.10-foss-2018b-Python-2.7.15/bin": 1
             },
             "wV": "000000002.000000004.000000010.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+                "Homepage: http://www.tbi.univie.ac.at/RNA/"
+            ]
+        },
+        "/app/modules/all/ViennaRNA/2.4.11-foss-2018b-Python-3.6.6.lua": {
+            "Description": "The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+            "Version": "2.4.11-foss-2018b-Python-3.6.6",
+            "fullName": "ViennaRNA/2.4.11-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.\n\n\nMore information\n================\n - Homepage: http://www.tbi.univie.ac.at/RNA/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/ViennaRNA/2.4.11-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000002.000000004.000000011.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/ViennaRNA/2.4.11-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000004.000000011.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
             "whatis": [
                 "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
                 "Homepage: http://www.tbi.univie.ac.at/RNA/"
@@ -3769,6 +4395,24 @@
             ]
         }
     },
+    "cas-offinder": {
+        "/app/modules/all/cas-offinder/2.4-foss-2018b.lua": {
+            "Description": "Cas-OFFinder is OpenCL based, ultrafast and versatile program that searches\n for potential off-target sites of CRISPR/Cas-derived RNA-guided endonucleases (RGEN).",
+            "Version": "2.4-foss-2018b",
+            "fullName": "cas-offinder/2.4-foss-2018b",
+            "help": "\nDescription\n===========\nCas-OFFinder is OpenCL based, ultrafast and versatile program that searches\n for potential off-target sites of CRISPR/Cas-derived RNA-guided endonucleases (RGEN).\n\n\nMore information\n================\n - Homepage: \n",
+            "hidden": false,
+            "pV": "000000002.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/cas-offinder/2.4-foss-2018b/bin": 1
+            },
+            "wV": "000000002.000000004.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: Cas-OFFinder is OpenCL based, ultrafast and versatile program that searches\n for potential off-target sites of CRISPR/Cas-derived RNA-guided endonucleases (RGEN).",
+                "Homepage: "
+            ]
+        }
+    },
     "cellranger": {
         "/app/modules/all/cellranger/2.1.1.lua": {
             "Description": "Single Cell Analysis Pipelines",
@@ -4021,6 +4665,21 @@
             ]
         }
     },
+    "fosscuda": {
+        "/app/modules/all/fosscuda/2018b.lua": {
+            "Description": "GCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.",
+            "Version": "2018b",
+            "fullName": "fosscuda/2018b",
+            "help": "\nDescription\n===========\nGCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002018.*b.*zfinal",
+            "wV": "000002018.*b.*zfinal",
+            "whatis": [
+                "Description: GCC based compiler toolchain __with CUDA support__, and including\n OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.",
+                "Homepage: (none)"
+            ]
+        }
+    },
     "freeglut": {
         "/app/modules/all/freeglut/3.0.0-foss-2018b.lua": {
             "Description": "freeglut is a completely OpenSourced alternative to the OpenGL Utility Toolkit (GLUT) library.",
@@ -4096,6 +4755,21 @@
             ]
         }
     },
+    "gcccuda": {
+        "/app/modules/all/gcccuda/2018b.lua": {
+            "Description": "GNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.",
+            "Version": "2018b",
+            "fullName": "gcccuda/2018b",
+            "help": "\nDescription\n===========\nGNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002018.*b.*zfinal",
+            "wV": "000002018.*b.*zfinal",
+            "whatis": [
+                "Description: GNU Compiler Collection (GCC) based compiler toolchain, along with CUDA toolkit.",
+                "Homepage: (none)"
+            ]
+        }
+    },
     "gettext": {
         "/app/modules/all/gettext/0.19.8.1-GCCcore-7.3.0.lua": {
             "Description": "GNU 'gettext' is an important step for the GNU Translation Project, as it is an asset on which we may\nbuild many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools\nand documentation",
@@ -4136,6 +4810,24 @@
             ]
         }
     },
+    "git-lfs": {
+        "/app/modules/all/git-lfs/2.7.1.lua": {
+            "Description": "Git Large File Storage (LFS) replaces large files such as audio\n samples, videos, datasets, and graphics with text pointers inside Git, while \n storing the file contents on a remote server like GitHub.com",
+            "Version": "2.7.1",
+            "fullName": "git-lfs/2.7.1",
+            "help": "\nDescription\n===========\nGit Large File Storage (LFS) replaces large files such as audio\n samples, videos, datasets, and graphics with text pointers inside Git, while \n storing the file contents on a remote server like GitHub.com\n\n\nMore information\n================\n - Homepage: https://git-lfs.github.com\n",
+            "hidden": false,
+            "pV": "000000002.000000007.000000001.*zfinal",
+            "pathA": {
+                "/app/software/git-lfs/2.7.1/bin": 1
+            },
+            "wV": "000000002.000000007.000000001.*zfinal",
+            "whatis": [
+                "Description: Git Large File Storage (LFS) replaces large files such as audio\n samples, videos, datasets, and graphics with text pointers inside Git, while \n storing the file contents on a remote server like GitHub.com",
+                "Homepage: https://git-lfs.github.com"
+            ]
+        }
+    },
     "gnuplot": {
         "/app/modules/all/gnuplot/5.2.5-foss-2018b.lua": {
             "Description": "Portable interactive, function plotting utility",
@@ -4165,6 +4857,21 @@
             "wV": "000002018.*b.*zfinal",
             "whatis": [
                 "Description: GNU Compiler Collection (GCC) based compiler toolchain,\n including OpenMPI for MPI support.",
+                "Homepage: (none)"
+            ]
+        }
+    },
+    "gompic": {
+        "/app/modules/all/gompic/2018b.lua": {
+            "Description": "GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.",
+            "Version": "2018b",
+            "fullName": "gompic/2018b",
+            "help": "\nDescription\n===========\nGNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.\n\n\nMore information\n================\n - Homepage: (none)\n",
+            "hidden": false,
+            "pV": "000002018.*b.*zfinal",
+            "wV": "000002018.*b.*zfinal",
+            "whatis": [
+                "Description: GNU Compiler Collection (GCC) based compiler toolchain along with CUDA toolkit,\n including OpenMPI for MPI support with CUDA features enabled.",
                 "Homepage: (none)"
             ]
         }
@@ -4208,6 +4915,24 @@
             ]
         }
     },
+    "h5py": {
+        "/app/modules/all/h5py/2.8.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library,\n version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous\n amounts of data.",
+            "Version": "2.8.0-foss-2018b-Python-3.6.6",
+            "fullName": "h5py/2.8.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nHDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library,\n version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous\n amounts of data.\n\n\nMore information\n================\n - Homepage: http://www.h5py.org/\n",
+            "hidden": false,
+            "pV": "000000002.000000008.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/h5py/2.8.0-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000008.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library,\n version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous\n amounts of data.",
+                "Homepage: http://www.h5py.org/"
+            ]
+        }
+    },
     "help2man": {
         "/app/modules/all/help2man/1.47.4-GCCcore-7.3.0.lua": {
             "Description": "help2man produces simple manual pages from the '--help' and '--version' output of other commands.",
@@ -4248,6 +4973,24 @@
             ]
         }
     },
+    "hivmmer": {
+        "/app/modules/all/hivmmer/0.1.2-foss-2018b-Python-3.6.6.lua": {
+            "Description": "An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+            "Version": "0.1.2-foss-2018b-Python-3.6.6",
+            "fullName": "hivmmer/0.1.2-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAn alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER\n\n\nMore information\n================\n - Homepage: https://github.com/kantorlab/hivmmer\n",
+            "hidden": false,
+            "pV": "000000000.000000001.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/hivmmer/0.1.2-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000001.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+                "Homepage: https://github.com/kantorlab/hivmmer"
+            ]
+        }
+    },
     "hwloc": {
         "/app/modules/all/hwloc/1.11.10-GCCcore-7.3.0.lua": {
             "Description": "The Portable Hardware Locality (hwloc) software package provides a portable\n abstraction (across OS, versions, architectures, ...) of the hierarchical\n topology of modern architectures, including NUMA memory nodes, sockets, shared\n caches, cores and simultaneous multithreading. It also gathers various system\n attributes such as cache and memory information as well as the locality of I/O\n devices such as network interfaces, InfiniBand HCAs or GPUs. It primarily\n aims at helping applications with gathering information about modern computing\n hardware so as to exploit it accordingly and efficiently.\n",
@@ -4285,6 +5028,24 @@
             "whatis": [
                 "Description:  iCount: protein-RNA interaction analysis\n is a Python module and associated command-line interface (CLI),\n which provides all the commands needed to process iCLIP data on protein-RNA interactions.",
                 "Homepage: https://github.com/tomazc/iCount"
+            ]
+        }
+    },
+    "igraph": {
+        "/app/modules/all/igraph/0.7.1-foss-2018b.lua": {
+            "Description": "igraph is a collection of network analysis tools with the emphasis on \nefficiency, portability and ease of use. igraph is open source and free. igraph can be \nprogrammed in R, Python and C/C++.",
+            "Version": "0.7.1-foss-2018b",
+            "fullName": "igraph/0.7.1-foss-2018b",
+            "help": "\nDescription\n===========\nigraph is a collection of network analysis tools with the emphasis on \nefficiency, portability and ease of use. igraph is open source and free. igraph can be \nprogrammed in R, Python and C/C++.\n\n\nMore information\n================\n - Homepage: http://igraph.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/igraph/0.7.1-foss-2018b/lib": 1
+            },
+            "pV": "000000000.000000007.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "wV": "000000000.000000007.000000001.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: igraph is a collection of network analysis tools with the emphasis on \nefficiency, portability and ease of use. igraph is open source and free. igraph can be \nprogrammed in R, Python and C/C++.",
+                "Homepage: http://igraph.org"
             ]
         }
     },
@@ -4911,12 +5672,30 @@
             ]
         }
     },
+    "nanofilt": {
+        "/app/modules/all/nanofilt/2.5.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.5.0-foss-2018b-Python-3.6.6",
+            "fullName": "nanofilt/2.5.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+            "hidden": false,
+            "pV": "000000002.000000005.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/nanofilt/2.5.0-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000002.000000005.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
+            ]
+        }
+    },
     "nanopolish": {
         "/app/modules/all/nanopolish/0.10.2-foss-2018b-Python-2.7.15.lua": {
-            "Description": "Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
+            "Description": "Software package for signal-level analysis of Oxford Nanopore sequencing data.",
             "Version": "0.10.2-foss-2018b-Python-2.7.15",
             "fullName": "nanopolish/0.10.2-foss-2018b-Python-2.7.15",
-            "help": "\nDescription\n===========\nSoftware package for signal-level analysis of Oxford Nanopore\n sequencing data.\n\n\nMore information\n================\n - Homepage: http://github.com/jts/nanopolish\n",
+            "help": "\nDescription\n===========\nSoftware package for signal-level analysis of Oxford Nanopore sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/jts/nanopolish\n",
             "hidden": false,
             "pV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "pathA": {
@@ -4925,8 +5704,8 @@
             },
             "wV": "000000000.000000010.000000002.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "whatis": [
-                "Description: Software package for signal-level analysis of Oxford Nanopore\n sequencing data.",
-                "Homepage: http://github.com/jts/nanopolish"
+                "Description: Software package for signal-level analysis of Oxford Nanopore sequencing data.",
+                "Homepage: https://github.com/jts/nanopolish"
             ]
         },
         "/app/modules/all/nanopolish/0.10.2-foss-2018b.lua": {
@@ -4943,6 +5722,23 @@
             "whatis": [
                 "Description: Our computational work focuses on the development of\nalgorithms for handling very large sequencing data sets, from indexing\nand text compression, to probabilistic modeling and inference. We make\nour methods freely available as open source software.",
                 "Homepage: http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/"
+            ]
+        },
+        "/app/modules/all/nanopolish/0.11.1-foss-2018b-Python-2.7.15.lua": {
+            "Description": "Software package for signal-level analysis of Oxford Nanopore sequencing data.",
+            "Version": "0.11.1-foss-2018b-Python-2.7.15",
+            "fullName": "nanopolish/0.11.1-foss-2018b-Python-2.7.15",
+            "help": "\nDescription\n===========\nSoftware package for signal-level analysis of Oxford Nanopore sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/jts/nanopolish\n",
+            "hidden": false,
+            "pV": "000000000.000000011.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/software/nanopolish/0.11.1-foss-2018b-Python-2.7.15/bin": 1,
+                "/app/software/nanopolish/0.11.1-foss-2018b-Python-2.7.15/scripts": 1
+            },
+            "wV": "000000000.000000011.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: Software package for signal-level analysis of Oxford Nanopore sequencing data.",
+                "Homepage: https://github.com/jts/nanopolish"
             ]
         }
     },
@@ -5127,6 +5923,24 @@
             ]
         }
     },
+    "philosopher": {
+        "/app/modules/all/philosopher/1.4.5.lua": {
+            "Description": "Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+            "Version": "1.4.5",
+            "fullName": "philosopher/1.4.5",
+            "help": "\nDescription\n===========\nPhilosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.\n\n\nMore information\n================\n - Homepage: https://github.com/Nesvilab/philosopher/wiki\n",
+            "hidden": false,
+            "pV": "000000001.000000004.000000005.*zfinal",
+            "pathA": {
+                "/app/software/philosopher/1.4.5": 1
+            },
+            "wV": "000000001.000000004.000000005.*zfinal",
+            "whatis": [
+                "Description: Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+                "Homepage: https://github.com/Nesvilab/philosopher/wiki"
+            ]
+        }
+    },
     "picard": {
         "/app/modules/all/picard/2.18.17-Java-1.8.lua": {
             "Description": "A set of tools (in Java) for working with next generation sequencing data in the BAM format.",
@@ -5210,6 +6024,40 @@
                 "Description: pkgconfig is a Python module to interface with the pkg-config command line tool",
                 "Homepage: http://github.com/matze/pkgconfig"
             ]
+        },
+        "/app/modules/all/pkgconfig/1.3.1-foss-2018b-Python-3.6.6.lua": {
+            "Description": "pkgconfig is a Python module to interface with the pkg-config command line tool",
+            "Version": "1.3.1-foss-2018b-Python-3.6.6",
+            "fullName": "pkgconfig/1.3.1-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\npkgconfig is a Python module to interface with the pkg-config command line tool\n\n\nMore information\n================\n - Homepage: http://github.com/matze/pkgconfig\n",
+            "hidden": false,
+            "pV": "000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000003.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: pkgconfig is a Python module to interface with the pkg-config command line tool",
+                "Homepage: http://github.com/matze/pkgconfig"
+            ]
+        }
+    },
+    "pocl": {
+        "/app/modules/all/pocl/1.2-GCC-7.3.0-2.30.lua": {
+            "Description": "Pocl is a portable open source (MIT-licensed) implementation of the OpenCL standard",
+            "Version": "1.2-GCC-7.3.0-2.30",
+            "fullName": "pocl/1.2-GCC-7.3.0-2.30",
+            "help": "\nDescription\n===========\nPocl is a portable open source (MIT-licensed) implementation of the OpenCL standard\n\n\nMore information\n================\n - Homepage: http://portablecl.org\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/pocl/1.2-GCC-7.3.0-2.30/lib": 1
+            },
+            "pV": "000000001.000000002.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "pathA": {
+                "/app/software/pocl/1.2-GCC-7.3.0-2.30/bin": 1
+            },
+            "wV": "000000001.000000002.*gcc.*zfinal-.000000007.000000003.*zfinal-.000000002.000000030.*zfinal",
+            "whatis": [
+                "Description: Pocl is a portable open source (MIT-licensed) implementation of the OpenCL standard",
+                "Homepage: http://portablecl.org"
+            ]
         }
     },
     "poppler": {
@@ -5288,6 +6136,27 @@
             ]
         }
     },
+    "protobuf": {
+        "/app/modules/all/protobuf/3.6.1-GCCcore-7.3.0.lua": {
+            "Description": "Google Protocol Buffers",
+            "Version": "3.6.1-GCCcore-7.3.0",
+            "fullName": "protobuf/3.6.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nGoogle Protocol Buffers\n\n\nMore information\n================\n - Homepage: https://github.com/google/protobuf/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/software/protobuf/3.6.1-GCCcore-7.3.0/lib": 1
+            },
+            "pV": "000000003.000000006.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/software/protobuf/3.6.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000006.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: Google Protocol Buffers",
+                "Homepage: https://github.com/google/protobuf/"
+            ]
+        }
+    },
     "psipred": {
         "/app/modules/all/psipred/4.02-foss-2018b.lua": {
             "Description": "The PSIPRED Protein Sequence Analysis Workbench aggregates\n several UCL structure prediction methods into one location.",
@@ -5306,6 +6175,21 @@
             ]
         }
     },
+    "pyBigWig": {
+        "/app/modules/all/pyBigWig/0.3.13-foss-2018b-Python-3.6.6.lua": {
+            "Description": "A python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.",
+            "Version": "0.3.13-foss-2018b-Python-3.6.6",
+            "fullName": "pyBigWig/0.3.13-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nA python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.\n\n\nMore information\n================\n - Homepage: https://github.com/deeptools/pyBigWig\n",
+            "hidden": false,
+            "pV": "000000000.000000003.000000013.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000000.000000003.000000013.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: A python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.",
+                "Homepage: https://github.com/deeptools/pyBigWig"
+            ]
+        }
+    },
     "pybedtools": {
         "/app/modules/all/pybedtools/0.7.10-foss-2018b-Python-3.6.6.lua": {
             "Description": "pybedtools wraps and extends BEDTools and offers feature-level manipulations from within Python.",
@@ -5321,6 +6205,21 @@
             "whatis": [
                 "Description: pybedtools wraps and extends BEDTools and offers feature-level manipulations from within Python.",
                 "Homepage: https://daler.github.io/pybedtools"
+            ]
+        }
+    },
+    "python-parasail": {
+        "/app/modules/all/python-parasail/1.1.16-foss-2018b-Python-3.6.6.lua": {
+            "Description": "This package contains Python bindings for parasail. ",
+            "Version": "1.1.16-foss-2018b-Python-3.6.6",
+            "fullName": "python-parasail/1.1.16-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThis package contains Python bindings for parasail.\n\n\nMore information\n================\n - Homepage: https://pypi.org/project/parasail/\n",
+            "hidden": false,
+            "pV": "000000001.000000001.000000016.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000001.000000001.000000016.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description:  This package contains Python bindings for parasail. ",
+                "Homepage: https://pypi.org/project/parasail/"
             ]
         }
     },
@@ -5344,6 +6243,40 @@
                 "Homepage: https://github.com/nanoporetech/",
                 "Extensions: biopython-1.73, parasail-1.1.16, PyYAML-3.12, qcat-1.0.1, wheel-0.33.1"
             ]
+        },
+        "/app/modules/all/qcat/1.0.7-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+            "Version": "1.0.7-foss-2018b-Python-3.6.6",
+            "fullName": "qcat/1.0.7-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nQcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech/\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/qcat/1.0.7-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000000.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Qcat is Python command-line tool for demultiplexing Oxford\n Nanopore reads from FASTQ files.",
+                "Homepage: https://github.com/nanoporetech/"
+            ]
+        }
+    },
+    "revbayes": {
+        "/app/modules/all/revbayes/1.0.11-foss-2018b.lua": {
+            "Description": "RevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.",
+            "Version": "1.0.11-foss-2018b",
+            "fullName": "revbayes/1.0.11-foss-2018b",
+            "help": "\nDescription\n===========\nRevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.\n\n\nMore information\n================\n - Homepage: https://revbayes.github.io/\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000011.*foss.*zfinal-.000002018.*b.*zfinal",
+            "pathA": {
+                "/app/software/revbayes/1.0.11-foss-2018b/bin": 1
+            },
+            "wV": "000000001.000000000.000000011.*foss.*zfinal-.000002018.*b.*zfinal",
+            "whatis": [
+                "Description: RevBayes provides an interactive environment for statistical\n computation in phylogenetics. It is primarily intended for modeling,\n simulation, and Bayesian inference in evolutionary biology, particularly\n phylogenetics.",
+                "Homepage: https://revbayes.github.io/"
+            ]
         }
     },
     "samblaster": {
@@ -5361,6 +6294,57 @@
             "whatis": [
                 "Description: samblaster is a fast and flexible program for marking\n duplicates in read-id grouped1 paired-end SAM files.",
                 "Homepage: https://github.com/GregoryFaust/samblaster"
+            ]
+        }
+    },
+    "scikit-learn": {
+        "/app/modules/all/scikit-learn/0.20.0-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world,\nbuilding upon numpy, scipy, and matplotlib. As a machine-learning module,\nit provides versatile tools for data mining and analysis in any field of science and engineering.\nIt strives to be simple and efficient, accessible to everybody, and reusable in various contexts.",
+            "Version": "0.20.0-foss-2018b-Python-3.6.6",
+            "fullName": "scikit-learn/0.20.0-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nScikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world,\nbuilding upon numpy, scipy, and matplotlib. As a machine-learning module,\nit provides versatile tools for data mining and analysis in any field of science and engineering.\nIt strives to be simple and efficient, accessible to everybody, and reusable in various contexts.\n\n\nMore information\n================\n - Homepage: http://scikit-learn.org/stable/index.html\n",
+            "hidden": false,
+            "pV": "000000000.000000020.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000000.000000020.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world,\nbuilding upon numpy, scipy, and matplotlib. As a machine-learning module,\nit provides versatile tools for data mining and analysis in any field of science and engineering.\nIt strives to be simple and efficient, accessible to everybody, and reusable in various contexts.",
+                "Homepage: http://scikit-learn.org/stable/index.html"
+            ]
+        }
+    },
+    "smallgenomeutilities": {
+        "/app/modules/all/smallgenomeutilities/0.2.1-foss-2018b-Python-3.6.6.lua": {
+            "Description": "The smallgenomeutilities are a collection of scripts that is\n useful for dealing and manipulating NGS data of small viral genomes. They\n are written in Python 3 with a small number of dependencies.",
+            "Version": "0.2.1-foss-2018b-Python-3.6.6",
+            "fullName": "smallgenomeutilities/0.2.1-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe smallgenomeutilities are a collection of scripts that is\n useful for dealing and manipulating NGS data of small viral genomes. They\n are written in Python 3 with a small number of dependencies.\n\n\nMore information\n================\n - Homepage: https://github.com/cbg-ethz/smallgenomeutilities\n",
+            "hidden": false,
+            "pV": "000000000.000000002.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/smallgenomeutilities/0.2.1-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000002.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The smallgenomeutilities are a collection of scripts that is\n useful for dealing and manipulating NGS data of small viral genomes. They\n are written in Python 3 with a small number of dependencies.",
+                "Homepage: https://github.com/cbg-ethz/smallgenomeutilities"
+            ]
+        }
+    },
+    "snippy": {
+        "/app/modules/all/snippy/4.4.1-foss-2018b-Perl-5.28.0.lua": {
+            "Description": "Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
+            "Version": "4.4.1-foss-2018b-Perl-5.28.0",
+            "fullName": "snippy/4.4.1-foss-2018b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nSnippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.\n\n\nMore information\n================\n - Homepage: https://github.com/tseemann/snippy\n",
+            "hidden": false,
+            "pV": "000000004.000000004.000000001.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/software/snippy/4.4.1-foss-2018b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000004.000000004.000000001.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
+                "Homepage: https://github.com/tseemann/snippy"
             ]
         }
     },
@@ -5476,6 +6460,24 @@
             "whatis": [
                 "Description: Set of Linux utilities",
                 "Homepage: http://www.kernel.org/pub/linux/utils/util-linux"
+            ]
+        }
+    },
+    "wheel": {
+        "/app/modules/all/wheel/0.31.1-foss-2018b-Python-3.6.6.lua": {
+            "Description": "A built-package format for Python.",
+            "Version": "0.31.1-foss-2018b-Python-3.6.6",
+            "fullName": "wheel/0.31.1-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nA built-package format for Python.\n\n\nMore information\n================\n - Homepage: https://pypi.python.org/pypi/wheel\n",
+            "hidden": false,
+            "pV": "000000000.000000031.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/software/wheel/0.31.1-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000031.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: A built-package format for Python.",
+                "Homepage: https://pypi.python.org/pypi/wheel"
             ]
         }
     },
