@@ -1,0 +1,9 @@
+if test "x" = "x"; then
+    if test -x /app/easybuild/software/Graphviz/2.40.1-foss-2016b/bin/dot; then
+         if test -x /sbin/ldconfig; then
+             /sbin/ldconfig 2>/dev/null;
+         fi;
+         /app/easybuild/software/Graphviz/2.40.1-foss-2016b/bin/dot -c;
+    else /app/easybuild/software/Graphviz/2.40.1-foss-2016b/bin/dot_static -c;
+    fi;
+fi

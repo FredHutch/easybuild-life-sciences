@@ -3,12 +3,12 @@
 # Fred Hutch Perl
 easyblock = 'PerlModule'
 
-name = 'File-ReadBackwards'
-version = '1.05'
+name = 'Statistics-Descriptive'
+version = '3.0612'
 versionsuffix = '-Perl-%(perlver)s'
 
-homepage = 'https://metacpan.org/pod/File::ReadBackwards'
-description = """This Perl module reads a file backwards line by line."""
+homepage = 'https://metacpan.org/pod/Statistics::Descriptive'
+description = """Module of basic descriptive statistical functions."""
 
 toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
 
