@@ -1025,6 +1025,10 @@ exts_list = [
         'modulename': 'pysqlite2',
         'source_urls': ['https://pypi.io/packages/source/p/pysqlite'],
     }),
+    ('Parsley', '1.3', {
+        'source_urls': [PYPI_SOURCE],
+        'modulename': 'parsley'
+    }),
     #('UMI-Reducer', '0.8', {
     #    'source_tmpl': 'umi-reducer.zip',
     #    'source_urls': ['https://github.com/smangul1/UMI-Reducer/archive/'],
