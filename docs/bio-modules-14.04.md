@@ -62,8 +62,9 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
  - [CAP3/20150211](http://seq.cs.iastate.edu/)  
 CAP3 assembly program 
- - [CITE-seq-Count/1.4.2-foss-2016b-Python-3.6.6](https://hoohm.github.io/CITE-seq-Count)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CITE-seq-Count/CITE-seq-Count-1.4.2-foss-2016b-Python-3.6.6.eb)  
-A python package that allows to count antibody TAGS from a CITE-seq and/or cell hashing experiment.
+ - [CITE-seq-Count/1.4.2-foss-2016b-Python-3.7.4](https://hoohm.github.io/CITE-seq-Count)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CITE-seq-Count/CITE-seq-Count-1.4.2-foss-2016b-Python-3.7.4.eb)  
+A python package that allows to count antibody TAGS from a CITE-seq and/or
+ cell hashing experiment.
  - [Cgl/0.60.2-foss-2016b](https://github.com/coin-or/Clg)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/Cgl/Cgl-0.60.2-foss-2016b.eb)  
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that can be used with other COIN-OR packages that make use of cuts, such as, among others, the linear solver Clp or the mixed integer linear programming solvers Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or communicate with a solver. It does not directly call a solver.
  - [Circos/0.69-6-GCCcore-7.3.0-Perl-5.28.0](http://www.circos.ca/)  
@@ -119,7 +120,7 @@ variant discovery and genotyping as well as strong emphasis on data quality
 assurance. Its robust architecture, powerful processing engine and
 high-performance computing features make it capable of taking on projects
 of any size.
- - [GCTA/1.92.2beta](https://cnsgenomics.com/software/gcta)  
+ - [GCTA/1.92.3beta3](https://cnsgenomics.com/software/gcta)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/g/GCTA/GCTA-1.92.3beta3.eb)  
 GCTA (Genome-wide Complex Trait Analysis) was originally designed to
  estimate the proportion of phenotypic variance explained by all genome-wide SNPs for
  complex traits (the GREML method), and has subsequently extended for many other analyses
@@ -170,6 +171,9 @@ This package contains command line utilities for
 This package contains command line utilities for
  preprocessing, computing feature count density (coverage),  sorting, and
  indexing data files. 
+ - [IQ-TREE/1.6.12-GCCcore-5.4.0](http://www.iqtree.org/)  
+A fast and effective stochastic algorithm to infer phylogenetic
+ trees by maximum likelihood.
  - [ImmunediveRsity/1.0.9-foss-2016b](https://bitbucket.org/ImmunediveRsity/immunediversity)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/i/ImmunediveRsity/ImmunediveRsity-1.0.9-foss-2016b.eb)  
 Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and processing of HTS reads to identify VDJ usage and clonal origin to gain insight of the antibody repertoire of a given organism.
  - [JAGS/4.2.0-foss-2016b](http://mcmc-jags.sourceforge.net/ )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/j/JAGS/JAGS-4.2.0-foss-2016b.eb)  
@@ -179,6 +183,14 @@ Kent tools: collection of tools used by the UCSC genome browser.
  - [Keras/2.2.4-foss-2016b-Python-3.6.6](https://keras.io/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Keras/Keras-2.2.4-foss-2016b-Python-3.6.6.eb)  
 Keras is a minimalist, highly modular neural networks library, written in Python and
 capable of running on top of either TensorFlow or Theano.
+ - [Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0](http://www.ccb.jhu.edu/software/kraken2/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2016b-Perl-5.28.0.eb)  
+Kraken is a system for assigning taxonomic labels to short DNA sequences,
+ usually obtained through metagenomic studies. Previous attempts by other
+ bioinformatics software to accomplish this task have often used sequence
+ alignment or machine learning techniques that were quite slow, leading to
+ the development of less sensitive but much faster abundance estimation
+ programs. Kraken aims to achieve high sensitivity and high speed by
+ utilizing exact alignments of k-mers and a novel classification algorithm.
  - [LAST/926-foss-2016b](http://last.cbrc.jp/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/l/LAST/LAST-926-foss-2016b.eb)  
 LAST finds similar regions between sequences.
  - [MACS2/2.1.2.1-foss-2018b-Python-2.7.15](http://liulab.dfci.harvard.edu/MACS)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MACS2/MACS2-2.1.2.1-foss-2018b-Python-2.7.15.eb)  
@@ -245,6 +257,9 @@ Pindel can detect breakpoints of large deletions, medium sized
  - [Pysam/0.15.3-foss-2016b-Python-3.7.4](https://github.com/pysam-developers/pysam)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/Pysam/Pysam-0.15.3-foss-2016b-Python-3.7.4.eb)  
 Pysam is a python module for reading and manipulating Samfiles. 
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
+ - [Pysamstats/1.1.2-foss-2016b-Python-3.7.4](https://github.com/alimanfoo/pysamstats)  
+A Python utility for calculating statistics against genome positions based on
+ sequence alignments from a SAM or BAM file.
  - [Queue/3.5-Java-1.8.0_66](http://www.broadinstitute.org/gatk/ )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/q/Queue/Queue-3.5-Java-1.8.0_66.eb)  
 The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size.
  - [R-bundle-Bioconductor/3.5-foss-2016b-R-3.4.0-fh1](http://www.r-project.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/r/R-bundle-Bioconductor/R-bundle-Bioconductor-3.5-foss-2016b-R-3.4.0-fh1.eb)  
@@ -256,6 +271,13 @@ RELION (for REgularised LIkelihood OptimisatioN, pronounce
 rely-on) is a stand-alone computer program that employs an empirical Bayesian
 approach to refinement of (multiple) 3D reconstructions or 2D class averages in
 electron cryo-microscopy (cryo-EM).
+ - [RSeQC/3.0.0-foss-2016b-Python-3.6.6](http://rseqc.sourceforge.net/)  
+RSeQC provides a number of useful modules that can 
+ comprehensively evaluate high throughput sequence data especially RNA-seq 
+ data. Some basic modules quickly inspect sequence quality, nucleotide 
+ composition bias, PCR bias and GC bias, while RNA-seq specific modules 
+ evaluate sequencing saturation, mapped reads distribution, coverage 
+ uniformity, strand specificity, transcript level RNA integrity etc.
  - [RepeatMasker/4-0-7-foss-2016b](www.repeatmasker.org)  
 RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences. The output of the program is a detailed annotation of the repeats that are present in the query sequence as well as a modified version of the query sequence in which all the annotated repeats have been masked
  - [SAMtools/1.9-foss-2016b](http://www.htslib.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/SAMtools/SAMtools-1.9-foss-2016b.eb)  
@@ -291,6 +313,10 @@ Theano is a Python library that allows you to define, optimize,
 and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
  - [TopHat/2.1.1-foss-2016b](http://ccb.jhu.edu/software/tophat/ )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/TopHat/TopHat-2.1.1-foss-2016b.eb)  
 TopHat is a fast splice junction mapper for RNA-Seq reads.
+ - [TraCeR/0.6.0-foss-2016b-Python-3.7.4](https://github.com/Teichlab/tracer)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/TraCeR/TraCeR-0.6.0-foss-2016b-Python-3.7.4.eb)  
+TraCeR reconstructs the sequences of rearranged and expressed T cell receptor
+ genes from single-cell RNA-seq data. It then uses the TCR sequences to identify cells that
+ have the same receptor sequences and so derive from the same original clonally-expanded cell.
  - [Tracer/v1.6](http://beast.bio.ed.ac.uk/tracer )  
 
  - [Trimmomatic/0.36-Java-1.8.0_121](http://www.usadellab.org/cms/?page=trimmomatic)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Trimmomatic/Trimmomatic-0.36-Java-1.8.0_121.eb)  
@@ -339,6 +365,9 @@ Tools for processing BAM files;
  bamsort, bamtofastq
  - [breakdancer/1.4.5-foss-2014b](http://gmt.genome.wustl.edu/packages/breakdancer/index.html)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/breakdancer/breakdancer-1.4.5-foss-2014b.eb)  
 BreakDancerMax predicts five types of structural variants: insertions, deletions, inversions, inter- and intra-chromosomal translocations from next-generation short paired-end sequencing reads using read pairs that are mapped with unexpected separation distances or orientation.
+ - [bx-python/0.8.2-foss-2016b-Python-3.6.6](https://github.com/bxlab/bx-python)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/bx-python/bx-python-0.8.2-foss-2016b-Python-3.6.6.eb)  
+The bx-python project is a Python library and associated set of scripts to allow for rapid
+ implementation of genome scale analyses.
  - [canu/1.8-foss-2016b](http://canu.readthedocs.io)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/canu/canu-1.8-foss-2016b.eb)  
 Canu is a fork of the Celera Assembler designed for
  high-noise single-molecule sequencing
@@ -448,6 +477,8 @@ Philosopher provides easy access to third-party tools and custom algorithms
 A set of tools (in Java) for working with next generation sequencing data in the BAM   (http://samtools.github.io/hts-specs) format.
  - [plink/1.9b_4.6-x86_64](https://www.cog-genomics.org/plink/1.9)  
 plink-1.9-x86_64: Whole-genome association analysis toolset
+ - [plink2/20190910](https://www.cog-genomics.org/plink/2.0)  
+plink2 Whole-genome association analysis toolset
  - [pplacer/1.1.alpha19-foss-2016b](['https://matsen.fhcrc.org/pplacer/'])   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/pplacer/pplacer-1.1.alpha19-foss-2016b.eb)  
 Pplacer places reads on a phylogenetic tree. guppy (Grand
  Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful
@@ -461,13 +492,19 @@ Prodigal (Prokaryotic Dynamic Programming Genefinding
 Prokka is a software tool for the rapid annotation of prokaryotic genomes.
  - [psipred/4.01-foss-2016b](http://bioinf.cs.ucl.ac.uk/psipred/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/psipred/psipred-4.01-foss-2016b.eb)  
 The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.
+ - [pyBigWig/0.3.13-foss-2016b-Python-3.6.6](https://github.com/deeptools/pyBigWig)  
+A python extension, written in C, for quick access to bigBed files and access to and creation of
+ bigWig files.
+ - [pybedtools/0.8.0-foss-2016b-Python-3.7.4](https://daler.github.io/pybedtools)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/pybedtools/pybedtools-0.8.0-foss-2016b-Python-3.7.4.eb)  
+pybedtools wraps and extends BEDTools and offers feature-level manipulations from
+ within Python.
  - [python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6](https://github.com/ztane/python-Levenshtein)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/python-Levenshtein/python-Levenshtein-0.12.0-foss-2016b-Python-3.6.6.eb)  
 The Levenshtein Python C extension module contains functions for fast computation of;
  Levenshtein (edit) distance, and edit operations
  string similarity
  approximate median strings, and generally string averaging
  string sequence and set similarity.
- - [qcat/1.0.5-foss-2016b-Python-3.6.6](https://github.com/nanoporetech/)  
+ - [qcat/1.0.5-foss-2016b-Python-3.6.6](https://github.com/nanoporetech/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/q/qcat/qcat-1.0.5-foss-2016b-Python-3.6.6.eb)  
 Qcat is Python command-line tool for demultiplexing Oxford
  Nanopore reads from FASTQ files.
  - [samblaster/0.1.22-foss-2016b](https://github.com/GregoryFaust/samblaster )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/samblaster/samblaster-0.1.22-foss-2016b.eb)  

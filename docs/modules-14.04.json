@@ -822,6 +822,23 @@
                 "Homepage: https://hoohm.github.io/CITE-seq-Count",
                 "Extensions: argcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0, colorama-0.4.1, configparser-3.7.4, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3, docutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0, flake8-3.7.8, future-0.17.1, hunter-3.0.1, hypothesis-4.31.0, importlib-metadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pysam-0.15.2, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, pytest-flake8-1.0.4, python-dateutil-2.8.0, python-Levenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, typing-3.7.4, umi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2"
             ]
+        },
+        "/app/easybuild/modules/bio/CITE-seq-Count/1.4.2-foss-2016b-Python-3.7.4.lua": {
+            "Description": "A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
+            "Version": "1.4.2-foss-2016b-Python-3.7.4",
+            "fullName": "CITE-seq-Count/1.4.2-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nA python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.\n\n\nMore information\n================\n - Homepage: https://hoohm.github.io/CITE-seq-Count\n\n\nIncluded extensions\n===================\nargcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0,\ncolorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3,\ndocutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0,\nfuture-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1,\nmanhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1,\npackaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-\ntests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0,\npyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1,\npytest-dependency-0.4.0, python-dateutil-2.8.0, python-Levenshtein-0.12.0,\nregex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, umi_tools-1.0.0,\nwcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2\n",
+            "hidden": false,
+            "pV": "000000001.000000004.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/CITE-seq-Count/1.4.2-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.000000004.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
+                "Homepage: https://hoohm.github.io/CITE-seq-Count",
+                "Extensions: argcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0, colorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3, docutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0, future-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, python-dateutil-2.8.0, python-Levenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, umi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2"
+            ]
         }
     },
     "Cgl": {
@@ -1385,6 +1402,22 @@
                 "/app/easybuild/software/GCTA/1.92.2beta": 1
             },
             "wV": "000000001.000000092.000000002.*beta.*zfinal",
+            "whatis": [
+                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+                "Homepage: https://cnsgenomics.com/software/gcta"
+            ]
+        },
+        "/app/easybuild/modules/bio/GCTA/1.92.3beta3.lua": {
+            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+            "Version": "1.92.3beta3",
+            "fullName": "GCTA/1.92.3beta3",
+            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
+            "hidden": false,
+            "pV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GCTA/1.92.3beta3": 1
+            },
+            "wV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
             "whatis": [
                 "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
                 "Homepage: https://cnsgenomics.com/software/gcta"
@@ -1990,6 +2023,24 @@
             ]
         }
     },
+    "IQ-TREE": {
+        "/app/easybuild/modules/bio/IQ-TREE/1.6.12-GCCcore-5.4.0.lua": {
+            "Description": "A fast and effective stochastic algorithm to infer phylogenetic\n trees by maximum likelihood.",
+            "Version": "1.6.12-GCCcore-5.4.0",
+            "fullName": "IQ-TREE/1.6.12-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nA fast and effective stochastic algorithm to infer phylogenetic\n trees by maximum likelihood.\n\n\nMore information\n================\n - Homepage: http://www.iqtree.org/\n",
+            "hidden": false,
+            "pV": "000000001.000000006.000000012.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/IQ-TREE/1.6.12-GCCcore-5.4.0/bin": 1
+            },
+            "wV": "000000001.000000006.000000012.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: A fast and effective stochastic algorithm to infer phylogenetic\n trees by maximum likelihood.",
+                "Homepage: http://www.iqtree.org/"
+            ]
+        }
+    },
     "ImmunediveRsity": {
         "/app/easybuild/modules/bio/ImmunediveRsity/1.0.9-foss-2016b.lua": {
             "Description": "Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and processing of HTS reads to identify VDJ usage and clonal origin to gain insight of the antibody repertoire of a given organism.",
@@ -2078,6 +2129,24 @@
                 "Description: Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
                 "Homepage: https://keras.io/",
                 "Extensions: Keras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5"
+            ]
+        }
+    },
+    "Kraken2": {
+        "/app/easybuild/modules/bio/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0.lua": {
+            "Description": "Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
+            "Version": "2.0.7-beta-foss-2016b-Perl-5.28.0",
+            "fullName": "Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nKraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.\n\n\nMore information\n================\n - Homepage: http://www.ccb.jhu.edu/software/kraken2/\n",
+            "hidden": false,
+            "pV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0": 1
+            },
+            "wV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
+                "Homepage: http://www.ccb.jhu.edu/software/kraken2/"
             ]
         }
     },
@@ -2772,6 +2841,24 @@
             ]
         }
     },
+    "Pysamstats": {
+        "/app/easybuild/modules/bio/Pysamstats/1.1.2-foss-2016b-Python-3.7.4.lua": {
+            "Description": "A Python utility for calculating statistics against genome positions based on\n sequence alignments from a SAM or BAM file.",
+            "Version": "1.1.2-foss-2016b-Python-3.7.4",
+            "fullName": "Pysamstats/1.1.2-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nA Python utility for calculating statistics against genome positions based on\n sequence alignments from a SAM or BAM file.\n\n\nMore information\n================\n - Homepage: https://github.com/alimanfoo/pysamstats\n",
+            "hidden": false,
+            "pV": "000000001.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Pysamstats/1.1.2-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: A Python utility for calculating statistics against genome positions based on\n sequence alignments from a SAM or BAM file.",
+                "Homepage: https://github.com/alimanfoo/pysamstats"
+            ]
+        }
+    },
     "Queue": {
         "/app/easybuild/modules/bio/Queue/3.5-Java-1.8.0_66": {
             "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
@@ -2895,6 +2982,24 @@
             "wV": "000000001.000000002.000000030.*foss.*zfinal-.000002015.*b.*zfinal",
             "whatis": [
                 "Description: RNA-Seq by Expectation-Maximization) - Homepage: http://deweylab.github.io/RSEM/ "
+            ]
+        }
+    },
+    "RSeQC": {
+        "/app/easybuild/modules/bio/RSeQC/3.0.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "RSeQC provides a number of useful modules that can \n comprehensively evaluate high throughput sequence data especially RNA-seq \n data. Some basic modules quickly inspect sequence quality, nucleotide \n composition bias, PCR bias and GC bias, while RNA-seq specific modules \n evaluate sequencing saturation, mapped reads distribution, coverage \n uniformity, strand specificity, transcript level RNA integrity etc.",
+            "Version": "3.0.0-foss-2016b-Python-3.6.6",
+            "fullName": "RSeQC/3.0.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nRSeQC provides a number of useful modules that can \n comprehensively evaluate high throughput sequence data especially RNA-seq \n data. Some basic modules quickly inspect sequence quality, nucleotide \n composition bias, PCR bias and GC bias, while RNA-seq specific modules \n evaluate sequencing saturation, mapped reads distribution, coverage \n uniformity, strand specificity, transcript level RNA integrity etc.\n\n\nMore information\n================\n - Homepage: http://rseqc.sourceforge.net/\n",
+            "hidden": false,
+            "pV": "000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/RSeQC/3.0.0-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: RSeQC provides a number of useful modules that can \n comprehensively evaluate high throughput sequence data especially RNA-seq \n data. Some basic modules quickly inspect sequence quality, nucleotide \n composition bias, PCR bias and GC bias, while RNA-seq specific modules \n evaluate sequencing saturation, mapped reads distribution, coverage \n uniformity, strand specificity, transcript level RNA integrity etc.",
+                "Homepage: http://rseqc.sourceforge.net/"
             ]
         }
     },
@@ -3474,6 +3579,28 @@
             ]
         }
     },
+    "TraCeR": {
+        "/app/easybuild/modules/bio/TraCeR/0.6.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "TraCeR reconstructs the sequences of rearranged and expressed T cell receptor\n genes from single-cell RNA-seq data. It then uses the TCR sequences to identify cells that\n have the same receptor sequences and so derive from the same original clonally-expanded cell.",
+            "Version": "0.6.0-foss-2016b-Python-3.7.4",
+            "fullName": "TraCeR/0.6.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nTraCeR reconstructs the sequences of rearranged and expressed T cell receptor\n genes from single-cell RNA-seq data. It then uses the TCR sequences to identify cells that\n have the same receptor sequences and so derive from the same original clonally-expanded cell.\n\n\nMore information\n================\n - Homepage: https://github.com/Teichlab/tracer\n\n\nIncluded extensions\n===================\npydotplus-2.0.2, tracer-0.6.0\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/TraCeR/0.6.0-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000000.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/TraCeR/0.6.0-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000000.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: TraCeR reconstructs the sequences of rearranged and expressed T cell receptor\n genes from single-cell RNA-seq data. It then uses the TCR sequences to identify cells that\n have the same receptor sequences and so derive from the same original clonally-expanded cell.",
+                "Homepage: https://github.com/Teichlab/tracer",
+                "Extensions: pydotplus-2.0.2, tracer-0.6.0"
+            ]
+        }
+    },
     "Tracer": {
         "/app/easybuild/modules/bio/Tracer/v1.6": {
             "Version": "v1.6",
@@ -3875,6 +4002,28 @@
             "wV": "000000001.000000004.000000005.*foss.*zfinal-.000002014.*b.*zfinal",
             "whatis": [
                 "Description: BreakDancerMax predicts five types of structural variants: insertions, deletions, inversions, inter- and intra-chromosomal translocations from next-generation short paired-end sequencing reads using read pairs that are mapped with unexpected separation distances or orientation. - Homepage: http://gmt.genome.wustl.edu/packages/breakdancer/index.html"
+            ]
+        }
+    },
+    "bx-python": {
+        "/app/easybuild/modules/bio/bx-python/0.8.2-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The bx-python project is a Python library and associated set of scripts to allow for rapid\n implementation of genome scale analyses.",
+            "Version": "0.8.2-foss-2016b-Python-3.6.6",
+            "fullName": "bx-python/0.8.2-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe bx-python project is a Python library and associated set of scripts to allow for rapid\n implementation of genome scale analyses.\n\n\nMore information\n================\n - Homepage: https://github.com/bxlab/bx-python\n\n\nIncluded extensions\n===================\nbx-python-0.8.2, python-lzo-1.12\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/bx-python/0.8.2-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000000.000000008.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/bx-python/0.8.2-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000008.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The bx-python project is a Python library and associated set of scripts to allow for rapid\n implementation of genome scale analyses.",
+                "Homepage: https://github.com/bxlab/bx-python",
+                "Extensions: bx-python-0.8.2, python-lzo-1.12"
             ]
         }
     },
@@ -5073,6 +5222,24 @@
             ]
         }
     },
+    "plink2": {
+        "/app/easybuild/modules/bio/plink2/20190910.lua": {
+            "Description": "plink2 Whole-genome association analysis toolset",
+            "Version": "20190910",
+            "fullName": "plink2/20190910",
+            "help": "\nDescription\n===========\nplink2 Whole-genome association analysis toolset\n\n\nMore information\n================\n - Homepage: https://www.cog-genomics.org/plink/2.0\n",
+            "hidden": false,
+            "pV": "020190910.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/plink2/20190910/bin": 1
+            },
+            "wV": "020190910.*zfinal",
+            "whatis": [
+                "Description: plink2 Whole-genome association analysis toolset",
+                "Homepage: https://www.cog-genomics.org/plink/2.0"
+            ]
+        }
+    },
     "pplacer": {
         "/app/easybuild/modules/bio/pplacer/1.1.alpha19-foss-2016b.lua": {
             "Description": "Pplacer places reads on a phylogenetic tree. guppy (Grand\n Unified Phylogenetic Placement Yanalyzer) yanalyzes them. rppr is a helpful\n tool for working with reference packages.",
@@ -5158,6 +5325,39 @@
             "whatis": [
                 "Description: The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure prediction methods into one location.",
                 "Homepage: http://bioinf.cs.ucl.ac.uk/psipred/"
+            ]
+        }
+    },
+    "pyBigWig": {
+        "/app/easybuild/modules/bio/pyBigWig/0.3.13-foss-2016b-Python-3.6.6.lua": {
+            "Description": "A python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.",
+            "Version": "0.3.13-foss-2016b-Python-3.6.6",
+            "fullName": "pyBigWig/0.3.13-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nA python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.\n\n\nMore information\n================\n - Homepage: https://github.com/deeptools/pyBigWig\n",
+            "hidden": false,
+            "pV": "000000000.000000003.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "wV": "000000000.000000003.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: A python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.",
+                "Homepage: https://github.com/deeptools/pyBigWig"
+            ]
+        }
+    },
+    "pybedtools": {
+        "/app/easybuild/modules/bio/pybedtools/0.8.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "pybedtools wraps and extends BEDTools and offers feature-level manipulations from\n within Python.",
+            "Version": "0.8.0-foss-2016b-Python-3.7.4",
+            "fullName": "pybedtools/0.8.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\npybedtools wraps and extends BEDTools and offers feature-level manipulations from\n within Python.\n\n\nMore information\n================\n - Homepage: https://daler.github.io/pybedtools\n",
+            "hidden": false,
+            "pV": "000000000.000000008.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/pybedtools/0.8.0-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000000.000000008.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: pybedtools wraps and extends BEDTools and offers feature-level manipulations from\n within Python.",
+                "Homepage: https://daler.github.io/pybedtools"
             ]
         }
     },
@@ -5442,7 +5642,7 @@
             "hidden": false,
             "pV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "pathA": {
-                "/app/easybuild/software/tcr-dist/0.0.2-foss-2016b-Python-2.7.15": 1
+                "/app/easybuild/software/tcr-dist/0.0.2-foss-2016b-Python-2.7.15/tcr-dist-master": 1
             },
             "wV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
             "whatis": [
