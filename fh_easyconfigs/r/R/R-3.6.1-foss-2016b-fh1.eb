@@ -714,6 +714,9 @@ exts_list = [
     ('ComICS', '1.0.4'),
     ('regioneR', '1.16.2'),
     ('ChIPpeakAnno', '3.18.2'),
+    ('MatrixEQTL', '2.2'),
+    ('doBy', '4.6-2'),
+    ('refGenome', '1.7.7'),
 ]
 
 sanity_check_paths = {
