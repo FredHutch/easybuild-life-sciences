@@ -17,6 +17,9 @@ collections:
   r:
     output: true
     permalink: /:collection/:path/
+  rissues:
+    output: true
+    permalink: /:collection/:path/
   python:
     output: true
     permalink: /:collection/:path/
@@ -216,6 +219,15 @@ defaults:
   - scope:
       path: ""
       type: r 
+    values:
+      layout: single
+      sidebar:
+        nav: "docs"
+
+  # _rissues
+  - scope:
+      path: ""
+      type: rissues 
     values:
       layout: single
       sidebar:

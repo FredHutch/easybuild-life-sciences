@@ -1,0 +1,2 @@
+PKG_LIBS=-L./../../../src -lpeerlib -L./../../../External/alglib/src -lalglib
+PKG_CPPFLAGS=-I./../../../../include -I./../../../../External/alglib -I./../../../../External/alglib/src -I./../../../../External -DSWIG

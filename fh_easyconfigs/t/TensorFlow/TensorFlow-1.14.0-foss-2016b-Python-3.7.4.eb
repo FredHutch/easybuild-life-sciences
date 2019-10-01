@@ -1,0 +1,104 @@
+# Built with EasyBuild version 3.9.1 on 2019-05-24_08-55-02
+easyblock = 'PythonBundle'
+
+name = 'TensorFlow'
+version = '1.14.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://www.tensorflow.org/'
+description = "An open-source software library for Machine Intelligence"
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+#toolchainopts = {'usempi': True}
+
+builddependencies = [
+    ('Bazel', '0.24.1'),
+    ('SWIG', '4.0.0', versionsuffix),
+    ('protobuf', '3.6.1'),
+    ('GCCcore', '5.4.0', '', True),
+    ('binutils', '2.26', '-GCCcore-5.4.0', True),
+]
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('GCCcore', '5.4.0', '', True),  # Ubuntu 14.04 only
+    ('wheel', '0.33.4', versionsuffix),
+    ('h5py', '2.9.0', versionsuffix),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+exts_list = [
+    ('protobuf-python', '3.9.1', {
+        'modulename': 'google.protobuf',
+        'source_urls': ['https://github.com/google/protobuf/releases/download/v%(version)s/'],
+        'source_tmpl': 'protobuf-python-%(version)s.tar.gz',
+        'use_pip': False,
+        'start_dir': 'python',
+    }),
+    ('absl-py', '0.7.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/absl-py'],
+        'modulename': 'absl',
+    }),
+    ('astor', '0.8.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/astor'],
+    }),
+    ('gast', '0.2.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/g/gast'],
+    }),
+    ('grpcio', '1.23.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/g/grpcio'],
+        'modulename': 'grpc',
+    }),
+    ('Markdown', '3.1.1', {
+        'modulename': 'markdown',
+        'source_urls': ['https://pypi.python.org/packages/source/M/Markdown'],
+    }),
+    ('tensorboard', '1.14.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/tensorboard'],
+        'source_tmpl': 'tensorboard-%(version)s-py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('termcolor', '1.1.0'),
+    ('Werkzeug', '0.15.5', {
+        'modulename': 'werkzeug',
+        'source_urls': ['https://pypi.python.org/packages/source/W/Werkzeug'],
+        'checksums': ['a13b74dd3c45f758d4ebdb224be8f1ab8ef58b3c0ffc1783a8c7d9f4f50227e6'],
+    }),
+    ('Keras-Applications', '1.0.8', {
+        'modulename': 'keras_applications',
+        'source_urls': ['https://pypi.python.org/packages/source/K/Keras-Applications'],
+        'source_tmpl': 'Keras_Applications-%(version)s.tar.gz',
+    }),
+    ('Keras-Preprocessing', '1.1.0', {
+        'modulename': 'keras_preprocessing',
+        'source_urls': ['https://pypi.python.org/packages/source/K/Keras-Preprocessing'],
+        'source_tmpl': 'Keras_Preprocessing-%(version)s.tar.gz',
+    }),
+    ('tensorflow-estimator', '1.14.0', {
+        'modulename': 'tensorflow_estimator',
+        'source_tmpl': 'tensorflow_estimator-1.13.0-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('wrapt', '1.11.2', {
+        'checksums': ['565a021fd19419476b9362b05eeaa094178de64f8361e44468f9e9d7843901e1'],
+    }),
+    (name, version, {
+        'modulename': 'tensorflow',
+        'source_urls': ['https://github.com/tensorflow/tensorflow/archive/'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'patches': [
+            'TensorFlow-%(version)s_swig-env.patch',
+        #    'TensorFlow-1.11.0_remove-msse-hardcoding.patch',
+        #    'TensorFlow-1.13.1_lrt-flag.patch',
+        ],
+    }),
+]
+
+moduleclass = 'lib'

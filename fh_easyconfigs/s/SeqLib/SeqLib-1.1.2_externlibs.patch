@@ -1,0 +1,21 @@
+diff -ruN SeqLib-1.1.2.orig/Makefile.in SeqLib-1.1.2/Makefile.in
+--- SeqLib-1.1.2.orig/Makefile.in	2017-05-12 13:31:14.000000000 -0700
++++ SeqLib-1.1.2/Makefile.in	2019-07-23 16:09:57.970174000 -0700
+@@ -294,7 +294,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign
+-SUBDIRS = bwa htslib fermi-lite src
++SUBDIRS = src
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
+@@ -767,7 +767,7 @@
+ 
+ 
+ install:  
+-	mkdir -p bin && cp src/libseqlib.a fermi-lite/libfml.a bwa/libbwa.a htslib/libhts.a bin 
++	mkdir -p bin && cp src/libseqlib.a
+ 
+ seqtools:
+ 	mkdir -p bin && cd src/seqtools && make && mv seqtools ../../bin

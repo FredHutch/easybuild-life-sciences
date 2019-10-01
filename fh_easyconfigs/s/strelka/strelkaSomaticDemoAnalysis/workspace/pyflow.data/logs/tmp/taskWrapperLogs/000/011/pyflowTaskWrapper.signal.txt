@@ -1,0 +1,4 @@
+[2019-06-07T04:13:05.876183Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] [wrapperSignal] wrapperStart
+[2019-06-07T04:13:05.885658Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] [wrapperSignal] taskStart
+[2019-06-07T04:13:05.891937Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] [wrapperSignal] taskExitCode 0
+[2019-06-07T04:13:05.892999Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+removeTmpDir] [wrapperSignal] taskElapsedSec 0

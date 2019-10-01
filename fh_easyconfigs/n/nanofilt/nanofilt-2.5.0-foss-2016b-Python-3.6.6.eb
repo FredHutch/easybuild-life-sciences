@@ -1,0 +1,29 @@
+easyblock = 'PythonPackage' 
+name = 'nanofilt'
+version = '2.5.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/wdecoster/nanofilt'
+description = """Filtering and trimming of long read sequencing data."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/wdecoster/nanofilt/archive']
+sources = [{
+    'download_filename': 'master.zip',
+    'filename': SOURCE_ZIP
+}]
+
+exts_defaultclass = 'PythonPackage'
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+use_pip = True
+
+sanity_check_paths = {
+    'files': ['bin/NanoFilt'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

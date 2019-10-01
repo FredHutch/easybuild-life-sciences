@@ -21,7 +21,6 @@ dependencies = [
     ('LibTIFF', '4.0.6'),
     ('zlib', '1.2.8'),
     ('X11','20160819'),
-    ('ESS','16.10','',True)
 ]
 
 configopts = '--without-all --with-gif --with-tiff --with-jpeg --with-modules --with-zlib --with-png'

@@ -1,0 +1,45 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'PythonBundle'
+
+name = 'python-partis'
+version = '0.15.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/psathyrella/partis'
+description = """Partis is an HMM-based framework for B- and T-cell receptor sequence annotation,
+ simulation, clonal family, and germline inference. It is built on top of the ham HMM compiler
+ and ig-sw set of Smith-Waterman annotation tools."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '3.6.6'), 
+    ('Biopython', '1.73', versionsuffix),
+    ('Pysam', '0.15.1', versionsuffix),
+    ('matplotlib', '3.0.0', versionsuffix),
+    ('SCons', '3.0.4', versionsuffix),
+]
+
+exts_default_options = {
+    'use_pip': True,
+    'source_urls': [PYPI_SOURCE]
+}
+
+exts_list = [
+    ('psutil', '5.6.3', {
+    }),
+    ('seaborn', '0.9.0', {
+    }),
+    ('scikit-learn', '0.21.2', {
+        'modulename': 'sklearn',
+    }),
+    ('Pygments', '2.4.2', {
+    }),
+    ('colored-traceback', '0.3.0', {
+    }),
+    ('DendroPy', '4.4.0', {
+    }),
+]

@@ -17,6 +17,8 @@ docs:
         url: /all-modules-14.04/
       - title: "R Modules"
         url: /r/
+      - title: "R Issues and Solutions"
+        url: /rissues/
       - title: "Python Modules"
         url: /python/
       - title: "Dependency Graphs"

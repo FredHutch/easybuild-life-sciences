@@ -1,0 +1,26 @@
+(dp0
+S'isShellCmd'
+p1
+I01
+sS'cmd'
+p2
+S'"/usr/bin/python2" -E "/app/easybuild/software/strelka/2.9.9-foss-2016b/libexec/vcfCmdlineSwapper.py" "/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/configureStrelkaSomaticWorkflow.py --tumorBam=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/NA12891_demo20.bam --normalBam=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/NA12892_demo20.bam --referenceFasta=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/demo20.fa --callMemMb=1024 --exome --runDir=./strelkaSomaticDemoAnalysis" < "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_demo20_0000.vcf" > "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_demo20_0000.vcf.reheader.tmp" && mv "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_demo20_0000.vcf.reheader.tmp" "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.snvs.unfiltered.chromId_000_demo20_0000.vcf" && "/usr/bin/python2" -E "/app/easybuild/software/strelka/2.9.9-foss-2016b/libexec/vcfCmdlineSwapper.py" "/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/configureStrelkaSomaticWorkflow.py --tumorBam=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/NA12891_demo20.bam --normalBam=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/NA12892_demo20.bam --referenceFasta=/app/easybuild/software/strelka/2.9.9-foss-2016b/bin/../share/demo/strelka/data/demo20.fa --callMemMb=1024 --exome --runDir=./strelkaSomaticDemoAnalysis" < "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_demo20_0000.vcf" > "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_demo20_0000.vcf.reheader.tmp" && mv "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_demo20_0000.vcf.reheader.tmp" "/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/genomeSegment.tmpdir/somatic.indels.unfiltered.chromId_000_demo20_0000.vcf"'
+p3
+sS'errFile'
+p4
+S'/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/pyflow.data/logs/pyflow_tasks_stderr_log.txt'
+p5
+sS'outFile'
+p6
+S'/home/jfdey/git/easybuild-life-sciences/fh_easyconfigs/strelkaSomaticDemoAnalysis/workspace/pyflow.data/logs/pyflow_tasks_stdout_log.txt'
+p7
+sS'env'
+p8
+NsS'nCores'
+p9
+I1
+sS'cwd'
+p10
+S''
+p11
+s.

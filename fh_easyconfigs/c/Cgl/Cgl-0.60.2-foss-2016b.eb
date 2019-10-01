@@ -1,0 +1,32 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhtuch.org fizwit@github
+easyblock = 'ConfigureMake'
+
+name = 'Cgl'
+version = '0.60.2'
+
+homepage = 'https://github.com/coin-or/Clg'
+description = """The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that can be used with other COIN-OR packages that make use of cuts, such as, among others, the linear solver Clp or the mixed integer linear programming solvers Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or communicate with a solver. It does not directly call a solver."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/coin-or/Cgl/archive/releases']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [
+    ('CoinUtils', '2.11.2'),
+    ('Clp', '1.17.3'),
+]
+
+configopts = ""
+
+sanity_check_paths = {
+    'dirs':  ['include',
+              'lib/pkgconfig',
+              'share'],
+    'files': ['include/coin/CglConfig.h',
+              'share/coin/doc/Cgl/README',
+              'lib/libCgl.%s' % SHLIB_EXT]
+}
+
+moduleclass = 'math'

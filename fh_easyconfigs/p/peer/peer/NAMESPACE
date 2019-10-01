@@ -1,0 +1,3 @@
+useDynLib(peer)
+exportPattern("^PEER")
+exportPattern("^etVerbose")#get/setVerbose

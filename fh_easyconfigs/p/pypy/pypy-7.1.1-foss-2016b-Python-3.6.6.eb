@@ -1,0 +1,23 @@
+easyblock = 'Tarball'
+
+name = 'pypy'
+version = '7.1.1'
+versionsuffix = '-Python-%(pyver)s'
+#pyshortver = '.'.join(pyver.split('.')[0:2])
+
+homepage = 'pypy.org'
+description = """PyPy is a replacement for CPython. It is built using the RPython language that was co-developed with it. The main reason to use it instead of CPython is speed: it runs generally faster"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://bitbucket.org/pypy/pypy/downloads']
+sources = ['%(name)s%(pyshortver)s-v%(version)s-linux64.tar.bz2']
+
+dependencies = [
+    ('Python', '3.6.6'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/pypy3'],
+    'dirs': ['bin', 'include', 'lib_pypy'],
+}

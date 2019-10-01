@@ -1,0 +1,32 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'CMakeMake'
+
+name = 'bustools'
+version = '0.39.2'
+
+homepage = 'http://bustools.github.io'
+description = """BUS format is a file format for single-cell RNA-seq data designed to facilitate the development of modular workflows for data processing."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True, 'usempi': True}
+
+github_account = 'BUStools'
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    ('Autotools', '20150215'),
+    ('CMake', '3.7.2'),
+]
+
+dependencies = [('HDF5', '1.8.18')]
+
+parallel = 1
+
+separate_build_dir = True
+
+sanity_check_paths = {
+    'files': ['bin/bustools'],
+    'dirs': [],
+}

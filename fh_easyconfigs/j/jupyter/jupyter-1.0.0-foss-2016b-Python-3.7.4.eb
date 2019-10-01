@@ -1,0 +1,200 @@
+easyblock = 'Bundle'
+
+name = 'jupyter'
+version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://jupyter.org'
+description = """JupyterLab is a web-based interactive development environment for Jupyter
+ notebooks, code, and data."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('nodejs', '6.12.3'),
+]
+
+#preinstallopts = 'export PYTHONPATH=%(installdir)s/lib/python%(pyshortver)s/site-packages:'
+#preinstallopts += '$PYTHONPATH && '
+pyinstpath = "%(installdir)s/lib/python%(pyshortver)s/site-packages"
+
+# this is a bundle of Python packages
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+    'source_urls': [PYPI_SOURCE],
+}
+
+exts_list = [
+    ('parso', '0.5.1'),
+    ('attrs', '19.1.0', {
+        'modulename': 'attr',
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('Pygments', '2.4.2', {
+        'modulename': 'pygments',
+    }),
+    ('ptyprocess', '0.6.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('pickleshare', '0.7.5', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('jedi', '0.14.1', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('pexpect', '4.7.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('backcall', '0.1.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+# ('unittest2', '1.1.0', {
+    ('zipp', '0.5.2'), 
+# ('importlib_resources', '1.0.2', {
+# ('importlib-metadata', '0.19', {
+    ('pluggy', '0.12.0'),
+    ('wcwidth', '0.1.7', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('MarkupSafe', '1.1.1', {
+        'modulename': 'markupsafe',
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('Babel', '2.7.0'),
+    ('py', '1.8.0'),
+    ('packaging', '19.1'),
+    ('more-itertools', '7.2.0'),
+    ('atomicwrites', '1.3.0'),
+    ('scandir', '1.10.0'),
+    ('webencodings', '0.5.1'),
+    ('json5', '0.8.5'),
+    ('jsonschema', '3.0.2', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('prometheus_client', '0.7.1', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('terminado', '0.8.2', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('pandocfilters', '1.4.2'),
+    ('defusedxml', '0.6.0'),
+    ('pyzmq', '18.0.2', {
+        'modulename': 'zmq',
+    }),
+    ('Send2Trash', '1.5.0', {
+        'modulename': 'send2trash',
+    }),
+    ('widgetsnbextension', '3.5.1', {
+        'source_urls': ['https://pypi.io/packages/source/w/widgetsnbextension'],
+    }),
+    ('tornado', '6.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/tornado/'],
+    }),
+    ('elementpath', '1.2.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    #('xmlschema', '1.0.13', {
+    #    'source_urls': [PYPI_SOURCE],
+    #}),
+    ('ipython_genutils', '0.2.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('ipython', '7.7.0', {
+        'modulename': 'IPython',
+        'source_urls': ['https://pypi.python.org/packages/source/i/ipython'],
+    }),
+    ('jupyter-client', '5.3.1', {
+        'modulename': 'jupyter_client',
+        'source_urls': [PYPI_SOURCE],
+        'source_tmpl': 'jupyter_client-%(version)s.tar.gz',
+    }),
+    ('prompt_toolkit', '2.0.9', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('Jinja2', '2.10.1', {
+        'modulename': 'jinja2',
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('testpath', '0.4.2', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('mistune', '0.8.4', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('colorama', '0.4.1', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('coverage', '4.5.4', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('entrypoints', '0.3', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('jupyter-core', '4.5.0', { # depreicated, needed for notebook
+        'modulename': 'jupyter_core',
+        'source_tmpl': 'jupyter_core-%(version)s.tar.gz',
+        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-core'],
+    }),
+    ('bleach', '3.1.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('traitlets', '4.3.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/traitlets'],
+    }),
+    ('nbformat', '4.4.0', {
+        'source_urls': ['https://pypi.io/packages/source/n/nbformat'],
+    }),
+    ('notebook', '6.0.0', {
+        'source_urls': [PYPI_SOURCE],
+        # run time errors: 404 GET /static/components/react/react-dom.production.min.js
+        # wget https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js
+        # notebook/static/components/react
+    }),
+    ('jupyterlab-server', '1.0.4', {
+        'modulename': 'jupyterlab_server',
+        'source_tmpl': 'jupyterlab_server-%(version)s.tar.gz',
+    }),
+    ('jupyterlab_launcher', '0.13.1', {
+        'modulename': 'jupyterlab_launcher',
+        'source_tmpl': 'jupyterlab_launcher-%(version)s.tar.gz',
+    }),
+    ('jupyterlab', '1.0.6'),
+    ('ipywidgets', '7.5.1', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('ipykernel', '5.1.2', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('qtconsole', '4.5.2', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('jupyter_console', '6.0.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    ('nbconvert', '5.6.0', {
+        'source_urls': ['https://pypi.io/packages/source/n/nbconvert'],
+    }),
+    ('jupyter', '1.0.0', {
+        'source_urls': ['https://pypi.io/packages/source/j/jupyter'],
+    }),
+    ('pyrsistent', '0.15.4', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+]
+
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+sanity_check_paths = {
+    'files': ['bin/jupyter'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/%(name)s-%(version)s-py%(pyshortver)s.egg-info'],
+}
+
+sanity_check_commands = ['jupyter --help']
+
+moduleclass = 'tools'

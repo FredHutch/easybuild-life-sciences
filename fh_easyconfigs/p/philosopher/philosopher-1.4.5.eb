@@ -1,0 +1,29 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhutch.org fizwit@github
+easyblock = 'Tarball'
+
+name = 'philosopher'
+version = '1.4.5'
+
+homepage = 'https://github.com/Nesvilab/philosopher/wiki'
+description = """Philosopher provides easy access to third-party tools and custom algorithms
+ allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated
+ protein reports. Philosopher is also tuned for Open Search analysis, providing a modified
+ version of the prophets for peptide validation and protein inference. To this date, Philosopher
+ is the only proteomics toolkit that allows you to process and analyze close and
+ open search results."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://github.com/Nesvilab/philosopher/releases/download/v%(version)s']
+sources = ['%(name)s_v%(version)s_linux_amd64.zip']
+checksums = ['151e0eeab16c8c11e83dd9dffe0fdda6b53e501d92b8d8fbe3040ef029714f0d']
+
+sanity_check_paths = {
+    'files': ['%(name)s'],
+    'dirs': []
+}
+
+modextrapaths = {'PATH': ['']}
+
+moduleclass = 'bio'

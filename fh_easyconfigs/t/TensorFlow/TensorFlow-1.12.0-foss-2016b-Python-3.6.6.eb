@@ -1,3 +1,5 @@
+# This easyblock has never worked due to a bug with mnist tutorial example code
+# the bug was fixed in 1.13. 
 easyblock = 'PythonBundle'
 
 name = 'TensorFlow'
@@ -20,6 +22,7 @@ dependencies = [
     ('Python', '3.6.6'),
     ('wheel', '0.31.1', versionsuffix),
     ('h5py', '2.8.0', versionsuffix),
+    ('OpenSSL', '1.1.0f'),
 ]
 
 use_pip = True

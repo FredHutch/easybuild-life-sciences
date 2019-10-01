@@ -31,4 +31,6 @@ sanity_check_paths = {
     'dirs': ['share'],
 }
 
+modextravars = {'STRELKA_INSTALL_PATH': '%(installdir)s'}
+
 moduleclass = 'bio'

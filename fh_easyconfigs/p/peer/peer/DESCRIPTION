@@ -1,0 +1,12 @@
+Package: peer
+Type: Package
+Title: PEER is a collection of Bayesian approaches to infer hidden determinants and their effects from gene expression profiles using factor analysis methods.
+Version: 1.0
+Date: 2011-01-24
+Author: Oliver Stegle, Matias Piipari, Leopold Parts
+Maintainer: Matias Piipari <matias.piipari@gmail.com>
+Depends: R (>= 2.1.12), methods
+Description: PEER is a collection of Bayesian approaches to infer hidden determinants and their effects from gene expression profiles using factor analysis methods. Applications of PEER have detected batch effects and experimental confounders increased the number of expression QTL findings by threefold allowed inference of intermediate cellular traits, such as transcription factor or pathway activations.
+License: CC BY-NC-SA 3.0
+LazyLoad: yes
+Packaged: 2011-02-10 10:15:46 UTC; mz2
