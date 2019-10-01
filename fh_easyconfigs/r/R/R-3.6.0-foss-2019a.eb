@@ -14,7 +14,9 @@ checksums = ['36fcac3e452666158e62459c6fc810adc247c7109ed71c5b6c3ad5fc2bf57509']
 
 builddependencies = [
     ('pkg-config', '0.29.2'),
+    ('binutils', '2.31.1'),
 ]
+
 dependencies = [
     ('X11', '20190311'),
     ('Mesa', '19.0.1'), #X devel
@@ -42,7 +44,7 @@ dependencies = [
     ('HDF5', '1.10.5'),  # for hdf5r
     ('UDUNITS', '2.2.26'),  # for units
     ('GSL', '2.5'),  # for RcppGSL
-    ('ImageMagick', '7.0.8-45'),  # for animation
+    ('ImageMagick', '7.0.8-46'),  # for animation
     # OS dependency should be preferred if the os version is more recent then
     # this version, it's nice to have an up to date openssl for security
     # reasons
