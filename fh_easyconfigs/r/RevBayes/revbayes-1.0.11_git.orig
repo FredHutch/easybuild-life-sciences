@@ -1,0 +1,23 @@
+diff -ruN revbayes-1.0.11.orig/projects/cmake/generate_version_number.sh revbayes-1.0.11/projects/cmake/generate_version_number.sh
+--- revbayes-1.0.11.orig/projects/cmake/generate_version_number.sh	2019-05-21 06:37:35.000000000 -0700
++++ revbayes-1.0.11/projects/cmake/generate_version_number.sh	2019-06-12 12:02:08.993231000 -0700
+@@ -3,6 +3,6 @@
+ echo "Generating version numbers in GitVersion.cpp"
+ echo "#include \"GitVersion.h\"" > GitVersion.cpp
+ #echo "const char *build_git_sha = \"$(git rev-parse HEAD)\";" >> GitVersion.cpp
+-echo "const char *build_git_sha = \"$(git describe --abbrev=6 --always)\";" >> GitVersion.cpp
++echo "const char *build_git_sha = \"fedc517\";" >> GitVersion.cpp
+ echo "const char *build_date = \"$(date)\";" >> GitVersion.cpp
+-echo "const char *build_git_branch = \"$(git name-rev --name-only HEAD)\";" >> GitVersion.cpp
++echo "const char *build_git_branch = \"v1.0.11\";" >> GitVersion.cpp
+diff -ruN revbayes-1.0.11.orig/projects/cmake/regenerate.sh revbayes-1.0.11/projects/cmake/regenerate.sh
+--- revbayes-1.0.11.orig/projects/cmake/regenerate.sh	2019-05-21 06:37:35.000000000 -0700
++++ revbayes-1.0.11/projects/cmake/regenerate.sh	2019-06-12 12:02:02.178299000 -0700
+@@ -179,7 +179,6 @@
+ endif()
+ 
+ find_package(Boost
+-1.60.0
+ COMPONENTS regex
+ program_options
+ thread

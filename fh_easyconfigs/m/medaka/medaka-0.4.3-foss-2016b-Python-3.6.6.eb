@@ -14,9 +14,9 @@ dependencies = [
     ('SAMtools', '1.9'),
     ('minimap2', '2.13'),
     ('Pysam', '0.15.1', versionsuffix),
-    ('Biopython', '1.72', versionsuffix),
-#    ('TensorFlow', '1.12.0', versionsuffix),
-#    ('Keras', '2.2.4', versionsuffix),
+    ('Biopython', '1.73', versionsuffix),
+    ('TensorFlow', '1.13.1', versionsuffix),
+    ('Keras', '2.2.4', versionsuffix),
 ]
 
 use_pip = True

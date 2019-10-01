@@ -1,0 +1,37 @@
+name = 'MATLAB'
+version = '2019a'
+
+homepage = 'http://www.mathworks.com/products/matlab'
+description = """MATLAB is a multi-paradigm numerical computing environment and
+ proprietary programming language developed by MathWorks. MATLAB allows matrix
+ manipulations, plotting of functions and data, implementation of algorithms,
+ creation of user interfaces, and interfacing with programs written in other languages,
+ including C, C++, C#, Java, Fortran and Python."""
+
+toolchain = {'name': 'dummy', 'version': ''}
+
+# be sure to copy both DVD content to the SAME directory, 
+# including the hidden files, especially .dvd1 and .dvd2 
+# download ISO and create tar.gz
+# sudo  mount -o loop R2019a_Linux.iso  2019a
+# tar -czf 2019a.tar.gz 2019a
+sources = [SOURCELOWER_TAR_GZ]
+
+dependencies = [('Java', '1.8')]
+
+# Uncomment and modify the following variables if needed 
+# for installation with floating license server
+
+license_server = 'rosyboa'
+license_server_port = '7401'
+key = '44420-38871-45048-64131-55063-25495-15281-51347'
+# key = '00000-00000-00000-00000-00000-00000-00000-00000-00000-00000-00000-00000'
+# modextravars = {'LM_LICENSE_FILE': '%s@%s' % (license_server_port, license_server)}
+
+sanity_check_paths = {
+    'files': ['bin/matlab', 'bin/glnxa64/MATLAB',
+              'toolbox/local/classpath.txt'],
+    'dirs': ['java/jar', 'toolbox/matlab'],
+}
+
+moduleclass = 'math'

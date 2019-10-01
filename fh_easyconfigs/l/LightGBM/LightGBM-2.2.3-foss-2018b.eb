@@ -1,0 +1,38 @@
+# easybuild easyconfig 
+#
+# Scott Sisco  ssisco@fredhutch.org 
+# 
+# Fred Hutchenson Cancer Research Center 
+#
+
+easyblock = 'CMakeMake'
+
+name = 'LightGBM'
+version = '2.2.3'
+
+homepage = 'https://github.com/microsoft/LightGBM'
+description = """A fast, distributed, high performance gradient boosting (GBT, GBDT, GBRT,
+ GBM or MART) framework based on decision tree algorithms, used for ranking, classification
+ and many other machine learning tasks."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+
+source_urls = [('https://github.com/microsoft/LightGBM/archive')]
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    ('CMake', '3.11.4'),
+]
+
+dependencies = [
+]
+
+sanity_check_paths = {
+    'dirs': ['bin', 'lib', 'include'],
+    'files': ['bin/lightgbm',
+              'lib/lib_lightgbm.so',
+              'include/LightGBM/lightgbm_R.h',
+              ],
+}
+
+moduleclass = 'lib'

@@ -1,0 +1,55 @@
+============================================================================
+=				 Configuration file of DivAnalysis
+============================================================================
+		
+
+// Input folder for paired fastq files, note dir has to end with '/' [default ""]
+//pFqDir	data/miseq/5953-223/
+//pFqDir	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/3115/
+pFqDir /seq/viral/analysis/xyang/data/nugen/exp_6_5M/190
+
+// Input folder for non-paired fastq files [default ""]
+//npFqDir	input/single/
+
+// Input folder for paired fasta files [default ""]
+//pFaDir	""
+
+// Input folder for non-paired fasta files [default ""]
+//npFaDir	""
+
+// Input trimming log file [has to be specified]
+//trim_log_file	result/Diversifier/miseq/5953-223-dup/trim.log
+//trim_log_file	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/3115/trim.log
+trim_log_file	/seq/viral/analysis/xyang/result/Diversifier/nugen/exp_6_5M/190/trim.log
+
+
+// Input contig alignment file [has to be specified]
+//aln_file	result/Diversifier/miseq/5953-223-dup/contig.align
+//aln_file	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/3115/contig.align
+aln_file	/seq/viral/analysis/xyang/result/Diversifier/nugen/exp_6_5M/190/contig.align
+
+// output directory [has to be specified]
+//outputDIR	result/DivAnalysis/miseq/5953-223/
+//outputDIR	/seq/viral/analysis/PatrickTemp/XiaoDiversity/CompAssemblies/NugenAssemblies/3115/
+outputDIR	/seq/viral/analysis/xyang/result/DivAnalysis/nugen/exp_6_5M/190/
+
+/* The following specifies regions of selected contigs to be printed out */
+ * Tab delimited format: 
+ * n (number of regions, default 0), 
+ * cID_0, start_0, end_0, ..., 
+ * ... 
+ * cID_{n-1}, s_{n-1}, e_{n-1}
+ * For example: 
+ * num_region 2	
+ * 0	100	200	
+ * 3	0	100
+ */
+num_region 1
+2	0	500
+
+/* the following two parameters define low frequent variant region */
+// lfv frequency compared to neighboring regions (in percentage) [default: 5]
+//lfv_freq	40
+
+// maximum length for lfv region [default: 20]
+//lfv_max_len	20

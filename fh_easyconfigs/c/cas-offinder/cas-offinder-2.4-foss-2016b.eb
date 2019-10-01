@@ -1,0 +1,42 @@
+# easybuild easyconfig
+#
+# 2019.07.01 John Dey jfdey@fredhutch.org fizwit@github.com
+# Notes: requires OpenGL. pocl is providing opencl libraries, but might be better
+# with fosscuda
+easyblock = 'CMakeMake'
+
+name = 'cas-offinder'
+version = '2.4'
+
+homepage = ''
+description = """Cas-OFFinder is OpenCL based, ultrafast and versatile program that searches
+ for potential off-target sites of CRISPR/Cas-derived RNA-guided endonucleases (RGEN)."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/snugel/cas-offinder/archive']
+sources = ['master.zip']
+
+builddependencies = [
+    ('CMake', '3.6.1'),
+    ('pocl', '1.3'),
+]
+
+dependencies = [
+    ('pocl', '1.3', '-GCC-5.4.0-2.26', True),
+]
+
+configopts = '-G "Unix Makefiles"'
+skipsteps = ['install']
+
+postinstallcmds = [
+    'mkdir -p %(installdir)s/bin',
+    'mv %(name)s  %(installdir)s/bin'
+]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': ['bin']
+}
+
+moduleclass = 'bio'

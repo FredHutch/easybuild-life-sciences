@@ -1,0 +1,4 @@
+[2019-06-07T04:13:05.530403Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] wrapperStart
+[2019-06-07T04:13:05.542072Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskStart
+[2019-06-07T04:13:05.637364Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskExitCode 0
+[2019-06-07T04:13:05.638288Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+mergeRunStats] [wrapperSignal] taskElapsedSec 0

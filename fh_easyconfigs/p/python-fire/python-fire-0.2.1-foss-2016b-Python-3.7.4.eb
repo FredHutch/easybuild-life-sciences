@@ -1,0 +1,44 @@
+easyblock = 'Bundle'
+
+name = 'python-fire'
+version = '0.2.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/google/python-fire'
+description = """Python Fire is a library for automatically generating command line interfaces
+ (CLIs) from absolutely any Python object."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+exts_list = [
+    ('termcolor', '1.1.0', {
+        'source_urls': [PYPI_SOURCE],
+    }),
+    (name, version, {
+        'modulename': 'fire',
+        'source_urls': ['https://github.com/google/python-fire/archive'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+modextrapaths = {
+    'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'tools'

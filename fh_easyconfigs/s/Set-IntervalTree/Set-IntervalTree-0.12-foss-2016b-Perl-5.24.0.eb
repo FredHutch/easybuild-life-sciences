@@ -1,0 +1,31 @@
+easyblock = 'PerlModule'
+
+name = 'Set-IntervalTree'
+version = '0.12'
+
+homepage = "https://metacpan.org/pod/Set::IntervalTree"
+description = """Perform range-based lookups on sets of ranges"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://cpan.metacpan.org/authors/id/S/SL/SLOYD/']
+sources = [SOURCE_TAR_GZ]
+
+perl = 'Perl'
+perlver = '5.24.0'
+versionsuffix = '-%s-%s' % (perl, perlver)
+
+dependencies = [
+    (perl, perlver),
+    ('ExtUtils-CppGuess', '0.19', versionsuffix),
+]
+
+options = {'modulename': 'Set::IntervalTree'}
+
+perlmajver = perlver.split('.')[0]
+sanity_check_paths = {
+    'files': ['lib/perl%s/site_perl/%s/x86_64-linux-thread-multi/Set/IntervalTree.pm' % (perlmajver, perlver)],
+    'dirs': [''],
+}
+
+moduleclass = 'data'

@@ -1,7 +1,6 @@
 #  easybuild easyconfig
 #
-#  John Dey jfdey@fredhutch.org
-#  Fred Hutchinson Cancer Research Center
+#  John Dey jfdey@fredhutch.org fizwit@github.com 
 easyblock = 'MakeCp'
 
 name = 'samblaster'
@@ -14,12 +13,15 @@ homepage = 'https://github.com/GregoryFaust/samblaster'
 
 toolchain = {'name': 'foss', 'version': '2018b'}
 
-source_urls = ['https://github.com/GregoryFaust/samblaster/releases/download/%(version)s']
-sources = ['%(name)s-v.%(version)s.tar.gz']
-checksums = ['72c42e0a346166ba00152417c82179bd5139636fea859babb06ca855af93d11f']
+source_urls = ['https://github.com/GregoryFaust/samblaster/archive/']
+sources = [{
+    'download_filename': 'v.%(version)s.zip',
+    'filename': SOURCE_ZIP
+}]
+checksums = ['17abc9b902ec10c0ede3694e7e4b9fd857aee211c323e9e5ea7b924851b17969']
 
 files_to_copy = [
-    (["samblaster"], "bin"),
+    (["samblaster"], "bin/"),
     'README.md',
     'SAMBLASTER_Supplemental.pdf',
     'LICENSE.txt',

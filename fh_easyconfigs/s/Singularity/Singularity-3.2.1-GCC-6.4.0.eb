@@ -1,0 +1,45 @@
+easyblock = 'ConfigureMake'
+
+name = 'Singularity'
+version = '3.2.1'
+
+homepage = 'http://gmkurtzer.github.io/singularity'
+description = """Singularity is a portable application stack packaging and runtime utility."""
+
+toolchain = {'name': 'GCC', 'version': '6.4.0-2.28'}
+
+                
+source_urls = ['https://github.com/sylabs/singularity/archive']
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    #('Autotools', '20150215'),
+    #('libarchive', '3.3.2'),
+    ('Go', '1.11.2', '', True),
+    ('LibUUID', '1.0.3'),
+]
+
+skipsteps = ['configure']
+
+prebuildopts = 'export GOPATH=%(builddir)s && '
+prebuildopts += './mconfig -v -P release -V %(version)s --prefix=%(installdir)s && '
+prebuildopts += 'cd builddir && '
+
+sanity_check_paths = {
+    'files': ['bin/run-singularity', 'bin/singularity', 'etc/singularity/singularity.conf',
+              'libexec/singularity/bin/action-suid'],
+    'dirs': ['etc', 'libexec/singularity'],
+}
+
+# target ‘/app/easybuild/build/Singularity/3.0.1/GCC-6.4.0-2.28/singularity/src/github.com/sylabs/’ is not a directory: No such file or directory
+
+# next steps after installation
+# INSTALLATION_PATH=your_installation_path
+# chown root:root $INSTALLATION_PATH/Singularity/*/etc/singularity/singularity.conf
+# chown root:root $INSTALLATION_PATH/Singularity/*/libexec/singularity/bin/*-suid
+# chown root:root $INSTALLATION_PATH/Singularity/*/var/singularity/mnt/container
+# chmod 4755 $INSTALLATION_PATH/Singularity/*/libexec/singularity/bin/*-suid
+# chmod +s $INSTALLATION_PATH/Singularity/*/libexec/singularity/bin/*-suid
+# also, merge the singularity.conf file, preserving the mounts and autofs workarounds
+
+moduleclass = 'tools'

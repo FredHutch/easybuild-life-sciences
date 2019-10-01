@@ -1,0 +1,36 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Tarball'
+
+name = 'cellranger'
+version = '3.1.0'
+
+homepage = 'https://support.10xgenomics.com/single-cell-gene-expression/software/overview/welcome'
+description = """Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform."""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+# you must download this by hand after an agreement
+source_urls = ['https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest/']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+dependencies = {('bcl2fastq2', '2.20.0', '-foss-2016b')}
+
+unpack_options = ' && cd %(builddir)s && '
+unpack_options += 'cd %(name)s-%(version)s/miniconda-cr-cs/4.3.21-miniconda-cr-cs-c10/lib && '
+unpack_options += 'rm libstdc++.so.6.0.21 && '
+unpack_options += 'ln -s libstdc++.so.6.0.26 libstdc++.so.6.0.21'
+
+modextrapaths = { 'PATH': ['cellranger-cs/%(version)s/bin'] }
+
+sanity_check_paths = {
+    'files': ["cellranger"],
+    'dirs': ["cellranger-cs"],
+} 
+
+sanity_check_commands = [('%(name)s-cs/%(version)s/bin/%(namelower)s', 'sitecheck')]
+
+moduleclass = 'bio'

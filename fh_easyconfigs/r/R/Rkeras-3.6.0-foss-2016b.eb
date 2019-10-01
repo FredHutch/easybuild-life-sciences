@@ -1,0 +1,91 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'Rkeras'
+version = '3.6.0'
+biocver = '3.8'
+
+homepage = 'http://www.r-project.org/'
+description = """R is a free software environment for statistical computing and graphics."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+builddependencies = [('pkg-config', '0.29.1')]
+
+dependencies = [
+    ('R', version),
+    ('Keras', '2.2.4', '-Python-3.6.6'),
+]
+
+name_tmpl = '%(name)s_%(version)s.tar.gz'
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'http://depot.sagebase.org/CRAN/prod/3.2/src/contrib',
+        'http://adtex.sourceforge.net',
+        'http://bioconductor.org/packages/release/bioc/src/contrib/',
+        'http://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'http://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': name_tmpl,
+}
+
+# !! order of packages is important !!
+# packages updated on July 8th 2016
+exts_list = [
+    ('rsample', '0.0.4'),
+    ('dials', '0.0.2'),
+    ('ISOcodes', '2019.04.22'),
+    ('stopwords', '0.9.0'),
+    ('SnowballC', '0.6.0'),
+    ('tokenizers', '0.2.1'),
+    ('hunspell', '3.0'),
+    ('janeaustenr', '0.1.5'),
+    ('tidytext', '0.2.0'),
+    ('parsnip', '0.0.2'),
+    ('StanHeaders', '2.18.1'),
+    ('loo', '2.1.0'),
+    ('inline', '0.3.15'),
+    ('rstan', '2.18.2'),
+    ('bayesplot', '1.7.0'),
+    ('threejs', '0.3.1'),
+    ('dygraphs', '1.1.1.6'),
+    ('packrat', '0.5.0'),
+    ('rsconnect', '0.8.13'),
+    ('shinyjs', '1.0'),
+    ('colourpicker', '1.0'),
+    ('shinystan', '2.5.0'),
+    ('rstantools', '1.5.1'),
+    ('rstanarm', '2.18.2'),
+    ('tidyposterior', '0.0.2'),
+    ('yardstick', '0.0.3'),
+    ('tidypredict', '0.3.0'),
+    ('infer', '0.4.0.1'),
+    ('tidymodels', '0.0.2'),
+    ('zeallot', '0.1.0'),
+    ('config', '0.3'),
+    ('tfruns', '1.4'),
+    ('tensorflow', '1.13.1'),
+    ('keras', '2.2.4.1'),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['keras', 'tensorflow'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'lang'

@@ -1,0 +1,62 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+easyblock = 'Tarball'
+
+name = 'Clairvoyante'
+version = '1.02'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/aquaskyline/Clairvoyante'
+description = """Clairvoyante, a multi-task five-layer convolutional neural network model
+ for predicting variant type, zygosity, alternative allele and Indel length."""
+
+source_urls = [
+    'https://github.com/aquaskyline/Clairvoyante/archive',
+    'http://www.bio8.cs.hku.hk',
+]
+sources = [
+    'v%(version)s.tar.gz',
+    'trainedModels.tbz'
+]
+checksums = [
+'92d53c0414cf8b034d4af870d489a4cb2e43400460f0a9a542a2bcaa588d1b2a' # v1.02.tar.gz
+'57320491511f4ef1be95c3ea017963c5da614972356d1a51c2cb3781c38cb252' # trainedModels.tbz
+]
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '3.6.6'),
+    ('TensorFlow', '1.13.1', versionsuffix),
+    ('SAMtools', '1.9'), 
+]
+
+postinstallcmds = ['cd %(installdir)s && ' + 
+    '$EBROOTPYTHON/bin/python ./port23.py'
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+exts_list = [
+    ('blosc', '1.8.1', {
+        'source_urls': ['https://pypi.io/packages/source/b/blosc'],
+    }),
+    ('intervaltree', '2.0.1', {
+        'source_urls': ['https://pypi.io/packages/source/i/intervaltree'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['clairvoyante.py', 'clairvoyante/callVar.py'],
+    'dirs': ['clairvoyante', 'lib/python%(pyshortver)s/site-packages'], 
+}
+
+modextrapaths = {'PATH': ['']}
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+moduleclass = 'bio'

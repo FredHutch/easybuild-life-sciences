@@ -1,0 +1,51 @@
+# easybuild easyconfig 
+#
+# Ben McGough <bmcgough@fredhutch.org>
+# 
+# Fred Hutchenson Cancer Research Center 
+easyblock = 'CMakeMake'
+
+name = 'rstudio-server'
+version = '1.2.1335'
+
+homepage = 'https://github.com/rstudio/rstudio'
+description = """RStudio is an integrated development environment 
+(IDE) for the R programming language."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [('https://github.com/rstudio/rstudio/archive')]
+sources = [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+
+osdependencies = [ ('wget') ]
+
+builddependencies = [
+    ('R', '3.5.3'),
+    ('CMake', '3.6.1'),
+    #('Qt5', '5.9.1'),
+]
+
+dependencies = [
+    ('Boost', '1.67.0'),
+]
+
+# install rstudio's dictionaries - you must cd to the dependency dir
+unpack_options = '&& cd rstudio-%(version)s/dependencies/common && \
+    ./install-gwt && \
+    ./install-dictionaries && \
+    ./install-mathjax && \
+    ./install-pandoc && \
+    ./install-packages'
+
+separate_build_dir = True
+
+configopts = '-DCMAKE_BUILD_TYPE=release '
+configopts += '-DRSTUDIO_TARGET=Server '
+maxparallel = 1
+
+sanity_check_paths = {
+    'dirs': ['bin'],
+    'files': ['bin/rserver', 'bin/rstudio-server'],
+}
+
+moduleclass = 'tools'

@@ -1,0 +1,30 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutchinson Cancer Research Center 
+#
+easyblock = 'PythonPackage'
+
+name = 'megalodon'
+version = '1.0.0-alpha.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/nanoporetech'
+description = """Megalodon provides "basecalling augmentation" for raw nanopore
+ sequencing reads, including direct, reference-guided SNP and modified base calling."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/nanoporetech/megalodon/archive']
+sources = ['%(version)s.zip']
+
+exts_defaultclass = 'PythonPackage'
+
+dependencies = [('Python', '3.7.4')]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': [''],
+}
+
+moduleclass = 'bio'

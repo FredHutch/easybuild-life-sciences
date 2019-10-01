@@ -8,7 +8,7 @@ description = """Python is a programming language that lets you work more quickl
 toolchain = {'name': 'foss', 'version': '2016b'}
 toolchainopts = {'pic': True}
 
-source_urls = ['http://www.python.org/ftp/%(namelower)s/%(version)s/']
+source_urls = ['http://www.python.org/ftp/%(namelower)s/%(version)s']
 sources = [SOURCE_TGZ]
 
 # python needs bzip2 to build the bz2 package
@@ -35,9 +35,11 @@ ulimit_unlimited = True
 
 exts_download_dep_fail = True
 
+sanity_check_commands = ["python -c 'import ssl'"]
+
 # workaround for "undefined symbol: __stack_chk_guard"
 # see also https://software.intel.com/en-us/forums/intel-c-compiler/topic/610514
-buildopts = 'LDFLAGS="$LDFLAGS -lssp"'
+# buildopts = 'LDFLAGS="$LDFLAGS -lssp"'
 
 # order is important!
 # package versions updated June 19th 2018

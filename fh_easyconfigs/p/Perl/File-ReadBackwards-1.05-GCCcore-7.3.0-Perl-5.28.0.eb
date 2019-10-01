@@ -1,0 +1,34 @@
+# easybuild easyconfig
+#
+# Fred Hutch Perl
+easyblock = 'PerlModule'
+
+name = 'File-ReadBackwards'
+version = '1.05'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://metacpan.org/pod/File::ReadBackwards'
+description = """This Perl module reads a file backwards line by line."""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+source_urls = ['https://cpan.metacpan.org/authors/id/U/UR/URI']
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('Perl', '5.28.0'),
+]
+
+options = {'modulename': 'File::ReadBackwards'}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/perl5/site_perl/%(perlver)s', 'man/man3'],
+}
+
+modextrapaths = {
+    'PATH': "",  # add installation dir to PATH
+    'PERL5LIB': 'lib/perl5/site_perl/%(perlver)s/'
+}
+
+moduleclass = 'lib'
