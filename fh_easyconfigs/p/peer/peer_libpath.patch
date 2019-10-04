@@ -1,0 +1,7 @@
+diff -ruN peer.org/src/Makevars peer/src/Makevars
+--- peer.org/src/Makevars	2012-05-08 10:21:09.000000000 -0700
++++ peer/src/Makevars	2019-09-24 15:35:23.629781000 -0700
+@@ -1,2 +1,2 @@
+-PKG_LIBS=-L./../../../src -lpeerlib -L./../../../External/alglib/src -lalglib
++PKG_LIBS=-L./../../../src -lpeer -L./../../../External/alglib/src -lalglib
+ PKG_CPPFLAGS=-I./../../../../include -I./../../../../External/alglib -I./../../../../External/alglib/src -I./../../../../External -DSWIG

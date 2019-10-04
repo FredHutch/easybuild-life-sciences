@@ -348,10 +348,10 @@
             ]
         },
         "/app/easybuild/modules/bio/BWA/0.7.17-foss-2016b.lua": {
-            "Description": "BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
+            "Description": "BWA is a software package for mapping DNA sequences against a large reference genome,\n such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The\n first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer\n sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the\n support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally\n recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack\n for 70-100bp Illumina reads.",
             "Version": "0.7.17-foss-2016b",
             "fullName": "BWA/0.7.17-foss-2016b",
-            "help": "\nDescription\n===========\nBWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.\n\n\nMore information\n================\n - Homepage: https://bitbucket.org/statgen/xhmm/\n",
+            "help": "\nDescription\n===========\nBWA is a software package for mapping DNA sequences against a large reference genome,\n such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The\n first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer\n sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the\n support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally\n recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack\n for 70-100bp Illumina reads.\n\n\nMore information\n================\n - Homepage: http://bio-bwa.sourceforge.net\n",
             "hidden": false,
             "pV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
             "pathA": {
@@ -359,8 +359,8 @@
             },
             "wV": "000000000.000000007.000000017.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
-                "Description: BWA is a software package for mapping DNA sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads.",
-                "Homepage: https://bitbucket.org/statgen/xhmm/"
+                "Description: BWA is a software package for mapping DNA sequences against a large reference genome,\n such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The\n first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer\n sequences ranged from 70bp to a few megabases. BWA-MEM and BWA-SW share similar features such as the\n support of long reads and chimeric alignment, but BWA-MEM, which is the latest, is generally\n recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack\n for 70-100bp Illumina reads.",
+                "Homepage: http://bio-bwa.sourceforge.net"
             ]
         },
         "/app/easybuild/modules/bio/BWA/0.7.7-foss-2015b": {
@@ -2130,6 +2130,23 @@
                 "Homepage: https://keras.io/",
                 "Extensions: Keras-2.2.4, Keras-Applications-1.0.6, Keras-Preprocessing-1.0.5"
             ]
+        },
+        "/app/easybuild/modules/math/Keras/2.3.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+            "Version": "2.3.0-foss-2016b-Python-3.7.4",
+            "fullName": "Keras/2.3.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nKeras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.\n\n\nMore information\n================\n - Homepage: https://keras.io/\n\n\nIncluded extensions\n===================\nKeras-2.3.0, Keras-Applications-1.0.8, Keras-Preprocessing-1.1.0\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/Keras/2.3.0-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000002.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "wV": "000000002.000000003.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Keras is a minimalist, highly modular neural networks library, written in Python and\ncapable of running on top of either TensorFlow or Theano.",
+                "Homepage: https://keras.io/",
+                "Extensions: Keras-2.3.0, Keras-Applications-1.0.8, Keras-Preprocessing-1.1.0"
+            ]
         }
     },
     "Kraken2": {
@@ -2617,6 +2634,24 @@
             ]
         }
     },
+    "PAINTOR": {
+        "/app/easybuild/modules/bio/PAINTOR/3.1-GCCcore-7.3.0.lua": {
+            "Description": "PAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical\n fine-mapping method that integrates functional genomic data with association strength\n from potentially multiple populations (or traits) to prioritize variants for follow-up\n analysis",
+            "Version": "3.1-GCCcore-7.3.0",
+            "fullName": "PAINTOR/3.1-GCCcore-7.3.0",
+            "help": "\nDescription\n===========\nPAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical\n fine-mapping method that integrates functional genomic data with association strength\n from potentially multiple populations (or traits) to prioritize variants for follow-up\n analysis\n\n\nMore information\n================\n - Homepage: https://github.com/gkichaev/PAINTOR_V3.0\n",
+            "hidden": false,
+            "pV": "000000003.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/PAINTOR/3.1-GCCcore-7.3.0/bin": 1
+            },
+            "wV": "000000003.000000001.*gcccore.*zfinal-.000000007.000000003.*zfinal",
+            "whatis": [
+                "Description: PAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical\n fine-mapping method that integrates functional genomic data with association strength\n from potentially multiple populations (or traits) to prioritize variants for follow-up\n analysis",
+                "Homepage: https://github.com/gkichaev/PAINTOR_V3.0"
+            ]
+        }
+    },
     "PANDAseq": {
         "/app/easybuild/modules/bio/PANDAseq/2.11-foss-2016b.lua": {
             "Description": "PANDAseq assembles Illumina Solexa overlapping pair-end reads.",
@@ -2966,6 +3001,24 @@
             "whatis": [
                 "Description: RELION (for REgularised LIkelihood OptimisatioN, pronounce\nrely-on) is a stand-alone computer program that employs an empirical Bayesian\napproach to refinement of (multiple) 3D reconstructions or 2D class averages in\nelectron cryo-microscopy (cryo-EM).",
                 "Homepage: http://www2.mrc-lmb.cam.ac.uk/relion/index.php/Main_Page"
+            ]
+        }
+    },
+    "RNA-SeQC": {
+        "/app/easybuild/modules/bio/RNA-SeQC/2.3.4-foss-2016b.lua": {
+            "Description": "RNA-SeQC is a java program which computes a series of quality control metrics for\n RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab\n delimited files of metrics data. This program can be valuable for comparing sequencing quality\n across different samples or experiments to evaluate different experimental parameters. It can\n also be run on individual samples as a means of quality control before continuing with downstream\n analysis.",
+            "Version": "2.3.4-foss-2016b",
+            "fullName": "RNA-SeQC/2.3.4-foss-2016b",
+            "help": "\nDescription\n===========\nRNA-SeQC is a java program which computes a series of quality control metrics for\n RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab\n delimited files of metrics data. This program can be valuable for comparing sequencing quality\n across different samples or experiments to evaluate different experimental parameters. It can\n also be run on individual samples as a means of quality control before continuing with downstream\n analysis.\n\n\nMore information\n================\n - Homepage: https://software.broadinstitute.org/cancer/cga/rna-seqc\n",
+            "hidden": false,
+            "pV": "000000002.000000003.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/RNA-SeQC/2.3.4-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000003.000000004.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: RNA-SeQC is a java program which computes a series of quality control metrics for\n RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab\n delimited files of metrics data. This program can be valuable for comparing sequencing quality\n across different samples or experiments to evaluate different experimental parameters. It can\n also be run on individual samples as a means of quality control before continuing with downstream\n analysis.",
+                "Homepage: https://software.broadinstitute.org/cancer/cga/rna-seqc"
             ]
         }
     },
@@ -3548,6 +3601,22 @@
                 "Description: Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
                 "Homepage: http://deeplearning.net/software/theano"
             ]
+        },
+        "/app/easybuild/modules/math/Theano/1.0.4-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+            "Version": "1.0.4-foss-2016b-Python-3.7.4",
+            "fullName": "Theano/1.0.4-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nTheano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.\n\n\nMore information\n================\n - Homepage: http://deeplearning.net/software/theano\n",
+            "hidden": false,
+            "pV": "000000001.000000000.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Theano/1.0.4-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.000000000.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Theano is a Python library that allows you to define, optimize,\nand evaluate mathematical expressions involving multi-dimensional arrays efficiently.",
+                "Homepage: http://deeplearning.net/software/theano"
+            ]
         }
     },
     "TopHat": {
@@ -3810,6 +3879,22 @@
             "wV": "000002016.*feb.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000024.*zfinal",
             "whatis": [
                 "Description:  ANNOVAR is an efficient software tool to utilize update-to-date information   to functionally annotate genetic variants detected from diverse genomes (including human   genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others). - Homepage: http://annovar.openbioinformatics.org/en/latest/ "
+            ]
+        },
+        "/app/easybuild/modules/bio/annovar/2018Dec04.lua": {
+            "Description": "ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
+            "Version": "2018Dec04",
+            "fullName": "annovar/2018Dec04",
+            "help": "\nDescription\n===========\nANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).\n\n\nMore information\n================\n - Homepage: http://annovar.openbioinformatics.org/en/latest/\n",
+            "hidden": false,
+            "pV": "000002018.*dec.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/annovar/2018Dec04": 1
+            },
+            "wV": "000002018.*dec.000000004.*zfinal",
+            "whatis": [
+                "Description: ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
+                "Homepage: http://annovar.openbioinformatics.org/en/latest/"
             ]
         }
     },
@@ -4687,6 +4772,24 @@
             ]
         }
     },
+    "megalodon": {
+        "/app/easybuild/modules/bio/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
+            "Version": "1.0.0-alpha.1-foss-2016b-Python-3.7.4",
+            "fullName": "megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nMegalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech\n",
+            "hidden": false,
+            "pV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
+                "Homepage: https://github.com/nanoporetech"
+            ]
+        }
+    },
     "minimap2": {
         "/app/easybuild/modules/bio/minimap2/2.10-foss-2016b.lua": {
             "Description": "A versatile pairwise aligner for genomic and spliced nucleotide sequences.",
@@ -5092,6 +5195,24 @@
             "whatis": [
                 "Description: parasail is a SIMD C (C99) library containing implementations\n of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global\n pairwise sequence alignment algorithms. ",
                 "Homepage: https://github.com/jeffdaily/parasail"
+            ]
+        }
+    },
+    "peer-master": {
+        "/app/easybuild/modules/bio/peer-master/1.0.0-foss-2016b.lua": {
+            "Description": "PEER is a collection of Bayesian approaches to infer hidden\n determinants and their effects from gene expression profiles using factor\n analysis methods. ",
+            "Version": "1.0.0-foss-2016b",
+            "fullName": "peer-master/1.0.0-foss-2016b",
+            "help": "\nDescription\n===========\nPEER is a collection of Bayesian approaches to infer hidden\n determinants and their effects from gene expression profiles using factor\n analysis methods.\n\n\nMore information\n================\n - Homepage: https://www.sanger.ac.uk/science/tools/peer\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/peer-master/1.0.0-foss-2016b/lib": 1
+            },
+            "pV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "wV": "000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: PEER is a collection of Bayesian approaches to infer hidden\n determinants and their effects from gene expression profiles using factor\n analysis methods. ",
+                "Homepage: https://www.sanger.ac.uk/science/tools/peer"
             ]
         }
     },

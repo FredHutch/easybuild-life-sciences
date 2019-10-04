@@ -367,7 +367,7 @@ The official Reference Implementation for Java SE 11 (JSR 384)
  the OpenJDK Community.
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kent_tools/Kent_tools-20181218-linux.x86_64.eb)  
 Kent tools: collection of tools used by the UCSC genome browser.
- - [Keras/2.2.4-foss-2016b-Python-3.6.6](https://keras.io/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Keras/Keras-2.2.4-foss-2016b-Python-3.6.6.eb)  
+ - [Keras/2.3.0-foss-2016b-Python-3.7.4](https://keras.io/)  
 Keras is a minimalist, highly modular neural networks library, written in Python and
 capable of running on top of either TensorFlow or Theano.
  - [Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0](http://www.ccb.jhu.edu/software/kraken2/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2016b-Perl-5.28.0.eb)  
@@ -472,7 +472,7 @@ NASM: General-purpose x86 assembler
  - [NGS/1.2.5-foss-2016b](https://github.com/ncbi/ngs)  
 NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from
  Next Generation Sequencing.
- - [NLopt/2.4.2-foss-2016b](http://ab-initio.mit.edu/wiki/index.php/NLopt)  
+ - [NLopt/2.6.1-GCCcore-7.3.0](http://ab-initio.mit.edu/wiki/index.php/NLopt)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/NLopt/NLopt-2.6.1-GCCcore-7.3.0.eb)  
 NLopt is a free/open-source library for nonlinear optimization, 
  providing a common interface for a number of different free optimization routines 
  available online as well as original implementations of various other algorithms. 
@@ -482,7 +482,7 @@ NanoOK (pronounced na-nook) is a tool for extraction, alignment and analysis of 
 Pmw is a toolkit for building high-level compound widgets in Python using the Tkinter module. 
  - [NiftyNet/0.2.2-foss-2016b-Python-3.6.5-fh1](https://http://www.niftynet.io/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/NiftyNet/NiftyNet-0.2.2-foss-2016b-Python-3.6.5-fh1.eb)  
 NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNNs) platform for research in medical image analysis and image-guided therapy.
- - [Nim/0.20.2-GCCcore-7.3.0](https://nim-lang.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/Nim/Nim-0.20.2-GCCcore-7.3.0.eb)  
+ - [Nim/1.0.0-GCCcore-7.3.0](https://nim-lang.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/Nim/Nim-1.0.0-GCCcore-7.3.0.eb)  
 Nim is a systems and applications programming language.
  - [Ninja/1.8.2-foss-2016b](https://ninja-build.org/)  
 Ninja is a small build system with a focus on speed.
@@ -518,6 +518,11 @@ The OpenSSL Project is a collaborative effort to develop a robust, commercial-gr
  protocols as well as a full-strength general purpose cryptography library. 
  - [Osi/0.108.4-foss-2016b](https://github.com/coin-or/Osi)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/o/Osi/Osi-0.108.4-foss-2016b.eb)  
 Osi (Open Solver Interface) provides an abstract base class to a generic linear programming (LP) solver, along with derived classes for specific solvers. Many applications may be able to use the Osi to insulate themselves from a specific LP solver.
+ - [PAINTOR/3.1-GCCcore-7.3.0](https://github.com/gkichaev/PAINTOR_V3.0)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PAINTOR/PAINTOR-3.1-GCCcore-7.3.0.eb)  
+PAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical
+ fine-mapping method that integrates functional genomic data with association strength
+ from potentially multiple populations (or traits) to prioritize variants for follow-up
+ analysis
  - [PANDAseq/2.11-foss-2016b](https://github.com/neufeld/pandaseq)  
 PANDAseq assembles Illumina Solexa overlapping pair-end reads.
  - [PCRE/8.41-foss-2016b](http://www.pcre.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PCRE/PCRE-8.41-foss-2016b.eb)  
@@ -568,7 +573,7 @@ PostgreSQL is a powerful, open source object-relational database system.
  It also supports storage of binary large objects, including pictures,
  sounds, or video. It has native programming interfaces for C/C++, Java,
  .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
- - [PyYAML/3.13-foss-2016b-Python-3.6.6](https://pypi.python.org/pypi/PyYAML/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PyYAML/PyYAML-3.13-foss-2016b-Python-3.6.6.eb)  
+ - [PyYAML/5.1.2-foss-2016b-Python-3.7.4](https://pypi.python.org/pypi/PyYAML/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PyYAML/PyYAML-5.1.2-foss-2016b-Python-3.7.4.eb)  
 PyYAML is a YAML parser and emitter for the Python programming language.
  - [Pysam/0.15.3-foss-2016b-Python-3.7.4](https://github.com/pysam-developers/pysam)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/Pysam/Pysam-0.15.3-foss-2016b-Python-3.7.4.eb)  
 Pysam is a python module for reading and manipulating Samfiles. 
@@ -598,6 +603,13 @@ RELION (for REgularised LIkelihood OptimisatioN, pronounce
 rely-on) is a stand-alone computer program that employs an empirical Bayesian
 approach to refinement of (multiple) 3D reconstructions or 2D class averages in
 electron cryo-microscopy (cryo-EM).
+ - [RNA-SeQC/2.3.4-foss-2016b](https://software.broadinstitute.org/cancer/cga/rna-seqc)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/r/RNA-SeQC/RNA-SeQC-2.3.4-foss-2016b.eb)  
+RNA-SeQC is a java program which computes a series of quality control metrics for
+ RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab
+ delimited files of metrics data. This program can be valuable for comparing sequencing quality
+ across different samples or experiments to evaluate different experimental parameters. It can
+ also be run on individual samples as a means of quality control before continuing with downstream
+ analysis.
  - [RSeQC/3.0.0-foss-2016b-Python-3.6.6](http://rseqc.sourceforge.net/)  
 RSeQC provides a number of useful modules that can 
  comprehensively evaluate high throughput sequence data especially RNA-seq 
@@ -682,7 +694,7 @@ Tcl (Tool Command Language) is a very powerful but easy to learn dynamic
 An open-source software library for Machine Intelligence
  - [TensorFlowCUDA/1.13.1-foss-2016b-Python-3.6.6](https://www.tensorflow.org/)  
 An open-source software library for Machine Intelligence
- - [Theano/1.0.3-foss-2016b-Python-3.6.6](http://deeplearning.net/software/theano)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Theano/Theano-1.0.3-foss-2016b-Python-3.6.6.eb)  
+ - [Theano/1.0.4-foss-2016b-Python-3.7.4](http://deeplearning.net/software/theano)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Theano/Theano-1.0.4-foss-2016b-Python-3.7.4.eb)  
 Theano is a Python library that allows you to define, optimize,
 and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
  - [Tk/8.6.7-foss-2016b](http://www.tcl.tk/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Tk/Tk-8.6.7-foss-2016b.eb)  
@@ -751,8 +763,11 @@ ZeroMQ looks like an embeddable networking library but acts like a concurrency f
  message-processing tasks. It has a score of language APIs and runs on most operating systems.
  - [ack/2.22](http://beyondgrep.com/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/ack/ack-2.22.eb)  
 ack is a tool like grep, optimized for programmers
- - [annovar/2016Feb01-foss-2016b-Perl-5.24.0](http://annovar.openbioinformatics.org/en/latest/ )  
-ANNOVAR is an efficient software tool to utilize update-to-date information   to functionally annotate genetic variants detected from diverse genomes (including human   genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others).
+ - [annovar/2018Dec04](http://annovar.openbioinformatics.org/en/latest/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/annovar/annovar-2018Dec04.eb)  
+ANNOVAR is an efficient software tool to utilize update-to-date
+ information to functionally annotate genetic variants detected from diverse
+ genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,
+ yeast and many others).
  - [ant/1.9.7-Java-1.8.0_92](http://ant.apache.org/)  
 Apache Ant is a Java library and command-line tool whose mission is to drive processes described in
  build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of
@@ -1209,6 +1224,9 @@ matplotlib is a python 2D plotting library which produces publication quality fi
  and ipython shell, web application servers, and six graphical user interface toolkits.
  - [medaka/0.4.3-foss-2016b-Python-3.6.6](https://nanoporetech.github.io/medaka)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/medaka/medaka-0.4.3-foss-2016b-Python-3.6.6.eb)  
 medaka is a tool to create a consensus sequence of nanopore sequencing data.
+ - [megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4](https://github.com/nanoporetech)  
+Megalodon provides "basecalling augmentation" for raw nanopore
+ sequencing reads, including direct, reference-guided SNP and modified base calling.
  - [minimap2/2.13-foss-2016b](https://lh3.github.io/minimap2)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/minimap2/minimap2-2.13-foss-2016b.eb)  
 A versatile pairwise aligner for genomic and spliced nucleotide sequences.
  - [mixcr/2.1.5-foss-2016b](https://github.com/milaboratory/mixcr)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/mixcr/mixcr-2.1.5-foss-2016b.eb)  
@@ -1287,6 +1305,10 @@ parasail is a SIMD C (C99) library containing implementations
 PatchELF is a small utility to modify the dynamic linker and RPATH of ELF executables.
  - [pdfgrep/2.0.1-foss-2016b](https://pdfgrep.org/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/pdfgrep/pdfgrep-2.0.1-foss-2016b.eb)  
 a commandline utility to search text in PDF files
+ - [peer-master/1.0.0-foss-2016b](https://www.sanger.ac.uk/science/tools/peer)  
+PEER is a collection of Bayesian approaches to infer hidden
+ determinants and their effects from gene expression profiles using factor
+ analysis methods. 
  - [pgadmin3/1.22.1-foss-2016a](https://www.pgadmin.org/ )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/pgadmin3/pgadmin3-1.22.1-foss-2016a.eb)  
 pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL
  - [philosopher/1.4.5](https://github.com/Nesvilab/philosopher/wiki)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-1.4.5.eb)  

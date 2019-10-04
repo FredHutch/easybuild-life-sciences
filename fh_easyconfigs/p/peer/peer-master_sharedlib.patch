@@ -1,12 +1,13 @@
 diff -ruN peer-master.org/src/CMakeLists.txt peer-master/src/CMakeLists.txt
 --- peer-master.org/src/CMakeLists.txt	2012-05-08 10:21:09.000000000 -0700
-+++ peer-master/src/CMakeLists.txt	2019-09-19 16:43:24.417452000 -0700
-@@ -16,12 +16,16 @@
++++ peer-master/src/CMakeLists.txt	2019-09-24 14:36:28.290009000 -0700
+@@ -16,12 +16,17 @@
    endif(SILENT_PEER)
  endif(DEBUG_PEER)
  
 +add_library(peer SHARED bayesnet.cpp array_helper.cpp sim.cpp
 +vbfa.cpp sparsefa.cpp)
++
  add_library(peerlib STATIC bayesnet.cpp array_helper.cpp sim.cpp
  vbfa.cpp sparsefa.cpp)
  
