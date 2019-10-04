@@ -717,6 +717,7 @@ exts_list = [
     ('MatrixEQTL', '2.2'),
     ('doBy', '4.6-2'),
     ('refGenome', '1.7.7'),
+    ('IDSpatialStats', '0.3.5'),
 ]
 
 sanity_check_paths = {

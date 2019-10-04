@@ -18,8 +18,13 @@ dependencies = [
 
 exts_defaultclass = 'RPackage'
 
+configopts = "--with-pic --enable-threads --enable-R-shlib"
+installopts = '--configure-vars="INCLUDE_DIR=$CPATH LIB_DIR=$LD_LIBRARY_PATH"'
+
 exts_list = [
-    (name, version),
+    (name, version, {
+        'patches': ['peer_libpath.patch'],
+    }),
 ]
 
 sanity_check_paths = {

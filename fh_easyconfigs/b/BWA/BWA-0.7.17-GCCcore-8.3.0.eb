@@ -19,20 +19,20 @@ description = """BWA is a software package for mapping DNA sequences against a l
  recommended as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack
  for 70-100bp Illumina reads."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
 
 source_urls = ['https://github.com/lh3/bwa/archive']
 sources = ['v%(version)s.tar.gz']
 checksums = ['980b9591b61c60042c4a39b9e31ccaad8d17ff179d44d347997825da3fdf47fd']
 
 dependencies = [
+    ('binutils', '2.32'),
     ('zlib', '1.2.11'),
-    ('Perl', '5.28.0'),
 ]
 
 files_to_copy = [
-    (['bwa', 'qualfa2fq.pl', 'xa2multi.pl'], 'bin'),
-    (['*.h'], 'include'),
+    (["bwa"], "bin"),
+    (["bwa.h", "bamlite.h"], "include"),
 ]
 
 sanity_check_paths = {
@@ -40,5 +40,4 @@ sanity_check_paths = {
     'dirs': [],
 }
 
-postinstallcmds = ['cd %(installdir)s/include && ln -s ../include bwa']
 moduleclass = 'bio'

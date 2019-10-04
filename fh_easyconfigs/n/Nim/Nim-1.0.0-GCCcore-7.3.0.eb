@@ -1,0 +1,42 @@
+# Built with EasyBuild version 3.9.2 on 2019-08-22_10-55-18
+name = 'Nim'
+version = '1.0.0'
+
+homepage = 'https://nim-lang.org/'
+description = "Nim is a systems and applications programming language."
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+source_urls = ['https://nim-lang.org/download/']
+sources = [SOURCELOWER_TAR_XZ]
+
+builddependencies = [('binutils', '2.30')]
+dependencies = [('libreadline', '7.0')]
+
+moduleclass = 'lang'
+
+# Build statistics
+buildstats = [{
+    "build_time": 182.36,
+    "command_line": ["--buildpath='/app/easybuild/build'", "--git-working-dirs-path='/home/jfdey/git/easybuild-easyconfigs/easybuild'", "--github-user='fizwit'", '--group-writable-installdir', "--installpath='/app/easybuild/software'", "--installpath-modules='/app/easybuild/modules'", "--installpath-software='/app/easybuild/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/easybuild/ebfiles_repo'", "--robot-paths=':/app/easybuild/fh_easyconfigs'", "--sourcepath='/app/easybuild/sources'", "--umask='002'", 'Nim-0.19.2-GCCcore-7.3.0.eb'],
+    "core_count": 8,
+    "cpu_model": "Common KVM processor",
+    "cpu_speed": 2899.998,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "3.9.2",
+    "easybuild-framework_version": "3.9.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/easybuild/software/GCCcore/7.3.0/libexec/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-gold=default --enable-plugins --enable-ld --with-plugin-ld=ld.gold --prefix=/app/easybuild/software/GCCcore/7.3.0 --with-local-prefix=/app/easybuild/software/GCCcore/7.3.0 --enable-bootstrap --with-isl=/app/easybuild/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage2_stuff; Thread model: posix; gcc version 7.3.0 (GCC) ; ",
+    "glibc_version": "2.19",
+    "hostname": "rhino-d",
+    "install_size": 32194948,
+    "modules_tool": ('Lmod', '/app/Lmod/lmod/lmod/libexec/lmod', '7.7.14'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "14.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.16 (default, Mar 26 2019, 10:00:46) ; [GCC 4.8.4]",
+    "system_gcc_path": "/app/easybuild/software/GCCcore/7.3.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1566496518,
+    "total_memory": 32048,
+}]

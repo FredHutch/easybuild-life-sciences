@@ -1704,7 +1704,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/a/argh/'],
     }),
     ('cx_Freeze', '5.1.1', {  # cli cxfreeze
-        'modulename':  'cxfreeze',
+        'modulename':  False,
         'source_urls': ['https://pypi.python.org/packages/source/c/cx_Freeze/'],
     }),
     ('DataShape', '0.5.2', {
@@ -2306,6 +2306,19 @@ exts_list = [
     ('Parsley', '1.3', {
         'modulename': 'parsley',
     }),
+    ('torch', '1.2.0', {
+        'source_tmpl': '%(name)s-%(version)s-cp37-cp37m-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    ('loompy', '2.0.17', {
+    }),
+    ('hyperopt', '0.1.2', {
+    }),
+    ('scvi', '0.4.1'),
+    ('DCA', '0.2.3', {
+        'modulename': 'dca',
+    }),
+
 ]
 
 #modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

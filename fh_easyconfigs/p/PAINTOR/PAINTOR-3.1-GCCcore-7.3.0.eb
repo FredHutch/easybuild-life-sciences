@@ -1,0 +1,38 @@
+# EasyBuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center  https://www.fredhutch.org/
+# Seattle US
+easyblock = 'MakeCp'
+name = 'PAINTOR'
+version = '3.1'
+
+homepage = 'https://github.com/gkichaev/PAINTOR_V3.0'
+description = """PAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical
+ fine-mapping method that integrates functional genomic data with association strength
+ from potentially multiple populations (or traits) to prioritize variants for follow-up
+ analysis"""
+
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
+
+source_urls = ['https://github.com/gkichaev/PAINTOR_V3.0/archive']
+sources = ['master.zip'] # open issue to tag release
+
+dependencies = [
+    ('NLopt', '2.6.1'),
+]
+
+files_to_copy = [
+    (['PAINTOR'], 'bin'),
+    'SampleData',
+    'PAINTOR_Utilities',
+]
+
+sanity_check_paths = {
+    'files': ['bin/PAINTOR'],
+    'dirs': ['bin', 'SampleData']
+}
+
+modloadmsg = 'SampleData is located here: $EBROOTPAINTOR/SampleData\n'
+
+moduleclass = 'bio'

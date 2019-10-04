@@ -20,7 +20,7 @@ dependencies = [
 
 #configopts = "LDFLAGS='-lcurl -lcrypto'"
 
-files_to_copy = [(['fml.h'], 'include'),
+files_to_copy = [(['*.h'], 'include'),
     (['libfml.a'], 'lib'),
 ]
 

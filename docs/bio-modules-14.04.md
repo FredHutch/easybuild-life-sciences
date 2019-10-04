@@ -180,7 +180,7 @@ Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and pr
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis   of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kent_tools/Kent_tools-20181218-linux.x86_64.eb)  
 Kent tools: collection of tools used by the UCSC genome browser.
- - [Keras/2.2.4-foss-2016b-Python-3.6.6](https://keras.io/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Keras/Keras-2.2.4-foss-2016b-Python-3.6.6.eb)  
+ - [Keras/2.3.0-foss-2016b-Python-3.7.4](https://keras.io/)  
 Keras is a minimalist, highly modular neural networks library, written in Python and
 capable of running on top of either TensorFlow or Theano.
  - [Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0](http://www.ccb.jhu.edu/software/kraken2/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2016b-Perl-5.28.0.eb)  
@@ -232,6 +232,11 @@ NanoOK (pronounced na-nook) is a tool for extraction, alignment and analysis of 
 NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNNs) platform for research in medical image analysis and image-guided therapy.
  - [Osi/0.108.4-foss-2016b](https://github.com/coin-or/Osi)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/o/Osi/Osi-0.108.4-foss-2016b.eb)  
 Osi (Open Solver Interface) provides an abstract base class to a generic linear programming (LP) solver, along with derived classes for specific solvers. Many applications may be able to use the Osi to insulate themselves from a specific LP solver.
+ - [PAINTOR/3.1-GCCcore-7.3.0](https://github.com/gkichaev/PAINTOR_V3.0)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PAINTOR/PAINTOR-3.1-GCCcore-7.3.0.eb)  
+PAINTOR Probabilistic Annotation INtegraTOR. PAINTOR is a statistical
+ fine-mapping method that integrates functional genomic data with association strength
+ from potentially multiple populations (or traits) to prioritize variants for follow-up
+ analysis
  - [PANDAseq/2.11-foss-2016b](https://github.com/neufeld/pandaseq)  
 PANDAseq assembles Illumina Solexa overlapping pair-end reads.
  - [PEAR/0.9.11-foss-2016b](http://sco.h-its.org/exelixis/web/software/pear/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/PEAR/PEAR-0.9.11-foss-2016b.eb)  
@@ -271,6 +276,13 @@ RELION (for REgularised LIkelihood OptimisatioN, pronounce
 rely-on) is a stand-alone computer program that employs an empirical Bayesian
 approach to refinement of (multiple) 3D reconstructions or 2D class averages in
 electron cryo-microscopy (cryo-EM).
+ - [RNA-SeQC/2.3.4-foss-2016b](https://software.broadinstitute.org/cancer/cga/rna-seqc)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/r/RNA-SeQC/RNA-SeQC-2.3.4-foss-2016b.eb)  
+RNA-SeQC is a java program which computes a series of quality control metrics for
+ RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab
+ delimited files of metrics data. This program can be valuable for comparing sequencing quality
+ across different samples or experiments to evaluate different experimental parameters. It can
+ also be run on individual samples as a means of quality control before continuing with downstream
+ analysis.
  - [RSeQC/3.0.0-foss-2016b-Python-3.6.6](http://rseqc.sourceforge.net/)  
 RSeQC provides a number of useful modules that can 
  comprehensively evaluate high throughput sequence data especially RNA-seq 
@@ -308,7 +320,7 @@ SYMPHONY is an open-source solver for mixed-integer linear programs (MILPs) writ
 Sniffles is a structural variation caller using third generation sequencing (PacBio or Oxford Nanopore). It detects all types of SVs (10bp+) using evidence from split-read alignments, high-mismatch regions, and coverage analysis.
  - [TRF/4.09-linux64-fh](https://tandem.bu.edu/trf/trf.html)  
 Tandem repeats finder: a program to analyze DNA sequences. Legacy version.
- - [Theano/1.0.3-foss-2016b-Python-3.6.6](http://deeplearning.net/software/theano)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Theano/Theano-1.0.3-foss-2016b-Python-3.6.6.eb)  
+ - [Theano/1.0.4-foss-2016b-Python-3.7.4](http://deeplearning.net/software/theano)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Theano/Theano-1.0.4-foss-2016b-Python-3.7.4.eb)  
 Theano is a Python library that allows you to define, optimize,
 and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
  - [TopHat/2.1.1-foss-2016b](http://ccb.jhu.edu/software/tophat/ )   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/TopHat/TopHat-2.1.1-foss-2016b.eb)  
@@ -341,8 +353,11 @@ The Vienna RNA Package consists of a C code library and several
 stand-alone programs for the prediction and comparison of RNA secondary structures.
  - [Wandy/Feb2_2015-foss-2016b-Java-1.8.0_92](http://bioinformaticstools.mayo.edu/research/wandy/ )  
 Wandy is designed for Copy Number Variation (CNV) and Aneuploidy detection from large genomes such as human. It takes a sorted BAM file as input and report predicted chromosome regions that have amplifications or deletions using LOG2 ratio, generate graphic reports.
- - [annovar/2016Feb01-foss-2016b-Perl-5.24.0](http://annovar.openbioinformatics.org/en/latest/ )  
-ANNOVAR is an efficient software tool to utilize update-to-date information   to functionally annotate genetic variants detected from diverse genomes (including human   genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others).
+ - [annovar/2018Dec04](http://annovar.openbioinformatics.org/en/latest/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/annovar/annovar-2018Dec04.eb)  
+ANNOVAR is an efficient software tool to utilize update-to-date
+ information to functionally annotate genetic variants detected from diverse
+ genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,
+ yeast and many others).
  - [assembly-stats/1.0.0-foss-2016b](https://github.com/sanger-pathogens/assembly-stats)  
 Get assembly statistics from FASTA and FASTQ files
  - [ataqv/0.9.5-foss-2016b](https://github.com/ParkerLab/ataqv)  
@@ -432,6 +447,9 @@ A probabilistic framework for structural variant discovery.
 Magic-BLAST is a new tool for mapping large sets of next-generation RNA or DNA sequencing runs against a whole genome or transcriptome.
  - [medaka/0.4.3-foss-2016b-Python-3.6.6](https://nanoporetech.github.io/medaka)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/medaka/medaka-0.4.3-foss-2016b-Python-3.6.6.eb)  
 medaka is a tool to create a consensus sequence of nanopore sequencing data.
+ - [megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4](https://github.com/nanoporetech)  
+Megalodon provides "basecalling augmentation" for raw nanopore
+ sequencing reads, including direct, reference-guided SNP and modified base calling.
  - [minimap2/2.13-foss-2016b](https://lh3.github.io/minimap2)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/minimap2/minimap2-2.13-foss-2016b.eb)  
 A versatile pairwise aligner for genomic and spliced nucleotide sequences.
  - [mixcr/2.1.5-foss-2016b](https://github.com/milaboratory/mixcr)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/mixcr/mixcr-2.1.5-foss-2016b.eb)  
@@ -466,6 +484,10 @@ Guppy software supports MinIT and MinION instruments from
 parasail is a SIMD C (C99) library containing implementations
  of the Smith-Waterman (local), Needleman-Wunsch (global), and semi-global
  pairwise sequence alignment algorithms. 
+ - [peer-master/1.0.0-foss-2016b](https://www.sanger.ac.uk/science/tools/peer)  
+PEER is a collection of Bayesian approaches to infer hidden
+ determinants and their effects from gene expression profiles using factor
+ analysis methods. 
  - [philosopher/1.4.5](https://github.com/Nesvilab/philosopher/wiki)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-1.4.5.eb)  
 Philosopher provides easy access to third-party tools and custom algorithms
  allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated
