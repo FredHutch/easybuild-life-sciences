@@ -2312,8 +2312,7 @@ exts_list = [
     }),
     ('loompy', '2.0.17', {
     }),
-    ('hyperopt', '0.1.2', {
-    }),
+    ('hyperopt', '0.1.2'),
     ('scvi', '0.4.1'),
     ('DCA', '0.2.3', {
         'modulename': 'dca',

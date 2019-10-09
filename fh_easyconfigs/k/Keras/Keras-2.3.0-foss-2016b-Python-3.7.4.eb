@@ -16,20 +16,25 @@ dependencies = [
     ('Theano', '1.0.4', versionsuffix),
     ('h5py', '2.9.0', versionsuffix),
     ('PyYAML', '5.1.2', versionsuffix),
+    ('scikit-learn', '0.21.2', versionsuffix),
 ]
 
 use_pip = True
 
 exts_list = [
     ('Keras-Applications', '1.0.8', {
+        'modulename': 'keras_applications',
         'source_urls': ['https://pypi.python.org/packages/source/K/Keras-Applications'],
         'source_tmpl': 'Keras_Applications-%(version)s.tar.gz',
     }),
     ('Keras-Preprocessing', '1.1.0', {
+        'modulename': 'keras_preprocessing',
         'source_urls': ['https://pypi.python.org/packages/source/K/Keras-Preprocessing'],
         'source_tmpl': 'Keras_Preprocessing-%(version)s.tar.gz',
     }),
+    ('kopt', '0.1.0'),
     (name, version, {
+        'modulename': 'keras',
         'source_urls': ['https://pypi.python.org/packages/source/K/Keras'],
     }),
 ]
