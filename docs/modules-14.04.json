@@ -4842,6 +4842,24 @@
             ]
         }
     },
+    "mofapy": {
+        "/app/easybuild/modules/bio/mofapy/1.2-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Multi-Omics Factor Analysis, a statistical framework for the integration of multi-omics data",
+            "Version": "1.2-foss-2016b-Python-3.7.4",
+            "fullName": "mofapy/1.2-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nMulti-Omics Factor Analysis, a statistical framework for the integration of multi-omics data\n\n\nMore information\n================\n - Homepage: https://github.com/bioFAM/MOFA\n",
+            "hidden": false,
+            "pV": "000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/mofapy/1.2-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Multi-Omics Factor Analysis, a statistical framework for the integration of multi-omics data",
+                "Homepage: https://github.com/bioFAM/MOFA"
+            ]
+        }
+    },
     "mrsFAST": {
         "/app/easybuild/modules/bio/mrsFAST/3.3.11-foss-2016b": {
             "Description": "mrsFAST is designed to map short reads to reference genome assemblies; in a fast and memory-efficient manner. mrsFAST is a cache-oblivous short read mapper that optimizes cache usage to get higher performance. - Homepage: http://sfu-compbio.github.io/mrsfast/ ",
