@@ -180,7 +180,7 @@ Evaluation of the antibody repertoire by analyzing HTS data. Manipulation and pr
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis   of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
  - [Kent_tools/20181218-linux.x86_64](http://genome.cse.ucsc.edu/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kent_tools/Kent_tools-20181218-linux.x86_64.eb)  
 Kent tools: collection of tools used by the UCSC genome browser.
- - [Keras/2.3.0-foss-2016b-Python-3.7.4](https://keras.io/)  
+ - [Keras/2.3.0-foss-2016b-Python-3.7.4](https://keras.io/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Keras/Keras-2.3.0-foss-2016b-Python-3.7.4.eb)  
 Keras is a minimalist, highly modular neural networks library, written in Python and
 capable of running on top of either TensorFlow or Theano.
  - [Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0](http://www.ccb.jhu.edu/software/kraken2/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/k/Kraken2/Kraken2-2.0.7-beta-foss-2016b-Perl-5.28.0.eb)  
@@ -447,13 +447,15 @@ A probabilistic framework for structural variant discovery.
 Magic-BLAST is a new tool for mapping large sets of next-generation RNA or DNA sequencing runs against a whole genome or transcriptome.
  - [medaka/0.4.3-foss-2016b-Python-3.6.6](https://nanoporetech.github.io/medaka)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/medaka/medaka-0.4.3-foss-2016b-Python-3.6.6.eb)  
 medaka is a tool to create a consensus sequence of nanopore sequencing data.
- - [megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4](https://github.com/nanoporetech)  
+ - [megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4](https://github.com/nanoporetech)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/megalodon/megalodon-1.0.0-alpha.1-foss-2016b-Python-3.7.4.eb)  
 Megalodon provides "basecalling augmentation" for raw nanopore
  sequencing reads, including direct, reference-guided SNP and modified base calling.
  - [minimap2/2.13-foss-2016b](https://lh3.github.io/minimap2)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/minimap2/minimap2-2.13-foss-2016b.eb)  
 A versatile pairwise aligner for genomic and spliced nucleotide sequences.
  - [mixcr/2.1.5-foss-2016b](https://github.com/milaboratory/mixcr)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/mixcr/mixcr-2.1.5-foss-2016b.eb)  
 MiXCR is a universal software for fast and accurate analysis of T- and B- cell receptor repertoire sequencing data.
+ - [mofapy/1.2-foss-2016b-Python-3.7.4](https://github.com/bioFAM/MOFA)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/mofapy/mofapy-1.2-foss-2016b-Python-3.7.4.eb)  
+Multi-Omics Factor Analysis, a statistical framework for the integration of multi-omics data
  - [nanofilt/2.5.0-foss-2016b-Python-3.6.6](https://github.com/wdecoster/nanofilt)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/nanofilt/nanofilt-2.5.0-foss-2016b-Python-3.6.6.eb)  
 Filtering and trimming of long read sequencing data.
  - [nanopolish/0.7.1-foss-2016b](http://simpsonlab.github.io/2015/10/07/nanopolish-v0.4.0/)   [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/n/nanopolish/nanopolish-0.7.1-foss-2016b.eb)  
