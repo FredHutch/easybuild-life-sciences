@@ -21,7 +21,7 @@ docs:
         url: /rissues/
       - title: "Python Modules"
         url: /python/
-      - title: "Python Software"
+      - title: "Python Bundles"
         url: /python_bundles
       - title: "Dependency Graphs"
         url: /dot/
