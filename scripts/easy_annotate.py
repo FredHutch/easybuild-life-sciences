@@ -5,9 +5,8 @@ import sys
 import argparse
 import json
 from datetime import date
-import requests
-import xmlrpclib
 from framework import FrameWork
+import requests
 
 """
 Easy_Annotate creates Markdown documentation from R and Python easyconfigs.
@@ -16,6 +15,9 @@ each package to its project page.
 """
 
 """ Release Notes
+    2.0.4  python.get_package_url -convert to requests
+    Python 3.x updates pkgs.keys()  change to list(pkgs)
+
     2.0.3 Improve dependent package searches for Python easyconfigs to include
     PythonPackages. framework has been updated to check the dependenices for any
     easyconfig with a version suffix of "Python-%(pyver)s". If found locate the
@@ -30,7 +32,7 @@ each package to its project page.
 
     Version 2 create Markdown output
 
-    Versioin 1.x create HTML output
+    Version 1.x create HTML output
 """
 
 __author__ = "John Dey"
@@ -100,7 +102,7 @@ class ExtsList(object):
             pkg_info[pkg_name]['version'] = version
             pkg_info[pkg_name]['url'] = url
             pkg_info[pkg_name]['description'] = description
-        pkg_list = pkg_info.keys()
+        pkg_list = list(pkg_info)
         pkg_list.sort()
         for key in pkg_list:
             if pkg_info[key]['url'] == 'not found':
@@ -211,19 +213,23 @@ class PythonExts(ExtsList):
         self.pkg_dict = None
 
     def get_package_url(self, pkg_name):
-        client = xmlrpclib.ServerProxy('https://pypi.python.org/pypi')
-        url = 'not found'
+        """ Python PYPI """
+        req = 'https://pypi.org/pypi/%s/json' % pkg_name
+        resp = requests.get(req)
         description = ''
-        xml_vers = client.package_releases(pkg_name)
-        if xml_vers:
-            version = xml_vers[0]
+        if resp.status_code != 200:
+            return 'not found', ''
+        project = resp.json()
+        if 'description' in project['info']:
+            description = project['info']['description']
+        if 'home_page' in project['info']:
+            url =  project['info']['home_page']
+        elif 'project_urls' in project['info']:
+            url =  project['info']['project_urls']['Homepage']
+        elif 'project_url' in project['info']:
+            url =  project['info']['project_url']
         else:
-            return url, description
-        pkg_data = client.release_data(pkg_name, version)
-        if pkg_data and 'summary' in pkg_data:
-            description = pkg_data['summary']
-        if pkg_data and 'package_url' in pkg_data:
-            url = pkg_data['package_url']
+            url = project['info']['package_url']
         return url, description
 
 

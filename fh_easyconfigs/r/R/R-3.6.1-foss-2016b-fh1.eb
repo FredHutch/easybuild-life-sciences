@@ -722,12 +722,7 @@ exts_list = [
     ('sctransform', '0.2.0'),
     ('leiden', '0.3.1'),
     ('rsvd', '1.0.2'),
-    ('seurat', '3.1.1', {
-        'source_urls': ['https://github.com/cole-trapnell-lab/monocle3/archive'],
-        'source_urls': ['https://github.com/satijalab/seurat/archive/'],
-        'source_tmpl': 'v%(version)s.tar.gz',
-        'filename': '%(name)s_%(version)s.tar.gz',
-    }),
+    ('Seurat', '3.1.1'),
 ]
 
 sanity_check_paths = {
