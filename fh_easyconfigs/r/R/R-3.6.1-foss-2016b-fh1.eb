@@ -723,6 +723,9 @@ exts_list = [
     ('leiden', '0.3.1'),
     ('rsvd', '1.0.2'),
     ('Seurat', '3.1.1'),
+
+    ('faraway', '1.0.7'),
+    ('epitools', '0.5-10'),
 ]
 
 sanity_check_paths = {
