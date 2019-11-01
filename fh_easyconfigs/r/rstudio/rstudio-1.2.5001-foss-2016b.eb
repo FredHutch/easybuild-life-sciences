@@ -1,0 +1,32 @@
+# easybuild easyconfig
+#
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutchenson Cancer Research Center
+
+easyblock = 'Tarball'
+
+name = 'rstudio'
+version = '1.2.5001'
+
+homepage = 'https://github.com/rstudio/rstudio'
+description = """RStudio is an integrated development environment (IDE) for the R programming language."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://download1.rstudio.org/desktop/trusty/amd64']
+sources = ['%(name)s-%(version)s-amd64-debian.tar.gz']
+
+dependencies = [
+    ('libglvnd', '1.2.0', '-GCCcore-5.4.0', True),
+    ('Mesa', '12.0.2'),
+]
+
+sanity_check_paths = {
+    'dirs': ['bin', 'lib'],
+    'files': ['bin/rstudio',
+              'lib/libQt5Core.%s.5' % SHLIB_EXT,
+              ],
+}
+
+moduleclass = 'lang'
