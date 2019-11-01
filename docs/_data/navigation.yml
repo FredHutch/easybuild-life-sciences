@@ -22,7 +22,7 @@ docs:
       - title: "Python Modules"
         url: /python/
       - title: "Python Bundles"
-        url: /python_bundles
+        url: /python_bundles/
       - title: "Dependency Graphs"
         url: /dot/
       - title: "About"
