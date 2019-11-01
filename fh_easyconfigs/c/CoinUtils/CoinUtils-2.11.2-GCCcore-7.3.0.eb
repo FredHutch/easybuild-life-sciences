@@ -10,12 +10,16 @@ description = """CoinUtils (Coin-OR Utilities) is an open-source collection of c
  and functions that are generally useful to more than one COIN-OR project. A collection
  of routines for manipulating sparse matrices and other matrix operations"""
 
-toolchain = {'name': 'foss', 'version': '2018b'}
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
 
 source_urls = ['https://github.com/coin-or/CoinUtils/archive/releases']
 sources = ['%(version)s.tar.gz']
 
 configopts = ""
+
+builddependencies = [
+    ('binutils', '2.30'),
+]
 
 sanity_check_paths = {
     'dirs':  ['include',

@@ -2317,7 +2317,7 @@ exts_list = [
     ('DCA', '0.2.3', {
         'modulename': 'dca',
     }),
-
+    ('yagdspy', '1.0'),
 ]
 
 #modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
