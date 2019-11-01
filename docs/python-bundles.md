@@ -1,6 +1,7 @@
 ---
 title: Python Bundles
 layout: single
+permalink: /python-bundles/
 sidebar:
    nav: "docs"
 ---
