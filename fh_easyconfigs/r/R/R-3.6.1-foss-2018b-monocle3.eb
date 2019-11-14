@@ -6,51 +6,46 @@ versionsuffix = '-monocle3'
 homepage = 'http://www.r-project.org/'
 description = """R is a free software environment for statistical computing and graphics."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 
 source_urls = ['https://cloud.r-project.org/src/base/R-%(version_major)s']
 sources = [SOURCE_TAR_GZ]
 
 builddependencies = [
-    ('pkg-config', '0.29.1'),
+    ('pkg-config', '0.29.2'),
 ]
 dependencies = [
-    ('X11', '20160819'),
-    ('Mesa', '12.0.2'),
+    ('X11', '20180604'),
+    ('Mesa', '18.1.1'),
     ('libGLU', '9.0.0'),
-    ('cairo', '1.14.6'),
-    ('libreadline', '6.3'),
-    ('ncurses', '6.0'),
+    ('cairo', '1.14.12'),
+    ('libreadline', '7.0'),
+    ('ncurses', '6.1'),
     ('bzip2', '1.0.6'),
-    ('XZ', '5.2.2'),
-    ('zlib', '1.2.8'),
-    ('SQLite', '3.13.0'),
-    ('PCRE', '8.38'),
-    ('libpng', '1.6.24'),  # for plotting in R
-    ('libjpeg-turbo', '1.5.0'),  # for plottting in R
-    ('LibTIFF', '4.0.6'),
+    ('XZ', '5.2.4'),
+    ('zlib', '1.2.11'),
+    ('SQLite', '3.24.0'),
+    ('PCRE', '8.41'),
+    ('libpng', '1.6.34'),  # for plotting in R
+    ('libjpeg-turbo', '2.0.0'),  # for plottting in R
+    ('LibTIFF', '4.0.9'),
     ('Java', '1.8', '', True),
-    ('Tk', '8.6.7'),  # for tcltk
-    ('cURL', '7.49.1'),  # for RCurl
-    ('libxml2', '2.9.4'),  # for XML
-    ('GDAL', '2.2.3'),  # for rgdal
-    ('GEOS', '3.6.2', '-Python-3.6.6'), # sf
-    ('PROJ', '5.0.0'),  # for rgdal
-    ('GMP', '6.1.1'),  # for igraph
-    ('GLPK', '4.61'), # for igraph
+    ('Tk', '8.6.8'),  # for tcltk
+    ('cURL', '7.60.0'),  # for RCurl
+#GDAL
+    ('libxml2', '2.9.8'),  # for XML
+    ('GMP', '6.1.2'),  # for igraph
     ('NLopt', '2.4.2'),  # for nloptr
+    ('FFTW', '3.3.8'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
     ('ICU', '61.1'),  # for rJava & gdsfmt
-    ('HDF5', '1.8.18'),  # for hdf5r
-    ('UDUNITS', '2.1.24'),  # for units
-    ('GSL', '2.3'),  # for RcppGSL
-    ('ImageMagick', '7.0.5-10'),  # for magick, animation
-    ('OpenSSL', '1.1.1d'), 
-    ('libgcrypt', '1.8.1'),
-
+    ('HDF5', '1.10.2'),  # for hdf5r
+    ('UDUNITS', '2.2.26'),  # for units
+    ('GSL', '2.5'),  # for RcppGSL
+    ('ImageMagick', '7.0.8-11'),  # for animation
 ]
 
-#osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
 
 configopts = "--with-pic --enable-threads --enable-R-shlib"
 # some recommended packages may fail in a parallel build (e.g. Matrix), and we're installing them anyway below
@@ -58,7 +53,7 @@ configopts += " --with-recommended-packages=no"
 
 # specify that at least EasyBuild v3.5.0 is required,
 # since we rely on the updated easyblock for R to configure correctly w.r.t. BLAS/LAPACK
-easybuild_version = '3.5.0'
+easybuild_version = '3.9.0'
 
 exts_default_options = {
     'source_urls': [
