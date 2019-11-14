@@ -1,0 +1,40 @@
+easyblock = 'CMakeMake'
+
+name = 'raxml-gn'
+version = '0.9.0'
+
+homepage = "https://github.com/amkozlov/raxml-ng"
+description = """RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality
+ criterion. Its search heuristic is based on iteratively performing a series of Subtree Pruning and Regrafting
+ (SPR) moves, which allows to quickly navigate to the best-known ML tree."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+#toolchainopts = {'cstd': 'gnu++11'}
+
+source_urls = ["https://github.com/amkozlov/raxml-ng/archive"]
+sources = ["%(version)s.tar.gz"]
+
+builddependencies = [
+    ('binutils', '2.26'),
+    ('CMake', '3.7.1'),
+    #('Python', '2.7.14', '-foss-2016b-bare', True),
+]
+
+dependencies = [
+    ('libpll', '0.3.2'),
+]
+
+#configopts = '-DBUILD_SHARED_LIBS=ON '
+## required to install extra tools in bin/
+#configopts += '-DLLVM_INSTALL_UTILS=ON -DLLVM_TARGETS_TO_BUILD=X86 '
+#configopts += '-DLLVM_ENABLE_ZLIB=ON -DLLVM_ENABLE_RTTI=ON '
+#configopts += '-DCMAKE_BUILD_TYPE=Release '
+
+sanity_check_paths = {
+    'files': ['bin/raxml-gn'],
+    'dirs': ['include'],
+}
+
+separate_build_dir = True
+
+moduleclass = 'bio'
