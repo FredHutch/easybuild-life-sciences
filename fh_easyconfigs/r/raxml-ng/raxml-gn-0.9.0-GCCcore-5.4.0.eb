@@ -22,9 +22,14 @@ builddependencies = [
 
 dependencies = [
     ('libpll', '0.3.2'),
+    ('GMP', '6.1.1', '-GCC-5.4.0-2.26', True), # from terraphast
+    ('terraphast', ''),
+
 ]
 
-#configopts = '-DBUILD_SHARED_LIBS=ON '
+separate_build_dir = True
+
+configopts = '-DUSE_LIBPLL_CMAKE=false '
 ## required to install extra tools in bin/
 #configopts += '-DLLVM_INSTALL_UTILS=ON -DLLVM_TARGETS_TO_BUILD=X86 '
 #configopts += '-DLLVM_ENABLE_ZLIB=ON -DLLVM_ENABLE_RTTI=ON '
@@ -35,6 +40,5 @@ sanity_check_paths = {
     'dirs': ['include'],
 }
 
-separate_build_dir = True
 
 moduleclass = 'bio'

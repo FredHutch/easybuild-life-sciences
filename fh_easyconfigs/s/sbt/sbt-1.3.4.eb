@@ -1,0 +1,25 @@
+# easybuild easyconfig
+easyblock = 'Tarball'
+
+name = 'sbt'
+version = '1.3.4'
+
+homepage = 'https://www.scala-sbt.org/'
+description = """Scala's Simple Build Tools, The interactive build tool. Define your tasks in Scala. Run them in parallel from sbt's interactive shell"""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'}
+
+source_urls = ['https://piccolo.link']
+sources = '%(name)s-%(version)s.tgz'
+
+sanity_check_paths = {
+    'files': ['bin/sbt'],
+    'dirs': ['bin', 'conf', 'lib'],
+}
+
+sanity_check_commands = ['sbt --help']
+
+moduleclass = 'tools'
+
+
+

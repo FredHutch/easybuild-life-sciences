@@ -1,0 +1,15 @@
+# requires sbt tools
+# John Dey Nov 27, 2019
+easyblock = ''
+
+name = 'FGBIO'
+version = '1.1.0'
+
+homepage = 'https://github.com/fulcrumgenomics/fgbio'
+description = """A set of tools to analyze genomic data with a focus on Next Generation Sequencing."""
+
+source_urls = ['https://github.com/fulcrumgenomics/fgbio/archive']
+sources ['%(vesion)s.tar.gz']
+
+
+

@@ -1,0 +1,9 @@
+diff -ruN terraphast-master.orig/terraphastII/test/gbenchmark.cpp terraphast-master/terraphastII/test/gbenchmark.cpp
+--- terraphast-master.orig/terraphastII/test/gbenchmark.cpp	2017-11-07 07:04:51.000000000 -0800
++++ terraphast-master/terraphastII/test/gbenchmark.cpp	2019-11-20 16:29:29.366177000 -0800
+@@ -412,4 +412,4 @@
+                   "../../data/subsets/Pyron.nwk",
+                   "../../data/subsets/Pyron.data")->Unit(benchmark::kMillisecond);
+ 
+-BENCHMARK_MAIN()
++BENCHMARK_MAIN();

@@ -1,0 +1,30 @@
+diff -ruN PyTables-3.4.4.orig/setup.py PyTables-3.4.4/setup.py
+--- PyTables-3.4.4.orig/setup.py	2018-06-12 06:53:46.000000000 -0700
++++ PyTables-3.4.4/setup.py	2018-12-03 21:45:52.095878000 -0800
+@@ -326,7 +326,7 @@
+ 
+ 
+ class PosixPackage(BasePackage):
+-    _library_prefixes = ['lib']
++    _library_prefixes = ['', 'lib']
+     _library_suffixes = ['.so', '.dylib', '.a']
+     _runtime_prefixes = _library_prefixes
+     _runtime_suffixes = ['.so', '.dylib']
+@@ -441,7 +441,7 @@
+ 
+ hdf5_package = _Package("HDF5", 'HDF5', 'H5public', *_platdep['HDF5'])
+ hdf5_package.target_function = 'H5close'
+-lzo2_package = _Package("LZO 2", 'LZO2', _cp('lzo/lzo1x'), *_platdep['LZO2'])
++lzo2_package = _Package("LZO 2", 'LZO2', 'lzo1x', *_platdep['LZO2'])
+ lzo2_package.target_function = 'lzo_version_date'
+ lzo1_package = _Package("LZO 1", 'LZO', 'lzo1x', *_platdep['LZO'])
+ lzo1_package.target_function = 'lzo_version_date'
+@@ -886,7 +887,7 @@
+ else:
+     ADDLIBS += ['blosc']
+
+-
++LIBS = [s.lstrip('-l') for s in LIBS]
+ utilsExtension_libs = LIBS + ADDLIBS
+ hdf5Extension_libs = LIBS + ADDLIBS
+ tableExtension_libs = LIBS + ADDLIBS

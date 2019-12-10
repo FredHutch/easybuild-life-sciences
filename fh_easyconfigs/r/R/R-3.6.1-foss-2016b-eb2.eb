@@ -1,7 +1,7 @@
 name = 'R'
 version = '3.6.1'
+versionsuffix = '-eb2'
 biocver = '3.10'
-versionsuffix = '-monocle3'
 
 homepage = 'http://www.r-project.org/'
 description = """R is a free software environment for statistical computing and graphics."""
@@ -33,24 +33,21 @@ dependencies = [
     ('Tk', '8.6.7'),  # for tcltk
     ('cURL', '7.49.1'),  # for RCurl
     ('libxml2', '2.9.4'),  # for XML
-    ('GDAL', '2.2.3'),  # for rgdal
-    ('GEOS', '3.6.2', '-Python-3.6.6'), # sf
-    ('PROJ', '5.0.0'),  # for rgdal
     ('GMP', '6.1.1'),  # for igraph
-    ('GLPK', '4.61'), # for igraph
     ('NLopt', '2.4.2'),  # for nloptr
+    ('FFTW', '3.3.7'),  # for fftw
+    ('libsndfile', '1.0.28'),  # for 
     ('libsndfile', '1.0.28'),  # for seewave
     ('ICU', '61.1'),  # for rJava & gdsfmt
     ('HDF5', '1.8.18'),  # for hdf5r
     ('UDUNITS', '2.1.24'),  # for units
     ('GSL', '2.3'),  # for RcppGSL
     ('ImageMagick', '7.0.5-10'),  # for magick, animation
-    ('OpenSSL', '1.1.1d'), 
-    ('libgcrypt', '1.8.1'),
+    ('GLPK', '4.61'), # for igraph  ?
 
 ]
 
-#osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
 
 configopts = "--with-pic --enable-threads --enable-R-shlib"
 # some recommended packages may fail in a parallel build (e.g. Matrix), and we're installing them anyway below
@@ -65,15 +62,12 @@ exts_default_options = {
         'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
         'http://cran.r-project.org/src/contrib/',  # current version of packages
         'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
-        'http://bioconductor.org/packages/release/bioc/src/contrib/',
-        'http://bioconductor.org/packages/release/data/annotation/src/contrib/',
-        'http://bioconductor.org/packages/release/data/experiment/src/contrib/',
     ],
     'source_tmpl': '%(name)s_%(version)s.tar.gz',
 }
 
 # !! order of packages is important !!
-# packages updated on July 8, 2019
+# packages updated on Nov 25, 2019
 exts_list = [
     'base',
     'datasets',
@@ -92,7 +86,7 @@ exts_list = [
     ('abind', '1.4-5'),
     ('magic', '1.5-9', {
     }),
-    ('Rcpp', '1.0.2'),
+    ('Rcpp', '1.0.3'),
     ('RcppProgress', '0.4.1'),
     ('lpSolve', '5.6.13.3'),
     ('linprog', '0.9-2'),
@@ -131,11 +125,11 @@ exts_list = [
     }),
     ('lazy', '1.2-16', {
     }),
-    ('kernlab', '0.9-27', {
+    ('kernlab', '0.9-29', {
     }),
     ('mime', '0.7', {
     }),
-    ('xfun', '0.10'),
+    ('xfun', '0.11'),
     ('markdown', '1.1', {
     }),
     ('mlbench', '2.1-1', {
@@ -170,7 +164,7 @@ exts_list = [
     }),
     ('ade4', '1.7-13', {
     }),
-    ('AlgDesign', '1.1-7.3', {
+    ('AlgDesign', '1.1-7.3.1', {
     }),
     ('base64enc', '0.1-3', {
     }),
@@ -192,7 +186,7 @@ exts_list = [
     }),
     ('DEoptimR', '1.0-8', {
     }),
-    ('digest', '0.6.22', {
+    ('digest', '0.6.23', {
     }),
     ('fastmatch', '1.1-0', {
     }),
@@ -222,7 +216,7 @@ exts_list = [
     }),
     ('evaluate', '0.14', {
     }),
-    ('logspline', '2.1.14', {
+    ('logspline', '2.1.15', {
     }),
     ('ncbit', '2013.03.29', {
     }),
@@ -268,13 +262,14 @@ exts_list = [
     }),
     ('labeling', '0.3', {
     }),
-    ('R6', '2.4.0', {
+    ('R6', '2.4.1', {
     }),
     ('viridisLite', '0.3.0', {
     }),
-    ('scales', '1.0.0', {
-    }),
-    ('rlang', '0.4.1', {
+    ('farver', '2.0.1'),
+    ('rlang', '0.4.2'),
+    ('lifecycle', '0.1.0'),
+    ('scales', '1.1.0', {
     }),
     ('assertthat', '0.2.1', {
     }),
@@ -298,15 +293,15 @@ exts_list = [
     }),
     ('withr', '2.1.2', {
     }),
-    ('nlme', '3.1-141', {
+    ('nlme', '3.1-142', {
     }),
-    ('mgcv', '1.8-30', {
+    ('mgcv', '1.8-31', {
     }),
     ('ggplot2', '3.2.1', {
     }),
     ('pROC', '1.15.3', {
     }),
-    ('quadprog', '1.5-7', {
+    ('quadprog', '1.5-8', {
     }),
     ('BB', '2019.10-1', {
     }),
@@ -314,7 +309,7 @@ exts_list = [
     }),
     ('fail', '1.3', {
     }),
-    ('rlecuyer', '0.3-4', {
+    ('rlecuyer', '0.3-5', {
     }),
     ('snow', '0.4-3', {
     }),
@@ -330,15 +325,15 @@ exts_list = [
     }),
     ('minqa', '1.2.4', {
     }),
-    ('RcppEigen', '0.3.3.5.0', {
+    ('RcppEigen', '0.3.3.7.0', {
     }),
     ('MatrixModels', '0.4-1', {
     }),
-    ('quantreg', '5.51', {
+    ('quantreg', '5.52', {
     }),
     ('robustbase', '0.93-5', {
     }),
-    ('sp', '1.3-1', {
+    ('sp', '1.3-2', {
     }),
     ('zoo', '1.8-6', {
     }),
@@ -350,7 +345,7 @@ exts_list = [
     }),
     ('rpart', '4.1-15', {
     }),
-    ('survival', '3.1-6', {
+    ('survival', '3.1-7', {
     }),
     ('bindr', '0.1.1', {
     }),
@@ -364,7 +359,6 @@ exts_list = [
     }),
     ('dplyr', '0.8.3', {
     }),
-    ('lifecycle', '0.1.0'),
     ('tidyr', '1.0.0', {
     }),
     ('mnormt', '1.5-5', {
@@ -393,7 +387,7 @@ exts_list = [
     }),
     ('forcats', '0.4.0', {
     }),
-    ('haven', '2.1.1', {
+    ('haven', '2.2.0', {
     }),
     ('pan', '1.6', {
     }),
@@ -457,7 +451,7 @@ exts_list = [
     }),
     ('lava', '1.6.6', {
     }),
-    ('prodlim', '2019.10.13', {
+    ('prodlim', '2019.11.13', {
     }),
     ('pscl', '1.5.2', {
     }),
@@ -485,7 +479,7 @@ exts_list = [
     }),
     ('spatial', '7.3-11', {
     }),
-    ('VGAM', '1.1-1', {
+    ('VGAM', '1.1-2', {
     }),
     ('waveslim', '1.7.5.1', {
     }),
@@ -495,7 +489,7 @@ exts_list = [
     }),
     ('brglm', '0.6.2', {
     }),
-    ('deSolve', '1.24', {
+    ('deSolve', '1.25', {
     }),
     ('tseriesChaos', '0.1-13.1', {
     }),
@@ -537,13 +531,13 @@ exts_list = [
     }),
     ('htmlwidgets', '1.5.1', {
     }),
-    ('knitr', '1.25', {
+    ('knitr', '1.26', {
     }),
     ('rstudioapi', '0.10', {
     }),
     ('htmlTable', '1.13.2', {
     }),
-    ('Hmisc', '4.2-0', {
+    ('Hmisc', '4.3-0', {
     }),
     ('fastcluster', '1.1.25', {
     }),
@@ -604,16 +598,14 @@ exts_list = [
     }),
     ('units', '0.6-5'),
     ('classInt', '0.4-2'),
-    ('sf', '0.8-0', {
-         'installopts': '--configure-args=\"CXXFLAGS=\\"$CXXFLAGS+=-std=c++11\\"\"',
-#                        '--with-proj-lib=$EBROOTPROJ/lib"',
+    ('vegan', '2.5-6', {
     }),
-    ('spdep', '1.1-3'),
-    ('vegan', '2.5-6'),
-    ('adegenet', '2.1.1'),
-    ('rncl', '0.8.3'),
-    ('XML', '3.98-1.20'),
-    ('praise', '1.0.0'),
+    ('rncl', '0.8.3', {
+    }),
+    ('XML', '3.98-1.20', {
+    }),
+    ('praise', '1.0.0', {
+    }),
     ('rprojroot', '1.3-2'),
     ('desc', '1.2.0'),
     ('ps', '1.3.0'),
@@ -621,10 +613,14 @@ exts_list = [
     ('callr', '3.3.2'),
     ('pkgbuild', '1.0.6'),
     ('pkgload', '1.0.2'),
-    ('testthat', '2.3.0'),
-    ('tinytex', '0.17'),
-    ('rmarkdown', '1.16'),
-    ('reshape', '0.8.8'),
+    ('testthat', '2.3.0', {
+    }),
+    ('tinytex', '0.17', {
+    }),
+    ('rmarkdown', '1.17', {
+    }),
+    ('reshape', '0.8.8', {
+    }),
     ('xml2', '1.2.2', {
     }),
     ('triebeard', '0.3.0', {
@@ -633,7 +629,7 @@ exts_list = [
     }),
     ('httpcode', '0.2.0', {
     }),
-    ('crul', '0.8.4', {
+    ('crul', '0.9.0', {
     }),
     ('bold', '0.9.0', {
     }),
@@ -658,15 +654,13 @@ exts_list = [
     ('wikitaxa', '0.3.0', {
     }),
     ('phangorn', '2.5.5'),
-    ('taxize', '0.9.9', {
+    ('taxize', '0.9.91', {
     }),
     ('uuid', '0.1-2', {
     }),
-    ('RNeXML', '2.3.0', {
+    ('RNeXML', '2.4.0', {
     }),
     ('phylobase', '0.8.6', {
-    }),
-    ('adephylo', '1.1-11', {
     }),
     ('magick', '2.2'),
     ('animation', '2.6', {
@@ -689,7 +683,7 @@ exts_list = [
     }),
     ('extrafont', '0.17', {
     }),
-    ('fields', '9.9', {
+    ('fields', '10.0', {
     }),
     ('shapefiles', '0.7', {
     }),
@@ -697,13 +691,14 @@ exts_list = [
     }),
     ('geiger', '2.0.6.2', {
     }),
-    ('glmnet', '2.0-18', {
+    ('shape', '1.4.4'),
+    ('glmnet', '3.0-1', {
     }),
     ('crosstalk', '1.0.0', {
     }),
     ('miniUI', '0.1.1.1', {
     }),
-    ('webshot', '0.5.1', {
+    ('webshot', '0.5.2', {
     }),
     ('manipulateWidget', '0.10.0', {
     }),
@@ -742,9 +737,9 @@ exts_list = [
     }),
     ('polynom', '1.4-0', {
     }),
-    ('polspline', '1.1.16', {
+    ('polspline', '1.1.17', {
     }),
-    ('rms', '5.1-3.1', {
+    ('rms', '5.1-4', {
     }),
     ('RWekajars', '3.9.3-2', {
     }),
@@ -754,7 +749,7 @@ exts_list = [
     }),
     ('tm', '0.7-6', {
     }),
-    ('TraMineR', '2.0-12', {
+    ('TraMineR', '2.0-13', {
     }),
     ('chemometrics', '1.4.2', {
     }),
@@ -802,13 +797,13 @@ exts_list = [
     }),
     ('pbkrtest', '0.4-7', {
     }),
-    ('carData', '3.0-2', {
+    ('carData', '3.0-3', {
     }),
     ('maptools', '0.9-8', {
     }),
     ('zip', '2.0.4', {
     }),
-    ('openxlsx', '4.1.2', {
+    ('openxlsx', '4.1.3', {
     }),
     ('rematch', '1.0.1', {
     }),
@@ -818,7 +813,7 @@ exts_list = [
     }),
     ('rio', '0.5.16', {
     }),
-    ('car', '3.0-4', {
+    ('car', '3.0-5', {
     }),
     ('flashClust', '1.01-2', {
     }),
@@ -854,7 +849,7 @@ exts_list = [
     }),
     ('pheatmap', '1.0.12', {
     }),
-    ('pvclust', '2.0-0', {
+    ('pvclust', '2.2-0', {
     }),
     ('RCircos', '1.2.1', {
     }),
@@ -892,10 +887,6 @@ exts_list = [
     ('spatstat.data', '1.4-0', {
     }),
     ('spatstat', '1.61-0', {
-    }),
-    ('rgdal', '1.4-7', {
-    }),
-    ('gdalUtils', '2.0.1.14', {
     }),
     ('pracma', '2.2.5', {
     }),
@@ -957,15 +948,16 @@ exts_list = [
     }),
     ('EasyABC', '1.5', {
     }),
-    ('shape', '1.4.4', {
-    }),
     ('whisker', '0.4', {
     }),
     ('commonmark', '1.7', {
     }),
-    ('roxygen2', '6.1.1'),
-    ('git2r', '0.25.2'),
-    ('rversions', '2.0.0'),
+    ('roxygen2', '7.0.1', {
+    }),
+    ('git2r', '0.26.1', {
+    }),
+    ('rversions', '2.0.0', {
+    }),
     ('xopen', '1.0.0'),
     ('sessioninfo', '1.1.1'),
     ('rcmdcheck', '1.3.3'),
@@ -976,7 +968,7 @@ exts_list = [
     ('usethis', '1.5.1'),
     ('rex', '1.1.2'),
     ('covr', '3.3.2'),
-    ('DT', '0.9'),
+    ('DT', '0.10'),
     ('devtools', '2.2.1', {
     }),
     ('Rook', '1.1-1', {
@@ -1016,7 +1008,7 @@ exts_list = [
     }),
     ('clusterRepro', '0.9', {
     }),
-    ('randomForestSRC', '2.9.1', {
+    ('randomForestSRC', '2.9.2', {
     }),
     ('sm', '2.2-5.6', {
     }),
@@ -1062,7 +1054,13 @@ exts_list = [
     }),
     ('pbapply', '1.4-2', {
     }),
-    ('qgraph', '1.6.3', {
+    ('tidygraph', '1.1.2'),
+    ('tweenr', '1.0.1'),
+    ('ggforce', '0.3.1'),
+    ('ggrepel', '0.8.1'),
+    ('graphlayouts', '0.5.0'),
+    ('ggraph', '2.0.0'),
+    ('qgraph', '1.6.4', {
     }),
     ('HWxtest', '1.1.9', {
     }),
@@ -1078,7 +1076,7 @@ exts_list = [
     }),
     ('minpack.lm', '1.2-1', {
     }),
-    ('rootSolve', '1.7', {
+    ('rootSolve', '1.8.1', {
     }),
     ('diagram', '1.6.4', {
     }),
@@ -1130,7 +1128,7 @@ exts_list = [
     }),
     ('ranger', '0.11.2', {
     }),
-    ('hexbin', '1.27.3', {
+    ('hexbin', '1.28.0', {
     }),
     ('pryr', '0.1.4', {
     }),
@@ -1154,13 +1152,13 @@ exts_list = [
     }),
     ('shinydashboard', '0.7.1', {
     }),
-    ('rrcov', '1.4-7', {
+    ('rrcov', '1.4-9', {
     }),
     ('WriteXLS', '5.0.0', {
     }),
     ('bst', '0.3-17', {
     }),
-    ('mpath', '0.3-18', {
+    ('mpath', '0.3-20', {
     }),
     ('timereg', '1.9.4', {
     }),
@@ -1178,7 +1176,7 @@ exts_list = [
     }),
     ('RInside', '0.2.15', {
     }),
-    ('limSolve', '1.5.5.3', {
+    ('limSolve', '1.5.6', {
     }),
     ('dbplyr', '1.4.2', {
     }),
@@ -1188,11 +1186,11 @@ exts_list = [
     }),
     ('reprex', '0.3.0', {
     }),
-    ('selectr', '0.4-1', {
+    ('selectr', '0.4-2', {
     }),
-    ('rvest', '0.3.4', {
+    ('rvest', '0.3.5', {
     }),
-    ('tidyverse', '1.2.1', {
+    ('tidyverse', '1.3.0', {
     }),
     ('R.cache', '0.13.0', {
     }),
@@ -1202,11 +1200,11 @@ exts_list = [
     }),
     ('globals', '0.12.4', {
     }),
-    ('future', '1.14.0', {
+    ('future', '1.15.1', {
     }),
     ('gdistance', '1.2-2', {
     }),
-    ('vioplot', '0.3.2', {
+    ('vioplot', '0.3.3', {
     }),
     ('emulator', '1.2-20', {
     }),
@@ -1225,7 +1223,7 @@ exts_list = [
     ('glmmTMB', '0.2.3', {
     }),
     ('spaMM', '3.0.0'),
-    ('DHARMa', '0.2.4', {
+    ('DHARMa', '0.2.5', {
     }),
     ('mvnfast', '0.2.5'),
     ('bridgesampling', '0.7-2', {
@@ -1260,7 +1258,7 @@ exts_list = [
     }),
     ('gapfill', '0.9.6', {
     }),
-    ('gee', '4.13-19', {
+    ('gee', '4.13-20', {
     }),
     ('Matching', '4.9-6', {
     }),
@@ -1316,20 +1314,9 @@ exts_list = [
     }),
     ('compositions', '1.40-3', {
     }),
-    ('farver', '1.1.0'),
-    ('tweenr', '1.0.1', {
-    }),
-    ('ggforce', '0.3.1', {
-    }),
-    ('ggrepel', '0.8.1', {
-    }),
-    ('tidygraph', '1.1.2'),
-    ('graphlayouts', '0.5.0'),
-    ('ggraph', '2.0.0', {
-    }),
     ('clustree', '0.4.1', {
     }),
-    ('plotly', '4.9.0', {
+    ('plotly', '4.9.1', {
     }),
     ('tweedie', '2.3.2', {
     }),
@@ -1397,46 +1384,164 @@ exts_list = [
     }),
     ('PresenceAbsence', '1.1.9', {
     }),
-    ('GUTS', '1.1.1'),
-    ('GenSA', '1.1.7'),
+    ('GUTS', '1.1.1', {
+    }),
+    ('GenSA', '1.1.7', {
+    }),
     ('rematch2', '2.1.0'),
-    ('parsedate', '1.2.0'),
-    ('circular', '0.4-93'),
-    ('grr', '0.9.5'),
-    ('Matrix.utils', '0.9.7'),
-    ('limma', '3.42.0'),
-    ('pbmcapply', '1.5.0'),
-    ('RcppParallel', '4.4.4'),
-    ('RcppAnnoy', '0.0.14'),
-    ('furrr', '0.1.0'),
-    ('rsample', '0.0.5'),
-    ('RhpcBLASctl', '0.18-205'),
-    ('BiocGenerics', '0.32.0'),
-    ('Biobase', '2.46.0'),
-    ('S4Vectors', '0.24.0'),
-    ('IRanges', '2.20.0'),
-    ('GenomeInfoDbData', '1.2.2'),
-    ('GenomeInfoDb', '1.22.0'),
-    ('zlibbioc', '1.32.0'),
-    ('XVector', '0.26.0'),
-    ('GenomicRanges', '1.38.0'),
-    ('BiocParallel', '1.20.0'),
-    ('DelayedArray', '0.12.0'),
-    ('SummarizedExperiment', '1.16.0'),
-    ('SingleCellExperiment', '1.8.0'),
-    ('Rhdf5lib', '1.8.0'),
-    ('rhdf5', '2.30.0'),
-    ('HDF5Array', '1.14.0'),
-    ('DelayedMatrixStats', '1.8.0'),
-    ('speedglm', '0.3-2'),
-    ('sitmo', '2.0.1'),
-    ('dqrng', '0.2.1'),
-    ('RSpectra', '0.15-0'),
-    ('uwot', '0.1.4'),
-    ('monocle3', '0.1.3', {
-        'source_urls': ['https://github.com/cole-trapnell-lab/monocle3/archive'],
-        'source_tmpl': '%(version)s.tar.gz',
-        'filename': '%(name)s_%(version)s.tar.gz',
+    ('parsedate', '1.2.0', {
+    }),
+    ('circular', '0.4-93', {
+    }),
+('cobs', '1.3-3', {
+        'checksums': ['6b1e760cf8dec6b6e63f042cdc3e5e633de5f982e8bc743a891932f6d9f91bdf'],
+    }),
+    ('resample', '0.4', {
+        'checksums': ['f0d5f735e1b812612720845d79167a19f713a438fd10a6a3206e667045fd93e5'],
+    }),
+    ('MIIVsem', '0.5.4', {
+        'checksums': ['de918d6b1820c59a7d4324342ad15444c2370ce1d843397a136c307397ed64b9'],
+    }),
+    ('medflex', '0.6-6', {
+        'checksums': ['b9d04fb5281d0ea0555ec4f327a0ee951a7f312a3af944578dc175183dc49211'],
+    }),
+    ('Rserve', '1.7-3.1', {
+        'checksums': ['3ba1e919706e16a8632def5f45d666b6e44eafa6c14b57064d6ddf3415038f99'],
+    }),
+    ('spls', '2.2-3', {
+        'checksums': ['bbd693da80487eef2939c37aba199f6d811ec289828c763d9416a05fa202ab2e'],
+    }),
+    ('Boruta', '6.0.0', {
+        'checksums': ['1c9a7aabe09f040e147f6c614f5fe1d0b951d3b0f0024161fbb4c31da8fae8de'],
+    }),
+    ('dr', '3.0.10', {
+        'checksums': ['ce523c1bdb62a9dda30afc12b1dd96975cc34695c61913012236f3b80e24bf36'],
+    }),
+    ('CovSel', '1.2.1', {
+        'checksums': ['b375d00cc567e125ff106b4357654f43bba3abcadeed2238b6dea4b7a68fda09'],
+    }),
+    ('tmle', '1.3.0-2', {
+        'checksums': ['5251edbdf406d25730c61d6d093c47636759986375b724f0acc0dc14fcf42c4f'],
+    }),
+    ('ctmle', '0.1.1', {
+        'checksums': ['495c7dc57e97a86de362eb8d0c663a9c7de5f9ad96b51dc6bd2b63b5bac836cd'],
+    }),
+    ('BayesPen', '1.0', {
+        'checksums': ['772df9ae12cd8a3da1d5b7d1f1629602c7693f0eb03945784df2809e2bb061b0'],
+    }),
+    ('inline', '0.3.15', {
+        'checksums': ['ff043fe13c1991a3b285bed256ff4a9c0ba10bee764225a34b285875b7d69c68'],
+    }),
+    ('BMA', '3.18.9', {
+        'checksums': ['5eeed976154f8ef12e3effc13daa69e2cf772fa3c1e4bbaeecdfc728b9968fd3'],
+    }),
+    ('BCEE', '1.2', {
+        'checksums': ['0b1183458d625ef5dd0962fc77ca1326e77754a2c04be11fb002057abcb65a22'],
+    }),
+    ('bacr', '1.0.1', {
+        'checksums': ['c847272e2c03fd08ed79b3b739f57fe881af77404b6fd087caa0c398c90ef993'],
+    }),
+    ('clue', '0.3-57', {
+        'checksums': ['6e369d07b464a9624209a06b5078bf988f01f7963076e946649d76aea0622d17'],
+    }),
+    ('bdsmatrix', '1.3-3', {
+        'checksums': ['70ea81708c97dedd483a5d3866d2e906fa0e9098ff854c41cf0746fbc8dfad9d'],
+    }),
+    ('fftwtools', '0.9-8', {
+        'checksums': ['4641c8cd70938c2a8bde0b6da6cf7f83e96175ef52f1ca42ec3920a1dabf1bdb'],
+    }),
+    ('imagerExtra', '1.3.2', {
+        'checksums': ['0ebfa1eabb89459d774630ab73c7a97a93b9481ea5afc55482975475acebd5b8'],
+    }),
+    ('MALDIquant', '1.19.3', {
+        'checksums': ['a730327c1f8d053d29e558636736b7b66d0671a009e0004720b869d2c76ff32c'],
+    }),
+    ('threejs', '0.3.1', {
+        'checksums': ['71750b741672a435ecf749b69c72f0681aa8bb795e317f4e3056d5e33f6d79e8'],
+    }),
+    ('LaplacesDemon', '16.1.1', {
+        'checksums': ['779ed1dbfed523a15701b4d5d891d4f1f11ab27518826a8a7725807d4c42bd77'],
+    }),
+    ('rda', '1.0.2-2.1', {
+        'checksums': ['6918b62f51252b57f2c05b99debef6136b370f594dc3ae6466268e4c35578ef8'],
+    }),
+    ('sampling', '2.8', {
+        'checksums': ['356923f35971bb55f7e97b178aede3366374aa3ad3d24a97be765660553bf21a'],
+    }),
+    ('lda', '1.4.2', {
+        'checksums': ['5606a1e1bc24706988853528023f7a004c725791ae1a7309f1aea2fc6681240f'],
+    }),
+    ('jiebaRD', '0.1', {
+        'checksums': ['045ee670f5378fe325a45b40fd55136b355cbb225e088cb229f512c51abb4df1'],
+    }),
+    ('jiebaR', '0.10.99', {
+        'checksums': ['c691f285f659d300696db9f93e677b83ffb9a06414dbd126ce9243e522bd653e'],
+    }),
+    ('hdm', '0.3.1', {
+        'checksums': ['ba087565e9e0a8ea30a6095919141895fd76b7f3c05a03e60e9e24e602732bce'],
+    }),
+    ('abe', '3.0.1', {
+        'checksums': ['66d2e9ac78ba64b7d27b22b647fc00378ea832f868e51c18df50d6fffb8029b8'],
+    }),
+    ('SignifReg', '2.1', {
+        'checksums': ['d21959ce5b1ee20efd1483f6020b57e5f6616bd525af77a7bd325501cc670606'],
+    }),
+    ('bbmle', '1.0.20', {
+        'checksums': ['6c0fe8df7243f8a039e62d14014065df2002b9329c0e8a3c2df4e7ccf591f1f7'],
+    }),
+    ('emdbook', '1.3.11', {
+        'checksums': ['f848d4c0a2da50dc8a5af76429d8f9d4960dee3fad1e98f7b507bdfd9b2ca128'],
+    }),
+    ('SOAR', '0.99-11', {
+        'checksums': ['d5a0fba3664087308ce5295a1d57d10bad149eb9771b4fe67478deae4b7f68d8'],
+    }),
+    ('rasterVis', '0.46', {
+        'checksums': ['bedd788ad558cea2ca4889322ef7503d7598c84a336d69dfafcc6121eac4f253'],
+    }),
+    ('tictoc', '1.0', {
+        'checksums': ['47da097c1822caa2d8e262381987cfa556ad901131eb96109752742526b2e2fe'],
+    }),
+    ('ISOcodes', '2019.04.22', {
+        'checksums': ['2386440c3bed8391ee3a029aab86c107d435d0dd6a970236512d7c105d146b6e'],
+    }),
+    ('stopwords', '1.0', {
+        'checksums': ['9b727a5d827ac8dcfa6329140d294dcf964a06d80132b4ca434330d0ee02b1da'],
+    }),
+    ('janeaustenr', '0.1.5', {
+        'checksums': ['992f6673653daf7010fe176993a01cd4127d9a88be428da8da7a28241826d6f3'],
+    }),
+    ('SnowballC', '0.6.0', {
+        'checksums': ['61617d344444235940f5b9ac1cd6b86938e74a8c76791235724b16b755c3f72c'],
+    }),
+    ('tokenizers', '0.2.1', {
+        'checksums': ['28617cdc5ddef5276abfe14a2642999833322b6c34697de1d4e9d6dc7670dd00'],
+    }),
+    ('hunspell', '3.0', {
+        'checksums': ['01fb9c87f7cf094aaad3b7098378134f2e503286224351e91d08c00b6ee19857'],
+    }),
+    ('topicmodels', '0.2-8', {
+        'checksums': ['91dd48a782554803ca24d523b0639f8e576dad841b35f7c226ce1df359b9baa6'],
+    }),
+    ('tidytext', '0.2.2', {
+        'checksums': ['188f294cf3177fe6fc85e9b7e16a05211cebeab0e0f7b05a9443416790bf2ec0'],
+    }),
+    ('splitstackshape', '1.4.8', {
+        'checksums': ['656032c3f1e3dd5b8a3ee19ffcae617e07104c0e342fc3da4d863637a770fe56'],
+    }),
+    ('grImport2', '0.1-5', {
+        'checksums': ['9a5ee0a2c4774e3047657a862ed590327cb6635b668455709ad3f69db31dcb37'],
+    }),
+    ('preseqR', '4.0.0', {
+        'checksums': ['0143db473fb9a811f9cf582a348226a5763e62d9857ce3ef4ec41412abb559bc'],
+    }),
+    ('idr', '1.2', {
+        'checksums': ['8bbfdf82c8c2b5c73eb079127e198b6cb65c437bb36729f502c7bcd6037fdb16'],
+    }),
+    ('entropy', '1.2.1', {
+        'checksums': ['edb27144b8f855f1ef21de6b93b6b6c5cf7d4f2c3d592bf625e5158c02226f83'],
+    }),
+    ('kedd', '1.0.3', {
+        'checksums': ['38760abd8c8e8f69ad85ca7992803060acc44ce68358de1763bd2415fdf83c9f'],
     }),
 ]
 
