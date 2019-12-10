@@ -1,0 +1,40 @@
+easyblock = 'PythonBundle'
+
+name = 'numba'
+version = '0.37.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://numba.pydata.org/'
+description = """Numba is an Open Source NumPy-aware optimizing compiler for Python sponsored by Continuum Analytics,
+ Inc. It uses the remarkable LLVM compiler infrastructure to compile Python syntax to machine code."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('LLVM', '5.0.1'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('llvmlite', '0.22.0', {
+        'patches': ['llvmlite-0.22.0_fix-ffi-Makefile.patch'],
+        'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite/'],
+    }),
+    ('singledispatch', '3.4.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
+    }),
+    (name, version, {
+        'patches': ['numba-0.37.0_Py_Finalizing.patch'],
+        'source_urls': ['https://pypi.python.org/packages/source/n/numba/'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/numba', 'bin/pycc'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'lang'

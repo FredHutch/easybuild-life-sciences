@@ -33,6 +33,8 @@ dependencies = [
     ('PCRE', '8.38'),
     ('PROJ', '6.0.0', '-GCCcore-5.4.0', True),
     ('libgeotiff', '1.4.2'),
+    ('libgcrypt', '1.8.1'),
+    ('OpenSSL', '1.1.1d'),
 ]
 
 configopts = '--with-expat=$EBROOTEXPAT --with-libz=$EBROOTLIBZ --with-hdf5=$EBROOTHDF5 --with-netcdf=$EBROOTNETCDF'

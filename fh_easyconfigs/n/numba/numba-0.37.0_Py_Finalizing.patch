@@ -1,0 +1,12 @@
+diff -ruN numba-0.37.0.orig/numba/_dynfunc.c numba-0.37.0/numba/_dynfunc.c
+--- numba-0.37.0.orig/numba/_dynfunc.c	2017-12-19 16:41:01.000000000 -0800
++++ numba-0.37.0/numba/_dynfunc.c	2019-12-06 21:50:49.380532000 -0800
+@@ -347,7 +347,7 @@
+     /* XXX The finalizer may be called after the LLVM module has been
+        destroyed (typically at interpreter shutdown) */
+ #if PY_MAJOR_VERSION >= 3
+-    if (!_Py_Finalizing)
++    if (!_Py_isFinalizing())
+ #endif
+         if (gen->finalizer != NULL)
+             gen->finalizer(gen->state);
