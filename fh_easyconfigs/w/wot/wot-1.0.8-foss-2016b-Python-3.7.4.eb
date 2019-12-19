@@ -12,6 +12,7 @@ toolchainopts = {'pic': True}
 
 exts_defaultclass = 'PythonPackage'
 exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
     'download_dep_fail': True,
     'use_pip': True,
 }
@@ -49,292 +50,295 @@ exts_list = [
     #    'source_urls': ['https://github.com/PyTables/PyTables/archive'],
     #    'patches': ['PyTables-3.4.4-setup.patch'],
     #}),
-    ('XlsxWriter', '1.2.6', {
-        'modulename': 'xlsxwriter',
-        'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
-    }),
+#    ('XlsxWriter', '1.2.6', {
+#        'modulename': 'xlsxwriter',
+#        'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
+#    }),
     ('scikit-learn', '0.22', {
         'modulename': 'sklearn',
         'source_urls': ['https://pypi.python.org/packages/source/s/scikit-learn'],
     }),
-    ('lightgbm', '2.3.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/l/lightgbm'],
-    }),
-    ('MulticoreTSNE-modified', '0.1.post2', {
-        'modulename': 'MulticoreTSNE',
-        'source_urls': ['https://pypi.python.org/packages/source/m/MulticoreTSNE-modified'],
-    }),
-    ('pybind11', '2.4.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pybind11'],
-    }),
-    ('hnswlib', '0.3.2.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/h/hnswlib'],
-    }),
-    ('fisher-modified', '0.1.5', {
-        'modulename': 'fisher',
-        'source_urls': ['https://pypi.python.org/packages/source/f/fisher-modified'],
-    }),
-    ('python-igraph', '0.7.1.post6', {
-        'modulename': 'igraph',
-        'source_urls': ['https://pypi.python.org/packages/source/p/python-igraph'],
-    }),
-    ('louvain-github', '0.6.1.post1', {
-        'modulename': 'louvain',
-        'source_urls': ['https://pypi.python.org/packages/source/l/louvain-github'],
-    }),
-    ('forceatlas2-python', '1.0', {
-        'modulename': 'forceatlas2',
-        'source_urls': ['https://pypi.python.org/packages/source/f/forceatlas2-python'],
-    }),
-    ('param', '1.9.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/param'],
-    }),
-    ('pyct', '0.4.6', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pyct'],
-    }),
-    ('pyviz-comms', '0.7.2', {
-        'modulename': 'pyviz_comms',
-        'source_urls': ['https://pypi.python.org/packages/source/p/pyviz-comms'],
-        'source_tmpl': 'pyviz_comms-%(version)s.tar.gz',
-    }),
-    ('cftime', '1.0.4.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/cftime'],
-    }),
-    ('netCDF4', '1.5.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/n/netCDF4'],
-    }),
-    ('ffmpeg', '1.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/f/ffmpeg'],
-    }),
-    ('jsonpickle', '1.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/j/jsonpickle'],
-    }),
-    ('ordered-set', '3.1.1', {
-        'modulename': 'ordered_set',
-        'source_urls': ['https://pypi.python.org/packages/source/o/ordered-set'],
-    }),
-    ('deepdiff', '4.0.9', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/deepdiff'],
-    }),
-    ('xarray', '0.14.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/x/xarray'],
-    }),
-    ('multipledispatch', '0.6.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/m/multipledispatch'],
-    }),
-    ('DataShape', '0.5.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/DataShape'],
-        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
-        'modulename': 'datashape',
-    }),
-    ('Pillow', '6.2.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/Pillow'],
-        'modulename': 'PIL',
-    }),
-    ('pyshp', '2.1.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pyshp'],
-        'modulename': 'shapefile',
-    }),
-    ('Shapely', '1.6.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/Shapely'],
-        'modulename': 'shapely',
-    }),
-    ('Cartopy', '0.17.0', {
-        'modulename': 'cartopy',
-        'source_urls': ['https://pypi.python.org/packages/source/c/Cartopy'],
-    }),
-    ('thrift', '0.13.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/t/thrift'],
-    }),
-    ('llvmlite', '0.30.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite'],
-    }),
-    ('numba', '0.46.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/n/numba'],
-    }),
-    ('fastparquet', '0.3.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/f/fastparquet'],
-    }),
-    ('GDAL', '3.0.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/g/GDAL'],
-        'modulename': 'gdal',
-    }),
-    ('attrs', '19.3.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/a/attrs'],
-    }),
-    ('cligj', '0.5.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/cligj'],
-    }),
-    ('click-plugins', '1.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/click-plugins'],
-    }),
-    ('Fiona', '1.8.11', {
-        'source_urls': ['https://pypi.python.org/packages/source/f/Fiona'],
-        'modulename': 'fiona',
-    }),
-    ('pyproj', '2.4.1', {
-        'source_urls': ['https://github.com/pyproj4/pyproj/archive'],
-        'source_tmpl': 'v%(version)srel.tar.gz',
-    }),
-    ('geos', '0.2.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/g/geos'],
-    }),
-    ('geopandas', '0.6.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/g/geopandas'],
-    }),
-    ('jupyter-core', '4.6.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-core'],
-        'source_tmpl': 'jupyter_core-%(version)s.tar.gz',
-    }),
-    ('python-dateutil', '2.8.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/python-dateutil'],
-    }),
-    ('jupyter-client', '5.3.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-client'],
-        'source_tmpl': 'jupyter_client-%(version)s.tar.gz',
-    }),
-    ('Babel', '2.7.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/b/Babel'],
-        'modulename': 'babel',
-    }),
-    ('Sphinx', '2.2.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/Sphinx'],
-        'modulename': 'sphinx',
-    }),
-    ('nbsite', '0.6.5', {
-        'source_urls': ['https://pypi.python.org/packages/source/n/nbsite'],
-    }),
-    ('nbsmoke', '0.3.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/n/nbsmoke'],
-    }),
-    ('sphinx-holoviz-theme', '0.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-holoviz-theme'],
-        'source_tmpl': 'sphinx_holoviz_theme-%(version)s.tar.gz',
-        'modulename': 'sphinx_holoviz_theme',
-    }),
-    ('xesmf', '0.2.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/x/xesmf'],
-    }),
-    ('geoviews', '1.6.6', {
-        'source_urls': ['https://pypi.python.org/packages/source/g/geoviews'],
-    }),
-    ('py-cpuinfo', '5.0.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/py-cpuinfo'],
-    }),
-    ('pytest-benchmark', '3.2.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pytest-benchmark'],
-    }),
-    ('affine', '2.3.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/a/affine'],
-    }),
-    ('snuggs', '1.4.7', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/snuggs'],
-    }),
-    #('futures', '3.3.0', {
-    #    'source_urls': ['https://pypi.python.org/packages/source/h/hnswlib'],
-    #}),
-    ('ghp-import', '0.5.5', {
-        'source_urls': ['https://pypi.python.org/packages/source/g/ghp-import'],
-    }),
-    ('rasterio', '1.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/r/rasterio'],
-    }),
-    ('plink', '2.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/plink'],
-    }),
-    ('snappy-manifolds', '1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/snappy-manifolds'],
-        'source_tmpl': 'snappy_manifolds-%(version)s.tar.gz',
-    }),
-    ('spherogram', '1.8.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/spherogram'],
-    }),
-    ('FXrays', '1.3.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/f/FXrays'],
-    }),
-    ('pypng', '0.0.20', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pypng'],
-    }),
-    ('cypari', '2.3.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/cypari'],
-    }),
-    ('snappy', '2.7', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/snappy'],
-    }),
-    ('sphinx-pyviz-theme', '0.0.5', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-pyviz-theme'],
-        'source_tmpl': 'sphinx_pyviz_theme-%(version)s.tar.gz',
-        'modulename': 'sphinx_pyviz_theme',
-    }),
-    ('streamz', '0.5.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/streamz'],
-    }),
-    ('datashader', '0.8.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/d/datashader'],
-    }),
-    ('cyordereddict', '1.0.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/cyordereddict'],
-    }),
-    ('Markdown', '3.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/m/Markdown'],
-        'modulename': 'markdown',
-    }),
-    ('intake', '0.5.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/i/intake'],
-    }),
-    ('intake-parquet', '0.2.3', {
-        'source_urls': ['https://pypi.python.org/packages/source/i/intake-parquet'],
-    }),
-    ('parameterized', '0.7.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/parameterized'],
-    }),
-    ('pygraphviz', '1.5', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pygraphviz'],
-        'source_tmpl': '%(name)s-%(version)s.zip',
-    }),
-    ('hvplot', '0.5.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/h/hvplot'],
-    }),
-    ('jupyter-bokeh', '1.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-bokeh'],
-        'source_tmpl': 'jupyter_bokeh-%(version)s.tar.gz',
-    }),
-    ('pyvista', '0.22.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pyvista'],
-    }),
-    ('sphinx-ioam-theme', '0.1.1', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-ioam-theme'],
-        'source_tmpl': 'sphinx_ioam_theme-%(version)s.tar.gz',
-    }),
-    ('vega_datasets', '0.7.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/v/vega_datasets'],
-        'modulename': 'vega-datasets',
-    }),
-    ('vtk', '8.1.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/v/vtk'],
-        'source_tmpl': '%(name)s-%(version)s-cp37-cp37m-manylinux1_x86_64.whl',
-        'unpack_sources': False,
-    }),
-    ('panel', '0.7.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/panel'],
-    }),
-    ('holoviews', '1.12.7', {
-        'source_urls': ['https://pypi.python.org/packages/source/h/holoviews'],
-    }),
-    ('colorcet', '2.0.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/colorcet'],
-    }),
-    ('scplot', '0.0.14', {
-        'source_urls': ['https://pypi.python.org/packages/source/s/scplot'],
-    }),
-    ('pegasuspy', '0.15.0', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pegasuspy'],
-    }),
-    ('Cython', '0.29.14', {
-        'source_urls': ['https://pypi.python.org/packages/source/c/Cython'],
-        'modulename': 'cython',
-    }),
+#    ('lightgbm', '2.3.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/l/lightgbm'],
+#    }),
+#    ('MulticoreTSNE-modified', '0.1.post2', {
+#        'modulename': 'MulticoreTSNE',
+#        'source_urls': ['https://pypi.python.org/packages/source/m/MulticoreTSNE-modified'],
+#    }),
+#    ('pybind11', '2.4.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pybind11'],
+#    }),
+#    ('hnswlib', '0.3.2.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/h/hnswlib'],
+#    }),
+#    ('fisher-modified', '0.1.5', {
+#        'modulename': 'fisher',
+#        'source_urls': ['https://pypi.python.org/packages/source/f/fisher-modified'],
+#    }),
+#    ('python-igraph', '0.7.1.post6', {
+#        'modulename': 'igraph',
+#        'source_urls': ['https://pypi.python.org/packages/source/p/python-igraph'],
+#    }),
+#    ('louvain-github', '0.6.1.post1', {
+#        'modulename': 'louvain',
+#        'source_urls': ['https://pypi.python.org/packages/source/l/louvain-github'],
+#    }),
+#    ('forceatlas2-python', '1.0', {
+#        'modulename': 'forceatlas2',
+#        'source_urls': ['https://pypi.python.org/packages/source/f/forceatlas2-python'],
+#    }),
+#    ('param', '1.9.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/param'],
+#    }),
+#    ('pyct', '0.4.6', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pyct'],
+#    }),
+#    ('pyviz-comms', '0.7.2', {
+#        'modulename': 'pyviz_comms',
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pyviz-comms'],
+#        'source_tmpl': 'pyviz_comms-%(version)s.tar.gz',
+#    }),
+#    ('cftime', '1.0.4.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/cftime'],
+#    }),
+#    ('netCDF4', '1.5.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/n/netCDF4'],
+#    }),
+#    ('ffmpeg', '1.4', {
+#        'source_urls': ['https://pypi.python.org/packages/source/f/ffmpeg'],
+#    }),
+#    ('jsonpickle', '1.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/j/jsonpickle'],
+#    }),
+#    ('ordered-set', '3.1.1', {
+#        'modulename': 'ordered_set',
+#        'source_urls': ['https://pypi.python.org/packages/source/o/ordered-set'],
+#    }),
+#    ('deepdiff', '4.0.9', {
+#        'source_urls': ['https://pypi.python.org/packages/source/d/deepdiff'],
+#    }),
+#    ('xarray', '0.14.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/x/xarray'],
+#    }),
+#    ('multipledispatch', '0.6.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/m/multipledispatch'],
+#    }),
+#    ('DataShape', '0.5.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/d/DataShape'],
+#        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+#        'modulename': 'datashape',
+#    }),
+#    ('Pillow', '6.2.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/Pillow'],
+#        'modulename': 'PIL',
+#    }),
+#    ('pyshp', '2.1.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pyshp'],
+#        'modulename': 'shapefile',
+#    }),
+#    ('Shapely', '1.6.4', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/Shapely'],
+#        'modulename': 'shapely',
+#    }),
+#    ('Cartopy', '0.17.0', {
+#        'modulename': 'cartopy',
+#        'source_urls': ['https://pypi.python.org/packages/source/c/Cartopy'],
+#    }),
+#    ('thrift', '0.13.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/t/thrift'],
+#    }),
+#    ('llvmlite', '0.30.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite'],
+#    }),
+#    ('numba', '0.46.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/n/numba'],
+#    }),
+#    ('fastparquet', '0.3.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/f/fastparquet'],
+#    }),
+#    ('GDAL', '3.0.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/g/GDAL'],
+#        'modulename': 'gdal',
+#    }),
+#    ('attrs', '19.3.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/a/attrs'],
+#    }),
+#    ('cligj', '0.5.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/cligj'],
+#    }),
+#    ('click-plugins', '1.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/click-plugins'],
+#    }),
+#    ('Fiona', '1.8.11', {
+#        'source_urls': ['https://pypi.python.org/packages/source/f/Fiona'],
+#        'modulename': 'fiona',
+#    }),
+#    ('pyproj', '2.4.1', {
+#        'source_urls': ['https://github.com/pyproj4/pyproj/archive'],
+#        'source_tmpl': 'v%(version)srel.tar.gz',
+#    }),
+#    ('geos', '0.2.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/g/geos'],
+#    }),
+#    ('geopandas', '0.6.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/g/geopandas'],
+#    }),
+#    ('jupyter-core', '4.6.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-core'],
+#        'source_tmpl': 'jupyter_core-%(version)s.tar.gz',
+#    }),
+#    ('python-dateutil', '2.8.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/python-dateutil'],
+#    }),
+#    ('jupyter-client', '5.3.4', {
+#        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-client'],
+#        'source_tmpl': 'jupyter_client-%(version)s.tar.gz',
+#    }),
+#    ('Babel', '2.7.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/b/Babel'],
+#        'modulename': 'babel',
+#    }),
+#    ('Sphinx', '2.2.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/Sphinx'],
+#        'modulename': 'sphinx',
+#    }),
+#    ('nbsite', '0.6.5', {
+#        'source_urls': ['https://pypi.python.org/packages/source/n/nbsite'],
+#    }),
+#    ('nbsmoke', '0.3.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/n/nbsmoke'],
+#    }),
+#    ('sphinx-holoviz-theme', '0.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-holoviz-theme'],
+#        'source_tmpl': 'sphinx_holoviz_theme-%(version)s.tar.gz',
+#        'modulename': 'sphinx_holoviz_theme',
+#    }),
+#    ('xesmf', '0.2.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/x/xesmf'],
+#    }),
+#    ('geoviews', '1.6.6', {
+#        'source_urls': ['https://pypi.python.org/packages/source/g/geoviews'],
+#    }),
+#    ('py-cpuinfo', '5.0.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/py-cpuinfo'],
+#    }),
+#    ('pytest-benchmark', '3.2.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pytest-benchmark'],
+#    }),
+#    ('affine', '2.3.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/a/affine'],
+#    }),
+#    ('snuggs', '1.4.7', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/snuggs'],
+#    }),
+#    #('futures', '3.3.0', {
+#    #    'source_urls': ['https://pypi.python.org/packages/source/h/hnswlib'],
+#    #}),
+#    ('ghp-import', '0.5.5', {
+#        'source_urls': ['https://pypi.python.org/packages/source/g/ghp-import'],
+#    }),
+#    ('rasterio', '1.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/r/rasterio'],
+#    }),
+#    ('plink', '2.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/plink'],
+#    }),
+#    ('snappy-manifolds', '1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/snappy-manifolds'],
+#        'source_tmpl': 'snappy_manifolds-%(version)s.tar.gz',
+#    }),
+#    ('spherogram', '1.8.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/spherogram'],
+#    }),
+#    ('FXrays', '1.3.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/f/FXrays'],
+#    }),
+#    ('pypng', '0.0.20', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pypng'],
+#    }),
+#    ('cypari', '2.3.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/cypari'],
+#    }),
+#    ('snappy', '2.7', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/snappy'],
+#    }),
+#    ('sphinx-pyviz-theme', '0.0.5', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-pyviz-theme'],
+#        'source_tmpl': 'sphinx_pyviz_theme-%(version)s.tar.gz',
+#        'modulename': 'sphinx_pyviz_theme',
+#    }),
+#    ('streamz', '0.5.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/streamz'],
+#    }),
+#    ('datashader', '0.8.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/d/datashader'],
+#    }),
+#    ('cyordereddict', '1.0.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/cyordereddict'],
+#    }),
+#    ('Markdown', '3.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/m/Markdown'],
+#        'modulename': 'markdown',
+#    }),
+#    ('intake', '0.5.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/i/intake'],
+#    }),
+#    ('intake-parquet', '0.2.3', {
+#        'source_urls': ['https://pypi.python.org/packages/source/i/intake-parquet'],
+#    }),
+#    ('parameterized', '0.7.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/parameterized'],
+#    }),
+#    ('pygraphviz', '1.5', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pygraphviz'],
+#        'source_tmpl': '%(name)s-%(version)s.zip',
+#    }),
+#    ('hvplot', '0.5.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/h/hvplot'],
+#    }),
+#    ('jupyter-bokeh', '1.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/j/jupyter-bokeh'],
+#        'source_tmpl': 'jupyter_bokeh-%(version)s.tar.gz',
+#    }),
+#    ('pyvista', '0.22.4', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pyvista'],
+#    }),
+#    ('sphinx-ioam-theme', '0.1.1', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/sphinx-ioam-theme'],
+#        'source_tmpl': 'sphinx_ioam_theme-%(version)s.tar.gz',
+#    }),
+#    ('vega_datasets', '0.7.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/v/vega_datasets'],
+#        'modulename': 'vega-datasets',
+#    }),
+#    ('vtk', '8.1.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/v/vtk'],
+#        'source_tmpl': '%(name)s-%(version)s-cp37-cp37m-manylinux1_x86_64.whl',
+#        'unpack_sources': False,
+#    }),
+#    ('panel', '0.7.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/panel'],
+#    }),
+#    ('holoviews', '1.12.7', {
+#        'source_urls': ['https://pypi.python.org/packages/source/h/holoviews'],
+#    }),
+#    ('colorcet', '2.0.2', {
+#        'source_urls': ['https://pypi.python.org/packages/source/c/colorcet'],
+#    }),
+#    ('scplot', '0.0.14', {
+#        'source_urls': ['https://pypi.python.org/packages/source/s/scplot'],
+#    }),
+#    ('pegasuspy', '0.15.0', {
+#        'source_urls': ['https://pypi.python.org/packages/source/p/pegasuspy'],
+#    }),
+    ('pegasus', '0.1.3'),
+    ('h5py', '2.10.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/h/h5py'],
+    }),
+    ('anndata', '0.6.22.post1'),
+    ('natsort', '6.2.0'),
     ('POT', '0.6.0', {
+        'modulename': 'ot',
         'source_urls': ['https://pypi.python.org/packages/source/p/POT'],
     }),
     (name, version, {
@@ -349,4 +353,3 @@ modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
 modextravars = {'MPLBACKEND': 'Agg'}
 
 moduleclass = 'vis'
-

@@ -90,9 +90,8 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/pbr/'],
         'checksums': ['1b8be50d938c9bb75d0eaf7eda111eec1bf6dc88a62a6412e33bf077457e0f45'],
     }),
-    ('Cython', '0.28.5', {
+    ('Cython', '0.29.13', {
         'source_urls': ['https://pypi.python.org/packages/source/C/Cython/'],
-        'checksums': ['b64575241f64f6ec005a4d4137339fb0ba5e156e826db2fdb5f458060d9979e0'],
     }),
     ('six', '1.11.0', {
         'source_urls': ['https://pypi.python.org/packages/source/s/six/'],
