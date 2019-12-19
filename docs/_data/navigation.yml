@@ -1,10 +1,10 @@
-main: 
+main:
   - title: "Software Updates"
     url: /updates/
   - title: "Announcements"
     url: /announcements/
 
-docs:        
+docs:
   - title: "Scientific Software"
     children:
       - title: "Overview"

@@ -237,6 +237,22 @@
                 "Description: The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
                 "Homepage: https://github.com/arq5x/bedtools2"
             ]
+        },
+        "/app/easybuild/modules/bio/BEDTools/2.29.1-foss-2016b.lua": {
+            "Description": "The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+            "Version": "2.29.1-foss-2016b",
+            "fullName": "BEDTools/2.29.1-foss-2016b",
+            "help": "\nDescription\n===========\nThe BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.\n\n\nMore information\n================\n - Homepage: https://github.com/arq5x/bedtools2\n",
+            "hidden": false,
+            "pV": "000000002.000000029.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BEDTools/2.29.1-foss-2016b/bin": 1
+            },
+            "wV": "000000002.000000029.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: The BEDTools utilities allow one to address common genomics\n tasks such as finding feature overlaps and computing coverage. The utilities\n are largely based on four widely-used file formats: BED, GFF/GTF, VCF,\n and SAM/BAM.",
+                "Homepage: https://github.com/arq5x/bedtools2"
+            ]
         }
     },
     "BLAST": {
@@ -594,6 +610,25 @@
                 "Homepage: http://www.bioperl.org/"
             ]
         },
+        "/app/easybuild/modules/bio/BioPerl/1.7.2-foss-2016b-Perl-5.28.0.lua": {
+            "Description": "Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+            "Version": "1.7.2-foss-2016b-Perl-5.28.0",
+            "fullName": "BioPerl/1.7.2-foss-2016b-Perl-5.28.0",
+            "help": "\nDescription\n===========\nBioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.\n\n\nMore information\n================\n - Homepage: http://www.bioperl.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2016b-Perl-5.28.0/lib": 1
+            },
+            "pV": "000000001.000000007.000000002.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/BioPerl/1.7.2-foss-2016b-Perl-5.28.0/bin": 1
+            },
+            "wV": "000000001.000000007.000000002.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "whatis": [
+                "Description: Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
+                "Homepage: http://www.bioperl.org/"
+            ]
+        },
         "/app/easybuild/modules/bio/BioPerl/1.7.2-foss-2018b-Perl-5.28.0.lua": {
             "Description": "Bioperl is the product of a community effort to produce Perl code which is useful in biology.\n Examples include Sequence objects, Alignment objects and database searching objects.",
             "Version": "1.7.2-foss-2018b-Perl-5.28.0",
@@ -665,6 +700,24 @@
             "whatis": [
                 "Description: Biopython is a set of freely available tools for biological\n computation written in Python by an international team of developers. It is\n a distributed collaborative effort to develop Python libraries and\n applications which address the needs of current and future work in\n bioinformatics. ",
                 "Homepage: http://www.biopython.org"
+            ]
+        }
+    },
+    "Bismark": {
+        "/app/easybuild/modules/bio/Bismark/0.22.3-foss-2016b.lua": {
+            "Description": "A tool to map bisulfite converted sequence reads and determine cytosine methylation states",
+            "Version": "0.22.3-foss-2016b",
+            "fullName": "Bismark/0.22.3-foss-2016b",
+            "help": "\nDescription\n===========\nA tool to map bisulfite converted sequence reads and determine cytosine methylation states\n\n\nMore information\n================\n - Homepage: https://www.bioinformatics.babraham.ac.uk/projects/bismark/\n",
+            "hidden": false,
+            "pV": "000000000.000000022.000000003.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/Bismark/0.22.3-foss-2016b": 1
+            },
+            "wV": "000000000.000000022.000000003.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: A tool to map bisulfite converted sequence reads and determine cytosine methylation states",
+                "Homepage: https://www.bioinformatics.babraham.ac.uk/projects/bismark/"
             ]
         }
     },
@@ -1388,6 +1441,38 @@
                 "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
                 "Homepage: http://www.broadinstitute.org/gatk/"
             ]
+        },
+        "/app/easybuild/modules/bio/GATK/4.1.4.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.4.0-foss-2016b-Python-3.6.6",
+            "fullName": "GATK/4.1.4.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GATK/4.1.4.0-foss-2016b-Python-3.6.6": 1
+            },
+            "wV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
+        },
+        "/app/easybuild/modules/bio/GATK/4.1.4.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.4.0-foss-2016b-Python-3.7.4",
+            "fullName": "GATK/4.1.4.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "pV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GATK/4.1.4.0-foss-2016b-Python-3.7.4": 1
+            },
+            "wV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ]
         }
     },
     "GCTA": {
@@ -1498,6 +1583,25 @@
                 "/app/easybuild/software/GEOS/3.6.2-foss-2016b-Python-3.6.6/bin": 1
             },
             "wV": "000000003.000000006.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: GEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)",
+                "Homepage: http://trac.osgeo.org/geos"
+            ]
+        },
+        "/app/easybuild/modules/math/GEOS/3.7.2-foss-2016b-Python-3.7.4.lua": {
+            "Description": "GEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)",
+            "Version": "3.7.2-foss-2016b-Python-3.7.4",
+            "fullName": "GEOS/3.7.2-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nGEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)\n\n\nMore information\n================\n - Homepage: http://trac.osgeo.org/geos\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GEOS/3.7.2-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000003.000000007.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/GEOS/3.7.2-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000003.000000007.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
             "whatis": [
                 "Description: GEOS (Geometry Engine - Open Source) is a C++ port of the\n Java Topology Suite (JTS)",
                 "Homepage: http://trac.osgeo.org/geos"
@@ -1675,6 +1779,22 @@
                 "Homepage: http://gmplib.org/"
             ]
         },
+        "/app/easybuild/modules/math/GMP/6.1.1-GCCcore-5.4.0.lua": {
+            "Description": "GMP is a free library for arbitrary precision arithmetic, \noperating on signed integers, rational numbers, and floating point numbers. ",
+            "Version": "6.1.1-GCCcore-5.4.0",
+            "fullName": "GMP/6.1.1-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nGMP is a free library for arbitrary precision arithmetic, \noperating on signed integers, rational numbers, and floating point numbers.\n\n\nMore information\n================\n - Homepage: http://gmplib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/GMP/6.1.1-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000006.000000001.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "wV": "000000006.000000001.000000001.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: GMP is a free library for arbitrary precision arithmetic, \noperating on signed integers, rational numbers, and floating point numbers. ",
+                "Homepage: http://gmplib.org/"
+            ]
+        },
         "/app/easybuild/modules/math/GMP/6.1.1-foss-2016b": {
             "Description": "GMP is a free library for arbitrary precision arithmetic,  operating on signed integers, rational numbers, and floating point numbers.  - Homepage: http://gmplib.org/ ",
             "Version": "6.1.1-foss-2016b",
@@ -1802,6 +1922,25 @@
         }
     },
     "HTSlib": {
+        "/app/easybuild/modules/bio/HTSlib/1.10-foss-2016b.lua": {
+            "Description": "A C library for reading/writing high-throughput sequencing data.\n HTSlib also provides the bgzip, htsfile, and tabix utilities",
+            "Version": "1.10-foss-2016b",
+            "fullName": "HTSlib/1.10-foss-2016b",
+            "help": "\nDescription\n===========\nA C library for reading/writing high-throughput sequencing data.\n HTSlib also provides the bgzip, htsfile, and tabix utilities\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/HTSlib/1.10-foss-2016b/lib": 1
+            },
+            "pV": "000000001.000000010.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/HTSlib/1.10-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000010.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: A C library for reading/writing high-throughput sequencing data.\n HTSlib also provides the bgzip, htsfile, and tabix utilities",
+                "Homepage: http://www.htslib.org/"
+            ]
+        },
         "/app/easybuild/modules/bio/HTSlib/1.3-foss-2015b": {
             "Version": "1.3-foss-2015b",
             "fullName": "HTSlib/1.3-foss-2015b",
@@ -2249,25 +2388,6 @@
             ]
         }
     },
-    "MATLAB": {
-        "/app/easybuild/modules/math/MATLAB/2019a.lua": {
-            "Description": "MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
-            "Version": "2019a",
-            "fullName": "MATLAB/2019a",
-            "help": "\nDescription\n===========\nMATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.\n\n\nMore information\n================\n - Homepage: http://www.mathworks.com/products/matlab\n",
-            "hidden": false,
-            "pV": "000002019.*a.*zfinal",
-            "pathA": {
-                "/app/easybuild/software/MATLAB/2019a": 1,
-                "/app/easybuild/software/MATLAB/2019a/bin": 1
-            },
-            "wV": "000002019.*a.*zfinal",
-            "whatis": [
-                "Description: MATLAB is a multi-paradigm numerical computing environment and\n proprietary programming language developed by MathWorks. MATLAB allows matrix\n manipulations, plotting of functions and data, implementation of algorithms,\n creation of user interfaces, and interfacing with programs written in other languages,\n including C, C++, C#, Java, Fortran and Python.",
-                "Homepage: http://www.mathworks.com/products/matlab"
-            ]
-        }
-    },
     "MCR": {
         "/app/easybuild/modules/math/MCR/R2013a.lua": {
             "Description": "The MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.",
@@ -2395,6 +2515,27 @@
                 "Description: The MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.",
                 "Homepage: http://www.mathworks.com/products/compiler/mcr/"
             ]
+        },
+        "/app/easybuild/modules/math/MCR/R2019b.lua": {
+            "Description": "The MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.",
+            "Version": "R2019b",
+            "fullName": "MCR/R2019b",
+            "help": "\nDescription\n===========\nThe MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.\n\n\nMore information\n================\n - Homepage: http://www.mathworks.com/products/compiler/mcr/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/MCR/R2019b/v97/bin/glnxa64": 1,
+                "/app/easybuild/software/MCR/R2019b/v97/runtime/glnxa64": 1,
+                "/app/easybuild/software/MCR/R2019b/v97/sys/os/glnxa64": 1
+            },
+            "pV": "*r.000002019.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MCR/R2019b": 1
+            },
+            "wV": "*r.000002019.*b.*zfinal",
+            "whatis": [
+                "Description: The MATLAB Runtime is a standalone set of shared libraries\n that enables the execution of compiled MATLAB applications\n or components on computers that do not have MATLAB installed.",
+                "Homepage: http://www.mathworks.com/products/compiler/mcr/"
+            ]
         }
     },
     "MEME": {
@@ -2510,6 +2651,48 @@
             "whatis": [
                 "Description:  MiXCR processes big immunome data from raw sequences \nto quantitated clonotypes ",
                 "Homepage: https://milaboratory.com/software/mixcr/"
+            ]
+        }
+    },
+    "MultiQC": {
+        "/app/easybuild/modules/bio/MultiQC/1.7-foss-2018b-Python-3.6.6.lua": {
+            "Description": "Aggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.",
+            "Version": "1.7-foss-2018b-Python-3.6.6",
+            "fullName": "MultiQC/1.7-foss-2018b-Python-3.6.6",
+            "help": "\nDescription\n===========\nAggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.\n\n\nMore information\n================\n - Homepage: http://multiqc.info\n\n\nIncluded extensions\n===================\ncertifi-2018.11.29, chardet-3.0.4, Click-7.0, colormath-3.0.0, future-0.17.1,\nidna-2.8, Jinja2-2.10, lzstring-1.0.4, Markdown-3.0.1, MarkupSafe-1.1.0,\nmultiqc-1.7, networkx-2.2, requests-2.21.0, simplejson-3.16.0, spectra-0.0.11,\nurllib3-1.24.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/MultiQC/1.7-foss-2018b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000001.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MultiQC/1.7-foss-2018b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000001.000000007.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Aggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.",
+                "Homepage: http://multiqc.info",
+                "Extensions: certifi-2018.11.29, chardet-3.0.4, Click-7.0, colormath-3.0.0, future-0.17.1, idna-2.8, Jinja2-2.10, lzstring-1.0.4, Markdown-3.0.1, MarkupSafe-1.1.0, multiqc-1.7, networkx-2.2, requests-2.21.0, simplejson-3.16.0, spectra-0.0.11, urllib3-1.24.1"
+            ]
+        },
+        "/app/easybuild/modules/bio/MultiQC/1.8-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Aggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.",
+            "Version": "1.8-foss-2016b-Python-3.7.4",
+            "fullName": "MultiQC/1.8-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nAggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.\n\n\nMore information\n================\n - Homepage: http://multiqc.info\n\n\nIncluded extensions\n===================\ncertifi-2018.11.29, chardet-3.0.4, Click-7.0, coloredlogs-10.0,\ncolormath-3.0.0, future-0.17.1, humanfriendly-4.18, idna-2.8, Jinja2-2.10,\nlzstring-1.0.4, Markdown-3.0.1, MarkupSafe-1.1.0, multiqc-1.8, networkx-2.2,\nrequests-2.21.0, simplejson-3.16.0, spectra-0.0.11, urllib3-1.24.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/MultiQC/1.8-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000001.000000008.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/MultiQC/1.8-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.000000008.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Aggregate results from bioinformatics analyses across many samples into a single \n report.\n\n MultiQC searches a given directory for analysis logs and compiles a HTML report. It's a general\n use tool, perfect for summarising the output from numerous bioinformatics tools.",
+                "Homepage: http://multiqc.info",
+                "Extensions: certifi-2018.11.29, chardet-3.0.4, Click-7.0, coloredlogs-10.0, colormath-3.0.0, future-0.17.1, humanfriendly-4.18, idna-2.8, Jinja2-2.10, lzstring-1.0.4, Markdown-3.0.1, MarkupSafe-1.1.0, multiqc-1.8, networkx-2.2, requests-2.21.0, simplejson-3.16.0, spectra-0.0.11, urllib3-1.24.1"
             ]
         }
     },
@@ -3142,6 +3325,25 @@
                 "SAM Tools provide various utilities for manipulating alignments in the SAM format,   including sorting, merging, indexing and generating alignments in a per-position format. - Homepage: http://www.htslib.org/ "
             ]
         },
+        "/app/easybuild/modules/bio/SAMtools/1.10-foss-2016b.lua": {
+            "Description": "SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
+            "Version": "1.10-foss-2016b",
+            "fullName": "SAMtools/1.10-foss-2016b",
+            "help": "\nDescription\n===========\nSAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.\n\n\nMore information\n================\n - Homepage: http://www.htslib.org/\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/SAMtools/1.10-foss-2016b/lib": 1
+            },
+            "pV": "000000001.000000010.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/SAMtools/1.10-foss-2016b/bin": 1
+            },
+            "wV": "000000001.000000010.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: SAM Tools provide various utilities for manipulating alignments in the SAM format, \n including sorting, merging, indexing and generating alignments in a per-position format.",
+                "Homepage: http://www.htslib.org/"
+            ]
+        },
         "/app/easybuild/modules/bio/SAMtools/1.2-foss-2015b": {
             "Version": "1.2-foss-2015b",
             "fullName": "SAMtools/1.2-foss-2015b",
@@ -3440,6 +3642,22 @@
                 "Description: The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
                 "Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra"
             ]
+        },
+        "/app/easybuild/modules/bio/SRA-Toolkit/2.9.6-ubuntu64.lua": {
+            "Description": "The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+            "Version": "2.9.6-ubuntu64",
+            "fullName": "SRA-Toolkit/2.9.6-ubuntu64",
+            "help": "\nDescription\n===========\nThe NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format\n\n\nMore information\n================\n - Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra\n",
+            "hidden": false,
+            "pV": "000000002.000000009.000000006.*ubuntu.000000064.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/SRA-Toolkit/2.9.6-ubuntu64/bin": 1
+            },
+            "wV": "000000002.000000009.000000006.*ubuntu.000000064.*zfinal",
+            "whatis": [
+                "Description: The NCBI SRA Toolkit enables reading (dumping) of sequencing files \n from the SRA database and writing (loading) files into the .sra format ",
+                "Homepage: http://trace.ncbi.nlm.nih.gov/Traces/sra"
+            ]
         }
     },
     "STAR": {
@@ -3721,6 +3939,28 @@
             ]
         }
     },
+    "UMI-tools": {
+        "/app/easybuild/modules/bio/UMI-tools/1.0.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Tools for handling Unique Molecular Identifiers in NGS data sets",
+            "Version": "1.0.0-foss-2016b-Python-3.7.4",
+            "fullName": "UMI-tools/1.0.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nTools for handling Unique Molecular Identifiers in NGS data sets\n\n\nMore information\n================\n - Homepage: https://umi-tools.readthedocs.io\n\n\nIncluded extensions\n===================\nfuture-0.17.1, regex-2019.02.07, UMI-tools-1.0.0\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/UMI-tools/1.0.0-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/UMI-tools/1.0.0-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Tools for handling Unique Molecular Identifiers in NGS data sets",
+                "Homepage: https://umi-tools.readthedocs.io",
+                "Extensions: future-0.17.1, regex-2019.02.07, UMI-tools-1.0.0"
+            ]
+        }
+    },
     "VCFtools": {
         "/app/easybuild/modules/bio/VCFtools/0.1.15-foss-2016b-Perl-5.24.1.lua": {
             "Description": "The aim of VCFtools is to provide \n easily accessible methods for working with complex \n genetic variation data in the form of VCF files.",
@@ -3892,6 +4132,22 @@
                 "/app/easybuild/software/annovar/2018Dec04": 1
             },
             "wV": "000002018.*dec.000000004.*zfinal",
+            "whatis": [
+                "Description: ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
+                "Homepage: http://annovar.openbioinformatics.org/en/latest/"
+            ]
+        },
+        "/app/easybuild/modules/bio/annovar/2019Oct24.lua": {
+            "Description": "ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
+            "Version": "2019Oct24",
+            "fullName": "annovar/2019Oct24",
+            "help": "\nDescription\n===========\nANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).\n\n\nMore information\n================\n - Homepage: http://annovar.openbioinformatics.org/en/latest/\n",
+            "hidden": false,
+            "pV": "000002019.*oct.000000024.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/annovar/2019Oct24": 1
+            },
+            "wV": "000002019.*oct.000000024.*zfinal",
             "whatis": [
                 "Description: ANNOVAR is an efficient software tool to utilize update-to-date\n information to functionally annotate genetic variants detected from diverse\n genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly,\n yeast and many others).",
                 "Homepage: http://annovar.openbioinformatics.org/en/latest/"
@@ -4291,6 +4547,22 @@
                 "Description: Scientific workflow engine designed for simplicity &\nscalability.",
                 "Homepage: https://github.com/broadinstitute/cromwell"
             ]
+        },
+        "/app/easybuild/modules/bio/cromwell/47-Java-1.8.lua": {
+            "Description": "Scientific workflow engine designed for simplicity & scalability.",
+            "Version": "47-Java-1.8",
+            "fullName": "cromwell/47-Java-1.8",
+            "help": "\nDescription\n===========\nScientific workflow engine designed for simplicity & scalability.\n\n\nMore information\n================\n - Homepage: https://github.com/broadinstitute/cromwell\n",
+            "hidden": false,
+            "pV": "000000047.*java.*zfinal-.000000001.000000008.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cromwell/47-Java-1.8": 1
+            },
+            "wV": "000000047.*java.*zfinal-.000000001.000000008.*zfinal",
+            "whatis": [
+                "Description: Scientific workflow engine designed for simplicity & scalability.",
+                "Homepage: https://github.com/broadinstitute/cromwell"
+            ]
         }
     },
     "ctffind": {
@@ -4324,6 +4596,28 @@
             "whatis": [
                 "Description: program for finding CTFs of electron micrographs",
                 "Homepage: http://grigoriefflab.janelia.org/ctffind4"
+            ]
+        }
+    },
+    "cutadapt": {
+        "/app/easybuild/modules/bio/cutadapt/2.7-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and\n other types of unwanted sequence from your high-throughput sequencing reads.",
+            "Version": "2.7-foss-2016b-Python-3.7.4",
+            "fullName": "cutadapt/2.7-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nCutadapt finds and removes adapter sequences, primers, poly-A tails and\n other types of unwanted sequence from your high-throughput sequencing reads.\n\n\nMore information\n================\n - Homepage: http://opensource.scilifelab.se/projects/cutadapt/\n\n\nIncluded extensions\n===================\ncutadapt-2.7, dnaio-0.3, xopen-0.5.1\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/cutadapt/2.7-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "pV": "000000002.000000007.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/cutadapt/2.7-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000002.000000007.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "whatis": [
+                "Description: Cutadapt finds and removes adapter sequences, primers, poly-A tails and\n other types of unwanted sequence from your high-throughput sequencing reads.",
+                "Homepage: http://opensource.scilifelab.se/projects/cutadapt/",
+                "Extensions: cutadapt-2.7, dnaio-0.3, xopen-0.5.1"
             ]
         }
     },
@@ -4428,6 +4722,21 @@
             "whatis": [
                 "Description: Fermi-lite is a standalone C library as well as a command-line tool\n for assembling Illumina short reads in regions from 100bp to 10 million bp in size. It\n is largely a light-weight in-memory version of fermikit without generating any intermediate\n files.",
                 "Homepage: https://github.com/lh3/fermi-lite"
+            ]
+        }
+    },
+    "fgbio": {
+        "/app/easybuild/modules/bio/fgbio/1.1.0-foss-2016b.lua": {
+            "Description": "A set of tools to analyze genomic data with a focus on Next Generation Sequencing.",
+            "Version": "1.1.0-foss-2016b",
+            "fullName": "fgbio/1.1.0-foss-2016b",
+            "help": "\nDescription\n===========\nA set of tools to analyze genomic data with a focus on Next Generation Sequencing.\n\n\nMore information\n================\n - Homepage: https://github.com/fulcrumgenomics/fgbio\n",
+            "hidden": false,
+            "pV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "wV": "000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: A set of tools to analyze genomic data with a focus on Next Generation Sequencing.",
+                "Homepage: https://github.com/fulcrumgenomics/fgbio"
             ]
         }
     },
@@ -4682,6 +4991,24 @@
             ]
         }
     },
+    "libpll": {
+        "/app/easybuild/modules/bio/libpll/0.3.2-GCCcore-5.4.0.lua": {
+            "Description": "libpll is a versatile high-performance software library for phylogenetic analysis.",
+            "Version": "0.3.2-GCCcore-5.4.0",
+            "fullName": "libpll/0.3.2-GCCcore-5.4.0",
+            "help": "\nDescription\n===========\nlibpll is a versatile high-performance software library for phylogenetic analysis.\n\n\nMore information\n================\n - Homepage: https://github.com/xflouris/libpll/wiki\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/libpll/0.3.2-GCCcore-5.4.0/lib": 1
+            },
+            "pV": "000000000.000000003.000000002.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "wV": "000000000.000000003.000000002.*gcccore.*zfinal-.000000005.000000004.*zfinal",
+            "whatis": [
+                "Description: libpll is a versatile high-performance software library for phylogenetic analysis.",
+                "Homepage: https://github.com/xflouris/libpll/wiki"
+            ]
+        }
+    },
     "lumpy": {
         "/app/easybuild/modules/bio/lumpy/0.2.13-foss-2016a": {
             "Description": "A probabilistic framework for structural variant discovery. - Homepage: https://github.com/pezmaster31/bamtools ",
@@ -4751,6 +5078,26 @@
         }
     },
     "medaka": {
+        "/app/easybuild/modules/bio/medaka/0.10.0-foss-2016b-Python-3.6.6.lua": {
+            "Description": "medaka is a tool to create a consensus sequence of nanopore sequencing data.",
+            "Version": "0.10.0-foss-2016b-Python-3.6.6",
+            "fullName": "medaka/0.10.0-foss-2016b-Python-3.6.6",
+            "help": "\nDescription\n===========\nmedaka is a tool to create a consensus sequence of nanopore sequencing data.\n\n\nMore information\n================\n - Homepage: https://nanoporetech.github.io/medaka\n\n\nIncluded extensions\n===================\nintervaltree-3.0.2, medaka-0.10.0, sortedcontainers-2.1.0\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/medaka/0.10.0-foss-2016b-Python-3.6.6/lib": 1
+            },
+            "pV": "000000000.000000010.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/medaka/0.10.0-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "wV": "000000000.000000010.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: medaka is a tool to create a consensus sequence of nanopore sequencing data.",
+                "Homepage: https://nanoporetech.github.io/medaka",
+                "Extensions: intervaltree-3.0.2, medaka-0.10.0, sortedcontainers-2.1.0"
+            ]
+        },
         "/app/easybuild/modules/bio/medaka/0.4.3-foss-2016b-Python-3.6.6.lua": {
             "Description": "medaka is a tool to create a consensus sequence of nanopore sequencing data.",
             "Version": "0.4.3-foss-2016b-Python-3.6.6",
@@ -4824,6 +5171,28 @@
             ]
         }
     },
+    "misopy": {
+        "/app/easybuild/modules/bio/misopy/0.5.4-foss-2016b-Python-2.7.15.lua": {
+            "Description": "MISO (Mixture of Isoforms) is a probabilistic framework that quantitates the expression level of alternatively spliced genes from RNA-Seq data, and identifies differentially regulated isoforms or exons across samples. By modeling the generative process by which reads are produced from isoforms in RNA-Seq, the MISO model uses Bayesian inference to compute the probability that a read originated from a particular isoform.",
+            "Version": "0.5.4-foss-2016b-Python-2.7.15",
+            "fullName": "misopy/0.5.4-foss-2016b-Python-2.7.15",
+            "help": "\nDescription\n===========\nMISO (Mixture of Isoforms) is a probabilistic framework that quantitates the expression level of alternatively spliced genes from RNA-Seq data, and identifies differentially regulated isoforms or exons across samples. By modeling the generative process by which reads are produced from isoforms in RNA-Seq, the MISO model uses Bayesian inference to compute the probability that a read originated from a particular isoform.\n\n\nMore information\n================\n - Homepage: https://www.genes.mit.edu/burgelab/miso/\n\n\nIncluded extensions\n===================\nmisopy-0.5.4\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/misopy/0.5.4-foss-2016b-Python-2.7.15/lib": 1
+            },
+            "pV": "000000000.000000005.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/misopy/0.5.4-foss-2016b-Python-2.7.15/bin": 1
+            },
+            "wV": "000000000.000000005.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "whatis": [
+                "Description: MISO (Mixture of Isoforms) is a probabilistic framework that quantitates the expression level of alternatively spliced genes from RNA-Seq data, and identifies differentially regulated isoforms or exons across samples. By modeling the generative process by which reads are produced from isoforms in RNA-Seq, the MISO model uses Bayesian inference to compute the probability that a read originated from a particular isoform.",
+                "Homepage: https://www.genes.mit.edu/burgelab/miso/",
+                "Extensions: misopy-0.5.4"
+            ]
+        }
+    },
     "mixcr": {
         "/app/easybuild/modules/bio/mixcr/2.1.5-foss-2016b.lua": {
             "Description": "MiXCR is a universal software for fast and accurate analysis of T- and B- cell receptor repertoire sequencing data.",
@@ -4857,6 +5226,22 @@
             "whatis": [
                 "Description: Multi-Omics Factor Analysis, a statistical framework for the integration of multi-omics data",
                 "Homepage: https://github.com/bioFAM/MOFA"
+            ]
+        }
+    },
+    "monocle3": {
+        "/app/easybuild/modules/bio/monocle3/0.2.0-foss-2016b-R-3.6.1.lua": {
+            "Description": "Single-cell transcriptome sequencing (sc-RNA-seq) experiments allow us to discover new cell types and help us understand how they arise in development. The Monocle 3 package provides a toolkit for analyzing single-cell gene expression experiments.",
+            "Version": "0.2.0-foss-2016b-R-3.6.1",
+            "fullName": "monocle3/0.2.0-foss-2016b-R-3.6.1",
+            "help": "\nDescription\n===========\nSingle-cell transcriptome sequencing (sc-RNA-seq) experiments allow us to discover new cell types and help us understand how they arise in development. The Monocle 3 package provides a toolkit for analyzing single-cell gene expression experiments.\n\n\nMore information\n================\n - Homepage: https://cole-trapnell-lab.github.io/monocle3\n\n\nIncluded extensions\n===================\nbatchelor-1.2.2, BEACH-1.3.1, beachmat-2.2.1, Biobase-2.46.0,\nBiocGenerics-0.32.0, BiocNeighbors-1.4.1, BiocParallel-1.20.0,\nBiocSingular-1.2.0, DelayedArray-0.12.0, DelayedMatrixStats-1.8.0,\ndqrng-0.2.1, furrr-0.1.0, GenomeInfoDb-1.22.0, GenomeInfoDbData-1.2.2,\nGenomicRanges-1.38.0, grr-0.9.5, HDF5Array-1.14.0, IRanges-2.20.1,\nirlba-2.3.3, leidenbase-0.1.0, limma-3.42.0, Matrix.utils-0.9.7,\nmonocle3-0.2.0, pbmcapply-1.5.0, RcppAnnoy-0.0.14, RcppHNSW-0.2.0,\nRcppParallel-4.4.4, rgdal-1.4-7, rhdf5-2.30.0, Rhdf5lib-1.8.0,\nRhpcBLASctl-0.18-205, rsample-0.0.5, RSpectra-0.15-0, rsvd-1.0.2, rtf-0.4-14,\nS4Vectors-0.24.0, sas7bdat-0.5, scater-1.14.4, sf-0.8-0,\nSingleCellExperiment-1.8.0, sitmo-2.0.1, spdep-1.1-3, speedglm-0.3-2,\nSummarizedExperiment-1.16.0, uwot-0.1.4, XVector-0.26.0, zlibbioc-1.32.0\n",
+            "hidden": false,
+            "pV": "000000000.000000002.*foss.*zfinal-.000002016.*b.*r.*zfinal-.000000003.000000006.000000001.*zfinal",
+            "wV": "000000000.000000002.*foss.*zfinal-.000002016.*b.*r.*zfinal-.000000003.000000006.000000001.*zfinal",
+            "whatis": [
+                "Description: Single-cell transcriptome sequencing (sc-RNA-seq) experiments allow us to discover new cell types and help us understand how they arise in development. The Monocle 3 package provides a toolkit for analyzing single-cell gene expression experiments.",
+                "Homepage: https://cole-trapnell-lab.github.io/monocle3",
+                "Extensions: batchelor-1.2.2, BEACH-1.3.1, beachmat-2.2.1, Biobase-2.46.0, BiocGenerics-0.32.0, BiocNeighbors-1.4.1, BiocParallel-1.20.0, BiocSingular-1.2.0, DelayedArray-0.12.0, DelayedMatrixStats-1.8.0, dqrng-0.2.1, furrr-0.1.0, GenomeInfoDb-1.22.0, GenomeInfoDbData-1.2.2, GenomicRanges-1.38.0, grr-0.9.5, HDF5Array-1.14.0, IRanges-2.20.1, irlba-2.3.3, leidenbase-0.1.0, limma-3.42.0, Matrix.utils-0.9.7, monocle3-0.2.0, pbmcapply-1.5.0, RcppAnnoy-0.0.14, RcppHNSW-0.2.0, RcppParallel-4.4.4, rgdal-1.4-7, rhdf5-2.30.0, Rhdf5lib-1.8.0, RhpcBLASctl-0.18-205, rsample-0.0.5, RSpectra-0.15-0, rsvd-1.0.2, rtf-0.4-14, S4Vectors-0.24.0, sas7bdat-0.5, scater-1.14.4, sf-0.8-0, SingleCellExperiment-1.8.0, sitmo-2.0.1, spdep-1.1-3, speedglm-0.3-2, SummarizedExperiment-1.16.0, uwot-0.1.4, XVector-0.26.0, zlibbioc-1.32.0"
             ]
         }
     },
@@ -4902,6 +5287,22 @@
                 "/app/easybuild/software/nanofilt/2.5.0-foss-2016b-Python-3.6.6/bin": 1
             },
             "wV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "whatis": [
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
+            ]
+        },
+        "/app/easybuild/modules/bio/nanofilt/2.6.0-foss-2016b-Python-3.7.4.lua": {
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.6.0-foss-2016b-Python-3.7.4",
+            "fullName": "nanofilt/2.6.0-foss-2016b-Python-3.7.4",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+            "hidden": false,
+            "pV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/nanofilt/2.6.0-foss-2016b-Python-3.7.4/bin": 1
+            },
+            "wV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
             "whatis": [
                 "Description: Filtering and trimming of long read sequencing data.",
                 "Homepage: https://github.com/wdecoster/nanofilt"
@@ -5065,6 +5466,22 @@
                 "/app/easybuild/software/ngmlr/0.2.6-foss-2016b/bin": 1
             },
             "wV": "000000000.000000002.000000006.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: Ngmlr is a long-read mapper designed to align PacBilo or Oxford Nanopore to a\n reference genome with a focus on reads that span structural variations.",
+                "Homepage: https://github.com/philres/ngmlr"
+            ]
+        },
+        "/app/easybuild/modules/bio/ngmlr/0.2.7-foss-2016b.lua": {
+            "Description": "Ngmlr is a long-read mapper designed to align PacBilo or Oxford Nanopore to a\n reference genome with a focus on reads that span structural variations.",
+            "Version": "0.2.7-foss-2016b",
+            "fullName": "ngmlr/0.2.7-foss-2016b",
+            "help": "\nDescription\n===========\nNgmlr is a long-read mapper designed to align PacBilo or Oxford Nanopore to a\n reference genome with a focus on reads that span structural variations.\n\n\nMore information\n================\n - Homepage: https://github.com/philres/ngmlr\n",
+            "hidden": false,
+            "pV": "000000000.000000002.000000007.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/ngmlr/0.2.7-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000000002.000000007.*foss.*zfinal-.000002016.*b.*zfinal",
             "whatis": [
                 "Description: Ngmlr is a long-read mapper designed to align PacBilo or Oxford Nanopore to a\n reference genome with a focus on reads that span structural variations.",
                 "Homepage: https://github.com/philres/ngmlr"
@@ -5262,6 +5679,38 @@
                 "/app/easybuild/software/philosopher/1.4.5": 1
             },
             "wV": "000000001.000000004.000000005.*zfinal",
+            "whatis": [
+                "Description: Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+                "Homepage: https://github.com/Nesvilab/philosopher/wiki"
+            ]
+        },
+        "/app/easybuild/modules/bio/philosopher/1.5.1.lua": {
+            "Description": "Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+            "Version": "1.5.1",
+            "fullName": "philosopher/1.5.1",
+            "help": "\nDescription\n===========\nPhilosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.\n\n\nMore information\n================\n - Homepage: https://github.com/Nesvilab/philosopher/wiki\n",
+            "hidden": false,
+            "pV": "000000001.000000005.000000001.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/philosopher/1.5.1": 1
+            },
+            "wV": "000000001.000000005.000000001.*zfinal",
+            "whatis": [
+                "Description: Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+                "Homepage: https://github.com/Nesvilab/philosopher/wiki"
+            ]
+        },
+        "/app/easybuild/modules/bio/philosopher/2.0.0.lua": {
+            "Description": "Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
+            "Version": "2.0.0",
+            "fullName": "philosopher/2.0.0",
+            "help": "\nDescription\n===========\nPhilosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.\n\n\nMore information\n================\n - Homepage: https://github.com/Nesvilab/philosopher/wiki\n",
+            "hidden": false,
+            "pV": "000000002.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/philosopher/2.0.0": 1
+            },
+            "wV": "000000002.*zfinal",
             "whatis": [
                 "Description: Philosopher provides easy access to third-party tools and custom algorithms\n allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated\n protein reports. Philosopher is also tuned for Open Search analysis, providing a modified\n version of the prophets for peptide validation and protein inference. To this date, Philosopher\n is the only proteomics toolkit that allows you to process and analyze close and\n open search results.",
                 "Homepage: https://github.com/Nesvilab/philosopher/wiki"
@@ -5641,17 +6090,17 @@
         }
     },
     "snippy": {
-        "/app/easybuild/modules/bio/snippy/4.4.1-foss-2018b-Perl-5.28.0.lua": {
+        "/app/easybuild/modules/bio/snippy/4.4.1-foss-2016b-Perl-5.28.0.lua": {
             "Description": "Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
-            "Version": "4.4.1-foss-2018b-Perl-5.28.0",
-            "fullName": "snippy/4.4.1-foss-2018b-Perl-5.28.0",
+            "Version": "4.4.1-foss-2016b-Perl-5.28.0",
+            "fullName": "snippy/4.4.1-foss-2016b-Perl-5.28.0",
             "help": "\nDescription\n===========\nSnippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.\n\n\nMore information\n================\n - Homepage: https://github.com/tseemann/snippy\n",
             "hidden": false,
-            "pV": "000000004.000000004.000000001.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "pV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
             "pathA": {
-                "/app/easybuild/software/snippy/4.4.1-foss-2018b-Perl-5.28.0/bin": 1
+                "/app/easybuild/software/snippy/4.4.1-foss-2016b-Perl-5.28.0/bin": 1
             },
-            "wV": "000000004.000000004.000000001.*foss.*zfinal-.000002018.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "wV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
             "whatis": [
                 "Description: Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
                 "Homepage: https://github.com/tseemann/snippy"
@@ -5790,6 +6239,27 @@
             ]
         }
     },
+    "terraphast": {
+        "/app/easybuild/modules/bio/terraphast/master-foss-2016b.lua": {
+            "Description": "libpll is a versatile high-performance software library for phylogenetic analysis.",
+            "Version": "master-foss-2016b",
+            "fullName": "terraphast/master-foss-2016b",
+            "help": "\nDescription\n===========\nlibpll is a versatile high-performance software library for phylogenetic analysis.\n\n\nMore information\n================\n - Homepage: https://github.com/xflouris/libpll/wiki\n",
+            "hidden": false,
+            "lpathA": {
+                "/app/easybuild/software/terraphast/master-foss-2016b/lib": 1
+            },
+            "pV": "*master.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/terraphast/master-foss-2016b/bin": 1
+            },
+            "wV": "*master.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: libpll is a versatile high-performance software library for phylogenetic analysis.",
+                "Homepage: https://github.com/xflouris/libpll/wiki"
+            ]
+        }
+    },
     "unblur": {
         "/app/easybuild/modules/bio/unblur/1.0.2-binary.lua": {
             "Description": "Unblur is used to align the frames of movies recorded on an\n electron microscope to reduce image blurring due to beam-induced motion.",
@@ -5857,6 +6327,24 @@
             "whatis": [
                 "Description: VDJtools is an open-source Java/Groovy-based framework\ndesigned to facilitate analysis of immune repertoire sequencing (RepSeq)\ndata. VDJtools computes a wide set of statistics and is able to perform\nvarious forms of cross-sample analysis.",
                 "Homepage: https://github.com/milaboratory/mixcr"
+            ]
+        }
+    },
+    "vt": {
+        "/app/easybuild/modules/bio/vt/0.57721-foss-2016b.lua": {
+            "Description": "A tool set for short variant discovery in genetic sequence data.",
+            "Version": "0.57721-foss-2016b",
+            "fullName": "vt/0.57721-foss-2016b",
+            "help": "\nDescription\n===========\nA tool set for short variant discovery in genetic sequence data.\n\n\nMore information\n================\n - Homepage: http://genome.sph.umich.edu/wiki/Vt\n",
+            "hidden": false,
+            "pV": "000000000.000057721.*foss.*zfinal-.000002016.*b.*zfinal",
+            "pathA": {
+                "/app/easybuild/software/vt/0.57721-foss-2016b/bin": 1
+            },
+            "wV": "000000000.000057721.*foss.*zfinal-.000002016.*b.*zfinal",
+            "whatis": [
+                "Description: A tool set for short variant discovery in genetic sequence data.",
+                "Homepage: http://genome.sph.umich.edu/wiki/Vt"
             ]
         }
     },

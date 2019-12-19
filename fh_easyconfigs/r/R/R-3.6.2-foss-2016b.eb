@@ -1,6 +1,5 @@
 name = 'R'
 version = '3.6.2'
-versionsuffix = '-eb2'
 biocver = '3.10'
 
 homepage = 'http://www.r-project.org/'

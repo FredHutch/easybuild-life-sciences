@@ -1,0 +1,30 @@
+# 2.5.1 is not a valid version, it is based on commit 732c514 from Nov 3 2019
+easyblock = 'PythonPackage' 
+name = 'nanofilt'
+version = '2.6.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/wdecoster/nanofilt'
+description = """Filtering and trimming of long read sequencing data."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/wdecoster/nanofilt/archive']
+sources = [{
+    'download_filename': 'v%(version)s.tar.gz',
+    'filename': SOURCE_TAR_GZ,
+}]
+
+exts_defaultclass = 'PythonPackage'
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+use_pip = True
+
+sanity_check_paths = {
+    'files': ['bin/NanoFilt'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'
