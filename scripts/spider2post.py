@@ -59,9 +59,9 @@ for p in slist:
        entry = [x for x in latest['whatis'] if 'Homepage: ' in x]
        text = entry[0].split('Homepage: ')[1]
        url = text.encode('utf8', 'replace')
-   print(' - [' + str(latest['fullName']) + '](' + str(url) + ')  '),
+   print(' - [%s](%s)' .format(latest['fullName'], url))
    if easyconfig_url:
-       print('[easyconfig](' + easyconfig_url + ')  ')
+       print('[easyconfig](%s)'.format(easyconfig_url) )
    else:
        print
-   print(descrp)
+   print('%s'.format(descrp))
