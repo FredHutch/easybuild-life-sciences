@@ -12,6 +12,7 @@ from pprint import pprint
 import json
 import sys
 import os
+from packaging import version
 
 data = json.load(sys.stdin)
 packages = data.keys()
@@ -24,18 +25,25 @@ if not os.path.isdir(repo_path):
    sys.exit(1)
 for p in slist:
    pac = data[p]
+   print(p, file=sys.stderr)
    paths = list(pac.keys())
    if len(paths) == 1:
-      release = pac[paths[0]]
+      latest = pac[paths[0]]
    else:
-      vers = sorted(paths)
-      release = pac[vers[-1]]
-   if 'fullName' in release and '-2015' in release['fullName']:
+      maxVal = version.parse("0.0.0")
+      for release in pac.keys():
+         print(type(release), file=sys.stderr)
+         verVal = version.parse(pac[release]['Version'].split('-')[0])
+         if verVal > maxVal:
+             latest = pac[release]
+             maxVal = verVal
+             latestVersion = pac[release]['Version']
+   if 'fullName' in latest and '-2015' in latest['fullName']:
         continue
    descrp = ''
    url = ''
    easyconfig_url = None
-   fullName = release['fullName']
+   fullName = latest['fullName']
    eb_filename = fullName.replace('/', '-') + '.eb'
    topdir = fullName[0].lower()
    projdir = p
@@ -44,14 +52,14 @@ for p in slist:
    if os.path.isfile(eb_path):
        easyconfig_url = github_repo + topdir +'/'+ projdir +'/'+ eb_filename
    eb_filename = None
-   if 'Description' in release:
-       text = release['Description'].split(' - ')[0]
+   if 'Description' in latest:
+       text = latest['Description'].split(' - ')[0]
        descrp = text.encode('utf8', 'replace')
-   if 'whatis' in release:
-       entry = [x for x in release['whatis'] if 'Homepage: ' in x]
+   if 'whatis' in latest:
+       entry = [x for x in latest['whatis'] if 'Homepage: ' in x]
        text = entry[0].split('Homepage: ')[1]
        url = text.encode('utf8', 'replace')
-   print(' - [' + release['fullName'] + '](' + url + ')  '),
+   print(' - [' + str(latest['fullName']) + '](' + str(url) + ')  '),
    if easyconfig_url:
        print('[easyconfig](' + easyconfig_url + ')  ')
    else:
