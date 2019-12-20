@@ -44,11 +44,11 @@ echo '---' > ${md_out}
 echo 'title: Bio Modules' $os_ver >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo "permalink: /${md_file}/" >> ${md_out}
+echo 'created: '`date +"%Y-%m-%d"` >> ${md_out}
 echo 'toc: true' >> ${md_out}
 echo 'toc_label: "On This Page"' >> ${md_out}
 echo 'sidebar:' >> ${md_out}
 echo '  nav: "docs"' >> ${md_out}
-echo 'last_modified_at: '`date +"%Y-%M-%d"` >> ${md_out}
 echo '---' >> ${md_out}
 echo '' >> ${md_out}
 
