@@ -48,6 +48,7 @@ echo 'toc: true' >> ${md_out}
 echo 'toc_label: "On This Page"' >> ${md_out}
 echo 'sidebar:' >> ${md_out}
 echo '  nav: "docs"' >> ${md_out}
+echo 'last_modified_at: '`date +"%Y-%M-%d"` >> ${md_out}
 echo '---' >> ${md_out}
 echo '' >> ${md_out}
 
