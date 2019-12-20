@@ -32,7 +32,6 @@ for p in slist:
    else:
       maxVal = version.parse("0.0.0")
       for release in pac.keys():
-         print(type(release), file=sys.stderr)
          verVal = version.parse(pac[release]['Version'].split('-')[0])
          if verVal > maxVal:
              latest = pac[release]
@@ -54,14 +53,20 @@ for p in slist:
    eb_filename = None
    if 'Description' in latest:
        text = latest['Description'].split(' - ')[0]
-       descrp = text.encode('utf8', 'replace')
+       if isinstance(text, bytes):
+           descrp = text.decode()
+       elif isinstance(text, str):
+           descrp = text
    if 'whatis' in latest:
        entry = [x for x in latest['whatis'] if 'Homepage: ' in x]
        text = entry[0].split('Homepage: ')[1]
-       url = text.encode('utf8', 'replace')
-   print(' - [%s](%s)' .format(latest['fullName'], url))
+       if isinstance(text, bytes):
+           url = text.decode()
+       elif isinstance(text, str):
+           url = text
+   print(' - [{}]({})'.format(latest['fullName'], url))
    if easyconfig_url:
-       print('[easyconfig](%s)'.format(easyconfig_url) )
+       print('[easyconfig]({})'.format(easyconfig_url) )
    else:
        print
-   print('%s'.format(descrp))
+   print('{}'.format(descrp))
