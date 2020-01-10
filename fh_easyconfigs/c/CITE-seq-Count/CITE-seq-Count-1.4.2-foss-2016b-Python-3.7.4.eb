@@ -20,6 +20,7 @@ checksums = ['4eec103af4dadfd786a87bef5d26814cfd21bdeb7bdc62ccb5d9c4d5fdc83f3c']
 exts_defaultclass = 'PythonPackage'
 exts_filter = ("python -c 'import %(ext_name)s'", '')
 exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
     'download_dep_fail': True,
     'use_pip': True,
 }
@@ -224,6 +225,9 @@ exts_list = [
         'modulename': 'Levenshtein',
         'source_urls': ['https://pypi.io/packages/source/p/python-Levenshtein'],
         'checksums': ['033a11de5e3d19ea25c9302d11224e1a1898fe5abd23c61c7c360c25195e3eb1'],
+    }),
+    ('Pillow', '7.0.0', {
+        'modulename': 'PIL',
     }),
 ]
 

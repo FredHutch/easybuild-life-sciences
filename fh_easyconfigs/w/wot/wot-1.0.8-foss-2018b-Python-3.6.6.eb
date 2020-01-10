@@ -7,7 +7,7 @@ versionsuffix = '-Python-%(pyver)s'
 homepage = ''
 description = """Single-cell RNA sequencing is a powerful technology that can reveal a lot about what happens in a group of cells as they develop. But because the technology destroys a cell, it can only provide snapshots of the cells in a group at one point in time. To really understand how cells develop over time, snapshots aren't good enough: scientists want to fill in the gaps between snapshots and string everything together into a movie."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2018b'}
 toolchainopts = {'pic': True}
 
 exts_defaultclass = 'PythonPackage'
@@ -19,65 +19,119 @@ exts_default_options = {
 exts_filter = ("python -c 'import %(ext_name)s'", '')
 
 builddependencies = [
-    ('pkg-config', '0.29.1'),
-    ('binutils', '2.26', '-GCCcore-5.4.0', True),
-    ('CMake', '3.7.2'),
+    ('pkg-config', '0.29.2'),
+    ('binutils', '2.30'),
+    ('CMake', '3.12.1'),
 ]
 
 dependencies = [
-    ('Python', '3.7.4'),
+    ('Python', '3.6.6'),
     ('LZO', '2.10'),
-    ('pybind11', '2.3.0', versionsuffix),
+    ('pybind11', '2.2.4', versionsuffix),
     ('python-igraph', '0.7.1.post6', versionsuffix),
     ('igraph', '0.7.1'),
-    ('LLVM', '7.1.0', '-GCCcore-5.4.0', True),
-    ('HDF5', '1.8.18'),
-    ('matplotlib', '3.1.1', versionsuffix),
-    ('SWIG', '4.0.0', versionsuffix),
-    ('GDAL', '3.0.0', versionsuffix),
+    ('LLVM', '7.0.0'),
+    ('HDF5', '1.10.2'),
+    ('matplotlib', '3.0.0', versionsuffix),
+    ('SWIG', '3.0.12', versionsuffix),
+    ('GDAL', '2.2.3', versionsuffix),
     ('PROJ', '5.0.0'),
-    ('GEOS', '3.7.2', versionsuffix),
-    ('GDAL', '3.0.0', versionsuffix),
+    ('GEOS', '3.6.2', versionsuffix),
+    ('Arrow', '0.15.1', versionsuffix),
+    ('PyTables', '3.4.4', versionsuffix),
 ]
 
 exts_list = [
-     ('python-lzo', '1.12', {
+    ('packaging', '19.2'),
+    ('PyYAML', '5.1.2', {
+        'modulename': 'yaml',
+    }),
+    ('python-lzo', '1.12', {
         'modulename': 'lzo',
     }),
-    ('anndata', '0.6.22.post1'),
+    ('h5py', '2.10.0'),
+    ('anndata', '0.6.22.post1', {
+    }),
     ('fisher', '0.1.9'),
-    ('forceatlas2-python', '1.0'),
+    ('forceatlas2-python', '1.0', {
+        'modulename': 'forceatlas2',
+    }),
     ('hnswlib', '0.3.4'),
     ('lightgbm', '2.3.1'),
+    ('numpy-groupies', '0.9.10', {
+        'modulename': 'numpy_groupies',
+        'source_tmpl': 'numpy_groupies-%(version)s.tar.gz',
+    }),
     ('loompy', '3.0.6'),
-    ('louvain-github', '0.6.1.post1'),
+    ('louvain-github', '0.6.1.post1', {
+        'modulename': 'louvain',
+    }),
     ('MulticoreTSNE-modified', '0.1.post2', {
         'modulename': 'MulticoreTSNE',
     }),
     ('natsort', '6.2.0'),
     ('llvmlite', '0.30.0'),
     ('numba', '0.46.0'),
+    ('retrying', '1.3.3'),
     ('plotly', '4.4.1'),
-    ('pyarrow', '0.15.1'),
+    ('ply', '3.11'),
+    ('thriftpy', '0.3.9'),
+    ('parquet', '1.2'),
+    ('statsmodels', '0.10.2'),
     ('scikit-learn', '0.22', {
         'modulename': 'sklearn',
     }),
     ('scikit-misc', '0.1.1', {
-        'moduelname': 'skmisc',
+        'modulename': 'skmisc',
+        'source_tmpl': 'scikit_misc-0.1.1-cp36-cp36m-manylinux1_x86_64.whl',
+        'unpack_sources': False,
     }),
+    ('entrypoints', '0.3', {
+    }),
+    ('pyflakes', '2.1.1', {
+    }),
+    ('pycodestyle', '2.5.0', {
+    }),
+    ('mccabe', '0.6.1'),
+    ('flake8', '3.7.9'),
+    ('param', '1.9.2'),
+    ('pyct', '0.4.6'),
+
+    ('colorcet', '2.0.2'),
+    ('path', '13.1.0'),
+    ('path.py', '12.4.0', {
+        'modulename': 'path'
+    }),
+    ('pyviz_comms', '0.7.2'),
+    ('holoviews', '1.12.7'),
+    ('typing-extensions', '3.7.4.1', {
+        'modulename': 'typing_extensions',
+        'source_tmpl': 'typing_extensions-3.7.4.1.tar.gz',
+    }),
+    ('MarkupSafe', '1.1.1', {
+        'modulename': 'markupsafe',
+    }),
+    ('Pillow', '7.0.0', {
+        'modulename': 'PIL',
+    }),
+    ('Jinja2', '2.10.3', {
+        'modulename': 'jinja2',
+    }),
+    ('tornado', '6.0.3'),
+    ('bokeh', '1.4.0'),
+    ('hvplot', '0.5.2'),
     ('scplot', '0.0.14'),
     ('seaborn', '0.9.0'),
-    ('numexpr', '2.7.0'),
-    ('tables', '3.6.1'),
-    ('umap-learn', '0.3.10'),
+    ('umap-learn', '0.3.10', {
+        'modulename': 'umap',
+    }),
     ('XlsxWriter', '1.2.7', {
         'modulename': 'xlsxwriter',
         'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
     }),
-    ('pegasuspy', '0.16.3'),
-    #('h5py', '2.10.0', {
-    #    'source_urls': ['https://pypi.python.org/packages/source/h/h5py'],
-    #}),
+    ('pegasuspy', '0.16.3', {
+        'modulename': 'pegasus',
+    }),
     ('POT', '0.6.0', {
         'modulename': 'ot',
         'source_urls': ['https://pypi.python.org/packages/source/p/POT'],
