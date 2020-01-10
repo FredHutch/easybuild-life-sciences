@@ -2,7 +2,7 @@
 title: Bio Modules 14.04
 layout: single
 permalink: /bio-modules-14.04/
-created: 2019-12-20
+created: 2020-01-10
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -143,7 +143,7 @@ pipeline.
  - [FastTree/2.1.9-foss-2016b](http://www.microbesonline.org/fasttree/ )
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/f/FastTree/FastTree-2.1.9-foss-2016b.eb)
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of  time and memory. 
- - [GATK/4.1.4.0-foss-2016b-Python-3.7.4](http://www.broadinstitute.org/gatk/)
+ - [GATK/4.1.4.1-foss-2016b-Python-3.7.4](http://www.broadinstitute.org/gatk/)
 The Genome Analysis Toolkit or GATK is a software package
 developed at the Broad Institute to analyse next-generation resequencing
 data. The toolkit offers a wide variety of tools, with a primary focus on
@@ -237,8 +237,8 @@ Kraken is a system for assigning taxonomic labels to short DNA sequences,
  - [LAST/926-foss-2016b](http://last.cbrc.jp/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/l/LAST/LAST-926-foss-2016b.eb)
 LAST finds similar regions between sequences.
- - [MACS2/2.1.2.1-foss-2018b-Python-2.7.15](http://liulab.dfci.harvard.edu/MACS)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MACS2/MACS2-2.1.2.1-foss-2018b-Python-2.7.15.eb)
+ - [MACS2/2.2.6-foss-2016b-Python-3.7.4](http://liulab.dfci.harvard.edu/MACS)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MACS2/MACS2-2.2.6-foss-2016b-Python-3.7.4.eb)
 Model Based Analysis for ChIP-Seq data
  - [MAFFT/7.305-foss-2016b-with-extensions](http://mafft.cbrc.jp/alignment/software/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MAFFT/MAFFT-7.305-foss-2016b-with-extensions.eb)
@@ -394,6 +394,9 @@ Tandem repeats finder: a program to analyze DNA sequences. Legacy version.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Theano/Theano-1.0.4-foss-2016b-Python-3.7.4.eb)
 Theano is a Python library that allows you to define, optimize,
 and evaluate mathematical expressions involving multi-dimensional arrays efficiently.
+ - [TopHat/2.1.2-foss-2016b](http://ccb.jhu.edu/software/tophat/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/TopHat/TopHat-2.1.2-foss-2016b.eb)
+TopHat is a fast splice junction mapper for RNA-Seq reads.
  - [TraCeR/0.6.0-foss-2016b-Python-3.7.4](https://github.com/Teichlab/tracer)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/TraCeR/TraCeR-0.6.0-foss-2016b-Python-3.7.4.eb)
 TraCeR reconstructs the sequences of rearranged and expressed T cell receptor
@@ -486,6 +489,9 @@ micrographs
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cutadapt/cutadapt-2.7-foss-2016b-Python-3.7.4.eb)
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
+ - [deepTools/3.3.1-foss-2016b-Python-3.7.4](https://deeptools.readthedocs.io/)
+deepTools is a suite of python tools particularly developed for the efficient analysis of
+ high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.
  - [delly/0.7.6-foss-2016b](https://github.com/tobiasrausch/delly)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/delly/delly-0.7.6-foss-2016b.eb)
 DELLY2: Structural variant discovery by integrated paired-end and split-read analysis
