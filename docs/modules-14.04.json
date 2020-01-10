@@ -708,22 +708,22 @@
             "Version": "0.2.2-foss-2016b-Python-3.6.5-fh1"
         }
     },
-    "DANPOS2": {
-        "/app/easybuild/modules/bio/DANPOS2/2.2.2-foss-2016b-Python-2.7.12.lua": {
-            "pV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
-            "fullName": "DANPOS2/2.2.2-foss-2016b-Python-2.7.12",
+    "TRF": {
+        "/app/easybuild/modules/bio/TRF/4.09-linux64-fh.lua": {
+            "pV": "000000004.000000009.*linux.000000064.*fh.*zfinal",
+            "fullName": "TRF/4.09-linux64-fh",
             "pathA": {
-                "/app/easybuild/software/DANPOS2/2.2.2-foss-2016b-Python-2.7.12": 1
+                "/app/easybuild/software/TRF/4.09-linux64-fh": 1
             },
             "whatis": [
-                "Description: A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
-                "Homepage: https://sites.google.com/site/danposdoc"
+                "Description: Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
+                "Homepage: https://tandem.bu.edu/trf/trf.html"
             ],
-            "wV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
-            "help": "\nDescription\n===========\nA toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2\n\n\nMore information\n================\n - Homepage: https://sites.google.com/site/danposdoc\n",
+            "wV": "000000004.000000009.*linux.000000064.*fh.*zfinal",
+            "help": "\nDescription\n===========\nTandem repeats finder: a program to analyze DNA sequences. Legacy version.\n\n\nMore information\n================\n - Homepage: https://tandem.bu.edu/trf/trf.html\n",
             "hidden": false,
-            "Description": "A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
-            "Version": "2.2.2-foss-2016b-Python-2.7.12"
+            "Description": "Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
+            "Version": "4.09-linux64-fh"
         }
     },
     "CoinUtils": {
@@ -744,22 +744,22 @@
             }
         }
     },
-    "hivmmer": {
-        "/app/easybuild/modules/bio/hivmmer/0.1.2-foss-2016b-Python-3.6.6.lua": {
-            "pV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "fullName": "hivmmer/0.1.2-foss-2016b-Python-3.6.6",
+    "RAxML": {
+        "/app/easybuild/modules/bio/RAxML/8.2.11-foss-2016b-hybrid-avx2.lua": {
+            "pV": "000000008.000000002.000000011.*foss.*zfinal-.000002016.*b.*hybrid.*avx.000000002.*zfinal",
+            "fullName": "RAxML/8.2.11-foss-2016b-hybrid-avx2",
             "pathA": {
-                "/app/easybuild/software/hivmmer/0.1.2-foss-2016b-Python-3.6.6/bin": 1
+                "/app/easybuild/software/RAxML/8.2.11-foss-2016b-hybrid-avx2/bin": 1
             },
             "whatis": [
-                "Description: An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
-                "Homepage: https://github.com/kantorlab/hivmmer"
+                "Description: RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.",
+                "Homepage: https://github.com/stamatak/standard-RAxML"
             ],
-            "wV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "help": "\nDescription\n===========\nAn alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER\n\n\nMore information\n================\n - Homepage: https://github.com/kantorlab/hivmmer\n",
+            "wV": "000000008.000000002.000000011.*foss.*zfinal-.000002016.*b.*hybrid.*avx.000000002.*zfinal",
+            "help": "\nDescription\n===========\nRAxML search algorithm for maximum likelihood based inference of phylogenetic trees.\n\n\nMore information\n================\n - Homepage: https://github.com/stamatak/standard-RAxML\n",
             "hidden": false,
-            "Description": "An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
-            "Version": "0.1.2-foss-2016b-Python-3.6.6"
+            "Description": "RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.",
+            "Version": "8.2.11-foss-2016b-hybrid-avx2"
         }
     },
     "ngmlr": {
@@ -1195,18 +1195,21 @@
             "Description": "Model Based Analysis for ChIP-Seq data",
             "Version": "2.1.1.20160309-foss-2015b-Python-2.7.9"
         },
-        "/app/easybuild/modules/bio/MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9": {
-            "wV": "000000002.000000001.000000000.020151222.*foss.*zfinal-.000002015.*b.*ython.*zfinal-.000000002.000000007.000000009.*zfinal",
-            "pV": "000000002.000000001.000000000.020151222.*foss.*zfinal-.000002015.*b.*ython.*zfinal-.000000002.000000007.000000009.*zfinal",
-            "Version": "2.1.0.20151222-foss-2015b-Python-2.7.9",
+        "/app/easybuild/modules/bio/MACS2/2.2.6-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000002.000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "fullName": "MACS2/2.2.6-foss-2016b-Python-3.7.4",
             "pathA": {
-                "/app/easybuild/software/MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9/bin": 1
+                "/app/easybuild/software/MACS2/2.2.6-foss-2016b-Python-3.7.4/bin": 1
             },
-            "hidden": false,
             "whatis": [
-                "Model Based Analysis for ChIP-Seq data - Homepage: http://liulab.dfci.harvard.edu/MACS "
+                "Description: Model Based Analysis for ChIP-Seq data",
+                "Homepage: http://liulab.dfci.harvard.edu/MACS"
             ],
-            "fullName": "MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9"
+            "wV": "000000002.000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "help": "\nDescription\n===========\nModel Based Analysis for ChIP-Seq data\n\n\nMore information\n================\n - Homepage: http://liulab.dfci.harvard.edu/MACS\n",
+            "hidden": false,
+            "Description": "Model Based Analysis for ChIP-Seq data",
+            "Version": "2.2.6-foss-2016b-Python-3.7.4"
         },
         "/app/easybuild/modules/bio/MACS2/2.1.2.1-foss-2018b-Python-2.7.15.lua": {
             "pV": "000000002.000000001.000000002.000000001.*foss.*zfinal-.000002018.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
@@ -1223,6 +1226,19 @@
             "hidden": false,
             "Description": "Model Based Analysis for ChIP-Seq data",
             "Version": "2.1.2.1-foss-2018b-Python-2.7.15"
+        },
+        "/app/easybuild/modules/bio/MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9": {
+            "wV": "000000002.000000001.000000000.020151222.*foss.*zfinal-.000002015.*b.*ython.*zfinal-.000000002.000000007.000000009.*zfinal",
+            "pV": "000000002.000000001.000000000.020151222.*foss.*zfinal-.000002015.*b.*ython.*zfinal-.000000002.000000007.000000009.*zfinal",
+            "Version": "2.1.0.20151222-foss-2015b-Python-2.7.9",
+            "pathA": {
+                "/app/easybuild/software/MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9/bin": 1
+            },
+            "hidden": false,
+            "whatis": [
+                "Model Based Analysis for ChIP-Seq data - Homepage: http://liulab.dfci.harvard.edu/MACS "
+            ],
+            "fullName": "MACS2/2.1.0.20151222-foss-2015b-Python-2.7.9"
         }
     },
     "annovar": {
@@ -1378,6 +1394,41 @@
         }
     },
     "TopHat": {
+        "/app/easybuild/modules/bio/TopHat/2.1.1-foss-2016b.lua": {
+            "pV": "000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "fullName": "TopHat/2.1.1-foss-2016b",
+            "pathA": {
+                "/app/easybuild/software/TopHat/2.1.1-foss-2016b/bin": 1
+            },
+            "whatis": [
+                "Description: TopHat is a fast splice junction mapper for RNA-Seq reads.",
+                "Homepage: http://ccb.jhu.edu/software/tophat/"
+            ],
+            "wV": "000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "help": "\nDescription\n===========\nTopHat is a fast splice junction mapper for RNA-Seq reads.\n\n\nMore information\n================\n - Homepage: http://ccb.jhu.edu/software/tophat/\n",
+            "hidden": false,
+            "Description": "TopHat is a fast splice junction mapper for RNA-Seq reads.",
+            "Version": "2.1.1-foss-2016b"
+        },
+        "/app/easybuild/modules/bio/TopHat/2.1.2-foss-2016b.lua": {
+            "pV": "000000002.000000001.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
+            "Description": "TopHat is a fast splice junction mapper for RNA-Seq reads.",
+            "pathA": {
+                "/app/easybuild/software/TopHat/2.1.2-foss-2016b/bin": 1
+            },
+            "lpathA": {
+                "/app/easybuild/software/TopHat/2.1.2-foss-2016b/lib": 1
+            },
+            "wV": "000000002.000000001.000000002.*foss.*zfinal-.000002016.*b.*zfinal",
+            "help": "\nDescription\n===========\nTopHat is a fast splice junction mapper for RNA-Seq reads.\n\n\nMore information\n================\n - Homepage: http://ccb.jhu.edu/software/tophat/\n",
+            "hidden": false,
+            "fullName": "TopHat/2.1.2-foss-2016b",
+            "Version": "2.1.2-foss-2016b",
+            "whatis": [
+                "Description: TopHat is a fast splice junction mapper for RNA-Seq reads.",
+                "Homepage: http://ccb.jhu.edu/software/tophat/"
+            ]
+        },
         "/app/easybuild/modules/bio/TopHat/2.1.1-foss-2015b": {
             "wV": "000000002.000000001.000000001.*foss.*zfinal-.000002015.*b.*zfinal",
             "pV": "000000002.000000001.000000001.*foss.*zfinal-.000002015.*b.*zfinal",
@@ -1390,20 +1441,28 @@
                 "TopHat is a fast splice junction mapper for RNA-Seq reads. - Homepage: http://ccb.jhu.edu/software/tophat/ "
             ],
             "fullName": "TopHat/2.1.1-foss-2015b"
-        },
-        "/app/easybuild/modules/bio/TopHat/2.1.1-foss-2016b": {
-            "wV": "000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
-            "pV": "000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
-            "Version": "2.1.1-foss-2016b",
-            "hidden": false,
+        }
+    },
+    "deepTools": {
+        "/app/easybuild/modules/bio/deepTools/3.3.1-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000003.000000003.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "Description": "deepTools is a suite of python tools particularly developed for the efficient analysis of\n high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.",
             "pathA": {
-                "/app/easybuild/software/TopHat/2.1.1-foss-2016b/bin": 1
+                "/app/easybuild/software/deepTools/3.3.1-foss-2016b-Python-3.7.4/bin": 1
             },
-            "fullName": "TopHat/2.1.1-foss-2016b",
+            "lpathA": {
+                "/app/easybuild/software/deepTools/3.3.1-foss-2016b-Python-3.7.4/lib": 1
+            },
+            "wV": "000000003.000000003.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "help": "\nDescription\n===========\ndeepTools is a suite of python tools particularly developed for the efficient analysis of\n high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.\n\n\nMore information\n================\n - Homepage: https://deeptools.readthedocs.io/\n\n\nIncluded extensions\n===================\ndeepTools-3.3.1, deeptoolsintervals-0.1.9, py2bit-0.3.0, pyBigWig-0.3.17\n",
+            "hidden": false,
+            "fullName": "deepTools/3.3.1-foss-2016b-Python-3.7.4",
+            "Version": "3.3.1-foss-2016b-Python-3.7.4",
             "whatis": [
-                "Description: TopHat is a fast splice junction mapper for RNA-Seq reads. - Homepage: http://ccb.jhu.edu/software/tophat/ "
-            ],
-            "Description": "TopHat is a fast splice junction mapper for RNA-Seq reads. - Homepage: http://ccb.jhu.edu/software/tophat/ "
+                "Description: deepTools is a suite of python tools particularly developed for the efficient analysis of\n high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.",
+                "Homepage: https://deeptools.readthedocs.io/",
+                "Extensions: deepTools-3.3.1, deeptoolsintervals-0.1.9, py2bit-0.3.0, pyBigWig-0.3.17"
+            ]
         }
     },
     "samblaster": {
@@ -1833,24 +1892,24 @@
             "Version": "1.13-foss-2016b-BioPerl-1.7.0"
         }
     },
-    "GD": {
-        "/app/easybuild/modules/bio/GD/2.69-GCCcore-7.3.0-Perl-5.28.0.lua": {
-            "pV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "Description": "GD.pm - Interface to Gd Graphics Library",
+    "ViennaRNA": {
+        "/app/easybuild/modules/bio/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6.lua": {
+            "pV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "Description": "The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
             "pathA": {
-                "/app/easybuild/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/bin": 1
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/bin": 1
             },
             "lpathA": {
-                "/app/easybuild/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/lib": 1
             },
-            "wV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "help": "\nDescription\n===========\nGD.pm - Interface to Gd Graphics Library\n\n\nMore information\n================\n - Homepage: https://github.com/lstein/Perl-GD\n",
+            "wV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "help": "\nDescription\n===========\nThe Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.\n\n\nMore information\n================\n - Homepage: http://www.tbi.univie.ac.at/RNA/\n",
             "hidden": false,
-            "fullName": "GD/2.69-GCCcore-7.3.0-Perl-5.28.0",
-            "Version": "2.69-GCCcore-7.3.0-Perl-5.28.0",
+            "fullName": "ViennaRNA/2.4.13-foss-2016b-Python-3.6.6",
+            "Version": "2.4.13-foss-2016b-Python-3.6.6",
             "whatis": [
-                "Description: GD.pm - Interface to Gd Graphics Library",
-                "Homepage: https://github.com/lstein/Perl-GD"
+                "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+                "Homepage: http://www.tbi.univie.ac.at/RNA/"
             ]
         }
     },
@@ -2393,22 +2452,25 @@
             ]
         }
     },
-    "ataqv": {
-        "/app/easybuild/modules/bio/ataqv/0.9.5-foss-2016b.lua": {
-            "pV": "000000000.000000009.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
-            "fullName": "ataqv/0.9.5-foss-2016b",
+    "GD": {
+        "/app/easybuild/modules/bio/GD/2.69-GCCcore-7.3.0-Perl-5.28.0.lua": {
+            "pV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "Description": "GD.pm - Interface to Gd Graphics Library",
             "pathA": {
-                "/app/easybuild/software/ataqv/0.9.5-foss-2016b/build": 1
+                "/app/easybuild/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/bin": 1
             },
-            "whatis": [
-                "Description: A toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.",
-                "Homepage: https://github.com/ParkerLab/ataqv"
-            ],
-            "wV": "000000000.000000009.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
-            "help": "\nDescription\n===========\nA toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.\n\n\nMore information\n================\n - Homepage: https://github.com/ParkerLab/ataqv\n",
+            "lpathA": {
+                "/app/easybuild/software/GD/2.69-GCCcore-7.3.0-Perl-5.28.0/lib": 1
+            },
+            "wV": "000000002.000000069.*gcccore.*zfinal-.000000007.000000003.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "help": "\nDescription\n===========\nGD.pm - Interface to Gd Graphics Library\n\n\nMore information\n================\n - Homepage: https://github.com/lstein/Perl-GD\n",
             "hidden": false,
-            "Description": "A toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.",
-            "Version": "0.9.5-foss-2016b"
+            "fullName": "GD/2.69-GCCcore-7.3.0-Perl-5.28.0",
+            "Version": "2.69-GCCcore-7.3.0-Perl-5.28.0",
+            "whatis": [
+                "Description: GD.pm - Interface to Gd Graphics Library",
+                "Homepage: https://github.com/lstein/Perl-GD"
+            ]
         }
     },
     "CITE-seq-Count": {
@@ -2438,10 +2500,10 @@
             "whatis": [
                 "Description: A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
                 "Homepage: https://hoohm.github.io/CITE-seq-Count",
-                "Extensions: argcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0, colorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3, docutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0, future-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, python-dateutil-2.8.0, python-Levenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, umi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2"
+                "Extensions: argcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0, colorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3, docutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0, future-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1, manhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1, packaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, Pillow-7.0.0, pluggy-0.12.0, process-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0, pyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1, pytest-dependency-0.4.0, python-dateutil-2.8.0, python-Levenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, umi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2"
             ],
             "wV": "000000001.000000004.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "help": "\nDescription\n===========\nA python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.\n\n\nMore information\n================\n - Homepage: https://hoohm.github.io/CITE-seq-Count\n\n\nIncluded extensions\n===================\nargcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0,\ncolorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3,\ndocutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0,\nfuture-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1,\nmanhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1,\npackaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, pluggy-0.12.0, process-\ntests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1, pycodestyle-2.5.0,\npyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0, pytest-cov-2.7.1,\npytest-dependency-0.4.0, python-dateutil-2.8.0, python-Levenshtein-0.12.0,\nregex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0, umi_tools-1.0.0,\nwcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2\n",
+            "help": "\nDescription\n===========\nA python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.\n\n\nMore information\n================\n - Homepage: https://hoohm.github.io/CITE-seq-Count\n\n\nIncluded extensions\n===================\nargcomplete-1.10.0, argon2-cffi-19.1.0, atomicwrites-1.3.0, attrs-19.1.0,\ncolorama-0.4.1, contextlib2-0.5.5, coverage-4.5.3, Django-2.2.3,\ndocutils-0.15.1, dpcontracts-0.6.0, entrypoints-0.3, fields-5.0.0,\nfuture-0.17.1, hunter-3.0.1, importlib-metadata-0.18, lark-parser-0.7.1,\nmanhole-1.6.0, mccabe-0.6.1, more-itertools-7.2.0, multiprocess-0.70.6.1,\npackaging-19.0, pathlib2-2.3.4, pexpect-4.7.0, Pillow-7.0.0, pluggy-0.12.0,\nprocess-tests-2.0.2, ptyprocess-0.6.0, py-1.8.0, pybktree-1.1,\npycodestyle-2.5.0, pyflakes-2.1.1, pytest-5.0.1, pytest-checkdocs-1.2.0,\npytest-cov-2.7.1, pytest-dependency-0.4.0, python-dateutil-2.8.0, python-\nLevenshtein-0.12.0, regex-2019.06.08, scandir-1.10.0, sqlparse-0.3.0,\numi_tools-1.0.0, wcwidth-0.1.7, wheel-0.33.4, zipp-0.5.2\n",
             "hidden": false,
             "Description": "A python package that allows to count antibody TAGS from a CITE-seq and/or\n cell hashing experiment.",
             "Version": "1.4.2-foss-2016b-Python-3.7.4"
@@ -3042,40 +3104,22 @@
             }
         }
     },
-    "Kraken2": {
-        "/app/easybuild/modules/bio/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0.lua": {
-            "pV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "fullName": "Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0",
+    "snippy": {
+        "/app/easybuild/modules/bio/snippy/4.4.1-foss-2016b-Perl-5.28.0.lua": {
+            "pV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "fullName": "snippy/4.4.1-foss-2016b-Perl-5.28.0",
             "pathA": {
-                "/app/easybuild/software/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0": 1
+                "/app/easybuild/software/snippy/4.4.1-foss-2016b-Perl-5.28.0/bin": 1
             },
             "whatis": [
-                "Description: Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
-                "Homepage: http://www.ccb.jhu.edu/software/kraken2/"
+                "Description: Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
+                "Homepage: https://github.com/tseemann/snippy"
             ],
-            "wV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "help": "\nDescription\n===========\nKraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.\n\n\nMore information\n================\n - Homepage: http://www.ccb.jhu.edu/software/kraken2/\n",
+            "wV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "help": "\nDescription\n===========\nSnippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.\n\n\nMore information\n================\n - Homepage: https://github.com/tseemann/snippy\n",
             "hidden": false,
-            "Description": "Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
-            "Version": "2.0.7-beta-foss-2016b-Perl-5.28.0"
-        }
-    },
-    "TRF": {
-        "/app/easybuild/modules/bio/TRF/4.09-linux64-fh.lua": {
-            "pV": "000000004.000000009.*linux.000000064.*fh.*zfinal",
-            "fullName": "TRF/4.09-linux64-fh",
-            "pathA": {
-                "/app/easybuild/software/TRF/4.09-linux64-fh": 1
-            },
-            "whatis": [
-                "Description: Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
-                "Homepage: https://tandem.bu.edu/trf/trf.html"
-            ],
-            "wV": "000000004.000000009.*linux.000000064.*fh.*zfinal",
-            "help": "\nDescription\n===========\nTandem repeats finder: a program to analyze DNA sequences. Legacy version.\n\n\nMore information\n================\n - Homepage: https://tandem.bu.edu/trf/trf.html\n",
-            "hidden": false,
-            "Description": "Tandem repeats finder: a program to analyze DNA sequences. Legacy version.",
-            "Version": "4.09-linux64-fh"
+            "Description": "Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
+            "Version": "4.4.1-foss-2016b-Perl-5.28.0"
         }
     },
     "pyBigWig": {
@@ -3091,6 +3135,24 @@
                 "Homepage: https://github.com/deeptools/pyBigWig"
             ],
             "help": "\nDescription\n===========\nA python extension, written in C, for quick access to bigBed files and access to and creation of\n bigWig files.\n\n\nMore information\n================\n - Homepage: https://github.com/deeptools/pyBigWig\n"
+        }
+    },
+    "python-Levenshtein": {
+        "/app/easybuild/modules/bio/python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6.lua": {
+            "pV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "fullName": "python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6",
+            "pathA": {
+                "/app/easybuild/software/python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6/bin": 1
+            },
+            "whatis": [
+                "Description: The Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.",
+                "Homepage: https://github.com/ztane/python-Levenshtein"
+            ],
+            "wV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "help": "\nDescription\n===========\nThe Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.\n\n\nMore information\n================\n - Homepage: https://github.com/ztane/python-Levenshtein\n",
+            "hidden": false,
+            "Description": "The Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.",
+            "Version": "0.12.0-foss-2016b-Python-3.6.6"
         }
     },
     "ImmunediveRsity": {
@@ -3150,22 +3212,35 @@
             "Description": "PyMOL is an OpenGL based molecular visualization system - Homepage: http://sourceforge.net/projects/pymol "
         }
     },
-    "python-Levenshtein": {
-        "/app/easybuild/modules/bio/python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6.lua": {
-            "pV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "fullName": "python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6",
+    "Bowtie": {
+        "/app/easybuild/modules/bio/Bowtie/1.2.1.1-foss-2016b.lua": {
+            "pV": "000000001.000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "fullName": "Bowtie/1.2.1.1-foss-2016b",
             "pathA": {
-                "/app/easybuild/software/python-Levenshtein/0.12.0-foss-2016b-Python-3.6.6/bin": 1
+                "/app/easybuild/software/Bowtie/1.2.1.1-foss-2016b/bin": 1
             },
             "whatis": [
-                "Description: The Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.",
-                "Homepage: https://github.com/ztane/python-Levenshtein"
+                "Description: Bowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.",
+                "Homepage: http://bowtie-bio.sourceforge.net/index.shtml"
             ],
-            "wV": "000000000.000000012.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "help": "\nDescription\n===========\nThe Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.\n\n\nMore information\n================\n - Homepage: https://github.com/ztane/python-Levenshtein\n",
+            "wV": "000000001.000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
+            "help": "\nDescription\n===========\nBowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.\n\n\nMore information\n================\n - Homepage: http://bowtie-bio.sourceforge.net/index.shtml\n",
             "hidden": false,
-            "Description": "The Levenshtein Python C extension module contains functions for fast computation of;\n Levenshtein (edit) distance, and edit operations\n string similarity\n approximate median strings, and generally string averaging\n string sequence and set similarity.",
-            "Version": "0.12.0-foss-2016b-Python-3.6.6"
+            "Description": "Bowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.",
+            "Version": "1.2.1.1-foss-2016b"
+        },
+        "/app/easybuild/modules/bio/Bowtie/1.0.0-foss-2015b": {
+            "wV": "000000001.*foss.*zfinal-.000002015.*b.*zfinal",
+            "pV": "000000001.*foss.*zfinal-.000002015.*b.*zfinal",
+            "Version": "1.0.0-foss-2015b",
+            "pathA": {
+                "/app/easybuild/software/Bowtie/1.0.0-foss-2015b/bin": 1
+            },
+            "hidden": false,
+            "whatis": [
+                "Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome.  - Homepage: http://bowtie-bio.sourceforge.net/index.shtml "
+            ],
+            "fullName": "Bowtie/1.0.0-foss-2015b"
         }
     },
     "nanopolish": {
@@ -3293,59 +3368,54 @@
             "Version": "0.8.0-foss-2016b-Python-3.7.4"
         }
     },
-    "ViennaRNA": {
-        "/app/easybuild/modules/bio/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6.lua": {
-            "pV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "Description": "The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
+    "tcr-dist": {
+        "/app/easybuild/modules/bio/tcr-dist/0.0.2-foss-2016b-Python-2.7.15.lua": {
+            "pV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "fullName": "tcr-dist/0.0.2-foss-2016b-Python-2.7.15",
             "pathA": {
-                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/bin": 1
+                "/app/easybuild/software/tcr-dist/0.0.2-foss-2016b-Python-2.7.15/tcr-dist-master": 1
             },
-            "lpathA": {
-                "/app/easybuild/software/ViennaRNA/2.4.13-foss-2016b-Python-3.6.6/lib": 1
-            },
-            "wV": "000000002.000000004.000000013.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "help": "\nDescription\n===========\nThe Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.\n\n\nMore information\n================\n - Homepage: http://www.tbi.univie.ac.at/RNA/\n",
-            "hidden": false,
-            "fullName": "ViennaRNA/2.4.13-foss-2016b-Python-3.6.6",
-            "Version": "2.4.13-foss-2016b-Python-3.6.6",
             "whatis": [
-                "Description: The Vienna RNA Package consists of a C code library and several\nstand-alone programs for the prediction and comparison of RNA secondary structures.",
-                "Homepage: http://www.tbi.univie.ac.at/RNA/"
-            ]
+                "Description: Quantifiable predictive features define epitope-specific T cell receptor repertoires",
+                "Homepage: https://github.com/phbradley/tcr-dist"
+            ],
+            "wV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
+            "help": "\nDescription\n===========\nQuantifiable predictive features define epitope-specific T cell receptor repertoires\n\n\nMore information\n================\n - Homepage: https://github.com/phbradley/tcr-dist\n",
+            "hidden": false,
+            "Description": "Quantifiable predictive features define epitope-specific T cell receptor repertoires",
+            "Version": "0.0.2-foss-2016b-Python-2.7.15"
         }
     },
-    "nanofilt": {
-        "/app/easybuild/modules/bio/nanofilt/2.5.0-foss-2016b-Python-3.6.6.lua": {
-            "pV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "fullName": "nanofilt/2.5.0-foss-2016b-Python-3.6.6",
-            "pathA": {
-                "/app/easybuild/software/nanofilt/2.5.0-foss-2016b-Python-3.6.6/bin": 1
-            },
-            "whatis": [
-                "Description: Filtering and trimming of long read sequencing data.",
-                "Homepage: https://github.com/wdecoster/nanofilt"
-            ],
-            "wV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
-            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+    "NGS": {
+        "/app/easybuild/modules/bio/NGS/1.2.5-foss-2016a": {
+            "wV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*a.*zfinal",
+            "pV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*a.*zfinal",
+            "Description": "NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing. - Homepage: https://github.com/ncbi/ngs ",
             "hidden": false,
-            "Description": "Filtering and trimming of long read sequencing data.",
-            "Version": "2.5.0-foss-2016b-Python-3.6.6"
+            "fullName": "NGS/1.2.5-foss-2016a",
+            "Version": "1.2.5-foss-2016a",
+            "whatis": [
+                "Description: NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing. - Homepage: https://github.com/ncbi/ngs "
+            ],
+            "lpathA": {
+                "/app/easybuild/software/NGS/1.2.5-foss-2016a/lib64": 1
+            }
         },
-        "/app/easybuild/modules/bio/nanofilt/2.6.0-foss-2016b-Python-3.7.4.lua": {
-            "pV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "fullName": "nanofilt/2.6.0-foss-2016b-Python-3.7.4",
-            "pathA": {
-                "/app/easybuild/software/nanofilt/2.6.0-foss-2016b-Python-3.7.4/bin": 1
-            },
+        "/app/easybuild/modules/bio/NGS/1.2.5-foss-2016b.lua": {
+            "pV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
+            "Description": "NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.",
             "whatis": [
-                "Description: Filtering and trimming of long read sequencing data.",
-                "Homepage: https://github.com/wdecoster/nanofilt"
+                "Description: NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.",
+                "Homepage: https://github.com/ncbi/ngs"
             ],
-            "wV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
+            "wV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
+            "Version": "1.2.5-foss-2016b",
             "hidden": false,
-            "Description": "Filtering and trimming of long read sequencing data.",
-            "Version": "2.6.0-foss-2016b-Python-3.7.4"
+            "help": "\nDescription\n===========\nNGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.\n\n\nMore information\n================\n - Homepage: https://github.com/ncbi/ngs\n",
+            "fullName": "NGS/1.2.5-foss-2016b",
+            "lpathA": {
+                "/app/easybuild/software/NGS/1.2.5-foss-2016b/lib64": 1
+            }
         }
     },
     "FastANI": {
@@ -3366,22 +3436,38 @@
             "Version": "1.1-foss-2016b"
         }
     },
-    "tcr-dist": {
-        "/app/easybuild/modules/bio/tcr-dist/0.0.2-foss-2016b-Python-2.7.15.lua": {
-            "pV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
-            "fullName": "tcr-dist/0.0.2-foss-2016b-Python-2.7.15",
+    "GCTA": {
+        "/app/easybuild/modules/bio/GCTA/1.92.2beta.lua": {
+            "pV": "000000001.000000092.000000002.*beta.*zfinal",
+            "fullName": "GCTA/1.92.2beta",
             "pathA": {
-                "/app/easybuild/software/tcr-dist/0.0.2-foss-2016b-Python-2.7.15/tcr-dist-master": 1
+                "/app/easybuild/software/GCTA/1.92.2beta": 1
             },
             "whatis": [
-                "Description: Quantifiable predictive features define epitope-specific T cell receptor repertoires",
-                "Homepage: https://github.com/phbradley/tcr-dist"
+                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+                "Homepage: https://cnsgenomics.com/software/gcta"
             ],
-            "wV": "000000000.000000000.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000015.*zfinal",
-            "help": "\nDescription\n===========\nQuantifiable predictive features define epitope-specific T cell receptor repertoires\n\n\nMore information\n================\n - Homepage: https://github.com/phbradley/tcr-dist\n",
+            "wV": "000000001.000000092.000000002.*beta.*zfinal",
+            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
             "hidden": false,
-            "Description": "Quantifiable predictive features define epitope-specific T cell receptor repertoires",
-            "Version": "0.0.2-foss-2016b-Python-2.7.15"
+            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+            "Version": "1.92.2beta"
+        },
+        "/app/easybuild/modules/bio/GCTA/1.92.3beta3.lua": {
+            "pV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
+            "fullName": "GCTA/1.92.3beta3",
+            "pathA": {
+                "/app/easybuild/software/GCTA/1.92.3beta3": 1
+            },
+            "whatis": [
+                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+                "Homepage: https://cnsgenomics.com/software/gcta"
+            ],
+            "wV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
+            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
+            "hidden": false,
+            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
+            "Version": "1.92.3beta3"
         }
     },
     "PAINTOR": {
@@ -3664,6 +3750,23 @@
             ]
         }
     },
+    "MAFFT": {
+        "/app/easybuild/modules/bio/MAFFT/7.305-foss-2016b-with-extensions.lua": {
+            "pV": "000000007.000000305.*foss.*zfinal-.000002016.*b.*with.*extensions.*zfinal",
+            "fullName": "MAFFT/7.305-foss-2016b-with-extensions",
+            "pathA": {
+                "/app/easybuild/software/MAFFT/7.305-foss-2016b-with-extensions/bin": 1
+            },
+            "whatis": [
+                "Description: MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/"
+            ],
+            "wV": "000000007.000000305.*foss.*zfinal-.000002016.*b.*with.*extensions.*zfinal",
+            "help": "MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/",
+            "hidden": false,
+            "Description": "MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/",
+            "Version": "7.305-foss-2016b-with-extensions"
+        }
+    },
     "qcat": {
         "/app/easybuild/modules/bio/qcat/1.0.5-foss-2016b-Python-3.6.6.lua": {
             "pV": "000000001.000000000.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
@@ -3706,24 +3809,6 @@
             ]
         }
     },
-    "snippy": {
-        "/app/easybuild/modules/bio/snippy/4.4.1-foss-2016b-Perl-5.28.0.lua": {
-            "pV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "fullName": "snippy/4.4.1-foss-2016b-Perl-5.28.0",
-            "pathA": {
-                "/app/easybuild/software/snippy/4.4.1-foss-2016b-Perl-5.28.0/bin": 1
-            },
-            "whatis": [
-                "Description: Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
-                "Homepage: https://github.com/tseemann/snippy"
-            ],
-            "wV": "000000004.000000004.000000001.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
-            "help": "\nDescription\n===========\nSnippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.\n\n\nMore information\n================\n - Homepage: https://github.com/tseemann/snippy\n",
-            "hidden": false,
-            "Description": "Snippy finds SNPs between a haploid reference genome and your NGS sequence\n reads. It will find both substitutions (snps) and insertions/deletions (indels).\nRapid haploid variant calling and core genome alignment.",
-            "Version": "4.4.1-foss-2016b-Perl-5.28.0"
-        }
-    },
     "bam2wig": {
         "/app/easybuild/modules/bio/bam2wig/1.4.lua": {
             "pV": "000000001.000000004.*zfinal",
@@ -3760,36 +3845,22 @@
             "Version": "2.4-foss-2016b"
         }
     },
-    "NGS": {
-        "/app/easybuild/modules/bio/NGS/1.2.5-foss-2016a": {
-            "wV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*a.*zfinal",
-            "pV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*a.*zfinal",
-            "Description": "NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing. - Homepage: https://github.com/ncbi/ngs ",
-            "hidden": false,
-            "fullName": "NGS/1.2.5-foss-2016a",
-            "Version": "1.2.5-foss-2016a",
+    "megalodon": {
+        "/app/easybuild/modules/bio/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "fullName": "megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4",
+            "pathA": {
+                "/app/easybuild/software/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4/bin": 1
+            },
             "whatis": [
-                "Description: NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from  Next Generation Sequencing. - Homepage: https://github.com/ncbi/ngs "
+                "Description: Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
+                "Homepage: https://github.com/nanoporetech"
             ],
-            "lpathA": {
-                "/app/easybuild/software/NGS/1.2.5-foss-2016a/lib64": 1
-            }
-        },
-        "/app/easybuild/modules/bio/NGS/1.2.5-foss-2016b.lua": {
-            "pV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
-            "Description": "NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.",
-            "whatis": [
-                "Description: NGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.",
-                "Homepage: https://github.com/ncbi/ngs"
-            ],
-            "wV": "000000001.000000002.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
-            "Version": "1.2.5-foss-2016b",
+            "wV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "help": "\nDescription\n===========\nMegalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech\n",
             "hidden": false,
-            "help": "\nDescription\n===========\nNGS is a new, domain-specific API for accessing reads, alignments and pileups produced from\n Next Generation Sequencing.\n\n\nMore information\n================\n - Homepage: https://github.com/ncbi/ngs\n",
-            "fullName": "NGS/1.2.5-foss-2016b",
-            "lpathA": {
-                "/app/easybuild/software/NGS/1.2.5-foss-2016b/lib64": 1
-            }
+            "Description": "Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
+            "Version": "1.0.0-alpha.1-foss-2016b-Python-3.7.4"
         }
     },
     "Trinity": {
@@ -3879,22 +3950,22 @@
             "fullName": "BLAST/2.2.26-Linux_x86_64"
         }
     },
-    "megalodon": {
-        "/app/easybuild/modules/bio/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4.lua": {
-            "pV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "fullName": "megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4",
+    "DANPOS2": {
+        "/app/easybuild/modules/bio/DANPOS2/2.2.2-foss-2016b-Python-2.7.12.lua": {
+            "pV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
+            "fullName": "DANPOS2/2.2.2-foss-2016b-Python-2.7.12",
             "pathA": {
-                "/app/easybuild/software/megalodon/1.0.0-alpha.1-foss-2016b-Python-3.7.4/bin": 1
+                "/app/easybuild/software/DANPOS2/2.2.2-foss-2016b-Python-2.7.12": 1
             },
             "whatis": [
-                "Description: Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
-                "Homepage: https://github.com/nanoporetech"
+                "Description: A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
+                "Homepage: https://sites.google.com/site/danposdoc"
             ],
-            "wV": "000000001.*alpha.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "help": "\nDescription\n===========\nMegalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.\n\n\nMore information\n================\n - Homepage: https://github.com/nanoporetech\n",
+            "wV": "000000002.000000002.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000002.000000007.000000012.*zfinal",
+            "help": "\nDescription\n===========\nA toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2\n\n\nMore information\n================\n - Homepage: https://sites.google.com/site/danposdoc\n",
             "hidden": false,
-            "Description": "Megalodon provides \"basecalling augmentation\" for raw nanopore\n sequencing reads, including direct, reference-guided SNP and modified base calling.",
-            "Version": "1.0.0-alpha.1-foss-2016b-Python-3.7.4"
+            "Description": "A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 2",
+            "Version": "2.2.2-foss-2016b-Python-2.7.12"
         }
     },
     "BLAT": {
@@ -5033,33 +5104,21 @@
         }
     },
     "GATK": {
-        "/app/easybuild/modules/bio/GATK/3.7-Java-1.8.0_92.lua": {
-            "wV": "000000003.000000007.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
-            "pV": "000000003.000000007.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
-            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/",
-            "hidden": false,
-            "Version": "3.7-Java-1.8.0_92",
-            "fullName": "GATK/3.7-Java-1.8.0_92",
-            "whatis": [
-                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/"
-            ],
-            "help": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/"
-        },
-        "/app/easybuild/modules/bio/GATK/4.1.4.0-foss-2016b-Python-3.7.4.lua": {
-            "pV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
-            "fullName": "GATK/4.1.4.0-foss-2016b-Python-3.7.4",
+        "/app/easybuild/modules/bio/GATK/4.1.4.1-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000004.000000001.000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "fullName": "GATK/4.1.4.1-foss-2016b-Python-3.7.4",
             "pathA": {
-                "/app/easybuild/software/GATK/4.1.4.0-foss-2016b-Python-3.7.4": 1
+                "/app/easybuild/software/GATK/4.1.4.1-foss-2016b-Python-3.7.4": 1
             },
             "whatis": [
                 "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
                 "Homepage: http://www.broadinstitute.org/gatk/"
             ],
-            "wV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "wV": "000000004.000000001.000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
             "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
             "hidden": false,
             "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
-            "Version": "4.1.4.0-foss-2016b-Python-3.7.4"
+            "Version": "4.1.4.1-foss-2016b-Python-3.7.4"
         },
         "/app/easybuild/modules/bio/GATK/4.0.10.0-foss-2016b-Python-3.6.6.lua": {
             "pV": "000000004.000000000.000000010.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
@@ -5077,16 +5136,16 @@
             "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
             "Version": "4.0.10.0-foss-2016b-Python-3.6.6"
         },
-        "/app/easybuild/modules/bio/GATK/3.5-Java-1.8.0_66": {
-            "wV": "000000003.000000005.*java.*zfinal-.000000001.000000008.*_.000000066.*zfinal",
-            "pV": "000000003.000000005.*java.*zfinal-.000000001.000000008.*_.000000066.*zfinal",
+        "/app/easybuild/modules/bio/GATK/3.6-Java-1.8.0_92": {
+            "wV": "000000003.000000006.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
+            "pV": "000000003.000000006.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
             "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
             "hidden": false,
-            "fullName": "GATK/3.5-Java-1.8.0_66",
+            "fullName": "GATK/3.6-Java-1.8.0_92",
             "whatis": [
                 "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ "
             ],
-            "Version": "3.5-Java-1.8.0_66"
+            "Version": "3.6-Java-1.8.0_92"
         },
         "/app/easybuild/modules/bio/GATK/4.1.0.0-foss-2016b-Python-3.6.6.lua": {
             "pV": "000000004.000000001.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
@@ -5104,27 +5163,17 @@
             "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
             "Version": "4.1.0.0-foss-2016b-Python-3.6.6"
         },
-        "/app/easybuild/modules/bio/GATK/3.4-46-Java-1.7.0_80": {
-            "wV": "000000003.000000004.*zfinal-.000000046.*java.*zfinal-.000000001.000000007.*_.000000080.*zfinal",
-            "pV": "000000003.000000004.*zfinal-.000000046.*java.*zfinal-.000000001.000000007.*_.000000080.*zfinal",
-            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
+        "/app/easybuild/modules/bio/GATK/3.7-Java-1.8.0_92.lua": {
+            "wV": "000000003.000000007.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
+            "pV": "000000003.000000007.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
+            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/",
             "hidden": false,
-            "fullName": "GATK/3.4-46-Java-1.7.0_80",
+            "Version": "3.7-Java-1.8.0_92",
+            "fullName": "GATK/3.7-Java-1.8.0_92",
             "whatis": [
-                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ "
+                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/"
             ],
-            "Version": "3.4-46-Java-1.7.0_80"
-        },
-        "/app/easybuild/modules/bio/GATK/3.6-Java-1.8.0_92": {
-            "wV": "000000003.000000006.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
-            "pV": "000000003.000000006.*java.*zfinal-.000000001.000000008.*_.000000092.*zfinal",
-            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
-            "hidden": false,
-            "fullName": "GATK/3.6-Java-1.8.0_92",
-            "whatis": [
-                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ "
-            ],
-            "Version": "3.6-Java-1.8.0_92"
+            "help": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute \n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on \n data quality assurance. Its robust architecture, powerful processing engine and \n high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/"
         },
         "/app/easybuild/modules/bio/GATK/4.1.4.0-foss-2016b-Python-3.6.6.lua": {
             "pV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
@@ -5141,6 +5190,44 @@
             "hidden": false,
             "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
             "Version": "4.1.4.0-foss-2016b-Python-3.6.6"
+        },
+        "/app/easybuild/modules/bio/GATK/3.5-Java-1.8.0_66": {
+            "wV": "000000003.000000005.*java.*zfinal-.000000001.000000008.*_.000000066.*zfinal",
+            "pV": "000000003.000000005.*java.*zfinal-.000000001.000000008.*_.000000066.*zfinal",
+            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
+            "hidden": false,
+            "fullName": "GATK/3.5-Java-1.8.0_66",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ "
+            ],
+            "Version": "3.5-Java-1.8.0_66"
+        },
+        "/app/easybuild/modules/bio/GATK/3.4-46-Java-1.7.0_80": {
+            "wV": "000000003.000000004.*zfinal-.000000046.*java.*zfinal-.000000001.000000007.*_.000000080.*zfinal",
+            "pV": "000000003.000000004.*zfinal-.000000046.*java.*zfinal-.000000001.000000007.*_.000000080.*zfinal",
+            "Description": "The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ ",
+            "hidden": false,
+            "fullName": "GATK/3.4-46-Java-1.7.0_80",
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute   to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,  with a primary focus on variant discovery and genotyping as well as strong emphasis on   data quality assurance. Its robust architecture, powerful processing engine and   high-performance computing features make it capable of taking on projects of any size. - Homepage: http://www.broadinstitute.org/gatk/ "
+            ],
+            "Version": "3.4-46-Java-1.7.0_80"
+        },
+        "/app/easybuild/modules/bio/GATK/4.1.4.0-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "fullName": "GATK/4.1.4.0-foss-2016b-Python-3.7.4",
+            "pathA": {
+                "/app/easybuild/software/GATK/4.1.4.0-foss-2016b-Python-3.7.4": 1
+            },
+            "whatis": [
+                "Description: The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+                "Homepage: http://www.broadinstitute.org/gatk/"
+            ],
+            "wV": "000000004.000000001.000000004.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "help": "\nDescription\n===========\nThe Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.\n\n\nMore information\n================\n - Homepage: http://www.broadinstitute.org/gatk/\n",
+            "hidden": false,
+            "Description": "The Genome Analysis Toolkit or GATK is a software package\ndeveloped at the Broad Institute to analyse next-generation resequencing\ndata. The toolkit offers a wide variety of tools, with a primary focus on\nvariant discovery and genotyping as well as strong emphasis on data quality\nassurance. Its robust architecture, powerful processing engine and\nhigh-performance computing features make it capable of taking on projects\nof any size.",
+            "Version": "4.1.4.0-foss-2016b-Python-3.7.4"
         }
     },
     "PHASE": {
@@ -5556,21 +5643,22 @@
             "Version": "0.9.22-foss-2016b"
         }
     },
-    "MAFFT": {
-        "/app/easybuild/modules/bio/MAFFT/7.305-foss-2016b-with-extensions.lua": {
-            "pV": "000000007.000000305.*foss.*zfinal-.000002016.*b.*with.*extensions.*zfinal",
-            "fullName": "MAFFT/7.305-foss-2016b-with-extensions",
+    "Kraken2": {
+        "/app/easybuild/modules/bio/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0.lua": {
+            "pV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "fullName": "Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0",
             "pathA": {
-                "/app/easybuild/software/MAFFT/7.305-foss-2016b-with-extensions/bin": 1
+                "/app/easybuild/software/Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0": 1
             },
             "whatis": [
-                "Description: MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/"
+                "Description: Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
+                "Homepage: http://www.ccb.jhu.edu/software/kraken2/"
             ],
-            "wV": "000000007.000000305.*foss.*zfinal-.000002016.*b.*with.*extensions.*zfinal",
-            "help": "MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/",
+            "wV": "000000002.000000000.000000007.*beta.*foss.*zfinal-.000002016.*b.*erl.*zfinal-.000000005.000000028.*zfinal",
+            "help": "\nDescription\n===========\nKraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.\n\n\nMore information\n================\n - Homepage: http://www.ccb.jhu.edu/software/kraken2/\n",
             "hidden": false,
-            "Description": "MAFFT is a multiple sequence alignment program \n for unix-like operating systems.  It offers a range of multiple\n alignment methods, L-INS-i (accurate; for alignment of <\u223c200 sequences), \n FFT-NS-2 (fast; for alignment of <\u223c10,000 sequences), etc. - Homepage: http://mafft.cbrc.jp/alignment/software/",
-            "Version": "7.305-foss-2016b-with-extensions"
+            "Description": "Kraken is a system for assigning taxonomic labels to short DNA sequences,\n usually obtained through metagenomic studies. Previous attempts by other\n bioinformatics software to accomplish this task have often used sequence\n alignment or machine learning techniques that were quite slow, leading to\n the development of less sensitive but much faster abundance estimation\n programs. Kraken aims to achieve high sensitivity and high speed by\n utilizing exact alignments of k-mers and a novel classification algorithm.",
+            "Version": "2.0.7-beta-foss-2016b-Perl-5.28.0"
         }
     },
     "misopy": {
@@ -5841,35 +5929,22 @@
             ]
         }
     },
-    "Bowtie": {
-        "/app/easybuild/modules/bio/Bowtie/1.2.1.1-foss-2016b.lua": {
-            "pV": "000000001.000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
-            "fullName": "Bowtie/1.2.1.1-foss-2016b",
+    "ataqv": {
+        "/app/easybuild/modules/bio/ataqv/0.9.5-foss-2016b.lua": {
+            "pV": "000000000.000000009.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
+            "fullName": "ataqv/0.9.5-foss-2016b",
             "pathA": {
-                "/app/easybuild/software/Bowtie/1.2.1.1-foss-2016b/bin": 1
+                "/app/easybuild/software/ataqv/0.9.5-foss-2016b/build": 1
             },
             "whatis": [
-                "Description: Bowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.",
-                "Homepage: http://bowtie-bio.sourceforge.net/index.shtml"
+                "Description: A toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.",
+                "Homepage: https://github.com/ParkerLab/ataqv"
             ],
-            "wV": "000000001.000000002.000000001.000000001.*foss.*zfinal-.000002016.*b.*zfinal",
-            "help": "\nDescription\n===========\nBowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.\n\n\nMore information\n================\n - Homepage: http://bowtie-bio.sourceforge.net/index.shtml\n",
+            "wV": "000000000.000000009.000000005.*foss.*zfinal-.000002016.*b.*zfinal",
+            "help": "\nDescription\n===========\nA toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.\n\n\nMore information\n================\n - Homepage: https://github.com/ParkerLab/ataqv\n",
             "hidden": false,
-            "Description": "Bowtie is an ultrafast, memory-efficient short read aligner.\n It aligns short DNA sequences (reads) to the human genome.",
-            "Version": "1.2.1.1-foss-2016b"
-        },
-        "/app/easybuild/modules/bio/Bowtie/1.0.0-foss-2015b": {
-            "wV": "000000001.*foss.*zfinal-.000002015.*b.*zfinal",
-            "pV": "000000001.*foss.*zfinal-.000002015.*b.*zfinal",
-            "Version": "1.0.0-foss-2015b",
-            "pathA": {
-                "/app/easybuild/software/Bowtie/1.0.0-foss-2015b/bin": 1
-            },
-            "hidden": false,
-            "whatis": [
-                "Bowtie is an ultrafast, memory-efficient short read aligner. It aligns short DNA sequences (reads) to the human genome.  - Homepage: http://bowtie-bio.sourceforge.net/index.shtml "
-            ],
-            "fullName": "Bowtie/1.0.0-foss-2015b"
+            "Description": "A toolkit for measuring and comparing ATAC-seq results, made in the\n`Parker lab`_ at the University of Michigan. We wrote it to help us\nunderstand how well our ATAC-seq assays had worked, and to make it\neasier to spot differences that might be caused by library prep or\nsequencing.",
+            "Version": "0.9.5-foss-2016b"
         }
     },
     "gbench": {
@@ -6091,22 +6166,22 @@
             ]
         }
     },
-    "RAxML": {
-        "/app/easybuild/modules/bio/RAxML/8.2.11-foss-2016b-hybrid-avx2.lua": {
-            "pV": "000000008.000000002.000000011.*foss.*zfinal-.000002016.*b.*hybrid.*avx.000000002.*zfinal",
-            "fullName": "RAxML/8.2.11-foss-2016b-hybrid-avx2",
+    "hivmmer": {
+        "/app/easybuild/modules/bio/hivmmer/0.1.2-foss-2016b-Python-3.6.6.lua": {
+            "pV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "fullName": "hivmmer/0.1.2-foss-2016b-Python-3.6.6",
             "pathA": {
-                "/app/easybuild/software/RAxML/8.2.11-foss-2016b-hybrid-avx2/bin": 1
+                "/app/easybuild/software/hivmmer/0.1.2-foss-2016b-Python-3.6.6/bin": 1
             },
             "whatis": [
-                "Description: RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.",
-                "Homepage: https://github.com/stamatak/standard-RAxML"
+                "Description: An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+                "Homepage: https://github.com/kantorlab/hivmmer"
             ],
-            "wV": "000000008.000000002.000000011.*foss.*zfinal-.000002016.*b.*hybrid.*avx.000000002.*zfinal",
-            "help": "\nDescription\n===========\nRAxML search algorithm for maximum likelihood based inference of phylogenetic trees.\n\n\nMore information\n================\n - Homepage: https://github.com/stamatak/standard-RAxML\n",
+            "wV": "000000000.000000001.000000002.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "help": "\nDescription\n===========\nAn alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER\n\n\nMore information\n================\n - Homepage: https://github.com/kantorlab/hivmmer\n",
             "hidden": false,
-            "Description": "RAxML search algorithm for maximum likelihood based inference of phylogenetic trees.",
-            "Version": "8.2.11-foss-2016b-hybrid-avx2"
+            "Description": "An alignment and variant-calling pipeline for Illumina deep\n sequencing of HIV-1, based on the probabilistic aligner HMMER",
+            "Version": "0.1.2-foss-2016b-Python-3.6.6"
         }
     },
     "ncbi-vdb": {
@@ -6173,38 +6248,38 @@
             "Version": "0.2.13-foss-2016b"
         }
     },
-    "GCTA": {
-        "/app/easybuild/modules/bio/GCTA/1.92.2beta.lua": {
-            "pV": "000000001.000000092.000000002.*beta.*zfinal",
-            "fullName": "GCTA/1.92.2beta",
+    "nanofilt": {
+        "/app/easybuild/modules/bio/nanofilt/2.5.0-foss-2016b-Python-3.6.6.lua": {
+            "pV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "fullName": "nanofilt/2.5.0-foss-2016b-Python-3.6.6",
             "pathA": {
-                "/app/easybuild/software/GCTA/1.92.2beta": 1
+                "/app/easybuild/software/nanofilt/2.5.0-foss-2016b-Python-3.6.6/bin": 1
             },
             "whatis": [
-                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
-                "Homepage: https://cnsgenomics.com/software/gcta"
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
             ],
-            "wV": "000000001.000000092.000000002.*beta.*zfinal",
-            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
+            "wV": "000000002.000000005.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000006.000000006.*zfinal",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
             "hidden": false,
-            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
-            "Version": "1.92.2beta"
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.5.0-foss-2016b-Python-3.6.6"
         },
-        "/app/easybuild/modules/bio/GCTA/1.92.3beta3.lua": {
-            "pV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
-            "fullName": "GCTA/1.92.3beta3",
+        "/app/easybuild/modules/bio/nanofilt/2.6.0-foss-2016b-Python-3.7.4.lua": {
+            "pV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "fullName": "nanofilt/2.6.0-foss-2016b-Python-3.7.4",
             "pathA": {
-                "/app/easybuild/software/GCTA/1.92.3beta3": 1
+                "/app/easybuild/software/nanofilt/2.6.0-foss-2016b-Python-3.7.4/bin": 1
             },
             "whatis": [
-                "Description: GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
-                "Homepage: https://cnsgenomics.com/software/gcta"
+                "Description: Filtering and trimming of long read sequencing data.",
+                "Homepage: https://github.com/wdecoster/nanofilt"
             ],
-            "wV": "000000001.000000092.000000003.*beta.000000003.*zfinal",
-            "help": "\nDescription\n===========\nGCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.\n\n\nMore information\n================\n - Homepage: https://cnsgenomics.com/software/gcta\n",
+            "wV": "000000002.000000006.*foss.*zfinal-.000002016.*b.*ython.*zfinal-.000000003.000000007.000000004.*zfinal",
+            "help": "\nDescription\n===========\nFiltering and trimming of long read sequencing data.\n\n\nMore information\n================\n - Homepage: https://github.com/wdecoster/nanofilt\n",
             "hidden": false,
-            "Description": "GCTA (Genome-wide Complex Trait Analysis) was originally designed to\n estimate the proportion of phenotypic variance explained by all genome-wide SNPs for\n complex traits (the GREML method), and has subsequently extended for many other analyses\n to better understand the genetic architecture of complex traits.",
-            "Version": "1.92.3beta3"
+            "Description": "Filtering and trimming of long read sequencing data.",
+            "Version": "2.6.0-foss-2016b-Python-3.7.4"
         }
     },
     "fast5": {

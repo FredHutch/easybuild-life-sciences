@@ -1,0 +1,39 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Pablo Escobar Lopez
+# Swiss Institute of Bioinformatics
+# Biozentrum - University of Basel
+
+easyblock = 'ConfigureMake'
+
+name = 'TopHat'
+version = '2.1.2'
+
+homepage = 'http://ccb.jhu.edu/software/%(namelower)s/'
+description = """TopHat is a fast splice junction mapper for RNA-Seq reads."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'cstd': 'gnu++98', 'pic': True}
+
+source_urls = ['http://github.com/infphilo/tophat/archive']
+sources = ['v%(version)s.tar.gz']
+
+patches = ['tophat-2.0.13-zlib.patch']
+
+builddependencies = [('Autoconf', '2.69')]
+
+dependencies = [
+    ('Boost', '1.67.0'),
+    ('zlib', '1.2.8'),
+]
+
+preconfigopts = './autogen.sh && '
+configopts = '--with-boost=$EBROOTBOOST'
+
+parallel = 1
+
+sanity_check_paths = {
+    'files': ['bin/tophat'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

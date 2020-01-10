@@ -1,0 +1,36 @@
+##
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+#
+# Copyright:: Copyright (c) 2015 Virginia Bioinformatics Institute at Virginia Tech
+# Authors::   Dominik L. Borkowski <dominik.borkowski@gmail.com>
+# License::   MIT/GPL
+# $Id$
+#
+##
+
+easyblock = 'PythonPackage'
+
+name = 'MACS2'
+version = '2.2.6'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://liulab.dfci.harvard.edu/MACS'
+description = """Model Based Analysis for ChIP-Seq data"""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [('Python', '3.7.4')]
+
+options = {'modulename': name}
+
+sanity_check_paths = {
+    'files': ['bin/macs2'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = [('%(namelower)s --version')]
+
+moduleclass = 'bio'

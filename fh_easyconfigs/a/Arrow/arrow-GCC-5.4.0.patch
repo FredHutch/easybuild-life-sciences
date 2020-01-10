@@ -1,0 +1,12 @@
+diff -ruN apache-arrow-0.12.0.orig/cpp/CMakeLists.txt apache-arrow-0.12.0/cpp/CMakeLists.txt
+--- apache-arrow-0.12.0.orig/cpp/CMakeLists.txt	2019-01-15 19:35:59.000000000 -0800
++++ apache-arrow-0.12.0/cpp/CMakeLists.txt	2019-12-31 11:55:21.920989000 -0800
+@@ -553,7 +553,7 @@
+ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ARROW_CXX_FLAGS} ${CXX_COMMON_FLAGS}")
+ 
+ # Remove --std=c++11 to avoid errors from C compilers
+-string(REPLACE "-std=c++11" "" CMAKE_C_FLAGS ${CMAKE_C_FLAGS})
++#string(REPLACE "-std=c++11" "" CMAKE_C_FLAGS ${CMAKE_C_FLAGS})
+ 
+ # Add C++-only flags, like -std=c++11
+ set(CMAKE_CXX_FLAGS "${CXX_ONLY_FLAGS} ${CMAKE_CXX_FLAGS}")
