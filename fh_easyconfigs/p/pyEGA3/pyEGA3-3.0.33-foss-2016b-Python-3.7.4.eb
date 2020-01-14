@@ -1,0 +1,41 @@
+easyblock = 'PythonBundle'
+
+name = 'pyEGA3'
+version = '3.0.44'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/EGA-archive/ega-download-client'
+description = """ A basic Python-based EGA download client """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+#builddependencies = [('binutils', '2.31.1')]
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+exts_list = [
+    ('tqdm', '4.41.1', {
+        'checksums': ['4789ccbb6fc122b5a6a85d512e4e41fc5acad77216533a6f2b8ce51e0f265c23'],
+    }),
+    ('humanize', '0.5.1', {
+        'checksums': ['a43f57115831ac7c70de098e6ac46ac13be00d69abbf60bdcac251344785bb19'],
+    }),
+    ('htsget', '0.2.5', {
+        'checksums': ['d383dc36f699bd921f760f5500c8ed251e5f8358a7cc219c6c89c35d103e8045'],
+    }),
+    (name, version, {
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'source_urls': ['https://github.com/EGA-archive/ega-download-client/archive/'],
+        'checksums': ['809bfe39d4c54e4bf19ce91d613ffa2b4c4ba759c9af0f2d7117451af4371ce2'],
+    }),
+]
+
+moduleclass = 'bio'
