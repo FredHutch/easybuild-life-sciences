@@ -2,7 +2,7 @@
 title: Bio Modules 14.04
 layout: single
 permalink: /bio-modules-14.04/
-created: 2020-01-10
+created: 2020-01-14
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -653,6 +653,8 @@ The PSIPRED Protein Sequence Analysis Workbench aggregates several UCL structure
  - [pyBigWig/0.3.13-foss-2016b-Python-3.6.6](https://github.com/deeptools/pyBigWig)
 A python extension, written in C, for quick access to bigBed files and access to and creation of
  bigWig files.
+ - [pyEGA3/3.0.44-foss-2016b-Python-3.7.4](https://github.com/EGA-archive/ega-download-client)
+A basic Python-based EGA download client 
  - [pybedtools/0.8.0-foss-2016b-Python-3.7.4](https://daler.github.io/pybedtools)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/pybedtools/pybedtools-0.8.0-foss-2016b-Python-3.7.4.eb)
 pybedtools wraps and extends BEDTools and offers feature-level manipulations from
