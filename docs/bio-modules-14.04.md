@@ -2,7 +2,7 @@
 title: Bio Modules 14.04
 layout: single
 permalink: /bio-modules-14.04/
-created: 2020-01-14
+created: 2020-01-15
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -87,6 +87,10 @@ CAP3 assembly program
  - [CITE-seq-Count/1.4.2-foss-2016b-Python-3.6.6](https://hoohm.github.io/CITE-seq-Count)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CITE-seq-Count/CITE-seq-Count-1.4.2-foss-2016b-Python-3.6.6.eb)
 A python package that allows to count antibody TAGS from a CITE-seq and/or cell hashing experiment.
+ - [CNVnator/0.4.1-foss-2016b](https://github.com/abyzovlab/CNVnator)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CNVnator/CNVnator-0.4.1-foss-2016b.eb)
+A tool for CNV discovery and genotyping from depth-of-coverage by mapped reads
+
  - [Cgl/0.60.2-foss-2016b](https://github.com/coin-or/Clg)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/Cgl/Cgl-0.60.2-foss-2016b.eb)
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that can be used with other COIN-OR packages that make use of cuts, such as, among others, the linear solver Clp or the mixed integer linear programming solvers Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or communicate with a solver. It does not directly call a solver.
