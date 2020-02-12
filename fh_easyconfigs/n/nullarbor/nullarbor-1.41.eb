@@ -1,0 +1,50 @@
+##
+# This is a contribution from DeepThought HPC Service, Flinders University, Adelaide, Australia
+# Homepage:     https://staff.flinders.edu.au/research/deep-thought
+#
+# Authors::    Robert Qiao <rob.qiao@flinders.edu.au>
+# License::    GPLv2.0
+#
+# Notes::    This is a conda version installation
+##
+
+easyblock = 'Conda'
+
+name = 'nullarbor'
+version = '2.0.20191013'
+
+homepage = 'https://github.com/tseemann/nullarbor'
+description = """
+Pipeline to generate complete public health microbiology reports from sequenced isolates
+"""
+
+toolchain = {'name': 'dummy', 'version': 'dummy'} 
+
+channels = ['conda-forge', 'bioconda']
+
+source_urls = ['https://github.com/tseemann/nullarbor/archive/v2.0.20191013']
+sources = ['v%(version)s.zip']
+
+requirements = '%(name)s=%(version)s python=3.6'
+
+dependencies = [
+    ('Perl', '5.28.0'),
+    ('Kraken2/2.0.7-beta-foss-2016b-Perl-5.28.0
+    ('Miniconda3', '4.7.10', '', True)
+]
+
+sanity_check_commands = [('nullarbor.pl', '-h')]
+
+sanity_check_paths = {
+    'files': [
+        'bin/nullarbor.pl',
+        'bin/nullarbor-json.pl',
+        'bin/nullarbor-report.pl'],
+    'dirs': [
+        'bin',
+        'perl5',
+        'binaries',
+        'plugins'],
+}
+
+moduleclass = 'bio'

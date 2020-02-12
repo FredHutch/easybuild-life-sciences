@@ -1,0 +1,35 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: John Dey 
+# Fred Hutch Cancer Research Center 
+# Seattle - United States 
+
+name = 'PyMOL_bundle'
+version = '1.8.0.0'
+
+easyblock = 'Bundle'
+
+homepage = 'http://pymol.org/'
+description = """PyMOL is an OpenGL based molecular visualization system"""
+
+toolchain = {'name': 'foss', 'version': '2015b'}
+
+python  = 'Python'
+pyver = '2.7.9'
+versionsuffix = '-%s-%s' % (python, pyver)
+
+# PyMol dependencies 
+# python (2.x), tcl (8.x), tk (8.x), libpng (1.x), zlib (1.x),
+# glut (3.x), glut-devel (3.x), pmw*, and numeric* (numpy)
+
+dependencies = [
+    (python,      pyver),
+    ('libpng',    '1.6.17'),
+    ('glew',      '1.13.0'),
+    ('Pmw',       '2.0.0', versionsuffix),
+    ('freeglut',  '3.0.0'),
+    ('freetype',  '2.6.1'),
+    ('Tcl',       '8.6.3'),
+    ('Tk',        '8.6.3'),
+]
+
+moduleclass = 'lib'

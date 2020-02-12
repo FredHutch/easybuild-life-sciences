@@ -2,7 +2,7 @@
 title: Bio Modules 14.04
 layout: single
 permalink: /bio-modules-14.04/
-created: 2020-01-15
+created: 2020-02-12
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -375,8 +375,8 @@ dimensional data points (cells) and a list of dimension names (genes).
  - [SRA-Toolkit/2.9.6-ubuntu64](http://trace.ncbi.nlm.nih.gov/Traces/sra)
 The NCBI SRA Toolkit enables reading (dumping) of sequencing files 
  from the SRA database and writing (loading) files into the .sra format 
- - [STAR/2.7.1a-foss-2016b](https://github.com/alexdobin/STAR)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR/STAR-2.7.1a-foss-2016b.eb)
+ - [STAR/2.7.3a-foss-2016b](https://github.com/alexdobin/STAR)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR/STAR-2.7.3a-foss-2016b.eb)
 STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.
  - [STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0](https://github.com/STAR-Fusion/STAR-Fusion)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR-Fusion/STAR-Fusion-1.5.0-foss-2016b-Perl-5.28.0.eb)
@@ -408,8 +408,8 @@ TraCeR reconstructs the sequences of rearranged and expressed T cell receptor
  have the same receptor sequences and so derive from the same original clonally-expanded cell.
  - [Tracer/v1.6](http://beast.bio.ed.ac.uk/tracer )
 
- - [Trimmomatic/0.36-Java-1.8.0_121](http://www.usadellab.org/cms/?page=trimmomatic)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Trimmomatic/Trimmomatic-0.36-Java-1.8.0_121.eb)
+ - [Trimmomatic/0.39-Java-1.8](http://www.usadellab.org/cms/?page=trimmomatic)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Trimmomatic/Trimmomatic-0.39-Java-1.8.eb)
 Trimmomatic performs a variety of useful trimming tasks for illumina 
  paired-end and single ended data.The selection of trimming steps and their associated 
  parameters are supplied on the command line. 
@@ -494,6 +494,7 @@ micrographs
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
  - [deepTools/3.3.1-foss-2016b-Python-3.7.4](https://deeptools.readthedocs.io/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/deepTools/deepTools-3.3.1-foss-2016b-Python-3.7.4.eb)
 deepTools is a suite of python tools particularly developed for the efficient analysis of
  high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.
  - [delly/0.7.6-foss-2016b](https://github.com/tobiasrausch/delly)
@@ -623,8 +624,8 @@ parasail is a SIMD C (C99) library containing implementations
 PEER is a collection of Bayesian approaches to infer hidden
  determinants and their effects from gene expression profiles using factor
  analysis methods. 
- - [philosopher/2.0.0](https://github.com/Nesvilab/philosopher/wiki)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-2.0.0.eb)
+ - [philosopher/2.1.1](https://github.com/Nesvilab/philosopher/wiki)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-2.1.1.eb)
 Philosopher provides easy access to third-party tools and custom algorithms
  allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated
  protein reports. Philosopher is also tuned for Open Search analysis, providing a modified

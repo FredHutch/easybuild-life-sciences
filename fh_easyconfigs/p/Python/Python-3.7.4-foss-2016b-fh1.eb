@@ -1248,6 +1248,7 @@ exts_list = [
     ('singledispatch', '3.4.0.3', {
         'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
     }),
+    ('s3transfer', '0.3.3'),
     ('boto3', '1.9.201', {
         'source_urls': ['https://pypi.python.org/packages/source/b/boto3/'],
     }),
@@ -2318,6 +2319,9 @@ exts_list = [
         'modulename': 'dca',
     }),
     ('yagdspy', '1.0'),
+    ('POT', '0.6.0', {
+        'modulename': 'ot',
+    }),
 ]
 
 #modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

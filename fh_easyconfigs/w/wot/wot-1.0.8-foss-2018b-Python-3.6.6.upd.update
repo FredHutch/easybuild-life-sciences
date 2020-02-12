@@ -42,13 +42,13 @@ dependencies = [
 ]
 
 exts_list = [
-    ('PyYAML', '5.1.2', {
+    ('PyYAML', '5.3', {
         'modulename': 'yaml',
     }),
     ('python-lzo', '1.12', {
         'modulename': 'lzo',
     }),
-    ('anndata', '0.6.22.post1', {
+    ('anndata', '0.7.1', {
     }),
     ('fisher', '0.1.9'),
     ('forceatlas2-python', '1.0', {
@@ -67,22 +67,26 @@ exts_list = [
     ('MulticoreTSNE-modified', '0.1.post2', {
         'modulename': 'MulticoreTSNE',
     }),
-    ('natsort', '6.2.0'),
-    ('llvmlite', '0.30.0'),
-    ('numba', '0.46.0'),
+    ('natsort', '7.0.0'),
+    ('llvmlite', '0.31.0'),
+    ('numba', '0.47.0'),
     ('retrying', '1.3.3'),
-    ('plotly', '4.4.1'),
+    ('plotly', '4.5.0'),
     ('ply', '3.11'),
     ('thriftpy', '0.3.9'),
+    ('backports.csv', '1.0.7', {
+    }),
     ('parquet', '1.2'),
-    ('statsmodels', '0.10.2'),
-    ('scikit-learn', '0.22', {
+    ('statsmodels', '0.11.0'),
+    ('scikit-learn', '0.22.1', {
         'modulename': 'sklearn',
     }),
     ('scikit-misc', '0.1.1', {
         'modulename': 'skmisc',
         'source_tmpl': 'scikit_misc-0.1.1-cp36-cp36m-manylinux1_x86_64.whl',
         'unpack_sources': False,
+    }),
+    ('configparser', '4.0.2', {
     }),
     ('entrypoints', '0.3', {
     }),
@@ -92,7 +96,7 @@ exts_list = [
     }),
     ('mccabe', '0.6.1'),
     ('flake8', '3.7.9'),
-    ('param', '1.9.2'),
+    ('param', '1.9.3'),
     ('pyct', '0.4.6'),
 
     ('colorcet', '2.0.2'),
@@ -100,7 +104,7 @@ exts_list = [
     ('path.py', '12.4.0', {
         'modulename': 'path'
     }),
-    ('pyviz_comms', '0.7.2'),
+    ('pyviz_comms'0.7.3'0.7.3'),
     ('holoviews', '1.12.7'),
     ('typing-extensions', '3.7.4.1', {
         'modulename': 'typing_extensions',
@@ -118,8 +122,8 @@ exts_list = [
     ('tornado', '6.0.3'),
     ('bokeh', '1.4.0'),
     ('hvplot', '0.5.2'),
-    ('scplot', '0.0.14'),
-    ('seaborn', '0.9.0'),
+    ('scplot', '0.0.15'),
+    ('seaborn', '0.10.0'),
     ('umap-learn', '0.3.10', {
         'modulename': 'umap',
     }),
@@ -127,7 +131,7 @@ exts_list = [
         'modulename': 'xlsxwriter',
         'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
     }),
-    ('pegasuspy', '0.16.3', {
+    ('pegasuspy', '0.16.6', {
         'modulename': 'pegasus',
     }),
     ('POT', '0.6.0', {
@@ -139,7 +143,7 @@ exts_list = [
     }),
 ]
 sanity_check_paths = {
-    'files': [],
+    '1.0.8': [],
     'dirs': ['lib/python%(pyshortver)s/site-packages'],
 }
 

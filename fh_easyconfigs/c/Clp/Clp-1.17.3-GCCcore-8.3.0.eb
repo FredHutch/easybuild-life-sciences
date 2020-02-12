@@ -1,0 +1,38 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhtuch.org fizwit@github
+easyblock = 'ConfigureMake'
+
+name = 'Clp'
+version = '1.17.3'
+
+homepage = 'https://github.com/coin-or/Clp'
+description = """Clp (Coin-or linear programming) is an open-source linear programming solver"""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://github.com/coin-or/Clp/archive/releases']
+sources = ['%(version)s.tar.gz']
+
+builddependencies = [
+    ('binutils', '2.30'),
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('CoinUtils', '2.11.2'),
+    ('Osi', '0.108.4'),
+]
+
+#configopts = "--with-osi-lib=$EBROOTOSI/lib"
+
+sanity_check_paths = {
+    'dirs':  ['include',
+              'lib/pkgconfig',
+              'share'],
+    'files': ['include/coin/ClpSolve.hpp',
+              'bin/%(namelower)s',
+              'share/coin/doc/Clp/README',
+              'lib/libClp.%s' % SHLIB_EXT]
+}
+
+moduleclass = 'math'

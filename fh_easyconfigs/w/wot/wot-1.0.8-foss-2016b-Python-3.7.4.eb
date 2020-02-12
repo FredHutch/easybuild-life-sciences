@@ -31,7 +31,7 @@ dependencies = [
     ('python-igraph', '0.7.1.post6', versionsuffix),
     ('igraph', '0.7.1'),
     ('LLVM', '7.1.0', '-GCCcore-5.4.0', True),
-    ('HDF5', '1.8.18'),
+    ('h5py', '2.9.0',  versionsuffix),
     ('matplotlib', '3.1.1', versionsuffix),
     ('SWIG', '4.0.0', versionsuffix),
     ('GDAL', '3.0.0', versionsuffix),
@@ -75,9 +75,6 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
     }),
     ('pegasuspy', '0.16.3'),
-    #('h5py', '2.10.0', {
-    #    'source_urls': ['https://pypi.python.org/packages/source/h/h5py'],
-    #}),
     ('POT', '0.6.0', {
         'modulename': 'ot',
         'source_urls': ['https://pypi.python.org/packages/source/p/POT'],

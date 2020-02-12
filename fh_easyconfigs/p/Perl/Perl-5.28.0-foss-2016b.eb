@@ -1460,6 +1460,10 @@ exts_list = [
         'source_urls': ['https://cpan.metacpan.org/authors/id/G/GA/GAAS/'],
         'checksums': ['af53b05ef1387b4cab4427e6789179283e4f0da8cf036e8db516ddb344512b65'],
     }),
+    ('Bio::SeqIO', '1.7.7', { 
+        'source_tmpl': 'BioPerl-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS'],
+    }),
 ]
 
 moduleclass = 'lang'
