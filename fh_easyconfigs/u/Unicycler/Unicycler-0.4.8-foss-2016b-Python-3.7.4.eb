@@ -1,0 +1,26 @@
+easyblock = 'PythonPackage'
+
+name = 'Unicycler'
+version = '0.4.8'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/rrwick/Unicycler'
+description = """Unicycler is an assembly pipeline for bacterial genomes. It can assemble Illumina-only read sets where it functions as a SPAdes-optimiser. It can also assembly long-read-only sets (PacBio or Nanopore) where it runs a miniasm+Racon pipeline. For the best possible assemblies, give it both Illumina reads and long reads, and it will conduct a hybrid assembly."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/rrwick/Unicycler/archive']
+sources = ['v%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+options = {'modulename': '%(namelower)s'}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/%(namelower)s'],
+}
+
+moduleclass = 'bio'
