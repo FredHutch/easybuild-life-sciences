@@ -31,7 +31,11 @@ dependencies = [
     ('python-igraph', '0.7.1.post6', versionsuffix),
     ('igraph', '0.7.1'),
     ('LLVM', '7.0.0'),
+<<<<<<< HEAD
     ('h5py', '2.10.0', versionsuffix),
+=======
+    ('HDF5', '1.10.2'),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
     ('matplotlib', '3.0.0', versionsuffix),
     ('SWIG', '3.0.12', versionsuffix),
     ('GDAL', '2.2.3', versionsuffix),
@@ -42,12 +46,20 @@ dependencies = [
 ]
 
 exts_list = [
+<<<<<<< HEAD
+=======
+    ('packaging', '19.2'),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
     ('PyYAML', '5.1.2', {
         'modulename': 'yaml',
     }),
     ('python-lzo', '1.12', {
         'modulename': 'lzo',
     }),
+<<<<<<< HEAD
+=======
+    ('h5py', '2.10.0'),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
     ('anndata', '0.6.22.post1', {
     }),
     ('fisher', '0.1.9'),

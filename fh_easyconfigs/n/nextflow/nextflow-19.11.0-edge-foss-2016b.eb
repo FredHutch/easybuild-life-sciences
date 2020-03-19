@@ -2,8 +2,13 @@
 
 easyblock = 'CmdCp'
 
+<<<<<<< HEAD
 name = 'nextflow'
 version = '19.11.0-edge'
+=======
+name = "nextflow"
+version = "19.11.0-edge"
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 
 homepage = "https://github.com/nextflow-io/nextflow"
 description = """Nextflow is a bioinformatics workflow manager that enables the development
@@ -15,6 +20,10 @@ toolchain = {'name': 'dummy', 'version': 'dummy'}
 
 source_urls = ['https://github.com/nextflow-io/nextflow/archive']
 sources = ['v%(version)s.tar.gz']
+<<<<<<< HEAD
+=======
+skipsteps = ['source']
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 
 builddependencies = [
     ('cURL', '7.49.1', '-GCC-5.4.0-2.26'),
@@ -37,7 +46,11 @@ sanity_check_paths = {
     'dirs': []
 }
 
+<<<<<<< HEAD
 modextrapaths = { 'PATH': '' }
 # modextravars = {'
+=======
+modextrapaths = { 'PATH': [''] }
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 
 moduleclass = 'tools'

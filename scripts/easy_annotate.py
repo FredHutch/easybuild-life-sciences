@@ -53,10 +53,15 @@ class ExtsList(object):
         self.verbose = verbose
         self.pkg_count = 0
 
+<<<<<<< HEAD
         try:
             self.extension = eb.dep_exts
         except NameError:
             self.extension = []
+=======
+        if eb.dep_exts:
+            self.extension = eb.dep_exts
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         self.extension.extend(eb.exts_list)
         self.biocver = None
         self.toolchain = eb.toolchain
@@ -223,7 +228,11 @@ class PythonExts(ExtsList):
             return 'not found', ''
         project = resp.json()
         if 'description' in project['info']:
+<<<<<<< HEAD
             description = project['info']['summary']
+=======
+            description = project['info']['description']
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         if 'home_page' in project['info']:
             url =  project['info']['home_page']
         elif 'project_urls' in project['info']:

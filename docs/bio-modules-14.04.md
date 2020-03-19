@@ -2,7 +2,11 @@
 title: Bio Modules 14.04
 layout: single
 permalink: /bio-modules-14.04/
+<<<<<<< HEAD
 created: 2020-03-09
+=======
+created: 2020-01-15
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -264,11 +268,14 @@ MUMmer is a system for rapidly aligning entire genomes,
  - [MUSCLE/3.8.31-foss-2016b](http://drive5.com/muscle/ )
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MUSCLE/MUSCLE-3.8.31-foss-2016b.eb)
 MUSCLE is one of the best-performing multiple alignment programs   according to published benchmark tests, with accuracy and speed that are consistently   better than CLUSTALW. MUSCLE can align hundreds of sequences in seconds. Most users   learn everything they need to know about MUSCLE in a few minutes—only a handful of   command-line options are needed to perform common alignment tasks.
+<<<<<<< HEAD
  - [MaxQuant/1.6.10.43-foss-2018b](https://maxquant.org/maxquant/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MaxQuant/MaxQuant-1.6.10.43-foss-2018b.eb)
 MaxQuant is a quantitative proteomics software package designed for analyzing large
  mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling
  techniques as well as label-free quantification are supported.
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
  - [MiXCR/3.0.3-Java-1.8](https://milaboratory.com/software/mixcr/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MiXCR/MiXCR-3.0.3-Java-1.8.eb)
 MiXCR processes big immunome data from raw sequences 
@@ -328,8 +335,13 @@ Pindel can detect breakpoints of large deletions, medium sized
  insertions, inversions, tandem duplications and other structural variants at single-based 
  resolution from next-gen sequence data. It uses a pattern growth approach to identify the 
  breakpoints of these variants from paired-end short reads. 
+<<<<<<< HEAD
  - [Pysam/0.15.4-foss-2016b-Python-3.7.4](https://github.com/pysam-developers/pysam)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/Pysam/Pysam-0.15.4-foss-2016b-Python-3.7.4.eb)
+=======
+ - [Pysam/0.15.3-foss-2016b-Python-3.7.4](https://github.com/pysam-developers/pysam)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/Pysam/Pysam-0.15.3-foss-2016b-Python-3.7.4.eb)
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 Pysam is a python module for reading and manipulating Samfiles. 
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
  - [Pysamstats/1.1.2-foss-2016b-Python-3.7.4](https://github.com/alimanfoo/pysamstats)
@@ -380,8 +392,13 @@ dimensional data points (cells) and a list of dimension names (genes).
  - [SRA-Toolkit/2.9.6-ubuntu64](http://trace.ncbi.nlm.nih.gov/Traces/sra)
 The NCBI SRA Toolkit enables reading (dumping) of sequencing files 
  from the SRA database and writing (loading) files into the .sra format 
+<<<<<<< HEAD
  - [STAR/2.7.3a-foss-2016b](https://github.com/alexdobin/STAR)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR/STAR-2.7.3a-foss-2016b.eb)
+=======
+ - [STAR/2.7.1a-foss-2016b](https://github.com/alexdobin/STAR)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR/STAR-2.7.1a-foss-2016b.eb)
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.
  - [STAR-Fusion/1.5.0-foss-2016b-Perl-5.28.0](https://github.com/STAR-Fusion/STAR-Fusion)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/STAR-Fusion/STAR-Fusion-1.5.0-foss-2016b-Perl-5.28.0.eb)
@@ -397,8 +414,11 @@ SYMPHONY is an open-source solver for mixed-integer linear programs (MILPs) writ
  - [Sniffles/1.0.8-foss-2016b](https://github.com/fritzsedlazeck/Sniffles)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/Sniffles/Sniffles-1.0.8-foss-2016b.eb)
 Sniffles is a structural variation caller using third generation sequencing (PacBio or Oxford Nanopore). It detects all types of SVs (10bp+) using evidence from split-read alignments, high-mismatch regions, and coverage analysis.
+<<<<<<< HEAD
  - [Statistics-R/0.34-foss-2016b-Perl-5.28.0](https://metacpan.org/pod/Statistics::R)
 Statistics::R is a module that lets you start R, pass commands to it and retrieve their output. A shared mode allows several instances of Statistics::R to talk to the same R process.
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
  - [TRF/4.09-linux64-fh](https://tandem.bu.edu/trf/trf.html)
 Tandem repeats finder: a program to analyze DNA sequences. Legacy version.
  - [Theano/1.0.4-foss-2016b-Python-3.7.4](http://deeplearning.net/software/theano)
@@ -415,8 +435,13 @@ TraCeR reconstructs the sequences of rearranged and expressed T cell receptor
  have the same receptor sequences and so derive from the same original clonally-expanded cell.
  - [Tracer/v1.6](http://beast.bio.ed.ac.uk/tracer )
 
+<<<<<<< HEAD
  - [Trimmomatic/0.39-Java-1.8](http://www.usadellab.org/cms/?page=trimmomatic)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Trimmomatic/Trimmomatic-0.39-Java-1.8.eb)
+=======
+ - [Trimmomatic/0.36-Java-1.8.0_121](http://www.usadellab.org/cms/?page=trimmomatic)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/t/Trimmomatic/Trimmomatic-0.36-Java-1.8.0_121.eb)
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 Trimmomatic performs a variety of useful trimming tasks for illumina 
  paired-end and single ended data.The selection of trimming steps and their associated 
  parameters are supplied on the command line. 
@@ -427,9 +452,12 @@ Trinity represents a novel method for the efficient and robust de novo reconstru
  Chrysalis, and Butterfly, applied sequentially to process large volumes of RNA-Seq reads.
  - [UMI-tools/1.0.0-foss-2016b-Python-3.7.4](https://umi-tools.readthedocs.io)
 Tools for handling Unique Molecular Identifiers in NGS data sets
+<<<<<<< HEAD
  - [Unicycler/0.4.8-foss-2016b-Python-3.7.4](https://github.com/rrwick/Unicycler)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/u/Unicycler/Unicycler-0.4.8-foss-2016b-Python-3.7.4.eb)
 Unicycler is an assembly pipeline for bacterial genomes. It can assemble Illumina-only read sets where it functions as a SPAdes-optimiser. It can also assembly long-read-only sets (PacBio or Nanopore) where it runs a miniasm+Racon pipeline. For the best possible assemblies, give it both Illumina reads and long reads, and it will conduct a hybrid assembly.
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
  - [VCFtools/0.1.15-foss-2016b-Perl-5.24.1](https://vcftools.github.io)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/v/VCFtools/VCFtools-0.1.15-foss-2016b-Perl-5.24.1.eb)
 The aim of VCFtools is to provide 
@@ -449,9 +477,12 @@ stand-alone programs for the prediction and comparison of RNA secondary structur
 Wandy is designed for Copy Number Variation (CNV) and Aneuploidy detection from large genomes such as human. It takes a sorted BAM file as input and report predicted chromosome regions that have amplifications or deletions using LOG2 ratio, generate graphic reports.
  - [Wandy/Feb2_2015-foss-2016b-Java-1.8.0_92](http://bioinformaticstools.mayo.edu/research/wandy/ )
 Wandy is designed for Copy Number Variation (CNV) and Aneuploidy detection from large genomes such as human. It takes a sorted BAM file as input and report predicted chromosome regions that have amplifications or deletions using LOG2 ratio, generate graphic reports.
+<<<<<<< HEAD
  - [anvio/6.1-foss-2016b-Python-3.7.4](https://merenlab.org/software/anvio/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/anvio/anvio-6.1-foss-2016b-Python-3.7.4.eb)
 An analysis and visualization platform for 'omics data.
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
  - [assembly-stats/1.0.0-foss-2016b](https://github.com/sanger-pathogens/assembly-stats)
 Get assembly statistics from FASTA and FASTQ files
  - [ataqv/0.9.5-foss-2016b](https://github.com/ParkerLab/ataqv)
@@ -460,9 +491,12 @@ A toolkit for measuring and comparing ATAC-seq results, made in the
 understand how well our ATAC-seq assays had worked, and to make it
 easier to spot differences that might be caused by library prep or
 sequencing.
+<<<<<<< HEAD
  - [autokeras/1.0.1-foss-2016b-Python-3.7.4](https://autokeras.com/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/autokeras/autokeras-1.0.1-foss-2016b-Python-3.7.4.eb)
 AutoKeras: An AutoML system based on Keras. It is developed by DATA Lab at Texas A&M University. The goal of AutoKeras is to make machine learning accessible for everyone.
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
  - [bam2wig/1.4](https://github.com/MikeAxtell/bam2wig)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/bam2wig/bam2wig-1.4.eb)
 Conversion of a BAM alignment to wiggle and bigwig coverage files, with flexible reporting options.
@@ -499,8 +533,13 @@ Chromium Single Cell Software Suite is a set of software applications for analyz
 The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.
  - [conifer/0.2.2-foss-2016b-Python-2.7.12-fh2](https://sourceforge.net/projects/conifer )
 CoNIFER uses exome sequencing data to find copy number variants (CNVs) and genotype the copy-number of duplicated genes.
+<<<<<<< HEAD
  - [cromwell/49-Java-1.8](https://github.com/broadinstitute/cromwell)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cromwell/cromwell-49-Java-1.8.eb)
+=======
+ - [cromwell/47-Java-1.8](https://github.com/broadinstitute/cromwell)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cromwell/cromwell-47-Java-1.8.eb)
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 Scientific workflow engine designed for simplicity & scalability.
  - [ctffind/4.1.10-foss-2018b](http://grigoriefflab.janelia.org/ctf)
 CTFFIND is a programing for finding CTFs of electron
@@ -510,7 +549,10 @@ micrographs
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
  - [deepTools/3.3.1-foss-2016b-Python-3.7.4](https://deeptools.readthedocs.io/)
+<<<<<<< HEAD
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/deepTools/deepTools-3.3.1-foss-2016b-Python-3.7.4.eb)
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 deepTools is a suite of python tools particularly developed for the efficient analysis of
  high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.
  - [delly/0.7.6-foss-2016b](https://github.com/tobiasrausch/delly)
@@ -640,8 +682,13 @@ parasail is a SIMD C (C99) library containing implementations
 PEER is a collection of Bayesian approaches to infer hidden
  determinants and their effects from gene expression profiles using factor
  analysis methods. 
+<<<<<<< HEAD
  - [philosopher/2.1.2](https://github.com/Nesvilab/philosopher/wiki)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-2.1.2.eb)
+=======
+ - [philosopher/2.0.0](https://github.com/Nesvilab/philosopher/wiki)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/p/philosopher/philosopher-2.0.0.eb)
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 Philosopher provides easy access to third-party tools and custom algorithms
  allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated
  protein reports. Philosopher is also tuned for Open Search analysis, providing a modified

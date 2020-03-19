@@ -1,7 +1,11 @@
 easyblock = 'PythonBundle'
 
 name = 'numba'
+<<<<<<< HEAD
 version = '0.46.0'
+=======
+version = '0.37.0'
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'http://numba.pydata.org/'
@@ -13,20 +17,33 @@ toolchainopts = {'pic': True}
 
 dependencies = [
     ('Python', '3.7.4'),
+<<<<<<< HEAD
     ('LLVM', '7.1.0', '-GCCcore-5.4.0', True),
+=======
+    ('LLVM', '5.0.1'),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 ]
 
 use_pip = True
 
 exts_list = [
+<<<<<<< HEAD
     ('llvmlite', '0.30.0', {
         'patches': ['llvmlite-0.30.0_fix-ffi-Makefile.patch'],
+=======
+    ('llvmlite', '0.22.0', {
+        'patches': ['llvmlite-0.22.0_fix-ffi-Makefile.patch'],
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         'source_urls': ['https://pypi.python.org/packages/source/l/llvmlite/'],
     }),
     ('singledispatch', '3.4.0.3', {
         'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch/'],
     }),
     (name, version, {
+<<<<<<< HEAD
+=======
+        'patches': ['numba-0.37.0_Py_Finalizing.patch'],
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         'source_urls': ['https://pypi.python.org/packages/source/n/numba/'],
     }),
 ]

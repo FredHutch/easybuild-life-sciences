@@ -6,7 +6,11 @@ description = """The OpenSSL Project is a collaborative effort to develop a robu
  and Open Source toolchain implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) 
  protocols as well as a full-strength general purpose cryptography library. """
 
+<<<<<<< HEAD
 toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+=======
+toolchain = {'name': 'foss', 'version': '2016b'}
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 toolchainopts = {'pic': True}
 
 source_urls = ['http://www.openssl.org/source/']
@@ -16,8 +20,13 @@ checksums = ['1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2']
 dependencies = [('zlib', '1.2.8')]
 
 builddependencies = [
+<<<<<<< HEAD
     ('Perl', '5.24.0'),
     ('binutils', '2.26'),
+=======
+    ('Perl', '5.28.0'),
+    ('binutils', '2.26', '-GCCcore-5.4.0', True),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 ]
 
 runtest = 'test'

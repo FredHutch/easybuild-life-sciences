@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 # easybuild easyconfig
 # download and install databases
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 easyblock = 'PackedBinary'
 
 name = 'Kraken2'
@@ -36,7 +39,10 @@ dependencies = [
 
 install_cmd = 'cd %(builddir)s/%(namelower)s-%(version)s && '
 install_cmd += './install_kraken2.sh %(installdir)s'
+<<<<<<< HEAD
 install_cmd += './ins
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 
 sanity_check_paths = {
     'files': [
@@ -50,7 +56,10 @@ sanity_check_paths = {
 }
 
 modextrapaths = {'PATH': ''}
+<<<<<<< HEAD
 modextravars = {'KRACKEN2_DIR': '%(installdir)s'}
 modextravars = {'KRACKEN2_DB_PATH': '/shared/biodata/microbiome/kraken2'}
+=======
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
 
 moduleclass = 'bio'
