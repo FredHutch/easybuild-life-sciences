@@ -1,0 +1,33 @@
+# EasyBuild EasyConfig 
+#
+#  2020.02.20 John Dey jfdey@fredhutch.org  
+
+easyblock = 'ConfigureMake'
+
+name = 'MoreRONN'
+version = '4.9'
+
+homepage = 'https://github.com/varun-ramraj/MoreRONN/'
+description = """The successor to RONN, prediction of protein disorder."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/varun-ramraj/MoreRONN/archive']
+sources = ['v%(version)s.tar.gz']
+
+dependencies = [
+    ('Autotools', '20150215'),
+]
+
+preconfigopts = "sh bootstrap.sh && "
+installopts = 'PREFIX=%(installdir)s'
+
+sanity_check_paths = {
+    'files': ["web/moreroon.wsgi",
+             ],
+    'dirs': ["web",
+             "data",
+             ],
+}
+
+moduleclass = 'bio'

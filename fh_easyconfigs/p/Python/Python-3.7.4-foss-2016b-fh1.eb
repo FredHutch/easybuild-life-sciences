@@ -2322,6 +2322,9 @@ exts_list = [
     ('POT', '0.6.0', {
         'modulename': 'ot',
     }),
+    ('pymummer', '0.11.0'),
+    ('pyfastaq', '3.17.0'),
+    ('circlator', '1.5.5'),
 ]
 
 #modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

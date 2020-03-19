@@ -1,0 +1,28 @@
+easyblock = 'PerlModule'
+
+name = 'Statistics-R'
+version = '0.34'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://metacpan.org/pod/Statistics::R'
+description = """Statistics::R is a module that lets you start R, pass commands to it and retrieve their output. A shared mode allows several instances of Statistics::R to talk to the same R process."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'optarch': True, 'pic': True}
+
+source_urls = ['https://cpan.metacpan.org/authors/id/F/FA/FANGLY']
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('Perl', '5.28.0'),
+    ('R', '3.6.2'),
+]
+
+options = {'modulename': 'Statistics::R'}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/perl5/site_perl/%(perlver)s/x86_64-linux-thread-multi/auto/Statistics'],
+}
+
+moduleclass = 'math'

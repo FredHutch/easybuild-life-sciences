@@ -1,0 +1,13 @@
+diff -ruN PyTables-3.6.1.orig/setup.py PyTables-3.6.1/setup.py
+--- PyTables-3.6.1.orig/setup.py	2019-10-28 03:52:59.000000000 -0700
++++ PyTables-3.6.1/setup.py	2020-03-12 13:18:47.851321000 -0700
+@@ -473,6 +473,9 @@
+     # is not a good idea.
+     CFLAGS = os.environ.get('CFLAGS', '').split()
+     LIBS = os.environ.get('LIBS', '').split()
++    for idx, lib in enumerate(LIBS):
++        if lib.startswith("-l"):
++            LIBS[idx] = lib.replace("-l", "")
+     CONDA_PREFIX = os.environ.get('CONDA_PREFIX', '')
+     # We start using pkg-config since some distributions are putting HDF5
+     # (and possibly other libraries) in exotic locations.  See issue #442.

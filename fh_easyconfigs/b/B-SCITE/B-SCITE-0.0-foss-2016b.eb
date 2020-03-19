@@ -1,7 +1,9 @@
+# this software requires CPLEX from IBM which is  a comerical product. Was unable to obtain a 
+# license from IBM. Gurobi did give us a free license.
 easyblock = 'MakeCp'
 
 name = 'B-SCITE'
-version = '0.0'
+version = '2.00'
 
 homepage = 'https://github.com/smalikic/B-SCITE'
 description = """B-SCITE is a software package to compute trees of tumor evolution by integrative use of single-cell and bulk sequencing data."""
@@ -9,7 +11,7 @@ description = """B-SCITE is a software package to compute trees of tumor evoluti
 toolchain = { 'name': 'foss', 'version': '2016b'}
 
 source_urls = ['https://github.com/smalikic/B-SCITE/archive']
-sources = ['master.zip']
+sources = ['%(version)s.tar.gz']
 
 start_dir = 'src'
 
