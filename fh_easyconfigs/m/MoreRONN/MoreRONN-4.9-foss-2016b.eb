@@ -12,22 +12,20 @@ description = """The successor to RONN, prediction of protein disorder."""
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-source_urls = ['https://github.com/varun-ramraj/MoreRONN/archive']
+github_account = 'varun-ramraj'
+source_urls = [GITHUB_SOURCE]
 sources = ['v%(version)s.tar.gz']
+patches = ['%(name)s-%(version)s-fix-makefile.patch']
 
 dependencies = [
     ('Autotools', '20150215'),
 ]
 
 preconfigopts = "sh bootstrap.sh && "
-installopts = 'PREFIX=%(installdir)s'
 
 sanity_check_paths = {
-    'files': ["web/moreroon.wsgi",
-             ],
-    'dirs': ["web",
-             "data",
-             ],
+    'files': ['bin/moreRONN'],
+    'dirs': []
 }
 
 moduleclass = 'bio'
