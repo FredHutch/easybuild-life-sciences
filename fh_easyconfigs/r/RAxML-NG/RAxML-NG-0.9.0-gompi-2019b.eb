@@ -6,7 +6,7 @@ version = '0.9.0'
 homepage = 'https://github.com/amkozlov/raxml-ng'
 description = """RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality criterion. Its search heuristic is based on iteratively performing a series of Subtree Pruning and Regrafting (SPR) moves, which allows to quickly navigate to the best-known ML tree. RAxML-NG is a successor of RAxML (Stamatakis 2014) and leverages the highly optimized likelihood computation implemented in libpll (Flouri et al. 2014)."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'gompi', 'version': '2019b'}
 
 local_terrap_commit = '6dcb061ceb6ed41a7ebe1a8af1f3354e0126125c'
 local_pllmod_commit = '840a19525ed133ad243afb23124911b849d4685d'
@@ -60,15 +60,15 @@ build_type = 'Release'
 separate_build_dir = True
 
 builddependencies = [
-    ('binutils', '2.26', '', ('GCCcore', '5.4.0')),
-    ('CMake', '3.7.2'),
-    ('gtest', '1.8.1', '', ('GCCcore', '5.4.0')),
-    ('flex', '2.6.0', '-GCCcore-5.4.0', True),
-    ('Bison', '3.0.4', '-GCCcore-5.4.0', True),
+    ('binutils', '2.32'),
+    ('CMake', '3.15.3'),
+    ('gtest', '1.10.1'),
+    ('flex', '2.6.4'),
+    ('Bison', '3.3.2'),
 ]
 
 dependencies = [
-    ('GMP', '6.1.1', '-GCCcore-5.4.0', True),
+    ('GMP', '6.1.2'),
 ]
 
 files_to_copy = [

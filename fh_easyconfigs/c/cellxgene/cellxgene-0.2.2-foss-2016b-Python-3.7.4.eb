@@ -1,7 +1,7 @@
 # EasyBuild EasyConfig 
 #
 # John Dey jfdey@fredhutch.org fizwit@github.com
-easyblock = 'PythonPackage'
+easyblock = 'PythonBundle'
 
 name = 'cellxgene'
 version = '0.2.2'
@@ -12,22 +12,69 @@ description = """cellxgene (pronounced "cell-by-gene") is an interactive data ex
 
 toolchain = {'name': 'foss', 'version': '2016b'}
 
-download_dep_fail = True
-use_pip =  True
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
 
-source_urls = [PYPI_SOURCE]
-sources = [SOURCE_TAR_GZ]
-patches = ['%(name)s-%(version)s-scikit.patch']
 
 dependencies = [
     ('Python', '3.7.4'),
+    ('h5py', '2.9.0', versionsuffix),
+    ('scanpy', '1.4.5.1', versionsuffix),
     ('scikit-learn', '0.21.2', versionsuffix),
+    ('python-igraph', '0.7.1.post6', versionsuffix),
 ]
 
 options = {'modulename': False}
 
+exts_list = [
+    ('importlib-metadata', '1.5.0', {
+        'modulename': 'importlib_metadata',
+        'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
+    }),
+    ('natsort', '7.0.1'),
+    ('anndata', '0.7.1'),  # >=0.6.13
+    ('click', '7.1.1'),
+    ('Werkzeug', '1.0.0', {
+        'modulename': 'werkzeug',
+    }),
+    ('MarkupSafe', '1.1.1', {
+        'modulename': 'markupsafe',
+    }),
+    ('Jinja2', '2.11.1', {
+        'modulename': 'jinja2',
+    }),
+    ('itsdangerous', '1.1.0'),
+    ('Flask', '1.1.1', {
+        'modulename': 'flask',
+    }),
+    ('Flask-Caching', '1.8.0', {
+        'modulename': 'flask_caching',
+    }),
+    ('Flask-Compress', '1.4.0', {
+        'modulename': 'flask_compress',
+    }),
+    ('Flask-Cors', '3.0.8', {
+        'modulename': 'flask_cors',
+    }),
+    ('aniso8601', '8.0.0'),
+    ('Flask-RESTful', '0.3.8', {
+        'modulename': 'flask_restful',
+    }),
+    ('flask-restful-swagger-2', '0.35', {
+        'modulename': 'flask_restful_swagger_2',
+    }),
+    (name, version, {
+        'patches': ['%(name)s-%(version)s-scikit.patch'],
+    }),
+]
+
 sanity_check_paths = {
-    'files': [], 
+    'files': ['bin/%(name)s'],
     'dirs': ['lib/python%(pyshortver)s/site-packages/'],
 }
 sanity_check_commands = [(name, '--version')]

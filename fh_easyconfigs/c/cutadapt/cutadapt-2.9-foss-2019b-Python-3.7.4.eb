@@ -10,14 +10,14 @@
 easyblock = 'PythonBundle'
 
 name = 'cutadapt'
-version = '2.7'
+version = '2.9'
 versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'http://opensource.scilifelab.se/projects/cutadapt/'
 description = """Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads."""
 
-toolchain = {'name': 'foss', 'version': '2016b'}
+toolchain = {'name': 'foss', 'version': '2019b'}
 
 dependencies = [('Python', '3.7.4')]
 
@@ -26,13 +26,15 @@ use_pip = True
 exts_list = [
     ('xopen', '0.8.4', {
         'source_urls': ['https://pypi.python.org/packages/source/x/xopen'],
+        'checksums': ['dcd8f5ef5da5564f514a990573a48a0c347ee1fdbb9b6374d31592819868f7ba'],
     }),
     ('dnaio', '0.4.1', {
         'source_urls': ['https://pypi.python.org/packages/source/d/dnaio'],
+        'checksums': ['371a461bac0e821ff52f6235f0de4533ac73b0e990b470e9625486f2e6df2cd7'],
     }),
     (name, version, {
         'source_urls': ['https://pypi.python.org/packages/source/c/cutadapt'],
-        'checksums': ['070dec8d94b8bda72906c614b9e71bd61254a67a176dd17e5b57671edd567983'],
+        'checksums': ['cad8875b461ca09cea498b4f0e78b0d3dcd7ea84d27d51dac4ed45080bf1499e'],
     }),
 ]
 

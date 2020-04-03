@@ -1,0 +1,33 @@
+easyblock = 'CMakeMake'
+
+name = 'pybind11'
+version = '2.3.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://pybind11.readthedocs.io'
+description = """pybind11 is a lightweight header-only library that exposes C++ types in Python and vice versa,
+ mainly to create Python bindings of existing C++ code."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/pybind/pybind11/archive/']
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    ('CMake', '3.15.3', '', ('GCCcore', '8.3.0')),
+    ('Eigen', '3.3.5', '', True),
+    ('pytest', '5.0.1', versionsuffix),
+]
+dependencies = [('Python', '3.7.4')]
+
+installopts = " && export PYBIND11_USE_CMAKE=1 && pip install --prefix %(installdir)s . "
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['include/pybind11', 'lib/python%(pyshortver)s/site-packages/pybind11',
+              'share/cmake/pybind11'],
+}
+
+modextrapaths = {'PYTHONPATH': 'lib/python%(pyshortver)s/site-packages'}
+
+moduleclass = 'lib'

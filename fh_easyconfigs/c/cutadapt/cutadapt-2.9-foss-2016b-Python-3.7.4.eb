@@ -10,7 +10,7 @@
 easyblock = 'PythonBundle'
 
 name = 'cutadapt'
-version = '2.7'
+version = '2.9'
 versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'http://opensource.scilifelab.se/projects/cutadapt/'
@@ -32,7 +32,6 @@ exts_list = [
     }),
     (name, version, {
         'source_urls': ['https://pypi.python.org/packages/source/c/cutadapt'],
-        'checksums': ['070dec8d94b8bda72906c614b9e71bd61254a67a176dd17e5b57671edd567983'],
     }),
 ]
 

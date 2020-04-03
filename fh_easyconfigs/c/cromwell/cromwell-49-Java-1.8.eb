@@ -11,7 +11,7 @@ versionsuffix = '-Java-%(javaver)s'
 homepage = 'https://github.com/broadinstitute/cromwell'
 description = """Scientific workflow engine designed for simplicity & scalability."""
 
-toolchain = {'name': 'dummy', 'version': 'dummy'}
+toolchain = SYSTEM 
 
 source_urls = ['https://github.com/broadinstitute/cromwell/releases/download/%(version)s']
 sources = ['%(name)s-%(version)s.jar']

@@ -1,0 +1,48 @@
+easyblock = 'PythonBundle'
+
+name = 'awscli'
+version = '1.18.35'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://pypi.python.org/pypi/awscli'
+description = """Universal Command Line Environment for AWS. Includes package
+awscli-plugin-endpiont"""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+exts_list = [
+    ('rsa', '3.4.2'),
+    ('s3transfer', '0.3.3'),
+    ('PyYAML', '5.3', {
+        'modulename': 'yaml',
+    }),
+    ('docutils', '0.15'),
+    ('colorama', '0.4.3'),
+    ('jmespath', '0.9.5'),
+    ('botocore', '1.15.35'),
+    ('boto3', '1.12.35'),
+    ('awscli-plugin-endpoint', '0.3', {
+        'modulename': 'awscli_plugin_endpoint',
+    }),
+    (name, version),
+]
+
+
+sanity_check_paths = {
+    'files': ['bin/aws'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/'],
+}
+
+moduleclass = 'tools'
