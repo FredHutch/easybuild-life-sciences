@@ -1,0 +1,23 @@
+Make changes necessary to work with Boost-1.71.0
+copied from Samuel Moors, Vrije Universiteit Brussel (VUB)
+diff -ruN ncbi-blast-2.10.0+-src.orig/c++/include/corelib/test_boost.hpp ncbi-blast-2.10.0+-src/c++/include/corelib/test_boost.hpp
+--- ncbi-blast-2.10.0+-src.orig/c++/include/corelib/test_boost.hpp	2019-10-17 15:21:49.000000000 -0700
++++ ncbi-blast-2.10.0+-src/c++/include/corelib/test_boost.hpp	2020-04-17 13:24:11.102866000 -0700
+@@ -146,7 +146,7 @@
+                               " is expected",                           \
+                               TL, CHECK_MSG, _ );                       \
+     } catch( E const& ex ) {                                            \
+-        ::boost::unit_test::ut_detail::ignore_unused_variable_warning( ex ); \
++        ::boost::ignore_unused( ex );                                   \
+         BOOST_TEST_TOOL_IMPL( 2, P, prefix BOOST_STRINGIZE( E ) " is caught", \
+                               TL, CHECK_MSG, _  );                      \
+     } catch (...) {                                                     \
+@@ -185,7 +185,7 @@
+     BOOST_CHECK_IMPL( false, "exception " BOOST_STRINGIZE( E )           \
+                              " is expected", TL, CHECK_MSG ); }          \
+ catch( E const& ex ) {                                                   \
+-    boost::unit_test::ut_detail::ignore_unused_variable_warning( ex );   \
++    boost::ignore_unused( ex );                                          \
+     BOOST_CHECK_IMPL( P, prefix BOOST_STRINGIZE( E ) " is caught",       \
+                       TL, CHECK_MSG );                                   \
+ }                                                                        \
