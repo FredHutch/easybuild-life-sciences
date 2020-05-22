@@ -18,7 +18,7 @@ framework for managing scientific software.
 Inventory of module class "bio" software modules.  This is a subset of all modules that are available. The full
 list of modules encompesses low level system libraries, math libraries, programming languages, and visualization tools. 
 
- - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-14.04/)
+ - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-18.04/)
 
 ## Programming Language Modules
 Scientific Computing maintains custom builds for R and Python. The
@@ -28,7 +28,7 @@ bellow to see a list of available builds with a list of modules.
 
  - [R Modules]({{ site.baseurl }}/r/)
  - [Python Modules]({{ site.baseurl }}/python/)
- - [foss-2016b]({{ site.baseurl }}/foss-2016b/) (Free and Open Source Software)
+ - [foss-2019b]({{ site.baseurl }}/foss-2019b/) (Free and Open Source Software)
  - [foss-2018b]({{ site.baseurl }}/foss-2018b/) (Free and Open Source Software)
  - [Dependency Graphs]({{ site.baseurl }}/dot/)
 

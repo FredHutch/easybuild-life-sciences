@@ -12,9 +12,9 @@ docs:
       - title: "Software Updates"
         url: /updates/
       - title: "Bio Software Inventory"
-        url: /bio-modules-14.04/
+        url: /bio-modules-18.04/
       - title: "Full Software Inventory"
-        url: /all-modules-14.04/
+        url: /all-modules-18.04/
       - title: "R Modules"
         url: /r/
       - title: "R Issues and Solutions"
@@ -25,5 +25,7 @@ docs:
         url: /python-bundles/
       - title: "Dependency Graphs"
         url: /dot/
+      - title: "Trusty Archive"
+        url: /all-modules-14.04/
       - title: "About"
         url: /about/
