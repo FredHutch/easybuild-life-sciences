@@ -51,7 +51,7 @@ Modules can be loaded, unloaded, listed and searched.  The
 ```module load``` command can be abrivated to ```ml```.
 
 Load a Python module
-```ml Python/3.6.5-foss-2016b-fh1```
+```ml Python/3.7.4-foss-2019b-fh1```
 
 List currently loaded modules
 ```ml list```
@@ -67,9 +67,8 @@ Place the following in your bash or sbatch scripts to load modules within
 your scripts.
 
 ```
-source /app/Lmod/lmod/lmod/init/bash
-module use /app/easybuild/modules/all
-module load R/3.5.0-foss-2016b-fh1
+source /app/lmod/lmod/init/profile
+module load R/4.0.0-foss-2019b
 ```
 
 ### Software Requests
