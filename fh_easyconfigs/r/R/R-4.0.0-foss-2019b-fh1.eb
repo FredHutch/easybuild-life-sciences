@@ -433,12 +433,18 @@ exts_list = [
     ('FlowSOM', '1.18.0'),
     ('patchwork', '1.0.0'),
     ('Seurat', '3.1.5'),
-    ('argparse', '2.0.1'),
+#    ('argparse', '2.0.1'),
 ]
 
+##sanity_check_paths = {
+##    'files': ['perm/R/perm'],
+##    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
+##}
+
+#postinstallcmds = ['touch %(installdir)s/ebsanity']
 sanity_check_paths = {
-    'files': ['perm/R/perm'],
-    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
+    'files': ['ebsanity/ebsanity.txt'],
+    'dirs': ['ebsanity'], 
 }
 
 modextrapaths = {'R_LIBS': ''}
