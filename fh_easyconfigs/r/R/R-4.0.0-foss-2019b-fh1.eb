@@ -42,6 +42,7 @@ dependencies = [
     ('OpenJPEG', '2.3.1'),
     ('UnZip', '6.0'),
     ('zlib', '1.2.11'),
+    ('NSS', '3.45'),
 ]
 
 exts_default_options = {
@@ -66,7 +67,9 @@ exts_list = [
     ('webp', '1.0'),
     ('RcppParallel', '5.0.1'),
     ('qpdf', '1.1'),
-    ('pdftools', '2.3.1'),
+    ('pdftools', '2.3', {
+        'installopts': ' --no-lock',
+    }),
     ('scidb', '2.0.0'),
     ('ssgraph', '1.12'),
     ('pdist', '1.2'),
@@ -436,11 +439,12 @@ exts_list = [
     ('FlowSOM', '1.20.0'),
     ('Seurat', '3.1.5'),
     ('findpython', '1.0.5'),
+    ('argparse', '2.0.1'),
 ]
 
 sanity_check_paths = {
-    'files': ['ebsanity/ebsanity.txt'],
-    'dirs': ['ebsanity'], 
+    'files': ['perm/R/perm'],
+    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
 }
 
 modextrapaths = {'R_LIBS': ''}
