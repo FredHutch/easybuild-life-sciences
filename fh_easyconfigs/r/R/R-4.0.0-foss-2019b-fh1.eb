@@ -67,11 +67,7 @@ exts_list = [
     ('webp', '1.0'),
     ('RcppParallel', '5.0.1'),
     ('qpdf', '1.1'),
-<<<<<<< HEAD
     ('pdftools', '2.3.1', {
-=======
-    ('pdftools', '2.3', {
->>>>>>> 9fff90d2f2b02d02cb08e8e1f12a216d060ef5eb
         'installopts': ' --no-lock',
     }),
     ('scidb', '2.0.0'),
@@ -414,11 +410,7 @@ exts_list = [
         'filename': '%(name)s_%(version)s.tar.gz',
     }),
     ('HSMMSingleCell', '1.8.0'),
-<<<<<<< HEAD
     ('regioneR', '1.20.1'),
-=======
-    ('regioneR', '1.20.0'),
->>>>>>> 9fff90d2f2b02d02cb08e8e1f12a216d060ef5eb
     ('ChIPpeakAnno', '3.22.2'),
     ('MatrixEQTL', '2.3'),
     ('doBy', '4.6.6'),
@@ -445,17 +437,14 @@ exts_list = [
     ('ConsensusClusterPlus', '1.52.0'),
     ('FlowSOM', '1.20.0'),
     ('Seurat', '3.1.5'),
-<<<<<<< HEAD
     ('xgboost', '1.1.1.1'),
     ('Rdsdp', '1.0.5'),
     ('knockoff', '0.3.3'),
     ('vimp', '2.0.2'),
     ('numbers', '0.7-5'),
     ('SemiPar', '1.0-4.2'),
-=======
     ('findpython', '1.0.5'),
     ('argparse', '2.0.1'),
->>>>>>> 9fff90d2f2b02d02cb08e8e1f12a216d060ef5eb
 ]
 
 sanity_check_paths = {
