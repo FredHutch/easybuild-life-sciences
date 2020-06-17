@@ -1,0 +1,12 @@
+diff -ruN comut-0.0.3.orig/setup.py comut-0.0.3/setup.py
+--- comut-0.0.3.orig/setup.py	2020-03-20 07:23:13.000000000 -0700
++++ comut-0.0.3/setup.py	2020-05-01 21:00:54.349577000 -0700
+@@ -3,7 +3,7 @@
+ with open("README.md") as f:
+     LONG_DESCRIPTION, LONG_DESC_TYPE = f.read(), "text/markdown"
+ 
+-with open("reqs/base-requirements.txt") as f:
++with open("comut.egg-info/requires.txt") as f:
+     REQUIREMENTS = f.read().splitlines()
+ 
+ NAME = "comut"

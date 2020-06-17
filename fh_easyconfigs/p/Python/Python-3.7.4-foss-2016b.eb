@@ -60,10 +60,8 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/n/nose/'],
         'checksums': ['f1bffef9cbc82628f6e7d7b40d7e255aefaa1adb6a1b1d26c69a8b79e6208a98'],
     }),
-    ('numpy', '1.15.0', {
+    ('numpy', '1.18.3', {
         'source_tmpl': '%(name)s-%(version)s.zip',
-        'source_urls': ['https://pypi.python.org/packages/source/n/numpy/'],
-        'checksums': ['f28e73cf18d37a413f7d5de35d024e6b98f14566a10d82100f9dc491a7d449f9'],
     }),
     ('scipy', '1.1.0', {
         'source_urls': ['https://pypi.python.org/packages/source/s/scipy/'],
@@ -90,12 +88,11 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/pbr/'],
         'checksums': ['1b8be50d938c9bb75d0eaf7eda111eec1bf6dc88a62a6412e33bf077457e0f45'],
     }),
-    ('Cython', '0.29.13', {
+    ('Cython', '0.29.16', {
         'source_urls': ['https://pypi.python.org/packages/source/C/Cython/'],
     }),
-    ('six', '1.11.0', {
+    ('six', '1.12.0', {
         'source_urls': ['https://pypi.python.org/packages/source/s/six/'],
-        'checksums': ['70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9'],
     }),
     ('python-dateutil', '2.7.3', {
         'modulename': 'dateutil',
@@ -140,13 +137,11 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/i/idna/'],
         'checksums': ['684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16'],
     }),
-    ('cryptography', '2.3.1', {
+    ('cryptography', '2.9.2', {
         'source_urls': ['https://pypi.python.org/packages/source/c/cryptography/'],
-        'checksums': ['8d10113ca826a4c29d5b85b2c4e045ffa8bad74fb525ee0eceb1d38d4c70dfd6'],
     }),
-    ('pyasn1', '0.4.4', {
+    ('pyasn1', '0.4.6', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pyasn1/'],
-        'checksums': ['f58f2a3d12fd754aa123e9fa74fb7345333000a035f3921dbdaa08597aa53137'],
     }),
     ('PyNaCl', '1.2.1', {
         'modulename': 'nacl',
@@ -181,10 +176,7 @@ exts_list = [
         'source_urls': ['https://pypi.python.org/packages/source/p/pytz/'],
         'checksums': ['ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277'],
     }),
-    ('pandas', '0.23.4', {
-        'source_urls': ['https://pypi.python.org/packages/source/p/pandas/'],
-        'checksums': ['5b24ca47acf69222e82530e89111dd9d14f9b970ab2cd3a1c2c78f0c4fbba4f4'],
-    }),
+    ('pandas', '0.23.4'),
     ('bitstring', '3.1.5', {
         'source_tmpl': '%(name)s-%(version)s.zip',
         'source_urls': ['https://pypi.python.org/packages/source/b/bitstring/'],
