@@ -1,0 +1,32 @@
+easyblock = 'PythonPackage'
+
+name = 'terminator'
+version = '1.91'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://freedesktop.org/wiki/Software/intltool/'
+description = """Multiple terminals in one window. The goal of this project is to produce a useful tool for arranging terminals."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://launchpad.net/terminator/gtk3/1.91/+download']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('binutils', '2.32'),
+    ('intltool', '0.51.0'),
+]
+
+dependencies = [
+    ('Python', '2.7.16'),
+    ('gettext', '0.20.1'),
+]
+
+options = {'modulename': False}
+
+sanity_check_paths = {
+    'files': ['bin/terminator'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'tools'

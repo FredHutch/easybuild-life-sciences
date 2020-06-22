@@ -1,0 +1,22 @@
+easyblock = "Tarball"
+
+name = 'IgBLAST'
+version = '1.15.0'
+versionsuffix = '-x64-linux'
+
+homepage = 'https://ncbi.github.io/igblast'
+description = """IgBLAST faclilitates the analysis of immunoglobulin and T cell receptor variable domain sequences."""
+
+toolchain = SYSTEM 
+
+source_urls = ['ftp://ftp.ncbi.nih.gov/blast/executables/igblast/release/%(version)s']
+sources = ['ncbi-%(namelower)s-%(version)s-x64-linux.tar.gz']
+
+sanity_check_paths = {
+    'files': ["bin/igblastn", 'bin/igblastp'],
+    'dirs': ['bin']
+}
+
+modextravars = {'IGDATA': '%(installdir)s/internal_data'}
+
+moduleclass = 'bio'

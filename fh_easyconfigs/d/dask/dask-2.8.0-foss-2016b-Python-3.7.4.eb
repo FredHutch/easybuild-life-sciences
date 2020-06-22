@@ -13,8 +13,8 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 dependencies = [
     ('Python', '3.7.4'),
     ('PyYAML', '5.1.2', versionsuffix),
-    #('SciPy-bundle', '2019.10', versionsuffix),
-    ('bokeh', '1.4.0', versionsuffix),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('bokeh', '2.0.1', versionsuffix),
 ]
 
 use_pip = True

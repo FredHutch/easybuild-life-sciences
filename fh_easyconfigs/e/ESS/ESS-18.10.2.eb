@@ -1,0 +1,28 @@
+easyblock = 'Tarball'
+
+name = 'ESS'
+version = '18.10.2'
+
+homepage = 'http://ess.r-project.org/'
+description = """Emacs Speaks Statistics (ESS) is an add-on package for emacs
+ text editors such as GNU Emacs and XEmacs. It is designed to support editing
+ of scripts and interaction with various statistical analysis programs such as
+ R, S-Plus, SAS, Stata and OpenBUGS/JAGS."""
+
+toolchain = SYSTEM
+
+source_urls = ['http://ess.r-project.org/downloads/ess/']
+sources = [SOURCELOWER_ZIP]
+
+modloadmsg = """To use ESS, you must add to your emacs config:\n
+(load \"ess-site\")\n
+"""
+
+modextravars = {'EMACSLOADPATH': '%(installdir)s/lisp/'}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ["lisp"],
+}
+
+moduleclass = 'lang'

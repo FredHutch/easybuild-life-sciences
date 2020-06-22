@@ -24,6 +24,10 @@ dependencies = [
     ('BioPerl', '1.7.2', versionsuffix),
     ('seqtk', '1.3'),
     ('vt', '0.57721'),
+    ('BWA', '0.7.17'),
+    ('Java', '1.8', '', True), 
+    ('parallel', '20170222'),
+    ('gzip', '1.8', '', ('GCCcore', '5.4.0')),
     ('SAMtools', '1.9'),
     ('BCFtools', '1.9'),
 ]

@@ -30,6 +30,7 @@ builddependencies = [
 dependencies = [
     ('Python', '3.7.4'),
     ('future', '0.16.0', versionsuffix),
+    ('protobuf-c', '1.3.3'),
 ]
 
 github_account = 'checkpoint-restore'
@@ -38,7 +39,7 @@ sources = ['v%(version)s.tar.gz']
 patches = ['%(name)s-%(version)s-install-man-fix.patch']
 checksums = [
     '1663bed128283384a0b97a83f5c7fd72db66e0700096a7b8f195f47d7eec4157',  # v3.13.tar.gz
-    'b607141dfc95a92c265343cf5ac1002a680d426d921e2483bbc0ba5520db0a73',  # CRIU-v3.13-install-man-fix.patch
+    '99555f86d69b5eebc65c9293eaf686ae077878e54f7f36c6e7aa7fb8dbf6f2b2',  # CRIU-v3.13-install-man-fix.patch
 ]
 
 osdependencies = [

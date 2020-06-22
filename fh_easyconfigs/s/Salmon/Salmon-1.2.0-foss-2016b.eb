@@ -1,0 +1,55 @@
+# #
+# This is a contribution from HPCNow! (http://hpcnow.com)
+# Copyright::   HPCNow!
+# Authors::     Jordi Blasco <jordi.blasco@hpcnow.com>
+# License::     GPL-v3.0
+# Based on Robert Qiao <rob.qiao@flinders.edu.au> contribution
+# #
+
+easyblock = 'CMakeMake'
+
+name = 'Salmon'
+version = '1.2.0'
+
+homepage = 'https://salmon.readthedocs.io'
+description = """Salmon is a wicked-fast program to produce a highly-accurate,
+transcript-level quantification estimates from RNA-seq data. Salmon achieves
+its accuracy and speed via a number of different innovations, including the use
+of selective-alignment, and massively-parallel stochastic collapsed variational
+inference."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+github_account = 'COMBINE-lab'
+source_urls = ['https://github.com/%(github_account)s/%(namelower)s/archive/']
+sources = ['v%(version)s.tar.gz']
+patches = ['salmon-1.2.0_cxxflags.patch']
+checksums = [
+    'c8a6647484ff630e4958aa4540cba28c0913b26922313876d747aba65eefb96f', #  source
+    'f17a1c86c12555eb5577dceafde2f82335fe06e3f6ae55be55accdf9a8f70aad', #  patch
+]
+
+builddependencies = [
+    ('CMake', '3.12.1'),
+    ('pkg-config', '0.29.1'),
+    ('jemalloc', '5.2.0', '', ('GCCcore', '5.4.0')),
+    ('Boost', '1.69.0'),
+    ('zlib', '1.2.11'),
+    ('bzip2', '1.0.6'),
+]
+
+dependencies = [
+    ('GCCcore', '5.4.0', '', True),
+    ('tbb', '2018_U2', '', ('GCCcore', '5.4.0')),
+]
+
+configopts = " -DCMAKE_CXX_FLAGS=\"$CXXFLAGS\" "
+#runtest = 'test'
+
+sanity_check_paths = {
+    'files': ['bin/salmon', 'lib/libsalmon_core.a'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

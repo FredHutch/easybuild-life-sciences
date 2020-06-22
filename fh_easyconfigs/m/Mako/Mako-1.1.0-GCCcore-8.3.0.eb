@@ -1,0 +1,52 @@
+easyblock = 'PythonPackage'
+
+name = 'Mako'
+version = '1.1.0'
+
+homepage = 'http://www.makotemplates.org'
+description = """A super-fast templating language that borrows the best ideas from the existing templating languages"""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+checksums = ['a36919599a9b7dc5d86a7a8988f23a9a3a3d083070023bab23d64f7f1d1e0a4b']
+
+download_dep_fail = True
+use_pip = True
+
+builddependencies = [('binutils', '2.32')]
+dependencies = [('Python', '3.7.4')]
+
+sanity_check_paths = {
+    'files': ['bin/mako-render'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/%(namelower)s'],
+}
+
+moduleclass = 'devel'
+
+# Build statistics
+buildstats = [{
+    "build_time": 19.48,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--robot='/app/software/EasyBuild/4.1.2/easybuild/easyconfigs:/app/fh_easyconfigs'", "--robot-paths=':/app/fh_easyconfigs'", "--sourcepath='/app/sources'", "--umask='002'", 'R-3.6.2-foss-2019b.eb'],
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.1.1",
+    "easybuild-framework_version": "4.1.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/8.3.0/libexec/gcc/x86_64-pc-linux-gnu/8.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold=default --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/8.3.0 --with-local-prefix=/app/software/GCCcore/8.3.0 --enable-bootstrap --with-isl=/app/build/GCCcore/8.3.0/system-system/gcc-8.3.0/stage2_stuff; Thread model: posix; gcc version 8.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "2be612e63b33",
+    "install_size": 1042974,
+    "modules_tool": ('Lmod', '/app/lmod/lmod/libexec/lmod', '7.8'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.17 (default, Nov  7 2019, 10:07:09) ; [GCC 7.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/8.3.0/bin/gcc",
+    "system_python_path": "/app/software/Python/2.7.16-GCCcore-8.3.0/bin/python",
+    "timestamp": 1585168904,
+    "total_memory": 32128,
+}]

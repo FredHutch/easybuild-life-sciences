@@ -1,0 +1,77 @@
+# Built with EasyBuild version 4.1.2 on 2020-04-13_23-44-29
+easyblock = 'PythonBundle'
+
+name = 'numba'
+version = '0.47.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://numba.pydata.org/'
+description = """Numba is an Open Source NumPy-aware optimizing compiler for
+Python sponsored by Continuum Analytics, Inc. It uses the remarkable LLVM
+compiler infrastructure to compile Python syntax to machine code."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('LLVM', '8.0.1'),
+]
+
+use_pip = True
+# sanity_pip_check = True
+
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+    ('llvmlite', '0.31.0', {
+        'patches': ['llvmlite-0.31.0_fix-ffi-Makefile.patch'],
+        'preinstallopts': "export LLVM_CONFIG=${EBROOTLLVM}/bin/llvm-config && ",
+        'checksums': [
+            '22ab2b9d7ec79fab66ac8b3d2133347de86addc2e2df1b3793e523ac84baa3c8',  # llvmlite-0.31.0.tar.gz
+            # llvmlite-0.31.0_fix-ffi-Makefile.patch
+            '672aba7b753dcfe5cb07c731bf1ec8bde1de148d4e0e2d10f6be81fb17f34bbc',
+        ],
+    }),
+    (name, version, {
+        'checksums': ['c0703df0a0ea2e29fbef7937d9849cc4734253066cb5820c5d6e0851876e3b0a'],
+    }),
+]
+
+fix_python_shebang_for = ['bin/*']
+
+sanity_check_paths = {
+    'files': ['bin/numba', 'bin/pycc'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ["numba --help"]
+
+moduleclass = 'lang'
+
+# Build statistics
+buildstats = [{
+    "build_time": 48.35,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", '--rebuild', "--repositorypath='/app/ebfiles_repo'", "--robot-paths=':/app/fh_easyconfigs'", "--sourcepath='/app/sources'", "--umask='002'", 'numba-0.47.0-foss-2019b-Python-3.7.4.eb'],
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.1.1",
+    "easybuild-framework_version": "4.1.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/8.3.0/libexec/gcc/x86_64-pc-linux-gnu/8.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold=default --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/8.3.0 --with-local-prefix=/app/software/GCCcore/8.3.0 --enable-bootstrap --with-isl=/app/build/GCCcore/8.3.0/system-system/gcc-8.3.0/stage2_stuff; Thread model: posix; gcc version 8.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "7c3c676158e2",
+    "install_size": 21638400,
+    "modules_tool": ('Lmod', '/app/lmod/lmod/libexec/lmod', '7.8'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.17 (default, Nov  7 2019, 10:07:09) ; [GCC 7.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/8.3.0/bin/gcc",
+    "system_python_path": "/app/software/Python/3.7.4-GCCcore-8.3.0/bin/python",
+    "timestamp": 1586846669,
+    "total_memory": 32128,
+}]

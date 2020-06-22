@@ -5,8 +5,6 @@
 #  Fred Hutchinson Cancer Research Center  fredhutch.org
 #  Seattle US
 #
-easyblock = 'MakeCp'
-
 name = 'BWA'
 version = '0.7.17'
 
@@ -20,19 +18,19 @@ description = """BWA is a software package for mapping DNA sequences against a l
  for 70-100bp Illumina reads."""
 
 toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+toolchainopts = {'pic': True}
 
 source_urls = ['https://github.com/lh3/bwa/archive']
 sources = ['v%(version)s.tar.gz']
 checksums = ['980b9591b61c60042c4a39b9e31ccaad8d17ff179d44d347997825da3fdf47fd']
 
-dependencies = [
-    ('binutils', '2.32'),
-    ('zlib', '1.2.11'),
-]
+builddependencies = [
+    ('binutils', '2.32')]
 
-files_to_copy = [
-    (["bwa"], "bin"),
-    (["bwa.h", "bamlite.h"], "include"),
+dependencies = [
+    ('libpthread-stubs', '0.4'),
+    ('Perl', '5.30.0'),
+    ('zlib', '1.2.11'),
 ]
 
 sanity_check_paths = {

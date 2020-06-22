@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """ convert output from module spider to a single Markdown page.
 Not all modules can be located in the Fred Hutch Easybuild-life-scienes repo.

@@ -1,0 +1,81 @@
+# EasyBuild EasyConfig 
+#
+# John Dey jfdey@fredhutch.org fizwit@github.com
+easyblock = 'PythonBundle'
+
+name = 'cellxgene'
+version = '0.15.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/chanzuckerberg/cellxgene'
+description = """cellxgene (pronounced "cell-by-gene") is an interactive data explorer for single-cell transcriptomics datasets, such as those coming from the Human Cell Atlas. Leveraging modern web development techniques to enable fast visualizations of at least 1 million cells, we hope to enable biologists and computational researchers to explore their data."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('h5py', '2.10.0', versionsuffix),
+    ('scanpy', '1.4.6', versionsuffix),
+    ('scikit-learn', '0.21.3', versionsuffix),
+    ('igraph', '0.7.1'),
+]
+
+
+exts_list = [
+    ('fsspec', '0.7.4'),
+    ('fastobo', '0.7.2'),
+    ('natsort', '7.0.1'),
+    ('contextlib2', '0.6.0.post1'),
+    ('anndata', '0.7.3'),  # >=0.6.13
+    ('click', '7.1.2'),
+    ('Werkzeug', '1.0.1', {
+        'modulename': 'werkzeug',
+    }),
+    ('MarkupSafe', '1.1.1', {
+        'modulename': 'markupsafe',
+    }),
+    ('Jinja2', '2.11.2', {
+        'modulename': 'jinja2',
+    }),
+    ('itsdangerous', '1.1.0'),
+    ('Flask', '1.1.2', {
+        'modulename': 'flask',
+    }),
+    ('Flask-Caching', '1.9.0', {
+        'modulename': 'flask_caching',
+    }),
+    ('Flask-Compress', '1.5.0', {
+        'modulename': 'flask_compress',
+    }),
+    ('Flask-Cors', '3.0.8', {
+        'modulename': 'flask_cors',
+    }),
+    ('aniso8601', '8.0.0'),
+    ('Flask-RESTful', '0.3.8', {
+        'modulename': 'flask_restful',
+    }),
+    ('flask-restful-swagger-2', '0.35', {
+        'modulename': 'flask_restful_swagger_2',
+    }),
+    (name, version, {
+        'modulename': False,
+        #'patches': ['%(name)s-%(version)s-scikit.patch'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/'],
+}
+sanity_check_commands = [(name, '--version')]
+
+moduleclass = 'bio'

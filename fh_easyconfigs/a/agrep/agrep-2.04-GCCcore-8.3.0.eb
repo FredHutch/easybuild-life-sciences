@@ -1,0 +1,28 @@
+#  easybuild easyconfig
+#
+#  John Dey  jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'MakeCp'
+
+name = 'agrep'
+version = '2.04'
+
+homepage = 'https://github.com/Wikinaut/agrep'
+description = """AGREP - approximate GREP for fast fuzzy string searching."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://github.com/Wikinaut/agrep/archive']
+sources = ['%(name)s%(version)s.zip']
+
+builddependencies = [('binutils', '2.32')]
+
+files_to_copy = [(["agrep"], "bin")]
+
+sanity_check_paths = {
+    'files': [ 'bin/agrep', ],
+    'dirs': [ 'bin', ],
+}
+
+moduleclass = 'lib'

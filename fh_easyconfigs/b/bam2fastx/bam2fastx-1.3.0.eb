@@ -1,0 +1,26 @@
+easyblock = 'Conda'
+
+name = 'bam2fastx'
+version = '1.3.0'
+
+homepage = 'https://github.com/pacificbiosciences/bam2fastx'
+description = """Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded data"""
+
+toolchain = SYSTEM 
+
+channels = ['bioconda']
+
+requirements = '%(name)s=%(version)s python=2.7'
+
+dependencies = [
+    ('Miniconda3', '4.7.10', '', True)
+]
+
+sanity_check_commands = [('bam2fasta', '--help')]
+
+sanity_check_paths = {
+    'files': ['bin/bam2fasta', 'bin/bam2fastq'],
+    'dirs': [''],
+}
+
+moduleclass = 'bio'

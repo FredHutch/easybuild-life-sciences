@@ -1,0 +1,7 @@
+name = 'ROSE'
+version = '
+https://bitbucket.org/young_computation/rose/src/master/
+https://bitbucket.org/young_computation/rose/get/master.tar.gz
+
+description = '''To create stitched enhancers, and to separate super-enhancers from typical enhancers using sequencing data (.bam) given a file of previously identified constituent enhancers (.gff)'''
+

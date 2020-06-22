@@ -1,0 +1,59 @@
+easyblock = 'PythonBundle'
+
+name = 'snakemake'
+version = '5.19.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://snakemake.readthedocs.io'
+description = "The Snakemake workflow management system is a tool to create reproducible and scalable data analyses."
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('PyYAML', '5.1.2', versionsuffix),
+    ('GitPython', '3.1.0', versionsuffix),
+]
+
+use_pip = True
+
+exts_list = [
+    ('datrie', '0.8.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/datrie'],
+    }),
+    ('docutils', '0.16', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/docutils'],
+    }),
+    ('pyrsistent', '0.16.0'),
+    ('contextlib2', '0.6.0.post1'),
+    ('jsonschema', '3.2.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/jsonschema'],
+    }),
+    ('appdirs', '1.4.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/appdirs'],
+    }),
+    ('ConfigArgParse', '1.2.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/ConfigArgParse'],
+    }),
+    ('ratelimiter', '1.2.0.post0', {
+        'source_urls': ['https://pypi.python.org/packages/source/r/ratelimiter'],
+    }),
+    ('wrapt', '1.12.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/w/wrapt'],
+    }),
+    ('psutil', '5.7.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/psutil/'],
+    }),
+    (name, version, {
+        'source_urls': ['https://pypi.python.org/packages/source/s/snakemake'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/snakemake'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ['snakemake --help']
+
+moduleclass = 'tools'
