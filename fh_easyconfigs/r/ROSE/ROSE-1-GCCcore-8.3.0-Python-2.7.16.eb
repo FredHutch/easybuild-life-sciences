@@ -1,0 +1,35 @@
+# Easybuild Easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutchenson Cancer Research Center - Seattle Washington
+easyblock = 'Tarball'
+
+name = 'ROSE'
+version = '1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'http://younglab.wi.mit.edu/super_enhancer_code.html'
+
+description = '''To create stitched enhancers, and to separate super-enhancers from typical enhancers using sequencing data (.bam) given a file of previously identified constituent enhancers (.gff)'''
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://bitbucket.org/young_computation/rose/get']
+sources = ['master.tar.gz']
+patches = ['ROSE_header.patch']
+
+dependencies = [
+    ('Python', '2.7.16'),
+]
+
+sanity_check_paths = {
+    'files': ['ROSE_bamToGFF.py', 'ROSE_utils.py'],
+    'dirs': ['annotation'],
+}
+
+sanity_check_commands = ["python %(name)s_utils.py"]
+
+modextrapaths = {'PYTHONPATH': ''}
+modextrapaths = {'PATH': ''}
+
+moduleclass = 'bio'
