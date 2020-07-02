@@ -22,7 +22,7 @@ builddependencies = [
 ]
 
 dependencies = [
-    ('GLib', '2.64.1'),
+    ('GLib', '2.62.0'),
     ('zlib', '1.2.11'),
     ('libgpg-error', '1.37'),
 ]

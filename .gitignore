@@ -2,3 +2,4 @@
 sources/*
 *.pyc
 *.json
+*.update
