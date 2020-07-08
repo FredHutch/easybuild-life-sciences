@@ -8,7 +8,7 @@ versionsuffix = '-R-%(rver)s'
 homepage = 'http://www.r-project.org/'
 description = """R is a free software environment for statistical computing and graphics."""
 
-toolchain = {'name': 'foss', 'version': '2018b'}
+toolchain = {'name': 'foss', 'version': '2019b'}
 
 dependencies = [
     ('R', '3.6.0'),
@@ -199,7 +199,8 @@ exts_list = [
         'checksums': ['328dc06e2378d1b8462bfc20ca97f53c6dfa4c37adaead5d35b253a07007f3cc'],
     }),
     ('Rgraphviz', '2.28.0', {
-        'checksums': ['0cbc739b07affc51d0820e352b4f85c4eb5e9f507e6169bd79112ba81dfa3b5a'],
+        'patches': ['Rgraphviz-2.28.0_fno-tree-vectorize.patch'],
+        'configopts': ' --configure-args="--with-graphviz"',
     }),
     ('RNASeqPower', '1.24.0', {
         'checksums': ['372eb9f32450d13a8e30ed412f6328488332c36903548fcf18eec4f4da634753'],

@@ -445,6 +445,12 @@ exts_list = [
     ('SemiPar', '1.0-4.2'),
     ('findpython', '1.0.5'),
     ('argparse', '2.0.1'),
+    ('squash', '1.0.9'),
+    ('iotools', '0.3-1'),
+    ('seqminer', '8.0'),
+    ('copynumber', '1.28.0'),
+    ('sequenza', '3.0.0'),
+    ('schoolmath', '0.4'),
 ]
 
 sanity_check_paths = {
