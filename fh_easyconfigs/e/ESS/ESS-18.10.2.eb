@@ -18,8 +18,6 @@ modloadmsg = """To use ESS, you must add to your emacs config:\n
 (load \"ess-site\")\n
 """
 
-modextravars = {'EMACSLOADPATH': '%(installdir)s/lisp/'}
-
 sanity_check_paths = {
     'files': [],
     'dirs': ["lisp"],
