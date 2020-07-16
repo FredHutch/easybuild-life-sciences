@@ -10,12 +10,14 @@ description = """A command-line toolkit and Python library for detecting copy
 
 toolchain = {'name': 'foss', 'version': '2019b'}
 
+builddependencies = [('GCCcore', '8.3.0', '', True)]
+
 dependencies = [
     ('Python', '3.7.4'),
-    ('SciPy-bundle', '2020.04', '-Python-%(pyver)s'),
-    ('Biopython', '1.76', '-Python-%(pyver)s'),
+    ('Biopython', '1.75', '-Python-%(pyver)s'),
     ('matplotlib', '3.1.1', '-Python-%(pyver)s'),
     ('networkx', '2.4', '-Python-%(pyver)s'),
+    ('scikit-learn', '0.21.3', '-Python-%(pyver)s'),
     ('Pillow', '6.2.1'),
     ('Pysam', '0.15.3'),
     ('PyYAML', '5.1.2'),
@@ -32,12 +34,12 @@ exts_list = [
     ('pyfaidx', '0.5.9', {
         'source_urls': ['https://pypi.python.org/packages/source/p/pyfaidx'],
     }),
-    ('pomegranate', '0.13.3', {
+    ('pomegranate', '0.13.2', {
         'source_tmpl': 'v%(version)s.tar.gz',
         'source_urls': ['https://github.com/jmschrei/pomegranate/archive'],
     }),
     (name, version, {
-        '0.9.7': 'cnvlib',
+        'modulename': 'cnvlib',
         'source_tmpl': 'v%(version)s.tar.gz',
         'source_urls': ['https://github.com/etal/cnvkit/archive/'],
         # Run tests after installation
@@ -48,7 +50,7 @@ exts_list = [
 postinstallcmds = ['rm %(installdir)s/bin/easy_install*']
 
 sanity_check_paths = {
-    'files': ['bin/%s' % x for x in ["cnvkit.py", "faidx"]],
+    'files': ['bin/%(namelower)s.py'],
     'dirs': ['lib/python%(pyshortver)s/site-packages'],
 }
 
