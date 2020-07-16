@@ -1,0 +1,64 @@
+easyblock = 'PythonPackage'
+
+name = 'cupcake'
+version = '0.0.4'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/thejohnfreeman/cupcake'
+description = """Cupcake is a thin layer over CMake and Conan that tries to offer a better user experience in the style of Yarn or Poetry."""
+
+toolchain  = {'name': 'foss', 'version': '2019b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+
+
+dependencies = [('Python', '3.7.4')]
+
+exts_list = [
+    ('clikit', '0.6.2', {
+        'modulename': False,
+    }),
+    ('click', '7.1.2', {
+    }),
+    ('semantic-version', '2.8.5', {
+        'source_tmpl': 'semantic_version-%(version)s.tar.gz',
+        'modulename': 'semantic_version',
+    }),
+    ('pyPEG2', '2.15.2', {
+    }),
+    ('cmakelists_parsing', '0.3.1', {
+    }),
+    ('cached-property', '1.5.1', {
+    }),
+    ('conan', '1.27.1', {
+       'modulename': False,
+    }),
+    ('toolz', '0.10.0', {
+    }),
+    ('pydantic', '1.6.1', {
+    }),
+    ('pastel', '0.2.0', {
+       'use_pip': False,
+    }),
+    (name, version, {
+       'use_pip': False,
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+moduleclass = 'tools'
