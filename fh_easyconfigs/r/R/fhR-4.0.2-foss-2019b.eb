@@ -65,7 +65,6 @@ exts_list = [
     ('perm', '1.0-0.0'),
     ('ncdf4', '1.17'),
     ('webp', '1.0'),
-    ('RcppParallel', '5.0.2'),
     ('qpdf', '1.1'),
     ('pdftools', '2.3.1', {
         'installopts': ' --no-lock',
@@ -451,6 +450,15 @@ exts_list = [
     ('copynumber', '1.28.0'),
     ('sequenza', '3.0.0'),
     ('schoolmath', '0.4'),
+    ('qdapRegex', '0.7.2'),
+    ('CMA', '1.46.0'),
+    ('biomformat', '1.16.0'),
+    ('phyloseq', '1.32.0'),
+    ('selbal', '', {
+        'source_urls': ['https://github.com/UVic-omics/selbal/archive'],
+        'source_tmpl': 'master.zip',
+        'filename': 'selbal.zip',
+    }),
 ]
 
 sanity_check_paths = {

@@ -1,7 +1,7 @@
 # easybuild easyconfig
 # John Dey jfdey@fredhutch.org
 # Fred Hutch Cancer Research Center - Seattle US
-easyblock = 'Tarball'
+easyblock = 'MakeCp'
 
 name = 'philosopher'
 version = '3.2.9'
@@ -16,11 +16,20 @@ description = """Philosopher provides easy access to third-party tools and custo
 
 toolchain = SYSTEM
 
-source_urls = ['https://github.com/Nesvilab/philosopher/releases/download/v%(version)s']
-sources = ['philosopher_v%(version)s_linux_amd64.zip']
-checksums = ['63abef0918ba28a3dad9c59a9a82d26e368c02237df394e76bcb506d04f6e817']
+source_urls = ['https://github.com/Nesvilab/philosopher/archive']
+sources = ['v%(version)s.tar.gz']
+patches = [('philosopher-3.2.9_make.patch', 1)]
 
-dependencies = [('Java', '1.8')]
+checksums = [
+    '767cba171ed2792952603e20570a1fec367b3311d61e025b8a1c00e79ef6f9a0',  # v3.2.9.tar.gz
+    'c4f072163ac1abd172406d26ed18d6f4f63fad52910db087308a15f16e4b98e7',  # philosopher-3.2.9_make.patch
+]
+
+dependencies = [('Go', '1.14.1')]
+
+prebuildopts = 'make deploy && '
+
+files_to_copy = ['images', 'lib', 'test', 'cmd', 'philosopher']
 
 sanity_check_paths = {
     'files': ['%(name)s'],

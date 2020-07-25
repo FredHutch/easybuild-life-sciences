@@ -16,7 +16,7 @@ dependencies = [
     ('HDF5', '1.10.5'),  # for rhdf5
     ('MariaDB-connector-c', '2.3.7'),  # for RMySQL
     ('ncdf4', '1.17'),  # for mzR
-    ('Graphviz', '2.40.1'),
+    ('Graphviz', '2.42.2'),
 ]
 
 exts_default_options = {
