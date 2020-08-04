@@ -459,6 +459,9 @@ exts_list = [
         'source_tmpl': 'master.zip',
         'filename': 'selbal.zip',
     }),
+    ('DECIPHER', '2.16.1'),
+    ('minfi', '1.34.0'),
+    ('methylKit', '1.14.2'),
 ]
 
 sanity_check_paths = {
