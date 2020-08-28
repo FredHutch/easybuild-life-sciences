@@ -1,0 +1,35 @@
+easyblock = 'PythonPackage'
+
+name = 'sequenza-utils'
+version = '3.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://sequenza-utils.readthedocs.io/'
+description = """Sequenza is a software for the estimation and quantification of purity/ploidy and copy number alteration in sequencing experiments of tumor samples. Sequenza-utils provide command lines programs to transform common NGS file format - such as BAM, pileup and VCF - to input files for the R package"""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+#exts_defaultclass = 'PythonPackage'
+#exts_list = [
+#    ('numexpr', '2.6.5', {
+#        'source_tmpl': '%(name)s-%(version)s.tar.gz',
+#        'source_urls': ['https://pypi.python.org/packages/source/n/numexpr/'],
+#        'checksums': ['f8ad8014085628eab91bc82fb9d10cf9ab8e04ede4884e4a1061445d395b36bb'],
+#    }),
+#]
+
+options = {'modulename': False}
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

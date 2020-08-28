@@ -29,7 +29,9 @@ sanity_check_paths = {
 
 sanity_check_commands = ["python %(name)s_utils.py"]
 
-modextrapaths = {'PYTHONPATH': ''}
-modextrapaths = {'PATH': ''}
+modextrapaths = {
+    'PYTHONPATH': '',
+    'PATH': ''
+}
 
 moduleclass = 'bio'

@@ -1,0 +1,39 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'PythonPackage'
+
+name = 'pyBigWig'
+version = '0.3.17'
+versionsuffix = '-Python-%(pyver)s'
+
+github_account = 'deeptools'
+homepage = 'https://github.com/deeptools/pyBigWig'
+description = """A python extension, written in C, for quick access to bigBed files and access to and creation of
+ bigWig files."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = [GITHUB_SOURCE]
+sources = ['%(version)s.tar.gz']
+checksums = []
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('cURL', '7.66.0'),
+]
+
+use_pip = True
+
+download_dep_fail = True
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ['python lib/python%(pyshortver)s/site-packages/%(name)sTest/test.py']
+
+options = {'modulename': name}
+
+moduleclass = 'bio'

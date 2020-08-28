@@ -46,7 +46,7 @@ dependencies = [
     ('ICU', '65.1'),
     ('Pandoc', '2.5', '', True),
     ('freetds', '1.1.26'), # pymssql
-    ('unixODBC', '2.3.7'), # sql.h 
+    ('unixODBC', '2.3.7'), # sql.h
     ('libjpeg-turbo', '2.0.3'),  # required for Pillow
     ('OpenJPEG', '2.3.1'), # imagecodecs
     ('OpenBLAS', '0.3.7'), #numexpr
@@ -1514,15 +1514,15 @@ exts_list = [
     ('nanoget', '1.8.0', {
         'source_urls': ['https://pypi.python.org/packages/source/n/nanoget'],
     }),
-    ('Kivy', '1.11.1', {
-        'modulename': 'kivy',
-        'source_urls': ['https://pypi.python.org/packages/source/k/kivy/'],
-    }),
-    ('kivy-garden', '0.1.4', {
-        'modulename': 'kivy.garden',
-        'source_urls': ['https://pypi.python.org/packages/source/k/kivy-garden/'],
-        'checksums': ['c256f42788421273a08fbb0a228f0fb0e80dd86b629fb8c0920507f645be6c72'],
-    }),
+    #('Kivy', '1.11.1', {
+    #    'modulename': 'kivy',
+    #    'source_urls': ['https://pypi.python.org/packages/source/k/kivy/'],
+    #}),
+    #('kivy-garden', '0.1.4', {
+    #    'modulename': 'kivy.garden',
+    #    'source_urls': ['https://pypi.python.org/packages/source/k/kivy-garden/'],
+    #    'checksums': ['c256f42788421273a08fbb0a228f0fb0e80dd86b629fb8c0920507f645be6c72'],
+    #}),
     ('oscpy', '0.4.0', {
         'source_urls': ['https://pypi.io/packages/source/o/oscpy'],
     }),

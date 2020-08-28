@@ -23,4 +23,6 @@ sanity_check_paths = {
     'dirs': []
 }
 
+modextrapaths = {'LD_LIBRARY_PATH': '$EBROOTNCURSES/lib'}
+
 moduleclass = 'tools'

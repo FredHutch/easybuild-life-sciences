@@ -1,0 +1,48 @@
+# easyconfig
+
+easyblock = 'CmdCp'
+
+name = "nextflow"
+version = "20.06.0-edge"
+
+homepage = "https://github.com/nextflow-io/nextflow"
+description = """Nextflow is a bioinformatics workflow manager that enables the development
+ of portable and reproducible workflows. It supports deploying workflows on a variety of
+ execution platforms including local, HPC schedulers, AWS Batch, Google Genomics Pipelines,
+ and Kubernetes."""
+
+toolchain = SYSTEM 
+
+source_urls = ['https://github.com/nextflow-io/nextflow/archive']
+sources = ['v%(version)s.tar.gz']
+skipsteps = ['source']
+
+builddependencies = [('cURL', '7.66.0', '-GCCcore-8.3.0')]
+
+dependencies = [
+    ('Java', '1.8', '', True),
+    ('ncurses', '6.1', '-GCCcore-8.3.0'),
+]
+
+local_cmd = 'export NXF_VER=%(version)s && '
+local_cmd += 'export NXF_HOME=%(installdir)s && '
+local_cmd += 'echo $EBROOTJAVA && '
+local_cmd += 'export JAVA_HOME=/app/easybuild/software/Java/1.8.0_181 && '
+local_cmd += 'curl -s -o %(name)s https://get.nextflow.io && '
+local_cmd += 'chmod +x %(name)s && '
+local_cmd += '/bin/bash ./%(name)s '
+
+cmds_map = [('.*', local_cmd)]
+
+files_to_copy = ['%(name)s']
+postinstallcmds = [ 'chmod +x %(installdir)s/%(name)s' ]
+
+sanity_check_paths = {
+    'files': ["nextflow"],
+    'dirs': []
+}
+
+modextrapaths = { 'PATH': [''] }
+modextravars = {'JAVA_HOME': '$EBROOTJAVA'}
+
+moduleclass = 'tools'

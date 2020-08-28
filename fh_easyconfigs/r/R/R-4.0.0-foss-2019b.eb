@@ -2346,6 +2346,7 @@ exts_list = [
     ('dHSIC', '2.1', {
         'checksums': ['94c86473790cf69f11c68ed8ba9d6ae98218c7c69b7a9a093f235d175cf83db0'],
     }),
+    ('gdsfmt', '1.24.1'),
 ]
 
 moduleclass = 'lang'

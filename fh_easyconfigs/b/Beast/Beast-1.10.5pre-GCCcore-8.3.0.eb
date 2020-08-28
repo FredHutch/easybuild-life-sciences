@@ -1,13 +1,11 @@
-# Adding and listing Beast packages
-# packagemanager -list -dir /app/software/Beast/2.6.2-GCCcore-8.3.0/lib
-# packagemanager -add MultiTypeTree -dir /app/software/Beast/2.6.2-GCCcore-8.3.0/lib
-
-easyblock = "Tarball"
+# Author: Pablo Escobar Lopez (1/1)
+# Biozentrum - University of Basel
+easyblock = 'Tarball'
 
 name = 'Beast'
-version = '2.6.2'
+version = '1.10.5pre'
 
-homepage = 'http://beast2.org/'
+homepage = 'https://beast.community'
 description = """ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  sequences. It is entirely orientated towards rooted, time-measured phylogenies inferred using
  strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies
@@ -17,13 +15,9 @@ description = """ BEAST is a cross-platform program for Bayesian MCMC analysis o
 
 toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
 
-source_urls = ['https://github.com/CompEvol/beast2/releases/download/v%(version)s/']
-sources = ['BEAST.v%(version)s.Linux.tgz']
-checksums = ['9b6882e7f825e16a4dd91548e43b71b10931a8b0c128a1c6ae90a185c7c6dca3']
-
-builddependencies = [
-    ('binutils', '2.32'),
-]
+source_urls = ['https://github.com/beast-dev/beast-mcmc/releases/download/v%(version)s1/']
+sources = ['BEASTv%(version)s.tgz']
+checksums = ['1005e863919abffb6a0adc0c944eb22dbfd66cca9c53da996b5c5e7596da55b6']
 
 dependencies = [
     # this is not mandatory but beagle-lib is recommended by developers
@@ -33,7 +27,7 @@ dependencies = [
 ]
 
 sanity_check_paths = {
-    'files': ["bin/beast"],
+    'files': ['bin/beast'],
     'dirs': []
 }
 

@@ -1,0 +1,36 @@
+# easybuild easyconfig
+easyblock = 'PythonBundle'
+
+name = 'misopy'
+version = '0.5.4'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://www.genes.mit.edu/burgelab/miso/'
+description = """MISO (Mixture of Isoforms) is a probabilistic framework that quantitates the expression level of alternatively spliced genes from RNA-Seq data, and identifies differentially regulated isoforms or exons across samples. By modeling the generative process by which reads are produced from isoforms in RNA-Seq, the MISO model uses Bayesian inference to compute the probability that a read originated from a particular isoform."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+
+# python needs bzip2 to build the bz2 package
+dependencies = [
+    ('Python', '2.7.15'),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+# order is important!
+# package versions updated January 12th 2018
+exts_list = [
+    (name, version, {
+        'source_urls': ['https://pypi.python.org/packages/source/m/misopy'],
+    }),
+]
+
+moduleclass = 'bio'

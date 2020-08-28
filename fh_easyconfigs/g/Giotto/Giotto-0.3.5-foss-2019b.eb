@@ -1,0 +1,86 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'fhR'
+version = '4.0.2'
+local_biocver = '3.11'
+
+homepage = 'http://www.r-project.org/'
+description = """R is a free software environment for statistical computing and graphics."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+builddependencies = [('pkg-config', '0.29.2')]
+
+dependencies = [
+    ('R', '4.0.2'),
+    ('SciPy-bundle', '2020.06'),
+    ('libwebp', '1.0.3'), # webp
+    ('PostgreSQL', '10.3'),
+    ('JAGS', '4.3.0'),
+    ('GLPK', '4.65'), # rglpk
+    ('poppler', '0.87.0'), # pdftools
+    ('GMime', '3.2.7'), # pdftools
+    ('NLopt', '2.6.1'),
+    ('libGLU', '9.0.1'),
+    ('Mesa', '19.1.7'), # for rgl
+    ('cairo', '1.16.0'),
+    ('ICU', '65.1'),
+    ('netCDF', '4.7.1'), # for netcdf4
+    ('ZeroMQ', '4.3.2'), # for zmq
+    ('SYMPHONY', '5.6.17'), # for lpsymphony
+    ('igraph', '0.7.1'), # for igraph
+    ('OpenJPEG', '2.3.1'),
+    ('UnZip', '6.0'),
+    ('zlib', '1.2.11'),
+    ('NSS', '3.45'),
+    ('librsvg', '2.49.1'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on July 8th 2016
+exts_list = [
+    ('dbscan', '1.1-5'),
+    ('ggalluvial', '0.12.0'),
+    ('ComplexHeatmap', '2.4.2'),
+    ('lfa', '1.18.0'),
+    ('ggdendro', '0.1-20'),
+    ('smfishHmrf', '', {
+        'source_urls': ['https://github.com/lambdamoses/smfishhmrf-r/archive'],
+        'source_tmpl': 'master.zip',
+        'filename': 'smfishHmrf.zip',
+    }),
+    ('RcppZiggurat', '0.1.5'),
+    ('Rfast', '1.9.9'),
+    ('Giotto', '0.3.5', {
+        'source_urls': ['https://github.com/RubD/Giotto/archive'],
+        'source_tmpl': 'v0.3.5.tar.gz',
+        'filename': SOURCE_TAR_GZ,
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['perm/R/perm'],
+    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'lang'

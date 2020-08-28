@@ -1,5 +1,9 @@
 # easybuild easyconfig
-# 2019.06.25 John Dey jfdey@fredhtuch.org fizwit@github
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
 easyblock = 'Tarball'
 name = 'MutSig'
 version = '2'
@@ -10,7 +14,7 @@ description = """MutSig stands for "Mutation Significance".  MutSig analyzes lis
  discovered in DNA sequencing, to identify genes that were mutated more often than expected by
  chance given background mutation processes."""
 
-toolchain = {'name': 'dummy', 'version': ''}
+toolchain = SYSTEM
 
 source_urls = ['https://software.broadinstitute.org/cancer/cga/sites/default/files/data/tools/mutsig']
 sources = ['%(name)s%(version)sCV.tar.gz']
