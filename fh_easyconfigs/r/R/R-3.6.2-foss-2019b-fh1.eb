@@ -29,6 +29,7 @@ dependencies = [
     ('JAGS', '4.3.0'),
     ('GLPK', '4.65'), # rglpk
     ('poppler', '0.87.0'), # pdftools
+    ('NSS', '3.45'), # pdftools - libnssutils3
     ('GMime', '3.2.7'), # pdftools
     ('NLopt', '2.6.1'),
     ('libGLU', '9.0.1'),
@@ -66,7 +67,7 @@ exts_list = [
     ('webp', '1.0'),
     ('RcppParallel', '5.0.0'),
     ('qpdf', '1.1'),
-    ('pdftools', '2.3'),
+    ('pdftools', '2.2'),
     ('scidb', '2.0.0'),
     ('ssgraph', '1.10'),
     ('pdist', '1.2'),
@@ -433,6 +434,9 @@ exts_list = [
     ('FlowSOM', '1.18.0'),
     ('patchwork', '1.0.0'),
     ('Seurat', '3.1.5'),
+    ('SingleCellExperiment', '1.10.1'),
+    ('MAST', '1.12.0'),
+    ('mailR', '0.4.1'),
 ]
 
 sanity_check_paths = {
