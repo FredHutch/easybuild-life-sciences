@@ -1,0 +1,25 @@
+easyblock = 'Tarball'
+
+name = 'cisTEM'
+version = '1.0.0-beta'
+
+homepage = 'https://cistem.org/'
+description = """ cisTEM is user-friendly software to process cryo-EM images of macromolecular complexes
+ and obtain high-resolution 3D reconstructions from them. """
+
+toolchain = SYSTEM
+
+source_urls = ['https://cistem.org/system/tdf/upload3']
+sources = ['%(namelower)s-%(version)s-intel-linux.tar.gz']
+
+checksums = [
+    '7f1df4dc2aa066387a791d2a4dcb539ff6cf7f124ac1ad5a793c401279f22082',
+]
+
+sanity_check_paths = {
+    'files': ['cisTEM'],
+    'dirs': [],
+}
+
+modextrapaths = {'PATH': ''}
+moduleclass = 'vis'
