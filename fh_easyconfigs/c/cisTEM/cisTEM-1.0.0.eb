@@ -16,6 +16,8 @@ checksums = [
     '7f1df4dc2aa066387a791d2a4dcb539ff6cf7f124ac1ad5a793c401279f22082',
 ]
 
+dependencies = [('GTK+', '2.24.32', '-foss-2019b')]
+
 sanity_check_paths = {
     'files': ['cisTEM'],
     'dirs': [],
