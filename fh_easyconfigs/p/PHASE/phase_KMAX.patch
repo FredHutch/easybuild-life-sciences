@@ -1,0 +1,57 @@
+# turn KMAX into command line argument
+diff -ruN phase-master.orig/src/phase.2.1.1.source/constants.hpp phase-master/src/phase.2.1.1.source/constants.hpp
+--- phase-master.orig/src/phase.2.1.1.source/constants.hpp	2020-06-29 10:59:56.892230000 -0700
++++ phase-master/src/phase.2.1.1.source/constants.hpp	2020-06-29 10:40:59.526302000 -0700
+@@ -11,7 +11,7 @@
+ 
+ const int BIGINT    = 9999;     // max size for MS allele
+ const int NMAXD     = 4;        // used when outputting ids 
+-const int KMAX      = 50;       // Number of alleles
++extern int KMAX;       // Number of alleles
+ const int ITPRINT    = 10;      // how often to print iteration number
+ 
+ const int MAXLISTLENGTH = 11;
+diff -ruN phase-master.orig/src/phase.2.1.1.source/phase.cpp phase-master/src/phase.2.1.1.source/phase.cpp
+--- phase-master.orig/src/phase.2.1.1.source/phase.cpp	2020-06-29 10:59:56.913202000 -0700
++++ phase-master/src/phase.2.1.1.source/phase.cpp	2020-06-29 11:10:07.829657000 -0700
+@@ -14,6 +14,7 @@
+ #include <cassert>
+ 
+ using namespace std;
++int KMAX = 50; // Number of alleles
+ int NHAP = 0; // global variables used for debugging
+ int NIND = 0;
+ int NHL = 0;
+@@ -434,6 +435,10 @@
+ // {{{ Log
+ 
+ /* 
++   Revision 2.1.2  2020/06/29 John Dey jfdey@fredhutch.org
++   Change KMAX (Number of alleles) from a const to a command line argument.
++   command line argument flag -Kn 
++
+    $Log: phase.cpp,v $
+    Revision 1.34  2003/06/14 00:24:05  stephens
+    Adding files, and committing a lot of changes
+diff -ruN phase-master.orig/src/phase.2.1.1.source/utility.cpp phase-master/src/phase.2.1.1.source/utility.cpp
+--- phase-master.orig/src/phase.2.1.1.source/utility.cpp	2020-06-29 10:59:57.052694000 -0700
++++ phase-master/src/phase.2.1.1.source/utility.cpp	2020-06-29 10:59:25.060617000 -0700
+@@ -235,6 +235,9 @@
+ 	cmdoptions["maxnloci"] = 0;
+       } 
+       break;      
++    case 'K':  /* KMAX */
++      KMAX = atoi( &argv[1][2] );
++      break;
+ 
+     case 'l': // specify maximum number of loci in each block
+       // (specify to be 0 if no maximum)
+@@ -439,6 +442,8 @@
+     exit (1);
+   }
+ 
++  std::cerr << "KMAX = " << KMAX << endl;
++
+   if ( argc < 3) {
+     cerr << "usage is PHASE <filename.inp> <filename.out>"
+ 	 << "<number of iterations> <thinning interval> <burn-in>"
