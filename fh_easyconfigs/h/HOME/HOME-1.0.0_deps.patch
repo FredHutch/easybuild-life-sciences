@@ -1,0 +1,19 @@
+allow more flexible dependencies
+diff -ruN HOME-1.0.0.org/setup.py HOME-1.0.0/setup.py
+--- HOME-1.0.0.org/setup.py	2019-02-03 17:36:29.000000000 -0800
++++ HOME-1.0.0/setup.py	2020-10-14 17:22:32.665482000 -0700
+@@ -11,10 +11,10 @@
+     author = 'akanksha srivastava',
+     install_requires = [
+         'numpy',
+-        'pandas==0.17.1',
+-        'scipy==0.16.0',
+-        'scikit-learn==0.16.1',
+-        'statsmodels==0.6.1',
++        'pandas>=0.17.1',
++        'scipy>=0.16.0',
++        'scikit-learn>=0.16.1',
++        'statsmodels>=0.6.1',
+     ],
+     author_email = 'akanksha.srivastava@research.uwa.edu.au',
+     
