@@ -53,15 +53,10 @@ class ExtsList(object):
         self.verbose = verbose
         self.pkg_count = 0
 
-<<<<<<< HEAD
         try:
             self.extension = eb.dep_exts
         except NameError:
             self.extension = []
-=======
-        if eb.dep_exts:
-            self.extension = eb.dep_exts
->>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         self.extension.extend(eb.exts_list)
         self.biocver = None
         self.toolchain = eb.toolchain
@@ -228,11 +223,7 @@ class PythonExts(ExtsList):
             return 'not found', ''
         project = resp.json()
         if 'description' in project['info']:
-<<<<<<< HEAD
             description = project['info']['summary']
-=======
-            description = project['info']['description']
->>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
         if 'home_page' in project['info']:
             url =  project['info']['home_page']
         elif 'project_urls' in project['info']:
@@ -261,14 +252,18 @@ def main():
     parser.add_argument('easyconfig', nargs='?')
     args = parser.parse_args()
 
+    eb = None
+    args.lang = None
     if args.easyconfig:
         eb = FrameWork(args)
-    else:
-        print("provide a module nameModule with R-, or Python-")
-        sys.exit(1)
-    if eb.name == 'R':
+        args.lang = eb.lang
+        if eb.lang == 'Python':
+            args.pyver = eb.pyver
+        if eb.lang == 'R':
+            args.rver = eb.rver
+    if args.lang == 'R':
         R(eb, args.verbose)
-    elif eb.name == 'Python':
+    elif args.lang == 'Python':
         PythonExts(eb, args.verbose)
     else:
         print('easyanotate does not know how to process: {}'.format(eb.name))

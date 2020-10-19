@@ -1,0 +1,50 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonPackage'
+
+name = 'MAESTRO'
+version = '1.2.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/liulab-dfci/MAESTRO'
+description = """MAESTRO(Model-based AnalysEs of Single-cell Transcriptome and RegulOme) is a comprehensive
+ single-cell RNA-seq and ATAC-seq analysis suit built using snakemake. MAESTRO combines several dozen tools and
+ packages to create an integrative pipeline, which enables scRNA-seq and scATAC-seq analysis from raw sequencing
+ data (fastq files) all the way through alignment, quality control, cell filtering, normalization, unsupervised
+ clustering, differential expression and peak calling, celltype annotation and transcription regulation analysis."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/liulab-dfci/MAESTRO/archive']
+sources = ['v%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('Biopython', '1.75', versionsuffix),
+    ('fhR', '4.0.2'),
+    ('STAR', '2.7.6a'),
+    ('minimap2', '2.17'),
+]
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+options = {'modulename': 'MAESTRO'}
+
+# Run only tests that don't require internet connection
+#runtest = 'python setup.py test --offline'
+
+sanity_check_paths = {
+    'files': ['bin/MAESTRO'],
+    'dirs': [],
+}
+
+# extra check to ensure numpy dependency is available
+#sanity_check_commands = ["python -c 'import Bio.MarkovModel'"]
+
+
+moduleclass = 'bio'
