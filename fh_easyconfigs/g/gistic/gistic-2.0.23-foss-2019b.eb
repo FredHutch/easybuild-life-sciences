@@ -1,0 +1,44 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+easyblock = 'Tarball'
+
+name = 'GISTIC'
+version = '2.0.23'
+
+homepage = 'www.broadinstitute.org/cancer/cga/gistc'
+description = """GISTIC is a tool to identify genes targeted by somatic copy-number alterations (SCNAs) that drive cancer growth. By separating SCNA profiles into underlying arm-level and focal alterations, GISTIC estimates the background rates for each category as well as defines the boundaries of SCNA regions."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['ftp://ftp.broadinstitute.org/pub/%(name)s2.0/']
+sources = ['%s_%s.tar.gz' % (name, version.replace('.','_'))]
+
+"""Note about gistic patch. The default example file that is part
+   of gistic needs to be changed to allow use from alternate
+   directories.  Set the MATLAB Compiler tool directory: mcr_root.
+   set mcr_root = /app/MATLAB/7.14/MATLAB_Compiler_Runtime
+   set base = $EBROOTGIST
+"""
+# patches = ['%(name)s-%(version)s.patch']
+
+dependencies = [
+    ('X11', '20190717'),
+]
+
+sanity_check_paths = {
+    'files': ['run_gistic_example', 'gp_gistic2_from_seg'],
+    'dirs': ['examplefiles', 'refgenefiles', 'source']
+}
+
+modextrapaths = {'PATH': ''}
+modloadmsg = """To use gistic copy "run_gistic_example" to your home directoy.
+cp $EBROOTGISTIC/run_gistic_example /home/<user name>
+Edit as needed.  Do not change $base and $mc_root.
+Edit the section below "running GISTIC" to change seg and markersfiles.
+Running gistic will change your LD_LIBRARY_PATH. Your environment will have to
+be reset after using gistic.\n
+"""
+moduleclass = 'bio'

@@ -6,7 +6,7 @@
 easyblock = 'MakeCp'
 
 name = 'freebayes'
-version = '1.3.1'
+version = '1.3.2'
 
 homepage = 'https://github.com/ekg/freebayes'
 description = """Bayesian haplotype-based polymorphism discovery and genotyping."""
@@ -28,7 +28,7 @@ patches = ['freebayes-parallel_path_removal.patch']
 # Option to also build vcflib, this will add these commands to 
 # the end of the build command, and run them if the build completes.
 
-buildopts = ' && cd vcflib && make && cd ..'
+# buildopts = ' && cd vcflib && make && cd ..'
 
 builddependencies = [
     ('binutils', '2.32'),
@@ -36,6 +36,8 @@ builddependencies = [
 ]
 
 dependencies = [
+    #('vcflib', '1.0.1'),
+    #('BamTools/2.5.1-GCC-8.3.0
     ('zlib', '1.2.11'),
     ('bzip2', '1.0.8'),
     ('XZ', '5.2.4'),
@@ -48,7 +50,7 @@ parallel = 1
 
 prebuildopts = "unset CC && unset CXX && "
 
-files_to_copy = ["bin", "README.md", "examples", "scripts", "python","test", (["vcflib/bin","vcflib/scripts","vcflib/examples","vcflib/lib","vcflib/samples"],"vcflib")]
+files_to_copy = ["bin", "README.md", "examples", "scripts", "python","test", (["vcflib/tabixpp","vcflib/scripts","vcflib/examples","vcflib/libVCFH","vcflib/smithwaterman", "vcflib/samples"],"vcflib")]
 
 sanity_check_paths = {
     'files': ["bin/freebayes", "bin/bamleftalign"],
@@ -57,25 +59,10 @@ sanity_check_paths = {
 
 # Add scripts dir to PATH:
 
-postinstallcmds = ["/cvmfs/soft.computecanada.ca/easybuild/bin/setrpaths.sh --path %(installdir)s/vcflib/lib"]
+# postinstallcmds = ["/cvmfs/soft.computecanada.ca/easybuild/bin/setrpaths.sh --path %(installdir)s/vcflib/lib"]
 
 modextrapaths = { 
-    'PATH': ['scripts', 'python', 'vcflib/bin', 'vcflib/scripts'],
+    'PATH': ['scripts', 'python', 'vcflib', 'vcflib/scripts'],
 }
 
 moduleclass = 'bio'
-
-#modluafooter = """
-#depends_on("python")
-#depends_on("r")
-#"""
-
-# To run tests after installing with the command (note tests must be done 
-# in-place (hard coded paths)) $ eb <this file>:
-# 1a) $ cd /home/$USER/.local/easybuild/software/2017/avx2/Compiler/gcc5.4/freebayes/1.1.0/test
-#   or if running in global install location
-# 1b) $ cd /cvmfs/soft.computecanada.ca/easybuild/software/2017/avx2/Compiler/gcc5.4/freebayes/1.1.0/test
-#    CAN't actually run the tests here as it assumes you have write permission
-# 2) $ module purge
-# 3) $ module load gcc/5.4.0 samtools/1.5 freebayes
-# 4) $ make test

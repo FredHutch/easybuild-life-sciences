@@ -1,0 +1,29 @@
+--- gistic2.orig	2017-03-27 13:43:43.000000000 -0700
++++ gistic2	2020-09-30 12:48:56.624026000 -0700
+@@ -2,18 +2,14 @@
+ ## set MCR environment and launch GISTIC executable
+ 
+ ## NOTE: change the line below if you have installed the Matlab MCR in an alternative location
+-MCR_ROOT=`pwd`/MATLAB_Compiler_Runtime
+-MCR_VER=v83
++if [ -z "${MCRROOT}" ]; then
++    echo MCRROOT not defined, Please install MATLAB Runtime 
++    exit 1
++fi
++MCR_ROOT=`dirname $MCRROOT`
++MCR_VER=`basename $MCRROOT`
+ 
+-echo Setting Matlab MCR root to $MCR_ROOT
+-
+-## set up environment variables
+-LD_LIBRARY_PATH=$MCR_ROOT/$MCR_VER/runtime/glnxa64:$LD_LIBRARY_PATH
+-LD_LIBRARY_PATH=$MCR_ROOT/$MCR_VER/bin/glnxa64:$LD_LIBRARY_PATH
+-LD_LIBRARY_PATH=$MCR_ROOT/$MCR_VER/sys/os/glnxa64:$LD_LIBRARY_PATH
+-export LD_LIBRARY_PATH
+-XAPPLRESDIR=$MCR_ROOT/$MCR_VER/MATLAB_Component_Runtime/v83/X11/app-defaults
+-export XAPPLRESDIR
++echo Using Matlab MCR root: $MCR_ROOT
+ 
+ ## launch GISTIC executable
+-./gp_gistic2_from_seg $@
++$EBROOTGISTIC/gp_gistic2_from_seg $@

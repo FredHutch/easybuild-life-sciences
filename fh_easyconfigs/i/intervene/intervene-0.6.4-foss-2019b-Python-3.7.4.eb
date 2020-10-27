@@ -1,0 +1,41 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonPackage'
+
+name = 'intervene'
+version = '0.6.4'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://intervene.readthedocs.io/en/latest/index.html'
+description = """Intervene a tool for intersection and visualization of multiple genomic region sets"""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/asntech/intervene/archive']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('pybedtools', '0.8.0', versionsuffix),
+    ('matplotlib', '3.1.1', versionsuffix),
+]
+
+exts_defaultclass = 'PythonPackage'
+
+exts_list = [
+    ('seaborn', '0.9.0', {
+        'checksums': ['76c83f794ca320fb6b23a7c6192d5e185a5fcf4758966a0c0a54baee46d41e2f'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/intervene'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

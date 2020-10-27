@@ -1273,6 +1273,7 @@ exts_list = [
         'unpack_sources': False,
     }),
     ('lifelines', '0.25.2'),
+    ('tslearn', '0.4.1'),
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

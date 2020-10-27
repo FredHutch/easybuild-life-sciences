@@ -1,0 +1,73 @@
+# Built with EasyBuild version 4.2.1 on 2020-06-08_14-31-31
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+# Author: Pablo Escobar Lopez
+# Swiss Institute of Bioinformatics
+# Biozentrum - University of Basel
+# Author: Jens Timmerman, Ghent University
+
+easyblock = 'MakeCp'
+
+name = 'tabix'
+version = '0.2.6'
+
+homepage = 'http://samtools.sourceforge.net'
+description = """ Generic indexer for TAB-delimited genome position files """
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = [('http://sourceforge.net/projects/samtools/files/', 'download')]
+sources = [SOURCE_TAR_BZ2]
+checksums = ['e4066be7101bae83bec62bc2bc6917013f6c2875b66eb5055fbb013488d68b73']
+
+builddependencies = [('binutils', '2.32')]
+
+dependencies = [
+    ('HTSlib', '1.10.2', '', ('GCC', '8.3.0')),
+    ('zlib', '1.2.11'),
+]
+
+buildopts = 'CC="$CC" CFLAGS="$CFLAGS -L$EBROOTZLIB/lib"'
+
+files_to_copy = [
+    (["tabix", "bgzip", "tabix.py"], "bin"),
+    (["tabix.1"], "man/man1"),
+    "example.gtf.gz",
+    "example.gtf.gz.tbi",
+    "NEWS",
+    "ChangeLog"
+]
+
+sanity_check_paths = {
+    'files': ["bin/tabix", "bin/bgzip", "bin/tabix.py"],
+    'dirs': [""],
+}
+
+moduleclass = 'bio'
+
+# Build statistics
+buildstats = [{
+    "build_time": 7.93,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--robot-paths=':/app/fh_easyconfigs'", "--sourcepath='/app/sources'", "--umask='002'", 'tabix-0.2.6-GCCcore-8.3.0.eb'],
+    "core_count": 8,
+    "cpu_arch": "x86_64",
+    "cpu_arch_name": "UNKNOWN",
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.2.1",
+    "easybuild-framework_version": "4.2.1",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/8.3.0/libexec/gcc/x86_64-pc-linux-gnu/8.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold=default --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/8.3.0 --with-local-prefix=/app/software/GCCcore/8.3.0 --enable-bootstrap --with-isl=/app/build/GCCcore/8.3.0/system-system/gcc-8.3.0/stage2_stuff; Thread model: posix; gcc version 8.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "2a69e50921d9",
+    "install_size": 147335,
+    "modules_tool": ('Lmod', '/app/lmod/lmod/libexec/lmod', '8.3.10'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.17 (default, Nov  7 2019, 10:07:09) ; [GCC 7.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/8.3.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1591651891,
+    "total_memory": 32128,
+}]

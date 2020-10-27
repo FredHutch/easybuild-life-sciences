@@ -8,8 +8,8 @@ easyblock = 'Bundle'
 
 name = 'R'
 version = '3.6.2'
-versionsuffix='-fh1'
-_biocver_ = '3.10'
+versionsuffix = '-fh1'
+local_biocver = '3.10'
 
 homepage = 'http://www.r-project.org/'
 description = """R is a free software environment for statistical computing and graphics."""

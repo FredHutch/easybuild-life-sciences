@@ -505,6 +505,8 @@ exts_list = [
         'source_urls': ['https://github.com/liulab-dfci/MAESTRO/archive'],
         'source_tmpl': 'v%(version)s.tar.gz',
     }),
+    ('systemfonts', '0.3.2'),
+    ('gdtools', '0.2.2'),
 ]
 
 sanity_check_paths = {

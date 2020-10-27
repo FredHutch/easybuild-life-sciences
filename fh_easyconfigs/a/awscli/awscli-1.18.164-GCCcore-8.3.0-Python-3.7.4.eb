@@ -1,0 +1,59 @@
+easyblock = 'PythonBundle'
+
+name = 'awscli'
+version = '1.18.164'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://pypi.python.org/pypi/awscli'
+description = 'Universal Command Line Environment for AWS'
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+builddependencies = [
+    ('binutils', '2.32'),
+]
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('PyYAML', '5.1.2'),
+]
+
+use_pip = True
+
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+    ('colorama', '0.4.3', {
+        'checksums': [],
+    }),
+    ('s3transfer', '0.3.3', {
+        'checksums': [],
+    }),
+    ('rsa', '3.4.2', {
+        'checksums': [],
+    }),
+    ('docutils', '0.15.2', {
+        'checksums': [],
+    }),
+    ('urllib3', '1.25.11'),
+    ('botocore', '1.19.4', {
+        'checksums': [],
+    }),
+    ('jmespath', '0.10.0', {
+        'checksums': [],
+    }),
+    (name, version, {
+        'checksums': ['e64cd0ba919f37a54affa127baf856a832cf3934089baeb1e7a6b776476f8b2f'],
+    }),
+]
+
+sanity_pip_check = True
+
+sanity_check_commands = ["aws help"]
+
+sanity_check_paths = {
+    'files': ['bin/aws'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/'],
+}
+
+moduleclass = 'tools'
