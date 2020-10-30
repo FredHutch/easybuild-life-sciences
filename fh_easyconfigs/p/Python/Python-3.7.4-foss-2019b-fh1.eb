@@ -73,6 +73,9 @@ dependencies = [
 
 # order is important!
 exts_list = [
+    ('py-cpuinfo', '7.0.0', {
+        'modulename': 'cpuinfo',
+    }),
     ('intreehooks', '1.0'),
     ('slurmpy', '0.0.7', {
         'source_urls': ['https://pypi.python.org/packages/source/s/slurmpy'],

@@ -77,6 +77,9 @@ exts_default_options = {
 
 # order is important!
 exts_list = [
+    ('py-cpuinfo', '7.0.0', {
+        'modulename': 'cpuinfo',
+    }),
     ('sh', '1.13.1'),
     ('regex', '2020.7.14'),
     ('typing-extensions', '3.7.4.2', {

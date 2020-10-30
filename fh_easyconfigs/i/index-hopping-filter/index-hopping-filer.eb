@@ -2,7 +2,7 @@
 #
 #  John Dey jfdey@fredhutch.org
 #  Fred Hutchinson Cancer Research Center
-easyblock = 'Tarball'
+easyblock = 'PackedBinary'
 
 name = 'index-hopping-filter'
 version = '1.0.1'
@@ -16,10 +16,10 @@ description = """index-hopping-filter is a tool that filters index hopped reads 
 toolchain = SYSTEM
 
 source_urls = ['https://github.com/10XGenomics/index_hopping_filter/archive']
-source_urls = ['https://github.com/10XGenomics/index_hopping_filter/releases/download/v1.0.1/index-hopping-filter
-sources = [%(name)s]
+# source_urls = ['https://github.com/10XGenomics/index_hopping_filter/releases/download/v1.0.1/index-hopping-filter
+sources = ['%(name)s']
 
-skipsteps = ['unpacking']
+unpack_sources = False
 
 sanity_check_paths = {
     'files': ["bin/index-hopping-filter"],
