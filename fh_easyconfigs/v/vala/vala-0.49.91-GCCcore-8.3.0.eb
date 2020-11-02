@@ -1,0 +1,36 @@
+easyblock = 'ConfigureMake'
+
+name = 'vala'
+version = '0.49.91'
+
+homepage = 'https://gitlab.gnome.org/GNOME/vala'
+
+description = """Vala is a programming language that aims to bring modern programming language features to GNOME developers without imposing any additional runtime requirements and without using a different ABI compared to applications and libraries written in C."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+# https://gitlab.gnome.org/GNOME/vala/-/archive/0.49.91/vala-0.49.91.tar.gz
+source_urls = ['https://gitlab.gnome.org/GNOME/vala/-/archive/%(version)s']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('Autotools', '20180311'),
+    ('flex', '2.6.4'),
+    ('Bison', '3.3.2'),
+    ('Graphviz', '2.42.2', '', ('foss', '2019b')),
+    ('libtool', '2.4.6'),
+]
+
+dependencies = [
+    ('GLib', '2.62.0'),
+]
+
+preconfigopts = 'autoconf && '
+
+sanity_check_paths = {
+    'files': ['lib/libglib-%(version_major)s.0.a', 'lib/libglib-%%(version_major)s.0.%s' % SHLIB_EXT],
+    'dirs': ['bin', 'include'],
+}
+
+moduleclass = 'vis'

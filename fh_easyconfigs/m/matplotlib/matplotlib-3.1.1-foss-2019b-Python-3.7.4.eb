@@ -1,0 +1,83 @@
+# Built with EasyBuild version 4.1.2 on 2020-03-25_11-55-03
+easyblock = 'PythonBundle'
+
+name = 'matplotlib'
+version = '3.1.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://matplotlib.org'
+description = """matplotlib is a python 2D plotting library which produces publication quality figures in a variety of
+ hardcopy formats and interactive environments across platforms. matplotlib can be used in python scripts, the python
+ and ipython shell, web application servers, and six graphical user interface toolkits."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('libpng', '1.6.37'),
+    ('freetype', '2.10.1'),
+    ('Tkinter', '%(pyver)s'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('Cycler', '0.10.0', {
+        'modulename': 'cycler',
+        'source_tmpl': 'cycler-%(version)s.tar.gz',
+        'source_urls': ['https://pypi.python.org/packages/source/C/Cycler'],
+        'checksums': ['cd7b2d1018258d7247a71425e9f26463dfb444d411c39569972f4ce586b0c9d8'],
+    }),
+    ('kiwisolver', '1.1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/k/kiwisolver'],
+        'checksums': ['53eaed412477c836e1b9522c19858a8557d6e595077830146182225613b11a75'],
+    }),
+    (name, version, {
+        'prebuildopts': "export CPLUS_INCLUDE_PATH=$EBROOTFREETYPE/include/freetype2:${CPLUS_INCLUDE_PATH} && ",
+        'preinstallopts': "export CPLUS_INCLUDE_PATH=$EBROOTFREETYPE/include/freetype2:${CPLUS_INCLUDE_PATH} && ",
+        'source_urls': ['https://pypi.python.org/packages/source/m/matplotlib'],
+        'checksums': ['1febd22afe1489b13c6749ea059d392c03261b2950d1d45c17e3aed812080c93'],
+    }),
+]
+
+sanity_check_commands = [
+    """python -c 'import matplotlib; matplotlib.use("TkAgg"); import matplotlib.pyplot' """,
+    "python -c 'from mpl_toolkits.mplot3d import Axes3D'",
+]
+
+# use non-interactive plotting backend as default
+# see https://matplotlib.org/tutorials/introductory/usage.html#what-is-a-backend
+modextravars = {'MPLBACKEND': 'Agg'}
+
+moduleclass = 'vis'
+
+# Build statistics
+buildstats = [{
+    "build_time": 106.41,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--robot='/app/software/EasyBuild/4.1.2/easybuild/easyconfigs:/app/fh_easyconfigs'", "--robot-paths=':/app/fh_easyconfigs'", "--sourcepath='/app/sources'", "--umask='002'", 'matplotlib-3.1.1-foss-2019b-Python-3.7.4.eb'],
+    "core_count": 8,
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.1.1",
+    "easybuild-framework_version": "4.1.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/8.3.0/libexec/gcc/x86_64-pc-linux-gnu/8.3.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold=default --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/8.3.0 --with-local-prefix=/app/software/GCCcore/8.3.0 --enable-bootstrap --with-isl=/app/build/GCCcore/8.3.0/system-system/gcc-8.3.0/stage2_stuff; Thread model: posix; gcc version 8.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "2be612e63b33",
+    "install_size": 41023124,
+    "modules_tool": ('Lmod', '/app/lmod/lmod/libexec/lmod', '7.8'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.17 (default, Nov  7 2019, 10:07:09) ; [GCC 7.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/8.3.0/bin/gcc",
+    "system_python_path": "/app/software/Python/3.7.4-GCCcore-8.3.0/bin/python",
+    "timestamp": 1585162503,
+    "total_memory": 32128,
+}]

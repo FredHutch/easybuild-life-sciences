@@ -1,0 +1,26 @@
+easyblock = 'Tarball'
+
+name = 'MaxQuant'
+version = '1.6.15.0'
+
+homepage = 'https://%(namelower)s.org/%(namelower)s/'
+description = """MaxQuant is a quantitative proteomics software package designed for analyzing large
+ mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling
+ techniques as well as label-free quantification are supported."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+# requires registration at https://www.maxquant.org/download_asset/maxquant/latest
+sources = ['%(name)s_%(version)s.zip']
+checksums = ['e2ca2ba7eadd2192ec50d03d3f8e09d88a6e67c290b027d6cf9ed7467b6332dc']
+
+dependencies = [('Mono', '6.8.0.105')]
+
+sanity_check_paths = {
+    'files': ['%(name)s.exe', 'bin/%(name)sCmd.exe'],
+    'dirs': [],
+}
+
+modaliases = {'maxquantcmd': 'mono $EBROOTMAXQUANT/bin/%(name)sCmd.exe'}
+
+moduleclass = 'bio'

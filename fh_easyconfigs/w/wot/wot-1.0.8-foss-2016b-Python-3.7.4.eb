@@ -1,0 +1,107 @@
+easyblock = 'Bundle'
+
+name = 'wot'
+version = '1.0.8'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = ''
+description = """Single-cell RNA sequencing is a powerful technology that can reveal a lot about what happens in a group of cells as they develop. But because the technology destroys a cell, it can only provide snapshots of the cells in a group at one point in time. To really understand how cells develop over time, snapshots aren't good enough: scientists want to fill in the gaps between snapshots and string everything together into a movie."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True}
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+
+builddependencies = [
+    ('pkg-config', '0.29.1'),
+    ('binutils', '2.26', '-GCCcore-5.4.0', True),
+    ('CMake', '3.7.2'),
+]
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('LZO', '2.10'),
+    ('pybind11', '2.3.0', versionsuffix),
+    ('python-igraph', '0.7.1.post6', versionsuffix),
+    ('igraph', '0.7.1'),
+    ('LLVM', '7.1.0', '-GCCcore-5.4.0', True),
+<<<<<<< HEAD
+    ('h5py', '2.9.0',  versionsuffix),
+=======
+    ('HDF5', '1.8.18'),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
+    ('matplotlib', '3.1.1', versionsuffix),
+    ('SWIG', '4.0.0', versionsuffix),
+    ('GDAL', '3.0.0', versionsuffix),
+    ('PROJ', '5.0.0'),
+    ('GEOS', '3.7.2', versionsuffix),
+    ('GDAL', '3.0.0', versionsuffix),
+]
+
+exts_list = [
+     ('python-lzo', '1.12', {
+        'modulename': 'lzo',
+    }),
+    ('anndata', '0.6.22.post1'),
+    ('fisher', '0.1.9'),
+    ('forceatlas2-python', '1.0'),
+    ('hnswlib', '0.3.4'),
+    ('lightgbm', '2.3.1'),
+    ('loompy', '3.0.6'),
+    ('louvain-github', '0.6.1.post1'),
+    ('MulticoreTSNE-modified', '0.1.post2', {
+        'modulename': 'MulticoreTSNE',
+    }),
+    ('natsort', '6.2.0'),
+    ('llvmlite', '0.30.0'),
+    ('numba', '0.46.0'),
+    ('plotly', '4.4.1'),
+    ('pyarrow', '0.15.1'),
+    ('scikit-learn', '0.22', {
+        'modulename': 'sklearn',
+    }),
+    ('scikit-misc', '0.1.1', {
+        'moduelname': 'skmisc',
+    }),
+    ('scplot', '0.0.14'),
+    ('seaborn', '0.9.0'),
+    ('numexpr', '2.7.0'),
+    ('tables', '3.6.1'),
+    ('umap-learn', '0.3.10'),
+    ('XlsxWriter', '1.2.7', {
+        'modulename': 'xlsxwriter',
+        'source_urls': ['https://pypi.python.org/packages/source/x/XlsxWriter'],
+    }),
+    ('pegasuspy', '0.16.3'),
+<<<<<<< HEAD
+=======
+    #('h5py', '2.10.0', {
+    #    'source_urls': ['https://pypi.python.org/packages/source/h/h5py'],
+    #}),
+>>>>>>> 76a9e3e7520006e651b217cc4db6701645458921
+    ('POT', '0.6.0', {
+        'modulename': 'ot',
+        'source_urls': ['https://pypi.python.org/packages/source/p/POT'],
+    }),
+    (name, version, {
+        'source_urls': ['https://pypi.python.org/packages/source/w/wot'],
+    }),
+]
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
+
+# use non-interactive plotting backend as default
+# see https://matplotlib.org/tutorials/introductory/usage.html#what-is-a-backend
+modextravars = {'MPLBACKEND': 'Agg'}
+
+moduleclass = 'bio'

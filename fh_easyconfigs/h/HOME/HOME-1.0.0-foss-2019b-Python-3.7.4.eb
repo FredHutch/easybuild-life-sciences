@@ -1,0 +1,43 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonBundle'
+
+name = 'HOME'
+version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/ListerLab/HOME'
+description = """HOME (histogram of methylation) is a python package for differential methylation region (DMR)
+ identification. The method uses histogram of methylation features and the linear Support Vector Machine (SVM)
+ to identify DMRs from whole genome bisulfite sequencing (WGBS) data."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('Python', '3.7.4', '', ('GCCcore', '8.3.0')),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('scikit-learn', '0.21.3', versionsuffix),
+    ('statsmodels', '0.11.0', versionsuffix),
+]
+
+use_pip = True
+exts_defaultclass = 'PythonPackage'
+
+exts_list = [
+    (name, version, {
+        'source_urls': ['https://github.com/ListerLab/HOME/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'patches': ['HOME-1.0.0_deps.patch'],
+    })
+]
+
+sanity_check_paths = {
+    'files': ['bin/HOME-pairwise', 'bin/HOME-timeseries'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

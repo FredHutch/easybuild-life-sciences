@@ -1,0 +1,26 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PackedBinary'
+
+name = 'plink'
+version = '1.9-20200616'
+
+homepage = 'https://www.cog-genomics.org/plink/1.9'
+description = """Whole-genome association analysis toolset"""
+
+toolchain = SYSTEM
+
+source_urls = ['http://s3.amazonaws.com/plink1-assets']
+sources = ['%(name)s_linux_x86_64_20200616.zip']
+checksums = ['99735807772d3259623e3809941e15585ed8e4b3d4cb2845c2780ef4bb3d33a6']
+
+sanity_check_paths = {
+    'files': ['plink', 'prettify', 'toy.map', 'toy.ped'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

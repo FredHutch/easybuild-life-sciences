@@ -1,0 +1,244 @@
+# EasyBuild EasyConfig 
+#
+# John Dey jfdey@fredhutch.org fizwit@github.com
+easyblock = 'PythonPackage'
+
+name = 'CITE-seq-Count'
+version = '1.4.2'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://hoohm.github.io/CITE-seq-Count'
+description = """A python package that allows to count antibody TAGS from a CITE-seq and/or
+ cell hashing experiment."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/Hoohm/CITE-seq-Count/archive']
+sources = ['%(version)s.tar.gz']
+checksums = ['4eec103af4dadfd786a87bef5d26814cfd21bdeb7bdc62ccb5d9c4d5fdc83f3c']
+
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('cURL', '7.65.3'),
+    ('matplotlib', '3.1.1', versionsuffix),
+    ('Pysam', '0.15.3', versionsuffix),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_list = [
+    ('scandir', '1.10.0', {
+        'source_urls': ['https://pypi.io/packages/source/s/scandir'],
+        'checksums': ['4d4631f6062e658e9007ab3149a9b914f3548cb38bfb021c64f39a025ce578ae'],
+    }),
+    ('pathlib2', '2.3.4', {
+        'source_urls': ['https://pypi.io/packages/source/p/pathlib2'],
+        'checksums': ['446014523bb9be5c28128c4d2a10ad6bb60769e78bd85658fe44a450674e0ef8'],
+    }),
+    ('contextlib2', '0.5.5', {
+        'source_urls': ['https://pypi.io/packages/source/c/contextlib2'],
+        'checksums': ['509f9419ee91cdd00ba34443217d5ca51f5a364a404e1dce9e8979cea969ca48'],
+    }),
+    ('zipp', '0.5.2', {
+        'source_urls': ['https://pypi.io/packages/source/z/zipp'],
+        'checksums': ['4970c3758f4e89a7857a973b1e2a5d75bcdc47794442f2e2dd4fe8e0466e809a'],
+    }),
+    ('py', '1.8.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/py'],
+        'checksums': ['dc639b046a6e2cff5bbe40194ad65936d6ba360b52b3c3fe1d08a82dd50b5e53'],
+    }),
+    ('packaging', '19.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/packaging'],
+        'checksums': ['0c98a5d0be38ed775798ece1b9727178c4469d9c3b4ada66e8e6b7849f8732af'],
+    }),
+    ('attrs', '19.1.0', {
+        'modulename': 'attr',
+        'source_urls': ['https://pypi.io/packages/source/a/attrs'],
+        'checksums': ['f0b870f674851ecbfbbbd364d6b5cbdff9dcedbc7f3f5e18a6891057f21fe399'],
+    }),
+    ('more-itertools', '7.2.0', {
+        'modulename': 'more_itertools',
+        'source_urls': ['https://pypi.io/packages/source/m/more-itertools'],
+        'checksums': ['409cd48d4db7052af495b09dec721011634af3753ae1ef92d2b32f73a745f832'],
+    }),
+    ('atomicwrites', '1.3.0', {
+        'source_urls': ['https://pypi.io/packages/source/a/atomicwrites'],
+        'checksums': ['75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6'],
+    }),
+    ('pluggy', '0.12.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/pluggy'],
+        'checksums': ['0825a152ac059776623854c1543d65a4ad408eb3d33ee114dff91e57ec6ae6fc'],
+    }),
+    ('wcwidth', '0.1.7', {
+        'source_urls': ['https://pypi.io/packages/source/w/wcwidth'],
+        'checksums': ['3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e'],
+    }),
+    ('colorama', '0.4.1', {
+        'source_urls': ['https://pypi.io/packages/source/c/colorama'],
+        'checksums': ['05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d'],
+    }),
+    ('coverage', '4.5.3', {
+        'source_urls': ['https://pypi.io/packages/source/c/coverage'],
+        'checksums': ['9de60893fb447d1e797f6bf08fdf0dbcda0c1e34c1b06c92bd3a363c0ea8c609'],
+    }),
+    ('entrypoints', '0.3', {
+        'source_urls': ['https://pypi.io/packages/source/e/entrypoints'],
+        'checksums': ['c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451'],
+    }),
+    ('pyflakes', '2.1.1', {
+        'source_urls': ['https://pypi.io/packages/source/p/pyflakes'],
+        'checksums': ['d976835886f8c5b31d47970ed689944a0262b5f3afa00a5a7b4dc81e5449f8a2'],
+    }),
+    ('pycodestyle', '2.5.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/pycodestyle'],
+        'checksums': ['e40a936c9a450ad81df37f549d676d127b1b66000a6c500caa2b085bc0ca976c'],
+    }),
+    ('mccabe', '0.6.1', {
+        'source_urls': ['https://pypi.io/packages/source/m/mccabe'],
+        'checksums': ['dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f'],
+    }),
+    ('ptyprocess', '0.6.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/ptyprocess'],
+        'checksums': ['923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0'],
+    }),
+    ('pexpect', '4.7.0', {
+        'source_urls': ['https://pypi.io/packages/source/p/pexpect'],
+        'checksums': ['9e2c1fd0e6ee3a49b28f95d4b33bc389c89b20af6a1255906e90ff1262ce62eb'],
+    }),
+    ('fields', '5.0.0', {
+        'source_urls': ['https://pypi.io/packages/source/f/fields'],
+        'checksums': ['31d4aa03d8d44e35df13c431de35136997f047a924a597d84f7bc209e1be5727'],
+    }),
+    ('manhole', '1.6.0', {
+        'source_urls': ['https://pypi.io/packages/source/m/manhole'],
+        'checksums': ['d4ab98198481ed54a5b95c0439f41131f56d7d3755eedaedce5a45ca7ff4aa42'],
+    }),
+    ('hunter', '3.0.1', {
+        'source_urls': ['https://pypi.io/packages/source/h/hunter'],
+        'checksums': ['26c41a971e92f1ba9d6772081203e3478258fc45f8162b3ead031ca04ba2adfe'],
+    }),
+    ('process-tests', '2.0.2', {
+        'modulename': 'process_tests',
+        'source_urls': ['https://pypi.io/packages/source/p/process-tests'],
+        'checksums': ['7ae24a680cc7c44e7687e3723e6e64597a28223ad664989999efe10dd38c2431'],
+    }),
+    ('pytest-cov', '2.7.1', {
+        'modulename': 'pytest_cov',
+        'source_urls': ['https://pypi.io/packages/source/p/pytest-cov'],
+        'checksums': ['e00ea4fdde970725482f1f35630d12f074e121a23801aabf2ae154ec6bdd343a'],
+    }),
+    ('wheel', '0.33.4', {
+        'source_urls': ['https://pypi.io/packages/source/w/wheel'],
+        'checksums': ['62fcfa03d45b5b722539ccbc07b190e4bfff4bb9e3a4d470dd9f6a0981002565'],
+    }),
+    ('argcomplete', '1.10.0', {
+        'source_urls': ['https://pypi.io/packages/source/a/argcomplete'],
+        'checksums': ['45836de8cc63d2f6e06b898cef1e4ce1e9907d246ec77ac8e64f23f153d6bec1'],
+    }),
+    ('sqlparse', '0.3.0', {
+        'source_urls': ['https://pypi.io/packages/source/s/sqlparse'],
+        'checksums': ['7c3dca29c022744e95b547e867cee89f4fce4373f3549ccd8797d8eb52cdb873'],
+    }),
+    ('argon2-cffi', '19.1.0', {
+        'modulename': 'argon2',
+        'source_tmpl': 'argon2_cffi-%(version)s.tar.gz',
+        'source_urls': ['https://pypi.io/packages/source/a/argon2-cffi'],
+        'checksums': ['81548a27b919861040cb928a350733f4f9455dd67c7d1ba92eb5960a1d7f8b26'],
+    }),
+    ('Django', '2.2.3', {
+        'modulename': 'django',
+        'source_urls': ['https://pypi.io/packages/source/D/Django'],
+        'checksums': ['4d23f61b26892bac785f07401bc38cbf8fa4cec993f400e9cd9ddf28fd51c0ea'],
+    }),
+    ('dpcontracts', '0.6.0', {
+        'source_urls': ['https://pypi.io/packages/source/d/dpcontracts'],
+        'checksums': ['6cf9df1f16beaa48523b798b41170dabf7a536a6133328731665cdb29c42234a'],
+    }),
+    ('lark-parser', '0.7.1', {
+        'modulename': 'lark',
+        'source_urls': ['https://pypi.io/packages/source/l/lark-parser'],
+        'checksums': ['8455e05d062fa7f9d59a2735583cf02291545f944955c4056bf1144c4e625344'],
+    }),
+    ('python-dateutil', '2.8.0', {
+        'modulename': 'dateutil',
+        'source_urls': ['https://pypi.io/packages/source/p/python-dateutil'],
+        'checksums': ['c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e'],
+    }),
+    #('hypothesis', '4.31.0', {
+    #    'source_urls': ['https://pypi.io/packages/source/h/hypothesis'],
+    #    'use_pip': False,
+    #    'checksums': ['ee0ad8885964ffb8a5a00c0bac76b9e0576fc033e32b38c050a3559ffd48ebf9'],
+    #}),
+    ('pytest', '5.0.1', {
+        'source_urls': ['https://pypi.io/packages/source/p/pytest'],
+        'checksums': ['6ef6d06de77ce2961156013e9dff62f1b2688aa04d0dc244299fe7d67e09370d'],
+    }),
+    ('docutils', '0.15.1', {
+        'source_urls': ['https://pypi.io/packages/source/d/docutils'],
+        'checksums': ['82725b1051b92aaa42e240a4e5d6fafa2f6f5a2b5023b23a51c941dd7d863369'],
+    }),
+    ('pytest-checkdocs', '1.2.0', {
+        'modulename': 'pytest_checkdocs',
+        'source_urls': ['https://pypi.io/packages/source/p/pytest-checkdocs'],
+        'checksums': ['0867adc08cb64662fca9468ac5df23fa52be3364fdbe350bbcd270261b3b821d'],
+    }),
+    ('importlib-metadata', '0.18', {
+        'modulename': 'importlib_metadata',
+        'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
+        'source_urls': ['https://pypi.io/packages/source/i/importlib-metadata'],
+        'checksums': ['cb6ee23b46173539939964df59d3d72c3e0c1b5d54b84f1d8a7e912fe43612db'],
+    }),
+    ('regex', '2019.06.08', {
+        'source_urls': ['https://pypi.io/packages/source/r/regex'],
+        'checksums': ['84daedefaa56320765e9c4d43912226d324ef3cc929f4d75fa95f8c579a08211'],
+    }),
+    ('future', '0.17.1', {
+        'source_urls': ['https://pypi.io/packages/source/f/future'],
+        'checksums': ['67045236dcfd6816dc439556d009594abf643e5eb48992e36beac09c2ca659b8'],
+    }),
+    ('umi_tools', '1.0.0', {
+        'modulename': False,
+        'source_urls': ['https://pypi.io/packages/source/u/umi_tools'],
+        'checksums': ['8ac8b8c488613122d11c97c404b3e7894aa31915e258bd2ae40974b6c3dfc323'],
+    }),
+    ('pytest-dependency', '0.4.0', {
+        'modulename': 'pytest_dependency',
+        'source_urls': ['https://pypi.io/packages/source/p/pytest-dependency'],
+        'checksums': ['bda0ef48e6a44c091399b12ab4a7e580d2dd8294c222b301f88d7d57f47ba142'],
+    }),
+    ('pybktree', '1.1', {
+        'source_urls': ['https://pypi.io/packages/source/p/pybktree'],
+        'checksums': ['eec0037cdd3d7553e6d72435a4379bede64be17c6712f149e485169638154d2b'],
+    }),
+    ('multiprocess', '0.70.6.1', {
+        'source_urls': ['https://pypi.io/packages/source/m/multiprocess'],
+        'checksums': ['985d2faa28def907e303b4222b01281d2dcd3baa0fe53a4a0178ac63be62e5c6'],
+    }),
+    ('python-Levenshtein', '0.12.0', {
+        'modulename': 'Levenshtein',
+        'source_urls': ['https://pypi.io/packages/source/p/python-Levenshtein'],
+        'checksums': ['033a11de5e3d19ea25c9302d11224e1a1898fe5abd23c61c7c360c25195e3eb1'],
+    }),
+    ('Pillow', '7.0.0', {
+        'modulename': 'PIL',
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/CITE-seq-Count',
+        'lib/python%(pyshortver)s/site-packages/CITE_seq_Count-%(version)s-py%(pyshortver)s.egg',
+    ],
+    'dirs': ['bin', 'lib']
+}
+
+sanity_check_commands = []
+options = {'modulename': False}
+
+moduleclass = 'bio'

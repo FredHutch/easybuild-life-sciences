@@ -1,0 +1,38 @@
+easyblock = 'ConfigureMake'
+
+name = 'xfig'
+version = '3.2.6a'
+
+homepage = 'http://www.xfig.org/'
+description = """Xfig is an interactive drawing tool which runs under X Window System."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('X11', '20190717'),
+    ('libXaw3d', '1.6.3'),
+    #('cairo', '1.16.0'),
+    #('expat', '2.2.7'),
+    ('freetype', '2.10.1'),
+    ('fontconfig', '2.13.1'),
+    ('Ghostscript', '9.50'),
+    #('Java', '11', '', True),
+    ('libpng', '1.6.37'),
+    ('libjpeg-turbo', '2.0.3'),
+    ('LibTIFF', '4.0.10'),
+    #('Pango', '1.44.7'),
+    #('Perl', '5.30.0'),
+    #('Qt5', '5.13.1'),
+    #('Tcl', '8.6.9'),
+    ('zlib', '1.2.11'),
+]
+
+source_urls = ['https://sourceforge.net/projects/mcj/files']
+sources = [SOURCE_TAR_XZ]
+
+sanity_check_paths = {
+    'files': ['bin/xfig'],
+    'dirs': []
+}
+
+moduleclass = 'vis'

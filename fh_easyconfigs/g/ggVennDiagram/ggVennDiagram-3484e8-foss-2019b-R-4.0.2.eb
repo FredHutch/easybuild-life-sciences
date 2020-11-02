@@ -1,0 +1,65 @@
+easyblock = 'Bundle'
+
+name = 'ggVennDiagram'
+version = '3484e8'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.11'
+
+
+homepage = "https://cran.r-project.org/package=VennDiagram"
+description = """A set of functions to generate high-resolution Venn and Euler plots. Includes handling for several special cases, including two-case scaling, and extensive customization of plot shape and structure."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('R', '4.0.2'),
+    ('GDAL', '3.0.2', '-Python-3.7.4'),  # provides GEOS and PROJ
+]
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+]
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'https://github.com/gaospecial/ggVennDiagram/archive',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+exts_list = [
+    ('sf', '0.9-5', {
+         'installopts': '--configure-args=\"CXXFLAGS=\\"$CXXFLAGS+=-std=c++11\\"\"',
+    }),
+    ('arsenal', '3.5.0'),
+    ('haplo.stats', '1.8.2'),
+    ('SNPassoc', '1.9-2'),
+    ('truncnorm', '1.0-8'),
+    ('Rsolnp', '1.16'),
+    ('HardyWeinberg', '1.6.6'),
+    ('kableExtra', '1.1.0'),
+    ('writexl', '1.3'),
+    ('officer', '0.3.12'),
+    ('systemfonts', '0.2.3'),
+    ('gdtools', '0.2.2'),
+    ('flextable', '0.5.10'),
+    ('compareGroups', '4.4.3'),
+    (name, version, {
+        'source_tmpl': 'master.zip',
+        'filename': '%(name)s_%(version)s.zip',
+    }),
+]
+
+modextrapaths = {'R_LIBS': ''}
+
+sanity_check_paths = {
+    'files': ['ggVennDiagram/R/ggVennDiagram'],
+    'dirs': [],
+}
+
+moduleclass = 'math'

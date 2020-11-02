@@ -1,0 +1,4 @@
+[2019-06-07T04:13:04.560540Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] [wrapperSignal] wrapperStart
+[2019-06-07T04:13:04.575458Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] [wrapperSignal] taskStart
+[2019-06-07T04:13:04.935668Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] [wrapperSignal] taskExitCode 0
+[2019-06-07T04:13:04.936612Z] [rhino1.fhcrc.org] [7989_1] [pyflowTaskWrapper:CallGenome+callGenomeSegment_chromId_000_demo20_0000] [wrapperSignal] taskElapsedSec 0

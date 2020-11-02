@@ -1,0 +1,41 @@
+# requires sbt tools
+# John Dey Nov 27, 2019
+easyblock = 'CmdCp'
+
+name = 'fgbio'
+version = '1.1.0'
+
+homepage = 'https://github.com/fulcrumgenomics/fgbio'
+description = """A set of tools to analyze genomic data with a focus on Next Generation Sequencing."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+# source file must be created from git clone
+source_urls = ['https://github.com/fulcrumgenomics/fgbio/archive']
+sources = ['%(name)s-%(version)s.tar.gz']
+
+builddependencies = [
+    ('sbt', '1.0.4', '-Java-1.8.0_121', True),
+]
+
+dependencies = [
+    ('Java', '1.8', '', True),
+]
+
+cmds_map = [
+    ('', '$EBROOTSBT/bin/sbt assembly')
+]
+
+files_to_copy = [(['%(builddir)s/%(name)s/target/scala-2.13/*'], 'dist'),
+                 (['%(builddir)s/%(name)s/target/streams'], '.')]
+
+sanity_check_paths = {
+    'files': ['dist/%(name)s-%(version)s.jar'],
+    'dirs': ['dist']
+}
+
+modextrapaths = {'CLASSPATH': 'dist/%(name)s-%(version)s.jar'}
+
+moduleclass = 'bio'
+
+

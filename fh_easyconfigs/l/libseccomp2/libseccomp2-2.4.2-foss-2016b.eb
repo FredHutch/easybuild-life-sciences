@@ -1,0 +1,22 @@
+easyblock = 'ConfigureMake'
+
+name = 'libseccomp'
+version = '2.4.2'
+
+homepage = 'https://github.com/seccomp/libseccomp'
+description = """The libseccomp library provides an easy to use, platform independent, interface to the Linux Kernel's syscall filtering mechanism. The libseccomp API is designed to abstract away the underlying BPF based syscall filter language and present a more conventional function-call based filtering interface that should be familiar to, and easily adopted by, application developers."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/seccomp/libseccomp/releases/download/v%(version)s']
+sources = [SOURCE_TAR_GZ]
+checksums = ['b54f27b53884caacc932e75e6b44304ac83586e2abe7a83eca6daecc5440585b']
+
+sanity_check_paths = {
+    'files': [('lib/libseccomp.%s' % SHLIB_EXT,
+               'lib64/libseccomp.%s' % SHLIB_EXT),
+              ],
+    'dirs': [],
+}
+
+moduleclass = 'lib'

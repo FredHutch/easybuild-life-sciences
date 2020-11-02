@@ -4,7 +4,7 @@
 
 ## Overview
 - FredHutch Scientific Computing uses Easybuild to provide 100s of OSS packages to our Scientists
-- Scientists can load multiple versions of any software via Environemnt modules (LMOD)
+- Scientists can load multiple versions of any software via Environment modules (LMOD)
 - All software is built to offer high reproducibility, it can be rebuilt exactly even 10 years from now 
 
 ---
@@ -32,7 +32,7 @@ sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
 ```
 curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh | bash
 ```
-- after easybuild is installed simply log  out and login again and as an example (installing R) execute this
+- after easybuild is installed simply log out and login again and as an example (installing R) execute this
 
 ```
 module load EasyBuild
@@ -395,7 +395,7 @@ And finally, you can remove the '-D' and build the software:
 
 Again, [RTFM](http://easybuild.readthedocs.org/en/latest/Writing_easyconfig_files.html) - it is very good!
 
-There are two reason rou might want to modify or build an easyconfig file:
+There are two reason you might want to modify or build an easyconfig file:
 
 - Update versions (of software, toolchain, or dependencies)
 - No easyconfig exists

@@ -1,0 +1,37 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'CMakeMake'
+
+name = 'RELION'
+version = '3.1.0'
+
+github_account = '3dem'
+homepage = 'https://github.com/%(github_account)s/%(namelower)s'
+description = """RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone computer
+ program for Maximum A Posteriori refinement of (multiple) 3D reconstructions or 2D class
+ averages in cryo-electron microscopy."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/%(github_account)s/%(namelower)s/archive']
+sources = ['%(version)s.tar.gz']
+checksums =['fa5ebef27a15f1df856a64dc8960e7c381ff646818f778fe746249d0b7682ba2']
+
+builddependencies = [
+    ('CMake', '3.15.3'),
+]
+
+dependencies = [
+    ('X11', '20190717'),
+    ('CUDA', '10.2.89'),
+    ('LibTIFF', '4.0.10'),
+]
+
+#sanity_check_paths = {
+    #'files': ['%(namelower)s'],
+    #'dirs': ['database']
+#}
+
+sanity_check_commands = [('%(namelower)s', '-h')]
+
+moduleclass = 'bio'

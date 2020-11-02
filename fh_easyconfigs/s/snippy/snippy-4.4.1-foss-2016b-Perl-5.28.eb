@@ -1,0 +1,45 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'Tarball'
+
+name = 'snippy'
+version = '4.4.1'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://github.com/tseemann/snippy'
+description = """Snippy finds SNPs between a haploid reference genome and your NGS sequence
+ reads. It will find both substitutions (snps) and insertions/deletions (indels).
+Rapid haploid variant calling and core genome alignment."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/tseemann/snippy/archive']
+sources = ['v%(version)s.tar.gz']
+checksums = ['404c8cfa30cadc77ea91a41ef2097be2b90e41b0dfc2203c248be376c22e958f']
+
+dependencies = [
+    ('Perl', '5.28.0'),
+    ('BioPerl', '1.7.2', versionsuffix),
+    ('seqtk', '1.3'),
+    ('vt', '0.57721'),
+    ('BWA', '0.7.17'),
+    ('Java', '1.8', '', True), 
+    ('parallel', '20170222'),
+    ('gzip', '1.8', '', ('GCCcore', '5.4.0')),
+    ('SAMtools', '1.9'),
+    ('BCFtools', '1.9'),
+]
+
+files_to_copy = [
+    ('bin', 'etc', 'binaries')]
+
+sanity_check_paths = {
+    'files': ['bin/snippy',
+              'etc/snpeff.config',
+              'binaries/linux/bwa'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

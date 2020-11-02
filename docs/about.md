@@ -16,26 +16,29 @@ by HPC.  These are the software modules that are available on the SciComp comput
 ### EasyBuild
 FredHutch Scientific Computing is using Easybuild to create and document open source software (OSS). EasyBuild is a software build and installation framework.
 EasyBuild is a community project supported by research centers from around the world.
-EasyBuild builds software from a software from a specification file called and
-easyconfig. Easyconfigs are managed with GitHub.
-software. The Hutch's HPC environment provides 100's of OSS
+EasyBuild builds software from a specification scripts named easyconfigs. Each version of every
+software tool has a specific easyconfig file. Easyconfig follow a strict nameing 
+scheme ```<name>-<version>[-<toolchain>][-<versionsuffix>].```
+Easyconfigs are managed with GitHub.
+The Hutch's HPC environment provides 100's of OSS
 packages to our Scientists and staff. All software is built to offer high reproducibility, it can be rebuilt exactly even 10 years from now.
 
 ### Roadmap 
+The Gizmo Cluster will be updated from Ubuntu Trusty to Bionic update for the summer of 2020. The upgrade will
+nessitage rebuilding all software packages. Bionic packages are being built with the foss-2019b toolchain.
 EasyBuild packages are built from a common set of build tools referred to as a toolchain.
-The foss-2016b toolchain is the current predominate toolchain used at the Hutch. Foss-2016b modules are built on Ubuntu 14.04 Linux.
-Hutch SciComp is planning a cluster an upgrade
-to Ubuntu 8.04 in the Spring of 2019. To support the cluster upgrade the toolchain will
-be updated to foss-2018b. Most of the Hutch's 2016b packages are unique to the
-Hutch to due issues with local libraries, liberal usage of OS development packages and remapping of libraries for consistency within the toolchain.
-
-The EasyBuild community will be maintaining consistent libraries dependencies for the foss-2018b toolchain. This is good news for the Hutch and other research centers. As we migrate all software packages to foss-2018b the Hutch will use modules as they are published from EasyBuild. If new package development is
-necessary the results will be pushed upstream to EasyBuild.
+Toolchains are standardized and updated twice per year, using the naming convention YEAR[a/b].
+Beginning with the foss-2019b toolchain dependent libraries are being standradized for each toolchain for 
+consistency within the toolchain.
+The foss-2016b toolchain was used by Trusty version of Gizmo, and foss-2019b will be used for Bionic.
 
 R and Python modules at the Hutch are customized to support our local user base.
 The Hutch will continue to support custom R and Python modules but they will be based on
 the published modules from EasyBuild. The custom packages will have a versionsuffix of "-fhx".
-The "x" will be a version number that changes as new modules are added without changing the versions of any of the existing packages. Example *Python-3.6.7-foss-2018b* is a base package that used by the EasyBuild community which only contains 44 packages.  *Python-3.6.7-foss-2018b-fh1* is our local build which has 471 packages.
+The "x" will be a version number that changes as new modules are added without changing
+the versions of any of the existing packages. Example ```Python-3.7.4-foss-2019b``` is a base package
+ that used by the EasyBuild community which only contains 44 packages. 
+Our local build of Python ```3.7.4-foss-2019b-fh1``` has hundreds of packages based on users requests.
 
 ### Site Maintenance
 This site [(EasyBuild-Life-Sciences)](http://fredhutch.github.io/easybuild-life-sciences)
@@ -53,7 +56,7 @@ cd  ~/easybuild-life-sciences
 ./scripts/create_module_list.sh
 Collecting Inventory
 Generating Markdown
-Wrote inventory to /home/jfdey/easybuild-life-sciences/docs/bio-modules-14.04.md
+Wrote inventory to /home/jfdey/easybuild-life-sciences/docs/bio-modules-18.04.md
 ```
 Notice that the inventory name is based on the Ubuntu version.
 

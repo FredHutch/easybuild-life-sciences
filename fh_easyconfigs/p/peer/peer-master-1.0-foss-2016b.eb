@@ -1,0 +1,33 @@
+easyblock = 'CMakeMake'
+
+name = 'peer-master'
+version = '1.0.0'
+
+homepage = 'https://www.sanger.ac.uk/science/tools/peer'
+description = """PEER is a collection of Bayesian approaches to infer hidden
+ determinants and their effects from gene expression profiles using factor
+ analysis methods. """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/PMBio/peer/archive']
+sources = ['master.zip']
+patches = ['%(name)s_sharedlib.patch']
+
+builddependencies = [
+    ('CMake', '3.6.1'),
+    ('Eigen', '3.3.2'),
+]
+
+dependencies = [
+    ('SWIG', '3.0.12', '-Python-2.7.13'),
+]
+
+buildininstalldir = True
+
+sanity_check_paths = {
+    'files': ['lib/libpeerlib.a'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

@@ -1,0 +1,37 @@
+easyblock = 'Bundle'
+
+name = 'peer'
+version = '1.0.0'
+versionsuffix = '-R-%(rver)s'
+
+homepage = 'https://www.sanger.ac.uk/science/tools/peer'
+description = """PEER is a collection of Bayesian approaches to infer hidden
+ determinants and their effects from gene expression profiles using factor
+ analysis methods. This package is an R library."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('R', '3.6.1'), 
+    ('peer-master', '1.0.0'),
+]
+
+exts_defaultclass = 'RPackage'
+
+configopts = "--with-pic --enable-threads --enable-R-shlib"
+installopts = '--configure-vars="INCLUDE_DIR=$CPATH LIB_DIR=$LD_LIBRARY_PATH"'
+
+exts_list = [
+    (name, version, {
+        'patches': ['peer_libpath.patch'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [name],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'bio'

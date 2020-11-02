@@ -1,0 +1,39 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Fred Hutchinson Cancer Center Seattle US
+
+easyblock = 'ConfigureMake'
+
+name = 'libpll-2'
+version = '0.3.2'
+
+homepage = 'https://github.com/xflouris/libpll/wiki'
+description = """libpll is a versatile high-performance software library for phylogenetic analysis."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = ['https://github.com/xflouris/libpll-2/archive']
+sources = ['%(version)s.tar.gz']
+    
+
+builddependencies = [
+    ('Autotools', '20150215', '-GCC-5.4.0-2.26', True),
+    ('binutils', '2.26'),
+    ('flex', '2.6.0'),
+    ('Bison', '3.0.4'),
+]
+
+preconfigopts = './autogen.sh && '
+
+sanity_check_paths = {
+    'files': ["include/libpll/pll.h",
+              "lib/libpll.%s" % SHLIB_EXT,
+              "share/man/man3/libpll.3",
+              ],
+    'dirs': ['include', 'lib', 'share']
+}
+
+moduleclass = 'bio'
+

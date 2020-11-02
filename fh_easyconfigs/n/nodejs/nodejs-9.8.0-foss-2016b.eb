@@ -20,6 +20,9 @@ source_urls = ['http://nodejs.org/dist/v%(version)s/']
 sources = ['node-v%(version)s.tar.gz']
 
 builddependencies = [('Python', '2.7.12')]
+dependencies = [
+    ('GCCcore', '5.4.0', '', True),
+]
 
 sanity_check_paths = {
     'files': ["bin/node", "bin/npm"],

@@ -1,0 +1,32 @@
+easyblock = 'MakeCp'
+
+name = 'fermi-lite'
+version = '0.1'
+
+homepage = 'https://github.com/lh3/fermi-lite'
+description = """Fermi-lite is a standalone C library as well as a command-line tool
+ for assembling Illumina short reads in regions from 100bp to 10 million bp in size. It
+ is largely a light-weight in-memory version of fermikit without generating any intermediate
+ files."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/lh3/fermi-lite/archive']
+sources = ['v%(version)s.tar.gz']
+#patches = ['%(name)s-%(version)s_externlibs.patch']
+
+dependencies = [
+]
+
+#configopts = "LDFLAGS='-lcurl -lcrypto'"
+
+files_to_copy = [(['*.h'], 'include'),
+    (['libfml.a'], 'lib'),
+]
+
+sanity_check_paths = {
+    'files': ['lib/libfml.a', 'include/fml.h'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

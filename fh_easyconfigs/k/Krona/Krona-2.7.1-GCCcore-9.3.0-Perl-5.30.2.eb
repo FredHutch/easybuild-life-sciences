@@ -1,0 +1,42 @@
+# easybuild easycofig
+#
+# Fred Hutchinson Cancer Research Center
+easyblock = 'Tarball'
+
+name = 'Krona'
+version = '2.7.1'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://github.com/marbl/Krona/wiki'
+description = """Krona allows hierarchical data to be explored with zooming, multi-layered pie charts. Krona charts can be created using an Excel template or KronaTools, which includes support for several bioinformatics tools and raw data formats."""
+
+toolchain = {'name': 'GCCcore', 'version': '9.3.0'} 
+
+source_urls = ['https://github.com/marbl/Krona/archive']
+sources = ['v%(version)s.tar.gz']
+
+dependencies = [
+    ('Perl', '5.30.2'),
+    ('cURL', '7.69.1'),
+]
+
+
+postinstallcmds = [
+    'cd %(builddir)s/%(name)s-%(version)s/KronaTools && '
+    '$EBROOTPERL/bin/perl install.pl --prefix %(installdir)s',
+    'cd %(installdir)s/KronaTools && '
+    'mkdir taxonomy && '
+    './updateTaxonomy.sh '
+]
+
+sanity_check_paths = {
+    'files': ['bin/ktClassifyBLAST', 'KronaTools/updateTaxonomy.sh'],
+    'dirs': [],
+}
+
+modextrapaths = {
+    'PATH': ['bin', 'KronaTools/scripts'],
+    'PERL5LIB': ['bin', 'KronaTools']
+}
+
+moduleclass = 'vis'

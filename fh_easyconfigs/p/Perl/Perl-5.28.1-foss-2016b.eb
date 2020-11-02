@@ -12,11 +12,29 @@ toolchainopts = {'pic': True}
 source_urls = ['http://www.cpan.org/src/%(version_major)s.0']
 sources = [SOURCELOWER_TAR_GZ]
 
+dependencies = [
+    ('zlib', '1.2.8'),  # for Net::SSLeay
+    ('expat', '2.2.0'),  # for XML::Parser
+]
+
 exts_list = [
     ('Config::General', '2.63', {
         'source_tmpl': 'Config-General-2.63.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/T/TL/TLINDEN'],
     }),
+    ('Config::AutoConf', '0.317', {
+        'source_tmpl': 'Config-AutoConf-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RE/REHSACK'], 
+    }),
+    ('Exporter-Tiny', '1.002001', {
+        'source_tmpl': 'Exporter-Tiny-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/'],
+    }),
+    ('List::MoreUtils', '0.428', {
+        'source_tmpl': 'List-MoreUtils-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RE/REHSACK'],
+    }),
+
     ('File::Listing', '6.04', {
         'source_tmpl': 'File-Listing-6.04.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/G/GA/GAAS'],
@@ -32,6 +50,11 @@ exts_list = [
     ('File::pushd', '1.016', {
         'source_tmpl': 'File-pushd-1.016.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
+    }),
+    ('File::Remove', '1.58', {
+        'source_tmpl': 'File-Remove-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF'],
+        'checksums': ['81f6ec83acab8ba042afe904334a26eb3a56c217bdb9981d237a89ab072fd0d8'],
     }),
     ('ExtUtils::InstallPaths', '0.012', {
         'source_tmpl': 'ExtUtils-InstallPaths-0.012.tar.gz',
@@ -93,12 +116,12 @@ exts_list = [
         'source_tmpl': 'Module-Implementation-0.09.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
     }),
-    ('Module::Build', '0.4218', {
-        'source_tmpl': 'Module-Build-0.4218.tar.gz',
+    ('Module::Build', '0.4224', {
+        'source_tmpl': 'Module-Build-%(version)s.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/L/LE/LEONT'],
     }),
     ('Module::Build::Tiny', '0.039', {
-        'source_tmpl': 'Module-Build-Tiny-0.039.tar.gz',
+        'source_tmpl': 'Module-Build-Tiny-%(version)s.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/L/LE/LEONT'],
     }),
     ('Module::Runtime', '0.014', {
@@ -121,10 +144,11 @@ exts_list = [
         'source_tmpl': 'Params-ValidationCompiler-0.23.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/D/DR/DROLSKY'],
     }),
-    ('List::MoreUtils', '0.416', {
-        'source_tmpl': 'List-MoreUtils-0.416.tar.gz',
-        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RE/REHSACK'],
+    ('inc::latest', '0.500', {
+        'source_tmpl': 'inc-latest-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN'],
     }),
+#List::MoreUtils
     ('Exporter::Tiny', '0.042', {
         'source_tmpl': 'Exporter-Tiny-0.042.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/T/TO/TOBYINK'],
@@ -204,6 +228,15 @@ exts_list = [
     ('Encode::Locale', '1.05', {
         'source_tmpl': 'Encode-Locale-1.05.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/G/GA/GAAS'],
+    }),
+    ('YAML::Tiny', '1.73', {
+        'source_tmpl': 'YAML-Tiny-1.73.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER/'],
+    }),
+    ('Module::Install', '1.19', {
+        'source_tmpl': 'Module-Install-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
+        'checksums': ['1a53a78ddf3ab9e3c03fc5e354b436319a944cba4281baf0b904fa932a13011b'],
     }),
     ('XML::SAX::Base', '1.08', {
         'source_tmpl': 'XML-SAX-Base-1.08.tar.gz',

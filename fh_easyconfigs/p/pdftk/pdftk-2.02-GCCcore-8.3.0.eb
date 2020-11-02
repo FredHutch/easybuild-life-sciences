@@ -1,0 +1,34 @@
+#  easybuild easyconfig
+#
+#  John Dey  jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'MakeCp'
+
+name = 'pdftk'
+version = '2.02'
+
+homepage = 'https://www.pdflabs.com'
+description = """PDFtk is a simple tool for doing everyday things with PDF documents."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit']
+sources = ['%(name)s-%(version)s-src.zip']
+
+builddependencies = [('binutils', '2.32')]
+
+dependencies = [('Java', '1.8', '', True)]
+
+parallel = 1
+start_dir = 'pdftk'
+buildopts = '-f Makefile.Debian '
+
+files_to_copy = [(["pdftk"], "bin")]
+
+sanity_check_paths = {
+    'files': [ 'bin/pdftk', ],
+    'dirs': [ 'bin', ],
+}
+
+moduleclass = 'tools'

@@ -1,0 +1,39 @@
+easyblock = 'PythonBundle'
+
+name = 'PICRUSt2'
+version = '2.3.0-b'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/picrust/picrust2/wiki'
+description = """PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) is a software for predicting functional abundances based only on marker gene sequences. Check out the pre-print here."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('h5py', '2.10.0', versionsuffix),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'download_dep_fail': True,
+    'use_pip': True,
+}
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+
+exts_list = [
+    ('click', '7.1.1'),
+    ('future', '0.18.2'),
+    ('biom-format', '2.1.8-1', {
+        'modulename': 'biom',
+    }),
+    (name, version, {
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'source_urls': ['https://github.com/picrust/archive'],
+    }),
+]
+
+
+moduleclass = 'bio'

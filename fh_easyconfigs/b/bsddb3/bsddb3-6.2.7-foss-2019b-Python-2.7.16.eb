@@ -1,0 +1,40 @@
+easyblock = 'PythonPackage'
+
+name = 'bsddb3'
+version = '6.2.7'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://pypi.org/project/bsddb3/'
+description = """bsddb3 is a nearly complete Python binding of the
+Oracle/Sleepycat C API for the Database Environment, Database, Cursor,
+Log Cursor, Sequence and Transaction objects."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+checksums = []
+patches = ['bsddb3_DB.patch']
+
+dependencies = [
+    ('Python', '2.7.16'),
+    ('DB', '18.1.32'),
+]
+
+use_pip = True
+download_dep_fail = True
+
+# Need to unset LIBS or pip install crashes.
+preinstallopts = 'unset LIBS && '
+
+# Force installer to use DB package
+preinstallopts += 'export BERKELEYDB_DIR=$EBROOTDB && '
+preinstallopts += 'export BERKELEYDB_INCDIR=$EBROOTDB/include && '
+preinstallopts += 'export BERKELEYDB_LIBDIR=$EBROOTDB/lib && '
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'data'

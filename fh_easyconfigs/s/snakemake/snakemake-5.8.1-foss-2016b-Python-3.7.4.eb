@@ -1,0 +1,64 @@
+easyblock = 'PythonBundle'
+
+name = 'snakemake'
+version = '5.8.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://snakemake.readthedocs.io'
+description = "The Snakemake workflow management system is a tool to create reproducible and scalable data analyses."
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('PyYAML', '5.1.2', versionsuffix),
+    ('GitPython', '2.1.11', versionsuffix),
+]
+
+use_pip = True
+
+exts_list = [
+    ('datrie', '0.8', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/datrie'],
+    }),
+    ('docutils', '0.14', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/docutils'],
+        'checksums': ['51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274'],
+    }),
+    ('jsonschema', '2.6.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/jsonschema'],
+        'checksums': ['6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02'],
+    }),
+    ('appdirs', '1.4.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/appdirs'],
+        'checksums': ['9e5896d1372858f8dd3344faf4e5014d21849c756c8d5701f78f8a103b372d92'],
+    }),
+    ('ConfigArgParse', '0.13.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/ConfigArgParse'],
+        'checksums': ['e6441aa58e23d3d122055808e5e2220fd742dff6e1e51082d2a4e4ed145dd788'],
+    }),
+    ('ratelimiter', '1.2.0.post0', {
+        'source_urls': ['https://pypi.python.org/packages/source/r/ratelimiter'],
+        'checksums': ['5c395dcabdbbde2e5178ef3f89b568a3066454a6ddc223b76473dac22f89b4f7'],
+    }),
+    ('wrapt', '1.10.11', {
+        'source_urls': ['https://pypi.python.org/packages/source/w/wrapt'],
+        'checksums': ['d4d560d479f2c21e1b5443bbd15fe7ec4b37fe7e53d335d3b9b0a7b1226fe3c6'],
+    }),
+    ('psutil', '5.6.7', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/psutil/'],
+    }),
+    (name, version, {
+        'source_urls': ['https://pypi.python.org/packages/source/s/snakemake'],
+        'checksums': ['60c1d11d3a63397b6d91ef394639cb454d9965217747b60fafb5573a498838e4'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/snakemake'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ['snakemake --help']
+
+moduleclass = 'tools'

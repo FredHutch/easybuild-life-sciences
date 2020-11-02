@@ -1,0 +1,21 @@
+diff -ruN pymssql-2.1.4.orig/setup.py pymssql-2.1.4/setup.py
+--- pymssql-2.1.4.orig/setup.py	2018-08-28 10:57:58.000000000 -0700
++++ pymssql-2.1.4/setup.py	2020-08-18 22:32:37.985919000 -0700
+@@ -25,6 +25,7 @@
+ import os.path as osp
+ import sys
+ import platform
++import distro
+ 
+ # Hack to prevent stupid TypeError: 'NoneType' object is not callable error on
+ # exit of python setup.py test in multiprocessing/util.py _exit_function when
+@@ -157,7 +158,8 @@
+ print("setup.py: platform.system() => %r" % SYSTEM)
+ print("setup.py: platform.architecture() => %r" % (platform.architecture(),))
+ if SYSTEM == 'Linux':
+-    print("setup.py: platform.linux_distribution() => %r" % (platform.linux_distribution(),))
++    DISTRO = distro.linux_distribution(full_distribution_name=False)[0]
++    print("setup.py: distro.linux_distribution() => {}".format(DISTRO))
+ if SYSTEM != 'Windows':
+     print("setup.py: platform.libc_ver() => %r" % (platform.libc_ver(),))
+ 

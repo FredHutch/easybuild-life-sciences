@@ -1,0 +1,28 @@
+easyblock = 'PythonPackage'
+
+name = 'pybedtools'
+version = '0.8.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://daler.github.io/pybedtools'
+description = """pybedtools wraps and extends BEDTools and offers feature-level manipulations from
+ within Python."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('BEDTools', '2.29.2'),
+    ('Pysam', '0.15.4', versionsuffix),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'
+

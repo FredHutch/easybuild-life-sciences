@@ -1,0 +1,56 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Fred Hutchinson Cancer Center Seattle US
+
+easyblock = 'CMakeMake'
+
+name = 'terraphast'
+version = 'master'
+
+homepage = 'https://github.com/xflouris/libpll/wiki'
+description = """libpll is a versatile high-performance software library for phylogenetic analysis."""
+
+toolchain = {'name': 'foss', 'version': '2018b'}
+toolchainopts = {'cstd': 'c++14'}
+
+source_urls = ['https://github.com/terraphast/terraphast/archive']
+sources = ['%(version)s.zip']
+patches = ['terraphast-gbench-fix.patch']
+checksums = [
+    '55180f9c7dbd7b35cbbdc9c94a57ba2890bf42d654892d93249d467a8a111113',  # master.zip
+    '4522563c52556834378a1e97c08d08eba42cd823840704e63246e76dd802787f',  # terraphast-gbench-fix.patch
+]
+
+builddependencies = [
+    ('Autotools', '20180311', '-GCCcore-7.3.0', True),
+    ('CMake', '3.12.1', '-GCCcore-7.3.0', True),
+]
+
+dependencies = [
+    ('GMP', '6.1.2', '-GCCcore-7.3.0', True),
+    ('Boost', '1.67.0'),
+]
+
+start_dir =  'terraphastII'
+separate_build_dir = True
+
+preconfigopts = "export GMP_LIBRARIES=${EBROOTGMP}/lib && "
+preconfigopts += "export Boost_LIBRARIES=${EBROOTBOOST}/lib && "
+
+postinstallcmds = [" mkdir %(installdir)s/bin",
+                   " mkdir %(installdir)s/lib",
+                   " mv %(builddir)s/easybuild_obj/terraces_main  %(installdir)s/bin",
+                   " mv %(builddir)s/easybuild_obj/libterraces.a  %(installdir)s/lib",
+                   ]
+
+sanity_check_paths = {
+    'files': ["bin/terraces_main",
+              "lib/libterraces.a",
+              ],
+    'dirs': []
+}
+
+moduleclass = 'bio'
+

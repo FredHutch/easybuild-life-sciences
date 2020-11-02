@@ -1,0 +1,105 @@
+easyblock = 'Bundle'
+
+name = 'monocle3'
+version = '0.2.0'
+versionsuffix = '-R-%(rver)s'
+
+homepage = 'https://cole-trapnell-lab.github.io/monocle3'
+description = """Single-cell transcriptome sequencing (sc-RNA-seq) experiments allow us to discover new cell types and help us understand how they arise in development. The Monocle 3 package provides a toolkit for analyzing single-cell gene expression experiments."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.1'),
+]
+
+dependencies = [
+    ('R', '3.6.1', '-eb2'),
+    ('GDAL', '2.2.3'),
+    ('GEOS', '3.7.2', '-Python-3.7.4'),
+]
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'http://bioconductor.org/packages/release/bioc/src/contrib/',
+        'http://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'http://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on July 8, 2019
+exts_list = [
+    ('rgdal', '1.4-7'),
+    ('sf', '0.8-0', {
+         'installopts': '--configure-args=\"CXXFLAGS=\\"$CXXFLAGS+=-std=c++11\\"\"',
+    }),
+    ('spdep', '1.1-3'),
+    ('grr', '0.9.5'),
+    ('Matrix.utils', '0.9.7'),
+    ('limma', '3.42.0'),
+    ('pbmcapply', '1.5.0'),
+    ('RcppParallel', '4.4.4'),
+    ('RcppAnnoy', '0.0.14'),
+    ('RcppHNSW',  '0.2.0'),
+    ('furrr', '0.1.0'),
+    ('rsample', '0.0.5'),
+    ('RhpcBLASctl', '0.18-205'),
+    ('BiocGenerics', '0.32.0'),
+    ('Biobase', '2.46.0'),
+    ('S4Vectors', '0.24.0'),
+    ('IRanges', '2.20.1'),
+    ('GenomeInfoDbData', '1.2.2'),
+    ('GenomeInfoDb', '1.22.0'),
+    ('zlibbioc', '1.32.0'),
+    ('XVector', '0.26.0'),
+    ('GenomicRanges', '1.38.0'),
+    ('BiocParallel', '1.20.0'),
+    ('DelayedArray', '0.12.0'),
+    ('SummarizedExperiment', '1.16.0'),
+    ('SingleCellExperiment', '1.8.0'),
+    ('Rhdf5lib', '1.8.0'),
+    ('rhdf5', '2.30.0'),
+    ('HDF5Array', '1.14.0'),
+    ('DelayedMatrixStats', '1.8.0'),
+    ('speedglm', '0.3-2'),
+    ('sitmo', '2.0.1'),
+    ('dqrng', '0.2.1'),
+    ('RSpectra', '0.15-0'),
+    ('uwot', '0.1.4'),
+    ('beachmat', '2.2.1'),
+    ('irlba', '2.3.3'),
+    ('rsvd', '1.0.2'),
+    ('BiocNeighbors', '1.4.1'),
+    ('BiocSingular', '1.2.0'),
+    ('scater', '1.14.4'),
+    ('rtf', '0.4-14'),
+    ('sas7bdat', '0.5'),
+    ('BEACH', '1.3.1'),
+    ('batchelor', '1.2.2'),
+    ('leidenbase', '0.1.0', {
+        'source_urls': ['https://github.com/cole-trapnell-lab/leidenbase/archive'],
+        'source_tmpl': '%(version)s.tar.gz'
+    }),
+    (name, version, {
+        'source_urls': ['https://github.com/cole-trapnell-lab/monocle3/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'filename': '%(name)s_%(version)s.tar.gz',
+    }),
+]
+
+modextrapaths = {'R_LIBS': ''}
+
+sanity_check_paths = {
+    'files': ['grr/R/grr'],
+    'dirs': ['grr'],
+}
+
+moduleclass = 'bio'

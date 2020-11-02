@@ -2,23 +2,44 @@
 
 import os
 import sys
-import imp
+import argparse
 import json
-import ssl
 from datetime import date
+from framework import FrameWork
 import requests
-import urllib2
-import xmlrpclib
-from pprint import pprint
+
+"""
+Easy_Annotate creates Markdown documentation from R and Python easyconfigs.
+All exts_list packages are documented. If possible the annotation will link
+each package to its project page.
+"""
+
+""" Release Notes
+    2.0.4  python.get_package_url -convert to requests
+    Python 3.x updates pkgs.keys()  change to list(pkgs)
+
+    2.0.3 Improve dependent package searches for Python easyconfigs to include
+    PythonPackages. framework has been updated to check the dependenices for any
+    easyconfig with a version suffix of "Python-%(pyver)s". If found locate the
+    easyconfig and add the exts_list to dependend packages. Following depenedencies
+    will allow a more acurate package listing with hierarchical package structure. 
+    Example: Python 3.7.4 -fh1 -> Python 3.7.4 -> pytest, matplotlib ... etc.
+
+    2.0.2 use FrameWork class from easyupdate. Create single document from R and
+    Python Packages. Read Dependent module to append exts_list packages, to
+    create a single
+    document to describe compound Modules.
+
+    Version 2 create Markdown output
+
+    Version 1.x create HTML output
+"""
 
 __author__ = "John Dey"
-__version__ = "2.0.1"
-__date__ = "April 3, 2019"
+__version__ = "2.0.3"
+__date__ = "Aug 15, 2019"
 __email__ = "jfdey@fredhutch.org"
 
-"""Versioin 1.x create HTML output
-   Version 2 create Markdown output
-"""
 
 class ExtsList(object):
     """ Easy Anotate is a utilty program for documenting EasyBuild easyconfig
@@ -27,15 +48,18 @@ class ExtsList(object):
     html documentation of extension list.
     """
 
-    def __init__(self, file_path, verbose=False):
-        self.debug = False 
+    def __init__(self, eb, verbose):
+        self.debug = False
         self.verbose = verbose
         self.pkg_count = 0
 
-        eb = self.parse_eb(file_path)
-        self.extension = eb.exts_list
+        try:
+            self.extension = eb.dep_exts
+        except NameError:
+            self.extension = []
+        self.extension.extend(eb.exts_list)
+        self.biocver = None
         self.toolchain = eb.toolchain
-        self.dependencies = eb.dependencies
         self.pkg_name = eb.name + '-' + eb.version + '-'
         self.pkg_name += eb.toolchain['name'] + '-'
         self.pkg_name += eb.toolchain['version']
@@ -43,42 +67,11 @@ class ExtsList(object):
             self.pkg_name += eb.versionsuffix
         except (AttributeError, NameError):
             pass
-        try:
-            self.biocver = eb.biocver
-        except (AttributeError, NameError):
-            print("biocver not set")
-            pass
-        file_name = os.path.basename(file_path)
-        f_name = os.path.basename(file_name)[:-3]
         print("Package: %s" % self.pkg_name)
-        if f_name != self.pkg_name:
-            print("file name does not match module name. " +
-                  "file name: %s, package: %s" % (f_name, self.pkg_name))
-            sys.exit(0)
-        self.out = open(f_name + '.md', 'w')
+
+        self.out = open(self.pkg_name + '.md', 'w')
         self.html_header()
-
-    @staticmethod
-    def parse_eb(file_path):
-        # type: (object) -> object file_name) -> dict:
-        """ interpret easyconfig file with 'exec'.  Interperting fails if
-            undefined constants are within the Easyconfig file.
-            Add undefined constants to <header>.
-        """
-        header = 'SOURCE_TGZ  = "%(name)s-%(version)s.tgz"\n'
-        header += 'SOURCE_TAR_GZ = "%(name)s-%(version)s.tar.gz"\n'
-        header += 'PYPI_SOURCE = "https://pypi.org/project/%(name)s"\n'
-        code = header
-
-        eb = imp.new_module("easyconfig")
-        with open(file_path, "r") as f:
-            code += f.read()
-        try:
-            exec (code, eb.__dict__)
-        except Exception as e:
-            print("interperting easyconfig error: %s" % e)
-            eb = {}
-        return eb
+        self.exts2md()
 
     def html_header(self):
         """write html head block
@@ -90,7 +83,10 @@ class ExtsList(object):
         block += 'date: %s\n---\n\n' % date_string
         self.out.write(block)
 
-    def exts2html(self):
+    def exts2md(self):
+        """ write the output file in Markdown format"""
+        self.out.write('### Known Issues\n')
+        self.out.write(' * None\n\n')
         self.out.write('### Package List\n')
         pkg_info = {}
         for pkg in self.extension:
@@ -98,6 +94,8 @@ class ExtsList(object):
                 pkg_name = pkg[0]
                 version = str(pkg[1])
                 url, description = self.get_package_url(pkg_name)
+                if self.verbose:
+                    print('{}'.format(pkg_name))
             else:
                 pkg_name = pkg
                 version = 'built in'
@@ -106,7 +104,7 @@ class ExtsList(object):
             pkg_info[pkg_name]['version'] = version
             pkg_info[pkg_name]['url'] = url
             pkg_info[pkg_name]['description'] = description
-        pkg_list = pkg_info.keys()
+        pkg_list = list(pkg_info)
         pkg_list.sort()
         for key in pkg_list:
             if pkg_info[key]['url'] == 'not found':
@@ -129,16 +127,22 @@ class R(ExtsList):
                       'tools', 'tcltk', 'grid', 'splines'
                       }
 
-    def __init__(self, file_name, verbose=False):
-        ExtsList.__init__(self, file_name, verbose)
+    def __init__(self, eb, verbose):
+        self.debug = False
+        self.verbose = verbose
+        self.biocver = None
         self.bioc_data = {}
         self.bioc_urls = []
-
-        if self.biocver :
-            self.read_bioconductor_pacakges()
+        try:
+            self.biocver = eb.biocver
+        except (AttributeError, NameError):
+            print("biocver not set")
+        if self.biocver:
+            self.read_bioconductor_packages()
             self.bioconductor = True
+        ExtsList.__init__(self, eb, verbose)
 
-    def read_bioconductor_pacakges(self):
+    def read_bioconductor_packages(self):
         """ read the Bioconductor package list into bio_data dict
             """
         base_url = 'https://bioconductor.org/packages/json/%s' % self.biocver
@@ -205,39 +209,65 @@ class R(ExtsList):
 
 
 class PythonExts(ExtsList):
-    def __init__(self, file_name, verbose=False):
-        ExtsList.__init__(self, file_name, verbose)
+    def __init__(self, eb, verbose):
+        ExtsList.__init__(self, eb, verbose)
         self.verbose = verbose
         self.pkg_dict = None
 
     def get_package_url(self, pkg_name):
-        client = xmlrpclib.ServerProxy('https://pypi.python.org/pypi')
-        url = 'not found'
+        """ Python PYPI """
+        req = 'https://pypi.org/pypi/%s/json' % pkg_name
+        resp = requests.get(req)
         description = ''
-        xml_vers = client.package_releases(pkg_name)
-        if xml_vers:
-            version = xml_vers[0]
+        if resp.status_code != 200:
+            return 'not found', ''
+        project = resp.json()
+        if 'description' in project['info']:
+            description = project['info']['summary']
+        if 'home_page' in project['info']:
+            url =  project['info']['home_page']
+        elif 'project_urls' in project['info']:
+            url =  project['info']['project_urls']['Homepage']
+        elif 'project_url' in project['info']:
+            url =  project['info']['project_url']
         else:
-            return url, description
-        pkg_data = client.release_data(pkg_name, version)
-        if pkg_data and 'summary' in pkg_data:
-            description = pkg_data['summary']
-        if pkg_data and 'package_url' in pkg_data:
-            url = pkg_data['package_url']
+            url = project['info']['package_url']
         return url, description
 
 
-if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("usage: %s [R or Python easybuild file]" % sys.argv[0])
-        sys.exit(0)
+def help():
+    print("usage: easy_annotate [R or Python Easyconfig]")
+    print("Create markdown documentation from Easyconfigs. Document all the libraries"),
+    print("from the exts_list for R and Python EasyConfigs.")
 
-    base = os.path.basename(sys.argv[1])
-    if base[:2] == 'R-':
-        module = R(sys.argv[1], verbose=True)
-    elif base[:7] == 'Python-':
-        module = PythonExts(sys.argv[1], verbose=True)
+
+def main():
+    """ main """
+    parser = argparse.ArgumentParser(description='Annotate extslist')
+    parser.add_argument('--version', action='version',
+                        version='%(prog)s ' + __version__)
+    parser.add_argument(
+        '-v', '--verbose', dest='verbose', required=False, action='store_true',
+        help='Verbose; print lots of extra stuff, (default: false)')
+    parser.add_argument('easyconfig', nargs='?')
+    args = parser.parse_args()
+
+    eb = None
+    args.lang = None
+    if args.easyconfig:
+        eb = FrameWork(args)
+        args.lang = eb.lang
+        if eb.lang == 'Python':
+            args.pyver = eb.pyver
+        if eb.lang == 'R':
+            args.rver = eb.rver
+    if args.lang == 'R':
+        R(eb, args.verbose)
+    elif args.lang == 'Python':
+        PythonExts(eb, args.verbose)
     else:
-        print("Module name must begin with R-, or Python-")
-        sys.exit(1)
-    module.exts2html()
+        print('easyanotate does not know how to process: {}'.format(eb.name))
+
+
+if __name__ == '__main__':
+    main()

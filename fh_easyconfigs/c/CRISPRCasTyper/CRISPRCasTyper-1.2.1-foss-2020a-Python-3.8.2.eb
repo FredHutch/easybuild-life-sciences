@@ -1,0 +1,45 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonBundle'
+
+name = 'CRISPRCasTyper'
+version = '1.2.1'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/Russel88/CRISPRCasTyper'
+description = """Detect CRISPR-Cas genes and arrays, and predict the subtype based on both Cas genes and CRISPR repeat sequence."""
+
+toolchain = {'name': 'foss', 'version': '2020a'}
+
+builddependencies = [
+    ('CMake', '3.16.4'),
+]
+
+dependencies = [
+    ('Python', '3.8.2'),
+    ('Biopython', '1.77', versionsuffix),
+    ('Pillow', '7.0.0', versionsuffix),
+]
+
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+use_pip = True
+
+exts_list = [
+    ('xgboost', '1.1.1'),
+    ('dill', '0.3.2', {'source_tmpl': '%(name)s-%(version)s.zip',}), 
+    ('multiprocess', '0.70.10', {'source_tmpl': '%(name)s-%(version)s.zip',}), 
+    ('tqdm', '4.47.0'),
+    ('Pillow', '7.2.0', {
+        'modulename': 'PIL',
+    }),
+    ('cctyper', '1.2.1'),
+]
+
+sanity_pip_check = False
+
+moduleclass = 'bio'

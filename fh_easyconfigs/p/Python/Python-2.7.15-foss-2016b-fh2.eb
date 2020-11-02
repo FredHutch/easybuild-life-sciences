@@ -1,0 +1,787 @@
+# easybuild easycofig
+
+# 2016.08.29 John Dey jfdey@fredhutch.org
+# 2016.10.18 Ben McGough bmcgough@fredhutch.org
+#
+# Fred Hutch Cancer Research Center
+#
+# Updated Packages: 187
+# New Packages: 47
+# Dropped Packages: 12
+
+
+name = 'Python'
+version = '2.7.15'
+versionsuffix = '-fh2'
+
+homepage = 'http://python.org/'
+description = """Python is a programming language that lets you work more quickly and integrate your systems
+ more effectively."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+toolchainopts = {'pic': True, 'opt': True, 'optarch': True}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TGZ]
+
+dependencies = [
+    ('bzip2', '1.0.6'),
+    ('zlib', '1.2.8'),
+    ('libreadline', '6.3'),
+    ('ncurses', '6.0'),
+    ('SQLite', '3.13.0'),
+    ('Tk', '8.6.5'),
+    ('GMP', '6.1.1'),
+    ('libffi', '3.2.1'),
+    ('XZ', '5.2.2'),
+    ('libffi', '3.2.1'),
+    ('HDF5', '1.8.18'),  # required for h5py
+    ('freetype', '2.6.5'),   # required for matplotlib
+    ('libxml2', '2.9.4'),  # required for lxml
+    ('libxslt', '1.1.29'), # required for lxml
+    ('Qt', '4.8.7'),
+    ('cURL', '7.49.1'),
+    ('netCDF', '4.4.1'),
+    ('snappy', '1.1.6'),
+    ('SQLite', '3.23.1'),
+    ('OpenSSL', '1.1.1d'),
+]
+
+exts_download_dep_fail = True
+
+# order is important!
+# package versions updated Feb 13th 2020
+exts_list = [
+    ('six', '1.14.0', {
+    }),
+    ('setuptools', '45.2.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('pyparsing', '2.4.6', {
+    }),
+    ('packaging', '20.1', {
+    }),
+    ('appdirs', '1.4.3', {
+    }),
+    ('certifi', '2019.11.28', {
+    }),
+    ('pip', '20.0.2', {
+    }),
+    ('pep8', '1.7.1', {
+    }),
+    ('nose', '1.3.7', {
+    }),
+    ('numpy', '1.16.2', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('scipy', '1.2.1', {
+    }),
+    ('joblib', '0.14.1'),
+    ('mpi4py', '3.0.3', { }),
+    ('paycheck', '1.0.2', { }),
+    ('pbr', '5.4.4', { }),
+    ('PyClone', '0.12.9', {
+        'modulename': 'pyclone',
+    }),
+    ('PyDP', '0.2.2', {
+        'modulename': 'pydp',
+    }),
+    ('argparse', '1.4.0'),
+    ('lockfile', '0.12.2'),
+    ('bz2file', '0.98'),
+    ('xopen', '0.8.4'),
+    ('dnaio', '0.4.1'),
+    ('cutadapt', '2.8'),
+    ('Cycler', '0.10.0', {
+        'source_tmpl': 'cycler-%(version)s.tar.gz',
+        'modulename': 'cycler',
+    }),
+    ('Cython', '0.29.15', {
+    }),
+    ('deap', '1.3.1', {
+        'source_tmpl': '%(name)s-%(version)s.tar.gz',
+    }),
+    ('decorator', '4.4.1', {
+    }),
+   ('bcbio-gff', '0.6.6', {
+        'modulename': 'BCBio.GFF',
+    }),
+    ('biopython', '1.76', {
+        'modulename': 'Bio',
+    }),
+    ('shove', '0.6.6', {
+        'source_tmpl': '%(name)s-%(version)s.tar.bz2',
+    }),
+    ('python-memcached', '1.59', {
+        'modulename': 'memcache',
+    }),
+    ('PyVCF', '0.6.8', {
+        'modulename': 'vcf',
+    }),
+    ('deepTools', '3.3.2', {
+        'modulename': 'deeptools',
+    }),
+    ('twobitreader', '3.1.7'),
+    ('pysam', '0.15.4'),
+    ('liac-arff', '2.4.0', {
+        'modulename': 'arff',
+    }),
+    ('pycrypto', '2.6.1', {
+        'modulename': 'Crypto',
+    }),
+    ('ecdsa', '0.15', {
+    }),
+    ('cryptography', '2.8', {
+    }),
+    ('pyasn1', '0.4.8', {
+    }),
+    ('PyNaCl', '1.3.0', {
+        'modulename': 'nacl',
+    }),
+    ('bcrypt', '3.1.7'),
+    ('paramiko', '2.7.1', {
+    }),
+    ('netifaces', '0.10.9', {
+    }),
+    ('netaddr', '0.7.19', {
+    }),
+    ('funcsigs', '1.0.2', {
+    }),
+    ('mock', '4.0.1', {
+    }),
+    ('pytz', '2019.3', {
+    }),
+    ('python-dateutil', '2.8.1', {
+        'modulename': 'dateutil',
+    }),
+    ('pandas', '1.0.1', {
+    }),
+    ('enum34', '1.1.6', {
+        'modulename': 'enum',
+    }),
+    ('bitstring', '3.1.6'),
+    ('distlib', '0.3.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip'
+    }),
+    ('filelock', '3.0.12', {
+    }),
+    ('contextlib2', '0.6.0.post1', {
+    }),
+    ('scandir', '1.10.0', {
+    }),
+    ('pathlib2', '2.3.5', {
+    }),
+    ('typing', '3.7.4.1', {
+    }),
+    ('importlib_resources', '1.0.2', {
+        'modulename': 'importlib-resources',
+    }),
+    ('zipp', '2.2.0'),
+    ('configparser', '4.0.2'),
+    ('importlib-metadata', '1.5.0', {
+        'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
+    }),
+    ('virtualenv', '20.0.4', {
+    }),
+    ('urllib3', '1.25.8', {
+    }),
+    ('idna', '2.8', {
+    }),
+    ('chardet', '3.0.4', {
+    }),
+    ('requests', '2.22.0', {
+    }),
+    ('futures', '3.3.0', {
+        'modulename': 'concurrent',
+    }),
+    ('python-swiftclient', '3.9.0', {
+        'modulename': 'swiftclient',
+    }),
+    ('Babel', '2.8.0', {
+        'modulename': 'babel',
+    }),
+    ('wrapt', '1.11.2'),
+    ('debtcollector', '2.0.0'),
+    ('monotonic', '1.5'),
+    ('iso8601', '0.1.12'),
+    ('stevedore', '1.32.0'),
+    ('rfc3986', '1.3.2'),
+    ('positional', '1.2.1'),
+    ('msgpack-python', '0.5.6', {
+        'modulename': 'msgpack',
+    }),
+    ('os-service-types', '1.7.0', {
+        'modulename': 'os_service_types',
+    }),
+    ('keystoneauth1', '3.18.0'),
+    ('oslo.i18n', '4.0.0', {
+        'modulename': 'oslo_i18n',
+    }),
+    ('PyYAML', '5.3', {
+        'modulename':  'yaml',
+    }),
+    ('oslo.config', '8.0.0', {
+        'modulename': 'oslo_config',
+    }),
+    ('oslo.utils', '4.0.0', {
+        'modulename': 'oslo_utils',
+    }),
+    ('oslo.serialization', '3.0.0', {
+        'modulename': 'oslo_serialization',
+    }),
+    ('python-keystoneclient', '3.22.0', {
+        'modulename': 'keystoneclient.v3',
+    }),
+    ('simplejson', '3.17.0'),
+    ('lxml', '4.5.0'),
+    ('PrettyTable', '0.7.2', {
+        'modulename': 'prettytable',
+        'source_urls': ['https://pypi.python.org/packages/source/P/PrettyTable'],
+        'source_tmpl': 'prettytable-%(version)s.tar.gz',
+    }),
+    ('python-novaclient', '16.0.0', {
+        'modulename': 'novaclient',
+        'source_urls': ['https://pypi.python.org/packages/source/p/python-novaclient'],
+    }),
+    ('click', '7.0', {
+        'source_tmpl': 'Click-%(version)s.tar.gz',
+    }),
+    ('itsdangerous', '1.1.0', {
+    }),
+    ('MarkupSafe', '1.1.1', {
+        'modulename': 'markupsafe',
+    }),
+    ('Jinja2', '2.11.1', {
+        'modulename': 'jinja2',
+    }),
+    ('Werkzeug', '1.0.0', {
+        'modulename': 'werkzeug',
+    }),
+    ('Flask', '1.1.1', {
+        'modulename': 'flask',
+    }),
+    ('ordereddict', '1.1'),
+    ('WTForms', '2.2.1', {
+        'modulename': 'wtforms',
+    }),
+    ('Flask-WTF', '0.14.3', {
+        'modulename': 'flask_wtf',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_wtf'],
+    }),
+    ('Flask-Bootstrap', '3.3.7.1', {
+        'modulename': 'flask_bootstrap',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_bootstrap'],
+    }),
+    ('flask-appconfig', '0.11.1', {
+        'modulename': 'flask_appconfig',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_appconfig'],
+    }),
+    ('Flask-Debug', '0.4.3', {
+        'modulename': 'flask_debug',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_debug'],
+    }),
+    ('flask-nav', '0.6', {
+        'modulename': 'flask_nav',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_nav'],
+    }),
+    ('Flask-Script', '2.0.6', {
+        'modulename': 'flask_script',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_script'],
+    }),
+    ('SQLAlchemy', '1.3.13', {
+        'modulename': 'sqlalchemy',
+        'source_urls': ['https://pypi.python.org/packages/source/S/SQLAlchemy/'],
+    }),
+    ('Flask-SQLAlchemy', '2.4.1', {
+        'modulename': 'flask_sqlalchemy',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_sqalchemy'],
+    }),
+    ('alembic', '1.4.0'),
+    ('Flask-Migrate', '2.5.2', {
+        'modulename': 'flask_migrate',
+        'source_urls': ['https://pypi.python.org/packages/source/f/flask_migrate'],
+    }),
+    ('psycopg2', '2.8.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/psycopg2'],
+    }),
+    ('pypandoc', '1.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pypandoc'],
+    }),
+    ('colorama', '0.4.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/colorama'],
+    }),
+    ('qrcode', '6.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/q/qrcode'],
+    }),
+    ('docutils', '0.16', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/docutils'],
+    }),
+    ('Pygments', '2.5.2', {
+        'modulename': 'pygments',
+        'source_urls': ['https://pypi.python.org/packages/source/P/Pygments'],
+    }),
+    ('Markdown', '3.2.1', {
+        'modulename': 'markdown',
+        'source_urls': ['https://pypi.python.org/packages/source/M/Markdown'],
+    }),
+    ('darkslide', '5.1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/darkslide'],
+    }),
+    ('watchdog', '0.10.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/w/watchdog'],
+    }),
+    ('pycurl', '7.43.0.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pycurl'],
+    }),
+    ('simplegeneric', '0.8.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/s/simplegeneric'],
+    }),
+    ('ptyprocess', '0.6.0', {
+        'source_url': ['https://pypi.python.org/packages/p/ptyprocess'],
+    }),
+    ('pexpect', '4.8.0', {
+        'source_url': ['https://pypi.python.org/packages/p/pexpect'],
+    }),
+    ('backcall', '0.1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/backcall'],
+    }),
+    ('wcwidth', '0.1.8'),
+    ('prompt-toolkit', '3.0.3', {
+        'modulename': 'prompt_toolkit',
+        'source_urls': ['https://pypi.python.org/packages/source/p/prompt-toolkit'],
+        'source_tmpl': 'prompt_toolkit-%(version)s.tar.gz',
+    }),
+    ('traitlets', '4.3.3'),
+    ('pickleshare', '0.7.5'),
+    ('parso', '0.6.1'),
+    ('jedi', '0.16.0'),
+    ('appnope', '0.1.0'),
+    ('backports.shutil_get_terminal_size', '1.0.0', {
+        'modulename': 'backports.shutil_get_terminal_size',
+        'source_urls': ['https://pypi.python.org/packages/source/b/backports.shutil_get_terminal_size'],
+        'source_tmpl': 'backports.shutil_get_terminal_size-%(version)s.tar.gz',
+    }),
+    ('bokeh', '1.4.0'),
+    ('Nuitka', '0.6.7', {
+        'modulename': 'nuitka',
+        'source_urls': ['https://pypi.python.org/packages/source/n/Nuitka'],
+    }),
+    ('boto3', '1.11.17', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/boto3'],
+    }),
+    ('awscli', '1.17.17', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/awscli'],
+    }),
+    ('drmaa', '0.7.9', {
+        'source_urls': ['https://pypi.python.org/packages/source/d/drmaa'],
+    }),
+    ('easygui', '0.98.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/e/easygui'],
+    }),
+    ('backports.functools_lru_cache', '1.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/backports.functools-lru-cache'],
+    }),
+    ('singledispatch', '3.4.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/singledispatch'],
+    }),
+    ('lazy-object-proxy', '1.3.1', {
+        'modulename': 'lazy_object_proxy',
+        'source_urls': ['https://pypi.python.org/packages/source/l/lazy-object-proxy'],
+    }),
+    ('astroid', '1.6.3'),
+    ('typed-ast', '1.4.1', {
+        'source_tmpl': 'typed_ast-%(version)s.tar.gz',
+    }),
+    ('tzlocal', '1.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/tzlocal/'],
+    }),
+    ('APScheduler', '3.5.1', {
+        'modulename': 'apscheduler',
+    }),
+    ('requestsexceptions', '1.4.0'),
+    ('ipaddress', '1.0.23'),
+    ('dogpile.cache', '0.6.5'),
+    ('jmespath', '0.9.3'),
+    ('munch', '2.3.2'),
+    ('deprecation', '2.0.2'),
+    ('jsonpointer', '2.0'),
+    ('jsonpatch', '1.23'),
+    ('openstacksdk', '0.13.0', {
+        'modulename': 'openstack',
+    }),
+    ('os-client-config', '1.31.1', {
+        'modulename': 'os_client_config',
+    }),
+    ('warlock', '1.3.3'),
+    ('pyOpenSSL', '17.5.0', {
+        'modulename': 'ssl',
+    }),
+    ('python-glanceclient', '2.11.0', {
+        'modulename': 'glanceclient',
+    }),
+    ('python-cinderclient', '3.5.0', {
+        'modulename': 'cinderclient',
+    }),
+    ('unicodecsv', '0.14.1'),
+    ('cliff', '2.11.0'),
+    ('attrs', '19.3.0'),
+    ('pyperclip', '1.7.0'),
+    ('pyreadline', '2.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('cmd2', '0.10.0'),
+    ('osc-lib', '1.10.0', {
+        'modulename': 'openstackclient',
+    }),
+    ('python-openstackclient', '3.15.0', {
+        'modulename': 'openstackclient',
+    }),
+    ('fasteners', '0.14.1'),
+    ('oslo.concurrency', '3.27.0', {
+        'modulename': 'oslo_concurrency',
+    }),
+    ('oslo.context', '2.20.0', {
+        'modulename': 'oslo_context',
+    }),
+    ('pyinotify', '0.9.6'),
+    ('oslo.log', '3.38.1', {
+        'modulename': 'oslo_log',
+    }),
+    ('pymongo', '3.6.1'),
+    ('PyMySQL', '0.8.1', {
+        'modulename': 'pymysql',
+    }),
+    ('python-freezerclient', '1.7.0', {
+        'modulename': 'freezerclient',
+    }),
+    ('psutil', '5.4.5'),
+    ('python-neutronclient', '6.8.0', {
+        'modulename': 'neutronclient',
+    }),
+    ('greenlet', '0.4.13'),
+    ('enum-compat', '0.0.2', {
+        'modulename': 'enum',
+    }),
+    ('eventlet', '0.23.0'),
+    ('dnspython', '1.16.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('os-win', '4.0.0', {
+        'modulename': 'os_win',
+    }),
+    ('PyMI', '1.0.4', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('WMI', '1.4.9', {
+        'modulename': 'wmi',
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('retrying', '1.3.3', {
+    }),
+    ('Paste', '2.0.3', {
+        'modulename': 'paste',
+    }),
+    ('repoze.lru', '0.7'),
+    ('Routes', '2.4.1', {
+        'modulename': 'routes',
+    }),
+    ('PasteDeploy', '1.5.2', {
+        'modulename': 'paste.deploy',
+    }),
+    ('WebOb', '1.8.1', {
+        'modulename': 'webob',
+    }),
+    ('oslo.service', '1.31.1', {
+        'modulename': 'oslo_service',
+    }),
+    ('cffi', '1.14.0'),
+    ('oslo.privsep', '1.29.0', {
+        'modulename': 'oslo_privsep',
+    }),
+    ('fixtures', '3.0.0'),
+    ('yappi', '1.2.3', {
+        'modulename': 'Yappi',
+    }),
+    ('os-brick', '2.4.0', {
+        'modulename': 'os_brick',
+        'source_urls': ['https://pypi.python.org/packages/source/o/os-brick/'],
+    }),
+    ('botocore', '1.10.18', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/botocore/'],
+    }),
+    ('freezer', '6.0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/f/freezer'],
+    }),
+    ('uritemplate', '3.0.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/u/uritemplate/'],
+    }),
+    ('ndg-httpsclient', '0.5.0', {
+        'modulename': 'ndg.httpsclient', 
+        'source_tmpl': 'ndg_httpsclient-%(version)s.tar.gz',
+        'source_urls': ['https://pypi.python.org/packages/source/n/ndg-httpsclient/'],
+    }),
+    ('pygithub3', '0.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pygithub3'],
+    }),
+    ('beautifulsoup4', '4.6.0', {
+        'modulename': 'bs4',
+        'source_urls': ['https://pypi.python.org/packages/source/b/beautifulsoup4/'],
+    }),
+    ('google', '2.0.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/g/google'],
+    }),
+    ('h5py', '2.7.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/h/h5py'],
+    }),
+    ('soupsieve', '1.9.5'),
+    ('webencodings', '0.5.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/w/webencodings'],
+    }),
+    ('html5lib', '1.0.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/h/html5lib'],
+    }),
+    ('ldap3', '2.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/l/ldap3'],
+    }),
+    ('Mako', '1.0.7', {
+        'modulename': 'mako',
+        'source_urls': ['https://pypi.python.org/packages/source/m/Mako'],
+    }),
+    ('functools32', '3.2.3-2', {
+        'source_urls': ['https://pypi.python.org/packages/source/f/functools32'],
+    }),
+    ('matplotlib', '2.2.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/matplotlib'],
+    }),
+    ('mincemeat', '0.1.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/mincemeat'],
+    }),
+    ('npyscreen', '4.10.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/n/npyscreen'],
+    }),
+    ('oauth', '1.0.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/o/oauth'],
+    }),
+    ('pyBigWig', '0.3.11', {
+        'modulename': 'pyBigWig', 
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyBigWig/'],
+    }),
+    ('python-pam', '1.8.3', {
+        'modulename': 'pam',
+        'source_urls': ['https://pypi.python.org/packages/source/p/python-pam'],
+    }),
+    ('pymssql', '2.1.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pymssql'],
+    }),
+    ('urwid', '2.0.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/u/urwid'],
+    }),
+    ('alnvu', '0.3.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/alnvu'],
+    }),
+    ('seqmagick', '0.7.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/seqmagick'],
+    }),
+    ('pyensembl', '1.2.6', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/pyensembl'],
+    }),
+    ('smmap2', '2.0.3', {
+        'modulename': 'smmap',
+        'source_urls': ['https://pypi.python.org/packages/source/s/smmap2'],
+    }),
+    ('gitdb2', '2.0.3', {
+        'modulename': 'gitdb',
+        'source_urls': ['https://pypi.python.org/packages/source/g/gitdb2'],
+    }),
+    ('GitPython', '2.1.9', {
+        'modulename': 'git',
+        'source_urls': ['https://pypi.python.org/packages/source/g/GitPython'],
+    }),
+    ('ConfigArgParse', '0.13.0', {
+        'modulename': 'configargparse',
+        'source_urls': ['https://pypi.python.org/packages/source/c/ConfigArgParse'],
+    }),
+    ('HTSeq', '0.9.1', {
+        'modulename': 'HTSeq', 
+        'source_urls': ['https://pypi.python.org/packages/source/h/HTSeq'],
+    }),
+    ('pyastro', '1.1', {
+        'source_urls':['https://pypi.python.org/packages/source/p/pyastro'],
+    }),
+    ('toolshed', '0.4.6', {
+        'source_urls':['https://pypi.python.org/packages/source/t/toolshed'],
+    }),
+    ('MySQL-python', '1.2.5', {
+        'modulename': '_mysql',
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/M/MySQL-python'],
+    }),
+    ('cruzdb', '0.5.6', {
+        'source_urls':['https://pypi.python.org/packages/source/c/cruzdb'],
+    }),
+    ('cpv', '0.48', {
+        'source_tmpl': 'v%(version)s.zip',
+        'source_urls': ['https://github.com/brentp/combined-pvalues/archive'],
+    }),
+    ('brewer2mpl', '1.4.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/brewer2mpl'],
+    }),
+    ('vctools', '0.1.6.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/v/vctools'],
+    }),
+    ('Theano', '1.0.1', {
+        'modulename': 'theano',
+        'source_urls': ['https://pypi.python.org/packages/source/T/Theano/'],
+    }),
+    ('ImmuneDB', '0.23.0', {
+        'modulename': 'immunedb',
+        'source_urls': ['https://github.com/arosenfeld/immunedb/archive/'],
+        'source_tmpl': 'v%(version)s.zip',
+    }),
+    ('netCDF4', '1.3.1', {
+        'modulename': 'netCDF4',
+        'source_urls': ['https://pypi.python.org/packages/source/n/netCDF4/'],
+    }),
+    ('jellyfish', '0.6.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/j/jellyfish/'],
+    }),
+    ('messytables', '0.15.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/m/messytables/'],
+    }),
+    ('toil', '3.15.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/toil/'],
+    }),
+    ('ansible', '2.5.2', {
+        'source_urls': ['https://pypi.python.org/packages/source/a/ansible/'],
+    }),
+    ('CNVkit', '0.9.3', {
+        'modulename': 'cnvlib',
+        'source_urls': ['https://pypi.python.org/packages/source/c/CNVkit/'],
+    }),
+    ('PyInstaller', '3.3.1', {
+        'modulename': 'PyInstaller', 
+        'source_urls': ['https://pypi.python.org/packages/source/P/PyInstaller/'],
+    }),
+    ('slurm-pipeline', '2.0.12', {
+         'modulename': 'slurm_pipeline',
+         'source_urls': ['https://pypi.python.org/packages/source/s/slurm-pipeline/'],
+    }),
+    ('peddy', '0.3.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/peddy/'],
+    }),
+    ('networkx', '2.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'source_urls': ['https://pypi.python.org/packages/source/n/networkx/'],
+    }),
+    ('cyvcf2', '0.8.8', {
+        'source_urls': ['https://pypi.python.org/packages/source/c/cyvcf2/'],
+    }),
+    ('python-snappy', '0.5.2', {
+        'modulename': 'snappy',
+        'source_urls': ['https://pypi.python.org/packages/source/p/python-snappy/'],
+    }),
+    ('geneimpacts', '0.3.5', {
+        'source_urls': ['https://pypi.python.org/packages/source/g/geneimpacts/'],
+    }),
+    ('MACS2', '2.1.1.20160309', {
+        'modulename': 'MACS2',
+        'source_urls': ['https://pypi.python.org/packages/source/M/MACS2/'],
+    }),
+    ('seaborn', '0.8.1', {
+        'source_urls': ['https://pypi.python.org/packages/source/s/seaborn/'],
+    }),
+    ('poretools', '0.6.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/p/poretools/'],
+    }),
+    ('np_utils', '0.5.5.0', {
+        'use_pip': True,
+        'source_urls': ['https://pypi.python.org/packages/source/n/np_utils/'],
+    }),
+    ('backports.weakref', '1.0.post1', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/backports.weakref/'],
+    }),
+    ('protobuf', '3.5.2.post1', {
+        'modulename': 'google.protobuf',
+        'source_urls': ['https://pypi.python.org/packages/source/p/protobuf/'],
+    }),
+    ('wheel', '0.33.4', {
+        'source_urls': ['https://pypi.python.org/packages/source/w/wheel/'],
+    }),
+    ('bleach', '2.1.3', {
+        'source_urls': ['https://pypi.python.org/packages/source/b/bleach/'],
+    }),
+    ('grpcio', '1.11.0', {
+        'modulename': 'grpc',
+        'source_urls': ['https://pypi.python.org/packages/source/g/grpcio'],
+    }),
+    ('termcolor', '1.1.0', {
+        'source_urls': ['https://pypi.python.org/packages/source/t/termcolor'],
+    }),
+    ('gast', '0.2.0'),
+    ('astor', '0.6.2'),
+    ('absl-py', '0.2.0', {
+        'modulename': 'absl',
+        'source_urls': ['https://pypi.python.org/packages/source/a/absl-py'],
+    }),
+    ('umi_tools', '0.5.3'),
+    ('toolz', '0.9.0'),
+    ('regex', '2018.02.21', {
+        'source_urls': ['https://pypi.python.org/packages/source/r/regex/'],
+    }),
+    ('umis', '0.7.0'),
+    ('opencv_python', '3.4.0.12', {
+        'modulename': 'cv2',
+        'source_urls': ['https://pypi.python.org/packages/source/o/opencv-python/'],
+        'source_tmpl': '%(name)s-%(version)s-cp27-cp27mu-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+        'use_pip': True,
+    }),
+    ('pydicom', '1.0.2', {
+    }),
+    ('tabulate', '0.8.2'),
+    ('PyJWT', '1.6.1', {
+        'modulename': 'jwt',
+    }),
+    ('adal', '0.5.1', { }),
+    ('configparser', '3.5.0'),
+    ('entrypoints', '0.2.3'),
+    ('keyring', '12.2.0'),
+    ('isodate', '0.6.0'),
+    ('oauthlib', '2.0.7'),
+    ('requests-oauthlib', '0.8.0', {
+        'modulename': 'oauthlib',
+    }),
+    ('msrest', '0.4.29'),
+    ('msrestazure', '0.4.29'),
+    ('humanfriendly', '4.4.1'),
+    ('argcomplete', '1.11.1'),
+    ('applicationinsights', '0.11.3'),
+    ('xmltodict', '0.11.0'),
+    ('pybedtools', '0.7.10'),
+    ('synapseclient', '1.8.1'),
+    ('CRISPResso', '1.0.13'),
+    ('graphviz', '0.11', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('pydot', '1.2.4', {
+        'use_pip': True,
+    }),
+    ('pycodestyle', '2.4.0', {
+        'use_pip': True,
+    }),
+    ('fa2', '0.2', {
+        'source_urls': ['https://pypi.io/packages/source/f/fa2'],
+    }),
+    ('python-louvain', '0.13', {
+        'modulename': 'community',
+    }),
+    ('pysqlite', '2.8.3', {
+        'modulename': 'pysqlite2',
+    }),
+    ('Parsley', '1.3', {
+        'modulename': 'parsley'
+    }),
+]
+
+moduleclass = 'lang'

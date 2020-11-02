@@ -1,0 +1,2 @@
+PKG_LIBS=-L./../../../src -L/app/easybuild/software/peer-master/1.0.0-foss-2016b/lib -L./../../../External/alglib/src -lalglib
+PKG_CPPFLAGS=-I./../../../../include -I./../../../../External/alglib -I./../../../../External/alglib/src -I./../../../../External -DSWIG

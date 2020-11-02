@@ -1,0 +1,29 @@
+easyblock = 'PythonPackage'
+
+name = 'interop'
+version = '1.1.10'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/Illumina/interop'
+description = """The Illumina InterOp libraries are a set of common routines used for reading InterOp metric files produced by Illumina sequencers including NextSeq 1k/2k. These libraries are backwards compatible and capable of supporting prior releases of the software, with one exception: GA systems have been excluded."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = [PYPI_SOURCE]
+sources = ['interop-1.1.10-cp37-cp37m-manylinux1_x86_64.whl']
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2020.04', versionsuffix),  # for numpy
+]
+
+download_dep_fail = True
+unpack_sources = False
+use_pip = True
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

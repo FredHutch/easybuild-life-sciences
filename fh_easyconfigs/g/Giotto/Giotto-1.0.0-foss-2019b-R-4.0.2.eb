@@ -1,0 +1,80 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'Giotto'
+version = '1.0.0'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.11'
+
+homepage = 'https://rubd.github.io/Giotto_site/'
+description = """The Giotto package consists of two modules, Giotto Analyzer and Viewer, which provide tools
+ to process, analyze and visualize single-cell spatial expression data."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+builddependencies = [('pkg-config', '0.29.2')]
+
+dependencies = [
+    ('R', '4.0.2'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://bioconductor.org/packages/release/bioc/src/contrib/',
+        'https://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on July 8th 2016
+exts_list = [
+    ('RcppAnnoy', '0.0.16'),
+    ('sitmo', '2.0.1'),
+    ('dqrng', '0.2.1'),
+    ('RSpectra', '0.16-0'),
+    ('uwot', '0.1.8'),
+    ('dbscan', '1.1-5'),
+    ('ggalluvial', '0.12.2'),
+    ('ComplexHeatmap', '2.4.3'),
+    ('qvalue', '2.20.0'),
+    ('lfa', '1.18.0'),
+    ('limma', '3.44.3'),
+    ('ggdendro', '0.1.22'),
+    ('RNifti', '1.2.3'),
+    ('oro.nifti', '0.11.0'),
+    ('smfishH', '0.1', {
+        'source_urls': ['https://github.com/lambdamoses/smfishhmrf-r/archive'],
+        'source_tmpl': 'master.zip',
+        'modulename': 'smfishHmrf',
+    }),
+    ('ClusterR', '1.2.2'),
+    ('RcppZiggurat', '0.1.6'),
+    ('Rfast', '2.0.1'),
+    (name, version, {
+        'source_urls': ['https://github.com/RubD/Giotto/archive'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'filename': SOURCE_TAR_GZ,
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['Giotto/R/%(name)s'],
+    'dirs': ['Giotto'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'lang'

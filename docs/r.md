@@ -19,6 +19,7 @@ Beginning with R-3.5.1 there are two modules for each release of R. The two
  The Fred Hutch module inherits the modules from the base module. The base
  module is maintained by the EasyBuild community. 
 
+
 ### Requesting Additional Libraries
 Adding every user request for libraries is becoming a challenge to support.
  The Fred Hutch R module has close to 1,000 libraries. Users are encouraged
@@ -31,8 +32,15 @@ Use `install.packages("package-name")` to install packages in your home director
  search path is based on Major and Minor version numbers. Packages installed for
  R-3.4.x will not be loaded by R-3.5.x. If you are having install issues verify
  that your install library path is defined correctly. 
+
+Notice one of the paths is in my "Home" directory and contains the major.minor
+ version of R `3.6` in the path. If your library path is not versioned you might have
+defined **R_LIBS_USER** in your .Rprofile configuation file.  Use `Sys.getenv()`
+ to check your default user path.
+
 ```
-> Sys.getenv('R_LIBS_USER')
+Sys.getenv("R_LIBS_USER")
+> Sys.getenv("R_LIBS_USER")
 [1] "~/R/x86_64-pc-linux-gnu-library/3.6"
 ``` 
 If an error arises during the installation that says the library path is not writable, you may need to specify the desired library path like this:

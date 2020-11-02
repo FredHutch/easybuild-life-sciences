@@ -1,0 +1,21 @@
+diff -ruN vt-0.57721.orig/Makefile vt-0.57721/Makefile
+--- vt-0.57721.orig/Makefile	2018-05-08 17:33:23.000000000 -0700
++++ vt-0.57721/Makefile	2020-05-17 20:20:36.571367000 -0700
+@@ -1,7 +1,6 @@
+ OPTFLAG = -O3
+ INCLUDES = -I./lib -I. -I./lib/htslib -I./lib/Rmath -I./lib/pcre2
+-CXXFLAGS = -pipe -std=c++0x $(OPTFLAG) $(INCLUDES) -D__STDC_LIMIT_MACROS
+-CXX = g++
++CXXFLAGS += -pipe -std=c++0x $(OPTFLAG) $(INCLUDES) -D__STDC_LIMIT_MACROS
+ 
+ SOURCESONLY =
+ 
+@@ -166,7 +165,7 @@
+ 	git rev-parse HEAD | cut -c 1-8 | awk '{print "#define VERSION \"0.5772-"$$0"\""}' > version.h;
+ 
+ $(TARGET) : ${LIBHTS} ${LIBRMATH} ${LIBPCRE2}  ${LIBSVM} $(TOOLOBJ) 
+-	$(CXX) $(CXXFLAGS) -o $@ $(TOOLOBJ) $(LIBHTS) $(LIBRMATH) ${LIBPCRE2} ${LIBDEFLATE} -lz -lpthread -lbz2 -llzma -lcurl -lcrypto
++	$(CXX) $(CXXFLAGS) -o $@ $(LDFLAGS) $(TOOLOBJ) $(LIBHTS) $(LIBRMATH) ${LIBPCRE2} ${LIBDEFLATE} -lz -lpthread -lbz2 -llzma -lcurl -lcrypto
+ 
+ $(TOOLOBJ): $(HEADERSONLY)
+ 

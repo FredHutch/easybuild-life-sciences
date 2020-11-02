@@ -1,0 +1,38 @@
+# EasyBuild EasyConfig 
+#
+# Author: John Dey jfdey@fredhutch.org 
+# Fred Hutchenson Cancer Research Center - Seattle Washington 
+#
+# 2020.06.20  revised version - change const KMAX to command line argument
+easyblock = 'MakeCp'
+
+name = 'PHASE'
+version = '2.1.2'
+
+homepage = 'http://stephenslab.uchicago.edu/phase/download.html'
+description = """PHASE is a program implementing the method for reconstructing haplotypes
+ from population data"""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://github.com/stephens999/phase/archive']
+sources = ['master.zip']
+patches = ['phase_KMAX.patch']
+
+builddependencies = [('binutils', '2.32')]
+
+start_dir = 'src/phase.2.1.1.source'
+buildopts = ' PHASE'
+
+# prebuildopts = ' make cloneLib && '
+
+files_to_copy = [
+    (["PHASE"], 'bin')
+]
+
+sanity_check_paths = {
+    'files': ["bin/PHASE"],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

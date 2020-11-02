@@ -1,0 +1,66 @@
+# Easybuild easyconfig
+
+# TexLive
+# Net Install for texlive.
+# All network installs of tex live have the same download name.
+# download install-tl-unx.tar.gz and rename it with a version install-tl-unx-20180531.tar.gz
+#
+# requires texlive.profile to be located in the current working directory
+# /app/easybuild/fh_eadyconfig/texlive.profile  paths are based on $EBROOTTEXLIVE
+#
+easyblock = 'CmdCp'
+
+name = 'texlive'
+version = '20200410'
+
+homepage = 'http://tug.org'
+description = """TeX is a typesetting language. Instead of visually
+formatting your text, you enter your manuscript text intertwined with TeX
+commands in a plain text file. You then run TeX to produce formatted output,
+such as a PDF file. Thus, in contrast to standard word processors, your
+document is a separate file that does not pretend to be a representation
+of the final typeset output, and so can be easily edited and manipulated."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['http://mirror.ctan.org/systems/texlive/tlnet']
+sources = ['install-tl-unx-%(version)s.tar.gz']
+
+dependencies = [
+    ('X11', '20190717'),
+    ('libpng', '1.6.37'),
+    ('libGLU', '9.0.1'),
+    ('Perl', '5.30.0'),
+    ('HarfBuzz', '2.6.4'),
+    ('poppler', '0.87.0', '-foss-2019b', True),
+    ('cairo', '1.16.0'),
+    ('fontconfig', '2.13.1'),
+    ('zlib', '1.2.11'),
+    ('graphite2', '1.3.14'),
+]
+
+cmds_map = [('.*', "./configure.py --bootstrap"),
+            ('.*', "./install-tl-%(version)s/install-tl -profile ../texlive-%(version)s.profile")]
+
+files_to_copy = [""]
+
+modextrapaths = {
+    'PATH': 'texlive/2020/bin/x86_64-linux',
+    'INFOPATH': 'texlive/2020/texmf-dist/doc/info',
+    'MANPATH': 'texlive/2020/texmf-dist/doc/man',
+}
+modextravars = {
+    'TEXMFHOME': '%(installdir)s/texlive/2020/texmf-dist'
+}
+
+sanity_check_paths = {
+    'dirs': ['texlive/2020/bin/x86_64-linux',
+             'texlive/2020/texmf-dist',
+             ],
+    'files': [
+       'texlive/2020/bin/x86_64-linux/tex',
+       'texlive/2020/bin/x86_64-linux/latex'
+    ],
+}
+
+moduleclass = 'lang'

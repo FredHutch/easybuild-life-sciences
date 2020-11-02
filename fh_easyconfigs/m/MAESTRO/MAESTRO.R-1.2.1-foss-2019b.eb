@@ -1,0 +1,123 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'MAESTRO.R'
+version = '1.2.1'
+local_biocver = '3.11'
+
+homepage = 'http://www.r-project.org/'
+description = """R is a free software environment for statistical computing and graphics."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+builddependencies = [('pkg-config', '0.29.2')]
+
+dependencies = [
+    ('R', '4.0.2'),
+    ('Graphviz', '2.42.2'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://bioconductor.org/packages/release/bioc/src/contrib/',
+        'https://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+exts_list = [
+    ('BiocGenerics', '0.34.0'),
+    ('Biobase', '2.48.0'),
+    ('S4Vectors', '0.26.1'),
+    ('IRanges', '2.22.2'),
+    ('AnnotationDbi', '1.50.3'),
+    ('org.Hs.eg.db', '3.11.4'),
+    ('DO.db', '2.9'),
+    ('BiocParallel', '1.22.0'),
+    ('fgsea', '1.14.0'),
+    ('GO.db', '3.11.4'),
+    ('GOSemSim', '2.14.2'),
+    ('qvalue', '2.20.0'),
+    ('DOSE', '3.14.0'),
+    ('europepmc', '0.4'),
+    ('gridGraphics', '0.5-0'),
+    ('BiocManager', '1.30.10'),
+    ('rvcheck', '0.1.8'),
+    ('ggplotify', '0.0.5'),
+    ('scatterpie', '0.1.5'),
+    ('enrichplot', '1.8.1'),
+    ('clusterProfiler', '3.16.1'),
+    ('annotate', '1.66.0'),
+    ('genefilter', '1.70.0'),
+    ('limma', '3.44.3'),
+    ('edgeR', '3.30.3'),
+    ('sva', '3.36.0'),
+    ('ggsci', '2.9'),
+    ('ggsignif', '0.6.0'),
+    ('corrplot', '0.84'),
+    ('rstatix', '0.6.0'),
+    ('ggpubr', '0.4.0'),
+    ('msigdbr', '7.2.1'),
+    ('graph', '1.66.0'),
+    ('KEGGgraph', '1.48.0'),
+    ('Rgraphviz', '2.32.0'),
+    ('zlibbioc', '1.34.0'),
+    ('XVector', '0.28.0'),
+    ('Biostrings', '2.56.0'),
+    ('KEGGREST', '1.28.0'),
+    ('pathview', '1.28.1'),
+    ('BiocFileCache', '1.12.1'),
+    ('biomaRt', '2.44.4'),
+    ('MAGeCKFlute', '1.8.0'),
+    ('forestplot', '1.10'),
+    ('Gmisc', '1.11.0'),
+    ('bezier', '1.1.2'),
+    ('Rhtslib', '1.20.0'),
+    ('GenomeInfoDbData', '1.2.3'),
+    ('GenomeInfoDb', '1.24.2'),
+    ('GenomicRanges', '1.40.0'),
+    ('bamsignals', '1.20.0'),
+    ('Rsamtools', '2.4.0'),
+    ('DelayedArray', '0.14.1'),
+    ('SummarizedExperiment', '1.18.2'),
+    ('GenomicAlignments', '1.24.0'),
+    ('rtracklayer', '1.48.0'),
+    ('BSgenome', '1.56.0'),
+    ('regioneR', '1.20.1'),
+    ('GenomicFeatures', '1.40.1'),
+    ('VariantAnnotation', '1.34.0'),
+    ('AnnotationFilter', '1.12.0'),
+    ('ProtGenerics', '1.20.0'),
+    ('ensembldb', '2.12.1'),
+    ('biovizBase', '1.36.0'),
+    ('karyoploteR', '1.14.1'),
+    ('presto', '1.0.0', {
+        'source_urls': ['https://github.com/immunogenomics/presto/archive'],
+        'source_tmpl': 'master.zip',
+    }),
+    ('MAESTRO', '1.2.1', {
+        'source_urls': ['https://github.com/liulab-dfci/MAESTRO/archive'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['perm/R/perm'],
+    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'lang'

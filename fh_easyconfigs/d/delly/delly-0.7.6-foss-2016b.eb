@@ -9,12 +9,10 @@
 #  git clone --recursive https://github.com/tobiasrausch/delly.git
 #  mv delly delly-0.7.3 
 #  zip v0.7.3.zip delly-0.7.3
-
+easyblock = 'MakeCp'
 
 name = 'delly'
 version = '0.7.6'
-
-easyblock = 'MakeCp'
 
 homepage = 'https://github.com/tobiasrausch/delly'
 description = '''DELLY2: Structural variant discovery by integrated paired-end and split-read analysis'''
@@ -23,6 +21,7 @@ toolchain = {'name': 'foss', 'version': '2016b'}
 
 dependencies = [
     ('GCCcore', '5.4.0', '', True)    # needed for /usr/lib/x86-linux-gnu/libstdc++.so.6: version GLIBCXX_3.4.21
+    ('Boost', '1.57.0'),
 ]
 
 source_urls = ['https://github.com/tobiasrausch/delly/archive']

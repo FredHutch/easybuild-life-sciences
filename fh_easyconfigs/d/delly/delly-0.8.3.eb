@@ -1,0 +1,30 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'Binary'
+name = 'delly'
+version = '0.8.3'
+
+homepage = 'https://github.com/dellytools/delly'
+description = """DELLY2: Structural variant discovery by integrated paired-end and split-read analysis"""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/dellytools/delly/releases/download/v0.8.3']
+sources = ['delly_v0.8.3_linux_x86_64bit']
+skipsteps = ['unpack']
+
+preinstallopts = ["cd %(installdir)s && ln -s delly_v0.8.3_linux_x86_64bit %(name)s &&"]
+
+sanity_check_paths = {
+    'files': ['delly_v0.8.3_linux_x86_64bit'],
+    'dirs': [],
+}
+
+modloadmsg = '''delly scripts are located in \\$EBROOTDELLY/src'''
+
+moduleclass = 'bio'
+

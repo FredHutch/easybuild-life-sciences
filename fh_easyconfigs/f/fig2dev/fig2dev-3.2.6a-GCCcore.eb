@@ -1,0 +1,39 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'ConfigureMake'
+
+name = 'fig2dev'
+version = '3.2.6a'
+
+homepage = 'http://www.xfig.org/'
+description = """Xfig is an interactive drawing tool which runs under X Window System."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('xfig', version),
+    ('X11', '20190717'),
+    ('libXaw3d', '1.6.3'),
+    ('freetype', '2.10.1'),
+    ('fontconfig', '2.13.1'),
+    ('Ghostscript', '9.50'),
+    ('libpng', '1.6.37'),
+    ('libjpeg-turbo', '2.0.3'),
+    ('LibTIFF', '4.0.10'),
+    ('Tcl', '8.6.9'),
+    ('zlib', '1.2.11'),
+]
+
+source_urls = ['https://sourceforge.net/projects/mcj/files']
+sources = [SOURCE_TAR_XZ]
+
+sanity_check_paths = {
+    'files': ['bin/fig2dev'],
+    'dirs': []
+}
+
+moduleclass = 'vis'

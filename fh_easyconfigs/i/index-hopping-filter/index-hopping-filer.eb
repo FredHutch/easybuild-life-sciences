@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'PackedBinary'
+
+name = 'index-hopping-filter'
+version = '1.0.1'
+
+homepage = 'https://support.10xgenomics.com/docs/index-hopping-filter'
+description = """index-hopping-filter is a tool that filters index hopped reads from a set of demultiplexed samples.
+ The tool detects and removes likely index hopped reads from demultiplexed FASTQs, and in turn emits new, filtered,
+ FASTQs with similar file and directory layout as the inputs, suitable for use with cellranger count and
+ cellranger vdj."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/10XGenomics/index_hopping_filter/archive']
+# source_urls = ['https://github.com/10XGenomics/index_hopping_filter/releases/download/v1.0.1/index-hopping-filter
+sources = ['%(name)s']
+
+unpack_sources = False
+
+sanity_check_paths = {
+    'files': ["bin/index-hopping-filter"],
+    'dirs': [],
+}
+
+sanity_check_commands = [('bin/%(namelower)s', '--version')]
+
+moduleclass = 'bio'

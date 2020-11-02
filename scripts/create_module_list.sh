@@ -7,6 +7,8 @@
 # Used to create software Inventory
 
 repo='easybuild-life-sciences'
+marker='<!---DO NOT EDIT BELOW HERE--->'
+
 
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Can not find github pages docs directory."
@@ -44,6 +46,7 @@ echo '---' > ${md_out}
 echo 'title: Bio Modules' $os_ver >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo "permalink: /${md_file}/" >> ${md_out}
+echo 'created: '`date +"%Y-%m-%d"` >> ${md_out}
 echo 'toc: true' >> ${md_out}
 echo 'toc_label: "On This Page"' >> ${md_out}
 echo 'sidebar:' >> ${md_out}

@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# Fred Hutchenson Cancer Research Center - Seattle WA US
+easyblock = 'CMakeMake'
+
+name = 'IQ-TREE'
+version = '1.6.12'
+
+homepage = 'http://www.iqtree.org/'
+description = """A fast and effective stochastic algorithm to infer phylogenetic
+ trees by maximum likelihood."""
+
+toolchain = {'name': 'GCCcore', 'version': '5.4.0'}
+
+source_urls = ['https://github.com/Cibiv/IQ-TREE/archive']
+sources = ['v%(version)s.tar.gz']
+
+builddependencies = [
+    ('CMake', '3.12.1'),
+    ('Eigen', '3.3.5', '', True)
+]
+
+configopts = "--DEIGEN3_INCLUDE_DIR=$EBROOTEIGEN/include "
+
+sanity_check_paths = {
+    'files': ['bin/iqtree', 'example.cf', 'example.nex', 'example.phy', 'models.nex'],
+    'dirs': []
+}
+
+moduleclass = 'bio'

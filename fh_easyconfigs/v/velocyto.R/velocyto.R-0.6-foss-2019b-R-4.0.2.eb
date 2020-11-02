@@ -1,0 +1,51 @@
+#  easybuild easyconfig
+#
+#  John Dey jfdey@fredhutch.org
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'velocyto.R'
+version = '0.6'
+versionsuffix = '-R-%(rver)s'
+local_biocver_ = '3.11'
+
+homepage = 'http://velocyto.org/'
+description = """velocyto (velox + κύτος, quick cell) is a package for the analysis of expression dynamics in single cell RNA seq data. In particular, it enables estimations of RNA velocities of single cells by distinguishing unspliced and spliced mRNAs in standard single-cell RNA sequencing protocols (see pre-print below for more information)."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('R', '4.0.2'),
+    ('Boost', '1.71.0'),
+]
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+exts_default_options = {
+    'source_urls': [
+        'https://bioconductor.org/packages/release/bioc/src/contrib/',
+        'https://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/release/data/experiment/src/contrib/',
+        'https://github.com/velocyto-team/velocyto.R/archive',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+exts_list = [
+    ('BiocGenerics', '0.34.0'),
+    ('Biobase', '2.48.0'),
+    ('pcaMethods', '1.80.0'),
+    (name, version, {
+        'source_tmpl': '%s.tar.gz' % version,
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['%(name)s'],
+}
+
+modextrapaths = {'R_LIBS': ''}
+
+moduleclass = 'bio'

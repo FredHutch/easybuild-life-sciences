@@ -1,0 +1,89 @@
+easyblock = 'PythonBundle'
+
+name = 'pyGenomeTracks'
+version = '3.5'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/deeptools/pyGenomeTracks'
+description = """pyGenomeTracks aims to produce high-quality genome browser tracks that are highly customizable."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('Python', '3.7.4', '', ('GCCcore', '8.3.0')),
+    ('SciPy-bundle', '2020.06', versionsuffix),
+    ('matplotlib', '3.1.1', versionsuffix),
+    ('PyTables', '3.6.1', versionsuffix),
+    ('pyBigWig', '0.3.17', versionsuffix),
+    ('Pysam', '0.15.4', versionsuffix),
+    ('pybedtools', '0.8.0', versionsuffix),
+    ('h5py', '2.10.0', versionsuffix),
+    ('PyYAML', '5.1.2', versionsuffix),
+]
+use_pip = True
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+    ('tqdm', '4.48.0', {
+        'checksums': ['6baa75a88582b1db6d34ce4690da5501d2a1cb65c34664840a456b2c9f794d29'],
+    }),
+    ('sortedcontainers', '2.2.2', {
+        'checksums': ['4e73a757831fc3ca4de2859c422564239a31d8213d09a2a666e375807034d2ba'],
+    }),
+    ('intervaltree', '3.0.2', {
+        'checksums': ['cb4f61c81dcb4fea6c09903f3599015a83c9bdad1f0bbd232495e6681e19e273'],
+    }),
+    ('numexpr', '2.7.1', {
+        'checksums': ['b0d239d9827e1bcee08344fd05835823bc60aff97232e35a928214d03ff802b1'],
+    }),
+    ('click', '7.1.2', {
+        'checksums': ['d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a'],
+    }),
+    ('toolz', '0.10.0', {
+        'checksums': ['08fdd5ef7c96480ad11c12d472de21acd32359996f69a5259299b540feba4560'],
+    }),
+    ('cytoolz', '0.10.1', {
+        'checksums': ['82f5bba81d73a5a6b06f2a3553ff9003d865952fcb32e1df192378dd944d8a5c'],
+    }),
+    ('dill', '0.3.2', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'checksums': ['6e12da0d8e49c220e8d6e97ee8882002e624f1160289ce85ec2cc0a5246b3a2e'],
+    }),
+    ('multiprocess', '0.70.10', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'checksums': ['81f388527a0c8766e94fe084fd8a408da5045a9fe7b28e199f684a796f3c6bf8'],
+    }),
+    ('pyfaidx', '0.5.9', {
+        'checksums': ['cdf29c4b72419269554db50e58bc21b5b16a7ad10242748ed40bca6a2ea8e463'],
+    }),
+    ('pypairix', '0.3.7', {
+        'checksums': ['c1b47c05f92b5be628923c60a27344503ddeba5d8f35a3752d646271d38e0525'],
+    }),
+    ('asciitree', '0.3.3', {
+        'checksums': ['4aa4b9b649f85e3fcb343363d97564aa1fb62e249677f2e18a96765145cc0f6e'],
+    }),
+    ('simplejson', '3.17.2', {
+        'checksums': ['75ecc79f26d99222a084fbdd1ce5aad3ac3a8bd535cd9059528452da38b68841'],
+    }),
+    ('cooler', '0.8.9', {
+        'checksums': ['952c09f4d838905b4184ced5ffbd6bda7c167091a871e2f34573eeb844d1a5a1'],
+    }),
+    ('HiCMatrix', '13', {
+        'checksums': ['62691606546f84cc5bf219e81d653bb10d6cf8a7ec417c65422ac0bdc3b566b2'],
+    }),
+    ('gffutils', '0.10.1', {
+        'checksums': ['a8fc39006d7aa353147238160640e2210b168f7849cb99896be3fc9441e351cb'],
+    }),
+    (name, version, {
+        'source_tmpl': '%(version)s.tar.gz',
+        'source_urls': ['https://github.com/deeptools/pyGenomeTracks/archive'],
+        'checksums': ['d5760db0a0980d2b48e8d577459a345c223b9bf2391dfa955976cbdbce217f00'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/'],
+}
+
+moduleclass = 'bio'

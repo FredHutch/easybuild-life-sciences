@@ -1,0 +1,68 @@
+# This file is an EasyBuild reciPY as per https://github.com/hpcugent/easybuild
+# Author: Pablo Escobar Lopez
+# Swiss Institute of Bioinformatics
+# Biozentrum - University of Basel
+
+easyblock = 'MakeCp'
+
+name = 'freebayes'
+version = '1.3.2'
+
+homepage = 'https://github.com/ekg/freebayes'
+description = """Bayesian haplotype-based polymorphism discovery and genotyping."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+sources = [{
+    'filename': '%(name)s-v%(version)s.tar.gz',
+    'git_config': {
+        'url': 'https://github.com/ekg',
+        'repo_name': 'freebayes',
+        'commit': '54bf409',
+        'recursive': True,
+    },
+}]
+
+patches = ['freebayes-parallel_path_removal.patch']
+
+# Option to also build vcflib, this will add these commands to 
+# the end of the build command, and run them if the build completes.
+
+# buildopts = ' && cd vcflib && make && cd ..'
+
+builddependencies = [
+    ('binutils', '2.32'),
+    ('CMake', '3.15.3'),
+]
+
+dependencies = [
+    #('vcflib', '1.0.1'),
+    #('BamTools/2.5.1-GCC-8.3.0
+    ('zlib', '1.2.11'),
+    ('bzip2', '1.0.8'),
+    ('XZ', '5.2.4'),
+    ('cURL', '7.66.0'),
+]
+
+parallel = 1
+
+# Workaround to avoid the error: "The C compiler identification is unknown".
+
+prebuildopts = "unset CC && unset CXX && "
+
+files_to_copy = ["bin", "README.md", "examples", "scripts", "python","test", (["vcflib/tabixpp","vcflib/scripts","vcflib/examples","vcflib/libVCFH","vcflib/smithwaterman", "vcflib/samples"],"vcflib")]
+
+sanity_check_paths = {
+    'files': ["bin/freebayes", "bin/bamleftalign"],
+    'dirs': [""]
+}
+
+# Add scripts dir to PATH:
+
+# postinstallcmds = ["/cvmfs/soft.computecanada.ca/easybuild/bin/setrpaths.sh --path %(installdir)s/vcflib/lib"]
+
+modextrapaths = { 
+    'PATH': ['scripts', 'python', 'vcflib', 'vcflib/scripts'],
+}
+
+moduleclass = 'bio'

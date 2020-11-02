@@ -18,7 +18,7 @@ framework for managing scientific software.
 Inventory of module class "bio" software modules.  This is a subset of all modules that are available. The full
 list of modules encompesses low level system libraries, math libraries, programming languages, and visualization tools. 
 
- - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-14.04/)
+ - [Life Science Software Inventory]({{ site.baseurl }}/bio-modules-18.04/)
 
 ## Programming Language Modules
 Scientific Computing maintains custom builds for R and Python. The
@@ -28,7 +28,7 @@ bellow to see a list of available builds with a list of modules.
 
  - [R Modules]({{ site.baseurl }}/r/)
  - [Python Modules]({{ site.baseurl }}/python/)
- - [foss-2016b]({{ site.baseurl }}/foss-2016b/) (Free and Open Source Software)
+ - [foss-2019b]({{ site.baseurl }}/foss-2019b/) (Free and Open Source Software)
  - [foss-2018b]({{ site.baseurl }}/foss-2018b/) (Free and Open Source Software)
  - [Dependency Graphs]({{ site.baseurl }}/dot/)
 
@@ -51,7 +51,7 @@ Modules can be loaded, unloaded, listed and searched.  The
 ```module load``` command can be abrivated to ```ml```.
 
 Load a Python module
-```ml Python/3.6.5-foss-2016b-fh1```
+```ml Python/3.7.4-foss-2019b-fh1```
 
 List currently loaded modules
 ```ml list```
@@ -67,9 +67,8 @@ Place the following in your bash or sbatch scripts to load modules within
 your scripts.
 
 ```
-source /app/Lmod/lmod/lmod/init/bash
-module use /app/easybuild/modules/all
-module load R/3.5.0-foss-2016b-fh1
+source /app/lmod/lmod/init/profile
+module load R/4.0.0-foss-2019b
 ```
 
 ### Software Requests

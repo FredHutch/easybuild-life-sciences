@@ -1,0 +1,132 @@
+easyblock = 'PythonBundle'
+
+name = 'poetry'
+version = '1.0.5'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = "https://python-poetry.org/"
+description = """Python packaging and dependency management made easy"""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('pkgconfig', '1.5.1', versionsuffix),
+]
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+use_pip = True
+
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+    ('poetry_core', '1.0.0a4', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('pylev', '1.3.0'),
+    ('woops', '0.2.1'),
+    ('typing-extensions', '3.7.4.2', {
+        'modulename': 'typing_extensions',
+        'source_tmpl': 'typing_extensions-%(version)s.tar.gz',
+    }),
+    ('clikit', '0.5.0', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('cachy', '0.3.0'),
+    ('chardet', '3.0.4', {
+    }),
+    ('idna', '2.9', {
+    }),
+    ('urllib3', '1.25.8', {
+    }),
+    ('certifi', '2020.4.5.1', {
+    }),
+    ('requests', '2.23.0', {
+    }),
+    ('requests-toolbelt',  '0.9.1', {
+        'modulename': 'requests_toolbelt',
+    }),
+    ('attrs', '19.3.0', {
+        'modulename': 'attr',
+    }),
+    ('flit-core', '2.2.0', {
+        'modulename': 'flit_core',
+        'source_tmpl': 'flit_core-%(version)s.tar.gz',
+    }),
+    ('pyrsistent', '0.15.7'),
+    ('zipp', '3.1.0', {
+    }),
+    ('scandir', '1.10.0', {
+    }),
+    ('pathlib2', '2.3.5', {
+    }),
+    ('contextlib2', '0.6.0.post1', {
+    }),
+    ('importlib-metadata', '1.6.0', {
+        'modulename': 'importlib_metadata',
+        'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
+    }),
+    ('jsonschema', '3.2.0'),
+    ('pytoml', '0.1.21', {
+    }),
+    ('intreehooks', '1.0'),
+    ('msgpack', '1.0.0', {
+    }),
+    ('CacheControl', '0.12.6', {
+        'modulename': 'cachecontrol',
+    }),
+    ('pkginfo', '1.5.0.1'),
+    ('webencodings', '0.5.1'),
+    ('html5lib', '1.0.1'),
+    ('shellingham', '1.3.2', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('tomlkit', '0.5.11', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    #('yaspin'1.0.0a5'0.14.3'),
+    ('pyparsing', '2.4.7'),
+    ('appdirs', '1.4.3'),
+    ('distlib', '0.3.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('filelock', '3.0.12'),
+    ('singledispatch', '3.4.0.3'),
+    ('importlib-resources', '1.4.0', {
+        'modulename': 'importlib_resources',
+        'source_tmpl': 'importlib_resources-%(version)s.tar.gz',
+    }),
+    ('virtualenv', '20.0.16'),
+    ('glob2', '0.7'),
+    ('cryptography', '2.9'),
+    ('jeepney', '0.4.3'),
+    ('SecretStorage', '3.1.2', {
+        'modulename': 'secretstorage',
+    }),
+    ('pywin32-ctypes', '0.2.0', {
+        'modulename': 'win32ctypes',
+    }),
+    ('keyring', '21.2.0'),
+    ('pastel', '0.2.0'),
+    #('cleo', '0.7.6', ),
+    ('docutils', '0.16', {
+    }),
+    ('flit', '2.2.0'),
+    ('ptyprocess', '0.6.0'),
+    ('pexpect', '4.8.0'),
+    (name, version),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'lib'

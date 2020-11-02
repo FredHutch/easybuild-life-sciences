@@ -1,0 +1,50 @@
+# add Python shebang header
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_bamToGFF.py young_computation-rose-feb35cb1d955/ROSE_bamToGFF.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_bamToGFF.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_bamToGFF.py	2020-06-30 07:25:41.567262000 -0700
+@@ -1,4 +1,4 @@
+-
++#!/usr/bin/env python
+ #bamToGFF.py
+ 
+ #script to grab reads from a bam that align to a .gff file
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_bamToGFF_turbo.py young_computation-rose-feb35cb1d955/ROSE_bamToGFF_turbo.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_bamToGFF_turbo.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_bamToGFF_turbo.py	2020-06-30 07:25:54.744590000 -0700
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ #bamToGFF_turbo.py
+ 
+ #20130716
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_geneMapper.py young_computation-rose-feb35cb1d955/ROSE_geneMapper.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_geneMapper.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_geneMapper.py	2020-06-30 07:26:10.121428000 -0700
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ #130428
+ 
+ #ROSE_geneMapper.py
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_main.py young_computation-rose-feb35cb1d955/ROSE_main.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_main.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_main.py	2020-06-30 07:26:28.870194000 -0700
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ #mapEnhancerFromFactor.py
+ '''
+ PROGRAM TO STITCH TOGETHER REGIONS TO FORM ENHANCERS, MAP READ DENSITY TO STITCHED REGIONS,
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_main_turbo.py young_computation-rose-feb35cb1d955/ROSE_main_turbo.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_main_turbo.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_main_turbo.py	2020-06-30 07:26:45.968452000 -0700
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ #mapEnhancerFromFactor.py
+ '''
+ PROGRAM TO STITCH TOGETHER REGIONS TO FORM ENHANCERS, MAP READ DENSITY TO STITCHED REGIONS,
+diff -ruN young_computation-rose-feb35cb1d955.orig/ROSE_utils.py young_computation-rose-feb35cb1d955/ROSE_utils.py
+--- young_computation-rose-feb35cb1d955.orig/ROSE_utils.py	2018-11-27 14:38:14.000000000 -0800
++++ young_computation-rose-feb35cb1d955/ROSE_utils.py	2020-06-30 07:26:59.695244000 -0700
+@@ -1,3 +1,4 @@
++#!/usr/bin/env python
+ import os
+ 
+ import re

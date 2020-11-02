@@ -1,0 +1,38 @@
+easyblock = 'MakeCp'
+
+name = 'vcflib'
+version = '1.0.1'
+
+homepage = 'https://github.com/vcflib/vcflib'
+description = """vcflib provides methods to manipulate and interpret sequence variation as it can be
+ described by VCF. The Variant Call Format (VCF) is a flat-file, tab-delimited textual format intended
+ to concisely describe reference-indexed genetic variations between individuals."""
+
+toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
+
+source_urls = ['https://github.com/vcflib/vcflib/archive'],
+sources = ['%(name)s-%(version)s-src.tar.gz']
+checksums = ['b655f56d8a7e3f3106f847b83a0278c6593fc71e5f024386bde711c8daaf6bec']
+
+builddependencies = [
+    ('binutils', '2.32'),
+    ('CMake', '3.15.3'),
+]
+
+dependencies = [
+    ('XZ', '5.2.4'),
+    ('zlib', '1.2.11'),
+    ('bzip2', '1.0.8'),
+]
+
+files_to_copy = [
+    'bin', 'examples', 'fastahack', 'fsom', 'include', 'lib', 'libVCFH', 'logos',
+    'scripts', 'tabixpp',
+]
+
+sanity_check_paths = {
+    'files': ['bin/vcfecho'],
+    'dirs': ['bin', 'lib'],
+}
+
+moduleclass = 'bio'

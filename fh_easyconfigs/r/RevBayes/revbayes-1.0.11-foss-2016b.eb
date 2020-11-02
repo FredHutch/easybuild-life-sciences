@@ -1,0 +1,44 @@
+# easybuild easyconfig
+easyblock = 'MakeCp'
+
+name = 'revbayes'
+version = '1.0.11'
+
+homepage = 'https://revbayes.github.io/'
+
+description = """RevBayes provides an interactive environment for statistical
+ computation in phylogenetics. It is primarily intended for modeling,
+ simulation, and Bayesian inference in evolutionary biology, particularly
+ phylogenetics."""
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = ['https://github.com/revbayes/revbayes/archive']
+sources = [{
+    'download_filename': 'v%(version)s.zip',
+    'filename': SOURCE_ZIP,
+}]
+patches = ['%(name)s-%(version)s_git.patch']
+checksums = [
+    '772ae93d7430e16e8ca4b490a25e32424d6cfeb6be6eef49cd2c1f11fc1b32db',  # revbayes-1.0.11.zip
+]
+
+builddependencies = [
+    ('CMake', '3.7.2'),
+]
+dependencies = [
+    ('Java', '1.8', '', True),
+]
+
+start_dir = 'projects/cmake'
+build_cmd = './build.sh '
+preconfigopts = "export CMAKE_MODULE_PATH=$EBROOTBOOST && "
+
+files_to_copy = [(['projects/cmake/rb'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/rb'],
+    'dirs': [],
+}
+
+moduleclass = 'tools'

@@ -1,0 +1,40 @@
+# easybuild easyconfig
+# John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center - Seattle US
+easyblock = 'MakeCp'
+
+name = 'philosopher'
+version = '3.3.10'
+
+homepage = 'https://github.com/Nesvilab/philosopher/wiki'
+description = """Philosopher provides easy access to third-party tools and custom algorithms
+ allowing users to develop proteomics analysis, from Peptide Spectrum Matching to annotated
+ protein reports. Philosopher is also tuned for Open Search analysis, providing a modified
+ version of the prophets for peptide validation and protein inference. To this date, Philosopher
+ is the only proteomics toolkit that allows you to process and analyze close and
+ open search results."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/Nesvilab/philosopher/archive']
+sources = ['v%(version)s.tar.gz']
+patches = [('philosopher-%(version)s_make.patch', 1)]
+
+checksums = [
+    'b534736a8efda8c52ae14881ecc7634a42c1de35f2e6dca502ef796bf691f983',  # v3.3.10.tar.gz
+    'c330e66de3022cd2be9d7615cfcd965b8c7dbb6eb131ad7d862bcf65935e36d1',  # philosopher-3.3.10_make.patch
+]
+
+dependencies = [('Go', '1.14.1')]
+
+
+files_to_copy = ['images', 'lib', 'test', 'cmd', 'philosopher']
+
+sanity_check_paths = {
+    'files': ['%(name)s'],
+    'dirs': []
+}
+
+modextrapaths = {'PATH': ['']}
+
+moduleclass = 'bio'

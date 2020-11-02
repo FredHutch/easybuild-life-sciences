@@ -1,0 +1,1 @@
+This folder contains statically linked executable file that can be run under linux 64 bit platform.

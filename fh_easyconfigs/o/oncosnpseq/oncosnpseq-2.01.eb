@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'Tarball'
+name = 'oncosnpseq'
+version = '2.01'
+
+homepage = 'https://sites.google.com/site/oncosnpseq'
+description = """OncoSNP-SEQ is an analytical tool for characterising copy number alterations
+ and loss-of-heterozygosity (LOH) events in cancer samples from whole genome sequencing data."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/cwcyau/oncosnpseq/archive']
+sources = ['%(version)s.tar.gz']
+
+dependencies = [
+    ('Perl', '5.30.0', '', ('GCCcore', '8.3.0')),
+]
+
+sanity_check_paths = {
+    'files': ['scripts/process_pileup.pl'],
+    'dirs': ['config', 'docs', 'external', 'scripts', 'test']
+}
+
+modextrapaths = {'PERL5LIB': 'scripts'}
+
+moduleclass = 'bio'

@@ -1,0 +1,43 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'Tarball'
+
+name = 'RNA-SeQC'
+version = '2.3.4'
+
+homepage = 'https://software.broadinstitute.org/cancer/cga/%(namelower)s'
+description = """RNA-SeQC is a java program which computes a series of quality control metrics for
+ RNA-seq data. The input can be one or more BAM files. The output consists of HTML reports and tab
+ delimited files of metrics data. This program can be valuable for comparing sequencing quality
+ across different samples or experiments to evaluate different experimental parameters. It can
+ also be run on individual samples as a means of quality control before continuing with downstream
+ analysis."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/broadinstitute/rnaseqc/releases/download/v%(version)s']
+sources = ['rnaseqc.v%(version)s.linux.gz']
+
+dependencies = [
+    ('Python', '3.7.4'),
+    ('SciPy-bundle', '2020.04', '-Python-3.7.4'),
+    ('HTSlib', '1.10.2'),
+    ('BamTools', '2.5.1'),
+    ('Boost', '1.72.0'),
+    ('BWA', '0.7.17'),
+    ('Java', '1.8', '', True),
+]
+
+modloadmsg = "To execute RNA-SeQC run: java -jar $EBROOTRNAMINSEQC/%(name)s_v%(version)s.jar"
+
+postinstallcmds = ['mkdir %(installdir)s/bin',
+                   'mv %(installdir)s/rnaseqc.v%(version)s.linux %(installdir)s/bin/rnaseqc',
+                   'chmod +x %(installdir)s/bin/rnaseqc',
+]
+
+sanity_check_paths = {
+    'files': ['bin/rnaseqc'],
+    'dirs': [''],
+}
+
+moduleclass = 'bio'

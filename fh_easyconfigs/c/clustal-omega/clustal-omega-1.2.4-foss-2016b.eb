@@ -1,0 +1,29 @@
+easyblock = 'ConfigureMake'
+
+name = 'clustal-omega'
+version = '1.2.4'
+
+homepage = 'http://www.clustal.org/omega'
+description = """ Clustal Omega is a multiple sequence alignment
+ program for proteins. It produces biologically meaningful multiple
+ sequence alignments of divergent sequences. Evolutionary relationships
+ can be seen via viewing Cladograms or Phylograms """
+
+toolchain = {'name': 'foss', 'version': '2016b'}
+
+source_urls = [homepage]
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('argtable', '2.13'),
+]
+
+sanity_check_paths = {
+    'dirs': ['bin', 'include', 'lib', 'share'],
+    'files': ['bin/clustalo',
+              'include/clustalo/%(name)s.h',
+              'lib/libclustalo.a',
+              ]
+}
+
+moduleclass = 'tools'

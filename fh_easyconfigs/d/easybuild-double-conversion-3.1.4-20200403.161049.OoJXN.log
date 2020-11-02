@@ -1,0 +1,147 @@
+== 2020-04-03 16:10:49,708 easyblock.py:280 INFO This is EasyBuild 4.1.2 (framework: 4.1.2, easyblocks: 4.1.1) on host d49c441cdd38.
+== 2020-04-03 16:10:49,708 easyblock.py:286 INFO This is easyblock SCons from module easybuild.easyblocks.generic.scons (/app/software/EasyBuild/4.1.2/lib/python2.7/site-packages/easybuild/easyblocks/generic/scons.pyo)
+== 2020-04-03 16:10:49,708 easyblock.py:843 INFO Build dir set to /app/build/doubleconversion/3.1.4/GCCcore-8.3.0
+== 2020-04-03 16:10:49,708 easyblock.py:903 INFO Software install dir set to /app/software/double-conversion/3.1.4-GCCcore-8.3.0
+== 2020-04-03 16:10:49,708 easyblock.py:908 INFO Module install dir set to /app/modules/all
+== 2020-04-03 16:10:49,708 easyblock.py:265 INFO Init completed for application name double-conversion version 3.1.4
+== 2020-04-03 16:10:49,708 easyblock.py:3079 INFO Obtained application instance of for double-conversion (easyblock: SCons)
+== 2020-04-03 16:10:49,709 one.py:150 INFO Skipping reformatting value for parameter 'toolchain'
+== 2020-04-03 16:10:49,709 filetools.py:1296 INFO Creating directory /tmp/eb-Wo4FKL/reprod_20200403161049_165 (parents: True, set_gid: False, sticky: False)
+== 2020-04-03 16:10:49,709 easyblock.py:3257 INFO Dumped easyconfig instance to /tmp/eb-Wo4FKL/reprod_20200403161049_165/double-conversion-3.1.4-GCCcore-8.3.0.eb
+== 2020-04-03 16:10:49,710 filetools.py:1296 INFO Creating directory /tmp/eb-Wo4FKL/reprod_20200403161049_165/easyblocks (parents: True, set_gid: False, sticky: False)
+== 2020-04-03 16:10:49,710 filetools.py:1773 INFO /app/software/EasyBuild/4.1.2/lib/python2.7/site-packages/easybuild/easyblocks/generic/scons.py copied to /tmp/eb-Wo4FKL/reprod_20200403161049_165/easyblocks/scons.py
+== 2020-04-03 16:10:49,710 easyblock.py:3272 INFO Dumped easyblock scons.py required for reproduction to /tmp/eb-Wo4FKL/reprod_20200403161049_165/easyblocks
+== 2020-04-03 16:10:49,710 easyblock.py:1590 INFO Number of iterations to perform for central part of installation procedure: 1
+== 2020-04-03 16:10:49,710 build_log.py:265 INFO building and installing double-conversion/3.1.4-GCCcore-8.3.0...
+== 2020-04-03 16:10:49,710 build_log.py:265 INFO fetching files...
+== 2020-04-03 16:10:49,711 easyblock.py:2857 INFO Starting fetch step
+== 2020-04-03 16:10:49,711 easyblock.py:2863 INFO Running method fetch_step part of step fetch
+== 2020-04-03 16:10:49,711 easyblock.py:1699 WARNING Easyconfig does not specify an EasyBuild-version (key 'easybuild_version')! Assuming the latest version
+== 2020-04-03 16:10:49,711 tools.py:266 INFO Found location to 'eb' script via $EB_SCRIPT_PATH: /app/software/EasyBuild/4.1.2/bin/eb
+== 2020-04-03 16:10:49,711 tools.py:280 INFO Also considering installation prefix /app/software/EasyBuild/4.1.2 (determined via path to 'eb' script)...
+== 2020-04-03 16:10:49,712 easyblock.py:671 INFO Found file v3.1.4.tar.gz at /app/sources/d/double-conversion/v3.1.4.tar.gz
+== 2020-04-03 16:10:49,712 easyblock.py:394 INFO Added sources: [{'path': '/app/sources/d/double-conversion/v3.1.4.tar.gz', 'cmd': None, 'finalpath': '/app/build/doubleconversion/3.1.4/GCCcore-8.3.0', 'name': 'v3.1.4.tar.gz', 'checksum': '95004b65e43fefc6100f337a25da27bb99b9ef8d4071a36a33b5e83eb1f82021'}]
+== 2020-04-03 16:10:49,712 easyblock.py:1740 INFO no patches provided
+== 2020-04-03 16:10:49,725 easyblock.py:1750 INFO md5 checksum for /app/sources/d/double-conversion/v3.1.4.tar.gz: 9851753f352c7079c8c8fd07c63dd1e7
+== 2020-04-03 16:10:49,743 easyblock.py:1750 INFO sha256 checksum for /app/sources/d/double-conversion/v3.1.4.tar.gz: 95004b65e43fefc6100f337a25da27bb99b9ef8d4071a36a33b5e83eb1f82021
+== 2020-04-03 16:10:49,743 easyblock.py:1785 INFO Checking dirs that need to be created: ['/app/software/double-conversion/3.1.4-GCCcore-8.3.0', '/app/modules/all/double-conversion', '/app/modules/lib/double-conversion']
+== 2020-04-03 16:10:49,744 build_log.py:265 INFO creating build dir, resetting environment...
+== 2020-04-03 16:10:49,744 easyblock.py:2857 INFO Starting ready step
+== 2020-04-03 16:10:49,744 easyblock.py:2863 INFO Running method check_readiness_step part of step ready
+== 2020-04-03 16:10:49,748 run.py:219 INFO running cmd: ulimit -u 
+== 2020-04-03 16:10:49,751 easyblock.py:1609 INFO Setting parallelism: 8
+== 2020-04-03 16:10:49,839 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib')
+== 2020-04-03 16:10:49,839 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:49,839 easyblock.py:1648 WARNING Loaded modules detected: ['EasyBuild/4.1.2', 'GCCcore/8.3.0', 'zlib/1.2.11-GCCcore-8.3.0', 'binutils/2.32-GCCcore-8.3.0', 'GCC/8.3.0', 'numactl/2.0.12-GCCcore-8.3.0', 'XZ/5.2.4-GCCcore-8.3.0', 'libxml2/2.9.9-GCCcore-8.3.0', 'libpciaccess/0.14-GCCcore-8.3.0', 'hwloc/1.11.12-GCCcore-8.3.0', 'OpenMPI/3.1.4-GCC-8.3.0', 'OpenBLAS/0.3.7-GCC-8.3.0', 'gompi/2019b', 'FFTW/3.3.8-gompi-2019b', 'ScaLAPACK/2.0.2-gompi-2019b', 'foss/2019b']
+== 2020-04-03 16:10:49,839 easyblock.py:2863 INFO Running method make_builddir part of step ready
+== 2020-04-03 16:10:49,840 easyblock.py:928 INFO Found old directory /app/build/doubleconversion/3.1.4/GCCcore-8.3.0
+== 2020-04-03 16:10:49,973 filetools.py:1392 INFO Path /app/build/doubleconversion/3.1.4/GCCcore-8.3.0 successfully removed.
+== 2020-04-03 16:10:49,973 easyblock.py:936 INFO Removed old directory /app/build/doubleconversion/3.1.4/GCCcore-8.3.0
+== 2020-04-03 16:10:49,973 filetools.py:1296 INFO Creating directory /app/build/doubleconversion/3.1.4/GCCcore-8.3.0 (parents: True, set_gid: False, sticky: False)
+== 2020-04-03 16:10:49,974 easyblock.py:2863 INFO Running method reset_env part of step ready
+== 2020-04-03 16:10:49,974 easyblock.py:2863 INFO Running method handle_iterate_opts part of step ready
+== 2020-04-03 16:10:49,975 build_log.py:265 INFO unpacking...
+== 2020-04-03 16:10:49,975 easyblock.py:2857 INFO Starting source step
+== 2020-04-03 16:10:49,975 easyblock.py:2863 INFO Running method checksum_step part of step source
+== 2020-04-03 16:10:49,997 easyblock.py:1801 INFO Checksum verification for /app/sources/d/double-conversion/v3.1.4.tar.gz using 95004b65e43fefc6100f337a25da27bb99b9ef8d4071a36a33b5e83eb1f82021 passed.
+== 2020-04-03 16:10:49,998 easyblock.py:2863 INFO Running method extract_step part of step source
+== 2020-04-03 16:10:49,998 easyblock.py:1883 INFO Unpacking source v3.1.4.tar.gz
+== 2020-04-03 16:10:49,999 run.py:219 INFO running cmd: tar xzf /app/sources/d/double-conversion/v3.1.4.tar.gz 
+== 2020-04-03 16:10:50,492 build_log.py:265 INFO patching...
+== 2020-04-03 16:10:50,492 easyblock.py:2857 INFO Starting patch step
+== 2020-04-03 16:10:50,492 easyblock.py:2863 INFO Running method patch_step part of step patch
+== 2020-04-03 16:10:50,492 build_log.py:265 INFO preparing...
+== 2020-04-03 16:10:50,492 easyblock.py:2857 INFO Starting prepare step
+== 2020-04-03 16:10:50,493 easyblock.py:2863 INFO Running method prepare_step part of step prepare
+== 2020-04-03 16:10:50,619 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib')
+== 2020-04-03 16:10:50,619 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:50,896 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib:/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib')
+== 2020-04-03 16:10:50,896 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:50,998 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib')
+== 2020-04-03 16:10:50,998 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:51,276 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib')
+== 2020-04-03 16:10:51,276 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:51,614 environment.py:97 INFO Environment variable LD_LIBRARY_PATH set to /app/software/Python/3.7.4-GCCcore-8.3.0/lib:/app/software/libffi/3.2.1-GCCcore-8.3.0/lib64:/app/software/libffi/3.2.1-GCCcore-8.3.0/lib:/app/software/GMP/6.1.2-GCCcore-8.3.0/lib:/app/software/SQLite/3.29.0-GCCcore-8.3.0/lib:/app/software/Tcl/8.6.9-GCCcore-8.3.0/lib:/app/software/libreadline/8.0-GCCcore-8.3.0/lib:/app/software/ncurses/6.1-GCCcore-8.3.0/lib:/app/software/bzip2/1.0.8-GCCcore-8.3.0/lib:/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib (previous value: '/app/software/Python/3.7.4-GCCcore-8.3.0/lib:/app/software/libffi/3.2.1-GCCcore-8.3.0/lib64:/app/software/libffi/3.2.1-GCCcore-8.3.0/lib:/app/software/GMP/6.1.2-GCCcore-8.3.0/lib:/app/software/SQLite/3.29.0-GCCcore-8.3.0/lib:/app/software/Tcl/8.6.9-GCCcore-8.3.0/lib:/app/software/libreadline/8.0-GCCcore-8.3.0/lib:/app/software/ncurses/6.1-GCCcore-8.3.0/lib:/app/software/bzip2/1.0.8-GCCcore-8.3.0/lib:/app/software/ScaLAPACK/2.0.2-gompi-2019b/lib:/app/software/FFTW/3.3.8-gompi-2019b/lib:/app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib:/app/software/OpenMPI/3.1.4-GCC-8.3.0/lib:/app/software/hwloc/1.11.12-GCCcore-8.3.0/lib:/app/software/libpciaccess/0.14-GCCcore-8.3.0/lib:/app/software/libxml2/2.9.9-GCCcore-8.3.0/lib:/app/software/XZ/5.2.4-GCCcore-8.3.0/lib:/app/software/numactl/2.0.12-GCCcore-8.3.0/lib:/app/software/binutils/2.32-GCCcore-8.3.0/lib:/app/software/zlib/1.2.11-GCCcore-8.3.0/lib:/app/software/GCCcore/8.3.0/lib64:/app/software/GCCcore/8.3.0/lib')
+== 2020-04-03 16:10:51,614 environment.py:97 INFO Environment variable LD_PRELOAD set to  (previous value: '')
+== 2020-04-03 16:10:51,617 toolchain.py:704 INFO List of toolchain dependency modules and toolchain definition match!
+== 2020-04-03 16:10:51,618 compiler.py:347 INFO _set_optimal_architecture: using march=native as optarch for x86_64.
+== 2020-04-03 16:10:51,620 variables.py:201 WARNING flags_for_subdirs: directory /app/software/binutils/2.32-GCCcore-8.3.0/lib64 was not found
+== 2020-04-03 16:10:51,620 variables.py:201 WARNING flags_for_subdirs: directory /app/software/SCons/3.1.1-GCCcore-8.3.0/include was not found
+== 2020-04-03 16:10:51,620 variables.py:201 WARNING flags_for_subdirs: directory /app/software/SCons/3.1.1-GCCcore-8.3.0/lib64 was not found
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable CC set to gcc (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable EBVARCC set to gcc (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable CFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable EBVARCFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable CPPFLAGS set to -I/app/software/binutils/2.32-GCCcore-8.3.0/include (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable EBVARCPPFLAGS set to -I/app/software/binutils/2.32-GCCcore-8.3.0/include (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable CXX set to g++ (previously undefined)
+== 2020-04-03 16:10:51,621 environment.py:97 INFO Environment variable EBVARCXX set to g++ (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable CXXFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARCXXFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable F77 set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARF77 set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable F90 set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARF90 set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable F90FLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARF90FLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable FC set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARFC set to gfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable FCFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARFCFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable FFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARFFLAGS set to -O2 -ftree-vectorize -march=native -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable FLIBS set to -lgfortran (previously undefined)
+== 2020-04-03 16:10:51,622 environment.py:97 INFO Environment variable EBVARFLIBS set to -lgfortran (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable LDFLAGS set to -L/app/software/SCons/3.1.1-GCCcore-8.3.0/lib -L/app/software/binutils/2.32-GCCcore-8.3.0/lib -L/app/software/GCCcore/8.3.0/lib64 -L/app/software/GCCcore/8.3.0/lib (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable EBVARLDFLAGS set to -L/app/software/SCons/3.1.1-GCCcore-8.3.0/lib -L/app/software/binutils/2.32-GCCcore-8.3.0/lib -L/app/software/GCCcore/8.3.0/lib64 -L/app/software/GCCcore/8.3.0/lib (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable LIBS set to -lm -lpthread (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable EBVARLIBS set to -lm -lpthread (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable OPTFLAGS set to -O2 -ftree-vectorize -march=native (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable EBVAROPTFLAGS set to -O2 -ftree-vectorize -march=native (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable PRECFLAGS set to -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,623 environment.py:97 INFO Environment variable EBVARPRECFLAGS set to -fno-math-errno (previously undefined)
+== 2020-04-03 16:10:51,623 easyblock.py:1509 INFO Using /app/build/doubleconversion/3.1.4/GCCcore-8.3.0/double-conversion-3.1.4/ as start dir
+== 2020-04-03 16:10:51,623 build_log.py:265 INFO configuring...
+== 2020-04-03 16:10:51,623 easyblock.py:2857 INFO Starting configure step
+== 2020-04-03 16:10:51,624 easyblock.py:2863 INFO Running method configure_step part of step configure
+== 2020-04-03 16:10:51,624 build_log.py:265 INFO building...
+== 2020-04-03 16:10:51,624 easyblock.py:2857 INFO Starting build step
+== 2020-04-03 16:10:51,624 easyblock.py:2863 INFO Running method build_step part of step build
+== 2020-04-03 16:10:51,624 run.py:219 INFO running cmd:  scons -j 8  PREFIX=/app/software/double-conversion/3.1.4-GCCcore-8.3.0 
+== 2020-04-03 16:10:52,213 build_log.py:169 ERROR EasyBuild crashed with an error (at easybuild/base/exceptions.py:124 in __init__): cmd " scons -j 8  PREFIX=/app/software/double-conversion/3.1.4-GCCcore-8.3.0" exited with exit code 2 and output:
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+g++ -o double-conversion/bignum-dtoa.o -c -I. double-conversion/bignum-dtoa.cc
+sh: 1: g++: not found
+g++ -o double-conversion/bignum-dtoa.os -c -fPIC -I. double-conversion/bignum-dtoa.cc
+sh: 1: g++: not found
+g++ -o double-conversion/bignum.o -c -I. double-conversion/bignum.cc
+sh: 1: g++: not found
+g++ -o double-conversion/bignum.os -c -fPIC -I. double-conversion/bignum.cc
+sh: 1: g++: not found
+g++ -o double-conversion/cached-powers.o -c -I. double-conversion/cached-powers.cc
+sh: 1: g++: not found
+g++ -o double-conversion/cached-powers.os -c -fPIC -I. double-conversion/cached-powers.cc
+sh: 1: g++: not found
+g++ -o double-conversion/diy-fp.o -c -I. double-conversion/diy-fp.cc
+sh: 1: g++: not found
+scons: *** [double-conversion/bignum-dtoa.o] Error 127
+g++ -o double-conversion/diy-fp.os -c -fPIC -I. double-conversion/diy-fp.cc
+scons: *** [double-conversion/bignum-dtoa.os] Error 127
+scons: *** [double-conversion/bignum.o] Error 127
+scons: *** [double-conversion/bignum.os] Error 127
+scons: *** [double-conversion/cached-powers.o] Error 127
+scons: *** [double-conversion/cached-powers.os] Error 127
+scons: *** [double-conversion/diy-fp.o] Error 127
+sh: 1: g++: not found
+scons: *** [double-conversion/diy-fp.os] Error 127
+scons: building terminated because of errors.
+ (at easybuild/tools/run.py:529 in parse_cmd_output)
+== 2020-04-03 16:10:52,213 easyblock.py:3109 WARNING build failed (first 300 chars): cmd " scons -j 8  PREFIX=/app/software/double-conversion/3.1.4-GCCcore-8.3.0" exited with exit code 2 and output:
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+g++ -o double-conversion/bignum-dtoa.o -c -I. double-conversion/bignum-dtoa.cc
+sh: 1
+== 2020-04-03 16:10:52,213 easyblock.py:295 INFO Closing log for application name double-conversion version 3.1.4

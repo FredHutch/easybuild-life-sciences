@@ -1,0 +1,44 @@
+# easybuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+# 
+easyblock = 'ConfigureMake'
+
+name = 'nodejs-react'
+version = '9.8.0'
+
+homepage = 'http://nodejs.org'
+
+description = """Node.js is a platform built on Chrome's JavaScript runtime 
+ for easily building fast, scalable network applications. Node.js uses an 
+ event-driven, non-blocking I/O model that makes it lightweight and efficient, 
+ perfect for data-intensive real-time applications that run across distributed devices."""
+
+toolchain = { 'name': 'foss', 'version': '2016b' }
+
+source_urls = ['http://nodejs.org/dist/v%(version)s/']
+sources = ['node-v%(version)s.tar.gz']
+
+builddependencies = [
+    ('CMake', '3.7.2'),
+    ('binutils', '2.26'),
+]
+
+dependencies = [
+    ('Python', '2.7.15'),
+]
+
+postinstallcmds = [
+    '%(installdir)s/bin/npm install react -g',
+    '%(installdir)s/bin/npm install react-dom -g',
+    '%(installdir)s/bin/npm install canvas -g',
+    '%(installdir)s/bin/npm install vega -g',
+    '%(installdir)s/bin/npm install vega-lite',
+]
+
+sanity_check_paths = {
+    'files': ["bin/node", "bin/npm", ],
+    'dirs': ["lib/node_modules", "lib/dtrace", "include/node"]
+}
+
+moduleclass = 'lang'

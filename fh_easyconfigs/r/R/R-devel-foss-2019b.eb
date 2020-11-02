@@ -1,0 +1,69 @@
+name = 'R'
+version = 'devel'
+local_biocver = '3.10'
+
+homepage = 'http://www.r-project.org/'
+description = """Development version of R. Use at your own Risk! This
+ package can change without notice and is not versioned. Built
+ without any additional packages.""" 
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://stat.ethz.ch/R/daily']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('X11', '20190717'),
+    ('Mesa', '19.1.7'),
+    ('libGLU', '9.0.1'),
+    ('ncurses', '6.1'),
+    ('cairo', '1.16.0'),
+    ('libreadline', '8.0'),
+    ('jbigkit', '2.1'),
+    ('bzip2', '1.0.8'),
+    ('XZ', '5.2.4'),
+    ('zlib', '1.2.11'),
+    ('PCRE2', '10.33'),
+    ('libpng', '1.6.37'),  # for plotting in R
+    ('libjpeg-turbo', '2.0.3'),  # for plottting in R
+    ('LibTIFF', '4.0.10'),
+    ('cURL', '7.66.0'),  # for RCurl
+    ('libxml2', '2.9.9'),  # for XML
+    ('GLPK', '4.65'), # for igraph
+    ('NLopt', '2.6.1'),  # for nloptr
+    ('ICU', '64.2'),  # for rJava & gdsfmt
+    ('HDF5', '1.10.5'),  # for hdf5r
+    ('UDUNITS', '2.2.26'),  # for units
+]
+
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
+configopts = "--with-pic --enable-threads --enable-R-shlib"
+# some recommended packages may fail in a parallel build (e.g. Matrix), and
+# we're installing them anyway below
+configopts += " --with-recommended-packages=no"
+
+# specify that at least EasyBuild v3.5.0 is required,
+# since we rely on the updated easyblock for R to configure correctly w.r.t. BLAS/LAPACK
+easybuild_version = '3.5.0'
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on March 11, 2019
+exts_list = [
+
+]
+
+moduleclass = 'lang'
