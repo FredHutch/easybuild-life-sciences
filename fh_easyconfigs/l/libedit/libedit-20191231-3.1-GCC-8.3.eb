@@ -1,0 +1,22 @@
+easyblock = 'ConfigureMake'
+
+name = 'libedit'
+version = '20191231'
+
+homepage = 'http://thrysoee.dk/editline/'
+description = """This BSD-style licensed command line editor library provides generic line editing,
+history, and tokenization functions, similar to those found in GNU Readline."""
+
+toolchain = {'name': 'GCC', 'version': '8.3.0'}
+
+source_urls = ['http://thrysoee.dk/editline/']
+sources = ['%(name)s-%(version)s-3.1.tar.gz']
+
+dependencies = [('ncurses', '6.1')]
+
+sanity_check_paths = {
+    'files': ['include/editline/readline.h', 'lib/libedit.%s' % SHLIB_EXT, 'lib/libedit.a'],
+    'dirs': []
+}
+
+moduleclass = 'lib'
