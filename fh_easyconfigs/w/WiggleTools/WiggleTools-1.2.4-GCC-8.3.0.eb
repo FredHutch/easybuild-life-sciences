@@ -1,0 +1,46 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'MakeCp'
+
+name = 'WiggleTools'
+version = '1.2.4'
+
+homepage = ''
+description = """The WiggleTools package allows genomewide data files to be manipulated as numerical functions, equipped with all the standard functional analysis operators (sum, product, product by a scalar, comparators), and derived statistics (mean, median, variance, stddev, t-test, Wilcoxon's rank sum test, etc)."""
+
+toolchain = {'name': 'GCC', 'version': '8.3.0'}
+
+source_urls = ['https://github.com/Ensembl/WiggleTools/archive']
+sources = ['v%(version)s.tar.gz']
+patches = ['%(name)s-%(version)s_make.patch']
+
+builddependencies = [
+    ('binutils', '2.32'),
+]
+
+osdependencies = [('openssl-devel', 'libssl-dev', 'libopenssl-devel')]
+
+dependencies = [
+    ('Python', '2.7.16'),
+    ('zlib', '1.2.11'),
+    ('HTSlib', '1.10.2'),
+    ('BCFtools', '1.9'),
+    ('libBigWig', '0.4.4'),
+    ('GSL', '2.6'),
+]
+
+parallel = 1
+
+files_to_copy = ['bin', 'lib']
+modextrapaths = {'PYTHONPATH': 'bin'}
+
+sanity_check_paths = {
+    'files': ['bin/wiggletools', 'lib/libwiggletools.a'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

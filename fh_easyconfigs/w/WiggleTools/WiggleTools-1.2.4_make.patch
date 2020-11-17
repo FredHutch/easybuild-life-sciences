@@ -1,0 +1,36 @@
+diff -ruN WiggleTools-1.2.4.orig/Makefile WiggleTools-1.2.4/Makefile
+--- WiggleTools-1.2.4.orig/Makefile	2020-06-01 23:13:37.000000000 -0700
++++ WiggleTools-1.2.4/Makefile	2020-11-16 21:10:44.661768000 -0800
+@@ -4,10 +4,10 @@
+ 	mkdir -p bin
+ 
+ Wiggletools: bin
+-	cd src; make -e
++	cd src; $(MAKE)
+ 
+ Parallel: Wiggletools
+-	cd python/wiggletools; make
++	cd python/wiggletools; $(MAKE)
+ 
+ binaries: Parallel
+ 	chmod 755 bin/*
+@@ -18,6 +18,6 @@
+ 	cd test; python2.7 test.py
+ 
+ clean:
+-	cd src; make clean
++	cd src; $(MAKE) clean
+ 	rm bin/*
+ 	rm lib/*
+diff -ruN WiggleTools-1.2.4.orig/src/Makefile WiggleTools-1.2.4/src/Makefile
+--- WiggleTools-1.2.4.orig/src/Makefile	2020-06-01 23:13:37.000000000 -0700
++++ WiggleTools-1.2.4/src/Makefile	2020-11-16 21:25:54.060872000 -0800
+@@ -3,7 +3,7 @@
+ BINDIR=../bin
+ INC=-I../../libBigWig -I../../htslib
+ LIB_PATHS=-L${LIBDIR} -L../../libBigWig -L../../htslib
+-LIBS= -lwiggletools -l:libBigWig.a -lcurl -l:libhts.a -lgsl  -lgslcblas -lz -lpthread -lm -llzma -lbz2
++LIBS= -lwiggletools -l:libBigWig.a -lcrypto -lcurl -l:libhts.a -lgsl  -lgslcblas -lz -lpthread -lm -llzma -lbz2
+ OPTS=-D_PBGZF_USE
+ 
+ default: lib bin
