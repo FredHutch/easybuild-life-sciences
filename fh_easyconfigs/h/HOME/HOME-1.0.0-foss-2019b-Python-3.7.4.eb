@@ -32,6 +32,7 @@ exts_list = [
         'source_urls': ['https://github.com/ListerLab/HOME/archive'],
         'source_tmpl': '%(version)s.tar.gz',
         'patches': ['HOME-1.0.0_deps.patch'],
+        'modulename': False,
     })
 ]
 

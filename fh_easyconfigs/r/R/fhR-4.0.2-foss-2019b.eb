@@ -500,6 +500,7 @@ exts_list = [
     ('presto', '1.0.0', {
         'source_urls': ['https://github.com/immunogenomics/presto/archive'],
         'source_tmpl': 'master.zip',
+        'filename': 'presto.zip',
     }),
     ('MAESTRO', '1.2.1', {
         'source_urls': ['https://github.com/liulab-dfci/MAESTRO/archive'],
@@ -507,6 +508,32 @@ exts_list = [
     }),
     ('systemfonts', '0.3.2'),
     ('gdtools', '0.2.2'),
+    ('arules', '1.6-6'),
+    ('CLONETv2', '2.1.0'),
+    # start gchromVar
+    ('RNifti', '1.2.3'),
+    ('oro.nifti', '0.11.0'),
+    ('smfishHmrf', '0.1', {
+         'source_urls': ['https://github.com/lambdamoses/smfishhmrf-r/archive'],
+         'source_tmpl': 'master.zip',
+         'filename': 'smfishHmrf.zip',
+    }),
+    ('nabor', '0.5.0'),
+    ('poweRlaw', '0.70.6'),
+    ('CNEr', '1.24.0'),
+    ('DirichletMultinomial', '1.30.0'),
+    ('TFMPvalue : 0.0.8'),
+    ('TFBSTools', '1.26.0'),
+    ('chromVAR', '0.3', {
+        'source_urls': ['https://github.com/GreenleafLab/chromVAR/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'filename': 'chromVAR-%(version)s.tar.gz',
+    }),
+    ('gchromVAR', 'e4f33ca', {
+        'source_urls': ['https://github.com/caleblareau/gchromVAR/archive'],
+        'source_tmpl': 'master.zip',
+        'filename': 'gchromVAR.zip',
+    }),
 ]
 
 sanity_check_paths = {

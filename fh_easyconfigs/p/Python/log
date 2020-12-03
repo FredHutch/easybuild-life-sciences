@@ -1,0 +1,8 @@
+reading dependency: Python-3.8.2-GCCcore-9.3.0.eb
+reading dependency: matplotlib-3.2.1-foss-2020a-Python-3.8.2.eb
+reading dependency: Biopython-1.77-foss-2020a-Python-3.8.2.eb
+reading dependency: PyTables-3.6.1-foss-2020a-Python-3.8.2.eb
+reading dependency: IPython-7.15.0-foss-2020a-Python-3.8.2.eb
+reading dependency: h5py-2.10.0-foss-2020a-Python-3.8.2.eb
+reading dependency: numba-0.50.0-foss-2020a-Python-3.8.2.eb
+reading dependency: dask-2.18.1-foss-2020a-Python-3.8.2.eb

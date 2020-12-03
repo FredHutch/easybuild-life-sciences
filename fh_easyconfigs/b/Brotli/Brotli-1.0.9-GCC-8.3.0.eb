@@ -5,7 +5,7 @@
 # Fred Hutchinson Cancer Research Center - Seattle Washington - US
 #
 easyblock = 'CMakeMake'
-name = 'brotli'
+name = 'Brotli'
 version = '1.0.9'
 
 homepage = 'https://github.com/google/brotli'

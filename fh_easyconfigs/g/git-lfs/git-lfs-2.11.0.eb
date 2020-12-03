@@ -1,0 +1,32 @@
+easyblock = 'MakeCp'
+
+name = 'git-lfs'
+version = '2.11.0'
+
+homepage = 'https://git-lfs.github.com'
+description = """Git Large File Storage (LFS) replaces large files such as audio
+ samples, videos, datasets, and graphics with text pointers inside Git, while 
+ storing the file contents on a remote server like GitHub.com"""
+
+toolchain = SYSTEM 
+
+github_account = name
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+checksums = []
+
+builddependencies = [
+    ('GCC', '8.3.0'),
+    ('Go', '1.14.1'),
+]
+
+files_to_copy = [(['bin/%(name)s'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/git-lfs'],
+    'dirs': [],
+}
+
+sanity_check_commands = [('git-lfs', '--version')]
+
+moduleclass = 'tools'

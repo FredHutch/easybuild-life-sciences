@@ -1,0 +1,198 @@
+diff -ruN medaka-1.2.0.orig/Makefile medaka-1.2.0/Makefile
+--- medaka-1.2.0.orig/Makefile	2020-10-04 12:21:12.000000000 -0700
++++ medaka-1.2.0/Makefile	2020-12-01 17:34:31.696403000 -0800
+@@ -1,5 +1,7 @@
+ 
+ # Builds a cache of binaries which can just be copied for CI
++LDFLAGS += $(CFLAGS)
++CPPFLAGS += $(CPPFLAGS)
+ BINARIES=samtools minimap2 tabix bgzip racon bcftools
+ BINCACHEDIR=bincache
+ $(BINCACHEDIR):
+@@ -19,37 +21,38 @@
+ COVFAIL=79
+ endif
+ 
+-binaries: $(addprefix $(BINCACHEDIR)/, $(BINARIES))
++#binaries: $(addprefix $(BINCACHEDIR)/, $(BINARIES))
+ 
+ SAMVER=1.10
+-submodules/samtools-$(SAMVER)/Makefile:
+-	cd submodules; \
+-		curl -L -o samtools-${SAMVER}.tar.bz2 https://github.com/samtools/samtools/releases/download/${SAMVER}/samtools-${SAMVER}.tar.bz2; \
+-		tar -xjf samtools-${SAMVER}.tar.bz2; \
+-		rm samtools-${SAMVER}.tar.bz2
++#submodules/samtools-$(SAMVER)/Makefile:
++#	cd submodules; \
++#		curl -L -o samtools-${SAMVER}.tar.bz2 https://github.com/samtools/samtools/releases/download/${SAMVER}/samtools-${SAMVER}.tar.bz2; \
++#		tar -xjf samtools-${SAMVER}.tar.bz2; \
++#		rm samtools-${SAMVER}.tar.bz2
+ 
+ 
+-libhts.a: submodules/samtools-$(SAMVER)/Makefile
+-	# this is required only to add in -fpic so we can build python module
+-	@echo Compiling $(@F)
+-	cd submodules/samtools-${SAMVER}/htslib-${SAMVER}/ && CFLAGS=-fpic ./configure && make
+-	cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$@ $@
++#libhts.a: submodules/samtools-$(SAMVER)/Makefile
++#	## this is required only to add in -fpic so we can build python module
++#	#@echo Compiling $(@F)
++#	#cd submodules/samtools-${SAMVER}/htslib-${SAMVER}/ && CFLAGS=-fpic ./configure && make
++#	#cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$@ $@
+ 
+ 
+-$(BINCACHEDIR)/samtools: | libhts.a $(BINCACHEDIR)
+-	@echo Making $(@F)
+-	# copy our hack up version of tview
+-	${SEDI} 's/tv->is_dot = 1;/tv->is_dot = 0;/' submodules/samtools-${SAMVER}/bam_tview.c
+-	cd submodules/samtools-${SAMVER} && make -j 4
+-	cp submodules/samtools-${SAMVER}/$(@F) $@
++#$(BINCACHEDIR)/samtools: | libhts.a $(BINCACHEDIR)
++#	PATH = ${PATH}:${EBROOTHTSLIB}/bin
++#	@echo Making $(@F)
++#	# copy our hack up version of tview
++#	${SEDI} 's/tv->is_dot = 1;/tv->is_dot = 0;/' submodules/samtools-${SAMVER}/bam_tview.c
++#	cd submodules/samtools-${SAMVER} && make -j 4
++#	cp submodules/samtools-${SAMVER}/$(@F) $@
+ 
+ 
+-$(BINCACHEDIR)/tabix: | libhts.a $(BINCACHEDIR)
+-	cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$(@F) $@
++#$(BINCACHEDIR)/tabix: | libhts.a $(BINCACHEDIR)
++#	cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$(@F) $@
+ 
+ 
+-$(BINCACHEDIR)/bgzip: | libhts.a $(BINCACHEDIR)
+-	cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$(@F) $@
++#$(BINCACHEDIR)/bgzip: | libhts.a $(BINCACHEDIR)
++#	cp submodules/samtools-${SAMVER}/htslib-${SAMVER}/$(@F) $@
+ 
+ 
+ .PHONY: clean_htslib
+@@ -59,53 +62,53 @@
+ 
+ 
+ MINIMAPVER=2.17
+-$(BINCACHEDIR)/minimap2: | $(BINCACHEDIR)
+-	@echo Compiling $(@F)
+-	cd submodules; \
+-		curl -L -o minimap2-${MINIMAPVER}.tar.bz2 https://github.com/lh3/minimap2/releases/download/v${MINIMAPVER}/minimap2-${MINIMAPVER}.tar.bz2; \
+-		tar -xjf minimap2-${MINIMAPVER}.tar.bz2; \
+-	    rm -rf minimap2-${MINIMAPVER}.tar.bz2
+-	cd submodules/minimap2-${MINIMAPVER} && make
+-	cp submodules/minimap2-${MINIMAPVER}/minimap2 $@
+-
+-
+-$(BINCACHEDIR)/bcftools: | $(BINCACHEDIR)
+-	@echo Making $(@F)
+-	if [ ! -d submodules/bcftools-v${SAMVER} ]; then \
+-		cd submodules; \
+-		curl -L -o bcftools-v${SAMVER}.tar.bz2 https://github.com/samtools/bcftools/releases/download/${SAMVER}/bcftools-${SAMVER}.tar.bz2; \
+-		tar -xjf bcftools-v${SAMVER}.tar.bz2; \
+-		cd bcftools-${SAMVER}; \
+-		make; \
+-	fi
+-	cp submodules/bcftools-${SAMVER}/bcftools $@
++#$(BINCACHEDIR)/minimap2: | $(BINCACHEDIR)
++#	@echo Compiling $(@F)
++#	cd submodules; \
++#		curl -L -o minimap2-${MINIMAPVER}.tar.bz2 https://github.com/lh3/minimap2/releases/download/v${MINIMAPVER}/minimap2-${MINIMAPVER}.tar.bz2; \
++#		tar -xjf minimap2-${MINIMAPVER}.tar.bz2; \
++#	    rm -rf minimap2-${MINIMAPVER}.tar.bz2
++#	cd submodules/minimap2-${MINIMAPVER} && make
++#	cp submodules/minimap2-${MINIMAPVER}/minimap2 $@
++
++
++#$(BINCACHEDIR)/bcftools: | $(BINCACHEDIR)
++#	@echo Making $(@F)
++#	if [ ! -d submodules/bcftools-v${SAMVER} ]; then \
++#		cd submodules; \
++#		curl -L -o bcftools-v${SAMVER}.tar.bz2 https://github.com/samtools/bcftools/releases/download/${SAMVER}/bcftools-${SAMVER}.tar.bz2; \
++#		tar -xjf bcftools-v${SAMVER}.tar.bz2; \
++#		cd bcftools-${SAMVER}; \
++#		make; \
++#	fi
++#	cp submodules/bcftools-${SAMVER}/bcftools $@
+ 
+ 
+ RACONVER=1.4.13
+-$(BINCACHEDIR)/racon: | $(BINCACHEDIR)
+-	@echo Making $(@F)
+-	@echo GCC is $(GCC)
+-	if [ ! -e submodules/racon-v${RACONVER}.tar.gz ]; then \
+-	  cd submodules; \
+-	  curl -L -o racon-v${RACONVER}.tar.gz https://github.com/lbcb-sci/racon/releases/download/${RACONVER}/racon-v${RACONVER}.tar.gz; \
+-	  tar -xzf racon-v${RACONVER}.tar.gz; \
+-	fi
+-	cd submodules/racon-v${RACONVER}; \
+-		rm -rf build; \
+-		mkdir build; \
+-		cd build; \
+-		cmake -DCMAKE_BUILD_TYPE=Release ..; \
+-		make;
+-	cp submodules/racon-v${RACONVER}/build/bin/racon $@
+-
+-
+-$(BINCACHEDIR)/vcf2fasta: | $(BINCACHEDIR)
+-	cd src/vcf2fasta && g++ -std=c++11 \
+-		-I./../../submodules/samtools-${SAMVER}/htslib-${SAMVER}/ vcf2fasta.cpp \
+-		./../../submodules/samtools-${SAMVER}/htslib-${SAMVER}/libhts.a \
+-		-lz -llzma -lbz2 -lpthread \
+-		-o $(@F)
+-	cp src/vcf2fasta/$(@F) $@
++#$(BINCACHEDIR)/racon: | $(BINCACHEDIR)
++#	@echo Making $(@F)
++#	@echo GCC is $(GCC)
++#	if [ ! -e submodules/racon-v${RACONVER}.tar.gz ]; then \
++#	  cd submodules; \
++#	  curl -L -o racon-v${RACONVER}.tar.gz https://github.com/lbcb-sci/racon/releases/download/${RACONVER}/racon-v${RACONVER}.tar.gz; \
++#	  tar -xzf racon-v${RACONVER}.tar.gz; \
++#	fi
++#	cd submodules/racon-v${RACONVER}; \
++#		rm -rf build; \
++#		mkdir build; \
++#		cd build; \
++#		cmake -DCMAKE_BUILD_TYPE=Release ..; \
++#		make;
++#	cp submodules/racon-v${RACONVER}/build/bin/racon $@
++
++
++#$(BINCACHEDIR)/vcf2fasta: | $(BINCACHEDIR)
++#	cd src/vcf2fasta && g++ -std=c++11 \
++#		-I./../../submodules/samtools-${SAMVER}/htslib-${SAMVER}/ vcf2fasta.cpp \
++#		./../../submodules/samtools-${SAMVER}/htslib-${SAMVER}/libhts.a \
++#		-lz -llzma -lbz2 -lpthread \
++#		-o $(@F)
++#	cp src/vcf2fasta/$(@F) $@
+ 
+ 
+ scripts/mini_align:
+@@ -161,14 +164,16 @@
+ 
+ pileup: libhts.a
+ 	gcc -pthread  -g -Wall -fstack-protector-strong -D_FORTIFY_SOURCE=2 -fPIC -std=c99 -msse3 -O3 \
++		$(LDFLAGS) $(CPPFLAGS) \
+ 		-Isrc -Isubmodules/samtools-${SAMVER}/htslib-${SAMVER} \
+-		src/medaka_common.c src/medaka_counts.c src/medaka_bamiter.c libhts.a \
++		src/medaka_common.c src/medaka_counts.c src/medaka_bamiter.c 
+ 		-lm -lz -llzma -lbz2 -lpthread -lcurl -lcrypto \
+ 		-o $(@) -std=c99 -msse3 -O3
+ 
+ 
+ trim_reads: libhts.a
+ 	gcc -pthread -pg -g -Wall -fstack-protector-strong -D_FORTIFY_SOURCE=2 -fPIC -std=c99 -msse3 -O3 \
++		$(LDFLAGS) $(CPPFLAGS) \
+ 		-Isrc -Isubmodules/samtools-${SAMVER}/htslib-${SAMVER} \
+ 		src/medaka_common.c src/medaka_trimbam.c src/medaka_bamiter.c libhts.a \
+ 		-lz -llzma -lbz2 -lpthread -lcurl -lcrypto \
+diff -ruN medaka-1.2.0.orig/setup.py medaka-1.2.0/setup.py
+--- medaka-1.2.0.orig/setup.py	2020-10-04 12:21:12.000000000 -0700
++++ medaka-1.2.0/setup.py	2020-11-23 15:05:32.614670000 -0800
+@@ -166,7 +166,6 @@
+         scripts=['scripts/medaka_consensus', 'scripts/medaka_variant', 'scripts/mini_align', 'scripts/hdf2tf.py'],
+         zip_safe=False,
+         cmdclass={
+-            'build_ext': HTSBuild
+         },
+     )
+ 

@@ -1,0 +1,40 @@
+# easybuild easyconfig
+#
+#  Ben McGough <bmcgough@fredhutch.org>
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Tarball'
+
+name = 'CellRanger'
+version = '5.0.0'
+
+homepage = 'https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger'
+description = """Cell Ranger is a set of analysis pipelines that process Chromium single-cell 
+RNA-seq data produced by the 10x Genomics Chromium Platform. Output to align reads, generate
+ gene-cell matrices and perform clustering and gene expression analysis."""
+
+toolchain = SYSTEM
+
+# you must download this by hand after an agreement
+source_urls = ['https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest']
+sources = [SOURCELOWER_TAR_GZ]
+
+keepsymlinks = True
+
+dependencies = {
+    ('bcl2fastq2', '2.20.0', '', ('foss', '2019b')),
+    ('Java', '1.8'),
+}
+
+sanity_check_paths = {
+    'files': ["bin/cellranger", "lib/bin/STAR", "sourceme.bash"],
+    'dirs': ["lib", "mro"],
+}
+
+sanity_check_commands = [('bin/%(namelower)s', 'sitecheck')]
+
+modextravars = {'TENX_REFDATA': '/shared/biodata/ngs/Reference/10X/refdata-gex-GRCh38-2020-A'}
+
+tests = ['%(installdir)s/bin/cellranger testrun --id=tiny']
+
+moduleclass = 'bio'

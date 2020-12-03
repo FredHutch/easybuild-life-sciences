@@ -1,0 +1,12 @@
+IRanges
+GenomeInfoDb
+GenomicRanges
+nabor
+BiocParallel
+BiocGenerics
+Biostrings
+TFBSTools
+Rsamtools
+S4Vectors
+SummarizedExperiment
+BSgenome

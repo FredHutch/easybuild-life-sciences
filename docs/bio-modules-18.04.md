@@ -2,7 +2,7 @@
 title: Bio Modules 18.04
 layout: single
 permalink: /bio-modules-18.04/
-created: 2020-10-30
+created: 2020-12-03
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -43,11 +43,10 @@ bustools is a program for manipulating BUS files for single cell RNA-Seq dataset
  It can be used to error correct barcodes, collapse  UMIs, produce gene count or transcript compatibility
  count matrices, and is useful for many other tasks. See the kallisto | bustools  website for examples
  and instructions on how to use bustools as part of a single-cell RNA-seq workflow.
- - [BWA/0.7.17-foss-2018b](http://bio-bwa.sourceforge.net/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/BWA/BWA-0.7.17-foss-2018b.eb)
+ - [BWA/0.7.17-GCC-8.3.0](http://bio-bwa.sourceforge.net/)
 Burrows-Wheeler Aligner (BWA) is an efficient program that aligns
  relatively short nucleotide sequences against a long reference sequence such as the human genome.
- - [BamTools/2.5.1-GCC-8.3.0](https://github.com/pezmaster31/bamtools)
+ - [BamTools/2.5.1-GCC-9.3.0](https://github.com/pezmaster31/bamtools)
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [Beast/2.6.2-GCCcore-8.3.0](http://beast2.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/Beast/Beast-2.6.2-GCCcore-8.3.0.eb)
@@ -76,7 +75,8 @@ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
  of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.
  Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,
  its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
- - [CD-HIT/4.8.1-foss-2018b](http://weizhong-lab.ucsd.edu/cd-hit/)
+ - [CD-HIT/4.8.1-foss-2019b](http://weizhong-lab.ucsd.edu/cd-hit/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CD-HIT/CD-HIT-4.8.1-foss-2019b.eb)
 CD-HIT is a very widely used program for clustering and 
  comparing protein or nucleotide sequences.
  - [CITE-seq-Count/1.4.2-foss-2018b-Python-3.6.6](https://hoohm.github.io/CITE-seq-Count)
@@ -90,8 +90,8 @@ A command-line toolkit and Python library for detecting copy
  - [CRISPRCasTyper/1.2.1-foss-2020a-Python-3.8.2](https://github.com/Russel88/CRISPRCasTyper)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CRISPRCasTyper/CRISPRCasTyper-1.2.1-foss-2020a-Python-3.8.2.eb)
 Detect CRISPR-Cas genes and arrays, and predict the subtype based on both Cas genes and CRISPR repeat sequence.
- - [CellRanger/4.0.0](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CellRanger/CellRanger-4.0.0.eb)
+ - [CellRanger/5.0.0](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CellRanger/CellRanger-5.0.0.eb)
 Cell Ranger is a set of analysis pipelines that process Chromium single-cell 
 RNA-seq data produced by the 10x Genomics Chromium Platform. Output to align reads, generate
  gene-cell matrices and perform clustering and gene expression analysis.
@@ -128,7 +128,7 @@ Accelerated BLAST compatible local sequence aligner
 EMBOSS is 'The European Molecular Biology Open Software Suite'
  EMBOSS is a free Open Source software analysis package specially developed for
  the needs of the molecular biology (e.g. EMBnet) user community.
- - [Eigen/3.3.7](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+ - [Eigen/3.3.7-GCCcore-9.3.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [FASTX-Toolkit/0.0.14-GCCcore-8.3.0](http://hannonlab.cshl.edu/fastx_toolkit/)
@@ -223,6 +223,11 @@ HMMER is used for searching sequence databases for homologs
  homologs because of the strength of its underlying mathematical models. In the
  past, this strength came at significant computational expense, but in the new
  HMMER3 project, HMMER is now essentially as fast as BLAST.
+ - [HOME/1.0.0-foss-2019b-Python-3.7.4](https://github.com/ListerLab/HOME)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/h/HOME/HOME-1.0.0-foss-2019b-Python-3.7.4.eb)
+HOME (histogram of methylation) is a python package for differential methylation region (DMR)
+ identification. The method uses histogram of methylation features and the linear Support Vector Machine (SVM)
+ to identify DMRs from whole genome bisulfite sequencing (WGBS) data.
  - [HTSeq/0.11.0-foss-2018b-Python-2.7.15](http://www-huber.embl.de/users/anders/HTSeq/)
 A framework to process and analyze data from high-throughput sequencing (HTS) assays
  - [HTSlib/1.10.2-GCC-8.3.0](https://www.htslib.org/)
@@ -249,8 +254,7 @@ This package contains command line utilities for preprocessing,
  - [IgBLAST/1.15.0-x64-linux](https://ncbi.github.io/igblast)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/i/IgBLAST/IgBLAST-1.15.0-x64-linux.eb)
 IgBLAST faclilitates the analysis of immunoglobulin and T cell receptor variable domain sequences.
- - [JAGS/4.3.0-foss-2019b](http://mcmc-jags.sourceforge.net/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/j/JAGS/JAGS-4.3.0-foss-2019b.eb)
+ - [JAGS/4.3.0-foss-2018b](http://mcmc-jags.sourceforge.net/)
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis 
  of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
  - [Jellyfish/2.2.10-foss-2018b](http://www.genome.umd.edu/jellyfish.html)
@@ -307,8 +311,8 @@ The MEME Suite allows you to: * discover motifs using MEME, DREME (DNA only) or
 The MPFR library is a C library for multiple-precision floating-point
  computations with correct rounding.
 
- - [MUMmer/4.0.0beta2-foss-2019b](https://github.com/mummer4/mummer)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MUMmer/MUMmer-4.0.0beta2-foss-2019b.eb)
+ - [MUMmer/4.0.0beta2-foss-2018b](http://mummer.sourceforge.net/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MUMmer/MUMmer-4.0.0beta2-foss-2018b.eb)
 MUMmer is a system for rapidly aligning entire genomes,
  whether in complete or draft form. AMOS makes use of it.
  - [MUSCLE/3.8.31-foss-2018b](http://drive5.com/muscle/)
@@ -318,8 +322,8 @@ MUSCLE is one of the best-performing multiple alignment programs
  better than CLUSTALW. MUSCLE can align hundreds of sequences in seconds. Most users 
  learn everything they need to know about MUSCLE in a few minutes—only a handful of 
  command-line options are needed to perform common alignment tasks.
- - [MaxQuant/1.6.15.0-foss-2019b](https://maxquant.org/maxquant/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MaxQuant/MaxQuant-1.6.15.0-foss-2019b.eb)
+ - [MaxQuant/1.6.17.0-foss-2019b](https://www.maxquant.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/m/MaxQuant/MaxQuant-1.6.17.0-foss-2019b.eb)
 MaxQuant is a quantitative proteomics software package designed for analyzing large
  mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling
  techniques as well as label-free quantification are supported.
@@ -432,12 +436,13 @@ RSeQC provides a number of useful modules that can
  composition bias, PCR bias and GC bias, while RNA-seq specific modules 
  evaluate sequencing saturation, mapped reads distribution, coverage 
  uniformity, strand specificity, transcript level RNA integrity etc.
+ - [Racon/1.4.13-GCCcore-8.3.0](https://github.com/lbcb-sci/racon)
+Ultrafast consensus module for raw de novo genome assembly of long uncorrected reads.
  - [RepeatMasker/4.0.8-foss-2018b-Perl-5.28.0-HMMER](http://www.repeatmasker.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/r/RepeatMasker/RepeatMasker-4.0.8-foss-2018b-Perl-5.28.0-HMMER.eb)
 RepeatMasker is a program that screens DNA sequences for interspersed repeats
  and low complexity DNA sequences.
- - [SAMtools/1.10-GCCcore-8.3.0](https://www.htslib.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/SAMtools/SAMtools-1.10-GCCcore-8.3.0.eb)
+ - [SAMtools/1.10-GCC-8.3.0](https://www.htslib.org/)
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [SKESA/2.3.0-foss-2018b](https://github.com/ncbi/SKESA)
@@ -466,8 +471,8 @@ STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays
 STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts
  supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner
  to map junction reads and spanning reads to a reference annotation set.
- - [SYMPHONY/5.6.17-GCCcore-7.3.0](https://github.com/coin-or/SYMPHONY/wiki)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/SYMPHONY/SYMPHONY-5.6.17-GCCcore-7.3.0.eb)
+ - [SYMPHONY/5.6.17-GCCcore-8.3.0](https://github.com/coin-or/SYMPHONY/wiki)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/SYMPHONY/SYMPHONY-5.6.17-GCCcore-8.3.0.eb)
 SYMPHONY is an open-source solver for mixed-integer linear programs (MILPs)
  written in C. It can be used in four different main modes.
  - [Salmon/1.2.0-gompi-2019b](https://salmon.readthedocs.io)
@@ -548,6 +553,9 @@ VSEARCH supports de novo and reference based chimera detection,
  - [ViennaRNA/2.4.11-foss-2018b-Python-3.6.6](http://www.tbi.univie.ac.at/RNA/)
 The Vienna RNA Package consists of a C code library and several
 stand-alone programs for the prediction and comparison of RNA secondary structures.
+ - [WiggleTools/1.2.4-GCC-8.3.0]()
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/w/WiggleTools/WiggleTools-1.2.4-GCC-8.3.0.eb)
+The WiggleTools package allows genomewide data files to be manipulated as numerical functions, equipped with all the standard functional analysis operators (sum, product, product by a scalar, comparators), and derived statistics (mean, median, variance, stddev, t-test, Wilcoxon's rank sum test, etc).
  - [ancestry/1.0.0-GCCcore-8.3.0](https://github.com/vibansal)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/a/ancestry/ancestry-1.0.0-GCCcore-8.3.0.eb)
 Fast individual ancestry inference from DNA sequence data leveraging allele frequencies
@@ -557,14 +565,16 @@ Fast individual ancestry inference from DNA sequence data leveraging allele freq
 Fast individual ancestry inference from DNA sequence data leveraging allele frequencies
  from multiple populations. iAdmix Using population allele frequencies for computing individual admixture
  estimates
+ - [arcasHLA/0.2.0-foss-2019b-Python-3.7.4](https://github.com/RabadanLab/arcasHLA)
+arcasHLA performs high resolution genotyping for HLA class I and class II
+genes from RNA sequencing, supporting both paired and single-end samples.
  - [bam2fastx/1.3.0](https://github.com/pacificbiosciences/bam2fastx)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/bam2fastx/bam2fastx-1.3.0.eb)
 Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded data
  - [bam2wig/1.5](https://github.com/MikeAxtell/bam2wig)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/bam2wig/bam2wig-1.5.eb)
 Conversion of a BAM alignment to wiggle and bigwig coverage files, with flexible reporting options.
- - [bcl2fastq2/2.20.0-foss-2019b](https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/bcl2fastq2/bcl2fastq2-2.20.0-foss-2019b.eb)
+ - [bcl2fastq2/2.20.0-foss-2018b](https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html)
 bcl2fastq Conversion Software both demultiplexes data and converts BCL files generated by
  Illumina sequencing systems to standard FASTQ file formats for downstream analysis.
  - [bioawk/1.0-foss-2018b](https://github.com/lh3/bioawk)
@@ -595,8 +605,8 @@ Cas-OFFinder is OpenCL based, ultrafast and versatile program that searches
 Chromium Single Cell Software Suite is a set of software applications for analyzing and visualizing single cell 3’ RNA-seq data produced by the 10x Genomics Chromium Platform.
  - [cellranger-atac/1.1.0-foss-2018b](https://support.10xgenomics.com/single-cell-atac/software/overview/welcome)
 The Chromium Single Cell ATAC Software Suite is a complete package for analyzing and visualizing single cell chromatin accessibility data produced by the Chromium Single Cell ATAC Solution on the 10x Chromium Platform.
- - [cromwell/53-Java-1.8](https://github.com/broadinstitute/cromwell)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cromwell/cromwell-53-Java-1.8.eb)
+ - [cromwell/54-Java-1.8](https://github.com/broadinstitute/cromwell)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cromwell/cromwell-54-Java-1.8.eb)
 Scientific workflow engine designed for simplicity & scalability.
  - [ctffind/4.1.14-fosscuda-2019b](https://grigoriefflab.umassmed.edu/ctffind4)
 Program for finding CTFs of electron micrographs.
@@ -604,13 +614,15 @@ Program for finding CTFs of electron micrographs.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/cutadapt/cutadapt-2.9-foss-2019b-Python-3.7.4.eb)
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
- - [deepTools/3.3.1-foss-2019b-Python-3.7.4](https://deeptools.readthedocs.io/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/deepTools/deepTools-3.3.1-foss-2019b-Python-3.7.4.eb)
+ - [deepTools/3.3.1-foss-2018b-Python-3.6.6](https://deeptools.readthedocs.io/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/deepTools/deepTools-3.3.1-foss-2018b-Python-3.6.6.eb)
 deepTools is a suite of python tools particularly developed for the efficient analysis of
  high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.
  - [delly/0.8.3](https://github.com/dellytools/delly)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/d/delly/delly-0.8.3.eb)
 DELLY2: Structural variant discovery by integrated paired-end and split-read analysis
+ - [edlib/1.3.8.post1-GCC-8.3.0-Python-3.7.4](https://martinsos.github.io/edlib)
+Lightweight, super fast library for sequence alignment using edit (Levenshtein) distance.
  - [factera/1.4.4-foss-2018b-Perl-5.28.0](https://factera.stanford.edu/)
 (Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data.
  - [fastq-tools/0.8-foss-2018b](https://homes.cs.washington.edu/~dcjones/fastq-tools/)
@@ -647,7 +659,7 @@ Intervene a tool for intersection and visualization of multiple genomic region s
 IT++ is a C++ library of mathematical, signal processing and communication
  classes and functions. Its main use is in simulation of communication systems and for
  performing research in the area of communications.
- - [kallisto/0.45.0-foss-2018b](http://pachterlab.github.io/kallisto/)
+ - [kallisto/0.46.1-foss-2019b](https://pachterlab.github.io/kallisto/)
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally
  of target sequences using high-throughput sequencing reads.
  - [king/2.2.5](https://people.virginia.edu/~wc9c/KING/)
@@ -809,6 +821,9 @@ The smallgenomeutilities are a collection of scripts that is
 Snippy finds SNPs between a haploid reference genome and your NGS sequence
  reads. It will find both substitutions (snps) and insertions/deletions (indels).
 Rapid haploid variant calling and core genome alignment.
+ - [spoa/4.0.0-GCC-8.3.0](https://github.com/rvaser/spoa)
+Spoa (SIMD POA) is a c++ implementation of the partial order alignment (POA) algorithm
+ which is used to generate consensus sequences
  - [statsmodels/0.11.0-foss-2019b-Python-3.7.4](https://www.statsmodels.org)
 Statsmodels is a Python module that allows users to explore data, estimate statistical models,
 and perform statistical tests.
@@ -835,7 +850,8 @@ vcflib provides methods to manipulate and interpret sequence variation as it can
  - [velocyto.R/0.6-foss-2019b-R-4.0.2](http://velocyto.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/v/velocyto.R/velocyto.R-0.6-foss-2019b-R-4.0.2.eb)
 velocyto (velox + κύτος, quick cell) is a package for the analysis of expression dynamics in single cell RNA seq data. In particular, it enables estimations of RNA velocities of single cells by distinguishing unspliced and spliced mRNAs in standard single-cell RNA sequencing protocols (see pre-print below for more information).
- - [vt/0.57721-foss-2018b](http://genome.sph.umich.edu/wiki/Vt)
+ - [vt/0.57721-foss-2019b](http://genome.sph.umich.edu/wiki/Vt)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/v/vt/vt-0.57721-foss-2019b.eb)
 A tool set for short variant discovery in genetic sequence data.
  - [wot/1.0.8-foss-2018b-Python-3.6.6]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/w/wot/wot-1.0.8-foss-2018b-Python-3.6.6.eb)

@@ -1,0 +1,41 @@
+#
+# EasyBuild easyconfig
+#
+# John Dey jfdey@fredhutch.org
+#
+# Please note that you will need to accept the terms of the license in order
+# to download FACTERA. Create an account with Stanford.edu
+easyblock = 'Tarball'
+
+name = 'factera'
+version = '1.4.4'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://factera.stanford.edu/'
+description = """(Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+sources = ['%(name)s-v%(version)s.zip']
+source_urls = ['https://factera.stanford.edu/download.php#download']
+patches = ['%(name)s-%(version)s_fix_env.patch']
+
+dependencies = [
+    ('Perl', '5.30.0'),
+    ('Boost', '1.72.0'),
+    ('BLAST+', '2.9.0'),
+    ('Kent_tools', '20200519', '-linux.x86_64', True),
+    ('SAMtools', '1.10'),
+]
+
+sanity_check_paths = {
+    'files': ['exons.bed', 'factera.pl', 'license.txt'],
+    'dirs': []
+}
+
+modextrapaths = {'PERL5LIB': '',
+                 'PATH': ''}
+
+modloadmsg = """factera can be run with factera.pl"""
+
+moduleclass = 'bio'

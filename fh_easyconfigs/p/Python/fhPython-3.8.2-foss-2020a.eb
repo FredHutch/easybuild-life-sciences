@@ -790,9 +790,6 @@ exts_list = [
     ('Deprecated', '1.2.10', {
         'modulename': 'deprecated',
     }),
-    ('PyJWT', '1.7.1', {
-        'modulename': 'pyjwt',
-    }),
     ('PyGithub', '1.52', {
         'modulename': 'github',
     }),
@@ -1144,6 +1141,7 @@ exts_list = [
     }),
     ('PyChef', '0.3.0', {
         'modulename': 'chef',
+        'patches': ['%(name)s-%(version)s_distro.patch'],
     }),
     ('agfusion', '1.252'),
     ('shap', '0.35.0'),
@@ -1277,6 +1275,15 @@ exts_list = [
     }),
     ('lifelines', '0.25.2'),
     ('tslearn', '0.4.1'),
+    ('singularity-cli', '0.1.10', {
+        'source_tmpl': 'singularity_cli-0.1.10-py2.py3-none-any.whl',
+        'unpack_sources': False,
+        'modulename': 'singularity',
+    }),
+    ('interop', '1.1.12', {
+        'source_tmpl': 'interop-1.1.12-cp38-cp38-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+    }),
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
