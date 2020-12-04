@@ -53,8 +53,7 @@ pkg_path=$1
   ggg=${gg%\'*}
   url=${ggg#*\'}
   # get description from easyconfig
-  dd=`awk -v RS= -v FPAT="'''.*'''|"'""".*"""' '{print $1}' ${pkg_path}`
-  description=`echo $dd | sed 's/["'\'']["'\'']["'\'']//g'`
+  description=`./docstring.py ${pkg_path}`
 
 cat << EOF  >${posts_dir}${doc_date}-${short}.md
 ---

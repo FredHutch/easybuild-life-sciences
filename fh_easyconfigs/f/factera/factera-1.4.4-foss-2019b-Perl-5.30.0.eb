@@ -12,7 +12,8 @@ version = '1.4.4'
 versionsuffix = '-Perl-%(perlver)s'
 
 homepage = 'https://factera.stanford.edu/'
-description = """(Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data."""
+description = """(Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool
+ for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data."""
 
 toolchain = {'name': 'foss', 'version': '2019b'}
 
