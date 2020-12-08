@@ -14,16 +14,8 @@ toolchain = {'name': 'foss', 'version': '2020a'}
 toolchainopts = {'pic': True}
 #toolchainopts = {'pic': True, 'opt': True, 'optarch': True}
 
-builddependencies = [
-    # required for building/installing qiskit-aer
-    ('foss', '2020a', '', True),
-    ('Autotools', '20180311'),
-    ('Bison', '3.5.3'),
-    ('flex', '2.6.4'),
-    ('pkg-config', '0.29.2'),
-]
-
 dependencies = [
+    ('MUMmer', '4.0.0beta2', '-foss-2020a', True),
     ('Python', '3.8.2'),
     ('poetry', '1.0.9', versionsuffix),
     ('SciPy-bundle', '2020.06', versionsuffix),
@@ -60,7 +52,6 @@ dependencies = [
     ('netCDF', '4.7.4'),
     ('igraph', '0.8.2'),
     ('snappy', '1.1.8'),
-    ('MUMmer', '4.0.0beta2'),
     # ('nodejs', '9.8.0'),  ? was in jupyter
 ]
 
@@ -1283,6 +1274,14 @@ exts_list = [
     ('interop', '1.1.12', {
         'source_tmpl': 'interop-1.1.12-cp38-cp38-manylinux1_x86_64.whl',
         'unpack_sources': False,
+    }),
+    ('cmo', '1.9.15', { 
+        'source_urls': ['https://github.com/mskcc/cmo/archive/'],
+        'source_tmpl': '%(version)s.tar.gz',
+    }),
+    ('basicfiltering', '0.3', {
+        'source_urls': ['https://github.com/mskcc/basicfiltering/archive/'],
+        'source_tmpl': '%(version)s.tar.gz',
     }),
 ]
 

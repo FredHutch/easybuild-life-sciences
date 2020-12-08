@@ -9,6 +9,10 @@ description = "medaka is a tool to create a consensus sequence of nanopore seque
 
 toolchain = {'name': 'foss', 'version': '2019b'}
 
+builddependencies = [
+    ('HTSlib', '1.10.2'),  # for libhtslib.a 
+]
+
 dependencies = [
     ('Python', '3.7.4'),
     ('SAMtools', '1.10'),
@@ -62,6 +66,7 @@ exts_list = [
     (name, version, {
         'preinstallopts': "sed -i'.orig' 's/==.*//g' requirements.txt && ",
         'patches': ['%(name)s-%(version)s_Makefile.patch'],
+        'buildopts': 'LDFLAGS="$LDFLAGS -L${EBROOTHTSLIB}/lib"',
     }),
 ]
 

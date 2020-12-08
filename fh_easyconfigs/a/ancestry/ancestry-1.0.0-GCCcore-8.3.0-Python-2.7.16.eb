@@ -8,6 +8,7 @@ easyblock = 'MakeCp'
 
 name = 'ancestry'
 version = '1.0.0'
+versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'https://github.com/vibansal'
 description = """Fast individual ancestry inference from DNA sequence data leveraging allele frequencies
@@ -17,6 +18,7 @@ description = """Fast individual ancestry inference from DNA sequence data lever
 toolchain = {'name': 'GCCcore', 'version': '8.3.0'}
 
 dependencies = [
+    ('Python', '2.7.16'),
     ('binutils', '2.32'),
     ('ncurses', '6.1'),
 ]
@@ -25,11 +27,13 @@ source_urls = ['https://github.com/vibansal/ancestry/archive']
 sources = ['%(version)s.tar.gz']
 checksums = ['1e8d3ff5fb422d2723d04850959868362d83bc0d3db47b1dd565cc84c255463a']
 
-files_to_copy = [(['calculateGLL', 'ANCESTRY'], 'bin'), (['lbfgsb.o'], 'lib')]
+files_to_copy = [(['calculateGLL', 'ANCESTRY', 'runancestry.py'], 'bin'), (['lbfgsb.o'], 'lib')]
 
 sanity_check_paths = {
     'files': ['bin/ANCESTRY'],
     'dirs': []
 }
+
+modextrapaths = {'PYTHONPATH': 'bin'}
 
 moduleclass = 'bio'
