@@ -1278,6 +1278,7 @@ exts_list = [
     ('cmo', '1.9.15', { 
         'source_urls': ['https://github.com/mskcc/cmo/archive/'],
         'source_tmpl': '%(version)s.tar.gz',
+        'patches': ['cmo-1.9.15_setup.patch'],
     }),
     ('basicfiltering', '0.3', {
         'source_urls': ['https://github.com/mskcc/basicfiltering/archive/'],
