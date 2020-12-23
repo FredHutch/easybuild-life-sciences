@@ -1,0 +1,49 @@
+easyblock = 'PythonBundle'
+
+name = 'basicfiltering'
+version = '1.0.7'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/rhshah/basicfiltering'
+description = """Basic Filtering for; Variant Allele Frequency, Variat Reads, tumor-Normal Variant Allele Frequencey Ratio."""
+
+toolchain = {'name': 'foss', 'version': '2020a'}
+
+dependencies = [
+    ('Python', '3.8.2'),
+    ('SciPy-bundle', '2020.06', versionsuffix),
+]
+
+exts_defaultclass = 'PythonPackage'
+exts_filter = ("python -c 'import %(ext_name)s'", '')
+exts_default_options = {
+    'download_dep_fail': True,
+    'use_pip': True,
+    'source_urls': [PYPI_SOURCE],
+}
+
+
+exts_list = [
+    ('coverage', '5.2.1'),
+    ('codecov', '2.1.8'),
+    ('humanfriendly', '8.2'),
+    ('coloredlogs', '14.0'),
+    ('PyVCF', '0.6.8', {
+        'modulename': 'vcf',
+    }),
+    (name, version, {
+        'modulename': False,
+        'preinstallopts': "sed -i'.orig' 's/==/>=/g' requirements.txt && ",
+        'source_urls': ['https://github.com/rhshah/basicfiltering/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ["coverage --help"]
+
+moduleclass = 'bio'
