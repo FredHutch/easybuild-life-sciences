@@ -4,11 +4,10 @@
 #
 #  Fred Hutchinson Cancer Research Center - Seattle Washington - US
 #
-easyblock = 'Bundle'
+easyblock = 'PythonBundle'
 
 name = 'PyClone'
 version = '2020.9b2'
-versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'https://gitlab.com/ltgiv/pyclone'
 description = """PyClone is a Python package that wraps rclone and provides a threaded interface for
@@ -16,11 +15,12 @@ description = """PyClone is a Python package that wraps rclone and provides a th
 
 toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
 
+builddependencies = [('binutils', '2.35')]
+
 dependencies = [
     ('Python', '3.8.6'),
 ]
 
-exts_defaultclass = 'PythonPackage'
 exts_default_options = {
     'source_urls': [PYPI_SOURCE],
     'use_pip': True
@@ -37,12 +37,5 @@ exts_list = [
         'checksums': ['e294e875fdd9131526ba9974ad478f213c6d982d273b4b385346e3147e672bc0'],
     }),
 ]
-
-sanity_check_paths = {
-    'files': [],
-    'dirs': ['lib/python%(pyshortver)s/site-packages'],
-}
-
-modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
 
 moduleclass = 'tools'
