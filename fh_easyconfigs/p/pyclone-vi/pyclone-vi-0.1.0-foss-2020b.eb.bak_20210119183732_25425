@@ -1,0 +1,44 @@
+# easybuild easyconfig
+#
+#  John Dey <jfdey@fredhtuch.org>
+#
+#  Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonBundle'
+
+name = 'pyclone-vi'
+version = '0.1.0'
+
+github_account = 'Roth-Lab'
+homepage = 'https://github.com/Roth-Lab/pyclone-vi'
+description = """PyClone is a Bayesian clustering method for grouping sets of deeply sequenced
+ somatic mutations into putative clonal clusters while estimating their cellular prevalences and
+ accounting for allelic imbalances introduced by segmental copy-number changes and normal-cell
+ contamination."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11'),
+    ('numba', '0.52.0'),
+    ('h5py', '3.1.0'),
+    # ('PyYAML', '5.3.1'),
+]
+
+sanity_pip_check = True
+download_dep_fail = True
+exts_default_options = {
+    'source_urls': [PYPI_SOURCE],
+    'use_pip': True
+}
+
+exts_list = [
+    ('click', '7.1.2'),
+    (name, version, {
+        'source_urls': [GITHUB_SOURCE],
+        'source_tmpl': '%(version)s.tar.gz',
+    }),
+]
+
+moduleclass = 'bio'
