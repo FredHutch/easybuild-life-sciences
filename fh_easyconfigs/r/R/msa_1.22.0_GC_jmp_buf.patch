@@ -1,0 +1,38 @@
+diff -ruN msa.orig/src/gc-7.2/include/private/gc_priv.h msa/src/gc-7.2/include/private/gc_priv.h
+--- msa.orig/src/gc-7.2/include/private/gc_priv.h	2020-10-27 10:48:51.000000000 -0700
++++ msa/src/gc-7.2/include/private/gc_priv.h	2021-01-25 21:14:26.157014000 -0800
+@@ -2325,7 +2325,7 @@
+ 
+ #if defined(NEED_FIND_LIMIT) \
+      || (defined(USE_PROC_FOR_LIBRARIES) && defined(THREADS))
+-  JMP_BUF GC_jmp_buf;
++extern  JMP_BUF GC_jmp_buf;
+ 
+   /* Set up a handler for address faults which will longjmp to  */
+   /* GC_jmp_buf;                                                */
+diff -ruN msa.orig/src/gc-7.2/mark.c msa/src/gc-7.2/mark.c
+--- msa.orig/src/gc-7.2/mark.c	2020-10-27 10:48:51.000000000 -0700
++++ msa/src/gc-7.2/mark.c	2021-01-25 22:36:45.249641000 -0800
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include "private/gc_pmark.h"
++#include "private/gc_priv.h"
+ 
+ #include <stdio.h>
+ 
+diff -ruN msa.orig/src/gc-7.2/os_dep.c msa/src/gc-7.2/os_dep.c
+--- msa.orig/src/gc-7.2/os_dep.c	2020-10-27 10:48:51.000000000 -0700
++++ msa/src/gc-7.2/os_dep.c	2021-01-26 11:59:15.260416000 -0800
+@@ -139,6 +139,11 @@
+ 
+ #define READ read
+ 
++#if defined(NEED_FIND_LIMIT) \
++     || (defined(USE_PROC_FOR_LIBRARIES) && defined(THREADS))
++JMP_BUF GC_jmp_buf;
++#endif /* NEED_FIND_LIMIT || USE_PROC_FOR_LIBRARIES */
++
+ /* Repeatedly perform a read call until the buffer is filled or */
+ /* we encounter EOF.                                            */
+ STATIC ssize_t GC_repeat_read(int fd, char *buf, size_t count)
