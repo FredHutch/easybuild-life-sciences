@@ -27,7 +27,5 @@ docs:
         url: /toolchains/
       - title: "Dependency Graphs"
         url: /dot/
-      - title: "Trusty Archive"
-        url: /all-modules-14.04/
       - title: "About"
         url: /about/
