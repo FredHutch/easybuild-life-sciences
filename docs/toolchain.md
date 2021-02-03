@@ -28,7 +28,7 @@ Foss-2019b was the primary toolchain to support Ubuntu Bionic 18.04. And foss-20
 | foss-2020a | GCC 9.3.0 | Mostly skipped | 
 | [foss-2019b]({{ site.baseurl }}/foss-2019b/) | GCC 8.3.0 | Primay tool chain for 2019 cluster update |
 | foss-2019a | GCC 8.2.0 | skipped |
-| [foss-2018b]({{ site.baseurl }}/foss-2018b/) | GCC 7.3.0 | Many module were built for the new cluster, but are outdated by 2019 |
+| [foss-2018b]({{ site.baseurl }}/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but are outdated by 2019 |
 | foss-2016b | GCC 5.4.0 | Old cluster |
 |------------|-----------|-------------|
 
