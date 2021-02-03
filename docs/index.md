@@ -28,8 +28,6 @@ bellow to see a list of available builds with a list of modules.
 
  - [R Modules]({{ site.baseurl }}/r/)
  - [Python Modules]({{ site.baseurl }}/python/)
- - [foss-2019b]({{ site.baseurl }}/foss-2019b/) (Free and Open Source Software)
- - [foss-2018b]({{ site.baseurl }}/foss-2018b/) (Free and Open Source Software)
  - [Dependency Graphs]({{ site.baseurl }}/dot/)
 
 ### Scientific Software Environment
@@ -39,8 +37,9 @@ Easybuild and Modules provide the tools for using scientific software in a
 repeatable and documented way.
 
 ### Software Packages
-Easybuild modules are built from toolkits. The toolkit provides the foundation for system level and
-math libraries. Easybuild software modules names contain the software name-version and the toolkit name
+Easybuild modules are built from [toolchains]({{ site.baseurl }}/toolchains/).
+ The toolchain provides the foundation for system level libraries and
+math libraries. Easybuild software modules names contain the software name-version and the toolchain name
 used to build the module. Custom reciepies used at the Hutch also have suffix <tt>fh</tt> to distigue them
 from other published reciepeis. Once a reciepe is published to this repository it is not changed. If changes
 have to be made to a package the suffix is versioned. (fh1, fh2, fh3 etc).
