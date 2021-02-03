@@ -23,6 +23,8 @@ docs:
         url: /python/
       - title: "Python Bundles"
         url: /python-bundles/
+      - title: "Toolchains"
+        url: /toolchains/
       - title: "Dependency Graphs"
         url: /dot/
       - title: "Trusty Archive"
