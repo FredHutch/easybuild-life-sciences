@@ -1,0 +1,55 @@
+easyblock = 'Bundle'
+
+name = 'Seurat'
+version = '4.0.0'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.12'
+
+homepage = 'https://satijalab.org/seurat'
+description = "Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data."
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('R', '4.0.2'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz'
+}
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+exts_list = [
+    ('rlang', '0.4.9'),
+    ('future.apply', '1.7.0', { }),
+    ('leiden', '0.3.7', { }),
+    ('patchwork', '1.1.1'),
+    ('Rcpp', '1.0.6'),
+    ('RcppAnnoy', '0.0.18'),
+    ('RSpectra', '0.16-0'),
+    ('scattermore', '0.7'),
+    ('sctransform', '0.3.2'),
+    ('sitmo', '2.0.1'),
+    ('dqrng', '0.2.1'),
+    ('uwot', '0.1.10'),
+    ('SeuratObject', '4.0.0'),
+    (name, version, {
+        'checksum': ['b67530681ba14d0531b148dd96a8dddfddf99d2e3ea3164821f2d70580bfe3d6']
+    }),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [name],
+}
+
+moduleclass = 'bio'
