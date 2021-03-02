@@ -1,0 +1,31 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'Tarball'
+
+name = 'Magic-BLAST'
+version = '1.5.0'
+versionsuffix = '-Linux_x86_64'
+
+homepage = 'https://ncbi.github.io/magicblast/'
+description = """Magic-BLAST is a tool for mapping large next-generation RNA or DNA sequencing runs
+ against a whole genome or transcriptome."""
+
+toolchain = SYSTEM
+
+# ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST/ncbi-magicblast-1.5.0-x64-linux.tar.gz 
+#                                                                ncbi-magicblast-1.5.0-x64-linux.tar.gz
+
+source_urls = ['ftp://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST']
+sources = ['ncbi-%s-%s-x64-linux.tar.gz' % (name.replace('-','').lower(), version)]
+checksums = []
+
+sanity_check_paths = {
+    'files': ["bin/magicblast"],
+    'dirs': []
+}
+
+moduleclass = 'bio'
