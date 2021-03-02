@@ -1,0 +1,23 @@
+easyblock = 'MakeCp'
+
+name = "fastNGSadmix"
+version = "dda93a4"
+
+homepage = 'http://www.popgen.dk/software/index.php/FastNGSadmix'
+description = """Program for infering admixture proportions and doing PCA with a single NGS
+ sample. Inferences based on reference panel."""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+
+source_urls = ['https://github.com/e-jorsboe/fastNGSadmix']
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+files_to_copy = [(['fastNGSadmix'], "bin"), 'iAdmix', 'R']
+
+sanity_check_paths = {
+    'files': ["bin/fastNGSadmix"],
+    'dirs': [""],
+}
+
+moduleclass = 'bio'
