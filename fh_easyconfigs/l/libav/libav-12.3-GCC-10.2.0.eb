@@ -18,7 +18,7 @@ toolchainopts = {'pic': True}
 
 source_urls = ['https://libav.org/releases/']
 sources = [SOURCELOWER_TAR_XZ]
-checksums = []
+checksums = ['6893cdbd7bc4b62f5d8fd6593c8e0a62babb53e323fbc7124db3658d04ab443b']
 
 builddependencies = [('pkg-config', '0.29.2')]
 
@@ -27,6 +27,7 @@ dependencies = [
     ('zlib', '1.2.11'),
 ]
 
+parallel = 1
 configopts = "--disable-avresample --disable-doc"
 
 sanity_check_paths = {
