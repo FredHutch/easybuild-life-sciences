@@ -1,0 +1,28 @@
+easyblock = 'ConfigureMake'
+
+name = 'libuv'
+version = '1.41.0'
+
+homepage = 'https://libuv.org'
+description = "libuv is a multi-platform support library with a focus on asynchronous I/O."
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+github_account = 'libuv'
+source_urls = [GITHUB_SOURCE]
+sources = [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCELOWER_TAR_GZ}]
+checksums = []
+
+builddependencies = [
+    ('binutils', '2.35'),
+    ('Autotools', '20200321'),
+]
+
+preconfigopts = './autogen.sh; '
+
+sanity_check_paths = {
+    'files': ['include/uv.h', 'lib/libuv.a', 'lib/libuv.%s' % SHLIB_EXT, 'lib/pkgconfig/libuv.pc'],
+    'dirs': []
+}
+
+moduleclass = 'lib'

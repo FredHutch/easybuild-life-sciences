@@ -1,0 +1,37 @@
+# Authors:: Jack Perdue <j-perdue@tamu.edu> - TAMU HPRC - http://hprc.tamu.edu
+
+easyblock = 'ConfigureMake'
+
+name = 'libav'
+version = '12.3'
+
+homepage = 'https://libav.org/'
+
+description = """
+ Libav is a friendly and community-driven effort to provide its users with
+ a set of portable, functional and high-performance libraries for dealing
+ with multimedia formats of all sorts.
+"""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://libav.org/releases/']
+sources = [SOURCELOWER_TAR_XZ]
+checksums = []
+
+builddependencies = [('pkg-config', '0.29.2')]
+
+dependencies = [
+    ('NASM', '2.15.05'),
+    ('zlib', '1.2.11'),
+]
+
+configopts = "--disable-avresample --disable-doc"
+
+sanity_check_paths = {
+    'files': ['bin/avconv', 'bin/avprobe', 'lib/libavcodec.a'],
+    'dirs': ['lib/pkgconfig'],
+}
+
+moduleclass = 'vis'
