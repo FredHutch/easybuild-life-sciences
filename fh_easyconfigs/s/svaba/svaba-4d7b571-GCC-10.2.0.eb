@@ -1,0 +1,36 @@
+# create tar ball from recursive clone of repository
+easyblock = 'ConfigureMake'
+
+name = 'svaba'
+version = '4d7b571'
+
+homepage = 'https://github.com/walaj/svaba'
+description = """SvABA - Structural variation and indel analysis by assembly"""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+
+source_urls = ['https://github.com/walaj/SeqLib/archive']
+sources =[SOURCE_TAR_GZ]
+patches = ['svaba_rle_extern.patch']
+
+builddependencies = [('binutils', '2.35')]
+
+dependencies = [
+    ('XZ', '5.2.5'),
+    ('bzip2', '1.0.8'),
+]
+
+postinstallcmds = ['mkdir %(installdir)s/bin/',
+                   'mkdir %(installdir)s/R',
+                   'cp %(builddir)s/%(name)s/R/*R %(installdir)s/R',
+                   'cp %(builddir)s/%(name)s/bin/* %(installdir)s/bin',
+                   ]
+
+runtest = 'bin/svaba --version'
+
+sanity_check_paths = {
+    'files': ['bin/svaba', 'R/svaba-annotate.R'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
