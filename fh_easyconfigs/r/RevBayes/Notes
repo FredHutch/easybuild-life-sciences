@@ -1,0 +1,46 @@
+Building RevBays 1.1.1 - March 2021
+
+first attempts was with full foss/2020b, but switch to GCC/10.2.0 which eliminates MPI.
+FYI - Boost/1.74-GCC-10.2.0 does not have MPI
+
+
+Add libnpth0 the GNU Pthread library. This passes for Pthread and POSIX compliant threads. libnpth0 is on all the cluster nodes
+but not the Docker build container.  With Ubuntu using -lpthread will only catch about 80 of the libraries? Very strange,
+but using C_FLAGS=-pthread will catch all the pthread libriries. Again, not an issue with CENTOS.
+
+There is no "pthread" library for Bionic.
+add -pthread to CXX flag
+
+
+Boost configuration results:
+  Boost_INCLUDE_DIRS: /app/software/Boost/1.74.0-GCC-10.2.0/include
+  Boost_LIBRARY_DIRS:
+  Boost_LIBRARIES:
+
+
+./build.sh -boost_root /app/software/Boost/1.74.0-GCC-10.2.0/ -boost_lib /app/software/Boost/1.74.0-GCC-10.2.0/lib -DCMAKE_CXX_FLAGS="-pthread" 
+
+
+This error was fixed by adding this CMake flag: -DBoost_NO_BOOST_CMAKE=ON'
+Which I read about here:  https://stackoverflow.com/questions/58081084/target-boostlibrary-already-has-an-imported-location-link-errors
+which id due to a bug in Boost/1.71.0 See https://github.com/boostorg/boost_install/issues/13, it should be fixed in the next release.
+
+This CMake directive should have worked but did not:  set(Boost_USE_MULTITHREADED TRUE) 
+
+Running 'cmake ../../../src -DRB_EXEC_NAME=rb  -DBOOST_ROOT=/app/software/Boost/1.74.0-GCC-10.2.0 -DBoost_USE_MULTITHREADED=FALSE' in /app/build/RevBayes/1.1.1/foss-2020b/revbayes-1.1.1/projects/cmake/build
+Boost location hints:
+  BOOST_ROOT: /app/software/Boost/1.74.0-GCC-10.2.0
+Searching for BOOST:
+CMake Error at /app/software/Boost/1.74.0-GCC-10.2.0/lib/cmake/boost_regex-1.74.0/libboost_regex-variant-shared.cmake:70 (message):
+  Target Boost::regex already has an imported location
+  '/app/software/Boost/1.74.0-GCC-10.2.0/lib/libboost_regex-mt-x64.so.1.74.0',
+  which is being overwritten with
+  '/app/software/Boost/1.74.0-GCC-10.2.0/lib/libboost_regex.so.1.74.0'
+Call Stack (most recent call first):
+  /app/software/Boost/1.74.0-GCC-10.2.0/lib/cmake/boost_regex-1.74.0/boost_regex-config.cmake:51 (include)
+  /app/software/Boost.MPI/1.74.0-gompi-2020b/lib/cmake/Boost-1.74.0/BoostConfig.cmake:141 (find_package)
+  /app/software/Boost.MPI/1.74.0-gompi-2020b/lib/cmake/Boost-1.74.0/BoostConfig.cmake:258 (boost_find_component)
+  /app/software/CMake/3.18.4-GCCcore-10.2.0/share/cmake-3.18/Modules/FindBoost.cmake:448 (find_package)
+  CMakeLists.txt:94 (find_package)
+
+
