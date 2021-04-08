@@ -1,0 +1,7 @@
+diff -ruN PKI.orig/src/Makevars.in PKI/src/Makevars.in
+--- PKI.orig/src/Makevars.in	2021-02-03 16:41:21.000000000 -0800
++++ PKI/src/Makevars.in	2021-03-01 13:49:59.398225000 -0800
+@@ -1,2 +1,2 @@
+ PKG_CPPFLAGS=@CPPFLAGS@
+-PKG_LIBS=@LIBS@
++PKG_LIBS=@LIBS@ -lssl -lcrypto
