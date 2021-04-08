@@ -1,0 +1,44 @@
+# easybuild easyconfig
+#
+#  John Dey <jfdey@fredhtuch.org>
+#
+#  Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonBundle'
+
+name = 'pyclone'
+version = '0.13.1'
+versionsuffix = '-Python-%(pyver)s'
+
+github_account = 'Roth-Lab'
+homepage = 'https://github.com/Roth-Lab/pyclone'
+description = """PyClone is a Bayesian clustering method for grouping sets of deeply sequenced
+ somatic mutations into putative clonal clusters while estimating their cellular prevalences and
+ accounting for allelic imbalances introduced by segmental copy-number changes and normal-cell
+ contamination."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+dependencies = [
+    ('Python', '2.7.16'),
+    ('SciPy-bundle', '2019.10', versionsuffix),
+    ('PyYAML', '5.1.2', versionsuffix),
+]
+
+use_pip = True
+#sanity_pip_check = True
+download_dep_fail = True
+
+exts_default_options = {
+    'source_urls': [GITHUB_SOURCE],
+    'sources': ['%(version)s.tar.gz'],
+}
+
+exts_list = [
+    ('pydp', '0.2.4'),
+    (name, version, {
+        'source_urls': [GITHUB_SOURCE],
+    }),
+]
+
+moduleclass = 'bio'
