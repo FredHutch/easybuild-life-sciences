@@ -28,96 +28,154 @@ use_pip = True
 exts_default_options = {'source_urls': [PYPI_SOURCE]}
 
 exts_list = [
-    ('tabulate', '0.8.3'),
+    ('tabulate', '0.8.3', {
+        'checksums': ['8af07a39377cee1103a5c8b3330a421c2d99b9141e9cc5ddd2e3263fea416943'],
+    }),
     ('python-json-logger', '0.1.11', {
         'modulename': 'pythonjsonlogger',
+        'checksums': ['b7a31162f2a01965a5efb94453ce69230ed208468b0bbc7fdfc56e6d8df2e281'],
     }),
     ('attrs', '20.3.0', {
         'modulename': 'attr',
+        'checksums': ['832aa3cde19744e49938b91fea06d69ecb9e649c93ba974535d08ad92164f700'],
     }),
     ('multidict', '5.1.0', {
+        'checksums': ['25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5'],
     }),
     ('async-timeout', '3.0.1', {
+        'checksums': ['0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f'],
     }),
     ('typing_extensions', '3.7.4.3', {
+        'checksums': ['99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c'],
     }),
     ('yarl', '1.6.3', {
+        'checksums': ['8a9066529240171b68893d60dca86a763eae2139dd42f42106b03cf4b426bf10'],
     }),
-    ('idna', '2.8'),
+    ('idna', '2.8', {
+        'checksums': ['c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407'],
+    }),
     ('idna-ssl', '1.1.0', {
         'modulename': 'idna_ssl',
+        'checksums': ['a933e3bb13da54383f9e8f35dc4f9cb9eb9b3b78c6b36f311254d6d0d92c6c7c'],
     }),
-    ('aiohttp', '3.7.4'),
-    ('aiohttp-session', '2.7.0'),
-    ('asyncinit', '0.2.4'),
+    ('aiohttp', '3.7.4', {
+        'checksums': ['5d84ecc73141d0a0d61ece0742bb7ff5751b0657dab8405f899d3ceb104cc7de'],
+    }),
+    ('aiohttp-session', '2.7.0', {
+        'checksums': ['18ae740845214086f783574edfee1bac36862332bd11d561e048b079d8f6ad34'],
+    }),
+    ('asyncinit', '0.2.4', {
+        'checksums': ['4acaf614f4d6f78babd278bbacf21bd9f7756efc17cd5d7e1bae31ff770b3cfa'],
+    }),
     ('Pillow', '7.2.0', {
         'modulename': 'PIL',
+        'checksums': ['97f9e7953a77d5a70f49b9a48da7776dc51e9b738151b22dacf101641594a626'],
     }),
-    ('tornado', '6.1'),
-    ('bokeh', '1.4.0'),
+    ('tornado', '6.1', {
+        'checksums': ['33c6e81d7bd55b468d2e793517c909b139960b6c790a60b7991b9b6b76fb9791'],
+    }),
+    ('bokeh', '1.4.0', {
+        'checksums': ['c60d38a41a777b8147ee4134e6142cea8026b5eebf48149e370c44689869dce7'],
+    }),
     ('wrapt', '1.12.1', {
+        'checksums': ['b62ffa81fb85f4332a4f609cab4ac40709470da05643a082ec1eb88e6d9b97d7'],
     }),
     ('Deprecated', '1.2.12', {
         'modulename': 'deprecated',
+        'checksums': ['6d2de2de7931a968874481ef30208fd4e08da39177d61d3d4ebdf4366e7dbca1'],
     }),
     ('dill', '0.3.3', {
         'source_tmpl': '%(name)s-%(version)s.zip',
+        'checksums': ['efb7f6cb65dba7087c1e111bb5390291ba3616741f96840bfc75792a1a9b5ded'],
     }),
     ('cachetools', '4.2.1', {
+        'checksums': ['f469e29e7aa4cff64d8de4aad95ce76de8ea1125a16c68e0d93f65c3c3dc92e9'],
     }),
     ('pyasn1-modules', '0.2.8', {
+        'checksums': ['905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e'],
     }),
     ('rsa', '4.7.2', {
+        'checksums': ['9d689e6ca1b3038bc82bf8d23e944b6b6037bc02301a574935b2dd946e0353b9'],
     }),
     ('google-auth', '1.28.1', {
         'modulename': 'google.auth',
+        'checksums': ['70b39558712826e41f65e5f05a8d879361deaf84df8883e5dd0ec3d0da6ab66e'],
     }),
-    ('oauthlib', '3.1.0'),
-    ('requests', '2.22.0'),
+    ('oauthlib', '3.1.0', {
+        'checksums': ['bee41cc35fcca6e988463cacc3bcb8a96224f470ca547e697b604cc697b2f889'],
+    }),
+    ('requests', '2.22.0', {
+        'checksums': ['11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4'],
+    }),
     ('requests-oauthlib', '1.3.0', {
         'modulename': 'requests_oauthlib',
+        'checksums': ['b4261601a71fd721a8bd6d7aa1cc1d6a8a93b4a9f5e96626f8e4d91e8beeaa6a'],
     }),
     ('google-auth-oauthlib', '0.4.4', {
+        'checksums': ['09832c6e75032f93818edf1affe4746121d640c625a5bef9b5c96af676e98eee'],
     }),
-    ('fsspec', '0.9.0'),
-    ('gcsfs', '0.7.2'),
+    ('fsspec', '0.9.0', {
+        'checksums': ['3f7a62547e425b0b336a6ac2c2e6c6ac824648725bc8391af84bb510a63d1a56'],
+    }),
+    ('gcsfs', '0.7.2', {
+        'checksums': ['e4438e342ad3cd7eb31f7a45af03a794a82cc991d36fa9deac6390707439a4de'],
+    }),
     ('protobuf', '3.15.8', {
         'modulename': 'google.protobuf',
+        'checksums': ['0277f62b1e42210cafe79a71628c1d553348da81cbd553402a7f7549c50b11d0'],
     }),
     ('googleapis-common-protos', '1.53.0', {
         'modulename': 'google.api',
+        'checksums': ['a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4'],
     }),
     ('google-api-core', '1.26.3', {
-       'modulename': 'google.api_core',
+        'modulename': 'google.api_core',
+        'checksums': ['b914345c7ea23861162693a27703bab804a55504f7e6e9abcaff174d80df32ac'],
     }),
     ('google-cloud-core', '1.6.0', {
-       'modulename': 'google.cloud',
+        'modulename': 'google.cloud',
+        'checksums': ['c6abb18527545379fc82efc4de75ce9a3772ccad2fc645adace593ba097cbb02'],
     }),
     ('crcmod', '1.7', {
+        'checksums': ['dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e'],
     }),
     ('google-crc32c', '1.1.2', {
+        'checksums': ['dff5bd1236737f66950999d25de7a78144548ebac7788d30ada8c1b6ead60b27'],
     }),
     ('google-resumable-media', '0.5.0', {
-       'modulename': 'google.resumable_media',
+        'modulename': 'google.resumable_media',
+        'checksums': ['2a8fd188afe1cbfd5998bf20602f76b0336aa892de88fe842a806b9a3ed78d2a'],
     }),
     ('google-cloud-storage', '1.25.0', {
         'modulename': 'google.cloud.storage',
+        'checksums': ['8e9505ad7ba356c0953acefc0cdfd41de0dd5f1df520d1cd5bb31bd34ee45373'],
     }),
-    ('humanize', '1.0.0'),
-    ('hurry.filesize', '0.9'),
+    ('humanize', '1.0.0', {
+        'checksums': ['38ace9b66bcaeb7f8186b9dbf0b3448e00148e5b4fbaf726f96c789e52c3e741'],
+    }),
+    ('hurry.filesize', '0.9', {
+        'checksums': ['f5368329adbef86accd3bc9490522340bb79260455ae89b1a42c10f63801b9a6'],
+    }),
     ('nest_asyncio', '1.5.1', {
+        'checksums': ['afc5a1c515210a23c461932765691ad39e8eba6551c055ac8d5546e69250d0aa'],
     }),
-    ('parsimonious', '0.8.1'),
+    ('parsimonious', '0.8.1', {
+        'checksums': ['3add338892d580e0cb3b1a39e4a1b427ff9f687858fdd61097053742391a9f6b'],
+    }),
     ('PyJWT', '2.0.1', {
         'modulename': 'jwt',
+        'checksums': ['a5c70a06e1f33d81ef25eecd50d50bd30e34de1ca8b2b9fa3fe0daaabcf69bf7'],
     }),
-    ('tqdm', '4.42.1'),
-    # pyspark and py4j from Spark
+    ('tqdm', '4.42.1', {
+        'checksums': ['251ee8440dbda126b8dfa8a7c028eb3f13704898caaef7caa699b35e119301e2'],
+    }),
+    # pyspark and py4j are required and come from Spark
     (name, version, {
+        'modulename': 'hail',
         'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl',
         'unpack_sources': False,
-        'modulename': 'hail',
-    })
+        'checksums': ['c1b01290e671bb5cf6381ecffc3f278f2da7b9cff2bdf5326a5b95165efbb737'],
+    }),
 ]
 
 sanity_pip_check = True
