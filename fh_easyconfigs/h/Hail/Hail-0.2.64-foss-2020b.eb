@@ -1,0 +1,125 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'PythonBundle'
+
+name = 'Hail'
+version = '0.2.64'
+
+homepage = 'https://hail.is/'
+description = """Hail is an open-source, general-purpose, Python-based data analysis tool with
+ additional data types and methods for working with genomic data."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('PyYAML', '5.3.1'),
+    ('SciPy-bundle', '2020.11'),
+    ('LLVM', '10.0.1'),
+    ('libjpeg-turbo', '2.0.5'),  # required for Pillow
+    ('Spark', '3.1.1'),
+]
+
+use_pip = True
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+    ('tabulate', '0.8.3'),
+    ('python-json-logger', '0.1.11', {
+        'modulename': 'pythonjsonlogger',
+    }),
+    ('attrs', '20.3.0', {
+        'modulename': 'attr',
+    }),
+    ('multidict', '5.1.0', {
+    }),
+    ('async-timeout', '3.0.1', {
+    }),
+    ('typing_extensions', '3.7.4.3', {
+    }),
+    ('yarl', '1.6.3', {
+    }),
+    ('idna', '2.8'),
+    ('idna-ssl', '1.1.0', {
+        'modulename': 'idna_ssl',
+    }),
+    ('aiohttp', '3.7.4'),
+    ('aiohttp-session', '2.7.0'),
+    ('asyncinit', '0.2.4'),
+    ('Pillow', '7.2.0', {
+        'modulename': 'PIL',
+    }),
+    ('tornado', '6.1'),
+    ('bokeh', '1.4.0'),
+    ('wrapt', '1.12.1', {
+    }),
+    ('Deprecated', '1.2.12', {
+        'modulename': 'deprecated',
+    }),
+    ('dill', '0.3.3', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('cachetools', '4.2.1', {
+    }),
+    ('pyasn1-modules', '0.2.8', {
+    }),
+    ('rsa', '4.7.2', {
+    }),
+    ('google-auth', '1.28.1', {
+        'modulename': 'google.auth',
+    }),
+    ('oauthlib', '3.1.0'),
+    ('requests', '2.22.0'),
+    ('requests-oauthlib', '1.3.0', {
+        'modulename': 'requests_oauthlib',
+    }),
+    ('google-auth-oauthlib', '0.4.4', {
+    }),
+    ('fsspec', '0.9.0'),
+    ('gcsfs', '0.7.2'),
+    ('protobuf', '3.15.8', {
+        'modulename': 'google.protobuf',
+    }),
+    ('googleapis-common-protos', '1.53.0', {
+        'modulename': 'google.api',
+    }),
+    ('google-api-core', '1.26.3', {
+       'modulename': 'google.api_core',
+    }),
+    ('google-cloud-core', '1.6.0', {
+       'modulename': 'google.cloud',
+    }),
+    ('crcmod', '1.7', {
+    }),
+    ('google-crc32c', '1.1.2', {
+    }),
+    ('google-resumable-media', '0.5.0', {
+       'modulename': 'google.resumable_media',
+    }),
+    ('google-cloud-storage', '1.25.0', {
+        'modulename': 'google.cloud.storage',
+    }),
+    ('humanize', '1.0.0'),
+    ('hurry.filesize', '0.9'),
+    ('nest_asyncio', '1.5.1', {
+    }),
+    ('parsimonious', '0.8.1'),
+    ('PyJWT', '2.0.1', {
+        'modulename': 'jwt',
+    }),
+    ('tqdm', '4.42.1'),
+    # pyspark and py4j from Spark
+    (name, version, {
+        'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl',
+        'unpack_sources': False,
+        'modulename': 'hail',
+    })
+]
+
+sanity_pip_check = True
+
+moduleclass = 'bio'

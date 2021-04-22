@@ -1,0 +1,80 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'svaba'
+version = '1.1.0'
+
+homepage = 'http://www.r-project.org/'
+description = """R is a free software environment for statistical computing and graphics."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+builddependencies = [('pkg-config', '0.29.2')]
+
+dependencies = [
+    ('R', '4.0.3'),
+    ('SeqLib', '1.2.0'),
+    ('HTSlib', '1.11'),
+    ('BWA', '0.7.17'),
+    ('fermi-lite', '0.1'),
+    # ('libwebp', '1.1.0'), # webp
+    #('PostgreSQL', '10.3'),
+    # ('JAGS', '4.3.0'),
+    # ('GLPK', '4.65'), # rglpk
+    # ('poppler', '20.12.1'), # pdftools
+    #*('GMime', '3.2.7'), # pdftools
+    # ('NLopt', '2.6.2'),
+    # ('libGLU', '9.0.1'),
+    # ('Mesa', '20.2.1'),  # for rgl
+    # ('cairo', '1.16.0'),
+    # ('ICU', '67.1'),
+    # ('netCDF', '4.7.4'),  # for netcdf4
+]
+
+osdependencies = [OS_PKG_OPENSSL_DEV]
+preconfigopts = ' PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/lib/x86_64-linux-gnu/pkgconfig" '
+
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'https://bioconductor.org/packages/release/bioc/src/contrib/',
+        'https://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+local_ext_version_check = "pkgver = packageVersion('%(ext_name)s'); if (pkgver != '%(ext_version)s') "
+local_stop_msg = "stop('%(ext_name)s %(ext_version)s not installed, found ', pkgver, ' instead')"
+exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_stop_msg))
+
+# !! order of packages is important !!
+# packages updated on July 8th 2016
+exts_list = [
+    ('SeqLib', '1.2.0', {
+        'source_urls': ['https://github.com/walaj/SeqLib/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+    }),
+    ('svaba', '1.1.0', {
+        'source_urls': ['https://github.com/walaj/svaba/archive'],
+        'source_tmpl': '%(version)s.tar.gz',
+    }),
+]
+
+modextrapaths = {'R_LIBS': ''}
+
+sanity_check_paths = {
+    'files': ['perm/R/perm'],
+    'dirs': ['perm'], #'BiocManager', 'GenomicFeatures'],
+}
+
+moduleclass = 'lang'
