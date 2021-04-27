@@ -1,0 +1,34 @@
+easyblock = 'ConfigureMake'
+
+name = 'SYMPHONY'
+version = '5.6.17'
+
+homepage = 'https://github.com/coin-or/SYMPHONY/wiki'
+description = """SYMPHONY is an open-source solver for mixed-integer linear programs (MILPs)
+ written in C. It can be used in four different main modes."""
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+source_urls = ['https://github.com/coin-or/SYMPHONY/archive/releases']
+sources = ['%(version)s.tar.gz']
+checksums = ['f6c2b9c9e60ebff4a665e243e765649334c5d0680f536d3d9c0c372025ab96dc']
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('binutils', '2.35'),
+]
+
+dependencies = [
+    ('GLPK', '4.65'),
+    ('Cgl', '0.60.3'),
+]
+
+sanity_check_paths = {
+    'dirs':  ['bin', 'include', 'lib/pkgconfig', 'share'],
+    'files': ['bin/symphony',
+              'include/coin/SymConfig.h',
+              'lib/libSym.%s' % SHLIB_EXT,
+              'share/coin/doc/SYMPHONY/README']
+}
+
+moduleclass = 'math'
