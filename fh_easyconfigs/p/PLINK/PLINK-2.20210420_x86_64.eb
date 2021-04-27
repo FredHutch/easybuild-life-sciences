@@ -1,0 +1,26 @@
+# Contribution from the NIHR Biomedical Research Centre
+# Guy's and St Thomas' NHS Foundation Trust and King's College London
+# uploaded by J. Sassmannshausen
+
+easyblock = 'PackedBinary'
+
+name = 'PLINK'
+version = '2.20210420_x86_64'
+
+homepage = 'https://www.cog-genomics.org/plink/2.0/'
+description = 'Whole-genome association analysis toolset'
+
+toolchain = SYSTEM
+
+source_urls = ['https://s3.amazonaws.com/plink2-assets']
+sources = ['plink2_linux_x86_64_20210420.zip']
+checksums = ['b809170b72061075a8e4ac5b435a3dfc793bad52a320409a8d3693cea1000a52']
+
+sanity_check_paths = {
+    'files': ['plink2'],
+    'dirs': [],
+}
+
+sanity_check_commands = [('plink2', '--version')]
+
+moduleclass = 'bio'
