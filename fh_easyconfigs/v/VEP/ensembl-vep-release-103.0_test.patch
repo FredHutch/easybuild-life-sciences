@@ -1,0 +1,13 @@
+diff -ruN ensembl-vep-release-103.0.orig/INSTALL.pl ensembl-vep-release-103.0/INSTALL.pl
+--- ensembl-vep-release-103.0.orig/INSTALL.pl	2021-01-25 08:23:54.000000000 -0800
++++ ensembl-vep-release-103.0/INSTALL.pl	2021-02-22 21:03:58.606932000 -0800
+@@ -1023,7 +1023,8 @@
+   else {
+     my $test_vep = `perl -I $DEST_DIR $dirname/vep --help 2>&1`;
+ 
+-    $test_vep =~ /ENSEMBL VARIANT EFFECT PREDICTOR/ or die "ERROR: Testing VEP script failed with the following error\n$test_vep\n";
++    $test_vep =~ /ENSEMBL VARIANT EFFECT PREDICTOR/;
++    print "ERROR: Testing VEP script failed with the following error\n$test_vep\n";
+   }
+ 
+   print " - OK!\n" unless $QUIET;
