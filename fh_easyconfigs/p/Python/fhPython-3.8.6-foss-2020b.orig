@@ -4,55 +4,51 @@
 easyblock = 'PythonBundle'
 
 name = 'fhPython'
-version = '3.8.2'
+version = '3.8.6'
 versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'http://python.org/'
 description = """Fred Hutch Python"""
 
-toolchain = {'name': 'foss', 'version': '2020a'}
+toolchain = {'name': 'foss', 'version': '2020b'}
 toolchainopts = {'pic': True}
 #toolchainopts = {'pic': True, 'opt': True, 'optarch': True}
 
 dependencies = [
     ('MUMmer', '4.0.0beta2', '-foss-2020a', True),
-    ('Python', '3.8.2'),
-    ('poetry', '1.0.9', versionsuffix),
-    ('SciPy-bundle', '2020.06', versionsuffix),
-    ('pybind11', '2.4.3', versionsuffix),
-    ('matplotlib', '3.2.1',  versionsuffix),
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11', versionsuffix),
+    ('matplotlib', '3.3.3',  versionsuffix),
     ('Biopython', '1.77',  versionsuffix),
     ('Pysam', '0.16.0.1'),
     ('pybedtools', '0.8.1'),
+
     ('PyTables', '3.6.1', versionsuffix),
-    ('IPython', '7.15.0', versionsuffix),
-    ('JupyterLab', '2.2.5', versionsuffix),
-    ('scikit-learn', '0.23.1', versionsuffix),
-    ('h5py', '2.10.0', versionsuffix),
-    ('numba', '0.50.0', versionsuffix),
-    ('awscli', '1.18.89', versionsuffix),
-    ('dask', '2.18.1', versionsuffix),
-    ('PostgreSQL', '12.3', versionsuffix),
-    ('PyYAML', '5.3'),
-    ('ICU', '66.1'),
+    ('scikit-learn', '0.23.2', versionsuffix),
+    ('h5py', '3.1.0', versionsuffix),
+    ('numba', '0.52.0', versionsuffix),
+    ('awscli', '1.19.53', versionsuffix),
+    ('dask', '2021.2.0'),
+    ('PostgreSQL', '13.2', versionsuffix),
+    ('PyYAML', '5.3.1'),
+    ('ICU', '67.1'),
     ('Pandoc', '2.10', '', True),
-    ('freetds', '1.2'), # pymssql
-    ('unixODBC', '2.3.7'), # sql.h
-    ('libjpeg-turbo', '2.0.4'),  # required for Pillow
-    ('OpenJPEG', '2.3.1'), # imagecodecs
-    ('OpenBLAS', '0.3.9'), #numexpr
+    ('FreeTDS', '1.2'), # pymssql
+#('unixODBC', '2.3.7'), # sql.h
+    ('libjpeg-turbo', '2.0.5'),  # required for Pillow
+    ('OpenJPEG', '2.4.0'), # imagecodecs
+    ('OpenBLAS', '0.3.12'), #numexpr
     ('Tk', '8.6.10'),
     ('libxml2', '2.9.10'),  # required for lxml
     ('libxslt', '1.1.34'), # required for lxml
     ('libffi', '3.3'),  # for jgraph
-    ('Qt5', '5.14.1'),
-    ('cURL', '7.69.1'),
+    ('Qt5', '5.14.2'),
+    ('cURL', '7.72.0'),
     ('libGLU', '9.0.1'), # glu
-    ('Mesa', '20.0.2'),
+    ('Mesa', '20.2.1'),
     ('netCDF', '4.7.4'),
-    ('igraph', '0.8.2'),
+    ('igraph', '0.8.5'),
     ('snappy', '1.1.8'),
-    # ('nodejs', '9.8.0'),  ? was in jupyter
 ]
 
 use_pip = True
@@ -120,7 +116,6 @@ exts_list = [
         'modulename': 'lark',
     }),
     ('sortedcontainers', '2.2.2'),
-    ('hypothesis', '5.26.0'),
     ('iniconfig', '1.0.1'),
     ('more-itertools', '8.4.0'),
     ('pyparsing', '2.4.7'),
@@ -1285,7 +1280,6 @@ exts_list = [
         'source_urls': ['https://github.com/mskcc/basicfiltering/archive/'],
         'source_tmpl': '%(version)s.tar.gz',
     }),
-    ('bedparse', '0.2.3'),
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

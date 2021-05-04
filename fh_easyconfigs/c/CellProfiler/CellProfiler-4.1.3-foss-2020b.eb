@@ -1,0 +1,106 @@
+easyblock = 'PythonBundle'
+
+name = 'CellProfiler'
+version = '4.1.3'
+
+homepage = 'http://cellprofiler.org/'
+description = """CellProfiler is a free open-source software designed to enable biologists without training in computer vision or programming to quantitatively measure phenotypes from thousands of images automatically."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('hypothesis', '5.41.2'),
+]
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('Java', '11', '', True),
+    ('pybind11', '2.6.0'),
+    ('pkgconfig', '1.5.1', '-python'),
+    ('scikit-learn', '0.23.2'),
+    ('wxPython', '4.1.0'),
+    ('HDF5', '1.10.7'),
+    ('libpng', '1.6.37'),
+    ('libjpeg-turbo', '2.0.5'),
+    ('LibTIFF', '4.1.0'),
+    ('zlib', '1.2.11'),
+    ('freetype', '2.10.3'),
+    ('Tkinter', '%(pyver)s'),
+    ('Java', '11', '', True),
+    ('MariaDB', '10.5.8'),
+    ('ZeroMQ', '4.3.3'),  # LibZMQ for pyzmq
+    ('GTK+', '3.24.23'),
+]
+
+osdependencies = [('appmenu-gtk3-module', 'appmenu-gtk3-module', '')]
+use_pip = True
+sanity_pip_check = True
+
+exts_default_options = {'source_urls': [PYPI_SOURCE]}
+
+exts_list = [
+   ('numpy', '1.20.1', {
+       'source_tmpl': '%(name)s-%(version)s.zip',
+   }),
+   ('scipy', '1.5.4'),
+   ('docutils', '0.15.2'),
+   ('Cycler', '0.10.0', {
+        'modulename': 'cycler',
+        'source_tmpl': 'cycler-%(version)s.tar.gz',
+        'checksums': ['cd7b2d1018258d7247a71425e9f26463dfb444d411c39569972f4ce586b0c9d8'],
+    }),
+    ('kiwisolver', '1.3.0', {
+        'checksums': ['14f81644e1f3bf01fbc8b9c990a7889e9bb4400c4d0ff9155aa0bdd19cce24a9'],
+    }),
+    ('matplotlib', '3.1.3', {
+        'prebuildopts': "export CPLUS_INCLUDE_PATH=$EBROOTFREETYPE/include/freetype2:${CPLUS_INCLUDE_PATH} && ",
+        'preinstallopts': "export CPLUS_INCLUDE_PATH=$EBROOTFREETYPE/include/freetype2:${CPLUS_INCLUDE_PATH} && ",
+    }),
+    ('mpi4py', '3.0.3'),
+    ('h5py', '2.10.0', {
+        'preinstallopts':  'HDF5_MPI=ON HDF5_DIR="$EBROOTHDF5" '
+    }),
+    ('jmespath', '0.10.0'),
+    ('s3transfer', '0.3.4'),
+    ('botocore', '1.20.24'),
+    ('boto3', '1.17.24', { }),
+    ('deprecation', '2.1.0', { }),
+    ('Pillow', '8.1.2', {
+        'modulename': 'PIL',
+    }),
+    ('networkx', '2.5', { }),
+    ('imageio', '2.9.0', { }),
+    ('tifffile', '2021.3.5', { }),
+    ('PyWavelets', '1.1.1', {
+        'modulename': 'pywt',
+    }),
+    ('scikit-image', '0.18.1', {
+        'modulename': 'skimage',
+    }),
+    ('centrosome', '1.2.0', { }),
+    ('cached-property', '1.5.2', { }),
+    ('prokaryote', '2.4.2', { }),
+    ('python-javabridge', '4.0.3', {
+        'modulename': 'javabridge',
+    }),
+    ('python-bioformats', '4.0.4', {
+        'modulename': 'bioformats',
+    }),
+    ('pyzmq', '18.0.1', {
+        'modulename': 'zmq',
+    }),
+    ('cellprofiler-core', '4.1.3'),
+    ('inflect', '5.3.0'),
+    ('mahotas', '1.4.11'),
+    ('mysqlclient', '1.4.6', {
+        'modulename': 'MySQLdb',
+    }),
+    ('sentry-sdk', '0.18.0'),
+    (name, version, {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+]
+
+
+moduleclass = 'bio'

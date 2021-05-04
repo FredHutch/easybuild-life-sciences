@@ -1,0 +1,30 @@
+# create tar ball from recursive clone of repository
+easyblock = 'ConfigureMake'
+
+name = 'SeqLib'
+version = '1.2.0'
+
+homepage = 'https://github.com/walaj/SeqLib'
+description = """C++ interface to HTSlib, BWA-MEM and Fermi"""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+
+source_urls = ['https://github.com/walaj/SeqLib/archive']
+sources =[SOURCE_TAR_GZ]
+patches = ['SeqLib-1.2.0_extern.patch']
+
+builddependencies = [('binutils', '2.35')]
+
+dependencies = [
+    ('XZ', '5.2.5'),
+    ('bzip2', '1.0.8'),
+]
+
+postinstallcmds = [' cp -r lib %(installdir)s']
+
+sanity_check_paths = {
+    'files': ['lib/libbwa.a', 'lib/libfml.a', 'lib/libhts.a', 'lib/libseqlib.a'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

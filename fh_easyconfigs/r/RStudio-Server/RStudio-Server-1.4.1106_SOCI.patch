@@ -1,0 +1,16 @@
+diff -ru rstudio-1.4.1106.orig/src/cpp/CMakeLists.txt rstudio-1.4.1106/src/cpp/CMakeLists.txt
+--- rstudio-1.4.1106.orig/src/cpp/CMakeLists.txt	2021-02-10 15:26:02.000000000 -0800
++++ rstudio-1.4.1106/src/cpp/CMakeLists.txt	2021-03-24 19:40:33.746900000 -0700
+@@ -405,7 +405,11 @@
+ 
+ # find SOCI libraries
+ if(UNIX)
+-   set(SOCI_LIBRARY_DIR "${RSTUDIO_TOOLS_SOCI}/build/lib")
++   if (SOCI_DIR)
++      set(SOCI_LIBRARY_DIR "${SOCI_DIR}/lib64")
++   else()
++      set(SOCI_LIBRARY_DIR "${RSTUDIO_TOOLS_SOCI}/build/lib")
++   endif()
+    if(NOT APPLE AND RSTUDIO_USE_SYSTEM_SOCI)
+       set(SOCI_LIBRARY_DIR "/usr/lib")
+    endif()

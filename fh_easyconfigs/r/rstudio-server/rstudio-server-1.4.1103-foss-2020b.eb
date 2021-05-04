@@ -1,0 +1,62 @@
+# easybuild easyconfig
+#
+# Ben McGough <bmcgough@fredhutch.org>
+#
+# Fred Hutchenson Cancer Research Center
+easyblock = 'CMakeMake'
+
+name = 'rstudio-server'
+version = '1.4.1103'
+versionsuffix = 'Java-%(javaver)s-R-%(rver)s'
+
+homepage = 'https://github.com/rstudio/rstudio'
+description = """RStudio is an integrated development environment 
+(IDE) for the R programming language."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+source_urls = [('https://github.com/rstudio/rstudio/archive')]
+sources = ['v%(version)s.zip']
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('CMake', '3.18.4'),
+    ('ant', '1.10.8', '-Java-%(javaver)s', True),
+    #('Qt5', '5.9.1'),
+]
+
+dependencies = [
+    ('R', '4.0.3'),
+    ('Boost', '1.74.0'),
+    ('Java', '11', '', True),
+    ('SOCI', '4.0.1'),
+    #('libpthread-stubs', '0.4', '', ('GCCcore', '8.3.0')),
+]
+
+osdependencies = [
+    ('wget'),
+    ('openssl-devel', 'libssl-dev', 'libopenssl-devel'),
+    ('pam-devel', 'libpam0g-dev')
+]
+
+# install rstudio's dictionaries - you must cd to the dependency dir
+# unpack_options = '&& cd rstudio-%(version)s/dependencies/linux /nstall-dependencies-bionic && '
+
+# build_type = "Release"
+local_dep_dir = "%(builddir)s/rstudio-%(version)s/dependencies/common"
+preconfigopts = ("(cd %s && ./install-dictionaries && "
+                 "./install-pandoc && ./install-mathjax) && ") % local_dep_dir
+
+configopts = '-DCMAKE_BUILD_TYPE=release '
+configopts += '-DRSTUDIO_TARGET=Server '
+configopts += '-DSOCI_CORE_LIB=$(EBROOTSOCI) '
+configopts += '-DSOCI_POSTGRESQL_LIB=$(EBROOTPOSTGRESQL) '
+configopts += '-DSOCI_SQLITE_LIB=$(EBROOTSOCI_CORE_LIB) '
+configopts += '--exclude-qt-sdk '
+
+sanity_check_paths = {
+    'files': ['bin/rstudio-server'],
+    'dirs': ['bin', 'extras', 'resources', 'www', 'www-symbolmaps', 'R'],
+}
+
+moduleclass = 'lang'

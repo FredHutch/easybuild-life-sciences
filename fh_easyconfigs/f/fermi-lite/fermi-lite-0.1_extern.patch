@@ -1,0 +1,12 @@
+diff -ruN fermi-lite-0.1.orig/rle.h fermi-lite-0.1/rle.h
+--- fermi-lite-0.1.orig/rle.h	2016-07-19 20:28:21.000000000 -0700
++++ fermi-lite-0.1/rle.h	2021-02-09 21:06:43.335320000 -0800
+@@ -30,7 +30,7 @@
+  *** 43+3 codec ***
+  ******************/
+ 
+-const uint8_t rle_auxtab[8];
++extern const uint8_t rle_auxtab[8];
+ 
+ #define RLE_MIN_SPACE 18
+ #define rle_nptr(block) ((uint16_t*)(block))

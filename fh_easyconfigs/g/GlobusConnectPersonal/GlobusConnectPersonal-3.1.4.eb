@@ -1,0 +1,34 @@
+easyblock = "Tarball"
+
+name = 'GlobusConnectPersonal'
+version = '3.1.4'
+
+homepage = 'https://www.globus.org/globus-connect-personal'
+description = """
+Globus Connect Personal turns your laptop or other personal computer into a 
+Globus endpoint with a just a few clicks. With Globus Connect Personal you can 
+share and transfer files to/from a local machine—campus server, desktop computer
+or laptop—even if it's behind a firewall and you don't have administrator 
+privileges.
+"""
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+# must download 'latest' and rename
+source_urls = ['https://downloads.globus.org/globus-connect-personal/linux/stable/']
+sources = [SOURCELOWER_TGZ]
+checksums = ['11e6122eae5d020edfa70e7c7e18770db69b68c69d31a37ece10d48084880c0b']
+
+dependencies = [('Tcl', '8.6.10')]
+
+sanity_check_paths = {
+    'files': ['globusconnect', 'globusconnectpersonal'],
+    'dirs': ['gt_amd64', 'etc', 'util'],
+}
+
+# add the installation dir to PATH
+modextrapaths = {
+    'PATH': '',
+}
+
+moduleclass = 'tools'

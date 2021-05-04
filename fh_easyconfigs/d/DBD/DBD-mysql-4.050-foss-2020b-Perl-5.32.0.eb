@@ -1,0 +1,63 @@
+# Built with EasyBuild version 4.3.2 on 2021-02-22_17-21-22
+easyblock = 'PerlModule'
+
+name = 'DBD-mysql'
+version = '4.050'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://metacpan.org/pod/distribution/DBD-mysql/lib/DBD/mysql.pm'
+description = "Perl binding for MySQL"
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+source_urls = ['https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN']
+sources = [SOURCE_TAR_GZ]
+checksums = ['4f48541ff15a0a7405f76adc10f81627c33996fbf56c95c26c094444c0928d78']
+
+dependencies = [
+    ('Perl', '5.32.0'),
+    ('MariaDB', '10.5.8'),
+    ('zlib', '1.2.11'),
+    # OS dependency should be preferred if the os version is more recent then this version
+    # it's nice to have an up to date openssl for security reasons
+    # ('OpenSSL', '1.1.1b'),
+]
+
+osdependencies = [OS_PKG_OPENSSL_DEV]
+
+options = {'modulename': 'DBD::mysql'}
+
+sanity_check_paths = {
+    'files': ['lib/perl5/site_perl/%(perlver)s/x86_64-linux-thread-multi/DBD/mysql.pm'],
+    'dirs': ['lib/perl5/site_perl/%(perlver)s/x86_64-linux-thread-multi/DBD/mysql'],
+}
+
+moduleclass = 'data'
+
+# Build statistics
+buildstats = [{
+    "build_time": 30.61,
+    "command_line": ["--buildpath='/app/build'", '--group-writable-installdir', "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--robot-paths=':/app/fh_easyconfigs'", "--sourcepath='/app/sources'", "--umask='002'", 'DBD-mysql-4.050-foss-2020b-Perl-5.32.0.eb'],
+    "core_count": 8,
+    "cpu_arch": "x86_64",
+    "cpu_arch_name": "UNKNOWN",
+    "cpu_model": "Intel(R) Xeon(R) CPU E3-1270 v3 @ 3.50GHz",
+    "cpu_speed": 3900.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.3.2",
+    "easybuild-framework_version": "4.3.2",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/10.2.0/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold=default --enable-ld --with-plugin-ld=ld.gold --prefix=/app/software/GCCcore/10.2.0 --with-local-prefix=/app/software/GCCcore/10.2.0 --enable-bootstrap --with-isl=/app/build/GCCcore/10.2.0/system-system/gcc-10.2.0/stage2_stuff; Thread model: posix; Supported LTO compression algorithms: zlib; gcc version 10.2.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "cc3fdb43b8f0",
+    "install_size": 766624,
+    "modules_tool": ('Lmod', '/eb/lmod/lmod/libexec/lmod', '8.3.10'),
+    "os_name": "ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "2.7.17 (default, Sep 30 2020, 13:38:04) ; [GCC 7.5.0]",
+    "system_gcc_path": "/app/software/GCCcore/10.2.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1614043282,
+    "total_memory": 32128,
+}]

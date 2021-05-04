@@ -1,0 +1,12 @@
+diff -ruN wxPython-4.1.1.orig/sip/cpp/sip_corewxCollapsibleHeaderCtrl.cpp wxPython-4.1.1/sip/cpp/sip_corewxCollapsibleHeaderCtrl.cpp
+--- wxPython-4.1.1.orig/sip/cpp/sip_corewxCollapsibleHeaderCtrl.cpp	2020-11-21 11:09:56.000000000 -0800
++++ wxPython-4.1.1/sip/cpp/sip_corewxCollapsibleHeaderCtrl.cpp	2021-04-21 15:22:06.334037000 -0700
+@@ -116,7 +116,7 @@
+     bool HasTransparentBackground() SIP_OVERRIDE;
+      ::wxPoint GetClientAreaOrigin() const SIP_OVERRIDE;
+     bool InformFirstDirection(int,int,int) SIP_OVERRIDE;
+-    void EnableVisibleFocus(bool) SIP_OVERRIDE;
++    void EnableVisibleFocus(bool);
+     void SetCanFocus(bool) SIP_OVERRIDE;
+     bool AcceptsFocusRecursively() const SIP_OVERRIDE;
+     bool AcceptsFocusFromKeyboard() const SIP_OVERRIDE;

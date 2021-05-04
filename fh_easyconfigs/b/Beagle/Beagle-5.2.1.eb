@@ -1,0 +1,33 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = "JAR"
+
+name = 'Beagle'
+version = '5.2.1'
+local_version = '14Apr21.89c'
+
+homepage = 'https://faculty.washington.edu/browning/beagle/beagle.html'
+description = """Beagle is a software package for phasing genotypes and for imputing ungenotyped markers."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://faculty.washington.edu/browning/beagle']
+sources = ['%%(namelower)s.%s.jar' % local_version]
+checksums = []
+
+dependencies = [('Java', '1.8')]
+
+sanity_check_paths = {
+    'files': ['%%(namelower)s.%s.jar' % local_version],
+    'dirs': []
+}
+
+modloadmsg = """
+To execute %(name)s-%(version)s run: java -jar ${EBROOTBEAGLE}/%(namelower)s.14Apr21.89c
+"""
+
+moduleclass = 'bio'

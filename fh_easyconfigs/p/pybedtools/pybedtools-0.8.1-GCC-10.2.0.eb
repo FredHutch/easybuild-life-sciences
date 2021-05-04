@@ -7,16 +7,20 @@ homepage = 'https://daler.github.io/pybedtools'
 description = """pybedtools wraps and extends BEDTools and offers feature-level manipulations from
  within Python."""
 
-toolchain = {'name': 'foss', 'version': '2020a'}
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
 
 source_urls = [PYPI_SOURCE]
 sources = [SOURCE_TAR_GZ]
 
 dependencies = [
-    ('Python', '3.8.2'),
+    ('Python', '3.8.6'),
     ('BEDTools', '2.29.2'),
     ('Pysam', '0.16.0.1'),
 ]
+
+use_pip = True
+download_dep_fail = True
+sanity_pip_check = True
 
 sanity_check_paths = {
     'files': [],

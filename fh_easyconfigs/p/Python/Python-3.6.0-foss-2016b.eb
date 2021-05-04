@@ -630,9 +630,6 @@ exts_list = [
     ('tblib', '1.3.0', {
         'source_urls': ['https://pypi.python.org/packages/source/t/tblib/'],
     }),
-    ('tornado', '4.4.2', {
-        'source_urls': ['https://pypi.python.org/packages/source/t/tornado/'],
-    }),
     ('zict', '0.1.1', {
         'source_urls': ['https://pypi.python.org/packages/source/z/zict/'],
     }),
@@ -837,7 +834,6 @@ exts_list = [
     }),
     ('Pillow', '4.0.0', {
         'modulename': 'PIL',
-        'source_urls': ['https://pypi.python.org/packages/source/P/Pillow/'],
     }),
     ('ply', '3.9', {
         'source_urls': ['https://pypi.python.org/packages/source/p/ply/'],
