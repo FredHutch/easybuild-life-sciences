@@ -526,6 +526,7 @@ exts_list = [
     ('TFBSTools', '1.28.0'),
     ('ggdendro', '0.1.22'),
     ('chromVAR', '1.12.0'),
+    ('ChIPseeker', '1.26.2'),
     #('gchromVAR', 'e4f33ca', {
     #    'source_urls': ['https://github.com/caleblareau/gchromVAR/archive'],
     #    'source_tmpl': 'master.zip',

@@ -524,6 +524,7 @@ exts_list = [
     ('DirichletMultinomial', '1.30.0'),
     ('TFMPvalue : 0.0.8'),
     ('TFBSTools', '1.26.0'),
+    ('ChIPseeker', '1.23.2'),
     ('chromVAR', '0.3', {
         'source_urls': ['https://github.com/GreenleafLab/chromVAR/archive'],
         'source_tmpl': '%(version)s.tar.gz',

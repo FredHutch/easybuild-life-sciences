@@ -530,9 +530,20 @@ exts_list = [
     #    'source_tmpl': 'master.zip',
     #    'filename': 'gchromVAR.zip',
     #}),
+    # start ArchR
+    ('motifmatchr', '1.12.0'),
+    ('uwot', '0.1.10'),
+    ('ComplexHeatmap', '2.6.2'),
+    ('ArchR', '1.0.1', {
+        'source_urls': ['https://github.com/GreenleafLab/ArchR/archive/refs/tags'],
+        'sources': [{
+            'download_filename': 'v%%(version)s.tar.gz',
+            'filename': '%%(name)s-%%(version)s.tar.gz', 
+        }],
+    }),
 ]
 
-modextrapaths = {'R_LIBS_USER': ''}
+modextrapaths = {'R_LIBS_SITE': ''}
 
 sanity_check_paths = {
     'files': ['perm/R/perm'],
