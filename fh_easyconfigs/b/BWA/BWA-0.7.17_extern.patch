@@ -1,0 +1,12 @@
+diff -ruN bwa-0.7.17.orig/rle.h bwa-0.7.17/rle.h
+--- bwa-0.7.17.orig/rle.h	2017-10-23 10:10:17.000000000 -0700
++++ bwa-0.7.17/rle.h	2021-02-09 20:36:03.131615000 -0800
+@@ -30,7 +30,7 @@
+  *** 43+3 codec ***
+  ******************/
+ 
+-const uint8_t rle_auxtab[8];
++extern const uint8_t rle_auxtab[8];
+ 
+ #define RLE_MIN_SPACE 18
+ #define rle_nptr(block) ((uint16_t*)(block))
