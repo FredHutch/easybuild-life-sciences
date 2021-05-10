@@ -10,7 +10,6 @@
 
 name = 'Trinity'
 version = '2.12.0'
-versionsuffix = '-Python-%(pyver)s'
 
 homepage = 'https://trinityrnaseq.github.io'
 description = """Trinity represents a novel method for the efficient and robust de novo reconstruction
