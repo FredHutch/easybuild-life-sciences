@@ -1,7 +1,7 @@
 easyblock = "ConfigureMake"
 
 name = 'Osi'
-version = '0.108.6'
+version = '0.108.5'
 
 homepage = "https://github.com/coin-or/Osi"
 description = """Osi (Open Solver Interface) provides an abstract base class to a generic linear
@@ -14,22 +14,22 @@ OSI supports linear programming solvers and has rudimentary support for integer
 programming."""
 
 # NOTE: this esyconfig for CoinUtils provides a minimal build not using BLAS/LAPACK or MPI
-toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
 
 source_urls = ['https://www.coin-or.org/download/source/%(name)s/']
 sources = [SOURCE_TGZ]
-checksums = ['57ef3f0c97995bac647504aee0ed34d31f79033ece04cd2cb86b4645f0a552d8']
+checksums = ['8efabdb3d5c89837d73fa6f9e7b764dce7450c579037964b64a996757f4d7d2c']
 
 builddependencies = [
-    ('Autotools', '20200321'),
-    ('binutils', '2.35'),
-    ('Doxygen', '1.8.20'),
+    ('Autotools', '20180311'),
+    ('binutils', '2.30'),
+    ('Doxygen', '1.8.14'),
     ('pkg-config', '0.29.2'),
 ]
 
 dependencies = [
-    ('CoinUtils', '2.11.4'),
-    ('bzip2', '1.0.8'),
+    ('CoinUtils', '2.11.3'),
+    ('bzip2', '1.0.6'),
     ('zlib', '1.2.11'),
 ]
 

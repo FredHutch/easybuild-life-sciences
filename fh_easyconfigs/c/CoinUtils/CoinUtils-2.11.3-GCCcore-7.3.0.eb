@@ -1,7 +1,7 @@
 easyblock = "ConfigureMake"
 
 name = 'CoinUtils'
-version = '2.11.4'
+version = '2.11.3'
 
 homepage = "https://github.com/coin-or/CoinUtils"
 description = """CoinUtils (Coin-OR Utilities) is an open-source collection of classes and
@@ -10,20 +10,20 @@ functions that are generally useful to more than one COIN-OR project."""
 
 source_urls = ['https://www.coin-or.org/download/source/%(name)s/']
 sources = [SOURCE_TGZ]
-checksums = ['1b24f8f6057661b3225d24f4e671527f53bf13aff66e06cbbbd4f20cc7d31dce']
+checksums = ['7c364792effe89d78b9b5385f30eaccc0fe92aab1caf5a1a835d81680639911f']
 
 # NOTE: this esyconfig for CoinUtils provides a minimal build not using BLAS/LAPACK or MPI
-toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+toolchain = {'name': 'GCCcore', 'version': '7.3.0'}
 
 builddependencies = [
-    ('Autotools', '20200321'),
-    ('binutils', '2.35'),
-    ('Doxygen', '1.8.20'),
+    ('Autotools', '20180311'),
+    ('binutils', '2.30'),
+    ('Doxygen', '1.8.14'),
     ('pkg-config', '0.29.2'),
 ]
 
 dependencies = [
-    ('bzip2', '1.0.8'),
+    ('bzip2', '1.0.6'),
     ('zlib', '1.2.11'),
 ]
 
