@@ -1,0 +1,28 @@
+# easybuild easyconfig
+#
+# Author: John Dey jfdey@fredhutch.org
+# Fred Hutch Cancer Research Center 
+# Seattle WA US
+easyblock = "Tarball"
+
+name = 'PDFCrop'
+version = '0.4b'
+
+homepage = 'http://pdfcrop.sourceforge.net/'
+description = """PDFCrop is a Perl script that crops the white margins of PDF pages and rescales them
+ to fit a standard size sheet of paper. It makes the printed pages far more attractive to read!"""
+
+toolchain = SYSTEM
+
+source_urls = [('https://sourceforge.net/projects/pdfcrop/', 'download')]
+sources = ['%(namelower)s_v%(version)s.tar.gz']
+checksums = ['090995ebbe02e9ce8868945b506103583c52f42c8946e2e12db8b8c5ed75467d']
+
+sanity_check_paths = {
+    'files': ['pdfcrop'],
+    'dirs': []
+}
+
+modextrapaths = {'PATH': ''}
+
+moduleclass = 'tools'
