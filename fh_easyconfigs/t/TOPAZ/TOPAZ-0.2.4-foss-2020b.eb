@@ -1,0 +1,50 @@
+easyblock = 'PythonBundle'
+
+name = 'TOPAZ'
+version = '0.2.4'
+
+homepage = 'http://cb.csail.mit.edu/cb/topaz/'
+description = """Topaz is a pipeline for particle picking in cryo-electron micrographs using neural networks and positive-unlabeled learning"""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11'),
+    ('scikit-learn', '0.23.2'),
+    ('Pillow', '8.0.1'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('typing-extensions', '3.7.4.2', {
+        'source_tmpl': 'typing_extensions-%(version)s.tar.gz',
+    }),
+    ('torch', '1.8.1', {
+        'source_tmpl': '%(name)s-%(version)s-cp38-cp38-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    ('torchvision', '0.9.1', {
+        'source_tmpl': '%(name)s-%(version)s-cp38-cp38-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    (name, version, {
+        'source_urls': ['https://github.com/tbepler/topaz/archive/refs/tags'],
+        'source_tmpl': 'v%(version)s.zip',
+        'checksums': [],
+    }),
+]
+
+fix_python_shebang_for = ['bin/*']
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+# sanity_check_commands = ["numba --help"]
+
+moduleclass = 'bio'
