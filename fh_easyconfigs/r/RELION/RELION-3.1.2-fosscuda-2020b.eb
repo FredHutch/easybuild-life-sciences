@@ -15,7 +15,7 @@ toolchain = {'name': 'fosscuda', 'version': '2020b'}
 
 source_urls = ['https://github.com/%(github_account)s/%(namelower)s/archive']
 sources = ['%(version)s.tar.gz']
-checksums =['82b5426f144ef1c7c86210f79e2c1b6fe5a001c0ad086715da699e63049adfc3']
+checksums = ['82b5426f144ef1c7c86210f79e2c1b6fe5a001c0ad086715da699e63049adfc3']
 
 builddependencies = [
     ('CMake', '3.18.4'),
@@ -25,7 +25,7 @@ dependencies = [
     ('X11', '20201008'),
     ('LibTIFF', '4.1.0'),
     ('FLTK', '1.3.5'),
-    ('ctffind', '4.1.14'),
+    ('ctffind', '4.1.14', '', ('static')),
 ]
 
 sanity_check_paths = {
