@@ -1,0 +1,29 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'ConfigureMake'
+
+name = 'Gautomatch'
+version = '0.56'
+
+homepage = 'https://www2.mrc-lmb.cam.ac.uk/research/locally-developed-software/zhang-software/#gauto'
+description = """Gautomatch a GPU-accelerated program for accurate, fast, flexible and fully automatic particle picking from cryo-EM micrographs with or without templates."""
+
+toolchain = {'name': 'fosscuda', 'version': '2020b'}
+
+source_urls = ['https://www2.mrc-lmb.cam.ac.uk/download/gautomatch-056/']
+sources =['%(name)s_v%(version)s.zip']
+checksums = ['']
+
+dependencies = [
+]
+
+sanity_check_paths = {
+    'files': ['bin/ctffind'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

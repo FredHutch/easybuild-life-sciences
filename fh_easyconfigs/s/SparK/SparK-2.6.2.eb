@@ -1,0 +1,36 @@
+easyblock = 'Tarball'
+
+name = 'SparK'
+version = '2.6.2'
+
+homepage = 'https://github.com/harbourlab/SparK'
+description = """SparK - Publication quality and pipeline integratable NGS data plotting."""
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+source_urls = ['https://github.com/harbourlab/SparK/archive/refs/tags']
+sources = ['v%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11', '', ('foss', '2020b')),
+]
+
+# sanity_check_commands = ["python Spark.py --help"]
+
+postinstallcmds = [
+    'dos2unix %(installdir)s/SparK.py',
+    'chmod +x %(installdir)s/SparK.py',
+    "sed -i '1s;^;#!/usr/bin/env python\\n;' %(installdir)s/SparK.py",
+]
+
+sanity_check_paths = {
+    'files': ['SparK.py'],
+    'dirs': []
+}
+
+modextrapaths = {'PATH': '',
+                 'PYTHONPATH': ''}
+modextravars = {'SPARK_HOME': '%(installdir)s'}
+
+moduleclass = 'bio'

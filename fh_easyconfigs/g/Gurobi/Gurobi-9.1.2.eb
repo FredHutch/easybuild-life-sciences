@@ -25,7 +25,7 @@ checksums = ['7f60bd675f79476bb2b32cd632aa1d470f8246f2b033b7652d8de86f6e7e429b']
 
 modextravars = {
     'GUROBI_HOME': '%(installdir)s',
-    'GRB_LICENSE_FILE': '$HOME/gurobi.lic'
+    'GRB_LICENSE_FILE': '%(installdir)s/gurobi.lic'
 }
 modextrapaths = {
     'PATH': 'bin', # GUROBI_HOME/bin

@@ -69,6 +69,7 @@ exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_s
 # !! order of packages is important !!
 # packages updated on July 8th 2016
 exts_list = [
+    ('rlist', '0.4.6.1'),
     ('perm', '1.0-0.0'),
     ('ncdf4', '1.17'),
     ('webp', '1.0'),
@@ -536,12 +537,18 @@ exts_list = [
     ('ComplexHeatmap', '2.6.2'),
     ('ArchR', '1.0.1', {
         'source_urls': ['https://github.com/GreenleafLab/ArchR/archive/refs/tags'],
+        'sources_tmpl': 'v%(version)s.tar.gz',
+        'filename': '%(name)s_%(version)s.tar.gz',
+    }),
+    #  start scarHRD
+    ('reticulate', '1.20'),
+    ('scarHRD', '1.0', {
+        'source_urls': 'https://github.com/sztup/scarHRD/archive/refs/heads/master.zip',
         'sources': [{
-            'download_filename': 'v%%(version)s.tar.gz',
-            'filename': '%%(name)s-%%(version)s.tar.gz', 
+            'download_filename': 'master.zip',
+            'filename': '%(name)s_%(version)s.tar.gz',
         }],
     }),
-    ('reticulate', '1.20'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

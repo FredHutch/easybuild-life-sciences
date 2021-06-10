@@ -1,0 +1,115 @@
+# easybuild easycofig
+#
+# Fred Hutchinson Cancer Research Center
+# John Dey jfdey@fredhutch.org
+easyblock = 'PythonBundle'
+
+name = 'Cellpose'
+version = '0.6.5'
+
+homepage = 'http://cellpose.org/'
+description = """Cellpose is an anatomical segmentation algorithm written in Python 3 by Carsen 
+Stringer and Marius Pachitariu."""
+
+toolchain = {'name': 'fosscuda', 'version': '2020b'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11'),
+    ('matplotlib', '3.3.3'),
+    ('numba', '0.53.1'),
+    ('PyTorch', '1.7.1'),
+    ('Qt5', '5.14.2'),
+    ('Graphviz', '2.47.0', '-Java-11'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('PyQt5', '5.13.0', {
+        'modulename': 'PyQt5',
+        'source_tmpl': 'PyQt5-%(version)s-%(version)s-cp35.cp36.cp37.cp38-abi3-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+        'checksums': ['70954a2d182c8634e3b5f9deeb4230f186b59ec1166f3142cb523b74876c0d98'],
+    }),
+    ('PyQt5.sip', '12.9.0', {
+        'modulename': 'PyQt5.sip',
+        'source_tmpl': 'PyQt5_sip-%(version)s.tar.gz',
+        'checksums': ['d3e4489d7c2b0ece9d203ae66e573939f7f60d4d29e089c9f11daa17cfeaae32'],
+    }),
+    ('cachetools', '4.2.2', {
+        'checksums': ['61b5ed1e22a0924aed1d23b478f37e8d52549ff8a961de2909c69bf950020cff'],
+    }),
+    ('pyasn1-modules', '0.2.8', {
+        'modulename': 'pyasn1_modules',
+        'checksums': ['905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e'],
+    }),
+    ('rsa', '4.7.2', {
+        'checksums': ['9d689e6ca1b3038bc82bf8d23e944b6b6037bc02301a574935b2dd946e0353b9'],
+    }),
+    ('google-auth', '1.30.0', {
+        'modulename': 'google.auth',
+        'checksums': ['9ad25fba07f46a628ad4d0ca09f38dcb262830df2ac95b217f9b0129c9e42206'],
+    }),
+    ('googleapis-common-protos', '1.53.0', {
+        'modulename': 'google.api',
+        'checksums': ['a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4'],
+    }),
+    ('google-api-core', '1.26.3', {
+        'modulename': 'google.api_core',
+        'checksums': ['b914345c7ea23861162693a27703bab804a55504f7e6e9abcaff174d80df32ac'],
+    }),
+    ('google-cloud-core', '1.6.0', {
+        'modulename': 'google.cloud',
+        'checksums': ['c6abb18527545379fc82efc4de75ce9a3772ccad2fc645adace593ba097cbb02'],
+    }),
+    ('google-crc32c', '1.1.2', {
+        'checksums': ['dff5bd1236737f66950999d25de7a78144548ebac7788d30ada8c1b6ead60b27'],
+    }),
+    ('google-resumable-media', '1.2.0', {
+        'modulename': 'google.resumable_media',
+        'checksums': ['ee98b1921e5bda94867a08c864e55b4763d63887664f49ee1c231988f56b9d43'],
+    }),
+    ('google-cloud-storage', '1.38.0', {
+        'modulename': 'google.cloud.storage',
+        'checksums': ['162011d66f64b8dc5d7936609a5daf0066cc521231546aea02c126a5559446c4'],
+    }),
+    ('graphviz', '0.8.4', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'checksums': ['4958a19cbd8461757a08db308a4a15c3d586660417e1e364f0107d2fe481689f'],
+    }),
+    ('opencv-python-headless', '4.5.2.52', {
+        'modulename': 'cv2',
+        'source_tmpl': 'opencv_python_headless-%(version)s-cp38-cp38-manylinux2014_x86_64.whl',
+        'unpack_sources': False,
+        'checksums': ['2d0db1fcd34b467f53527fc954078dd8de732fd44e6df01017fab98bb62c313f'],
+    }),
+    ('mxnet', '1.8.0.post0', {
+        'source_tmpl': 'mxnet-%(version)s-py2.py3-none-manylinux2014_x86_64.whl',
+        'unpack_sources': False,
+        'checksums': ['4aac6539c22fbcea32fa9e22ba58445e392332a2dc5af23b303387787d86cf67'],
+    }),
+    ('tifffile', '2021.4.8', {
+        'checksums': ['55aa8baad38e1567c9fe450fff52160e4a21294a612f241c5e414da80f87209b'],
+    }),
+    ('natsort', '7.1.1', {
+        'checksums': ['00c603a42365830c4722a2eb7663a25919551217ec09a243d3399fa8dd4ac403'],
+    }),
+    ('pyqtgraph', '0.12.1', {
+        'checksums': ['d2ef3b5289184fb48dfe5f44ccb58d9d64ffb5452fc524a2bd7a640a36b3874d'],
+    }),
+    ('tqdm', '4.60.0', {
+        'checksums': ['ebdebdb95e3477ceea267decfc0784859aa3df3e27e22d23b83e9b272bf157ae'],
+    }),
+    (name, version, {
+        'modulename': '%(namelower)s',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+        'checksums': ['19aafedfe5723285f270ad55e7947fbd828abff943a13216a8205809e41fb870'],
+    }),
+]
+
+modextrapaths = {'LD_LIBRARY_PATH': '$EBROOTNUMBA/lib/python3.8/site-packages/llvmlite/binding'}
+
+moduleclass = 'bio'
