@@ -1,0 +1,35 @@
+don't blindly overwrite $LD_LIBRARY_PATH (which breaks ld.gold linker because it requires a sufficiently recent libstdc++.so)
+based on work by: Kenneth Hoste (HPC-UGent)
+diff -ruN ncbi-vdb-2.11.0.orig/build/ld.linux.dlib.sh ncbi-vdb-2.11.0/build/ld.linux.dlib.sh
+--- ncbi-vdb-2.11.0.orig/build/ld.linux.dlib.sh	2021-03-15 11:16:43.000000000 -0700
++++ ncbi-vdb-2.11.0/build/ld.linux.dlib.sh	2021-06-10 17:00:33.171896000 -0700
+@@ -83,8 +83,7 @@
+     done
+ 
+     # update LD_LIBRARY_PATH
+-    unset LD_LIBRARY_PATH
+-    export LD_LIBRARY_PATH="$LDIRS:$XDIRS"
++    export LD_LIBRARY_PATH="$LDIRS:$XDIRS:$LD_LIBRARY_PATH"
+ 
+     # tack on libraries, finding as we go
+     for LIB in $LIBS
+@@ -305,4 +304,4 @@
+     echo "$MSG" >> $LOGFILE
+ 
+     "$BUILD_DIR/scm-collect.sh" "$OBJS" "$SLIBS" | sort -u > "$TARG.md5"
+-fi
+\ No newline at end of file
++fi
+diff -ruN ncbi-vdb-2.11.0.orig/build/ld.linux.exe.sh ncbi-vdb-2.11.0/build/ld.linux.exe.sh
+--- ncbi-vdb-2.11.0.orig/build/ld.linux.exe.sh	2021-03-15 11:16:43.000000000 -0700
++++ ncbi-vdb-2.11.0/build/ld.linux.exe.sh	2021-06-10 17:01:31.435093000 -0700
+@@ -91,8 +91,7 @@
+     done
+ 
+     # update LD_LIBRARY_PATH
+-    unset LD_LIBRARY_PATH
+-    export LD_LIBRARY_PATH="$LDIRS:$XDIRS"
++    export LD_LIBRARY_PATH="$LDIRS:$XDIRS:$LD_LIBRARY_PATH"
+ 
+     # tack on libraries, finding as we go
+     for LIB in $LIBS
