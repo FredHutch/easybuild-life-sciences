@@ -1,0 +1,42 @@
+Fred Hutch R 4.1.0 Build Notes
+
+RProtoBufLib 2.4.0 Build Issues
+
+  CXX      google/protobuf/compiler/csharp/csharp_wrapper_field.lo
+  CXXLD    libprotoc.la
+  CXXLD    protoc
+./.libs/libprotoc.so: error: undefined reference to 'scc_info_FileDescriptorProto_google_2fprotobuf_2fdescriptor_2eproto'
+./.libs/libprotoc.so: error: undefined reference to 'descriptor_table_google_2fprotobuf_2fdescriptor_2eproto'
+collect2: error: ld returned 1 exit status
+Makefile:3883: recipe for target 'protoc' failed
+make[1]: *** [protoc] Error 1
+make[1]: Leaving directory '/tmp/RtmpPVeXEn/R.INSTALL27ae40ca1048/RProtoBufLib/src/protobuf-3.13.0/src'
+
+RProtoBufLib contains protobuf-3.13.tar.gz
+Not all global variables are declared extern.
+
+Fix
+tar -xzf RProtoBufLib_2.4.0.tar.gz
+cd RProtoBufLib/src
+tar -xzf protobuf-3.13.0.tar.gz
+edit protobuf-3.13.0/src/libprotobuf-lite.map, libprotobuf.map,  libprotoc.map
+
+# Add scc_ and descriptor_table to the global defs
+
+{
+  global:
+    extern "C++" {
+      *google*;
+    };
+    scc_info_*;
+    descriptor_table_*;
+
+  local:
+    *;
+};
+
+- re-tar and remove the protobuf-3.13 directory
+- re-tar RProtoBuf and put into /app/sources/fhR/extensions
+https://github.com/protocolbuffers/protobuf/issues/5144
+
+I have made a patch of patch before
