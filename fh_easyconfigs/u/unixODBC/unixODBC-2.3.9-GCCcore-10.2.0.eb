@@ -1,0 +1,24 @@
+# Easyconfig for unixODBC
+# Author: Lykle Voort
+# SURFsara, Amsterdam, The Netherlands
+
+easyblock = 'ConfigureMake'
+
+name = 'unixODBC'
+version = '2.3.9'
+
+homepage = "https://www.unixodbc.org"
+description = """unixODBC provides a uniform interface between
+application and database driver"""
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+builddependencies = [
+    ('binutils', '2.35'),
+]
+
+sources = [SOURCE_TAR_GZ]
+source_urls = ['ftp://ftp.unixodbc.org/pub/unixODBC']
+checksums = ['52833eac3d681c8b0c9a5a65f2ebd745b3a964f208fc748f977e44015a31b207']
+
+moduleclass = 'data'
