@@ -204,7 +204,7 @@ exts_list = [
     ('graph', '1.70.0'),
     ('BiocManager', '1.30.15'),
     ('RProtoBuf', '0.4.17'),
-    ('RProtoBufLib', '2.4.0'),
+    ('RProtoBufLib', '2.2.0'),
     ('Rhdf5lib', '1.14.1'),
     ('cytolib', '2.4.0'),
     ('Biobase', '2.52.0'),

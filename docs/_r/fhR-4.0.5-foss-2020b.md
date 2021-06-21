@@ -1,6 +1,6 @@
 ---
 title: fhR-4.0.5-foss-2020b
-date: 2021-05-10
+date: 2021-06-21
 ---
 
 ### Known Issues
@@ -98,7 +98,7 @@ Q-Learning, and Dynamic Weighted Survival Modeling (DWSurv)
   * [DistributionUtils-0.6-0](https://cran.r-project.org/web/packages/DistributionUtils/index.html) Distribution Utilities
   * [DynDoc-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/DynDoc.html) Dynamic document tools
   * [EBImage-4.32.0](https://www.bioconductor.org/packages/release/bioc/html/EBImage.html) Image processing and analysis toolbox for R
-  * [ENMeval-0.3.1](https://cran.r-project.org/web/packages/ENMeval/index.html) Automated Runs and Evaluations of Ecological Niche Models
+  * [ENMeval-0.3.1](https://cran.r-project.org/web/packages/ENMeval/index.html) Automated Tuning and Evaluations of Ecological Niche Models
   * [EasyABC-1.5](https://cran.r-project.org/web/packages/EasyABC/index.html) Efficient Approximate Bayesian Computation Sampling Schemes
   * [EnvStats-2.4.0](https://cran.r-project.org/web/packages/EnvStats/index.html) Package for Environmental Statistics, Including US EPA Guidance
   * [EpiModel-2.0.3](https://cran.r-project.org/web/packages/EpiModel/index.html) Mathematical Modeling of Infectious Disease Dynamics
@@ -307,8 +307,8 @@ Algorithms
   * [SeqArray-1.30.0](https://www.bioconductor.org/packages/release/bioc/html/SeqArray.html) Data management of large-scale whole-genome sequence variant calls
   * [SeqVarTools-1.28.1](https://www.bioconductor.org/packages/release/bioc/html/SeqVarTools.html) Tools for variant data
   * [ShortRead-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/ShortRead.html) FASTQ input and manipulation
-  * [SignifReg-3.0](https://cran.r-project.org/web/packages/SignifReg/index.html) Consistent Significance Controlled Variable Selection in Linear
-Regression
+  * [SignifReg-3.0](https://cran.r-project.org/web/packages/SignifReg/index.html) Consistent Significance Controlled Variable Selection in
+Generalized Linear Regression
   * [SimSeq-1.4.0](https://cran.r-project.org/web/packages/SimSeq/index.html) Nonparametric Simulation of RNA-Seq Data
   * [SingleCellExperiment-1.12.0](https://www.bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html) S4 Classes for Single Cell Data
   * [SnowballC-0.7.0](https://cran.r-project.org/web/packages/SnowballC/index.html) Snowball Stemmers Based on the C 'libstemmer' UTF-8 Library
@@ -339,7 +339,7 @@ Visualizing Intersecting Sets
   * [VariantAnnotation-1.36.0](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) Annotation of Genetic Variants
   * [VennDiagram-1.6.20](https://cran.r-project.org/web/packages/VennDiagram/index.html) Generate High-Resolution Venn and Euler Plots
   * [WeightSVM-1.7-5](https://cran.r-project.org/web/packages/WeightSVM/index.html) Subject Weighted Support Vector Machines
-  * [WikidataR-1.4.0](https://cran.r-project.org/web/packages/WikidataR/index.html) API Client Library for 'Wikidata'
+  * [WikidataR-1.4.0](https://cran.r-project.org/web/packages/WikidataR/index.html) Read-Write API Client Library for 'Wikidata'
   * [WikipediR-1.5.0](https://cran.r-project.org/web/packages/WikipediR/index.html) A MediaWiki API Wrapper
   * [Wrench-1.8.0](https://www.bioconductor.org/packages/release/bioc/html/Wrench.html) Wrench normalization for sparse count data
   * [WriteXLS-6.2.0](https://cran.r-project.org/web/packages/WriteXLS/index.html) Cross-Platform Perl Based R Function to Create Excel 2003 (XLS)
@@ -624,6 +624,7 @@ Default
   * [extRemes-2.1](https://cran.r-project.org/web/packages/extRemes/index.html) Extreme Value Analysis
   * [extrafont-0.17](https://cran.r-project.org/web/packages/extrafont/index.html) Tools for using fonts
   * [extrafontdb-1.0](https://cran.r-project.org/web/packages/extrafontdb/index.html) Package for holding the database for the extrafont package
+  * [fANCOVA-0.6-1](https://cran.r-project.org/web/packages/fANCOVA/index.html) Nonparametric Analysis of Covariance
   * [fail-1.3](https://cran.r-project.org/web/packages/fail/index.html) File Abstraction Interface Layer (FAIL)
   * [fansi-0.4.2](https://cran.r-project.org/web/packages/fansi/index.html) ANSI Control Sequence Aware String Functions
   * [faraway-1.0.7](https://cran.r-project.org/web/packages/faraway/index.html) Functions and Datasets for Books by Julian Faraway
@@ -916,8 +917,7 @@ Models
 Equality/Inequality Constraints
   * [lubridate-1.7.10](https://cran.r-project.org/web/packages/lubridate/index.html) Make Dealing with Dates a Little Easier
   * [lumi-2.42.0](https://www.bioconductor.org/packages/release/bioc/html/lumi.html) BeadArray Specific Methods for Illumina Methylation and Expression Microarrays
-  * [mRMRe-2.1.0](https://cran.r-project.org/web/packages/mRMRe/index.html) "Parallelized Minimum Redundancy, Maximum Relevance (mRMR)
-Ensemble Feature Selection"
+  * [mRMRe-2.1.0](https://cran.r-project.org/web/packages/mRMRe/index.html) Parallelized Minimum Redundancy, Maximum Relevance (mRMR)
   * [maSigPro-1.62.0](https://www.bioconductor.org/packages/release/bioc/html/maSigPro.html) Significant Gene Expression Profile Differences in Time Course Gene Expression Data
   * [magic-1.5-9](https://cran.r-project.org/web/packages/magic/index.html) Create and Investigate Magic Squares
   * [magick-2.7.1](https://cran.r-project.org/web/packages/magick/index.html) Advanced Graphics and Image-Processing in R
@@ -931,7 +931,7 @@ Ensemble Feature Selection"
   * [marray-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/marray.html) Exploratory analysis for two-color spotted microarray data
   * [matrixStats-0.58.0](https://cran.r-project.org/web/packages/matrixStats/index.html) Functions that Apply to Rows and Columns of Matrices (and to
 Vectors)
-  * [matrixcalc-1.0-3](https://cran.r-project.org/web/packages/matrixcalc/index.html) Collection of functions for matrix calculations
+  * [matrixcalc-1.0-3](https://cran.r-project.org/web/packages/matrixcalc/index.html) Collection of Functions for Matrix Calculations
   * [maxLik-1.4-8](https://cran.r-project.org/web/packages/maxLik/index.html) Maximum Likelihood Estimation and Related Tools
   * [maxlike-0.1-8](https://cran.r-project.org/web/packages/maxlike/index.html) Model Species Distributions by Estimating the Probability of
 Occurrence Using Presence-Only Data
@@ -1029,6 +1029,7 @@ Methods)
   * [numDeriv-2016.8-1.1](https://cran.r-project.org/web/packages/numDeriv/index.html) Accurate Numerical Derivatives
   * [numbers-0.8-1](https://cran.r-project.org/web/packages/numbers/index.html) Number-Theoretic Functions
   * [nws-1.7.0.1](https://cran.r-project.org/web/packages/nws/index.html) R functions for NetWorkSpaces and Sleigh
+  * [odbc-1.3.0](https://cran.r-project.org/web/packages/odbc/index.html) Connect to ODBC Compatible Databases (using the DBI Interface)
   * [oddsratio-2.0.1](https://cran.r-project.org/web/packages/oddsratio/index.html) Odds Ratio Calculation for GAM(M)s & GLM(M)s
   * [oligoClasses-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/oligoClasses.html) Classes for high-throughput arrays supported by oligo and crlmm
   * [openCyto-2.2.0](https://www.bioconductor.org/packages/release/bioc/html/openCyto.html) Hierarchical Gating Pipeline for flow cytometry data
@@ -1149,6 +1150,7 @@ Graphical Model Estimation
   * [qtl-1.48-1](https://cran.r-project.org/web/packages/qtl/index.html) Tools for Analyzing QTL Experiments
   * [quadprog-1.5-8](https://cran.r-project.org/web/packages/quadprog/index.html) Functions to Solve Quadratic Programming Problems
   * [quantmod-0.4.18](https://cran.r-project.org/web/packages/quantmod/index.html) Quantitative Financial Modelling Framework
+  * [quantoptr-0.1.3](https://cran.r-project.org/web/packages/quantoptr/index.html) Algorithms for Quantile- And Mean-Optimal Treatment Regimes
   * [quantreg-5.85](https://cran.r-project.org/web/packages/quantreg/index.html) Quantile Regression
   * [quantsmooth-1.56.0](https://www.bioconductor.org/packages/release/bioc/html/quantsmooth.html) Quantile smoothing and genomic visualization of array data
   * [questionr-0.7.4](https://cran.r-project.org/web/packages/questionr/index.html) Functions to Make Surveys Processing Easier
@@ -1168,7 +1170,7 @@ Classification (RF-SRC)
 and Logs
   * [raster-3.4-5](https://cran.r-project.org/web/packages/raster/index.html) Geographic Data Analysis and Modeling
   * [rbenchmark-1.0.0](https://cran.r-project.org/web/packages/rbenchmark/index.html) Benchmarking routine for R
-  * [rbibutils-2.0](https://cran.r-project.org/web/packages/rbibutils/index.html) Convert Between Bibliography Formats
+  * [rbibutils-2.0](https://cran.r-project.org/web/packages/rbibutils/index.html) Read 'Bibtex' Files and Convert Between Bibliography Formats
   * [rcmdcheck-1.3.3](https://cran.r-project.org/web/packages/rcmdcheck/index.html) Run 'R CMD check' from 'R' and Capture Results
   * [rda-1.0.2-2.1](https://cran.r-project.org/web/packages/rda/index.html) Shrunken Centroids Regularized Discriminant Analysis
   * [rdrop2-0.8.2.1](https://cran.r-project.org/web/packages/rdrop2/index.html) Programmatic Interface to the 'Dropbox' API
@@ -1212,6 +1214,7 @@ and Logs
   * [rlang-0.4.10](https://cran.r-project.org/web/packages/rlang/index.html) Functions for Base Types and Core R and 'Tidyverse' Features
   * [rle-0.9.2](https://cran.r-project.org/web/packages/rle/index.html) Common Functions for Run-Length Encoded Vectors
   * [rlecuyer-0.3-5](https://cran.r-project.org/web/packages/rlecuyer/index.html) R Interface to RNG with Multiple Streams
+  * [rlist-0.4.6.1](https://cran.r-project.org/web/packages/rlist/index.html) A Toolbox for Non-Tabular Data Manipulation
   * [rmarkdown-2.7](https://cran.r-project.org/web/packages/rmarkdown/index.html) Dynamic Documents for R
   * [rmeta-3.0](https://cran.r-project.org/web/packages/rmeta/index.html) Meta-Analysis
   * [rms-6.2-0](https://cran.r-project.org/web/packages/rms/index.html) Regression Modeling Strategies
@@ -1248,6 +1251,7 @@ Applications
   * [sandwich-3.0-0](https://cran.r-project.org/web/packages/sandwich/index.html) Robust Covariance Matrix Estimators
   * [sass-0.3.1](https://cran.r-project.org/web/packages/sass/index.html) Syntactically Awesome Style Sheets ('Sass')
   * [scales-1.1.1](https://cran.r-project.org/web/packages/scales/index.html) Scale Functions for Visualization
+  * scarHRD 1.0
   * [scatterpie-0.1.5](https://cran.r-project.org/web/packages/scatterpie/index.html) Scatter Pie Plot
   * [scatterplot3d-0.3-41](https://cran.r-project.org/web/packages/scatterplot3d/index.html) 3D Scatter Plot
   * [schoolmath-0.4](https://cran.r-project.org/web/packages/schoolmath/index.html) Functions and datasets for math used in school
@@ -1432,7 +1436,7 @@ for Dimensionality Reduction
   * [vioplot-0.3.6](https://cran.r-project.org/web/packages/vioplot/index.html) Violin Plot
   * [vipor-0.4.5](https://cran.r-project.org/web/packages/vipor/index.html) Plot Categorical Data Using Quasirandom Noise and Density
 Estimates
-  * [viridis-0.5.1](https://cran.r-project.org/web/packages/viridis/index.html) Default Color Maps from 'matplotlib'
+  * [viridis-0.5.1](https://cran.r-project.org/web/packages/viridis/index.html) Colorblind-Friendly Color Maps for R
   * [viridisLite-0.3.0](https://cran.r-project.org/web/packages/viridisLite/index.html) Colorblind-Friendly Color Maps (Lite Version)
   * [visNetwork-2.0.9](https://cran.r-project.org/web/packages/visNetwork/index.html) Network Visualization using 'vis.js' Library
   * [vsn-3.58.0](https://www.bioconductor.org/packages/release/bioc/html/vsn.html) Variance stabilization and calibration for microarray data
@@ -1452,8 +1456,7 @@ Signal Processing
   * [workflowsets-0.0.1](https://cran.r-project.org/web/packages/workflowsets/index.html) Create a Collection of 'tidymodels' Workflows
   * [worrms-0.4.2](https://cran.r-project.org/web/packages/worrms/index.html) World Register of Marine Species (WoRMS) Client
   * xCell 1.1.0
-  * [xfun-0.22](https://cran.r-project.org/web/packages/xfun/index.html) Miscellaneous Functions to Support Packages Maintained by 'Yihui
-Xie'
+  * [xfun-0.22](https://cran.r-project.org/web/packages/xfun/index.html) Supporting Functions for Packages Maintained by 'Yihui Xie'
   * [xgboost-1.3.2.1](https://cran.r-project.org/web/packages/xgboost/index.html) Extreme Gradient Boosting
   * [xlsx-0.6.5](https://cran.r-project.org/web/packages/xlsx/index.html) Read, Write, Format Excel 2007 and Excel 97/2000/XP/2003 Files
   * [xlsxjars-0.6.1](https://cran.r-project.org/web/packages/xlsxjars/index.html) Package required POI jars for the xlsx package

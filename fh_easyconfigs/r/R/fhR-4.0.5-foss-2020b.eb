@@ -32,14 +32,14 @@ dependencies = [
     ('ICU', '67.1'),
     ('netCDF', '4.7.4'),  # for netcdf4
     ('ZeroMQ', '4.3.3'),  # for zmq
-    ('SYMPHONY', '5.6.17'), # for lpsymphony
-    ('igraph', '0.8.5'), # for igraph
+    ('SYMPHONY', '5.6.17'),  # for lpsymphony
+    ('igraph', '0.8.5'),  # for igraph
     ('OpenJPEG', '2.4.0'),
     ('UnZip', '6.0'),
     ('zlib', '1.2.11'),
     ('NSS', '3.57'),
     ('librsvg', '2.50.2'),  # for rsvg
-    #('unixODBC', '2.3.7'),
+    ('unixODBC', '2.3.9'),  # odbc
     # ('OpenSSL', '1.1.1i'),
 ]
 
@@ -465,7 +465,7 @@ exts_list = [
     ('SNPassoc', '2.0-2'),
     ('SingleCellExperiment', '1.12.0'),
     ('MAST', '1.16.0'),
-    # ('odbc', '1.3.0'),
+    ('odbc', '1.3.0'),
     ('QUIC', '1.1.1'),
     ('RcppDate', '0.0.2'),
     ('RcppCCTZ', '0.2.9'),
@@ -549,6 +549,8 @@ exts_list = [
             'filename': '%(name)s_%(version)s.tar.gz',
         }],
     }),
+    ('quantoptr', '0.1.3'),
+    ('fANCOVA', '0.6-1'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}
