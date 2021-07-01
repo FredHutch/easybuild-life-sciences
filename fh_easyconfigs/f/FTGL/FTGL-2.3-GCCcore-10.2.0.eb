@@ -1,0 +1,35 @@
+easyblock = 'ConfigureMake'
+
+name = 'FTGL'
+version = '2.3'
+
+homepage = 'http://ftgl.sourceforge.net/docs/html/'
+description = """ FTGL is a free open source library to enable developers to use arbitrary
+fonts in their OpenGL (www.opengl.org) applications. """
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/ulrichard/ftgl/archive/refs/heads']
+sources = ['master.zip']
+checksums = []
+
+builddependencies = [
+    ('Autotools', '20200321'),
+    ('binutils', '2.35'),
+]
+
+dependencies = [
+    ('freetype', '2.10.3'),
+    ('libGLU', '9.0.1'),
+    ('Mesa', '20.2.1'),
+]
+
+preconfigopts = "./autogen.sh && "
+
+sanity_check_paths = {
+    'files': ['lib/pkgconfig/ftgl.pc', 'lib/libftgl.a', 'lib/libftgl.la', 'lib/libftgl.%s' % SHLIB_EXT],
+    'dirs': ['include/FTGL']
+}
+
+moduleclass = 'lib'
