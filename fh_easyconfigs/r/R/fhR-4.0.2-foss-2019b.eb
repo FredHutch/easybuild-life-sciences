@@ -44,6 +44,7 @@ dependencies = [
     ('NSS', '3.45'),
     ('librsvg', '2.49.1'),
     ('unixODBC', '2.3.7'),
+    ('V8', '3.4.0', '-R-4.0.2'),  # for V8
 ]
 
 exts_default_options = {

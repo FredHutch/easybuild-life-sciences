@@ -1,5 +1,10 @@
 Fred Hutch R 4.1.0 Build Notes
 
+BackPort Issues
+V8 Cran package requires V8 module, plus nodejs. Watch version conflicts with libicu
+V8-3.4.0-foss-2019b-R-4.0.2.eb needs  updating for R4.1.0 
+randomcoloR-1.1.0.1 requires V8 to work!
+
 RProtoBufLib 2.4.0 Build Issues
 
   CXX      google/protobuf/compiler/csharp/csharp_wrapper_field.lo

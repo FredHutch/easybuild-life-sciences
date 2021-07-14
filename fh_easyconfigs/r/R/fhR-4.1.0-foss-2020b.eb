@@ -292,6 +292,8 @@ exts_list = [
     ('KEGG.db', '3.2.4'),
     ('annaffy', '1.63.1'),
     ('gcrma', '2.64.0'),
+    ('affxparser', '1.64.0'),
+    ('oligo', '1.56.0'),
     ('oligoClasses', '1.54.0'),
     ('PFAM.db', '3.13.0'),
     ('baySeq', '2.26.0'),
