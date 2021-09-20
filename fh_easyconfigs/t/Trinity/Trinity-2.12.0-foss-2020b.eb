@@ -34,7 +34,7 @@ builddependencies = [
 
 dependencies = [
     ('Java', '11', '', True),
-    ('ant', '1.10.8', '-Java-%(javaver)s', True),
+    ('ant', '1.10.9', '-Java-%(javaver)s', True),
     ('Perl', '5.32.0'),
     ('Python', '3.8.6'),
     ('SciPy-bundle', '2020.11'),

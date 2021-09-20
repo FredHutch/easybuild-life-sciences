@@ -916,9 +916,9 @@ exts_list = [
     ('gast', '0.4.0'),
     ('astor', '0.8.1'),
     ('pydot', '1.4.2'),
-    ('xgboost', '1.4.0', {
-        'easyblock': 'CMakeMake',
-    }),
+    # ('xgboost', '1.4.0', {
+    #     'easyblock': 'CMakeMake',
+    # }),
     ('multidict', '5.1.0'),
     ('async-timeout', '3.0.1', {
         'modulename': 'async_timeout',

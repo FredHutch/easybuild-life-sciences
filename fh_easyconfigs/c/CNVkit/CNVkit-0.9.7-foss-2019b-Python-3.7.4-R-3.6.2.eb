@@ -19,7 +19,7 @@ dependencies = [
     ('networkx', '2.4', '-Python-%(pyver)s'),
     ('scikit-learn', '0.21.3', '-Python-%(pyver)s'),
     ('Pillow', '6.2.1'),
-    ('Pysam', '0.15.3'),
+    ('Pysam', '0.15.4', '-Python-%(pyver)s'),
     ('PyYAML', '5.1.2'),
     ('R', '3.6.2'),
     ('R-bundle-Bioconductor', '3.10', '-R-%(rver)s'),
