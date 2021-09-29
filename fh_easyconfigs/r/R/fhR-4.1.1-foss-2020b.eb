@@ -566,6 +566,13 @@ exts_list = [
     #}),
     ('quantoptr', '0.1.3'),
     ('fANCOVA', '0.6-1'),
+    # package 'CATALYST'
+    ('RcppHNSW', '0.3.0'),
+    ('BiocNeighbors', '1.10.0'),
+    ('drc', '3.0-1'),
+    ('scuttle', '1.2.1'),
+    ('scater', '1.20.1'),
+    ('CATALYST', '1.16.2'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

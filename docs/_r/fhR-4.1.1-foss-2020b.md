@@ -1,6 +1,6 @@
 ---
 title: fhR-4.1.1-foss-2020b
-date: 2021-09-20
+date: 2021-09-29
 ---
 
 ### Known Issues
@@ -43,6 +43,7 @@ Statistics
   * [BiocGenerics-0.38.0](https://www.bioconductor.org/packages/release/bioc/html/BiocGenerics.html) S4 generic functions used in Bioconductor
   * [BiocIO-1.2.0](https://www.bioconductor.org/packages/release/bioc/html/BiocIO.html) Standard Input and Output for Bioconductor Packages
   * [BiocManager-1.30.16](https://cran.r-project.org/web/packages/BiocManager/index.html) Access the Bioconductor Project Package Repository
+  * [BiocNeighbors-1.10.0](https://www.bioconductor.org/packages/release/bioc/html/BiocNeighbors.html) Nearest Neighbor Detection for Bioconductor Packages
   * [BiocParallel-1.26.2](https://www.bioconductor.org/packages/release/bioc/html/BiocParallel.html) Bioconductor facilities for parallel evaluation
   * [BiocSingular-1.8.1](https://www.bioconductor.org/packages/release/bioc/html/BiocSingular.html) Singular Value Decomposition for Bioconductor Packages
   * [BiocStyle-2.20.2](https://www.bioconductor.org/packages/release/bioc/html/BiocStyle.html) Standard styles for vignettes and other Bioconductor documents
@@ -54,6 +55,7 @@ Statistics
   * [Boruta-7.0.0](https://cran.r-project.org/web/packages/Boruta/index.html) Wrapper Algorithm for All Relevant Feature Selection
   * [BradleyTerry2-1.1-2](https://cran.r-project.org/web/packages/BradleyTerry2/index.html) Bradley-Terry Models
   * [Brobdingnag-1.2-6](https://cran.r-project.org/web/packages/Brobdingnag/index.html) Very Large Numbers in R
+  * [CATALYST-1.16.2](https://www.bioconductor.org/packages/release/bioc/html/CATALYST.html) Cytometry dATa anALYSis Tools
   * [CBPS-0.22](https://cran.r-project.org/web/packages/CBPS/index.html) Covariate Balancing Propensity Score
   * [CGHbase-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/CGHbase.html) CGHbase: Base functions and classes for arrayCGH data analysis.
   * [CLONETv2-2.1.0](https://cran.r-project.org/web/packages/CLONETv2/index.html) Clonality Estimates in Tumor
@@ -278,6 +280,8 @@ Library
   * [RcppEigen-0.3.3.9.1](https://cran.r-project.org/web/packages/RcppEigen/index.html) 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
 Library
   * [RcppGSL-0.3.9](https://cran.r-project.org/web/packages/RcppGSL/index.html) 'Rcpp' Integration for 'GNU GSL' Vectors and Matrices
+  * [RcppHNSW-0.3.0](https://cran.r-project.org/web/packages/RcppHNSW/index.html) 'Rcpp' Bindings for 'hnswlib', a Library for Approximate Nearest
+Neighbors
   * [RcppNumerical-0.4-0](https://cran.r-project.org/web/packages/RcppNumerical/index.html) 'Rcpp' Integration for Numerical Computing Libraries
   * [RcppParallel-5.1.4](https://cran.r-project.org/web/packages/RcppParallel/index.html) Parallel Programming Tools for 'Rcpp'
   * [RcppProgress-0.4.2](https://cran.r-project.org/web/packages/RcppProgress/index.html) An Interruptible Progress Bar with OpenMP Support for C++ in R
@@ -620,6 +624,7 @@ Package
   * [dplyr-1.0.7](https://cran.r-project.org/web/packages/dplyr/index.html) A Grammar of Data Manipulation
   * [dqrng-0.3.0](https://cran.r-project.org/web/packages/dqrng/index.html) Fast Pseudo Random Number Generators
   * [dr-3.0.10](https://cran.r-project.org/web/packages/dr/index.html) Methods for Dimension Reduction for Regression
+  * [drc-3.0-1](https://cran.r-project.org/web/packages/drc/index.html) Analysis of Dose-Response Curves
   * [drgee-1.1.10](https://cran.r-project.org/web/packages/drgee/index.html) Doubly Robust Generalized Estimating Equations
   * [drugCombo-1.2.1](https://cran.r-project.org/web/packages/drugCombo/index.html) Drug Interaction Modeling Based on Loewe Additivity Following
 Harbron's Approach
@@ -1261,7 +1266,7 @@ and Logs
   * [readr-2.0.1](https://cran.r-project.org/web/packages/readr/index.html) Read Rectangular Text Data
   * [readxl-1.3.1](https://cran.r-project.org/web/packages/readxl/index.html) Read Excel Files
   * [rebird-1.2.0](https://cran.r-project.org/web/packages/rebird/index.html) R Client for the eBird Database of Bird Observations
-  * [recipes-0.1.16](https://cran.r-project.org/web/packages/recipes/index.html) Preprocessing Tools to Create Design Matrices
+  * [recipes-0.1.16](https://cran.r-project.org/web/packages/recipes/index.html) Preprocessing and Feature Engineering Steps for Modeling
   * [refGenome-1.7.7](https://cran.r-project.org/web/packages/refGenome/index.html) Gene and Splice Site Annotation Using Annotation Data from
 'Ensembl' and 'UCSC' Genome Browsers
   * [refund-0.1-24](https://cran.r-project.org/web/packages/refund/index.html) Regression with Functional Data
@@ -1342,6 +1347,7 @@ Applications
   * [sandwich-3.0-1](https://cran.r-project.org/web/packages/sandwich/index.html) Robust Covariance Matrix Estimators
   * [sass-0.4.0](https://cran.r-project.org/web/packages/sass/index.html) Syntactically Awesome Style Sheets ('Sass')
   * [scales-1.1.1](https://cran.r-project.org/web/packages/scales/index.html) Scale Functions for Visualization
+  * [scater-1.20.1](https://www.bioconductor.org/packages/release/bioc/html/scater.html) Single-Cell Analysis Toolkit for Gene Expression Data in R
   * [scattermore-0.7](https://cran.r-project.org/web/packages/scattermore/index.html) Scatterplots with More Points
   * [scatterpie-0.1.7](https://cran.r-project.org/web/packages/scatterpie/index.html) Scatter Pie Plot
   * [scatterplot3d-0.3-41](https://cran.r-project.org/web/packages/scatterplot3d/index.html) 3D Scatter Plot
@@ -1349,6 +1355,7 @@ Applications
   * [scidb-3.0.0](https://cran.r-project.org/web/packages/scidb/index.html) An R Interface to SciDB
   * [scrime-1.3.5](https://cran.r-project.org/web/packages/scrime/index.html) Analysis of High-Dimensional Categorical Data Such as SNP Data
   * [sctransform-0.3.2](https://cran.r-project.org/web/packages/sctransform/index.html) Variance Stabilizing Transformations for Single Cell UMI Data
+  * [scuttle-1.2.1](https://www.bioconductor.org/packages/release/bioc/html/scuttle.html) Single-Cell RNA-Seq Analysis Utilities
   * [seewave-2.1.8](https://cran.r-project.org/web/packages/seewave/index.html) Sound Analysis and Synthesis
   * [segmented-1.3-4](https://cran.r-project.org/web/packages/segmented/index.html) Regression Models with Break-Points / Change-Points Estimation
   * [selectr-0.4-2](https://cran.r-project.org/web/packages/selectr/index.html) Translate CSS Selectors to XPath Expressions
