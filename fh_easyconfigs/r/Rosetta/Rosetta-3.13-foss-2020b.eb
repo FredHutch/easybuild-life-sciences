@@ -1,0 +1,19 @@
+name = 'Rosetta'
+version = '3.13'
+
+homepage = 'https://www.rosettacommons.org'
+description = """Rosetta is the premier software suite for modeling
+ macromolecular structures. As a flexible, multi-purpose application,
+ it includes tools for structure prediction, design, and remodeling
+ of proteins and nucleic acids."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+toolchainopts = {'usempi': True}
+
+"""Requries acaddemic user license"""
+sources = ['%(namelower)s_src_%(version)s_bundle.tgz']
+
+builddependencies = [('SCons', '4.0.1')]
+dependencies = [('libxml2', '2.9.10')]
+
+moduleclass = 'bio'

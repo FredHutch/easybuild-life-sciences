@@ -523,19 +523,22 @@ exts_list = [
     ('poweRlaw', '0.70.6'),
     ('CNEr', '1.24.0'),
     ('DirichletMultinomial', '1.30.0'),
-    ('TFMPvalue : 0.0.8'),
-    ('TFBSTools', '1.26.0'),
-    ('ChIPseeker', '1.23.2'),
-    ('chromVAR', '0.3', {
-        'source_urls': ['https://github.com/GreenleafLab/chromVAR/archive'],
-        'source_tmpl': '%(version)s.tar.gz',
-        'filename': 'chromVAR-%(version)s.tar.gz',
-    }),
-    ('gchromVAR', 'e4f33ca', {
-        'source_urls': ['https://github.com/caleblareau/gchromVAR/archive'],
-        'source_tmpl': 'master.zip',
-        'filename': 'gchromVAR.zip',
-    }),
+    #('TFMPvalue : 0.0.8'),
+    #('TFBSTools', '1.26.0'),
+    #('ChIPseeker', '1.23.2'),
+    #('chromVAR', '0.3', {
+    #    'source_urls': ['https://github.com/GreenleafLab/chromVAR/archive'],
+    #    'source_tmpl': '%(version)s.tar.gz',
+    #    'filename': 'chromVAR-%(version)s.tar.gz',
+    #}),
+    #('gchromVAR', 'e4f33ca', {
+    #    'source_urls': ['https://github.com/caleblareau/gchromVAR/archive'],
+    #    'source_tmpl': 'master.zip',
+    #    'filename': 'gchromVAR.zip',
+    #}),
+    ('sodium', '1.1'),
+    ('filelock', '1.0.2'),
+    ('keyring', '1.2.0'),
 ]
 
 sanity_check_paths = {

@@ -855,10 +855,11 @@ exts_list = [
         'modulename': 'PyInstaller',
     }),
     ('slurm-pipeline', '3.1.1', {
-         'modulename': 'slurm_pipeline',
+        'modulename': 'slurm_pipeline',
     }),
     ('argh', '0.26.2'),
     ('cx_Logging', '3.0', {
+        'modulename': 'cx_Logging',
     }),
     ('cx_Freeze', '6.6', {
         'modulename': 'cx_Freeze',
@@ -1049,8 +1050,9 @@ exts_list = [
     ('altair', '4.1.0'),
     ('PyChef', '0.3.0', {
         'modulename': 'chef',
-        #'patches': ['%(name)s-%(version)s_distro.patch'],
+        'patches': ['%(name)s-%(version)s_platform.patch'],
     }),
+    ('slicer', '0.0.7'),
     ('agfusion', '1.252'),
     ('shap', '0.39.0'),
     ('mpld3', '0.5.2'),
@@ -1059,6 +1061,9 @@ exts_list = [
         'modulename': 'dendropy',
     }),
     ('sci', '0.1.7'),
+    ('pyFFTW', '0.12.0', {
+        'modulename': 'pyfftw',
+    }),
     ('pyemd', '0.5.1'),
     ('setuptools-git', '1.2', {
         'modulename': 'setuptools_git',
@@ -1146,9 +1151,6 @@ exts_list = [
     }),
     ('sinfo', '0.3.1'),
     ('get_version', '2.1'),
-    ('get_version', '2.1', {
-        'modulename': 'get-version',
-    }),
     ('legacy-api-wrap', '1.2', {
        'modulename': 'legacy_api_wrap',
     }),
@@ -1189,9 +1191,6 @@ exts_list = [
     }),
     ('defusedxml', '0.7.1', {
     }),
-    ('async_generator', '1.10', {
-        'modulename': 'async-generator',
-    }),
     ('nest_asyncio', '1.5.1', {
     }),
     ('nbclient', '0.5.3', {
@@ -1230,14 +1229,18 @@ exts_list = [
         'source_tmpl': 'interop-1.1.12-cp38-cp38-manylinux1_x86_64.whl',
         'unpack_sources': False,
     }),
-    ('basicfiltering', '0.3', {
-        'source_urls': ['https://github.com/mskcc/basicfiltering/archive/'],
-        'source_tmpl': '%(version)s.tar.gz',
-    }),
     ('pyem', '0.5', {
         'source_urls': ['https://github.com/asarnow/pyem/archive/refs/tags'],
         'source_tmpl': 'v%(version)s.zip',
     }),
+    ('charset_normalizer', '2.0.6', {
+        'source_tmpl': 'charset-normalizer-%(version)s.tar.gz',
+    }),
+    ('sniffio', '1.2.0'),
+    ('h11', '0.12.0'),
+    ('httpcore', '0.13.7'),
+    ('h2', '4.0.0'),
+    ('httpx', '0.19.0'),
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}

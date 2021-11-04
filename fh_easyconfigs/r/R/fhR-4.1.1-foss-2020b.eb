@@ -573,6 +573,20 @@ exts_list = [
     ('scuttle', '1.2.1'),
     ('scater', '1.20.1'),
     ('CATALYST', '1.16.2'),
+    # package premessa
+    ('rhandsontable', '0.3.8'),
+    ('sass', '0.4.0'),
+    ('jquerylib', '0.1.4'),
+    ('fontawesome', '0.2.2'),
+    ('bslib', '0.3.0'),
+    ('cachem', '1.0.6'),
+    ('premessa', '0.2.6', {
+        'source_urls': ['https://github.com/ParkerICI/premessa'],
+        'sources_tmpl': 'v%(version)s.tar.gz',
+        'filename': '%(name)s_%(version)s.tar.gz',
+    }),
+    ('sodium', '1.1'),
+    ('keyring', '1.2.0'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

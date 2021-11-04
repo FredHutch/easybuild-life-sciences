@@ -1,0 +1,13 @@
+platform does not suport linux_distribution 
+diff -ruN PyChef-0.3.0.orig/chef/rsa.py PyChef-0.3.0/chef/rsa.py
+--- PyChef-0.3.0.orig/chef/rsa.py	2016-04-18 17:31:14.000000000 -0700
++++ PyChef-0.3.0/chef/rsa.py	2021-09-21 17:02:15.609754000 -0700
+@@ -9,7 +9,7 @@
+ else:
+     # Patch for Amazon Linux
+     import platform
+-    plat_name = platform.linux_distribution(supported_dists=['system'])[0]
++    plat_name = platform.platform()
+     if 'Amazon' in plat_name:
+         _eay = CDLL('libcrypto.so.10')
+     else:

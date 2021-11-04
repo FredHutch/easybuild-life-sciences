@@ -1,0 +1,43 @@
+easyblock = 'ConfigureMake'
+
+name = 'aria2'
+version = '1.35.0'
+
+homepage = 'https://aria2.github.io/'
+description = """aria2 is a lightweight multi-protocol and multi-source command-line download utility. It
+ supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC
+ and XML-RPC interfaces.  """
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+github_account = 'aria2'
+source_urls = [GITHUB_SOURCE]
+sources = ['release-%(version)s.tar.gz']
+checksums = []
+
+builddependencies = [
+    ('binutils', '2.35'),
+    ('Autotools', '20200321'),
+    ('pkg-config', '0.92.2'),
+]
+
+dependencies = [
+    ('gnutls', '3.7.2'),
+    ('GMP'
+    ('libxml2'
+    ('zlib'
+    ('sqlite'
+    ('openssl'
+    ('libgcrypt'),
+]
+
+preconfigopts = "autoreconf -i -f && "
+
+sanity_check_paths = {
+    'files': ['bin/%(namelower)s'],
+    'dirs': [],
+}
+
+sanity_check_commands = ["%(name)s -v"]
+
+moduleclass = 'tools'

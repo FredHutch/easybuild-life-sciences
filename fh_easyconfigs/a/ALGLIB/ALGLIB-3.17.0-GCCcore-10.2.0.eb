@@ -1,0 +1,19 @@
+name = 'ALGLIB'
+version = '3.17.0'
+
+homepage = 'https://www.alglib.net'
+
+
+description = """ALGLIB is a cross-platform numerical analysis and data processing library."""
+
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+source_urls = ['https://www.alglib.net/translator/re/alglib-3.17.0.cpp.gpl.tgz
+sources = ['%(namelower)s-%(version)s.cpp.gpl.tgz']
+checksums = ['556667a926ac31b8b17e4bbac34dd6798e0d73339ff77a864ae8763c0e7918f7']
+
+
+for cpp in *.cpp; do root="${cpp%.*}"; echo building $root; g++ -c -o ${root}.o ${root}.cpp;
+ done
+
+

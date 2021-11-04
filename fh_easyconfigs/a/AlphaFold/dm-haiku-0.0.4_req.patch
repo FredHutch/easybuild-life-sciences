@@ -1,0 +1,24 @@
+add missing requirements
+diff -ruN dm-haiku-0.0.4.orig/requirements-test.txt dm-haiku-0.0.4/requirements-test.txt
+--- dm-haiku-0.0.4.orig/requirements-test.txt	1969-12-31 16:00:00.000000000 -0800
++++ dm-haiku-0.0.4/requirements-test.txt	2021-08-05 11:08:25.006344000 -0700
+@@ -0,0 +1,10 @@
++chex>=0.0.4
++cloudpickle>=1.2.2
++dill
++mock>=3.0.5
++pytest-xdist
++virtualenv
++dm-tree>=0.1.1
++dataclasses==0.7 ; python_version<'3.7'
++tensorflow==2.5.0
++optax==0.0.1
+diff -ruN dm-haiku-0.0.4.orig/requirements.txt dm-haiku-0.0.4/requirements.txt
+--- dm-haiku-0.0.4.orig/requirements.txt	1969-12-31 16:00:00.000000000 -0800
++++ dm-haiku-0.0.4/requirements.txt	2021-08-04 16:25:44.775364000 -0700
+@@ -0,0 +1,5 @@
++absl-py>=0.7.1
++jmp>=0.0.2
++numpy>=1.18.0
++tabulate>=0.8.9
++typing_extensions; python_version<="3.8"

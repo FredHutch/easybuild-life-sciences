@@ -1,0 +1,16 @@
+running: /home/jfdey/projects/easy_update/easy_update.py
+== Not Found: X11-20201008-foss-2020b.eb
+== Not Found: Mesa-20.2.1-foss-2020b.eb
+== Not Found: libGLU-9.0.1-foss-2020b.eb
+== Not Found: cairo-1.16.0-foss-2020b.eb
+== Not Found: libreadline-8.0-foss-2020b.eb
+== Not Found: ncurses-6.2-foss-2020b.eb
+== Not Found: bzip2-1.0.8-foss-2020b.eb
+== Not Found: XZ-5.2.5-foss-2020b.eb
+== Not Found: zlib-1.2.11-foss-2020b.eb
+== Not Found: SQLite-3.33.0-foss-2020b.eb
+== Not Found: PCRE2-10.35-foss-2020b.eb
+== Not Found: libpng-1.6.37-foss-2020b.eb
+== Not Found: libjpeg-turbo-2.0.5-foss-2020b.eb
+== Not Found: LibTIFF-4.1.0-foss-2020b.eb
+== reading extensions from: Java-11.eb

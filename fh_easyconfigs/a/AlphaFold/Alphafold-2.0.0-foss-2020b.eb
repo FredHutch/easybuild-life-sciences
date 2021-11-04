@@ -1,0 +1,95 @@
+# Easybuild easyconfig
+#
+# Fred Hutch Cancer Research Center
+# John Dey jfdey@fredhutch.org
+easyblock = 'PythonBundle'
+
+name = 'Alphafold'
+version = '2.0.0'
+
+homepage = 'https://github.com/deepmind/alphafold/'
+description = """AlphaFold  provides the first computational method that can regularly predict
+ protein structures with atomic accuracy even where no similar structure is known. AlphaFold
+ is a novel machine learning approach that incorporates physical and biological knowledge about
+ protein structure, leveraging multi-sequence alignments, into the design of the deep learning
+ algorithm"""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+
+builddependencies = [
+    ('Bazel', '3.7.2'),
+]
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('PyYAML', '5.3.1'),
+    ('Biopython', '1.78'),
+    ('SciPy-bundle', '2020.11'),
+    ('TensorFlow', '2.4.1'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('absl-py', '0.13.0', {
+        'modulename': 'absl',
+        'checksums': ['6953272383486044699fd0e9f00aad167a27e08ce19aae66c6c4b10e7e767793'],
+    }),
+    ('dm-tree', '0.1.6', {
+        'modulename': 'tree',
+        'checksums': ['6776404b23b4522c01012ffb314632aba092c9541577004ab153321e87da439a'],
+    }),
+    ('jax', '0.2.18', {
+        'checksums': ['b08d5137189a7384429541b39575a022d4bbf777cdb081e8c1bf6bc14eefcd41'],
+    }),
+    ('flatbuffers', '2.0', {
+        'checksums': ['12158ab0272375eab8db2d663ae97370c33f152b27801fa6024e1d6105fd4dd2'],
+    }),
+    ('jaxlib', '0.1.69', {
+        'source_tmpl': '%(name)s-%(version)s-cp38-none-manylinux2010_x86_64.whl',
+        'unpack_sources': False,
+        'checksums': ['05cbafbc5878406f4e79cadf22c3a9db735f4a842d3805fc7d0162cbefa2e166'],
+    }),
+    ('toolz', '0.11.1', {
+        'checksums': ['c7a47921f07822fe534fb1c01c9931ab335a4390c782bd28c6bcc7c2f71f3fbf'],
+    }),
+    ('chex', '0.0.8', {
+        'checksums': ['d6ce1329470116b6f172a72b1131bfd4d11fb7eb465e6077c3b36224b5b09fe4'],
+    }),
+    ('typing-extensions', '3.10.0.0', {
+        'source_tmpl': 'typing_extensions-%(version)s.tar.gz',
+        'checksums': ['50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342'],
+    }),
+    ('dm-haiku', '0.0.4', {
+        'modulename': 'haiku',
+        'patches': [('%(name)s-%(version)s_req.patch', 1)],
+        'checksums': [
+            '5faa387ad6b522516283cbe45adbc4c46bedcf501c82db2f9174945f3ec2ea7d',  # dm-haiku-0.0.4.tar.gz
+            'b9ab77f2e94aa76cd671c95b55a7647f066edfdbfe0d96692b886d90b0793814',  # dm-haiku-0.0.4_req.patch
+        ],
+    }),
+    ('immutabledict', '2.1.0', {
+        'checksums': ['673fb8f30f46d23dd394050b979f5b7f4c5398982b99ebc854fb873e646b967a'],
+    }),
+    ('contextlib2', '21.6.0', {
+        'checksums': ['ab1e2bfe1d01d968e1b7e8d9023bc51ef3509bba217bb730cee3827e1ee82869'],
+    }),
+    ('ml-collections', '0.1.0', {
+        'modulename': 'ml_collections',
+        'patches': [('ml_collections-%(version)s_req.patch', 1)],
+        'source_tmpl': 'ml_collections-%(version)s.tar.gz',
+        'checksums': [
+            '59a17fcd1c140153009788517f304caaddd7a94f06690f9f0ed09987beebcf3c',  # ml_collections-0.1.0.tar.gz
+            'ae5ffc5ddc994d8877a7e33ec723082bc70fdeb854e6045257928817136cfddf',  # ml_collections-0.1.0_req.patch
+        ],
+    }),
+    (name, version, {
+        'modulename': '%(namelower)s',
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'source_urls': ['https://github.com/deepmind/alphafold/archive/refs/tags'],
+        'checksums': ['78cf443a2d9250917b05f5d40ede140ed8e8341b42fdfa54340336aca52f53f2'],
+    }),
+]
+
+moduleclass = 'bio'

@@ -1,0 +1,16 @@
+add missing requirements
+diff -ruN ml_collections-0.1.0.orig/requirements-test.txt ml_collections-0.1.0/requirements-test.txt
+--- ml_collections-0.1.0.orig/requirements-test.txt	1969-12-31 16:00:00.000000000 -0800
++++ ml_collections-0.1.0/requirements-test.txt	2021-08-05 13:15:06.665176000 -0700
+@@ -0,0 +1 @@
++mock
+diff -ruN ml_collections-0.1.0.orig/requirements.txt ml_collections-0.1.0/requirements.txt
+--- ml_collections-0.1.0.orig/requirements.txt	1969-12-31 16:00:00.000000000 -0800
++++ ml_collections-0.1.0/requirements.txt	2021-08-05 12:36:26.217823000 -0700
+@@ -0,0 +1,6 @@
++absl-py
++PyYAML
++six
++contextlib2
++dataclasses;python_version<'3.7'
++typing;python_version<'3.5'
