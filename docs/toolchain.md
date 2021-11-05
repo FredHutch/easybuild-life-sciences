@@ -1,12 +1,13 @@
 ---
-title: toolchains
-permalink: /toolchains/
+title: "Toolchains"
 layout: collection 
+classes: wide
+permalink: /toolchains/
 collection: toolchains
-entries_layout: list # list or grid (default),
-show_excerpts:  true #(default), false
-sort_by: title # date or title (default)
-sort_order: reverse # (default),forward or reverse
+entries_layout: list
+show_excerpts:  true
+sort_by: title
+sort_order: reverse
 sidebar:
   nav: "docs"
 ---

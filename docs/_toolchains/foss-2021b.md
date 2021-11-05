@@ -1,10 +1,6 @@
 ---
 title: foss-2021b
-permalink: /foss-2021b/
-layout: single
 date: 2020-02-01
-sidebar:
-  nav: "docs"
 ---
 
 ## foss-2021b
