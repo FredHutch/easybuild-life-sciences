@@ -1,5 +1,5 @@
 ---
-title: "Not enough slots" Starting Rmpi Cluster
+title: "Not enough slots; Starting Rmpi Cluster"
 date: 2016-01-01
 ---
 
