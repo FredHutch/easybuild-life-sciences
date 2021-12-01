@@ -12,7 +12,7 @@ date: 2021-12-01
   * [ALDEx2-1.26.0](https://www.bioconductor.org/packages/release/bioc/html/ALDEx2.html) Analysis Of Differential Abundance Taking Sample Variation Into Account
   * [ALL-1.36.0](https://www.bioconductor.org/packages/release/bioc/html/ALL.html) A data package
   * ASCAT 2.5.2
-  * [AUC-0.3.0](https://cran.r-project.org/web/packages/AUC/index.html) Threshold independent performance measures for probabilistic<U+000a>classifiers.
+  * [AUC-0.3.0](https://cran.r-project.org/web/packages/AUC/index.html) Threshold independent performance measures for probabilistic classifiers.
   * [AgiMicroRna-2.44.0](https://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) Processing and Differential Expression Analysis of Agilent microRNA chips
   * [AlgDesign-1.2.0](https://cran.r-project.org/web/packages/AlgDesign/index.html) Algorithmic Experimental Design
   * [AnalyzeFMRI-1.1-24](https://cran.r-project.org/web/packages/AnalyzeFMRI/index.html) Functions for Analysis of fMRI Datasets Stored in the ANALYZE or
@@ -245,7 +245,7 @@ Analysis for Multiblock Data
   * [RJSONIO-1.3-1.6](https://cran.r-project.org/web/packages/RJSONIO/index.html) Serialize R Objects to JSON, JavaScript Object Notation
   * [RLRsim-3.1-6](https://cran.r-project.org/web/packages/RLRsim/index.html) Exact (Restricted) Likelihood Ratio Tests for Mixed and Additive
 Models
-  * [RMTstat-0.3](https://cran.r-project.org/web/packages/RMTstat/index.html) Distributions, Statistics and Tests derived from Random Matrix<U+000a>Theory
+  * [RMTstat-0.3](https://cran.r-project.org/web/packages/RMTstat/index.html) Distributions, Statistics and Tests derived from Random Matrix Theory
   * [RNASeqPower-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/RNASeqPower.html) Sample size for RNAseq studies
   * [RNeXML-2.4.5](https://cran.r-project.org/web/packages/RNeXML/index.html) Semantically Rich I/O for the 'NeXML' Format
   * [RNifti-1.3.1](https://cran.r-project.org/web/packages/RNifti/index.html) Fast R and C++ Access to NIfTI Images
@@ -295,7 +295,7 @@ Implementations
   * [Rglpk-0.6-4](https://cran.r-project.org/web/packages/Rglpk/index.html) R/GNU Linear Programming Kit Interface
   * [Rgraphviz-2.38.0](https://cran.r-project.org/web/packages/Rgraphviz/index.html) Provides plotting capabilities for R graph objects
   * [Rhdf5lib-1.16.0](https://www.bioconductor.org/packages/release/bioc/html/Rhdf5lib.html) hdf5 library as an R package
-  * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits *apply() Style Dispatch for 'HPC'
+  * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits apply() Style Dispatch for 'HPC'
   * [Rhtslib-1.26.0](https://www.bioconductor.org/packages/release/bioc/html/Rhtslib.html) HTSlib high-throughput sequencing library as an R package
   * [Ringo-1.58.0](https://www.bioconductor.org/packages/release/bioc/html/Ringo.html) R Investigation of ChIP-chip Oligoarrays
   * [Rlabkey-2.8.1](https://cran.r-project.org/web/packages/Rlabkey/index.html) Data Exchange Between R and 'LabKey' Server
@@ -447,7 +447,7 @@ Summaries
   * [bbmle-1.0.24](https://cran.r-project.org/web/packages/bbmle/index.html) Tools for General Maximum Likelihood Estimation
   * [bdsmatrix-1.3-4](https://cran.r-project.org/web/packages/bdsmatrix/index.html) Routines for Block Diagonal Symmetric Matrices
   * [beachmat-2.10.0](https://www.bioconductor.org/packages/release/bioc/html/beachmat.html) Compiling Bioconductor to Handle Each Matrix Type
-  * [beanplot-1.2](https://cran.r-project.org/web/packages/beanplot/index.html) Visualization via Beanplots (like Boxplot/Stripchart/Violin<U+000a>Plot)
+  * [beanplot-1.2](https://cran.r-project.org/web/packages/beanplot/index.html) Visualization via Beanplots (like Boxplot/Stripchart/Violin Plot)
   * [beeswarm-0.4.0](https://cran.r-project.org/web/packages/beeswarm/index.html) The Bee Swarm Plot, an Alternative to Stripchart
   * [benchmark-0.3-6](https://cran.r-project.org/web/packages/benchmark/index.html) Benchmark Experiments Toolbox
   * [betareg-3.1-4](https://cran.r-project.org/web/packages/betareg/index.html) Beta Regression
@@ -507,7 +507,7 @@ Functions
   * [cellranger-1.1.0](https://cran.r-project.org/web/packages/cellranger/index.html) Translate Spreadsheet Cell Ranges to Rows and Columns
   * [cgdsr-1.3.0](https://cran.r-project.org/web/packages/cgdsr/index.html) R-Based API for Accessing the MSKCC Cancer Genomics Data Server
 (CGDS)
-  * [cghFLasso-0.2-1](https://cran.r-project.org/web/packages/cghFLasso/index.html) Detecting hot spot on CGH array data with fused lasso<U+000a>regression.
+  * [cghFLasso-0.2-1](https://cran.r-project.org/web/packages/cghFLasso/index.html) Detecting hot spot on CGH array data with fused lasso regression.
   * [checkmate-2.0.0](https://cran.r-project.org/web/packages/checkmate/index.html) Fast and Versatile Argument Checks
   * [chemometrics-1.4.2](https://cran.r-project.org/web/packages/chemometrics/index.html) Multivariate Statistical Analysis in Chemometrics
   * [chipseq-1.44.0](https://www.bioconductor.org/packages/release/bioc/html/chipseq.html) chipseq: A package for analyzing chipseq data
@@ -571,7 +571,7 @@ Hazards Model
   * [cvAUC-1.1.0](https://cran.r-project.org/web/packages/cvAUC/index.html) Cross-Validated Area Under the ROC Curve Confidence Intervals
   * [cyclocomp-1.1.0](https://cran.r-project.org/web/packages/cyclocomp/index.html) Cyclomatic Complexity of R Code
   * [cytolib-2.6.0](https://www.bioconductor.org/packages/release/bioc/html/cytolib.html) C++ infrastructure for representing and interacting with the gated cytometry data
-  * [d3Network-0.5.2.1](https://cran.r-project.org/web/packages/d3Network/index.html) Tools for creating D3 JavaScript network, tree, dendrogram, and<U+000a>Sankey graphs from R
+  * [d3Network-0.5.2.1](https://cran.r-project.org/web/packages/d3Network/index.html) Tools for creating D3 JavaScript network, tree, dendrogram, and Sankey graphs from R
   * [dHSIC-2.1](https://cran.r-project.org/web/packages/dHSIC/index.html) Independence Testing via Hilbert Schmidt Independence Criterion
   * [dada2-1.22.0](https://www.bioconductor.org/packages/release/bioc/html/dada2.html) Accurate, high-resolution sample inference from amplicon sequencing data
   * [data.table-1.14.2](https://cran.r-project.org/web/packages/data.table/index.html) Extension of `data.frame`
@@ -1036,7 +1036,7 @@ Analysis
   * [miniUI-0.1.1.1](https://cran.r-project.org/web/packages/miniUI/index.html) Shiny UI Widgets for Small Screens
   * [minpack.lm-1.2-1](https://cran.r-project.org/web/packages/minpack.lm/index.html) R Interface to the Levenberg-Marquardt Nonlinear Least-Squares
 Algorithm Found in MINPACK, Plus Support for Bounds
-  * [minqa-1.2.4](https://cran.r-project.org/web/packages/minqa/index.html) Derivative-free optimization algorithms by quadratic<U+000a>approximation
+  * [minqa-1.2.4](https://cran.r-project.org/web/packages/minqa/index.html) Derivative-free optimization algorithms by quadratic approximation
   * [misc3d-0.9-1](https://cran.r-project.org/web/packages/misc3d/index.html) Miscellaneous 3D Plots
   * [miscTools-0.6-26](https://cran.r-project.org/web/packages/miscTools/index.html) Miscellaneous Tools and Utilities
   * [missForest-1.4](https://cran.r-project.org/web/packages/missForest/index.html) Nonparametric Missing Value Imputation using Random Forest
@@ -1096,7 +1096,7 @@ Linear Mixed Models for Areal Data
   * [nloptr-1.2.2.2](https://cran.r-project.org/web/packages/nloptr/index.html) R Interface to NLopt
   * [nlsem-0.8](https://cran.r-project.org/web/packages/nlsem/index.html) Fitting Structural Equation Mixture Models
   * [nnet-7.3-16](https://cran.r-project.org/web/packages/nnet/index.html) Feed-Forward Neural Networks and Multinomial Log-Linear Models
-  * [nnls-1.4](https://cran.r-project.org/web/packages/nnls/index.html) The Lawson-Hanson algorithm for non-negative least squares<U+000a>(NNLS)
+  * [nnls-1.4](https://cran.r-project.org/web/packages/nnls/index.html) The Lawson-Hanson algorithm for non-negative least squares (NNLS)
   * [nonnest2-0.5-5](https://cran.r-project.org/web/packages/nonnest2/index.html) Tests of Non-Nested Models
   * [nor1mix-1.3-0](https://cran.r-project.org/web/packages/nor1mix/index.html) Normal aka Gaussian (1-d) Mixture Models (S3 Classes and
 Methods)
@@ -1128,7 +1128,7 @@ OpenSSL
   * [org.Mm.eg.db-3.14.0](https://www.bioconductor.org/packages/release/bioc/html/org.Mm.eg.db.html) Genome wide annotation for Mouse
   * [origami-1.0.5](https://cran.r-project.org/web/packages/origami/index.html) Generalized Framework for Cross-Validation
   * [oro.nifti-0.11.0](https://cran.r-project.org/web/packages/oro.nifti/index.html) Rigorous - 'NIfTI' + 'ANALYZE' + 'AFNI' : Input / Output
-  * [orthopolynom-1.0-5](https://cran.r-project.org/web/packages/orthopolynom/index.html) Collection of functions for orthogonal and orthonormal<U+000a>polynomials
+  * [orthopolynom-1.0-5](https://cran.r-project.org/web/packages/orthopolynom/index.html) Collection of functions for orthogonal and orthonormal polynomials
   * [outliers-0.14](https://cran.r-project.org/web/packages/outliers/index.html) Tests for outliers
   * [pROC-1.18.0](https://cran.r-project.org/web/packages/pROC/index.html) Display and Analyze ROC Curves
   * [pack-0.1-1](https://cran.r-project.org/web/packages/pack/index.html) Convert values to/from raw vectors
@@ -1149,7 +1149,7 @@ Dependencies
   * [pastecs-1.3.21](https://cran.r-project.org/web/packages/pastecs/index.html) Package for Analysis of Space-Time Ecological Series
   * [patchwork-1.1.1](https://cran.r-project.org/web/packages/patchwork/index.html) The Composer of Plots
   * [pathview-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/pathview.html) a tool set for pathway based data integration and visualization
-  * [pbapply-1.5-0](https://cran.r-project.org/web/packages/pbapply/index.html) Adding Progress Bar to '*apply' Functions
+  * [pbapply-1.5-0](https://cran.r-project.org/web/packages/pbapply/index.html) Adding Progress Bar to 'apply' Functions
   * [pbivnorm-0.6.0](https://cran.r-project.org/web/packages/pbivnorm/index.html) Vectorized Bivariate Normal CDF
   * [pbkrtest-0.5.1](https://cran.r-project.org/web/packages/pbkrtest/index.html) Parametric Bootstrap, Kenward-Roger and Satterthwaite Based
 Methods for Test in Mixed Models
@@ -1598,5 +1598,4 @@ Compositional Data Sets
   * [zeallot-0.1.0](https://cran.r-project.org/web/packages/zeallot/index.html) Multiple, Unpacking, and Destructuring Assignment
   * [zip-2.2.0](https://cran.r-project.org/web/packages/zip/index.html) Cross-Platform 'zip' Compression
   * [zlibbioc-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/zlibbioc.html) An R packaged zlib-1.2.5
-  * [zoo-1.8-9](https://cran.r-project.org/web/packages/zoo/index.html) S3 Infrastructure for Regular and Irregular Time Series (Z's
-Ordered Observations)
+  * [zoo-1.8-9](https://cran.r-project.org/web/packages/zoo/index.html) S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)

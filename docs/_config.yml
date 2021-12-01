@@ -32,6 +32,9 @@ collections:
   announcements:
     output: true
     permalink: /:collection/:path/
+  tollchains:
+    output: true
+    permalink: /:collection/:path/
 
 
 

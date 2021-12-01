@@ -1,5 +1,8 @@
+# easyblock = 'SCons'
+
 name = 'Rosetta'
 version = '3.13'
+local_src_dir = 'rosetta_src_2021.16.61629_bundle'
 
 homepage = 'https://www.rosettacommons.org'
 description = """Rosetta is the premier software suite for modeling
@@ -15,5 +18,14 @@ sources = ['%(namelower)s_src_%(version)s_bundle.tgz']
 
 builddependencies = [('SCons', '4.0.1')]
 dependencies = [('libxml2', '2.9.10')]
+
+prefix_arg = 'prefix='
+
+sanity_check_paths = {
+    'files': ['bin/rosetta'],
+    'dirs': [],
+}
+
+sanity_check_commands = [('rosetta', "-h")]
 
 moduleclass = 'bio'
