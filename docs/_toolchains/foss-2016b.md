@@ -1,9 +1,6 @@
 ---
 title: foss-2016b
-permalink: /foss-2016b/
-layout: single
-sidebar:
-  nav: "docs"
+date: 2016-08-01
 ---
 
 Foss 2016b is currently in production on all HPC resources.  The packages are built to s

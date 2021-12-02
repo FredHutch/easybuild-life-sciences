@@ -1,10 +1,6 @@
 ---
 title: foss-2020b
-permalink: /foss-2020b/
-layout: single
-date: 2020-02-01
-sidebar:
-  nav: "docs"
+date: 2020-08-01
 ---
 
 Foss-2020b support began at the Hutch December 2020 to support Ubuntu Bionic 18.04.

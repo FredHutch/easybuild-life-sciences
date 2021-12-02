@@ -1,9 +1,6 @@
 ---
 title: foss-2019b
-permalink: /foss-2019b/
-layout: single
-sidebar:
-  nav: "docs"
+date: 2019-08-01
 ---
 
 Foss-2019b is the primary toolchain to support Ubuntu Bionic 18.04. Foss-2019b is based on GCC 8.3.0.
