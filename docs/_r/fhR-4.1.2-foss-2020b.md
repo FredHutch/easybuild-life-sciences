@@ -2,6 +2,7 @@
 title: fhR-4.1.2-foss-2020b
 date: 2021-12-01
 ---
+The fhR module contains libraries that have been requested by Hutch users. The Fred Hutch module inherits the modules from the base R module that is maintained by the EasyBuild community. Hutch users should use the fh versions of R.
 
 ### Known Issues
  * None

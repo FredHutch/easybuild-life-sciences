@@ -32,10 +32,6 @@ collections:
   announcements:
     output: true
     permalink: /:collection/:path/
-  tollchains:
-    output: true
-    permalink: /:collection/:path/
-
 
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"

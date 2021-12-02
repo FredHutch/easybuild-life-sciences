@@ -9,8 +9,7 @@ sidebar:
   nav: "docs"
 ---
 
-Foss 2016b is currently in production on all HPC resources.  The packages are built to s
-support Ubunutu 14.04.
+foss-2016 was in use from 2016 to 2019. Retired with the Ubuntu 14.04 cluster spring of 2019.
 
 ### Package List
  * [GCCcore-5.4.0](http://gcc.gnu.org/) The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Java, and Ada, as well as libraries for these languages (libstdc++, libgcj,...).
