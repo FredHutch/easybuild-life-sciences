@@ -1,13 +1,9 @@
 ---
 title: "Toolchains"
-layout: collection 
-classes: wide
+layout: single
 permalink: /toolchains/
-collection: toolchains
-entries_layout: list
-show_excerpts:  true
-sort_by: title
-sort_order: reverse
+toc: true
+toc_label: "On This Page"
 sidebar:
   nav: "docs"
 ---
@@ -26,10 +22,10 @@ match tools from different toolchains.
 
 | Toolchain | GCC Version | Notes |
 | ----------|-------------| ---------|
-| [foss-2021b]({{ site.baseurl }}/_toolchains/foss-2021b/) | GCC 11.2.0 | Begining Nov 2021 |
-| [foss-2020b]({{ site.baseurl }}/_toolchains/foss-2020b/) | GCC 10.2.0 | Begining Nov 2020 |
+| [foss-2021b]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.2.0 | Begining Nov 2021 |
+| [foss-2020b]({{ site.baseurl }}/toolchains/foss-2020b/) | GCC 10.2.0 | Begining Nov 2020 |
 | foss-2020a | GCC 9.3.0 | Mostly skipped |
-| [foss-2019b]({{ site.baseurl }}/_toolchains/foss-2019b/) | GCC 8.3.0 | Primay tool chain for June 2019 cluster update |
+| [foss-2019b]({{ site.baseurl }}/toolchains/foss-2019b/) | GCC 8.3.0 | Primay tool chain for June 2019 cluster update |
 | foss-2019a | GCC 8.2.0 | skipped |
-| [foss-2018b]({{ site.baseurl }}/_toolchains/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but were outdated by 2019 |
-| foss-2016b | GCC 5.4.0 | In use from 2016 too 2019. Retired with the Ubuntu 14.04 cluster |
+| [foss-2018b]({{ site.baseurl }}/toolchains/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but were outdated by 2019 |
+| [foss-2016b]({{ site.baseurl }}/toolchains/foss-2016b/) | GCC 5.4.0 | In use from 2016 too 2019. Retired with the Ubuntu 14.04 cluster |
