@@ -1,0 +1,36 @@
+
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Research Center - Seattle Washington - US
+#
+easyblock = 'Binary'
+
+name = 'BaseSpaceCLI'
+version = '1.5.1'
+
+homepage = 'https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview'
+description = """BaseSpace is a powerful website where biologists and informaticians can easily store,
+ analyze, and share genetic data. BaseSpace is a commerical product from Illumina."""
+
+toolchain = SYSTEM
+
+source_urls = [('https://launch.basespace.illumina.com/CLI/latest/amd64-linux')]
+sources = ['bs']
+checksums = ['2b5013a512d55bdf1511d2f62bf5dd7dd5b3928a21971b1cecf7661c965dfd87']
+
+install_cmd = "mkdir %(installdir)s/bin && "
+install_cmd += "cp %(builddir)s/bs %(installdir)s/bin/bs && "
+install_cmd += "chmod 755 %(installdir)s/bin/bs"
+
+sanity_check_paths = {
+    'files': ['bin/bs'],
+    'dirs': [],
+}
+
+sanity_check_commands = [
+    "bs --version",
+]
+
+moduleclass = 'bio'
