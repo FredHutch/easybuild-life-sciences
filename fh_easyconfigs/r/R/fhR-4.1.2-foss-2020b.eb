@@ -592,6 +592,10 @@ exts_list = [
     }),
     ('sodium', '1.2.0'),
     ('keyring', '1.2.0'),
+    ('ECOSolveR', '0.5.4'),
+    ('scs', '3.0-0'),
+    ('osqp','0.6.0.5'),
+    ('CVXR', '1.0-10'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

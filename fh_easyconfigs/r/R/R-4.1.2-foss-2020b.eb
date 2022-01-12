@@ -50,6 +50,7 @@ dependencies = [
     ('GLPK', '4.65'),  # for Rglpk
     ('nodejs', '12.19.0'),  # for V8 (required by rstan)
     ('GDAL', '3.2.1'),  # for sf
+    ('MPFR', '4.1.0'), # for Rmpfr
     ('libgit2', '1.1.0'),
     ('OpenSSL', '1.1', '', True),
 ]
@@ -3074,6 +3075,9 @@ exts_list = [
     }),
     ('ncdf4', '1.17', {
         'checksums': ['db95c4729d3187d1a56dfd019958216f442be6221bd15e23cd597e6129219af6'],
+    }),
+    ('Rmpfr', '0.8-7', {
+        'checksums': ['93c2db785ff705dcfc6fa7f0373c2426cdc2ef72ceb5b294edeb2952775f57d2'],
     }),
 ]
 
