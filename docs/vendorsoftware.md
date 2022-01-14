@@ -27,13 +27,14 @@ Vendor supplied software available as modules.
   - pauvre - Tools for plotting Oxford Nanopore and other long-read data.
 
 ### PacBio
-There are many open source tools for reading PacBio sequence data; SRA-Toolkit, Sniffles, Unicycler, ban2fastx.
+ - bam2fastx - Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded dat.
 
 ### Illumina
  - blc2fastq
  - illumina-dump (SRA-Toolkit)
  - BaseSpace Command line tools
  - Strelka 2
+
 ### 10X Genomics
 Refernce data for 10X Genomics tools is located `/shared/biodata/ngs/Reference/10X`
  - Cell Ranger
@@ -41,7 +42,9 @@ Refernce data for 10X Genomics tools is located `/shared/biodata/ngs/Reference/1
  - Cell Ranger ARC
  - Space Ranger
 
- - SRA Toolkit - 
+## Open Source Tools
+Open source tools for reading sequence data from 
+ - SRA Toolkit - The Sequence Read Archive (SRA Toolkit) stores raw sequence data from "next-generation" sequencing technologies
  - Strelka - Strelka2 is a fast and accurate small variant caller
  optimized for analysis of germline variation in small cohorts and
  somatic variation in tumor/normal sample pairs.
