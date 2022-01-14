@@ -1,7 +1,7 @@
 ---
 title: "Vendor Software"
 layout: single
-permalink: /vendorSoftware/
+permalink: /vendorsoftware/
 toc: true
 toc_label: "On This Page"
 sidebar:
