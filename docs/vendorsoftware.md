@@ -17,14 +17,14 @@ Vendor supplied software available as modules.
  - fast5 - A lightweight C++ library for accessing Oxford Nanopore Technologies sequencing data.
  - ont-guppy-cpu  Guppy is a production basecaller provided by Oxford Nanopore
  - Python libraries
-  - NanoComp - Compare multiple runs of long read sequencing data and alignments. Creates violin plots or box plots of length, quality and percent identity and creates dynamic, overlaying read length histograms and a cumulative yield plot.
-  - NanoFilt - Filtering and trimming of Oxford Nanopore Sequencing data
-  - nanoget - Functions to extract information from Oxford Nanopore sequencing data and alignments.
-  - nanomath - Provides a few simple math and statistics functions for other scripts processing Oxford Nanopore sequencing data
-  - NanoPlot - Plotting suite for Oxford Nanopore sequencing data and alignments
-  - nanoplotter - Plotting functions of Oxford Nanopore sequencing data
-  - NanoStat - Calculate statistics for Oxford Nanopore sequencing data and alignments
-  - pauvre - Tools for plotting Oxford Nanopore and other long-read data.
+    - NanoComp - Compare multiple runs of long read sequencing data and alignments. Creates violin plots or box plots of length, quality and percent identity and creates dynamic, overlaying read length histograms and a cumulative yield plot.
+    - NanoFilt - Filtering and trimming of Oxford Nanopore Sequencing data
+    - nanoget - Functions to extract information from Oxford Nanopore sequencing data and alignments.
+    - nanomath - Provides a few simple math and statistics functions for other scripts processing Oxford Nanopore sequencing data
+    - NanoPlot - Plotting suite for Oxford Nanopore sequencing data and alignments
+    - nanoplotter - Plotting functions of Oxford Nanopore sequencing data
+    - NanoStat - Calculate statistics for Oxford Nanopore sequencing data and alignments
+    - pauvre - Tools for plotting Oxford Nanopore and other long-read data.
 
 ### PacBio
  - bam2fastx - Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded dat.
