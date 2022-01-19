@@ -35,7 +35,7 @@ fi
 
 echo Collecting Inventory
 cd $base_dir
-$spider -o spider-json ${module_dir}/bio:${module_dir}/math | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
+$spider -o spider-json ${module_dir}/bio:${module_dir}/math:${module_dir}/chem | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
 
 echo Generating Markdown
 json_in=${docs_dir}/modules-${os_ver}.json
