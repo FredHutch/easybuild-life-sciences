@@ -1,0 +1,14 @@
+diff -ruN gromacs-2021.orig/src/programs/mdrun/tests/CMakeLists.txt gromacs-2021/src/programs/mdrun/tests/CMakeLists.txt
+--- gromacs-2021.orig/src/programs/mdrun/tests/CMakeLists.txt	2021-01-28 05:36:50.000000000 -0800
++++ gromacs-2021/src/programs/mdrun/tests/CMakeLists.txt	2022-01-21 11:15:43.478122000 -0800
+@@ -63,8 +63,8 @@
+         # pseudo-library for code for mdrun
+         $<TARGET_OBJECTS:mdrun_objlib>
+     )
+-target_link_libraries(${exename} PRIVATE mdrun_test_infrastructure)
+-gmx_register_gtest_test(${testname} ${exename} OPENMP_THREADS 2 INTEGRATION_TEST IGNORE_LEAKS)
++#target_link_libraries(${exename} PRIVATE mdrun_test_infrastructure)
++#gmx_register_gtest_test(${testname} ${exename} OPENMP_THREADS 2 INTEGRATION_TEST IGNORE_LEAKS)
+ 
+ set(testname "MdrunModulesTests")
+ set(exename "mdrun-modules-test")
