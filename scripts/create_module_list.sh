@@ -2,7 +2,7 @@
 
 # create_module_list.sh
 #
-# Create a list of modules. Filter modules based on module class 'bio', 'chem', 'phys' and
+# Create a list of LMOD modules. Filter modules based on module class 'bio', 'chem', 'phys' and
 # 'math'
 # Used to create software Inventory
 
@@ -25,13 +25,9 @@ base_dir=${PWD%${repo}*}${repo}
 docs_dir=${base_dir}/docs
 scripts_dir=${base_dir}/scripts
 
-if [[ $os_ver == '14.04' ]]; then
-    spider=/app/Lmod/lmod/lmod/libexec/spider
-    module_dir=/app/easybuild/modules
-else
-    spider=/app/lmod/lmod/libexec/spider
-    module_dir=/app/modules
-fi
+# Location of LMOD modules
+spider=/app/lmod/lmod/libexec/spider
+module_dir=/app/modules
 
 echo Collecting Inventory
 cd $base_dir
