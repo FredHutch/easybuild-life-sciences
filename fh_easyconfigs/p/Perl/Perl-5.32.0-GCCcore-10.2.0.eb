@@ -332,6 +332,16 @@ exts_list = [
         'source_urls': ['https://cpan.metacpan.org/authors/id/G/GA/GAAS'],
         'checksums': ['ec28c7e1d9e67c45eca197077f7cdc41ead1bb4c538c7f02a3296a4bb92f608b'],
     }),
+    ('HTML::Template', '2.97', {
+        'source_tmpl': 'HTML-Template-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/S/SA/SAMTREGAR'],
+        'checksums': [],
+    }),
+    ('Sys::Info', '0.7811', {
+        'source_tmpl': 'Sys-Info-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/B/BU/BURAK'],
+        'checksums': [],
+    }),
     ('Date::Handler', '1.2', {
         'source_tmpl': 'Date-Handler-%(version)s.tar.gz',
         'source_urls': ['https://cpan.metacpan.org/authors/id/B/BB/BBEAUSEJ'],
