@@ -1,0 +1,31 @@
+easyblock = 'MakeCp'
+
+name = 'giggle'
+version = 'master'
+
+homepage = 'https://github.com/ryanlayer/giggle'
+description = """GIGGLE is a genomics search engine that identifies and ranks the significance of shared genomic loci between query features and thousands of genome interval files."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+source_urls = ['https://github.com/ryanlayer/giggle/archive/refs/heads/master.zip']
+sources = ['master.zip']
+patches = ['giggle_incompatible.patch']
+
+dependencies = [
+    ('libgcrypt', '1.9.2'),
+    ('libmicrohttpd', '0.9.73'),
+    ('HTSlib', '1.11'),
+    ('SAMtools', '1.11'),
+    ('bzip2', '1.0.8'),
+    #('VCFtools/0.1.16'), # undefined reference to 'vcf_parse'
+]
+
+files_to_copy = ['bin', 'lib']
+
+sanity_check_paths = {
+    'files': ["bin/giggle"],
+    'dirs': ['lib'],
+}
+
+moduleclass = 'bio'

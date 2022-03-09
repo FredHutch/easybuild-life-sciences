@@ -1,0 +1,426 @@
+diff -ruN giggle-master.orig/Makefile giggle-master/Makefile
+--- giggle-master.orig/Makefile	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/Makefile	2022-02-24 15:43:13.521014000 -0800
+@@ -1,16 +1,11 @@
+ BIN=bin
+ OBJ=obj
+ 
+-all: htslib
++all: server 
+ 	@mkdir -p $(OBJ)
+ 	@mkdir -p $(BIN)
+ 	cd src; $(MAKE)
+ 
+-htslib:
+-	$(shell cd lib/htslib && autoreconf)
+-	cd lib/htslib; ./configure --disable-bz2 --disable-lzma --enable-libcurl
+-	$(MAKE) -C lib/htslib
+-
+ server:
+ 	@mkdir -p $(OBJ)
+ 	@mkdir -p $(BIN)
+diff -ruN giggle-master.orig/src/bpt.c giggle-master/src/bpt.c
+--- giggle-master.orig/src/bpt.c	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/bpt.c	2022-02-28 16:21:15.114420000 -0800
+@@ -327,22 +327,22 @@
+     if (BPT_IS_LEAF(target_bpt_node) == 1)
+         *target_key_pos = bpt_insert_key_pos;
+ 
+-
+-    if ((BPT_IS_LEAF(target_bpt_node) == 1) &&
+-         (*target_key_pos < (BPT_NUM_KEYS(target_bpt_node))) &&
+-        (BPT_KEYS(target_bpt_node)[*target_key_pos] == key )) {
+-
++ 
++    //if ((BPT_IS_LEAF(target_bpt_node) == 1) &&
++    //     (*target_key_pos < (BPT_NUM_KEYS(target_bpt_node))) &&
++    //    (BPT_KEYS(target_bpt_node)[*target_key_pos] == key )) {
++    // 
+         // If the append function is NULL assume overwrite
+-        if (append != NULL)
+-            append(domain,
+-                   value_id,
+-                   BPT_POINTERS(target_bpt_node)[*target_key_pos],
+-                   handler);
+-        else
+-            BPT_POINTERS(target_bpt_node)[*target_key_pos] = value_id;
+-
+-        return root_id;
+-    }
++    //  if (append != NULL)
++    //      append(domain,
++    //             value_id,
++    //             BPT_POINTERS(target_bpt_node)[*target_key_pos],
++    //             handler);
++    //  else
++    //      BPT_POINTERS(target_bpt_node)[*target_key_pos] = value_id;
++    //
++    //    return root_id;
++    //}
+ 
+     // move everything over
+     int i;
+diff -ruN giggle-master.orig/src/bpt.h giggle-master/src/bpt.h
+--- giggle-master.orig/src/bpt.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/bpt.h	2022-02-25 16:39:55.986082000 -0800
+@@ -7,7 +7,7 @@
+ #include "lists.h"
+ #include "cache.h"
+ 
+-uint32_t ORDER;
++extern uint32_t ORDER;
+ 
+ #define BPT_NODE_NUM_ELEMENTS (2*ORDER+10)
+ #define BPT_NODE_ELEMENT_SIZE sizeof(uint32_t)
+@@ -23,7 +23,7 @@
+ #define BPT_POINTERS_BLOCK(node) (((node)->data + (6+ORDER+1))[0])
+ #define BPT_POINTERS(node)      ((node)->data + (6+ORDER+2))
+ 
+-struct ordered_set *id_to_offset_map;
++extern struct ordered_set *id_to_offset_map;
+ 
+ struct bpt_node 
+ {
+@@ -46,7 +46,7 @@
+                               void **deserialized);
+ void bpt_node_free_mem(void **deserialized);
+ 
+-struct cache_handler bpt_node_cache_handler;
++extern struct cache_handler bpt_node_cache_handler;
+ 
+ struct bpt_node *bpt_new_node(uint32_t domain);
+ 
+@@ -70,13 +70,13 @@
+                                        struct bpt_node *,
+                                        struct bpt_node *));
+ 
+-void (*bpt_node_repair)(uint32_t domain, struct bpt_node *, struct bpt_node *);
++extern void (*bpt_node_repair)(uint32_t domain, struct bpt_node *, struct bpt_node *);
+ 
+ //uint64_t (*serialize_leading)(void *deserialized, uint8_t **serialized);
+ //uint64_t (*serialize_pointer)(void *deserialized, uint8_t **serialized);
+ //uint64_t serialize_uint32_t(void *deserialized, uint8_t **serialized);
+ 
+-void (*append)(uint32_t domain,
++extern void (*append)(uint32_t domain,
+                uint32_t new_value_id,
+                uint32_t existing_value_id,
+                struct cache_handler *handler);
+diff -ruN giggle-master.orig/src/cache.h giggle-master/src/cache.h
+--- giggle-master.orig/src/cache.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/cache.h	2022-02-25 16:48:10.377467000 -0800
+@@ -17,7 +17,7 @@
+     void (*free_mem)(void **deserialized);
+ };
+ 
+-struct cache_handler uint32_t_cache_handler;
++extern struct cache_handler uint32_t_cache_handler;
+ uint64_t uint32_t_serialize(void *deserialized, void **serialized);
+ uint64_t uint32_t_deserialize(void *serialized,
+                              uint64_t serialized_size,
+@@ -43,11 +43,11 @@
+     void (*destroy)();
+ };
+ 
+-struct cache_def cache;
++extern struct cache_def cache;
+ 
+ //void *_cache;
+-void *_cache[10];
+-uint32_t CACHE_NAME_SPACE;
++extern void *_cache[10];
++extern uint32_t CACHE_NAME_SPACE;
+ 
+ struct value_cache_handler_pair
+ {
+@@ -56,7 +56,7 @@
+     struct lru_ll_element *lru_node;
+ };
+ 
+-struct cache_def simple_cache_def;
++extern struct cache_def simple_cache_def;
+ 
+ struct lru_ll_element
+ {
+diff -ruN giggle-master.orig/src/giggle_index.c giggle-master/src/giggle_index.c
+--- giggle-master.orig/src/giggle_index.c	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/giggle_index.c	2022-02-28 12:09:35.771898000 -0800
+@@ -27,6 +27,9 @@
+ char *ROOT_IDS_FILE_NAME = "root_ids.dat";
+ char *CACHE_FILE_NAME_PREFIX = "cache.";
+ 
++struct giggle_def giggle_data_handler;
++struct giggle_def uint64_t_ll_giggle_data_handler;
++
+ //{{{ void *file_id_offset_pair_load(FILE *f, char *file_name)
+ void *file_id_offset_pair_load(FILE *f, char *file_name)
+ {
+diff -ruN giggle-master.orig/src/giggle_index.h giggle-master/src/giggle_index.h
+--- giggle-master.orig/src/giggle_index.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/giggle_index.h	2022-02-28 12:06:06.354376000 -0800
+@@ -17,11 +17,6 @@
+ #define BUILD_VERSION "0"
+ #define VERSION MAJOR_VERSION "." MINOR_VERSION "." REVISION_VERSION
+ 
+-char *CHRM_INDEX_FILE_NAME;
+-char *FILE_INDEX_FILE_NAME;
+-char *ROOT_IDS_FILE_NAME;
+-char *CACHE_FILE_NAME_PREFIX;
+-
+ void c_str_store(void *v, FILE *f, char *file_name);
+ void *c_str_load(FILE *f, char *file_name);
+ 
+@@ -176,7 +171,7 @@
+                                             void *_R);
+ };
+ 
+-struct giggle_def giggle_data_handler;
++extern struct giggle_def giggle_data_handler;
+ 
+ struct giggle_index *giggle_init_index(uint32_t init_size, char *offset_file_name);
+ void giggle_index_destroy(struct giggle_index **gi);
+@@ -278,15 +273,13 @@
+ struct giggle_index *giggle_load(char *data_dir,
+                                  void (*giggle_set_data_handler)(void));
+ 
+-struct cache_handler leaf_data_cache_handler;
++extern struct cache_handler leaf_data_cache_handler;
+ 
+ uint32_t giggle_get_leaf_data(struct giggle_index *gi,
+                               uint32_t domain,
+                               uint32_t leaf_id,
+                               struct leaf_data **lf);
+ 
+-struct cache_handler leaf_data_cache_handler;
+-
+ uint32_t giggle_leaf_data_get_intersection_size(uint32_t leaf_start_id,
+                                                 int pos_start_id,
+                                                 uint32_t leaf_end_id,
+diff -ruN giggle-master.orig/src/leaf.h giggle-master/src/leaf.h
+--- giggle-master.orig/src/leaf.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/leaf.h	2022-02-25 16:17:14.559798000 -0800
+@@ -6,9 +6,9 @@
+ #define LEAF_DATA_LEADING_START(node) (0)
+ #define LEAF_DATA_LEADING_END(node) (node->num_leading)
+ 
+-uint64_t LEAF_POINTERS_SIZE;
+-uint64_t LEAF_NUMS_SIZE;
+-uint64_t LEAF_LEADING_STARTS_ENDS_SIZE;
++extern uint64_t LEAF_POINTERS_SIZE;
++extern uint64_t LEAF_NUMS_SIZE;
++extern uint64_t LEAF_LEADING_STARTS_ENDS_SIZE;
+ 
+ struct leaf_data {
+     uint64_t num_leading, num_starts, num_ends;
+diff -ruN giggle-master.orig/src/ll.h giggle-master/src/ll.h
+--- giggle-master.orig/src/ll.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/ll.h	2022-02-25 16:29:17.492681000 -0800
+@@ -96,7 +96,7 @@
+                                                        void *d);
+ void uint64_t_ll_non_leading_union_with_SA(uint32_t domain, void **R, void *d);
+ 
+-struct giggle_def uint64_t_ll_giggle_data_handler;
++extern struct giggle_def uint64_t_ll_giggle_data_handler;
+ 
+ // cache_handler :: uint64_t_ll_non_leading_cache_handler
+ uint64_t uint64_t_ll_non_leading_serialize(void *deserialized,
+@@ -105,7 +105,7 @@
+                                              uint64_t serialized_size,
+                                              void **deserialized);
+ void uint64_t_ll_non_leading_free(void **deserialized);
+-struct cache_handler uint64_t_ll_non_leading_cache_handler;
++extern struct cache_handler uint64_t_ll_non_leading_cache_handler;
+ 
+ // cache_handler :: uint64_t_ll_leading_cache_handler
+ uint64_t uint64_t_ll_leading_serialize(void *deserialized,
+@@ -114,13 +114,13 @@
+                                          uint64_t serialized_size,
+                                          void **deserialized);
+ void uint64_t_ll_leading_free(void **deserialized);
+-struct cache_handler uint64_t_ll_leading_cache_handler;
++extern struct cache_handler uint64_t_ll_leading_cache_handler;
+ 
+ void uint64_t_ll_giggle_set_data_handler();
+ 
+-struct cache_handler uint64_t_ll_wah_leading_cache_handler;
++extern struct cache_handler uint64_t_ll_wah_leading_cache_handler;
+ void uint64_t_ll_wah_giggle_set_data_handler();
+-struct cache_handler uint64_t_ll_wah_non_leading_cache_handler;
++extern struct cache_handler uint64_t_ll_wah_non_leading_cache_handler;
+ uint64_t uint64_t_ll_leading_serialize_to_wah(void *deserialized,
+                                               void **serialized);
+ 
+diff -ruN giggle-master.orig/src/Makefile giggle-master/src/Makefile
+--- giggle-master.orig/src/Makefile	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/Makefile	2022-02-28 16:07:30.054991000 -0800
+@@ -4,11 +4,11 @@
+ HTS_ROOT=$(LIBD)/htslib
+ LIBMHD_INCLUDES=$(HOME)/usr/local/include
+ LIBMHD_LIBS=$(HOME)/usr/local/lib
+-CFLAGS=-O2 -D_FILE_OFFSET_BITS=64 -Werror -Wuninitialized
++CFLAGS ?= -O2 -D_FILE_OFFSET_BITS=64 -Werror -Wuninitialized
+ #CFLAGS=-g -D_FILE_OFFSET_BITS=64 -Werror -Wuninitialized
+ CFLAGS+=-DBLOCK_STORE 
+ INCLUDES=-I$(HTS_ROOT)
+-LIBS=-ldl -lz -lm -pthread -lcurl
++LIBS=-ldl -lz -lm -pthread -lcurl -lbz2 -llzma -lhts
+ LIBS+=-lcrypto
+ CC=gcc
+ 
+@@ -51,7 +51,7 @@
+ all: check-env $(LIST) library
+ 
+ server: INCLUDES+=-I$(LIBMHD_INCLUDES) -L$(LIBMHD_LIBS)
+-server: LIBS+=-lmicrohttpd 
++server: LIBS+=-lmicrohttpd
+ server: $(BIN)/server_enrichment
+ 
+ library: $(OBJS)
+@@ -63,10 +63,9 @@
+ 
+ 
+ $(BIN)/%: %.c $(OBJS)
+-	$(CC) $(CFLAGS) -o $@ $^ \
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ \
+ 		$(INCLUDES) \
+ 		-DSAMTOOLS=1 \
+-		$(HTS_ROOT)/libhts.a \
+ 		$(LIBS)
+ 
+ 
+diff -ruN giggle-master.orig/src/offset_index.h giggle-master/src/offset_index.h
+--- giggle-master.orig/src/offset_index.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/offset_index.h	2022-02-25 16:14:47.704036000 -0800
+@@ -4,11 +4,11 @@
+ #include <stdint.h>
+ #include <htslib/kstring.h>
+ 
+-char *OFFSET_INDEX_FILE_NAME;
++extern char *OFFSET_INDEX_FILE_NAME;
+ 
+-uint32_t offset_data_size;
++extern uint32_t offset_data_size;
+ 
+-void (*offset_data_append_data)(uint8_t *dest, kstring_t *line);
++extern void (*offset_data_append_data)(uint8_t *dest, kstring_t *line);
+ 
+ struct file_id_offset_pair
+ {
+diff -ruN giggle-master.orig/src/server_enrichment.c giggle-master/src/server_enrichment.c
+--- giggle-master.orig/src/server_enrichment.c	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/server_enrichment.c	2022-02-28 11:56:59.556634000 -0800
+@@ -5,6 +5,8 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#include <stdint.h>
++#define MHD_PLATFORM_H
+ #include <microhttpd.h>
+ #include <regex.h>
+ #include <err.h>
+@@ -185,7 +187,7 @@
+ //}}}
+ 
+ //{{{ int scan_url_vals(void *cls,
+-int scan_url_vals(void *cls,
++enum MHD_Result scan_url_vals(void *cls,
+                   enum MHD_ValueKind kind,
+                   const char *key,
+                   const char *value)
+@@ -279,7 +281,7 @@
+ //}}}
+ 
+ //{{{static int iterate_post(void *coninfo_cls,
+-static int iterate_post(void *coninfo_cls,
++enum MHD_Result iterate_post(void *coninfo_cls,
+                         enum MHD_ValueKind kind,
+                         const char *key,
+                         const char *filename,
+@@ -360,7 +362,7 @@
+ //}}}
+ 
+ //{{{static int answer_to_connection (void *cls,
+-static int answer_to_connection (void *cls,
++enum MHD_Result answer_to_connection (void *cls,
+                                  struct MHD_Connection *connection,
+                                  const char *url,
+                                  const char *method,
+@@ -749,7 +751,7 @@
+ 
+                 fprintf(stderr, "%lld %lld n12:%lld\n", file_counts, num_intervals, n12);
+ 
+-                long long n12 = (long long)safe_subtract(num_intervals,file_counts);
++                n12 = (long long)safe_subtract(num_intervals,file_counts);
+                 long long n21 = (long long)safe_subtract(fd->num_intervals,file_counts);
+ 
+                 double comp_mean = fd->mean_interval_size+mean_interval_size;
+diff -ruN giggle-master.orig/src/wah.c giggle-master/src/wah.c
+--- giggle-master.orig/src/wah.c	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/wah.c	2022-02-28 10:53:40.225006000 -0800
+@@ -19,6 +19,8 @@
+ uint32_t WAH_SIZE = 32;
+ uint32_t WAH_MAX_FILL_WORDS = 2147483647; //(1<<(WAH_SIZE-1)) - 1
+ 
++struct giggle_def wah_giggle_data_handler;
++
+ //{{{void set_wah_i(uint8_t *W, void *v, uint32_t word_size, uint32_t i)
+ void set_wah_i(uint8_t *W, void *v, uint32_t word_size, uint32_t i)
+ {
+diff -ruN giggle-master.orig/src/wah.h giggle-master/src/wah.h
+--- giggle-master.orig/src/wah.h	2021-10-13 08:24:35.000000000 -0700
++++ giggle-master/src/wah.h	2022-02-25 16:43:20.496760000 -0800
+@@ -10,8 +10,8 @@
+ #define WAH_VAL(W,S) ( ((W >> (S-1))&1) == 1 ?  0 : W)
+ #define WAH_NUM_WORDS(W,S) ( ((W >> (S-1))&1) == 1 ?  W & ~(1<< (S-1)) : 1)
+ 
+-uint32_t WAH_SIZE;
+-uint32_t WAH_MAX_FILL_WORDS;
++extern uint32_t WAH_SIZE;
++extern uint32_t WAH_MAX_FILL_WORDS;
+ 
+ //uint8_t *wah_init(uint32_t word_size,
+                   //uint32_t val);
+@@ -39,14 +39,14 @@
+ };
+ 
+ // bpt_node_repair :: wah_leading_repair
+-void wah_leading_repair(uint32_t domain,
++extern void wah_leading_repair(uint32_t domain,
+                           struct bpt_node *a,
+                           struct bpt_node *b);
+ 
+ // giggle_data_handler :: wah_giggle_data_handler
+ void *wah_new_non_leading(uint32_t domain);
+ void *wah_new_leading(uint32_t domain);
+-void wah_non_leading_SA_add_scalar(uint32_t domain,
++extern void wah_non_leading_SA_add_scalar(uint32_t domain,
+                                      void *_nld,
+                                      void *_id);
+ void wah_non_leading_SE_add_scalar(uint32_t domain,
+@@ -63,7 +63,7 @@
+                                                  void *d);
+ void wah_non_leading_union_with_SA(uint32_t domain, void **R, void *d);
+ 
+-struct giggle_def wah_giggle_data_handler;
++extern struct giggle_def wah_giggle_data_handler;
+ 
+ // cache_handler :: wah_non_leading_cache_handler
+ uint64_t wah_non_leading_serialize(void *deserialized,
+@@ -72,7 +72,7 @@
+                                        uint64_t serialized_size,
+                                        void **deserialized);
+ void wah_non_leading_free(void **deserialized);
+-struct cache_handler wah_non_leading_cache_handler;
++extern struct cache_handler wah_non_leading_cache_handler;
+ 
+ // cache_handler :: wah_leading_cache_handler
+ uint64_t wah_leading_serialize(void *deserialized,
+@@ -81,7 +81,7 @@
+                                    uint64_t serialized_size,
+                                    void **deserialized);
+ void wah_leading_free(void **deserialized);
+-struct cache_handler wah_leading_cache_handler;
++extern struct cache_handler wah_leading_cache_handler;
+ 
+ void wah_giggle_set_data_handler();
+ 
