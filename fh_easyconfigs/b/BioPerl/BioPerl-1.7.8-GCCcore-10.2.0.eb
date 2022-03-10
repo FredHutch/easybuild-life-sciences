@@ -41,6 +41,10 @@ exts_list = [
         'source_urls': ['https://cpan.metacpan.org/authors/id/C/CJ/CJFIELDS/'],
         'checksums': ['c490a3be7715ea6e4305efd9710e5edab82dabc55fd786b6505b550a30d71738'],
     }),
+    ('Bio::KBase', '0.06', {
+        'source_tmpl': 'Bio-KBase-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/R/RD/RDO'],
+    }),
 ]
 
 modextrapaths = {
