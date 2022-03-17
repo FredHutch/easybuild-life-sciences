@@ -1,0 +1,12 @@
+diff -ruN Rgraphviz.orig/configure Rgraphviz/configure
+--- Rgraphviz.orig/configure	2021-10-26 15:34:09.000000000 -0700
++++ Rgraphviz/configure	2021-11-27 15:11:43.497809000 -0800
+@@ -2839,7 +2839,7 @@
+   CFLAGS=$ac_save_CFLAGS
+ elif test $ac_cv_prog_cc_g = yes; then
+   if test "$GCC" = yes; then
+-    CFLAGS="-g -O2"
++    CFLAGS="-g -O2 -fnofinite-math-only"
+   else
+     CFLAGS="-g"
+   fi

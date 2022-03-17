@@ -1,0 +1,183 @@
+make
+make  all-recursive
+make[1]: Entering directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0'
+Making all in .
+make[2]: Entering directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0'
+make[2]: Leaving directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0'
+Making all in src
+make[2]: Entering directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0/src'
+  CXX      google/protobuf/compiler/main.o
+  CXX      google/protobuf/stubs/bytestream.lo
+  CXX      google/protobuf/stubs/common.lo
+  CXX      google/protobuf/stubs/int128.lo
+  CXX      google/protobuf/io/io_win32.lo
+  CXX      google/protobuf/stubs/status.lo
+  CXX      google/protobuf/stubs/statusor.lo
+  CXX      google/protobuf/stubs/stringpiece.lo
+  CXX      google/protobuf/stubs/stringprintf.lo
+  CXX      google/protobuf/stubs/structurally_valid.lo
+  CXX      google/protobuf/stubs/strutil.lo
+  CXX      google/protobuf/stubs/time.lo
+  CXX      google/protobuf/any_lite.lo
+  CXX      google/protobuf/arena.lo
+  CXX      google/protobuf/extension_set.lo
+  CXX      google/protobuf/generated_enum_util.lo
+  CXX      google/protobuf/generated_message_util.lo
+  CXX      google/protobuf/generated_message_table_driven_lite.lo
+  CXX      google/protobuf/implicit_weak_message.lo
+  CXX      google/protobuf/message_lite.lo
+  CXX      google/protobuf/parse_context.lo
+  CXX      google/protobuf/repeated_field.lo
+  CXX      google/protobuf/wire_format_lite.lo
+  CXX      google/protobuf/io/coded_stream.lo
+  CXX      google/protobuf/io/strtod.lo
+  CXX      google/protobuf/io/zero_copy_stream.lo
+  CXX      google/protobuf/io/zero_copy_stream_impl.lo
+  CXX      google/protobuf/io/zero_copy_stream_impl_lite.lo
+  CXX      google/protobuf/any.pb.lo
+  CXX      google/protobuf/api.pb.lo
+  CXX      google/protobuf/any.lo
+  CXX      google/protobuf/descriptor.lo
+  CXX      google/protobuf/descriptor_database.lo
+  CXX      google/protobuf/descriptor.pb.lo
+  CXX      google/protobuf/duration.pb.lo
+  CXX      google/protobuf/dynamic_message.lo
+  CXX      google/protobuf/empty.pb.lo
+  CXX      google/protobuf/extension_set_heavy.lo
+  CXX      google/protobuf/field_mask.pb.lo
+  CXX      google/protobuf/generated_message_reflection.lo
+  CXX      google/protobuf/generated_message_table_driven.lo
+  CXX      google/protobuf/map_field.lo
+  CXX      google/protobuf/message.lo
+  CXX      google/protobuf/reflection_ops.lo
+  CXX      google/protobuf/service.lo
+  CXX      google/protobuf/source_context.pb.lo
+  CXX      google/protobuf/struct.pb.lo
+  CXX      google/protobuf/stubs/substitute.lo
+  CXX      google/protobuf/text_format.lo
+  CXX      google/protobuf/timestamp.pb.lo
+  CXX      google/protobuf/type.pb.lo
+  CXX      google/protobuf/unknown_field_set.lo
+  CXX      google/protobuf/wire_format.lo
+  CXX      google/protobuf/wrappers.pb.lo
+  CXX      google/protobuf/io/gzip_stream.lo
+  CXX      google/protobuf/io/printer.lo
+  CXX      google/protobuf/io/tokenizer.lo
+  CXX      google/protobuf/compiler/importer.lo
+  CXX      google/protobuf/compiler/parser.lo
+  CXX      google/protobuf/util/delimited_message_util.lo
+  CXX      google/protobuf/util/field_comparator.lo
+  CXX      google/protobuf/util/field_mask_util.lo
+  CXX      google/protobuf/util/internal/datapiece.lo
+  CXX      google/protobuf/util/internal/default_value_objectwriter.lo
+  CXX      google/protobuf/util/internal/error_listener.lo
+  CXX      google/protobuf/util/internal/field_mask_utility.lo
+  CXX      google/protobuf/util/internal/json_escaping.lo
+  CXX      google/protobuf/util/internal/json_objectwriter.lo
+  CXX      google/protobuf/util/internal/json_stream_parser.lo
+  CXX      google/protobuf/util/internal/object_writer.lo
+  CXX      google/protobuf/util/internal/protostream_objectsource.lo
+  CXX      google/protobuf/util/internal/protostream_objectwriter.lo
+  CXX      google/protobuf/util/internal/proto_writer.lo
+  CXX      google/protobuf/util/internal/type_info.lo
+  CXX      google/protobuf/util/internal/type_info_test_helper.lo
+  CXX      google/protobuf/util/internal/utility.lo
+  CXX      google/protobuf/util/json_util.lo
+  CXX      google/protobuf/util/message_differencer.lo
+  CXX      google/protobuf/util/time_util.lo
+  CXX      google/protobuf/util/type_resolver_util.lo
+  CXXLD    libprotobuf.la
+  CXX      google/protobuf/compiler/code_generator.lo
+  CXX      google/protobuf/compiler/command_line_interface.lo
+  CXX      google/protobuf/compiler/plugin.lo
+  CXX      google/protobuf/compiler/plugin.pb.lo
+  CXX      google/protobuf/compiler/subprocess.lo
+  CXX      google/protobuf/compiler/zip_writer.lo
+  CXX      google/protobuf/compiler/cpp/cpp_enum.lo
+  CXX      google/protobuf/compiler/cpp/cpp_enum_field.lo
+  CXX      google/protobuf/compiler/cpp/cpp_extension.lo
+  CXX      google/protobuf/compiler/cpp/cpp_field.lo
+  CXX      google/protobuf/compiler/cpp/cpp_file.lo
+  CXX      google/protobuf/compiler/cpp/cpp_generator.lo
+  CXX      google/protobuf/compiler/cpp/cpp_helpers.lo
+  CXX      google/protobuf/compiler/cpp/cpp_map_field.lo
+  CXX      google/protobuf/compiler/cpp/cpp_message.lo
+  CXX      google/protobuf/compiler/cpp/cpp_message_field.lo
+  CXX      google/protobuf/compiler/cpp/cpp_padding_optimizer.lo
+  CXX      google/protobuf/compiler/cpp/cpp_primitive_field.lo
+  CXX      google/protobuf/compiler/cpp/cpp_service.lo
+  CXX      google/protobuf/compiler/cpp/cpp_string_field.lo
+  CXX      google/protobuf/compiler/java/java_context.lo
+  CXX      google/protobuf/compiler/java/java_enum.lo
+  CXX      google/protobuf/compiler/java/java_enum_lite.lo
+  CXX      google/protobuf/compiler/java/java_enum_field.lo
+  CXX      google/protobuf/compiler/java/java_enum_field_lite.lo
+  CXX      google/protobuf/compiler/java/java_extension.lo
+  CXX      google/protobuf/compiler/java/java_extension_lite.lo
+  CXX      google/protobuf/compiler/java/java_field.lo
+  CXX      google/protobuf/compiler/java/java_file.lo
+  CXX      google/protobuf/compiler/java/java_generator.lo
+  CXX      google/protobuf/compiler/java/java_generator_factory.lo
+  CXX      google/protobuf/compiler/java/java_helpers.lo
+  CXX      google/protobuf/compiler/java/java_map_field.lo
+  CXX      google/protobuf/compiler/java/java_map_field_lite.lo
+  CXX      google/protobuf/compiler/java/java_message.lo
+  CXX      google/protobuf/compiler/java/java_message_lite.lo
+  CXX      google/protobuf/compiler/java/java_message_builder.lo
+  CXX      google/protobuf/compiler/java/java_message_builder_lite.lo
+  CXX      google/protobuf/compiler/java/java_message_field.lo
+  CXX      google/protobuf/compiler/java/java_message_field_lite.lo
+  CXX      google/protobuf/compiler/java/java_name_resolver.lo
+  CXX      google/protobuf/compiler/java/java_primitive_field.lo
+  CXX      google/protobuf/compiler/java/java_primitive_field_lite.lo
+  CXX      google/protobuf/compiler/java/java_shared_code_generator.lo
+  CXX      google/protobuf/compiler/java/java_service.lo
+  CXX      google/protobuf/compiler/java/java_string_field.lo
+  CXX      google/protobuf/compiler/java/java_string_field_lite.lo
+  CXX      google/protobuf/compiler/java/java_doc_comment.lo
+  CXX      google/protobuf/compiler/js/js_generator.lo
+  CXX      google/protobuf/compiler/js/well_known_types_embed.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_enum.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_enum_field.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_extension.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_field.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_file.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_generator.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_helpers.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_map_field.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_message.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_message_field.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_oneof.lo
+  CXX      google/protobuf/compiler/objectivec/objectivec_primitive_field.lo
+  CXX      google/protobuf/compiler/php/php_generator.lo
+  CXX      google/protobuf/compiler/python/python_generator.lo
+  CXX      google/protobuf/compiler/ruby/ruby_generator.lo
+  CXX      google/protobuf/compiler/csharp/csharp_doc_comment.lo
+  CXX      google/protobuf/compiler/csharp/csharp_enum.lo
+  CXX      google/protobuf/compiler/csharp/csharp_enum_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_field_base.lo
+  CXX      google/protobuf/compiler/csharp/csharp_generator.lo
+  CXX      google/protobuf/compiler/csharp/csharp_helpers.lo
+  CXX      google/protobuf/compiler/csharp/csharp_map_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_message.lo
+  CXX      google/protobuf/compiler/csharp/csharp_message_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_primitive_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_reflection_class.lo
+  CXX      google/protobuf/compiler/csharp/csharp_repeated_enum_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_repeated_message_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_repeated_primitive_field.lo
+  CXX      google/protobuf/compiler/csharp/csharp_source_generator_base.lo
+  CXX      google/protobuf/compiler/csharp/csharp_wrapper_field.lo
+  CXXLD    libprotoc.la
+  CXXLD    protoc
+./.libs/libprotoc.so: error: undefined reference to 'scc_info_FileDescriptorProto_google_2fprotobuf_2fdescriptor_2eproto'
+./.libs/libprotoc.so: error: undefined reference to 'descriptor_table_google_2fprotobuf_2fdescriptor_2eproto'
+collect2: error: ld returned 1 exit status
+Makefile:3883: recipe for target 'protoc' failed
+make[2]: *** [protoc] Error 1
+make[2]: Leaving directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0/src'
+Makefile:1867: recipe for target 'all-recursive' failed
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory '/home/jfdey/sources/RProtoBufLib/src/protobuf-3.13.0'
+Makefile:1774: recipe for target 'all' failed
+make: *** [all] Error 2

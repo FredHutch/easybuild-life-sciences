@@ -1,0 +1,80 @@
+diff -ruN Rgraphviz.orig/src/graphviz/configure Rgraphviz/src/graphviz/configure
+--- Rgraphviz.orig/src/graphviz/configure	2021-10-26 15:34:09.000000000 -0700
++++ Rgraphviz/src/graphviz/configure	2022-03-15 21:13:15.627572000 -0700
+@@ -1100,7 +1100,6 @@
+ LIBOBJS
+ ALLOCA
+ LIBGEN_LIBS
+-MATH_LIBS
+ EGREP
+ CPP
+ RC_IS_WINDRES_FALSE
+@@ -8139,26 +8138,10 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_m_main" >&5
+ $as_echo "$ac_cv_lib_m_main" >&6; }
+ if test "x$ac_cv_lib_m_main" = xyes; then :
+-  MATH_LIBS="-lm"
++  LIBS+="-lm"
+ fi
+ 
+ 
+-
+-# Check for functions that might need -lm
+-LIBS="$LIBS $MATH_LIBS"
+-for ac_func in feenableexcept fesetenv
+-do :
+-  as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+-ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
+-if eval test \"x\$"$as_ac_var"\" = x"yes"; then :
+-  cat >>confdefs.h <<_ACEOF
+-#define `$as_echo "HAVE_$ac_func" | $as_tr_cpp` 1
+-_ACEOF
+-
+-fi
+-done
+-
+-
+ LIBS=$save_LIBS
+ 
+ 
+@@ -26432,7 +26415,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpng $Z_LIBS $MATH_LIBS $LIBS"
++LIBS="-lpng $Z_LIBS $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -26876,24 +26859,6 @@
+ 
+ 
+ # -----------------------------------
+-# Special checks
+-
+-save_LIBS=$LIBS
+-LIBS="$LIBS $MATH_LIBS"
+-for ac_func in sincos
+-do :
+-  ac_fn_c_check_func "$LINENO" "sincos" "ac_cv_func_sincos"
+-if test "x$ac_cv_func_sincos" = xyes; then :
+-  cat >>confdefs.h <<_ACEOF
+-#define HAVE_SINCOS 1
+-_ACEOF
+-
+-fi
+-done
+-
+-LIBS=$save_LIBS
+-
+-# -----------------------------------
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking if FILE struct contains _cnt" >&5
+ $as_echo_n "checking if FILE struct contains _cnt... " >&6; }
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+diff -ruN Rgraphviz.orig/src/Makevars.in Rgraphviz/src/Makevars.in
+--- Rgraphviz.orig/src/Makevars.in	2021-10-26 11:50:28.000000000 -0700
++++ Rgraphviz/src/Makevars.in	2022-03-15 21:13:42.910916000 -0700
+@@ -1,2 +1,2 @@
+ PKG_CFLAGS=@PKG_CFLAGS@ @GVIZ_DEFS@
+-PKG_LIBS=@PKG_LIBS@
++PKG_LIBS=@PKG_LIBS@ -lm

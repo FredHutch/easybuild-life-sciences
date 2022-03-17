@@ -45,3 +45,8 @@ edit protobuf-3.13.0/src/libprotobuf-lite.map, libprotobuf.map,  libprotoc.map
 https://github.com/protocolbuffers/protobuf/issues/5144
 
 I have made a patch of patch before
+
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fdescriptor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_FileDescriptorProto_google_2fprotobuf_2fdescriptor_2eproto;
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fprotobuf_2fdescriptor_2eproto_deps[1] = {
+};
+
