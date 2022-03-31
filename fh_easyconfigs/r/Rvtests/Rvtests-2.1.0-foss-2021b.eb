@@ -1,0 +1,40 @@
+easyblock = 'ConfigureMake'
+
+name = 'Rvtests'
+version = '2.1.0'
+
+homepage = 'http://zhanxw.github.io/rvtests/'
+description = """Rvtests, which stands for Rare Variant tests, is a flexible software package for 
+genetic association analysis for sequence datasets.""" 
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+github_account = ''
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+
+dependenices = [
+    ('bzip2', ''),
+    ('cnpy', 'master'),
+    ('eigen', '3.3.7'),
+    ('GSL', '1.16'),
+    ('NLOPT', '2.4.2'),
+    ('PCRE', ''),
+    ('rapidjson-1.0.2.tar.gz
+samtools-0.1.19
+sqlite
+sqlite-autoconf-3200100
+sqlite-autoconf-3200100.tar.gz
+tabix-0.2.6
+zlib-1.2.8
+zstd-1.3.1.tar.gz
+]
+
+skipsteps = ['configure']
+
+sanity_check_paths = {
+    'files': [""],
+    'dirs': [""]
+}
+
+moduleclass = 'bio'
