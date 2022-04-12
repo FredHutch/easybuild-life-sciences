@@ -4,7 +4,7 @@
 # Author: Jonas Demeulemeester
 # The Francis Crick Insitute, London, UK
 ##
-easyblock = 'PythonBundle'
+easyblock = 'PythonPackage'
 
 name = 'cget'
 version = '0.2.0'
@@ -12,7 +12,10 @@ version = '0.2.0'
 homepage = 'https://cget.readthedocs.io/en/latest/index.html'
 description = """Cmake package retrieval. This can be used to download and install cmake packages"""
 
-toolchain = {'name': 'foss', 'version': '2020b'}
+toolchain = {'name': 'GCCcore', 'version': '10.2.0'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = ['835009ba6d623a36eee8056975d7cdbeebb0e0091a058b572ed433fb12ae18e8']
 
 # Since cget uses CMake to install packages, CMake is a runtime dependency
 dependencies = [
@@ -22,12 +25,7 @@ dependencies = [
 
 use_pip = True
 sanity_pip_check = True
-
-exts_list = [
-    ('cget', version, {
-        'checksums': ['835009ba6d623a36eee8056975d7cdbeebb0e0091a058b572ed433fb12ae18e8'],
-    }),
-]
+download_dep_fail = True
 
 sanity_check_commands = ["cget --help"]
 
