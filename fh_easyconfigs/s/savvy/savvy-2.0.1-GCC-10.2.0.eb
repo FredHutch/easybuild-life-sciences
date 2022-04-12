@@ -1,0 +1,39 @@
+# This easyconfig was created by Simon Branford of the BEAR Software team at the University of Birmingham.
+easyblock = 'CMakeMake'
+
+name = 'savvy'
+version = '2.0.1'
+
+homepage = "https://github.com/statgen/savvy"
+description = """Interface to various variant calling formats."""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/statgen/savvy/archive']
+sources = ['v%(version)s.tar.gz']
+checksums = []
+
+builddependencies = [
+    ('CMake', '3.18.4'),
+]
+
+dependencies = [
+    ('HTSlib', '1.11'),
+    ('bzip2', '1.0.8'),
+    ('cURL', '7.72.0'),
+    ('shrinkwrap', '1.1.0'),
+    ('XZ', '5.2.5'),
+    ('zstd', '1.4.5'),
+]
+
+preconfigopts = "export LDFLAGS='-lcurl -lhts' && "
+
+sanity_check_paths = {
+    'files': ['bin/sav'],
+    'dirs': [],
+}
+
+sanity_check_commands = ['sav --help']
+
+moduleclass = 'data'
