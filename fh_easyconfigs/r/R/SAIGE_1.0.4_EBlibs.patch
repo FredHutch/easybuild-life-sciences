@@ -1,0 +1,35 @@
+diff -ruN SAIGE-1.0.4.orig/DESCRIPTION SAIGE-1.0.4/DESCRIPTION
+--- SAIGE-1.0.4.orig/DESCRIPTION	2022-03-30 13:15:48.000000000 -0700
++++ SAIGE-1.0.4/DESCRIPTION	2022-04-14 12:54:01.492904000 -0700
+@@ -7,8 +7,8 @@
+ Maintainer: SAIGE team <saige.genetics@gmail.com> 
+ Description:an R package that implements the Scalable and Accurate Implementation of Generalized mixed model that uses the saddlepoint approximation (SPA)(mhof, J. P. , 1961; Kuonen, D. 1999; Dey, R. et.al 2017) and large scale optimization techniques to calibrate case-control ratios in logistic mixed model score tests (Chen, H. et al. 2016) in large PheWAS. It conducts both single-variant association tests and set-based tests for rare variants.  
+ License: GPL (>= 2)
+-Imports: Rcpp (>= 1.0.7), RcppParallel, Matrix, data.table, RcppArmadillo (>= 0.10.7.5)
+-LinkingTo: Rcpp, RcppArmadillo (>= 0.10.7.5), RcppParallel, data.table, SPAtest (== 3.1.2),
++Imports: Rcpp (>= 1.0.7), RcppParallel, Matrix, data.table, RcppArmadillo (>= 0.10.7.0)
++LinkingTo: Rcpp, RcppArmadillo (>= 0.10.7.0), RcppParallel, data.table, SPAtest (== 3.1.2),
+         RcppEigen, Matrix, methods, BH, optparse, SKAT, MetaSKAT, qlcMatrix, RhpcBLASctl, RSQLite, dplyr
+ Depends: R (>= 3.5.0)
+ SystemRequirements: GNU make
+diff -ruN SAIGE-1.0.4.orig/src/Makevars SAIGE-1.0.4/src/Makevars
+--- SAIGE-1.0.4.orig/src/Makevars	2022-03-30 13:15:48.000000000 -0700
++++ SAIGE-1.0.4/src/Makevars	2022-04-14 12:15:51.331901000 -0700
+@@ -6,7 +6,8 @@
+ 
+ CXX_STD = CXX11 
+ 
+-PKG_LIBS = $(ZLIB_LIB) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -L../thirdParty/cget/lib/ -L../thirdParty/cget/lib64/ -lsuperlu -lzstd -L../lib64 -llapack
++# use Easybuild libraris savvy and SuperLU
++PKG_LIBS = $(ZLIB_LIB) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) -lsuperlu -lzstd -L../lib64 -lscalapack
+ PKG_LIBS += $(shell ${R_HOME}/bin/Rscript -e "RcppParallel::RcppParallelLibs()")
+ 
+ 
+diff -ruN SAIGE-1.0.4.orig/thirdParty/requirements.txt SAIGE-1.0.4/thirdParty/requirements.txt
+--- SAIGE-1.0.4.orig/thirdParty/requirements.txt	2022-03-30 13:15:48.000000000 -0700
++++ SAIGE-1.0.4/thirdParty/requirements.txt	2022-04-14 12:12:26.672132000 -0700
+@@ -1,2 +1,2 @@
+-statgen/savvy@b3dabf81e316b5eaf5650219e62bfa36e7bde4ea
+-xiaoyeli/superlu@b6177d0b743c0f1f6765db535dd8b6ce30c00061
++#statgen/savvy@b3dabf81e316b5eaf5650219e62bfa36e7bde4ea
++#xiaoyeli/superlu@b6177d0b743c0f1f6765db535dd8b6ce30c00061

@@ -42,6 +42,8 @@ dependencies = [
     ('librsvg', '2.50.2'),  # for rsvg
     ('protobuf', '3.14.0'),  # for RProtoBuf
     ('unixODBC', '2.3.9'),
+    ('savvy', '2.0.1'),
+    ('SuperLU', '5.3.0'),
     # ('OpenSSL', '1.1.1i'),
 ]
 
@@ -150,6 +152,7 @@ exts_list = [
     ('regress', '1.3-21'),
     ('relevent', '1.1'),
     ('Rhpc', '0.21-247'),
+    ('RhpcBLASctl', '0.21-247.1'),
     ('fasttime', '1.0-2'),
     ('Rlabkey', '2.8.1'),
     #('RODBC', '1.3-15'),
@@ -555,7 +558,7 @@ exts_list = [
     ('ChIPseeker', '1.30.2'),
     #('gchromVAR', 'e4f33ca', {
     #    'source_urls': ['https://github.com/caleblareau/gchromVAR/archive'],
-    #    'source_tmpl': 'master.zip',
+    #    'download_filename': 'master.zip',
     #    'filename': 'gchromVAR.zip',
     #}),
     # start ArchR
@@ -564,7 +567,7 @@ exts_list = [
     ('ComplexHeatmap', '2.10.0'),
     ('ArchR', '1.0.1', {
         'source_urls': ['https://github.com/GreenleafLab/ArchR/archive/refs/tags'],
-        'sources_tmpl': 'v%(version)s.tar.gz',
+        'source_tmpl': 'v%(version)s.tar.gz',
         'filename': '%(name)s_%(version)s.tar.gz',
     }),
     #('scarHRD', '1.0', {
@@ -587,8 +590,9 @@ exts_list = [
     ('rhandsontable', '0.3.8'),
     ('premessa', '0.2.6', {
         'source_urls': ['https://github.com/ParkerICI/premessa'],
-        'sources_tmpl': 'v%(version)s.tar.gz',
-        'filename': '%(name)s_%(version)s.tar.gz',
+        'sources': [{'download_filename': 'v%(version)s.tar.gz',
+                     'filename': '%(name)s_%(version)s.tar.gz',
+        }],
     }),
     ('sodium', '1.2.0'),
     ('keyring', '1.2.0'),
@@ -596,6 +600,21 @@ exts_list = [
     ('scs', '3.0-0'),
     ('osqp','0.6.0.5'),
     ('CVXR', '1.0-10'),
+    ('MetaSKAT', '0.81', {
+        'source_urls': ['https://cran.r-project.org/src/contrib/Archive/MetaSKAT'],
+    }),
+    # SAIGE
+    ('sparsesvd', '0.2'),
+    ('docopt', '0.7.1'),
+    ('qlcMatrix', '0.9.7'),
+    # RhpcBLASctl
+    ('SAIGE', '1.0.4', {
+        'source_urls': ['https://github.com/saigegit/SAIGE/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz',
+                    'filename': '%(name)s_%(version)s.tar.gz',
+        }],
+        'patches': ['%(name)s_%(version)s_EBlibs.patch'],
+    }),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}
