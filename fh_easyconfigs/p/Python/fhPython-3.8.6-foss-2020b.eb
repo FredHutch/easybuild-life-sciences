@@ -1241,6 +1241,10 @@ exts_list = [
     ('httpcore', '0.13.7'),
     ('h2', '4.0.0'),
     ('httpx', '0.19.0'),
+    ('pyslurm', '21.08', {
+        'source_tmpl': ['https://github.com/PySlurm/pyslurm/archive/refs/tags'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+    }),
 ]
 
 modextrapaths = {'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']}
