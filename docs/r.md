@@ -61,6 +61,23 @@ Sys.getenv("R_LIBS_USER")
 > Sys.getenv("R_LIBS_USER")
 [1] "~/R/x86_64-pc-linux-gnu-library/3.6"
 ```
+### Install BioConductor Package
+BioConductor packages are released and updated with R releases. Each release of Bioconductor is developed to work with a
+speicific version of R. BiocManager is part of fhR, and BiocManaager will only install packages which match the
+version of BioCondutor. If you attempt to install a mismatch version module you will get an error. When working with
+a version of R that is not current check the version BiocManager.
+
+|-|-|
+| R Version | Bioconductor Version | 
+| 4.2.0 | 3.15 |
+| 4.1.2 | 3.14 |
+| 4.1.1 | 3.13 |
+| 4.1.0 | 3.13 |
+| 4.0.5 | 3.12 |
+| 4.0.4 | 3.12 |
+| 4.0.3 | 3.12 |
+| 4.0.2 | 3.11 |
+|-|-|
 
 ### Issues with R Libraries
 One of the most frequent issues are errors with loading libraries.  There are
