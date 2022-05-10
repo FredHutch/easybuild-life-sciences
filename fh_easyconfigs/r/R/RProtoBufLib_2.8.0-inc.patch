@@ -1,0 +1,24 @@
+diff -ruN RProtoBufLib.orig/src/Makevars.in RProtoBufLib/src/Makevars.in
+--- RProtoBufLib.orig/src/Makevars.in	2022-04-26 11:20:29.000000000 -0700
++++ RProtoBufLib/src/Makevars.in	2022-05-05 12:13:49.032085000 -0700
+@@ -1,5 +1,5 @@
+ CXX_STD = CXX11
+-PKG_CPPFLAGS =-I../inst/include/ -I@PBBUILD@/include/
++PKG_CPPFLAGS =-Iprotobuf-3.8.0/src -I../inst/include/ -I@PBBUILD@/include/
+ #expose headers in installed package include folder
+ USER_INCLUDE = ${R_PACKAGE_DIR}/include
+ USER_LIB_DIR = ${R_PACKAGE_DIR}/lib${R_ARCH}/
+
+changing Makefile.am required autoreconf to be run befor make
+diff -ruN RProtoBufLib.orig/src/protobuf-3.8.0/src/Makefile.am RProtoBufLib/src/protobuf-3.8.0/src/Makefile.am
+--- RProtoBufLib.orig/src/protobuf-3.8.0/src/Makefile.am	2022-03-22 21:01:32.000000000 -0700
++++ RProtoBufLib/src/protobuf-3.8.0/src/Makefile.am	2022-05-05 16:09:25.128383000 -0700
+@@ -302,6 +302,7 @@
+ EXTRA_libprotoc_la_DEPENDENCIES = libprotoc.map
+ endif
+ libprotoc_la_SOURCES =                                         \
++  google/protobuf/descriptor.pb.cc                             \
+   google/protobuf/compiler/code_generator.cc                   \
+   google/protobuf/compiler/command_line_interface.cc           \
+   google/protobuf/compiler/plugin.cc                           \
+Binary files RProtoBufLib.orig/src/protobuf-3.8.0.tar.gz and RProtoBufLib/src/protobuf-3.8.0.tar.gz differ

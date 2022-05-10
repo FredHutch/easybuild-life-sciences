@@ -1,0 +1,9 @@
+diff -ruN AnalyzeFMRI.orig/src/spatial.filters.non.linear.c AnalyzeFMRI/src/spatial.filters.non.linear.c
+--- AnalyzeFMRI.orig/src/spatial.filters.non.linear.c	2019-05-22 00:35:44.000000000 -0700
++++ AnalyzeFMRI/src/spatial.filters.non.linear.c	2022-04-28 10:39:12.585490000 -0700
+@@ -1,4 +1,4 @@
+-#include <S.h>
++#include <R.h>
+ #include "verR.h"
+ #include <math.h>
+ 
