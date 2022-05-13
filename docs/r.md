@@ -67,7 +67,7 @@ speicific version of R. BiocManager is part of fhR, and BiocManaager will only i
 version of BioCondutor. If you attempt to install a mismatch version module you will get an error. When working with
 a version of R that is not current check the version BiocManager.
 
-|-|-|
+|---|---|
 | R Version | Bioconductor Version | 
 | 4.2.0 | 3.15 |
 | 4.1.2 | 3.14 |
@@ -77,7 +77,7 @@ a version of R that is not current check the version BiocManager.
 | 4.0.4 | 3.12 |
 | 4.0.3 | 3.12 |
 | 4.0.2 | 3.11 |
-|-|-|
+|---|---|
 
 ### Issues with R Libraries
 One of the most frequent issues are errors with loading libraries.  There are
