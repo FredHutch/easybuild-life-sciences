@@ -63,10 +63,7 @@ Sys.getenv("R_LIBS_USER")
 ```
 
 ### Install BioConductor Package
-BioConductor packages are released and updated with R releases. Each release of Bioconductor is developed to work with a
-speicific version of R. BiocManager is part of fhR, and BiocManaager will only install packages which match the
-version of BioCondutor. If you attempt to install a mismatch version module you will get an error. When working with
-a version of R that is not current check the version BiocManager.
+BioConductor packages are released and updated in step with R releases. Each release of Bioconductor matches a specific version of R. BiocManager is installed in fhR. BiocManager will only install libraries that match the release version of BioConductor. When working with an older R version, you need to know the Bioconductor version that matches. Search the older releases of libraries that match the Bioconductor release. 
 
 | R Version | Bioconductor Version |
 |---|---|
