@@ -7,21 +7,6 @@ date: 2022-06-15
  * None
 
 ### Package List
-  * 0.23.2 built in
-  * 0.53.1 built in
-  * 0.8.1 built in
-  * 1.19.53 built in
-  * 1.78 built in
-  * 2020.11 built in
-  * 2020.9b2 built in
-  * 2021.2.0 built in
-  * 3.1.0 built in
-  * 3.3.3 built in
-  * 3.6.1 built in
-  * 3.7.4.3 built in
-  * 5.3.1 built in
-  * 7.18.1 built in
-  * 8.0.1 built in
   * [APScheduler-3.7.0](https://github.com/agronholm/apscheduler) In-process task scheduler with Cron-like capabilities
   * [Automat-20.2.0](https://github.com/glyph/Automat) Self-service finite-state machines for the programmer on the go.
   * [Babel-2.8.0](https://babel.pocoo.org/) Internationalization utilities
@@ -29,7 +14,7 @@ date: 2022-06-15
   * [Bottleneck-1.3.2](https://github.com/pydata/bottleneck) Fast NumPy array functions written in C
   * [Brotli-1.0.9](https://github.com/google/brotli) Python bindings for the Brotli compression library
   * [CacheControl-0.12.6](https://github.com/ionrock/cachecontrol) httplib2 caching for requests
-  * CellBender 0.2.0
+  * [CellBender 0.2.0](https://github.com/broadinstitute/CellBender/blob/master/README.rst) CellBender is a software package for eliminating technical artifacts from high-throughput single-cell RNA sequencing (scRNA-seq) data
   * [ConfigArgParse-1.4](https://github.com/bw2/ConfigArgParse) A drop-in replacement for argparse that allows options to also be set via config files and/or environment variables.
   * [Cycler-0.10.0](https://github.com/matplotlib/cycler) Composable style cycles
   * [Cython-0.29.21](http://cython.org/) The Cython compiler for writing C extensions for the Python language.
