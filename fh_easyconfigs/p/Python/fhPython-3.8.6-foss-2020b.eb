@@ -252,6 +252,16 @@ exts_list = [
     ('sphinxcontrib-qthelp', '1.0.3', {
         'modulename': 'sphinxcontrib.qthelp',
     }),
+    ('sphinx-rtd-theme', '1.0.0', {
+        'modulename': 'sphinx_rtd_theme',
+        'source_tmpl': 'sphinx_rtd_theme-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-programoutput', '0.17', {
+        'modulename': 'sphinxcontrib.programoutput',
+    }),
+    ('sphinx-argparse', '0.3.1', {
+        'modulename': 'sphinxarg',
+    }),
     ('flake8-import-order', '0.18.1', {
         'modulename': 'flake8_import_order',
     }),
@@ -606,9 +616,15 @@ exts_list = [
         'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
         'unpack_sources': False,
     }),
-    ('odo', '0.5.0'),
+    ('odo', '0.5.0', {
+        'modulename': False,
+        # fails: AttributeError: module 'pandas' has no attribute 'tslib'
+    }),
     ('multipledispatch', '0.6.0'),
-    ('blaze', '0.10.1'),
+    ('blaze', '0.10.1', {
+        'modulename': False,
+        # fails: AttributeError: module 'pandas' has no attribute 'tslib'
+    }),
     ('blessings', '1.7'),
     ('ndg-httpsclient', '0.5.1', {
          'modulename': 'ndg.httpsclient',
@@ -1231,7 +1247,7 @@ exts_list = [
     }),
     ('pyem', '0.5', {
         'source_urls': ['https://github.com/asarnow/pyem/archive/refs/tags'],
-        'source_tmpl': 'v%(version)s.zip',
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
     }),
     ('charset_normalizer', '2.0.6', {
         'source_tmpl': 'charset-normalizer-%(version)s.tar.gz',
@@ -1241,9 +1257,17 @@ exts_list = [
     ('httpcore', '0.13.7'),
     ('h2', '4.0.0'),
     ('httpx', '0.19.0'),
-    ('pyslurm', '21.08', {
-        'source_tmpl': ['https://github.com/PySlurm/pyslurm/archive/refs/tags'],
-        'source_tmpl': 'v%(version)s.tar.gz',
+    #('pyslurm', '21.08.4', {
+    #    'source_tmpl': ['https://github.com/PySlurm/pyslurm/archive/refs/tags'],
+    #    'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    #}),
+    ('pyro-ppl', '1.8.1', {
+        'modulename': 'pyro',
+    }),
+    ('CellBender', '0.2.0', {
+        'source_urls': ['https://github.com/broadinstitute/CellBender/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+        'modulename': '%(namelower)s',
     }),
 ]
 
