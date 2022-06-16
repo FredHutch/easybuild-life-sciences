@@ -1,0 +1,51 @@
+easyblock = 'PythonBundle'
+
+name = 'DeepCell'
+version = '0.11.1'
+local_cuda_suffix = '-CUDA-%(cudaver)s'
+versionsuffix = local_cuda_suffix
+
+homepage = 'https://deepcell.readthedocs.io/en/master/'
+description = """deepcell-tf is a deep learning library for single-cell analysis of biological
+ images.This library allows users to apply pre-existing models to imaging data as well as to
+ develop new deep learning models for single-cell analysis."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('IPython', '7.26.0'),
+    ('OpenCV', '4.5.5', '-contrib'),
+    ('tqdm', '4.62.3'),
+    ('matplotlib', '3.4.3'),
+    ('scikit-learn', '1.0.1'),
+    ('scikit-image', '0.19.1'),
+    ('CUDA', '11.4.1', '', True),
+    ('TensorFlow', '2.7.1', '-CUDA-%(cudaver)s'),
+    ('spektral', '1.1.0', '-CUDA-%(cudaver)s'),
+    ('Graphviz', '2.50.0'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('pydot', '1.4.2'),
+    ('typeguard', '2.13.3'),
+    ('tensorflow-addons', '0.17.0', {
+        'source_tmpl': 'tensorflow_addons-%(version)s-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    ('DeepCell-Toolbox', '0.11.2', {
+        'source_tmpl': 'DeepCell_Toolbox-%(version)s.tar.gz',
+        'patches': ['DeepCell_Toolbox-0.11.2_deps.patch'],
+    }),
+    ('DeepCell-Tracking', '0.5.7', {
+        'source_tmpl': 'DeepCell_Tracking-%(version)s.tar.gz',
+    }),
+    (name, version, {
+       'patches': ['DeepCell-0.11.1_deps.patch'],
+    }),
+]
+
+moduleclass = 'bio'
