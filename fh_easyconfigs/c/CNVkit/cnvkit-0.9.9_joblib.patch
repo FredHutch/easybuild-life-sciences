@@ -1,0 +1,13 @@
+diff -ruN cnvkit-0.9.9.orig/setup.py cnvkit-0.9.9/setup.py
+--- cnvkit-0.9.9.orig/setup.py	2021-05-28 00:09:37.000000000 -0700
++++ cnvkit-0.9.9/setup.py	2022-06-24 18:13:32.015101000 -0700
+@@ -26,7 +26,8 @@
+     # TODO: https://github.com/etal/cnvkit/issues/606 and https://github.com/jmschrei/pomegranate/issues/909.
+     'networkx >= 2.4',
+     # TODO: Similarly: https://github.com/etal/cnvkit/issues/589
+-    'joblib < 1.0',
++    # pomegranate speicifies: "joblib >= 0.9.0b4",
++    # 'joblib < 1.0',
+ ]
+ 
+ DIR = (dirname(__file__) or '.')
