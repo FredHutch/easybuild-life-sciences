@@ -22,7 +22,7 @@ builddependencies = [
 ]
 
 dependencies = [
-    ('Python', '3.8.6'),
+    ('Python', '3.9.6'),
     ('MUMmer', '4.0.0beta2', '-foss-2020a', True),
     ('SciPy-bundle', '2020.11'),
     ('IPython', '7.18.1'),
