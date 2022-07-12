@@ -1,0 +1,22 @@
+easyblock = "GoPackage"
+
+name = 'GoPeaks'
+version = '1.0.0'
+
+homepage = 'https://github.com/maxsonBraunLab/gopeaks'
+description = """GoPeaks is a peak caller designed for CUT&TAG/CUT&RUN sequencing data."""
+
+toolchain = SYSTEM
+
+github_account = 'maxsonBraunLab'
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+checksums = ['36e13bf083089accbfef3d463bec16922dd5b5ad0e02db408404d6e5b361a80a']
+
+builddependencies = [
+    ('Go', '1.18.1'),
+]
+
+sanity_check_commands = ['%(namelower)s --help']
+
+moduleclass = 'bio'
