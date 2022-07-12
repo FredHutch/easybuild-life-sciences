@@ -1,0 +1,14 @@
+fix error: ‘void free(void*)’ called on pointer returned from a mismatched allocation function.
+ objects allocated with new, need to use 'detele()'
+diff -ruN ivar-384ff10e3f011f5b3d7a6d2b64de6dfa0349c805.orig/src/ivar.cpp ivar-384ff10e3f011f5b3d7a6d2b64de6dfa0349c805/src/ivar.cpp
+--- ivar-384ff10e3f011f5b3d7a6d2b64de6dfa0349c805.orig/src/ivar.cpp	2022-07-11 12:03:32.000000000 -0700
++++ ivar-384ff10e3f011f5b3d7a6d2b64de6dfa0349c805/src/ivar.cpp	2022-07-12 13:43:57.752840000 -0700
+@@ -499,7 +499,7 @@
+       for (int i = 0; i < nfiles; ++i) {
+ 	free(files[i]);
+       }
+-      free(files);
++      delete(files);
+     } else {
+       res = common_variants(g_args.prefix, g_args.min_threshold, argv + optind, argc - optind);
+     }
