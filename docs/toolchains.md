@@ -15,8 +15,8 @@ include BLAS/LAPACK APIs for linear algebra routines.
 EasyBuild supports several different toolchains. The Hutch uses the foss toolchain, which
 is an acronym for Free Open Source Software. Foss is based on the GNU compiler tools.
 Toolchains are curated twice a year and named for the year, and labeled a or b, i.e., foss-2019b.
-When loading multiple modules for a workflow, always load tools from the same toolchain. Do not mix and
-match tools from different toolchains.
+When loading multiple modules for a workflow, always load modules from the same toolchain. Do not mix and
+match modules from different toolchains.
 
 ## GNU Toolchain Versions
 

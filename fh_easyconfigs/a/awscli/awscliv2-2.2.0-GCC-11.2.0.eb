@@ -1,0 +1,53 @@
+easyblock = 'PythonBundle'
+
+name = 'awscliv2'
+version = '2.2.0'
+
+homepage = 'https://pypi.python.org/pypi/awscli'
+description = """Universal Command Line Environment for AWS"""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('PyYAML', '5.4.1'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('jmespath', '1.0.1', {
+    }),
+    ('python-dateutil', '2.8.2', {
+        'modulename': 'dateutil',
+    }),
+    ('botocore', '1.27.29'),
+    ('monotonic', '1.6', {
+    }),
+    ('pyreadline', '2.1', {
+        'modulename': 'readline',
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('humanfriendly', '10.0', {
+    }),
+    ('verboselogs', '1.7', {
+    }),
+    ('property-manager', '3.0', {
+    }),
+    ('coloredlogs', '15.0.1', {
+    }),
+    ('fasteners', '0.17.3', {
+    }),
+    ('executor', '23.2'),
+    ('importlib-resources', '5.8.0', {
+        'modulename': 'importlib_resources',
+        'source_tmpl': 'importlib_resources-%(version)s.tar.gz',
+    }),
+    (name, version),
+]
+
+sanity_pip_check = True
+
+sanity_check_commands = ["awscliv2 --help"]
+
+moduleclass = 'tools'
