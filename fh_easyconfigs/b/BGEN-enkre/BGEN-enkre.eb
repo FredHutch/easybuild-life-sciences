@@ -1,0 +1,47 @@
+# Contribution from the Fred Hutch Cancer Center
+# John Dey jfdey@fredhutch.org - Seattle WA US
+easyblock = 'Waf'
+
+name = 'BGEN-enkre'
+version = ''
+
+homepage = 'https://enkre.net/cgi-bin/code/bgen/dir?ci=trunk'
+description = """This repository contains a reference implementation
+ of the BGEN format, written in C++. The library can be used as the
+ basis for BGEN support in other software, or as a reference for
+ developers writing their own implementations of the BGEN format.
+ Please cite:
+ Band, G. and Marchini, J., "BGEN: a binary file format for imputed genotype and haplotype data", 
+ bioArxiv 308296; doi: https://doi.org/10.1101/308296
+"""
+
+toolchain = {'name': 'GCC', 'version': '10.2.0'}
+
+source_urls = ['https://code.enkre.net/bgen/tarball/release/']
+sources = ['bgen.tgz']
+checksums = ['22a5e9254b71a08f233779350472f03c6f32a60cb6e07750305a9115454d7470']
+
+dependencies = [
+    ('Python', '3.8.6'),
+]
+
+postinstallcmds = [
+    'mkdir %(installdir)s/test',
+    'cp %(builddir)s/bgen.tgz/build/test/unit/test_bgen  %(installdir)s/test',
+    'cp -r %(builddir)s/bgen.tgz/example  %(installdir)s/',
+]
+
+sanity_check_paths = {
+    'files': ['bin/edit-bgen', 'bin/bgenix', 'bin/cat-bgen'],
+    'dirs': ['bin', 'example', 'test'],
+}
+
+sanity_check_commands = [
+    'bgenix -help',
+    'cat-bgen -help',
+    'edit-bgen -help',
+    '%(installdir)s/test/test_bgen',
+    'bgenix -g %(installdir)s/example/example.16bits.bgen -list',
+]
+
+moduleclass = 'bio'
