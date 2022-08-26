@@ -3,39 +3,15 @@ title: fhPython-3.9.6-foss-2021b
 date: 2022-08-26
 ---
 
-### Known Issues
- * None
-
 ### Package List
-  * 0.11.1 built in
-  * 0.13.1 built in
-  * 0.18.0 built in
-  * 0.19.1 built in
-  * 0.2.4 built in
-  * 0.5.7 built in
-  * 0.54.1 built in
-  * 0.8.2 built in
-  * 0.9.0 built in
-  * 0.9.8 built in
-  * 1.0.1 built in
-  * 1.79 built in
-  * 2021.10 built in
-  * 2022.1.0 built in
-  * 3.10.0.2 built in
-  * 3.4.3 built in
-  * 3.6.0 built in
-  * 3.6.1 built in
-  * 5.4.1 built in
-  * 7.26.0 built in
-  * 8.3.2 built in
   * [APScheduler-3.9.1](https://github.com/agronholm/apscheduler) In-process task scheduler with Cron-like capabilities
   * [Automat-20.2.0](https://github.com/glyph/Automat) Self-service finite-state machines for the programmer on the go.
   * [Babel-2.10.3](https://babel.pocoo.org/) Internationalization utilities
-  * Biopython built in
+  * Biopython 1.79 Module
   * [Bottleneck-1.3.2](https://github.com/pydata/bottleneck) Fast NumPy array functions written in C
   * [Brotli-1.0.9](https://github.com/google/brotli) Python bindings for the Brotli compression library
   * [CacheControl-0.12.11](https://github.com/ionrock/cachecontrol) httplib2 caching for requests
-  * CellBender 0.2.1
+  * CellBender 0.2.1 
   * [ConfigArgParse-1.5.3](https://github.com/bw2/ConfigArgParse) A drop-in replacement for argparse that allows options to also be set via config files and/or environment variables.
   * [Cycler-0.11.0](https://github.com/matplotlib/cycler) Composable style cycles
   * [Cython-0.29.24](http://cython.org/) The Cython compiler for writing C extensions for the Python language.
@@ -56,7 +32,7 @@ date: 2022-08-26
   * [GitPython-3.1.27](https://github.com/gitpython-developers/GitPython) GitPython is a python library used to interact with Git repositories
   * [HTSeq-2.0.2](https://github.com/htseq) A framework to process and analyze data from high-throughput sequencing (HTS) assays
   * [HeapDict-1.0.1](http://stutzbachenterprises.com/) a heap with decrease-key and increase-key operations
-  * IPython built in
+  * IPython 7.26.0 Module
   * [Jinja2-3.1.2](https://palletsprojects.com/p/jinja/) A very fast and expressive template engine.
   * [Logbook-1.5.3](http://logbook.pocoo.org/) A logging replacement for Python
   * [Mako-1.2.1](https://www.makotemplates.org/) A super-fast templating language that borrows the best ideas from the existing templating languages.
@@ -74,8 +50,8 @@ date: 2022-08-26
   * [Parsley-1.3](http://launchpad.net/parsley) Parsing and pattern matching made easy.
   * [Paste-3.5.1](https://pythonpaste.readthedocs.io/) Tools for using a Web Server Gateway Interface stack
   * [PasteDeploy-2.1.1](https://pylonsproject.org/) Load, configure, and compose WSGI applications and servers
-  * Pillow built in
-  * Porechop built in
+  * Pillow 8.3.2 Module
+  * Porechop 0.2.4 Module
   * [PuLP-2.6.0](https://github.com/coin-or/pulp) PuLP is an LP modeler written in python. PuLP can generate MPS or LP files and call GLPK, COIN CLP/CBC, CPLEX, and GUROBI to solve linear problems.
   * [PyChef-0.3.0](http://github.com/coderanger/pychef) Python implementation of a Chef API client.
   * [PyDP-0.2.4](http://www.yanjingang.com/docs/pydp/dp.html) Data Processing Lib
@@ -85,17 +61,17 @@ date: 2022-08-26
   * [PyMySQL-1.0.2](https://github.com/PyMySQL/PyMySQL/) Pure Python MySQL Driver
   * [PyNaCl-1.5.0](https://github.com/pyca/pynacl/) Python binding to the Networking and Cryptography (NaCl) library
   * [PyOpenGL-3.1.6](http://pyopengl.sourceforge.net) Standard OpenGL bindings for Python
-  * PyTables built in
+  * PyTables 3.6.1 Module
   * [PyVCF-0.6.8](https://github.com/jamescasbon/PyVCF) Variant Call Format (VCF) parser for Python
   * [PyWavelets-1.2.0](https://github.com/PyWavelets/pywt) PyWavelets, wavelet transform module
-  * PyYAML built in
+  * PyYAML 5.4.1 Module
   * [Pygments-2.12.0](https://pygments.org/) Pygments is a syntax highlighting package written in Python.
   * [Pyro4-4.82](http://pyro4.readthedocs.io) distributed object middleware for Python (RPC)
-  * Pysam built in
+  * Pysam 0.18.0 Module
   * [Routes-2.5.1](https://routes.readthedocs.io/) Routing Recognition and Generation Tools
   * [SPARQLWrapper-2.0.0](http://rdflib.github.io/sparqlwrapper) SPARQL Endpoint interface to Python
   * [SQLAlchemy-1.4.39](https://www.sqlalchemy.org) Database Abstraction Library
-  * SciPy-bundle built in
+  * SciPy-bundle 2021.10 Module
   * [SecretStorage-3.3.1](https://github.com/mitya57/secretstorage) Python bindings to FreeDesktop.org Secret Service API
   * [Send2Trash-1.8.0](https://github.com/arsenetar/send2trash) Send file to trash natively under Mac OS X, Windows and Linux.
   * [Sphinx-5.0.2](https://www.sphinx-doc.org/) Python documentation generator
@@ -542,7 +518,7 @@ date: 2022-08-26
   * [platformdirs-2.2.0]() A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".
   * [plette-0.2.3](https://github.com/sarugaku/plette) Structured Pipfile and Pipfile.lock models.
   * [plotly-5.9.0](https://plotly.com/python/) An open-source, interactive data visualization library for Python
-  * plotsr 0.5.4
+  * plotsr 0.5.4 
   * [pluggy-0.13.1](https://github.com/pytest-dev/pluggy) plugin and hook calling mechanisms for python
   * [ply-3.11](http://www.dabeaz.com/ply/) Python Lex & Yacc
   * [poetry-1.1.7](https://python-poetry.org/) Python dependency management and packaging made easy.
@@ -575,7 +551,7 @@ date: 2022-08-26
   * [py_expression_eval-0.3.13](https://github.com/AxiaCore/py-expression-eval/) Python Mathematical Expression Evaluator
   * [pyasn1-0.4.8](https://github.com/etingof/pyasn1) ASN.1 types and codecs
   * [pyasn1-modules-0.2.8](https://github.com/etingof/pyasn1-modules) A collection of ASN.1-based protocols modules.
-  * pybedtools built in
+  * pybedtools 0.8.2 Module
   * [pybind11-2.9.2](https://github.com/pybind/pybind11) Seamless operability between C++11 and Python
   * [pyblake2-1.1.2](https://github.com/dchest/pyblake2) BLAKE2 hash function extension module
   * [pycares-4.2.1](http://github.com/saghul/pycares) Python interface for c-ares
@@ -630,7 +606,7 @@ date: 2022-08-26
   * [python-freezerclient-4.4.0](https://docs.openstack.org/python-freezerclient/latest/) OpenStack Disaster Recovery API Client Library
   * [python-glanceclient-4.0.1](https://docs.openstack.org/python-glanceclient/latest/) OpenStack Image API Client Library
   * [python-hostlist-1.21](http://www.nsc.liu.se/~kent/python-hostlist/) Python module for hostlist handling
-  * python-igraph built in
+  * python-igraph 0.9.8 Module
   * [python-json-logger-2.0.4](http://github.com/madzak/python-json-logger) A python library adding a json log formatter
   * [python-keystoneclient-4.5.0](https://docs.openstack.org/python-keystoneclient/latest/) Client Library for OpenStack Identity
   * [python-neutronclient-7.8.0](https://docs.openstack.org/python-neutronclient/latest/) CLI and Client Library for OpenStack Networking
@@ -692,9 +668,9 @@ date: 2022-08-26
   * [scikit-bio-0.5.7](http://scikit-bio.org) Data structures, algorithms and educational resources for bioinformatics.
   * [scikit-build-0.11.1](https://github.com/scikit-build/scikit-build) Improved build system generator for Python C/C++/Fortran/Cython extensions
   * [scikit-image-0.19.1](https://scikit-image.org) Image processing in Python
-  * scikit-learn built in
+  * scikit-learn 1.0.1 Module
   * [scikit-misc-0.1.4](https://github.com/has2k1/scikit-misc) Miscellaneous tools for scientific computing.
-  * scikit-optimize built in
+  * scikit-optimize 0.9.0 Module
   * [scipy-1.7.1](https://www.scipy.org) SciPy: Scientific Library for Python
   * [scvi-0.6.8](https://github.com/YosefLab/scVI) Single-cell Variational Inference
   * [seaborn-0.11.2](https://seaborn.pydata.org) seaborn: statistical data visualization
