@@ -25,6 +25,8 @@ Vendor supplied software available as modules.
     - nanoplotter - Plotting functions of Oxford Nanopore sequencing data
     - NanoStat - Calculate statistics for Oxford Nanopore sequencing data and alignments
     - pauvre - Tools for plotting Oxford Nanopore and other long-read data.
+    - Porechop - Porechop is a tool for finding and removing adapters from Oxford Nanopore reads. Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle, it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments to effectively find adapters, even at low sequence identity.
+
 
 ### PacBio
  - bam2fastx - Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded dat.
