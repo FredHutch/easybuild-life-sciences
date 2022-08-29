@@ -1,0 +1,25 @@
+easyblock = 'PythonPackage'
+
+name = 'pyaml'
+version = '21.10.1'
+
+homepage = 'https://github.com/mk-fg/pretty-yaml'
+description = """PyYAML-based python module to produce pretty and readable YAML-serialized data.
+This module is for serialization only, see ruamel.yaml module for literate YAML
+parsing (keeping track of comments, spacing, line/column numbers of values, etc)."""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = ['c6519fee13bf06e3bb3f20cacdea8eba9140385a7c2546df5dbae4887f768383']
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('PyYAML', '5.4.1'),
+]
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+
+moduleclass = 'lib'
