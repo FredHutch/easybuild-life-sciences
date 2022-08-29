@@ -1,0 +1,43 @@
+# Authors:: Jack Perdue <j-perdue@tamu.edu> - TAMU HPRC - http://hprc.tamu.edu
+
+easyblock = 'CMakeMake'
+
+name = 'ArrayFire'
+version = '3.8.1'
+local_cudaver = '10.2.89'
+versionsuffix = '-CUDA-%s' % local_cudaver
+
+homepage = 'https://arrayfire.com/'
+
+description = """
+ ArrayFire is a general-purpose library that simplifies the process of
+ developing software that targets parallel and massively-parallel architectures
+ including CPUs, GPUs, and other hardware acceleration devices.
+"""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+source_urls = ['https://github.com/arrayfire/arrayfire/releases/download/v%(version)s/']
+sources = ['%(namelower)s-full-%(version)s.tar.bz2']
+
+builddependencies = [
+    ('CMake', '3.15.3'),
+    ('Doxygen', '1.8.16'),
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('Boost', '1.72.0'),
+    ('CUDA', local_cudaver),
+]
+
+separate_build_dir = True
+
+configopts = '-DAF_COMPUTE_LIBRARY=BLAS -DAF_BUILD_OPENCL=OFF'
+
+sanity_check_paths = {
+    'files': ['include/af/version.h', 'lib64/libaf.%s' % SHLIB_EXT],
+    'dirs': ['share/ArrayFire/doc/html/examples']
+}
+
+moduleclass = 'math'
