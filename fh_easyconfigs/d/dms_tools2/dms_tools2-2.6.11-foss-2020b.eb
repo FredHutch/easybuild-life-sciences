@@ -1,0 +1,69 @@
+# easybuild easycofig
+#
+# Fred Hutchinson Cancer Research Center
+# John Dey jfdey@fredhutch.org
+easyblock = 'PythonBundle'
+
+name = 'dms_tools2'
+version = '2.6.11'
+
+homepage = 'https://jbloomlab.github.io/dms_tools2/'
+description = """dms_tools2 is a software package for analyzing deep mutational scanning data.
+ It is tailored to analyze libraries created using comprehensive codon mutagenesis of protein-coding
+ of genes."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11'),
+    ('matplotlib', '3.3.3'),
+    ('Biopython', '1.78'),
+    ('IPython', '7.18.1'),  # provides jupyter
+    ('Pysam', '0.16.0.1'),
+    ('PyStan', '2.19.1.1'),
+    ('Seaborn', '0.11.1'),
+    ('aiohttp', '3.7.3'),
+    ('statsmodels', '0.12.1'),
+]
+
+use_pip = True
+sanity_pip_check = False
+skipsteps = ['sanitycheck']
+
+exts_list = [
+    ('pybktree', '1.1'),  # from dms_tools2
+    ('palettable', '3.3.0'),  # from mizani
+    ('mizani', '0.6.0'),  # from plotnine
+    ('descartes', '1.1.0'), # from plotnine
+    ('plotnine', '0.6.0'),  # from dms_tools2
+    ('natsort', '7.1.1'),  # from dms_tools2
+    ('PyPDF2', '2.10.3', {  # from phydms
+        'modulename': 'PyPDF2',
+    }),
+    ('weblogo', '3.5.0', {  # from phydms
+         'modulename': 'weblogolib',
+    }),
+    ('Pyvolve', '1.0.3'),  # from phydms
+    ('sympy', '1.9'),  # from phydms
+    ('phydms', '2.4.1', {  # from dms_tools2
+        'modulename': 'phydmslib',
+    }),
+    ('umi_tools', '1.1.2'),
+    (name, version, {
+        'source_urls': ['https://github.com/jbloomlab/%(name)s/archive/refs/tags'],
+        'sources': [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+]
+
+sanity_check_commands = ['dms2_batch_diffsel --help']
+
+_citations = """
+dms_tools2 is written by the [Bloom Lab](https://research.fhcrc.org/bloom/en.html).
+If you use dms_tools2 in your research, please cite the following reference:
+
+Bloom JD. “Software for the analysis and visualization of deep mutational scanning data.”.
+BMC Bioinformatics, 16:168 (2015).
+"""
+
+moduleclass = 'bio'
