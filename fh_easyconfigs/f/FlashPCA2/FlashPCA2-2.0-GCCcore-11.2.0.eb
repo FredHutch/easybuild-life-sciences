@@ -7,16 +7,19 @@
 easyblock = 'MakeCp'
 
 name = 'FlashPCA2'
-version = '2.0'
-
+local_version = '2.0'
+local_commit = 'b8044f13607a072125828547684fde8b081d6191'
+version = '%s-%s' % (local_version, local_commit[:7]
 homepage = 'https://github.com/gabraham/flashpca'
 description = """FlashPCA performs fast principal component analysis (PCA) of single nucleotide
  polymorphism (SNP) data."""
 
-toolchain = {'name': 'GCC', 'version': '10.2.0'}
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
 
-source_urls = ['https://github.com/gabraham/flashpca/archive/refs/tags']
-sources = ['v%(version)s.tar.gz']
+source_urls = ['https://github.com/gabraham/flashpca/archive/']
+sources = ['v%(local_commit)s.zip']
+sources = [{'download_filename': '%s.tar.gz' % local_commit, 'filename': SOURCE_TAR_GZ}]
+
 patches = ['%(name)s-%(version)s_CPPFLAGS.patch']
 checksums = [
     'e50955e2fbe9aa77fa656900e2468622aeae7e56ca026071fe1087583aa3d518',  # v2.0.tar.gz
@@ -24,10 +27,10 @@ checksums = [
 ]
 
 dependencies = [
-    ('Boost', '1.74.0'),
-    ('SpectrA', '0.9.0'),  # contains Eigen
-    ('Boost', '1.74.0'),
-    ('PLINK2', '20210701-linux_x86_64', '', True),
+    ('Boost', '1.77.0'),
+    ('SpectrA', '1.0.1'),  # contains Eigen
+    ('PLINK2', '20210826-linux_x86_64', '', True),
+# not found PLINK2/20210701-linux_x86_64, Eigen/3.3.9-GCC-10.2.0 (no easyconfig 
 ]
 
 prebuildopts = 'export CXXFLAGS="$CXXFLAGS -fpermissive -DSPECTRA" && '
