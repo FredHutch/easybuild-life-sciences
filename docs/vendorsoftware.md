@@ -44,6 +44,14 @@ Refernce data for 10X Genomics tools is located `/shared/biodata/ngs/Reference/1
  - Cell Ranger ARC
  - Space Ranger
 
+### Gurobi
+Gurobi Optimizer is commerical software. Gurobi is a solver for LP, QP and MIP problems. Gurobi provides individual academic 
+licenses. If you want to use Gurobi, apply for your personal license. Once your license is granted, you can activate the software
+license. Load the latest Gurobi module and run grbgetkey using the argument provided on the Academic License. 
+(example: grbgetkey ae36ac20-16e6-acd2-f242-4da6e765fa0a) The grbgetkey will write a personal license file into your UNIX home
+directory.
+
+ 
 ## Open Source Tools
 Open source tools for reading sequence data from 
  - SRA Toolkit - The Sequence Read Archive (SRA Toolkit) stores raw sequence data from "next-generation" sequencing technologies
