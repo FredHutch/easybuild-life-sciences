@@ -1,0 +1,37 @@
+local_notes = """ Do not use this EasyConfig. Add DimSum to fhR. Create DimSum Module by hand.
+    /app/software/DiMSum has clone of repo. o
+    DiMSum is an R package and a command line tools
+"""
+
+easyblock = 'RPackage'
+
+name = 'DiMSum'
+version = '1.2.9'
+versionsuffix = '-R-%(rver)s'
+
+github_account = 'lehner-lab'
+homepage = 'https://github.com/%(github_account)s/%(name)s'
+description = """An error model and pipeline for analyzing deep mutational scanning (DMS) data and diagnosing common experimental pathologies."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+source_urls = ['https://github.com/%(github_account)s/%(name)s/archive/refs/tags']
+sources =['v%(version)s.tar.gz']
+
+dependencies = [
+    ('R', '4.2.0'),
+    ('fhR', '4.2.0'),
+    ('FastQC', '0.11.9', '', '-Java-11'),
+    ('cutadapt', '3.5'),
+    ('VSEARCH', '2.21.1'),
+    ('starcode', '1.4'),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [name],
+}
+
+modextrapaths = {'PATH', 'DiMSum/R'}
+
+moduleclass = 'bio'
