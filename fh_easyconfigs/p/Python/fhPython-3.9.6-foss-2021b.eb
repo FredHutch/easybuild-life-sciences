@@ -46,7 +46,7 @@ dependencies = [
     ('statsmodels', '0.13.1'),
     ('Blosc', '1.21.1'),
     ('dask', '2022.1.0'),
-    ('PostgreSQL', '14.4'),
+    ('PostgreSQL', '13.4'),
     ('typing-extensions', '3.10.0.2'),
     ('Arrow', '6.0.0'),
     ('ICU', '69.1'),

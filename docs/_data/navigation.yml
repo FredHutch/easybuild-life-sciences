@@ -17,12 +17,12 @@ docs:
         url: /all-modules-18.04/
       - title: "R Modules"
         url: /r/
-      - title: "R Issues and Solutions"
-        url: /rissues/
       - title: "Python Modules"
         url: /python/
       - title: "Python Bundles"
         url: /python-bundles/
+      - title: "Seurat"
+        url: /seurat/
       - title: "Vendor Software"
         url: /vendorsoftware/
       - title: "Toolchains"
