@@ -1,0 +1,13 @@
+look harder for ft2build.h
+diff -ruN reportlab-3.6.11.orig/src/rl_addons/renderPM/_renderPM.c reportlab-3.6.11/src/rl_addons/renderPM/_renderPM.c
+--- reportlab-3.6.11.orig/src/rl_addons/renderPM/_renderPM.c	2022-06-08 01:27:36.000000000 -0700
++++ reportlab-3.6.11/src/rl_addons/renderPM/_renderPM.c	2022-08-17 17:26:28.362217000 -0700
+@@ -140,7 +140,7 @@
+ 		}
+ 	return _pdfmetrics__fonts;
+ 	}
+-#include <ft2build.h>
++#include <freetype/ft2build.h>
+ #include FT_FREETYPE_H
+ static FT_Library ft_library=0;
+ typedef struct {

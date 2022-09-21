@@ -1,0 +1,6 @@
+ `pip check` failed:
+visdom 0.1.8.9 requires websocket-client, which is not installed.
+sci 0.1.7 requires pyodbc, which is not installed.
+ruamel-yaml 0.17.21 requires ruamel-yaml-clib, which is not installed.
+pytype 2022.6.30 requires importlab, which is not installed.
+pytype 2022.6.30 requires libcs (took 27 mins 43 secs)

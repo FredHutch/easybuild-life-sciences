@@ -1,0 +1,29 @@
+easyblock = 'PythonPackage'
+
+name = 'threadpoolctl'
+version = '2.2.0'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = ''
+description = """Python helpers to limit the number of threads used in the threadpool-backed of
+ common native libraries used for scientific computing and data science (e.g. BLAS and OpenMP)."""
+
+toolchain = {'name': 'foss', 'version': '2019b'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+dependencies = [
+    ('Python', '3.7.4'),
+]
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/sklearn'],
+}
+
+moduleclass = 'data'
