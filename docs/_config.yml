@@ -17,10 +17,10 @@ collections:
   r:
     output: true
     permalink: /:collection/:path/
-  rissues:
+  python:
     output: true
     permalink: /:collection/:path/
-  python:
+  seurat:
     output: true
     permalink: /:collection/:path/
   updates:
