@@ -57,6 +57,7 @@ exts_default_options = {
         'https://cran.r-project.org/src/contrib/',  # current version of packages
         'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
         'https://bioconductor.org/packages/%s/bioc/src/contrib/' % local_biocver,
+        'https://bioconductor.org/packages/$s/bioc/src/contrib/Archive/%(name)s', % local_biocver,
         'https://bioconductor.org/packages/%s/data/annotation/src/contrib/' % local_biocver,
         'https://bioconductor.org/packages/%s/data/experiment/src/contrib/' % local_biocver,
         'http://depot.sagebase.org/CRAN/prod/3.2/src/contrib',
