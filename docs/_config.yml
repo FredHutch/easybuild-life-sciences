@@ -223,10 +223,10 @@ defaults:
       sidebar:
         nav: "docs"
 
-  # _rissues
+  # _seurat
   - scope:
       path: ""
-      type: rissues 
+      type: seurat
     values:
       layout: single
       sidebar:
