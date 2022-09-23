@@ -82,5 +82,3 @@ two major issues; the library is out of date or there is a newer version availab
 from the system that is not being loaded. Use the `packageVersion("snow")`
 function to show the library version and `update.packages()` function to update
 out of date packages.
-
-### [R Issues and Solutions]({{ site.baseurl }}/rissues/)
