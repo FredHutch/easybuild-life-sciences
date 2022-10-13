@@ -37,6 +37,7 @@ dependencies = [
     ('NLopt', '2.6.1'),  # for nloptr
     ('FFTW', '3.3.8'),  # for fftw
     ('libsndfile', '1.0.28'),  # for seewave
+    ('netCDF', '4.7.1'), # for netcdf4
     ('ICU', '65.1'),  # for rJava & gdsfmt
     ('HDF5', '1.10.5'),  # for hdf5r
     ('UDUNITS', '2.2.26'),  # for units
@@ -2347,6 +2348,7 @@ exts_list = [
         'checksums': ['94c86473790cf69f11c68ed8ba9d6ae98218c7c69b7a9a093f235d175cf83db0'],
     }),
     ('gdsfmt', '1.24.1'),
+    ('ncdf4', '1.17'),
 ]
 
 moduleclass = 'lang'
