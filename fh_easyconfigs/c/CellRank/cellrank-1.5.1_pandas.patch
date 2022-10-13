@@ -1,0 +1,17 @@
+diff -ruN cellrank-1.5.1.orig/requirements.txt cellrank-1.5.1/requirements.txt
+--- cellrank-1.5.1.orig/requirements.txt	2022-01-13 08:42:18.000000000 -0800
++++ cellrank-1.5.1/requirements.txt	2022-10-05 18:28:50.712835000 -0700
+@@ -4,11 +4,11 @@
+ networkx>=2.2
+ numba>=0.51.0
+ numpy>=1.17.0
+-pandas>=1.2.0
++pandas>=1.1.4
+ pygam>=0.8.0
+ pygpcca>=1.0.3
+ scanpy>=1.7.2
+-scikit-learn>=0.24.0
++scikit-learn>=0.23.2
+ scipy>=1.2.0
+ scvelo>=0.2.4
+ seaborn>=0.10.0
