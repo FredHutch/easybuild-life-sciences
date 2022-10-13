@@ -1,4 +1,4 @@
-## CellProfiler Build Notes
+## CellProfiler Build Notes 4.1.1
 
 Add appMenu to OS during build. Installed on Rhino's
 apt-get install appmenu-gtk3-module

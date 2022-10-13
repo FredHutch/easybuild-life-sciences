@@ -1,0 +1,86 @@
+easyblock = 'PythonBundle'
+
+name = 'CellProfiler'
+version = '4.2.4'
+
+homepage = 'http://cellprofiler.org/'
+description = """CellProfiler is a free open-source software designed to enable biologists without training in computer vision or programming to quantitatively measure phenotypes from thousands of images automatically."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('hypothesis', '6.14.6'),
+]
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+    ('matplotlib', '3.4.3'),
+    ('Java', '11', '', True),
+    ('scikit-image', '0.19.1'),
+    ('pybind11', '2.7.1'),
+    ('pkgconfig', '1.5.5', '-python'),
+    ('scikit-learn', '1.0.1'),
+    ('boto3', '1.20.13'),
+    ('imageio', '2.13.5'),
+    ('wxPython', '4.2.0'),
+    ('h5py', '3.6.0'),
+    ('Pillow', '9.1.0'),
+    ('libpng', '1.6.37'),
+    ('libjpeg-turbo', '2.0.6'),
+    ('LibTIFF', '4.3.0'),
+    ('zlib', '1.2.11'),
+    ('freetype', '2.11.0'),
+    ('Tkinter', '%(pyver)s'),
+    ('MariaDB', '10.6.4'),
+    ('ZeroMQ', '4.3.4'),  # LibZMQ for pyzmq
+]
+
+osdependencies = [('appmenu-gtk3-module', 'appmenu-gtk3-module', '')]
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('deprecation', '2.1.0', { }),
+    ('PyWavelets', '1.4.1', {
+        'modulename': 'pywt',
+    }),
+    ('centrosome', '1.2.1', {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+    ('cached-property', '1.5.2', { }),
+    ('prokaryote', '2.4.4', { }),
+    ('python-javabridge', '4.0.3', {
+        'modulename': 'javabridge',
+    }),
+    ('python-bioformats', '4.0.6', {
+        'modulename': 'bioformats',
+    }),
+    ('pyzmq', '24.0.1', {
+        'modulename': 'zmq',
+    }),
+    ('cellprofiler-core', '4.2.4', {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+    #('typing-extensions', '4.1.0', {
+    #    'modulename': 'typing_extensions',
+    #    'source_tmpl': 'typing_extensions-%(version)s.tar.gz',
+    #}),
+    ('pydantic', '1.10.2', {
+    }),
+    ('inflect', '6.0.0'),
+    ('mahotas', '1.4.13'),
+    ('mysqlclient', '2.1.1', {
+        'modulename': 'MySQLdb',
+    }),
+    ('urllib3', '1.26.12'),
+    ('sentry-sdk', '1.9.9'),
+    (name, version, {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+]
+
+sanity_check_commands = ['cellprofiler --help']
+
+moduleclass = 'bio'
