@@ -1,0 +1,25 @@
+easyblock = 'PythonPackage'
+
+name = 'petsc4py'
+version = '3.14.1'
+
+homepage = 'https://bitbucket.org/petsc/petsc4py'
+description = "petsc4py are Python bindings for PETSc, the Portable, Extensible Toolchain for Scientific Computation."
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+sources = [SOURCE_TAR_GZ]
+
+dependencies = [
+    ('Python', '3.8.6'),
+    ('SciPy-bundle', '2020.11'),
+    ('PETSc', '3.14.4'),
+]
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+
+sanity_check_commands = ["python -c 'from petsc4py import PETSc'"]
+
+moduleclass = 'tools'
