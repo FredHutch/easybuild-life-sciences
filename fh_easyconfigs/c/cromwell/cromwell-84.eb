@@ -1,0 +1,37 @@
+# The Fred Hutchinson Cancer Research Center
+# Homepage: https://www.fredhutch.org
+# Author: Benjamin McGough <bmcgough@fredhutch.org>
+
+easyblock = 'JAR'
+
+name = 'cromwell'
+version = '84'
+
+homepage = 'https://github.com/broadinstitute/cromwell'
+description = """Scientific workflow engine designed for simplicity & scalability."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/broadinstitute/cromwell/releases/download/%(version)s']
+sources = [
+    '%(name)s-%(version)s.jar',
+    'womtool-%(version)s.jar',
+]
+checksums = []
+
+dependencies = [('Java', '11')]
+
+postinstallcmds = [
+    "mv %(installdir)s/%(name)s-%(version)s.jar %(installdir)s/%(name)s.jar",
+    "mv %(installdir)s/womtool-%(version)s.jar %(installdir)s/womtool.jar",
+]
+
+sanity_check_paths = {
+    'files': ['%(name)s.jar', 'womtool.jar'],
+    'dirs': [],
+}
+
+modloadmsg = "To execute %(name)s, run: java -jar $EBROOTCROMWELL/%(name)s.jar\n"
+modloadmsg += "\nTo execute womtool, run: java -jar $EBROOTCROMWELL/wamtool.jar\n"
+
+moduleclass = 'bio'
