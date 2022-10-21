@@ -81,4 +81,6 @@ exts_list = [
     }),
 ]
 
+sanity_check_commands = ['pubweb-cli --help']
+
 moduleclass = 'lib'
