@@ -121,9 +121,6 @@ exts_list = [
     }),
     ('attrs', '21.4.0', {
     }),
-    ('typing-extensions', '4.3.0', {
-        'source_tmpl': 'typing_extensions-%(version)s.tar.gz',
-    }),
     ('jsonlines', '3.1.0', {
     }),
     ('SQLAlchemy', '1.4.39', {
