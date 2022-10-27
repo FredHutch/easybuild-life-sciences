@@ -1,0 +1,50 @@
+# easybuild easyconfig
+#
+# Fred Hutchinson Cancer Center - Seattle Washington US
+# John Dey <jfdey@fredhutch.org>
+#
+easyblock = 'CmdCp'
+
+name = 'fgbio'
+version = '2.0.2'
+
+homepage = 'https://github.com/fulcrumgenomics/fgbio'
+description = """A set of tools to analyze genomic data with a focus on Next Generation Sequencing."""
+
+toolchain = SYSTEM
+
+# source file must be created from git clone
+source_urls = ['https://github.com/fulcrumgenomics/fgbio/archive']
+sources = ['%(version)s.tar.gz']
+
+builddependencies = [
+    ('sbt', '1.7.2', '-Java-%(javaver)s', True),
+]
+
+dependencies = [
+    ('Java', '1.8'),
+]
+
+cmds_map = [
+    '.*',
+    'sed -i \'s/scala.sys.process.Process("git rev-parse --short HEAD").lineStream.head/"%(version)s"/\' version.sbt'
+    ' && sbt --sbt-dir "$TMPDIR/sbt" assembly --ivy "$TMPDIR/ivy2"'
+    ' && echo -e \'#!/bin/bash\\ncd $(dirname $0) && exec java -jar ../lib/fgbio-%(version)s.jar "$@"\' >> fbgio'
+    ' && chmod +x fbgio'
+]
+
+files_to_copy = [
+    (['fbgio'], 'bin'),
+    (['target/scala-*/fgbio-%(version)s.jar'], 'lib'),
+]
+
+sanity_check_paths = {
+    'files': ['dist/%(name)s', 'lib/fgbio--%(version)s.jar'],
+    'dirs': []
+}
+
+sanity_check_commands = ['fbgio --help 2>&1 | grep -q Version']
+
+modextrapaths = {'CLASSPATH': 'lib/%(name)s-%(version)s.jar'}
+
+moduleclass = 'bio'
