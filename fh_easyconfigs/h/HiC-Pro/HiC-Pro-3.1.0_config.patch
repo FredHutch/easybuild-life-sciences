@@ -1,0 +1,30 @@
+diff -ruN HiC-Pro-3.1.0.orig/config-install.txt HiC-Pro-3.1.0/config-install.txt
+--- HiC-Pro-3.1.0.orig/config-install.txt	2021-08-27 11:04:54.000000000 -0700
++++ HiC-Pro-3.1.0/config-install.txt	2022-10-26 16:49:15.400251000 -0700
+@@ -3,9 +3,9 @@
+ ## Paths and Settings  - Start editing here !
+ #########################################################################
+ 
+-PREFIX = 
+-BOWTIE2_PATH = 
+-SAMTOOLS_PATH = 
+-R_PATH = 
+-PYTHON_PATH = 
++PREFIX = /app/software/HiC-Pro/3.1.0-foss-2021b
++BOWTIE2_PATH = $EBROOTBOWTIE2/bin
++SAMTOOLS_PATH = $EBROOTSAMTOOLS/bin
++R_PATH = $EBROOTR/bin
++PYTHON_PATH = $EBROOTPYTHON/bin
+ CLUSTER_SYS = TORQUE
+diff -ruN HiC-Pro-3.1.0.orig/Makefile HiC-Pro-3.1.0/Makefile
+--- HiC-Pro-3.1.0.orig/Makefile	2021-08-27 11:04:54.000000000 -0700
++++ HiC-Pro-3.1.0/Makefile	2022-10-26 16:31:25.532655000 -0700
+@@ -15,7 +15,7 @@
+ RUNNER=$(shell whoami)
+ 
+ #install : config_check mapbuilder readstrimming iced cp
+-install : config_check mapbuilder readstrimming cp
++install : mapbuilder readstrimming
+ 
+ ######################################
+ ## Config file

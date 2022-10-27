@@ -1,0 +1,30 @@
+# requirement for HiC-Pro
+easyblock = 'PythonBundle'
+
+name = 'iced'
+version = '0.5.6'
+
+homepage = 'https://pypi.org/project/iced/'
+description = """ICE normalization"""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+]
+
+use_pip = True
+
+exts_list = [
+    (name, version),
+]
+
+sanity_check_paths = {
+    'files': ['bin/ice'],
+    'dirs': []
+}
+
+sanity_check_commands = ['ice -h']
+
+moduleclass = 'lib'

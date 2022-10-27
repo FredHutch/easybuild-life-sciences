@@ -1,0 +1,50 @@
+easyblock = 'MakeCp'
+
+name = 'HiC-Pro'
+version = '3.1.0'
+
+homepage = 'http://nservant.github.io/HiC-Pro'
+description = """HiC-Pro was designed to process Hi-C data, from raw fastq files (paired-end Illumina data) 
+ to the normalized contact maps."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+source_urls = ['https://github.com/nservant/HiC-Pro/archive/']
+sources = ['v%(version)s.tar.gz']
+patches = ['%(name)s-%(version)s_config.patch']
+checksums = []
+
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+    ('iced', '0.5.6'),
+    ('Pysam', '0.17.0'),
+    ('bx-python', '0.8.13'),
+    ('Bowtie2', '2.4.4'),
+    ('SAMtools', '1.15.1'),
+    ('R', '4.2.0'),
+]
+
+skipsteps = ['configure']
+parallel = False
+build_cmd = 'make configure'
+
+files_to_copy = [
+    'annotation',
+    'doc',
+    'scripts',
+    (['bin/utils', 'bin/HiC-Pro'], 'bin'),
+    'config-system.txt',
+]
+
+modextrapaths = { 'SCRIPTS': ['scripts'] }
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s', 'config-system.txt', 'scripts/merge_stats.sh'],
+    'dirs': ['bin/utils', 'scripts'],
+}
+
+sanity_check_commands = ['%(name)s --help']
+
+moduleclass = 'bio'
