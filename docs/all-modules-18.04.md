@@ -1194,7 +1194,7 @@ PostgreSQL is a powerful, open source object-relational database system.
  It also supports storage of binary large objects, including pictures,
  sounds, or video. It has native programming interfaces for C/C++, Java,
  .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
- - [PubWeb/0.3.8-foss-2021b](https://github.com/FredHutch/PubWeb-client)
+ - [PubWeb/0.3.9-foss-2021b](https://github.com/FredHutch/PubWeb-client)
 A Python 3.8+ library for the PubWeb platform.
  - [PyCairo/1.20.1-GCCcore-11.2.0](https://pycairo.readthedocs.io/)
 Python bindings for the cairo library
