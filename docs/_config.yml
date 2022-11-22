@@ -6,7 +6,7 @@ minimal_mistakes_skin: "contrast"
 
 # Site Settings
 locale: en-US
-title: "Fred Hutch EasyBuild Life Sciences"
+title: "Life Sciences Software"
 description: "Scientific Software Fred Hutch"
 url                      : "https://fredhutch.github.io"
 baseurl                  : "/easybuild-life-sciences"
