@@ -1,0 +1,26 @@
+easyblock = 'MakeCp'
+
+name = 'pblat'
+version = '2.5'
+
+homepage = 'http://icebert.github.io/pblat/'
+description = """Parallel blat based on Jim Kent's blat"""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+source_urls = ['https://github.com/icebert/pblat/archive/refs/tags']
+sources = ['%(version)s.tar.gz']
+patches = ['pblat-2.5_multidef.patch']
+
+dependencies = [
+    ('zlib', '1.2.11'),
+]
+
+files_to_copy = [ (['pblat'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/pblat' ],
+    'dirs': [],
+}
+
+moduleclass = 'bio'

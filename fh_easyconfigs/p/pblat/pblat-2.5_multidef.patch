@@ -1,0 +1,13 @@
+fix multidef var htmlRecover error
+diff -ruN pblat-2.5.orig/inc/htmshell.h pblat-2.5/inc/htmshell.h
+--- pblat-2.5.orig/inc/htmshell.h	2020-06-14 08:12:26.000000000 -0700
++++ pblat-2.5/inc/htmshell.h	2022-12-01 16:05:41.965742000 -0800
+@@ -160,7 +160,7 @@
+ void htmlImage(char *fileName, int width, int height);
+ /* Display centered image file. */
+ 
+-jmp_buf htmlRecover;  /* Error recovery jump. Exposed for cart's use. */
++extern jmp_buf htmlRecover;  /* Error recovery jump. Exposed for cart's use. */
+ 
+ void htmlVaWarn(char *format, va_list args);
+ /* Write an error message.  (Generally you just call warn() or errAbort().
