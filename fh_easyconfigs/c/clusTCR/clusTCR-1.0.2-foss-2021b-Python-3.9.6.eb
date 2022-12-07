@@ -22,11 +22,22 @@ dependencies = [
     ('matplotlib', '3.4.3'),
     ('OpenMPI', '4.1.1'),
     ('Clang', '12.0.1'),
+    ('OpenBLAS', '0.3.18'),
 ]
 
 use_pip = True
 
 exts_list = [
+    ('faiss', '1.7.3', {
+        'sources': {
+            'filename': '%(name)s-%(version)s.tar.gz',
+            'git_config': {
+                'url': 'https://github.com/facebookresearch',
+                'repo_name': 'faiss',
+                'tag': 'v%(version)s',
+            }
+        }
+    }),
     ('markov_clustering', '0.0.6.dev0', {
         'checksums': ['8f72eee0ee5d9bfbab1b28bbfa95eaa020b2bba64b528ce45030b8b4300ecf33'],
     }),
