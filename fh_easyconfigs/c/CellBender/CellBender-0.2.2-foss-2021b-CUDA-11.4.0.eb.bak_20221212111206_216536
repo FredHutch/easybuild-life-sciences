@@ -1,0 +1,55 @@
+easyblock = 'PythonBundle'
+
+name = 'CellBender'
+version = '0.2.2'
+
+homepage = 'https://cellbender.readthedocs.io/'
+description = """CellBender is a software package for eliminating technical artifacts from high-throughput
+ single-cell RNA sequencing (scRNA-seq) data."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('PyTorch', '1.11.0', '-CUDA-%(cudaver)s'),
+    ('scikit-learn', '1.0.1'),
+    ('SciPy-bundle', '2022.05'),
+    ('PyTables', '3.6.1'),
+    ('matplotlib', '3.4.3'),
+    ('h5py', '3.6.0'),
+    ('tqdm', '4.62.3'),
+]
+
+use_pip = True
+download_dep_fail = True
+sanity_pip_check = True
+
+exts_list = [
+    ('sphinx-argparse', '0.3.1', {
+        'modulename': 'sphinxarg',
+    }),
+    ('sphinx_autodoc_typehints', '1.13.1'),
+    ('sphinx_rtd_theme', '1.1.1'),
+    ('sphinxcontrib-programoutput', '0.17', {
+        'modulename': 'sphinxcontrib.programoutput',
+    }),
+    ('natsort', '8.1.0'),
+    ('anndata',  '0.8.0'),
+    ('opt_einsum', '3.3.0'),
+    ('pyro-api', '0.1.2', {
+        'modulename': 'pyroapi'
+    }),
+    ('pyro-ppl', '1.8.3', {
+        'modulename': 'pyro',
+    }),
+    ('cellbender', version, {
+        'source_urls': ['https://github.com/broadinstitute/CellBender/archive/refs/tags/'],
+        'sources': ['v%(version)s.tar.gz'],
+        'modulename': '%(namelower)s',
+    }),
+]
+
+sanity_check_commands = ['CellBender --help']
+
+moduleclass = 'bio'
