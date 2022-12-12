@@ -1,0 +1,33 @@
+Backport patch from commit 0a7af10 of Pillow 8.4 to fix expand funtion
+Required for pytorch/vision-0.13.1 https://github.com/pytorch/vision/issues/4934
+
+Author: John Dey Fred Hutch Cancer Center
+
+diff -ruN Pillow-8.3.2.orig/src/PIL/ImageOps.py Pillow-8.3.2/src/PIL/ImageOps.py
+--- Pillow-8.3.2.orig/src/PIL/ImageOps.py	2021-09-02 05:07:43.000000000 -0700
++++ Pillow-8.3.2/src/PIL/ImageOps.py	2022-12-12 14:44:19.811525000 -0800
+@@ -395,15 +395,16 @@
+     height = top + image.size[1] + bottom
+     color = _color(fill, image.mode)
+     if image.mode == "P" and image.palette:
+-        out = Image.new(image.mode, (width, height))
+-        out.putpalette(image.palette)
+-        out.paste(image, (left, top))
+-
+-        draw = ImageDraw.Draw(out)
+-        draw.rectangle((0, 0, width - 1, height - 1), outline=color, width=border)
++        image.load()
++        palette = image.palette.copy()
++        if isinstance(color, tuple):
++            color = palette.getcolor(color)
+     else:
+-        out = Image.new(image.mode, (width, height), color)
+-        out.paste(image, (left, top))
++        palette = None
++    out = Image.new(image.mode, (width, height), color)
++    if palette:
++        out.putpalette(palette.palette)
++    out.paste(image, (left, top))
+     return out
+ 
+ 
