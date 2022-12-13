@@ -32,6 +32,6 @@ sanity_check_paths = {
 }
 
 modloadmsg = "To execute %(name)s, run: java -jar $EBROOTCROMWELL/%(name)s.jar\n"
-modloadmsg += "\nTo execute womtool, run: java -jar $EBROOTCROMWELL/wamtool.jar\n"
+modloadmsg += "\nTo execute womtool, run: java -jar $EBROOTCROMWELL/womtool.jar\n"
 
 moduleclass = 'bio'
