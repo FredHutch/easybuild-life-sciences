@@ -1,0 +1,33 @@
+# easybuild easyconfig
+#
+# Fred Hutchinson Cancer Center
+# John Dey <jfdey@fredhutch.org>
+#
+easyblock = 'MakeCp'
+
+name = 'pblat'
+version = '2.5.1'
+
+homepage = 'http://icebert.github.io/pblat/'
+description = """Parallel blat based on Jim Kent's blat"""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+source_urls = ['https://github.com/icebert/pblat/archive/refs/tags']
+sources = [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+checksums = ['e85a4d752b8e159502d529f0f9e47579851a6b466b6c2f1f4d49f598642bc615']
+
+dependencies = [
+    ('zlib', '1.2.11'),
+]
+
+files_to_copy = [(['pblat'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/pblat'],
+    'dirs': [],
+}
+
+sanity_check_commands = ["pblat"]
+
+moduleclass = 'bio'
