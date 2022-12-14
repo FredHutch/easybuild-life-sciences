@@ -1,0 +1,40 @@
+# easybuild easyconfig
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Tarball'
+
+name = 'Gurobi'
+version = '10.0.0'
+
+homepage = 'https://gurobi.com'
+description = """The Gurobi Optimizer allows users to state their toughest
+ business problems as mathematical models, and then automatically considers
+ billions or even trillions of possible solutions to find the best one. Our
+ solver can be used as both a decision-making assistant, to help guide the
+ choices of a skilled expert, or as a fully automated tool to make decisions
+ with no human intervention."""
+
+toolchain = SYSTEM
+
+# Comerical software requires a license and login
+source_urls = ['https://www.gurobi.com/downloads/']
+sources = ['%(namelower)s%(version)s_linux64.tar.gz']
+checksums = ['91a9ce1464f5f948809fcdfbdeb55f77698ed8a6d6cfa6985295424b6ece2bd4']
+
+# files_to_copy = ['linux64']
+
+modextravars = {
+    'GUROBI_HOME': '%(installdir)s',
+    #'GRB_LICENSE_FILE': '%(installdir)s/gurobi.lic'
+}
+modextrapaths = {
+    'PATH': 'bin', # GUROBI_HOME/bin
+    'LD_LIBRARY_PATH': 'lib' # GUROBI_HOME/lib
+}
+
+sanity_check_paths = {
+    'files': ['bin/gurobi.sh'],
+    'dirs': ['bin', 'docs', 'lib'],
+}
+
+moduleclass = 'lib'
