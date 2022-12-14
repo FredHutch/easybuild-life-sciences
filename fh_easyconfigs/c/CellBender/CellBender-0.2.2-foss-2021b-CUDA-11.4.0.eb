@@ -2,6 +2,7 @@ easyblock = 'PythonBundle'
 
 name = 'CellBender'
 version = '0.2.2'
+versionsuffix = '-CUDA-%(cudaver)s'
 
 homepage = 'https://cellbender.readthedocs.io/'
 description = """CellBender is a software package for eliminating technical artifacts from high-throughput
@@ -14,7 +15,7 @@ dependencies = [
     ('CUDA', '11.4.1', '', SYSTEM),
     ('PyTorch', '1.11.0', '-CUDA-%(cudaver)s'),
     ('scikit-learn', '1.0.1'),
-    ('SciPy-bundle', '2022.05'),
+    ('SciPy-bundle', '2021.10'),
     ('PyTables', '3.6.1'),
     ('matplotlib', '3.4.3'),
     ('h5py', '3.6.0'),
@@ -22,7 +23,6 @@ dependencies = [
 ]
 
 use_pip = True
-download_dep_fail = True
 sanity_pip_check = True
 
 exts_list = [
