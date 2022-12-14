@@ -1,0 +1,72 @@
+
+# easybuild easyconfig
+#
+# Hazel Schubert <hschuber@fredhutch.org>
+# Fred Hutchinson Cancer Center - Seattle Washington - US
+#
+easyblock = 'CMakeMake'
+
+name = 'faiss'
+version = '1.7.3'
+
+homepage = 'https://ai.facebook.com/tools/faiss/'
+description = """FAISS (Facebook AI Similarity Search) is a library that allows developers to
+ quickly search for embeddings of multimedia documents that are similar to each other."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+toolchainopts = {'pic': True, 'openmp': True}
+
+github_account = 'facebookresearch'
+source_urls = [GITHUB_LOWER_SOURCE]
+sources = ["v%(version)s.tar.gz"]
+checksums = ['dda1b031957789e6a6f3b37d48ad135b9557a33c5013c1c245ef4bced2d787de']
+
+builddependencies = [
+    ('CMake', '3.22.1'),
+    ('SWIG', '4.0.2'),
+]
+
+dependencies = [
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('FlexiBLAS', '3.0.4'),
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2022.05'),
+]
+
+separate_build_dir = True
+
+build_type = 'Release'
+
+configopts = [
+    '-DBLA_VENDOR=FlexiBLAS',
+    '-DFAISS_ENABLE_GPU=ON',
+    '-DCUDAToolkit_ROOT=/app/software/CUDA/11.4.1',
+    '-DCMAKE_CUDA_ARCHITECTURES="61;75"',
+    '-DFAISS_ENABLE_PYTHON=ON',
+    '-DBUILD_SHARED_LIBS=ON',
+    '-DBUILD_TESTING=ON',
+]
+
+build_cmd_targets = [
+    'faiss',
+    'swigfaiss',
+    'faiss_test',
+    'TestCodePacking',
+    'TestGpuIndexFlat',
+    'TestGpuIndexBinaryFlat',
+    'TestGpuIndexIVFFlat',
+    'TestGpuMemoryException',
+    'TestGpuIndexIVFPQ',
+    'TestGpuIndexIVFScalarQuantizer',
+    'TestGpuDistance',
+    'TestGpuSelect',
+]
+
+runtest = 'test'
+
+sanity_check_paths = {
+    'files': ['lib/libfaiss.a'],
+    'dirs': ['lib', 'include'],
+}
+
+moduleclass = 'data'
