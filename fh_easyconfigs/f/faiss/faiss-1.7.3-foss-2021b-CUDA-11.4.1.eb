@@ -68,14 +68,17 @@ installopts = ' && cd faiss/python && python setup.py build && python setup.py i
 
 runtest = 'test'
 
-testopts = ' && pytest tests/test_*.py'
+#testopts = ' && pytest tests/test_*.py'
 
 sanity_check_paths = {
     'files': [
         'lib/libfaiss.so',
+    ],
+    'dirs': [
+        'lib',
+        'include',
         'lib/python%(pyshortver)s/site-packages/faiss-%(version)s-py%(pyshortver)s.egg',
     ],
-    'dirs': ['lib', 'include'],
 }
 
 sanity_check_commands = [
