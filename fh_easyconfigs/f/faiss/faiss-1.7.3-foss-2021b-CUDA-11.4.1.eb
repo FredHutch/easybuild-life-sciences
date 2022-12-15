@@ -8,6 +8,7 @@ easyblock = 'CMakeMake'
 
 name = 'faiss'
 version = '1.7.3'
+versionsuffix = '-CUDA-%(cudaver)s'
 
 homepage = 'https://ai.facebook.com/tools/faiss/'
 description = """FAISS (Facebook AI Similarity Search) is a library that allows developers to
@@ -37,13 +38,14 @@ separate_build_dir = True
 
 build_type = 'Release'
 
+build_shared_libs = True
+
 configopts = [
     '-DBLA_VENDOR=FlexiBLAS',
     '-DFAISS_ENABLE_GPU=ON',
     '-DCUDAToolkit_ROOT=/app/software/CUDA/11.4.1',
     '-DCMAKE_CUDA_ARCHITECTURES="61;75"',
     '-DFAISS_ENABLE_PYTHON=ON',
-    '-DBUILD_SHARED_LIBS=ON',
     '-DBUILD_TESTING=ON',
 ]
 
@@ -62,11 +64,28 @@ build_cmd_targets = [
     'TestGpuSelect',
 ]
 
+installopts = ' && cd faiss/python && python setup.py build && python setup.py install --prefix=%(installdir)s'
+
 runtest = 'test'
 
+testopts = ' && pytest tests/test_*.py'
+
 sanity_check_paths = {
-    'files': ['lib/libfaiss.a'],
+    'files': [
+        'lib/libfaiss.so',
+        'lib/python%(pyshortver)s/site-packages/faiss-%(version)s-py%(pyshortver)s.egg',
+    ],
     'dirs': ['lib', 'include'],
+}
+
+sanity_check_commands = [
+    'python -m pip check',
+    'python -c "import faiss"',
+]
+    
+
+modextrapaths = {
+    'PYTHONPATH': 'lib/python%(pyshortver)s/site-packages',
 }
 
 moduleclass = 'data'
