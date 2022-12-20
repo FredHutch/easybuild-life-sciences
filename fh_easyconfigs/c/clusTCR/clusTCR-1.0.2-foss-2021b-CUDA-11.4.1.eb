@@ -7,7 +7,7 @@ easyblock = 'PythonBundle'
 
 name = 'clusTCR'
 version = '1.0.2'
-#versionsuffix = '-Python-%(pyver)s'
+versionsuffix = '-CUDA-%(cudaver)s'
 
 github_account = 'svalkiers'
 homepage = 'https://svalkiers.github.io/clusTCR/'
@@ -23,7 +23,8 @@ dependencies = [
     ('OpenMPI', '4.1.1'),
     ('Clang', '12.0.1'),
     ('OpenBLAS', '0.3.18'),
-    ('faiss', '1.7.3', '-CUDA-11.4.1'),
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('faiss', '1.7.3', versionsuffix),
 ]
 
 use_pip = True

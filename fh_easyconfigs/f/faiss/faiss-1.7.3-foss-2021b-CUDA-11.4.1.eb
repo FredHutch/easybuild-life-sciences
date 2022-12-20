@@ -64,20 +64,21 @@ build_cmd_targets = [
     'TestGpuSelect',
 ]
 
-installopts = ' && cd faiss/python && python setup.py build && python setup.py install --prefix=%(installdir)s'
+#installopts = ' && cd faiss/python && python setup.py build && python setup.py install --prefix=%(installdir)s'
+installopts = ' && cd faiss/python && python -m pip install --prefix="%(installdir)s" .'
+installopts += ' && install -m 0644 libfaiss_python_callbacks.so "%(installdir)s/lib/"'
 
 runtest = 'test'
-
-#testopts = ' && pytest tests/test_*.py'
 
 sanity_check_paths = {
     'files': [
         'lib/libfaiss.so',
+        'lib/libfaiss_python_callbacks.so'
     ],
     'dirs': [
         'lib',
         'include',
-        'lib/python%(pyshortver)s/site-packages/faiss-%(version)s-py%(pyshortver)s.egg',
+        'lib/python%(pyshortver)s/site-packages/faiss',
     ],
 }
 
