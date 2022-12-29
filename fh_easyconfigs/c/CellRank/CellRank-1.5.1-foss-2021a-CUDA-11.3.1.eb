@@ -1,0 +1,57 @@
+easyblock = 'PythonBundle'
+
+name = 'CellRank'
+version = '1.5.1'
+# versionsuffix = '-CUDA-%(cudaver)s'
+
+
+homepage = 'https://cellrank.readthedocs.io/en/stable/'
+description = """CellRank is a toolkit to uncover cellular dynamics based on
+ Markov state modeling of single-cell data.  It contains two main modules:
+kernels compute cell-cell transition probabilities and estimators generate
+hypothesis based on these. """
+
+toolchain = {'name': 'foss', 'version': '2021a'}
+
+dependencies = [
+    ('Python', '3.9.5'),
+    ('PETSc', '3.15.1'),
+    ('petsc4py', '3.15.0'),
+    ('SLEPc', '3.15.1'),
+    ('slepc4py', '3.15.1'),
+    ('scikit-learn', '0.24.2'),
+    ('scVelo', '0.2.4'),
+    ('typing-extensions', '3.10.0.0'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('docrep', '0.3.2', {
+    }),
+    ('python-utils', '2.5.6', {
+    }),
+    ('progressbar2', '3.53.1', {
+        'modulename': 'progressbar',
+    }),
+    ('pygam', '0.8.0', {
+    }),
+    ('joblib', '1.0.1', {
+    }),
+    ('pygpcca', '1.0.3', {
+    }),
+    ('wrapt', '1.12.1', {
+    }),
+    (name, version, {
+        'modulename': 'cellrank',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+        'patches': ['%(namelower)s-%(version)s_pandas.patch'],
+        'use_pip_extras': 'krylov',
+    }),
+]
+
+sanity_pip_check = True
+
+sanity_check_commands = ["python -c 'import cellrank as cr'"]
+
+moduleclass = 'bio'
