@@ -1,4 +1,0 @@
-cellrank 1.5.1 has requirement pandas>=1.2.0, but you have pandas 1.1.4.
-cellrank 1.5.1 has requirement scikit-learn>=0.24.0, but you have scikit-learn 0.23.2.
-cellrank 1.5.1 has requirement scvelo>=0.2.4, but you have scvelo 0.2.3.
-
