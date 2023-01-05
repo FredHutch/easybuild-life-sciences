@@ -1,0 +1,34 @@
+easyblock = 'ConfigureMake'
+
+name = 'libfilezilla'
+version = '0.40.0'
+
+homepage = 'https://lib.filezilla-project.org'
+description = "libfilezilla is a small and modern C++ library, offering some basic functionality to build high-performing, platform-independent programs."
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+source_urls = ['https://dl2.cdn.filezilla-project.org/libfilezilla/']
+sources = [SOURCE_TAR_BZ2]
+checksums = ['c0843c62d1512f6aec57c6a27806b491ec8cf40b8c2ed259faba9f6907820c72']
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+    ('gettext', '0.21'),
+]
+
+dependencies = [
+    ('GMP', '6.2.1'),
+    ('nettle', '3.7.3'),
+    ('GnuTLS', '3.7.3'),
+]
+
+runtest = "check"
+
+sanity_check_paths = {
+    'files': ['lib/libfilezilla.a', 'lib/libfilezilla.%s' % SHLIB_EXT,
+              'lib/pkgconfig/libfilezilla.pc'],
+    'dirs': ['include/libfilezilla', 'share'],
+}
+
+moduleclass = 'lib'

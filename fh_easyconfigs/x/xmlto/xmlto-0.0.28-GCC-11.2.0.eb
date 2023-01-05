@@ -1,0 +1,25 @@
+easyblock = 'ConfigureMake'
+
+name = 'xmlto'
+version = '0.0.28'
+
+homepage = 'https://www.pagure.io/xmlto'
+description = "A tool for converting XML files to various formats"
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+source_urls = ['https://releases.pagure.org/xmlto/']
+sources = [SOURCE_TAR_BZ2]
+checksums = ['1130df3a7957eb9f6f0d29e4aa1c75732a7dfb6d639be013859b5c7ec5421276']
+
+builddependencies = []
+dependencies = []
+
+runtest = "check"
+
+sanity_check_paths = {
+    'files': ['bin/xmlto', 'bin/xmlif'],
+    'dirs': ['bin', 'share'],
+}
+
+moduleclass = 'tools'
