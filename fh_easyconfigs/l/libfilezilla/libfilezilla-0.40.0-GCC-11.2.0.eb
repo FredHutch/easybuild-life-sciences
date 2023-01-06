@@ -6,7 +6,7 @@ version = '0.40.0'
 homepage = 'https://lib.filezilla-project.org'
 description = "libfilezilla is a small and modern C++ library, offering some basic functionality to build high-performing, platform-independent programs."
 
-toolchain = {'name': 'foss', 'version': '2021b'}
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
 
 source_urls = ['https://dl2.cdn.filezilla-project.org/libfilezilla/']
 sources = [SOURCE_TAR_BZ2]
