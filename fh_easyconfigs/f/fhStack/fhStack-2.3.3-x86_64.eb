@@ -1,0 +1,21 @@
+easyblock = 'Bundle'
+
+name = 'fhStack'
+version = '2.3.3'
+versionsuffix = '-x86_64'
+
+homepage = 'https://docs.haskellstack.org'
+description = """Stack is a cross-platform program for developing Haskell projects.
+It is intended for Haskellers both new and experienced."""
+
+toolchain = SYSTEM
+
+dependencies = [
+    ('Stack', version, versionsuffix),
+    ('OpenBLAS', '0.3.18', '', {'name': 'GCC', 'version': '11.2.0'}),
+    ('GMP', '6.2.1', '', {'name': 'GCCcore', 'version': '11.2.0'}),
+    ('expat', '2.4.1', '', {'name': 'GCCcore', 'version': '11.2.0'}),
+    ('bzip2', '1.0.8', '', {'name': 'GCCcore', 'version': '11.2.0'}),
+]
+
+moduleclass = 'devel'
