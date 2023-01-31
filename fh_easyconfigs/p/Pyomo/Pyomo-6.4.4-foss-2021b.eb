@@ -1,0 +1,34 @@
+easyblock = 'PythonBundle'
+
+name = 'Pyomo'
+version = '6.4.4'
+
+homepage = 'https://www.pyomo.org/'
+description = """ Pyomo is a Python-based open-source software package that supports a diverse set of optimization
+ capabilities for formulating and analyzing optimization models. """
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [('Python', '3.9.6')]
+
+exts_list = [
+    ('appdirs', '1.4.4', {
+        'checksums': ['7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41'],
+    }),
+    ('ply', '3.11', {
+        'checksums': ['00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3'],
+    }),
+    ('PyUtilib', '6.0.0', {
+        'checksums': ['d3c14f8ed9028a831b2bf51b8ab7776eba87e66cfc58a06b99c359aaa640f040'],
+    }),
+    (name, version, {
+        'checksums': ['922dd8e6e3e421550acf884bd27f74cab2fe6552cdde36715d116b0c8345c367'],
+    }),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+sanity_check_commands = ['pyomo -h']
+
+moduleclass = 'math'
