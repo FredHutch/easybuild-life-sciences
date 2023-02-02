@@ -3,7 +3,9 @@ easyblock = 'Bundle'
 name = 'Garnett'
 version = '20220903'
 versionsuffix = '-R-%(rver)s'
-local_commit = 'ea16363'
+
+# This is from the 'monocle3' branch
+local_commit = '6dc560c'
 
 homepage = 'https://cole-trapnell-lab.github.io/garnett/'
 description = "Garnett is a software package that faciliates automated cell type classification from single-cell expression data."
@@ -13,7 +15,7 @@ toolchain = {'name': 'foss', 'version': '2021b'}
 dependencies = [
     ('R', '4.2.2'),
     ('fhR', '4.2.2'),
-    ('Monocle3', '1.3.1', versionsuffix), # provides leidenbase
+    ('Monocle3', '1.3.1', versionsuffix),
 ]
 
 github_account = 'cole-trapnell-lab'
@@ -36,29 +38,11 @@ exts_list = [
     ('rly', '1.7.4', {
         'checksums': ['1f59fb906bacf1cae22fe54dd340137063229c8dbcb64aa1a85006fd02bb9910'],
     }),
-    ('DDRTree', '0.1.5', {
-        'checksums': ['d351ec029461b43c0dcc7c30d9f378753b31ba16c6dbf667869df279b874459b'],
-    }),
-    ('sparsesvd', '0.2-2', {
-        'checksums': ['bb40cc69ee3aec28ff1418fd16cd76d953701a7b0d6bdcb0424c71793d96d836'],
-    }),
-    ('docopt', '0.7.1', {
-        'checksums': ['9f473887e4607e9b21fd4ab02e802858d0ac2ca6dad9e357a9d884a47fe4b0ff'],
-    }),
-    ('qlcMatrix', '0.9.7', {
-        'checksums': ['1ef5e0350cfbdb07fca761fc7251584d39d3da2958ea813498b467e4f7661347'],
-    }),
-    ('biocViews', '1.66.2', {
-        'checksums': ['3ea58d8881883672b9a97e91e60524a4faa8b67bec0c9c6fb8a311c77ba4bd39'],
-    }),
-    ('monocle', '2.26.0', {
-        'checksums': ['4f98bd428c02e3152820a10da81a3c9896f3aa9cdf80e6df4242e1d7137c7db4'],
-    }),
     (name, version, {
         'modulename': '%(namelower)s',
         'source_urls': ['https://github.com/%(github_account)s/%(namelower)s/archive'],
-        'sources': [{'download_filename': '%(localcommit)s.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
-        'checksums': ['bb954722a4b20bd1c4f4dfd7e5cd9e323c032fa190724fdbd19aa63cc07f1417'],
+        'sources': [{'download_filename': f'{local_commit}.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+        'checksums': ['409c818015039224d05273e3946226a4c98cbc414a60eef0f23a155da27d8b04'],
     }),
 ]
 
