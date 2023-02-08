@@ -24,7 +24,7 @@ dependencies = [
     ('Bowtie2', '2.4.4')
 ]
 
-cmds_map = [('.*', '/bin/bash ./install.sh && /bin/chmod 0775 ./bin/hlahd.sh')]
+cmds_map = [('.*', '/bin/bash ./install.sh && /bin/bash update.dictionary.sh && /bin/chmod 0775 ./bin/hlahd.sh')]
 
 files_to_copy = [
     'bin',
@@ -46,6 +46,7 @@ sanity_check_paths = {
         'bin/pick_up_allele',
         'bin/pm_extract',
         'bin/hla_est',
+        'bin/create_fasta_from_dat',
         'update.dictionary.sh',
     ],
     'dirs': ['bin', 'dictionary', 'freq_data']
