@@ -13,9 +13,6 @@ sidebar:
  FOSS - Free Open Source Software. GNU Compiler Collection (GCC) based compiler toolchain, including
  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
 
- New to the 2021b toolchain is support for FlexiBLAS. There are so many linear algebra libraries that a new library needed to
-be created. FlexiBLAS is not really a library but a wrapper to BLAS and LAPACK. The author has a nice video introduction and has done much work clean up the calling interfaces for BLAS and LAPACK. You can code to one standard and swap dynamicly without re-compiling.
-
 ### Package List
  * [GCCcore-12.2.0](https://gcc.gnu.org/)The GNU Compiler Collection includes front ends for
  C, C++, Objective-C, Fortran, Java, and Ada, as well as libraries for these languages (libstdc++, libgcj,...).
