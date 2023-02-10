@@ -1,0 +1,56 @@
+easyblock = 'Bundle'
+
+name = 'Garnett'
+version = '20220903'
+versionsuffix = '-R-%(rver)s'
+
+# This is from the 'monocle3' branch
+local_commit = '6dc560c'
+
+homepage = 'https://cole-trapnell-lab.github.io/garnett/'
+description = "Garnett is a software package that faciliates automated cell type classification from single-cell expression data."
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('R', '4.2.2'),
+    ('fhR', '4.2.2'),
+    ('Monocle3', '1.3.1', versionsuffix),
+]
+
+github_account = 'cole-trapnell-lab'
+exts_defaultclass = 'RPackage'
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'http://bioconductor.org/packages/release/bioc/src/contrib/',
+        'http://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'http://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# Order of extensions is important
+exts_list = [
+    ('rly', '1.7.4', {
+        'checksums': ['1f59fb906bacf1cae22fe54dd340137063229c8dbcb64aa1a85006fd02bb9910'],
+    }),
+    (name, version, {
+        'modulename': '%(namelower)s',
+        'source_urls': ['https://github.com/%(github_account)s/%(namelower)s/archive'],
+        'sources': [{'download_filename': f'{local_commit}.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+        'checksums': ['409c818015039224d05273e3946226a4c98cbc414a60eef0f23a155da27d8b04'],
+    }),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['%(namelower)s'],
+}
+
+moduleclass = 'bio'

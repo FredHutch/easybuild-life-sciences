@@ -1,0 +1,29 @@
+# EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+# Author: Jordi Blasco <jordi.blasco@hpcnow.com>
+# HPCNow! - www.hpcnow.com
+
+easyblock = 'PythonPackage'
+
+name = 'future'
+version = '0.18.3'
+
+homepage = 'http://python-future.org/'
+description = "python-future is the missing compatibility layer between Python 2 and Python 3."
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+source_urls = [PYPI_SOURCE]
+sources = [SOURCE_TAR_GZ]
+checksums = ['34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307']
+
+dependencies = [('Python', '3.9.6')]
+
+use_pip = True
+download_dep_fail = True
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'lib'

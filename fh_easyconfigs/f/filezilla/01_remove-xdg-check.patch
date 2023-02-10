@@ -1,0 +1,15 @@
+Author: Adrien Cunin <adri2000@ubuntu.com>
+Description: make configure only warn if xdg-open is not present.
+Index: filezilla/configure.ac
+===================================================================
+--- filezilla.orig/configure.ac
++++ filezilla/configure.ac
+@@ -588,7 +588,7 @@
+   if echo "`$WX_CONFIG_WITH_ARGS --basename`" | grep -i gtk > /dev/null 2>&1; then
+     AC_PATH_PROG(xdgopen, xdg-open)
+     if test -z "$xdgopen"; then
+-      AC_MSG_ERROR([xdg-open not found. This program is the preferred way to launch the default browser. Please install the xdg-utils.])
++      AC_MSG_WARN([xdg-open not found. This program is the preferred way to launch the default browser. Please make sure that xdg-utils is installed at runtime.])
+     fi
+ 
+     if echo "`$WX_CONFIG_WITH_ARGS --basename`" | grep -i gtk2 > /dev/null 2>&1; then

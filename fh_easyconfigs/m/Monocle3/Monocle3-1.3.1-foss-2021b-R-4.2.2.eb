@@ -1,0 +1,103 @@
+easyblock = 'Bundle'
+
+name = 'Monocle3'
+version = '1.3.1'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.14'
+
+homepage = 'https://cole-trapnell-lab.github.io/monocle3'
+description = """Single-cell transcriptome sequencing (sc-RNA-seq) experiments allow us to discover new cell types and help us understand how they arise in development. The Monocle 3 package provides a toolkit for analyzing single-cell gene expression experiments."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('R', '4.2.2'),
+    ('fhR', '4.2.2'),
+    ('Python', '3.9.6'),
+    ('GEOS', '3.9.1'),
+]
+
+github_account = 'cole-trapnell-lab'
+exts_defaultclass = 'RPackage'
+#exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+exts_default_options = {
+    'source_urls': [
+        'http://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'http://cran.r-project.org/src/contrib/',  # current version of packages
+        'http://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'http://bioconductor.org/packages/release/bioc/src/contrib/',
+        'http://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'http://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# !! order of packages is important !!
+# packages updated on February 01, 2023
+exts_list = [
+    ('textshaping', '0.3.6', {
+        'checksums': ['80e2c087962f55ce2811fbc798b09f5638c06c6b28c10cd3cb3827005b902ada'],
+    }),
+    ('ragg', '1.2.5', {
+        'checksums': ['936f4d75e0e01cdeefb9f57d121cdd7812d0de5a9e1a3a8315f92ce1c84da8f9'],
+    }),
+    ('ggrastr', '1.0.1', {
+        'checksums': ['82d6e90fa38dec85e829f71018532ed5b709a50a585455fc07cb3bae282f5d1f'],
+    }),
+    ('spdep', '1.2-7', {
+        'checksums': ['9dac594825bf2d0aa31e845bfec05d8ce206327840fe455391741dbbdf9c9eea'],
+    }),
+    ('grr', '0.9.5', {
+        'checksums': ['292606de2983ac5840c90d3e0977441b482c9e73c1674b662f8b4fb8f3632b2b'],
+    }),
+    ('Matrix.utils', '0.9.8', {
+        'checksums': ['ebc59d3ef751775515586ff1f2396e429a1e9d91a10099d804134fcf74c0ae28'],
+    }),
+    ('pbmcapply', '1.5.1', {
+        'checksums': ['7ffc2854a384962f0dd523aa9ef33ce8fc290997206b71b840a49049d87112dd'],
+    }),
+    ('RhpcBLASctl', '0.21-247.1', {
+        'checksums': ['5be55fd5ddd8173167a48b9f072835a34062ad0268308f2b3fbd1781a5c99769'],
+    }),
+    ('speedglm', '0.3-4', {
+        'checksums': ['1a12db7dbceaaf5cf4f9a0c03e2a2b9f32e91b697daf2ccfe81bbae9ac3046ce'],
+    }),
+    ('rtf', '0.4-14.1', {
+        'checksums': ['1066011c4a2842cdc846445ec3d4929d01c8fbae93bfad5313ade2ad3c704e0c'],
+    }),
+    ('sas7bdat', '0.6', {
+        'checksums': ['d34f40f05d4b1ba27138c0d65f4f5dc5bec758bde6a00423bb46fd5532c0cb8f'],
+    }),
+    ('BEACH', version, {
+        'checksums': ['59becc138331b0c6af5b83ab1d7a313723103d5dc37da7a6476ba3490e33382e'],
+    }),
+    ('ResidualMatrix', '1.8.0', {
+        'checksums': ['49e6f4f805836f9a02857e84fcd1f726b9c470c452814be5ccd069f84376117f'],
+    }),
+    ('batchelor', '1.14.1', {
+        'checksums': ['d5312d436dcb6fa2163c8e0c4febfeb533b78f284614f4f08224f46bd42248fa'],
+    }),
+    ('leidenbase', '0.1.14', {
+        'checksums': ['78df2fc0804f2f3a68d775039cc4483ed22f34bb8f9b1a4f52b1ffcb6877207d'],
+    }),
+    (name, version, {
+        'modulename': '%(namelower)s',
+        'source_urls': ['https://github.com/%(github_account)s/monocle3/archive'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+        'checksums': ['30e86d5323ea22b302614813ecf102f26774b42710589671a1f1d51ef9ad183d'],
+    }),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['leidenbase', '%(namelower)s'],
+}
+
+moduleclass = 'bio'

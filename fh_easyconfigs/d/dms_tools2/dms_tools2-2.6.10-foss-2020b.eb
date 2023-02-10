@@ -1,0 +1,104 @@
+# easybuild easyconfig
+#
+# Fred Hutchinson Cancer Center
+# John Dey jfdey@fredhutch.org
+# Hazel Schubert hschuber@fredhutch.org
+#
+easyblock = 'PythonBundle'
+
+name = 'dms_tools2'
+version = '2.6.10'
+
+homepage = 'https://jbloomlab.github.io/dms_tools2/'
+description = """dms_tools2 is a software package for analyzing deep mutational scanning data.
+ It is tailored to analyze libraries created using comprehensive codon mutagenesis of protein-coding
+ of genes."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+
+builddependencies = [
+    ('pybind11', '2.6.0'),
+]
+
+dependencies = [
+    ('Python', '3.8.6'), # 3.8 specifically requested
+    ('SciPy-bundle', '2020.11'),
+    ('matplotlib', '3.3.3'),
+    ('Biopython', '1.78'),
+    ('IPython', '7.18.1'),
+    ('JupyterLab', '2.2.8'),
+    ('Pysam', '0.16.0.1'),
+    ('PyStan', '2.19.1.1'),
+    ('Seaborn', '0.11.1'),
+    ('aiohttp', '3.7.3'),
+    ('statsmodels', '0.12.1'),
+    ('GitPython', '3.1.14'),
+    ('ImageMagick', '7.0.10-35'),
+    ('nodejs', '12.19.0'),
+    ('snakemake', '6.5.2'), # 6.5.2 specifically requested
+]
+
+use_pip = True
+#sanity_pip_check = True
+
+exts_list = [
+    ('numpy', '1.18.5', { # pandas 0.25.3 doesn't build with newer numpy
+        'sources': [{'filename': SOURCE_ZIP}],
+    }),
+    ('scipy', '1.6.0'),      # 1.6.0 specifically requested
+    ('pandas', '0.25.3'),    # 0.25.3 specifically requested
+    ('dmslogo', '0.6.2'),    # 0.6.2 specifically requested
+    ('toolz', '0.12.0'),     # from altair
+    ('altair', '4.2.0'),
+    ('args', '0.1.0'),       # from clint
+    ('clint', '0.5.1'),      # from mamba
+    ('coverage', '7.1.0'),   # from mamba
+    ('mamba', '0.11.2'),
+    ('nbdime', '2.1.1'),
+    ('binarymap', '0.6'),  # from dms-variants
+    ('vega-datasets', '0.9.0', {
+        'sources': [{'filename': 'vega_datasets-%(version)s.tar.gz'}],
+    }),
+    ('dms-variants', '1.4.2', { # fails sanity check because it wants pandas >= 1.2
+        'source_urls': ['https://github.com/jbloomlab/dms_variants/archive/refs/tags'],
+        'sources': [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+    ('pybktree', '1.1'),             # from dms_tools2
+    ('palettable', '3.3.0'),         # from mizani
+    ('backports.zoneinfo', '0.2.1'), # from mizani
+    ('mizani', '0.6.0'),             # from plotnine
+    ('descartes', '1.1.0'),          # from plotnine
+    ('plotnine', '0.6.0'),           # from dms_tools2
+    ('natsort', '8.2.0'),            # from dms_tools2
+    ('typing-extensions', '3.10.0.0', { # from PyPDF2
+        'sources': [{'filename': 'typing_extensions-%(version)s.tar.gz'}],
+    }),
+    ('PyPDF2', '2.10.9', {           # from phydms; issues building newer versions
+        'modulename': 'PyPDF2',
+    }),
+    ('weblogo', '3.5.0', {           # from phydms
+         'modulename': 'weblogolib',
+    }),
+    ('Pyvolve', '1.0.3'),            # from phydms
+    ('sympy', '1.11.1'),             # from phydms
+    ('phydms', '2.4.1', {            # from dms_tools2
+        'modulename': 'phydmslib',
+    }),
+    ('umi_tools', '1.1.2'),          # from dms_tools2
+    (name, version, {                # fails sanity check because it wants the "jupyter" metapackage and matplotlib < 3.3
+        'source_urls': ['https://github.com/jbloomlab/%(name)s/archive/refs/tags'],
+        'sources': [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+]
+
+sanity_check_commands = ['dms2_batch_diffsel --help']
+
+_citations = """
+dms_tools2 is written by the [Bloom Lab](https://research.fhcrc.org/bloom/en.html).
+If you use dms_tools2 in your research, please cite the following reference:
+
+Bloom JD. “Software for the analysis and visualization of deep mutational scanning data.”.
+BMC Bioinformatics, 16:168 (2015).
+"""
+
+moduleclass = 'bio'

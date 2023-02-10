@@ -1,0 +1,55 @@
+##
+# This is an easyconfig file for EasyBuild, see https://github.com/easybuilders/easybuild
+# 
+# Hazel Schubert <hschuber@fredhutch.org>
+#
+##
+easyblock = 'CmdCp'
+
+name = 'HLA-HD'
+version = '1.6.1'
+
+homepage = 'https://www.genome.med.kyoto-u.ac.jp/HLA-HD/'
+description = """HLA-HD (HLA typing from High-quality Dictionary) can accurately
+ determine HLA alleles with 6-digit precision from NGS data (fastq format).
+ RNA-Seq data can also be applied."""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+# https://www.genome.med.kyoto-u.ac.jp/HLA-HD/download-request/
+sources = ['hlahd.%(version)s.tar.gz']
+checksums = ['370059eb4cab3b7c7cc699f482063336a6eca1b6555a8693aaf7ca66a2d3dbd4']
+
+dependencies = [
+    ('Bowtie2', '2.4.4')
+]
+
+cmds_map = [('.*', '/bin/bash ./install.sh && /bin/bash update.dictionary.sh && /bin/chmod 0775 ./bin/hlahd.sh')]
+
+files_to_copy = [
+    'bin',
+    'dictionary',
+    'freq_data',
+    "HLA_gene.split.3.32.0.txt",
+    "HLA_gene.split.3.50.0.txt",
+    "HLA_gene.split.txt",
+    "Readme.txt",
+    "update.dictionary.sh",
+]
+
+sanity_check_paths = {
+    'files': [
+        'bin/hlahd.sh',
+        'bin/split_shell',
+        'bin/get_diff_fasta',
+        'bin/stfr',
+        'bin/pick_up_allele',
+        'bin/pm_extract',
+        'bin/hla_est',
+        'bin/create_fasta_from_dat',
+        'update.dictionary.sh',
+    ],
+    'dirs': ['bin', 'dictionary', 'freq_data']
+}
+
+moduleclass = 'bio'
