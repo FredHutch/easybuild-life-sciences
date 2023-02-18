@@ -22,7 +22,9 @@ match modules from different toolchains.
 
 | Toolchain | GCC Version | Notes |
 | ----------|-------------| ---------|
+| [foss-2022b]({{ site.baseurl }}/toolchains/foss-2022b/) | GCC 12.2.0 | Begining Feb 2023 |
 | [foss-2021b]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.2.0 | Begining Nov 2021 |
+| [foss-2021a]({{ site.baseurl }}/toolchains/foss-2021a/) | GCC 10.3.0 | Limited use |
 | [foss-2020b]({{ site.baseurl }}/toolchains/foss-2020b/) | GCC 10.2.0 | Begining Nov 2020 |
 | foss-2020a | GCC 9.3.0 | Mostly skipped |
 | [foss-2019b]({{ site.baseurl }}/toolchains/foss-2019b/) | GCC 8.3.0 | Primay tool chain for June 2019 cluster update |
