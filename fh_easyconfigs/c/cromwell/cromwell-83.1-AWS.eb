@@ -1,0 +1,36 @@
+# The Fred Hutchinson Cancer Research Center
+# Homepage: https://www.fredhutch.org
+# Author: Benjamin McGough <bmcgough@fredhutch.org>
+
+easyblock = 'JAR'
+
+name = 'cromwell'
+version = '83.1-AWS'
+local_commit = '490d683'
+
+homepage = 'https://github.com/broadinstitute/cromwell'
+description = """Scientific workflow engine designed for simplicity & scalability."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/henriqueribeiro/%(name)s/releases/download/%(version)s']
+sources = [ '%s-83-%s-SNAP.jar' % (name, local_commit)]
+checksums = []
+
+dependencies = [('Java', '11')]
+
+local_from = '%(installdir)s/%(name)s-83-490d683-SNAP.jar'
+local_to = "%(installdir)s/%(name)s.jar"
+
+postinstallcmds = [ "mv %s %s" % ( local_from, local_to) ]
+
+sanity_check_paths = {
+    'files': ['%(name)s.jar'],
+    'dirs': [],
+}
+
+modloadmsg = "To execute %(name)s, run: java -jar $EBROOTCROMWELL/%(name)s.jar\n"
+
+modextrapaths = {"CLASSPATH": ''}
+
+moduleclass = 'bio'

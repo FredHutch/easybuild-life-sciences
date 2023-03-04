@@ -1,0 +1,15 @@
+# easybuild easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+# Fred Hutchinson Cancer Center - Seattle Washington US
+# Nov 8, 2022
+name = DaPars2
+version = '2.1'
+
+homepage = 'https://github.com/3UTR/DaPars2/wiki'
+description = """Dynamics analysis of Alternative PolyAdenylation from multiple RNA-seq data"""
+
+source_urls = ['https://github.com/3UTR/DaPars2/archive/refs/tags/v2.1.tar.gz'
+sources = ['v%(version)s.tar.gz']
+
+

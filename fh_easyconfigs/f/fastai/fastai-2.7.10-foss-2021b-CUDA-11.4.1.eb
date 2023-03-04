@@ -1,0 +1,83 @@
+easyblock = 'PythonBundle'
+
+name = 'fastai'
+version = '2.7.10'
+versionsuffix = '-CUDA-11.4.1'
+
+homepage = 'https://github.com/fastai/fastai'
+description = """fastai is a deep learning library which provides practitioners with high-level components."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('Python', '3.9.6', '-bare'),
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('cuDNN', '8.2.2.26', versionsuffix, SYSTEM),
+    ('SciPy-bundle', '2021.10'),
+    ('PyTorch', '1.11.0', versionsuffix),
+    ('torchvision', '0.13.0', versionsuffix),
+    ('PyYAML', '5.4.1'),
+    ('matplotlib', '3.4.3'),
+    ('Pillow', '9.1.0'),
+    ('scikit-learn', '1.0.1'),
+    ('typing-extensions', '4.2.0'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('flit-core', '3.2.0', {
+        'source_tmpl': 'flit_core-%(version)s.tar.gz',
+        'checksums': ['ff87f25c5dbc24ef30ea334074e35030e4885e4c5de3bf4e21f15746f6d99431'],
+    }),
+    ('flit', '3.2.0', {
+        'checksums': ['592464c9268bbacec9bc67b5a3ae62e6e090aeec1563e69501df338a1728e551'],
+    }),
+    ('spacy-legacy', '3.0.10', {
+    }),
+    ('wasabi', '0.10.1', {
+    }),
+    ('spacy-loggers', '1.0.3', {
+    }),
+    ('murmurhash', '1.0.9', {
+    }),
+    ('cymem', '2.0.7', {
+    }),
+    ('preshed', '3.0.8', {
+    }),
+    ('catalogue', '2.0.8', {
+    }),
+    ('srsly', '2.4.5', {
+    }),
+    ('pydantic', '1.10.2', {
+    }),
+    ('confection', '0.0.3', {
+    }),
+    ('immutables', '0.19'),
+    ('contextvars', '2.4', {
+    }),
+    ('blis', '0.7.9', {
+    }),
+    ('thinc', '8.1.5', {
+    }),
+    ('typer', '0.7.0', {
+    }),
+    ('smart_open', '5.2.1', {
+    }),
+    ('pathy', '0.7.1', {
+    }),
+    ('importlib_resources', '5.10.0', {
+    }),
+    ('tqdm', '4.64.1', {
+    }),
+    ('langcodes', '3.3.0', {
+    }),
+    ('spacy', '3.4.3'), #  <4 packaging
+    ('fastcore', '1.5.27'),
+    ('fastprogress', '1.0.3'),
+    ('fastdownload', '0.0.7'),
+    (name, version),
+]
+
+moduleclass = 'tools'

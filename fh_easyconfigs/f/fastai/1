@@ -1,0 +1,71 @@
+easyblock = 'PythonBundle'
+
+name = 'fastai'
+version = '2.7.10'
+versionsuffix = '-CUDA-11.4.1'
+
+homepage = 'https://github.com/fastai/fastai'
+description = """fastai is a deep learning library which provides practitioners with high-level components."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('cuDNN', '8.2.2.26', versionsuffix, SYSTEM),
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+    ('PyTorch', '1.11.0', versionsuffix),
+    ('torchvision', '0.13.0', versionsuffix),
+    ('PyYAML', '5.4.1'),
+    ('matplotlib', '3.4.3'),
+    ('Pillow', '9.1.0'),
+    ('scikit-learn', '1.0.1'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('spacy-legacy', '3.0.10', {
+    }),
+    ('wasabi', '0.10.1', {
+    }),
+    ('spacy-loggers', '1.0.3', {
+    }),
+    ('murmurhash', '1.0.9', {
+    }),
+    ('cymem', '2.0.7', {
+    }),
+    ('preshed', '3.0.8', {
+    }),
+    ('blis', '0.9.1', {
+    }),
+    ('catalogue', '2.0.8', {
+    }),
+    ('srsly', '2.4.5', {
+    }),
+    ('pydantic', '1.10.2', {
+    }),
+    ('confection', '0.0.3', {
+    }),
+    ('contextvars', '2.4', {
+    }),
+    ('thinc', '8.1.5', {
+    }),
+    ('typer', '0.7.0', {
+    }),
+    ('smart_open', '6.2.0', {
+    }),
+    ('pathy', '0.7.1', {
+    }),
+    ('importlib_resources', '5.10.0', {
+    }),
+    ('tqdm', '4.64.1', {
+    }),
+    ('langcodes', '3.3.0', {
+    }),
+    ('spacy', '3.4.3'), #  <4 packaging
+    (name, version),
+]
+
+moduleclass = 'tools'
