@@ -1,0 +1,27 @@
+easyblock = 'CMakeMake'
+
+name = 'elastix'
+version = '5.1.0'
+
+homepage = 'http://elastix.isi.uu.nl/'
+description = " elastix: a toolbox for rigid and nonrigid registration of images. "
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/SuperElastix/elastix/archive/']
+sources = ['%(version)s.tar.gz']
+checksums = ['f2e3e33359d1e35cb986bc1eb7a1b0179cdb20a67e410ac8423102a160bfc29e']
+
+builddependencies = [('CMake', '3.22.1')]
+
+dependencies = [
+    ('ITK', '5.3.0'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/elastix', 'bin/transformix'],
+    'dirs': ['include', 'lib']
+}
+
+moduleclass = 'vis'
