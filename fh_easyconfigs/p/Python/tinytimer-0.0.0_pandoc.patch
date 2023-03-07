@@ -1,0 +1,12 @@
+diff -ruN tinytimer-0.0.0.orig/setup.py tinytimer-0.0.0/setup.py
+--- tinytimer-0.0.0.orig/setup.py	2015-03-20 13:00:14.000000000 -0700
++++ tinytimer-0.0.0/setup.py	2022-12-10 17:02:22.878171000 -0800
+@@ -31,7 +31,7 @@
+ 
+ try:
+     import pypandoc
+-    readme = pypandoc.convert(readme, to='rst', format='md')
++    readme = pypandoc.convert_text(readme, to='rst', format='md')
+ except ImportError as e:
+     print(e)
+     print("Failed to convert %s to reStructuredText", readme_filename)
