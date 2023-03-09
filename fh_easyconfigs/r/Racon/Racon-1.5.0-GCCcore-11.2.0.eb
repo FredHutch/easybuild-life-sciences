@@ -1,0 +1,37 @@
+easyblock = 'CMakeMake'
+
+name = 'Racon'
+version = '1.5.0'
+
+homepage = 'https://github.com/lbcb-sci/racon'
+description = """Ultrafast consensus module for raw de novo genome assembly of long uncorrected reads."""
+
+toolchain = {'name': 'GCCcore', 'version': '11.2.0'}
+
+github_account = 'lbcb-sci'
+source_urls = [GITHUB_SOURCE]
+sources = ['%(version)s.tar.gz']
+checksums = ['41e362f71cc03b934f17d6e2c0d626e1b2997258261b14551586de006666424a']
+
+builddependencies = [
+    ('CMake', '3.22.1'),
+    ('binutils', '2.37'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/racon', 'bin/racon_wrapper'],
+    'dirs': [],
+}
+
+separate_build_dir = True
+configopts = "-DCMAKE_BUILD_TYPE=Release -Dracon_build_wrapper=ON"
+
+postinstallcmds = [
+    'cp %(builddir)s/easybuild_obj/bin/racon_wrapper %(installdir)s/bin',
+    'sed -i "s|%(builddir)s/easybuild_obj/bin/racon|%(installdir)s/bin/racon|" %(installdir)s/bin/racon_wrapper',
+    'sed -i "s|%(builddir)s/easybuild_obj/_deps/rampler-build/bin/rampler|%(installdir)s/bin/rampler|" %(installdir)s/bin/racon_wrapper',
+]
+
+sanity_check_commands = ['racon --help']
+
+moduleclass = 'bio'
