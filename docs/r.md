@@ -12,54 +12,40 @@ sidebar:
   nav: "docs"
 ---
 
-The Fred Hutch R modules have the suffix `-fh1`. The `-fh1` module is spefific
- to the Hutch, and contains libraries that have been requested by Hutch users.
- The Fred Hutch module inherits the modules from a base R module that 
- is maintained by the EasyBuild community. 
- Users should use the 'fh' versions of R.
+The Fred Hutch R modules have the prefix `fh`. fhR modules are specific to the Hutch and
+contain libraries that Hutch users have requested. The Fred Hutch module inherits all
+the libraries from EasyBuild R.  fhR module contains many Bioconductor libraries. Cluster
+users should use the 'fh' versions of R.
 
-### Requesting Modules ###
-Adding every user request for libraries is becoming a challenge to support.
- The Fred Hutch R module has close to 1,000 libraries. Users are encouraged
- to install custom R libraries in their home directories. Users can submit install
- request for libraries that require system libraries.
+### Requesting Modules 
+The Fred Hutch R module has over 1,000 libraries. Adding every user request for libraries is becoming a challenge to support. Users are encouraged to install R libraries in their home directories. To have complex libraries installed which require additional system libraries or data open a ticket with Scicomp.
 
-### User Installed R Modules
-The Fred Hutch R module has over 1,000 libraries, but it might not have the one
-library that you need. R libraries into your home directory if they not otherwise
-available.  Use the `install.packages()` function to install R libraries.
-
-```
-> install.packages("dsa")
-Installing package into ‘/app/easybuild/software/R/3.6.0-foss-2016b-fh1’
-(as ‘lib’ is unspecified)
-Warning in install.packages("dsa") :
-  'lib = "/app/easybuild/software/R/3.6.0-foss-2016b-fh1"' is not writable
-Would you like to use a personal library instead? (yes/No/cancel) yes
-```
-
-The default path for libraries is the system path which is not writable. Chose the
-option to create a personal library. Before adding a personal library you should
-check the location where it will be written.  The `.libPaths()` fuction will show
-the locations that libraries are searched.
+### Installing R Modules
+Additional R libraries can be installed into your home directory.
+Use the `install.packages()` function to install R libraries.
+Since verion 4.0 of R the library paths in your home directory are
+based on the Major.Minor version of R. Users should not set
+R_LIB or any other environment variables that effect searching of
+R library paths. After starting R you can verify library paths with
+*> .libPaths()*. Your personal library path in your home directory
+should app first in the list.
 
 ```
 > .libPaths()
-[1] "/app/easybuild/software/R/3.6.0-foss-2016b-fh1"
-[2] "/home/jfdey/R/x86_64-pc-linux-gnu-library/3.6"
-[3] "/app/easybuild/software/R/3.6.0-foss-2016b/lib/R/library"
->
+[1] "/home/jfdey/R/x86_64-pc-linux-gnu-library/4.2"
+[2] "/app/software/fhR/4.2.2.1-foss-2021b"
+[3] "/app/software/R/4.2.2-foss-2021b/lib/R/library"
 ```
 
-Notice one of the paths is in my "Home" directory and contains the major.minor
- version of R `3.6` in the path. If your library path is not versioned you might have
-defined **R_LIBS_USER** in your .Rprofile configuation file.  Use `Sys.getenv()`
+The first path is in my "Home" directory and contains the major.minor
+ version of *R-4.2* in the path. If your library path is not versioned you might have
+defined *R_LIBS* or **R_LIBS_USER** in your .Rprofile configuation file.  Use `Sys.getenv()`
  to check your default user path.
 
 ```
 Sys.getenv("R_LIBS_USER")
 > Sys.getenv("R_LIBS_USER")
-[1] "~/R/x86_64-pc-linux-gnu-library/3.6"
+[1] "~/R/x86_64-pc-linux-gnu-library/4.2"
 ```
 
 ### Install BioConductor Package
@@ -67,6 +53,7 @@ BioConductor packages are released and updated in step with R releases. Each rel
 
 | R Version | Bioconductor Version |
 |---|---|
+| 4.2.2 | 3.16 |
 | 4.2.0 | 3.15 |
 | 4.1.2 | 3.14 |
 | 4.1.1 | 3.13 |
@@ -77,8 +64,10 @@ BioConductor packages are released and updated in step with R releases. Each rel
 | 4.0.2 | 3.11 |
 
 ### Issues with R Libraries
-One of the most frequent issues are errors with loading libraries.  There are
-two major issues; the library is out of date or there is a newer version available
-from the system that is not being loaded. Use the `packageVersion("snow")`
+One of the most frequent issues user issues are with loading libraries.  There are
+two major issues; A user installed R library that is out of date or a library 
+requires a newer version of a user installed library.
+Use the `packageVersion("snow")`
 function to show the library version and `update.packages()` function to update
-out of date packages.
+the out of date packages. Often a user installed library is already part of the
+*fhR* and is conflicting with the module version. 
