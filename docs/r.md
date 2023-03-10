@@ -27,7 +27,7 @@ Since verion 4.0 of R the library paths in your home directory are
 based on the Major.Minor version of R. Users should not set
 R_LIB or any other environment variables that effect searching of
 R library paths. After starting R you can verify library paths with
-*> .libPaths()*. Your personal library path in your home directory
+**> .libPaths()**. Your personal library path in your home directory
 should app first in the list.
 
 ```
@@ -38,8 +38,8 @@ should app first in the list.
 ```
 
 The first path is in my "Home" directory and contains the major.minor
- version of *R-4.2* in the path. If your library path is not versioned you might have
-defined *R_LIBS* or **R_LIBS_USER** in your .Rprofile configuation file.  Use `Sys.getenv()`
+ version of **R-4.2** in the path. If your library path is not versioned you might have
+defined **R_LIBS** or **R_LIBS_USER** in your .Rprofile configuation file.  Use `Sys.getenv()`
  to check your default user path.
 
 ```
@@ -70,4 +70,4 @@ requires a newer version of a user installed library.
 Use the `packageVersion("snow")`
 function to show the library version and `update.packages()` function to update
 the out of date packages. Often a user installed library is already part of the
-*fhR* and is conflicting with the module version. 
+**fhR** and is conflicting with the module version. 
