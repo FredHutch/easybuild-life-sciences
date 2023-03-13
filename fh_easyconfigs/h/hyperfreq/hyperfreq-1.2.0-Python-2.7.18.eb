@@ -1,0 +1,61 @@
+easyblock = 'PythonBundle'
+
+name = 'hyperfreq'
+version = '1.2.0'
+
+homepage = 'https://python.org/'
+description = """Hypermutation analysis software using BetaRat distribution for Bayesian
+ analysis of the relative probability ratio (RPR) of observing mutations in two contexts. Includes
+ Alnclst, for clustering pre-aligned nucleotide sequences."""
+
+toolchain = {'name': 'foss', 'version': '2020b'}
+toolchainopts = {'pic': True}
+
+builddependencies = [
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('Python', '2.7.18'),
+    ('SciPy-bundle', '2020.11', '-Python-2.7.18'),
+]
+
+sanity_pip_check = True
+sanity_check_commands = ['%(name)s --help']
+
+exts_list = [
+    ('biopython', '1.72', {
+        'modulename': 'Bio',
+        'use_pip':  True,
+    }),
+    ('fisher', '0.1.5', {
+        'use_pip': True,
+    }),
+    ('alnclst', '0.1.2', {
+        'source_urls': ['https://github.com/matsengrp/alnclst/archive/refs/tags'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'use_pip': False,
+        'checksums': ['117b08cbb451b3eb3c89debe4249cb08ce7d5785aaaa0dd1832dbaf29410963c'],
+    }),
+    ('betarat', '1.0.0', {
+        'source_urls': ['https://github.com/matsengrp/betarat/archive/refs/tags'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'use_pip': False,
+        'checksums': ['7f0714b9769dfc1b303b42b40f0f12d7a01fc0449ffa933d93946dc2625a8d5c'],
+    }),
+    ('betarat-refactor', '1', {
+        'modulename': False,
+        'source_urls': ['https://github.com/fhcrc/hyperfreq/archive/'],
+        'source_tmpl': 'master.zip',
+        'use_pip': False,
+        'checksums': ['8e0ef517e9e027ef9c2ef919cbae85afafeaff1f62eda54029675adf6fe5c8ce'],
+    }),
+    (name, version, {
+        'source_urls': ['https://github.com/matsengrp/hyperfreq/archive/refs/tags'],
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'use_pip': False,
+        'checksums': ['e3f0ceb8b18e2b4f5ca9588172fbf2fb582ffa20c24550e71f6075acfbc41a2e'],
+    }),
+]
+
+moduleclass = 'bio'
