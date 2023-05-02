@@ -1,0 +1,98 @@
+easyblock = 'PythonBundle'
+
+name = 'DeepTCR'
+version = '2.1.27'
+local_commit = '0e009da'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+homepage = 'https://sidhomj.github.io/DeepTCR/'
+
+description = """DeepTCR is a python package that has a collection of unsupervised and supervised deep
+ learning methods to parse TCRSeq data."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2022.05'),
+    ('matplotlib', '3.4.3'),
+    ('CUDA', '11.4.1', '', True),
+    ('TensorFlow', '2.7.1', versionsuffix),
+    ('Pillow', '8.3.2'),
+    ('LLVM', '11.1.0'),
+    ('tqdm', '4.62.3'),
+    ('scikit-learn', '1.0.1'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('absl-py', '0.11.0', {
+        'modulename': 'absl'
+    }),
+    ('biopython', '1.81', {
+        'modulename': 'Bio',
+    }),
+    ('bleach', '6.0.0'),
+    ('distinctipy', '1.2.2'),
+    #  ('flatbuffers', '23.3.3'),  part of TF 2.7.1
+    ('google-auth', '2.17.3', {
+        'modulename': 'google.auth',
+    }),
+    ('google-pasta', '0.2.0', {
+        'modulename': 'pasta',
+    }),
+    ('h5py', '3.8.0'),
+    ('typing_extensions', '3.7.4.3', {
+    }),
+    ('importlib_metadata', '6.6.0', {
+    }),
+    ('Keras_Preprocessing', '1.1.2', {
+        'modulename': 'keras_preprocessing',
+    }),
+    ('llvmlite', '0.39.1'),
+    ('logomaker', '0.8'),
+    ('numba', '0.56.4'),
+    ('opt_einsum', '3.3.0'),
+    ('protobuf', '4.21.2', {
+        'modulename': 'google.protobuf',
+    }),
+    ('python-dateutil', '2.8.2', {
+        'modulename': 'dateutil',
+    }),
+    ('readme_renderer', '37.3'),
+    ('rfc3986', '2.0.0'),
+    ('seaborn', '0.12.2'),
+    ('tensorboard_data_server', '0.6.1', {
+        'source_tmpl': '%(name)s-%(version)s-py3-none-manylinux2010_x86_64.whl',
+    }),
+    ('tensorboard_plugin_wit', '1.8.0', {
+        'source_tmpl': 'tensorboard_plugin_wit-%(version)s-py3-none-any.whl',
+    }),
+    ('tensorflow_estimator', '2.7.0', {
+        'source_tmpl': 'tensorflow_estimator-%(version)s-py2.py3-none-any.whl',
+    }),
+    ('tensorflow_io_gcs_filesystem', '0.32.0', {
+        'source_tmpl': 'tensorflow_io_gcs_filesystem-%(version)s-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl',
+    }),
+    ('tqdm', '4.65.0'),
+    ('mdurl', '0.1.2'),
+    ('markdown-it-py', '2.2.0', {
+        'modulename': 'markdown_it',
+    }),
+    ('rich', '13.3.5', {
+    }),
+    ('twine', '4.0.2'),
+    ('pynndescent', '0.5.5'),
+    ('umap-learn', '0.5.3', {
+        'modulename': 'umap',
+    }),
+    (name, version, {
+        'modulename': '%(name)s',
+        'source_urls': ['https://github.com/sidhomj/DeepTCR/archive/'],
+        'source_tmpl': '%s.tar.gz' % local_commit,
+        'patches': ['%(name)s-%(version)s_requirements.patch'],
+    })
+]
+
+moduleclass = 'bio'

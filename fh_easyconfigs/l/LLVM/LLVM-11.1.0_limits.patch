@@ -1,0 +1,12 @@
+include limits to fix compile error 
+diff -ruN llvm-11.1.0.src.orig/utils/benchmark/src/benchmark_register.h llvm-11.1.0.src/utils/benchmark/src/benchmark_register.h
+--- llvm-11.1.0.src.orig/utils/benchmark/src/benchmark_register.h	2021-02-03 13:51:10.000000000 -0800
++++ llvm-11.1.0.src/utils/benchmark/src/benchmark_register.h	2023-04-30 17:06:57.823377000 -0700
+@@ -1,6 +1,7 @@
+ #ifndef BENCHMARK_REGISTER_H
+ #define BENCHMARK_REGISTER_H
+ 
++#include <limits>
+ #include <vector>
+ 
+ #include "check.h"
