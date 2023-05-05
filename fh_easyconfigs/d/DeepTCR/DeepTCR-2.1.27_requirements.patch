@@ -1,10 +1,13 @@
+@fizwit relax the version requirements 
 diff -ruN DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9.orig/requirements.txt DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9/requirements.txt
 --- DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9.orig/requirements.txt	2022-04-28 22:28:25.000000000 -0700
-+++ DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9/requirements.txt	2023-05-01 15:04:15.848192000 -0700
++++ DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9/requirements.txt	2023-05-02 09:59:57.408280000 -0700
 @@ -1,74 +1,74 @@
 -absl-py==0.11.0
 -astunparse==1.6.3
--biopython==1.76
++absl-py>=0.11.0
++astunparse>=1.6.3
+ biopython==1.76
 -bleach==3.3.0
 -cachetools==4.1.1
 -certifi==2020.12.5
@@ -54,9 +57,6 @@ diff -ruN DeepTCR-0e009daa8220999a52c2c68deb88b034e51236f9.orig/requirements.txt
 -requests-toolbelt==0.9.1
 -rfc3986==1.4.0
 -rsa==4.6
-+absl-py>=0.11.0
-+astunparse>=1.6.3
-+biopython>=1.76
 +bleach>=3.3.0
 +cachetools>=4.1.1
 +certifi>=2020.12.5
