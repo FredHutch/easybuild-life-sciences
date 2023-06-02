@@ -1,0 +1,45 @@
+easyblock = 'MakeCp'
+
+name = 'MuSE'
+version = '2.0.1'
+
+github_account = 'wwylab'
+homepage = 'https://github.com/%(github_account)s/%(name)s'
+description = """An accurate and ultra-fast somatic mutation calling tool for whole-genome sequencing (WGS)
+ and whole-exome sequencing (WES) data from heterogeneous tumor samples."""
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/%(github_account)s/%(name)s/archive/refs/tags']
+sources = ['v%(version)s.tar.gz']
+patches = [
+    '%(name)s-%(version)s_Makefile.patch',
+]
+checksums = []
+
+# get rid of old headers use EasyBuild Boost and HTSlib
+prebuildopts = "rm -rf inc/boost/* && rm -rf inc/htslib/*  &&"
+
+dependencies = [
+    ('Boost', '1.77.0'),
+    ('HTSlib', '1.9'),
+    ('zlib', '1.2.11'),
+    ('bzip2', '1.0.8'),
+    ('XZ', '5.2.5'),
+    ('gperftools', '2.9.1'),
+]
+
+files_to_copy = [
+    (['%(name)s'], 'bin'),
+    'etc',
+]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': ['etc']
+}
+
+sanity_check_commands = ['bin/%(name)s 2>&1 | grep "Program: MuSE (Tools for calling somatic point mutations)"']
+
+moduleclass = 'bio'
