@@ -130,6 +130,10 @@ exts_list = [
         'modulename': 'umap',
         'checksums': ['dbd57cb181c2b66d238acb5635697526bf24c798082daed0cf9b87f6a3a6c0c7'],
     }),
+    ('libclang', '16.0.0', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-manylinux2010_x86_64.whl',
+        'modulename': 'clang',
+    }),
     (name, version, {
         'modulename': '%(name)s',
         'patches': ['%(name)s-%(version)s_requirements.patch'],
