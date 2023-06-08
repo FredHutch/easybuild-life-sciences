@@ -1,6 +1,6 @@
 # Easybuild easyconfig
 #
-# Fred Hutch Cancer Research Center
+# Fred Hutch Cancer Center
 # John Dey jfdey@fredhutch.org
 #
 easyblock = 'PythonBundle'
