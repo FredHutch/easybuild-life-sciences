@@ -1,0 +1,62 @@
+# Easybuild easyconfig
+#
+# Fred Hutch Cancer Research Center
+# John Dey jfdey@fredhutch.org
+#
+easyblock = 'PythonBundle'
+
+name = 'splitpipe'
+version = '1.0.6p'
+local_vendor_name = 'ParseBiosciences'
+local_product_name = 'Pipeline'
+
+homepage = 'https://support.parsebiosciences.com/hc/en-us'
+description = """splitpipe tool from Parse Biosciences. The pipeline takes FASTQ files and delivers
+ processed data in the form of a cell-gene count matrix, which serves as the input for various open
+ sources tools such as scanpy and seuratProcess sequencing results with our pipeline"""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+builddependencies = [
+    ('Autotools', '20210726'),
+    ('CMake', '3.22.1'),
+]
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+    ('python-igraph', '0.9.8'),
+    ('SAMtools', '1.16.1'),
+    ('matplotlib', '3.4.3'),
+    ('Pysam', '0.17.0'),
+    ('scanpy', '1.8.2'), # imports igraph and leidenalg
+    # ('python-igraph', '0.9.0'),
+    ('STAR', '2.7.9a'),
+    ('pigz', '2.6'),
+    ('zlib', '1.2.11'),
+    ('bzip2', '1.0.8'),
+    ('cURL', '7.78.0'),  # libcurl4
+    ('OpenSSL', '1.1.1k'),  # libssl-dev openssl-dev
+    ('libtool', '2.4.6'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('networkx', '2.8.4'),
+    ('python-louvain', '0.16', {
+        'modulename': 'community',
+    }),
+    ('et_xmlfile', '1.1.0'),
+    ('openpyxl', '3.0.9'),
+    (name, version, {
+        'source_tmpl': 'ParseBiosciences-Pipeline.%(version)s.zip',
+        'source_urls': ['https://support.parsebiosciences.com/hc/en-us'],
+        'checksums': ['0429ad31dab7124572b05e79e6ec0f9397f691ef0f879d0f86ffe27451a294fe'],
+        # 'start_dir': '%s-%s.%s' % (local_vendor_name, local_product_name, version),
+    }),
+]
+
+sanity_check_commands = ["split-pipe --help"]
+
+moduleclass = 'bio'
