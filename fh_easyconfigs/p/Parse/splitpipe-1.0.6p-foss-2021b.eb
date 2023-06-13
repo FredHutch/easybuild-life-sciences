@@ -1,6 +1,6 @@
 # Easybuild easyconfig
 #
-# Fred Hutch Cancer Research Center
+# Fred Hutch Cancer Center
 # John Dey jfdey@fredhutch.org
 #
 easyblock = 'PythonBundle'
@@ -13,7 +13,9 @@ local_product_name = 'Pipeline'
 homepage = 'https://support.parsebiosciences.com/hc/en-us'
 description = """splitpipe tool from Parse Biosciences. The pipeline takes FASTQ files and delivers
  processed data in the form of a cell-gene count matrix, which serves as the input for various open
- sources tools such as scanpy and seuratProcess sequencing results with our pipeline"""
+ sources tools such as scanpy and seuratProcess sequencing results with our pipeline.
+
+ A Parse Bioscience login ID is required to download"""
 
 toolchain = {'name': 'foss', 'version': '2021b'}
 
