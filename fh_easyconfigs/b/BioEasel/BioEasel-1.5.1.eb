@@ -1,0 +1,58 @@
+easyblock = 'Bundle'
+
+name = 'Bio-Easel'
+version = '0.16'
+
+homepage = 'https://github.com/nawrockie/Bio-Easel'
+description = """Perl modules and scripts for interfacing with Sean Eddy's C easel sequence analysis library using Perl's Inline."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+dependencies = [
+    ('Perl', '5.36.0'),
+    ('BioPerl', '1.7.8'),
+    ('easel', '0.48'),
+    ('FASTA', '36.3.8i'),
+    ('Infernal', '1.1.4'),
+    ('BLAST+', '2.14.0'),
+    ('HMMER', '3.3.2'),
+    ('minimap2', '2.26'),
+]
+
+exts_defaultclass = 'PerlModule'
+#exts_filter = ("perldoc -lm %(ext_name)s ", "")
+exts_filter = ("perl -e 'require %(ext_name)s'", "")
+
+maxparallel = 1
+
+exts_list = [
+    #('vadr', '1.5.1', {
+    #    'source_urls': ['https://github.com/nawrockie/Bio-Easel/archive/refs/tags'], # vadr-1.5.1.tar.gz
+    #    'sources': [SOURCE_TAR_GZ],
+    #}),
+    ('Inline::C', '0.82', {
+        'source_tmpl': 'Inline-C-%(version)s.tar.gz',
+        'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETJ']
+    }),
+    (name, version, {
+        'modulename': 'Bio::Easel',
+        'source_urls': ['https://github.com/EddyRivasLab/easel/archive'],
+        # 'sourcesBio-Easel-0.16.tar.gz
+        'sources': 'Bio-Easel-%(version)s.zip',
+    })
+]
+
+modextrapaths = {
+    'PERL5LIB': 'lib/perl5/site_perl/%(perlver)s/',
+}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['bin', 'lib/perl5/site_perl/%(perlver)s/Bio'],
+}
+sanity_check_paths = {
+    'files': ['lib/perl5/site_perl/%(perlver)s/SVG.pm'],
+    'dirs': ['lib/perl5/site_perl/%(perlver)s/SVG'],
+}
+
+moduleclass = 'bio'
