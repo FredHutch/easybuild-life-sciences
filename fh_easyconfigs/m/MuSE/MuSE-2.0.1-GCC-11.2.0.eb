@@ -25,7 +25,7 @@ checksums = [
 prebuildopts = "rm -rf inc/boost/* && rm -rf inc/htslib/*  &&"
 
 dependencies = [
-    ('Boost', '1.77.0'),
+    ('Boost', '1.70.0'),
     ('HTSlib', '1.9'),
     ('zlib', '1.2.11'),
     ('bzip2', '1.0.8'),
