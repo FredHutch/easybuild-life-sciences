@@ -1,6 +1,6 @@
 ---
 title: fhR-4.3.1-foss-2022b
-date: 2023-07-01
+date: 2023-07-11
 ---
 
 ### Known Issues
@@ -10,8 +10,9 @@ date: 2023-07-01
   * [ADGofTest-0.3](https://cran.r-project.org/web/packages/ADGofTest/index.html) Anderson-Darling GoF test
   * [ALDEx2-1.32.0](https://www.bioconductor.org/packages/release/bioc/html/ALDEx2.html) Analysis Of Differential Abundance Taking Sample Variation Into Account
   * [ALL-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/ALL.html) A data package
+  * ASCAT 3.1.2 [CRAN]&emsp;
   * [AgiMicroRna-2.50.0](https://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) Processing and Differential Expression Analysis of Agilent microRNA chips
-  * [AnnotationDbi-1.62.1](https://www.bioconductor.org/packages/release/bioc/html/AnnotationDbi.html) Manipulation of SQLite-based annotations in Bioconductor
+  * [AnnotationDbi-1.62.2](https://www.bioconductor.org/packages/release/bioc/html/AnnotationDbi.html) Manipulation of SQLite-based annotations in Bioconductor
   * [AnnotationFilter-1.24.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationFilter.html) Facilities for Filtering Bioconductor Annotation Resources
   * [AnnotationForge-1.42.2](https://www.bioconductor.org/packages/release/bioc/html/AnnotationForge.html) Tools for building SQLite-based annotation data packages
   * [AnnotationHub-3.8.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationHub.html) Client to access AnnotationHub resources
@@ -62,7 +63,8 @@ PostScript) and Display (X11 and Win32) Output
   * [DO.db-2.9](https://www.bioconductor.org/packages/release/bioc/html/DO.db.html) A set of annotation maps describing the entire Disease Ontology
   * [DOSE-3.26.1](https://www.bioconductor.org/packages/release/bioc/html/DOSE.html) Disease Ontology Semantic and Enrichment analysis
   * [DOT-0.1](https://cran.r-project.org/web/packages/DOT/index.html) Render and Export DOT Graphs in R
-  * [DelayedArray-0.26.4](https://www.bioconductor.org/packages/release/bioc/html/DelayedArray.html) A unified framework for working transparently with on-disk and in-memory array-like datasets
+  * [DT-0.28](https://cran.r-project.org/web/packages/DT/index.html) A Wrapper of the JavaScript Library 'DataTables'
+  * [DelayedArray-0.26.6](https://www.bioconductor.org/packages/release/bioc/html/DelayedArray.html) A unified framework for working transparently with on-disk and in-memory array-like datasets
   * [DelayedMatrixStats-1.22.1](https://www.bioconductor.org/packages/release/bioc/html/DelayedMatrixStats.html) Functions that Apply to Rows and Columns of 'DelayedMatrix' Objects
   * [Deriv-4.1.3](https://cran.r-project.org/web/packages/Deriv/index.html) Symbolic Differentiation
   * [DiffBind-3.10.0](https://www.bioconductor.org/packages/release/bioc/html/DiffBind.html) Differential Binding Analysis of ChIP-Seq Peak Data
@@ -120,7 +122,7 @@ PostScript) and Display (X11 and Win32) Output
   * [LymphoSeqDB-0.99.2](https://www.bioconductor.org/packages/release/bioc/html/LymphoSeqDB.html) LymphoSeq annotation databases
   * [MAGeCKFlute-2.4.0](https://www.bioconductor.org/packages/release/bioc/html/MAGeCKFlute.html) Integrative Analysis Pipeline for Pooled CRISPR Functional Genetic Screens
   * [MAST-1.26.0](https://www.bioconductor.org/packages/release/bioc/html/MAST.html) Model-based Analysis of Single Cell Transcriptomics
-  * [MCMCglmm-2.34](https://cran.r-project.org/web/packages/MCMCglmm/index.html) MCMC Generalised Linear Mixed Models
+  * [MCMCglmm-2.35](https://cran.r-project.org/web/packages/MCMCglmm/index.html) MCMC Generalised Linear Mixed Models
   * [MPV-1.62](https://cran.r-project.org/web/packages/MPV/index.html) Data Sets from Montgomery, Peck and Vining
   * [MatrixEQTL-2.3](https://cran.r-project.org/web/packages/MatrixEQTL/index.html) Matrix eQTL: Ultra Fast eQTL Analysis via Large Matrix
 Operations
@@ -157,7 +159,7 @@ Models
   * [RSpectra-0.16-1](https://cran.r-project.org/web/packages/RSpectra/index.html) Solvers for Large-Scale Eigenvalue and SVD Problems
   * [RVenn-1.1.0](https://cran.r-project.org/web/packages/RVenn/index.html) Set Operations for Many Sets
   * [RaggedExperiment-1.24.0](https://www.bioconductor.org/packages/release/bioc/html/RaggedExperiment.html) Representation of Sparse Experiments and Assays Across Samples
-  * [RcppAnnoy-0.0.20](https://cran.r-project.org/web/packages/RcppAnnoy/index.html) 'Rcpp' Bindings for 'Annoy', a Library for Approximate Nearest
+  * [RcppAnnoy-0.0.21](https://cran.r-project.org/web/packages/RcppAnnoy/index.html) 'Rcpp' Bindings for 'Annoy', a Library for Approximate Nearest
 Neighbors
   * [RcppArmadillo-0.12.4.1.0](https://cran.r-project.org/web/packages/RcppArmadillo/index.html) 'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra
 Library
@@ -176,7 +178,7 @@ Implementations
   * [Rdpack-2.4](https://cran.r-project.org/web/packages/Rdpack/index.html) Update and Manipulate Rd Documentation Objects
   * [Rdsdp-1.0.5.2.1](https://cran.r-project.org/web/packages/Rdsdp/index.html) R Interface to DSDP Semidefinite Programming Library
   * [ReportingTools-2.39.0](https://www.bioconductor.org/packages/release/bioc/html/ReportingTools.html) Tools for making reports in various formats
-  * [Rfast-2.0.7](https://cran.r-project.org/web/packages/Rfast/index.html) A Collection of Efficient and Extremely Fast R Functions
+  * [Rfast-2.0.8](https://cran.r-project.org/web/packages/Rfast/index.html) A Collection of Efficient and Extremely Fast R Functions
   * [Rgraphviz-2.44.0](https://cran.r-project.org/web/packages/Rgraphviz/index.html) Provides plotting capabilities for R graph objects
   * [Rhdf5lib-1.22.0](https://www.bioconductor.org/packages/release/bioc/html/Rhdf5lib.html) hdf5 library as an R package
   * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits *apply() Style Dispatch for 'HPC'
@@ -213,17 +215,18 @@ Matrices
   * [TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Hsapiens.UCSC.hg19.knownGene.html) Annotation package for TxDb object(s)
   * [UpSetR-1.4.0](https://cran.r-project.org/web/packages/UpSetR/index.html) A More Scalable Alternative to Venn and Euler Diagrams for
 Visualizing Intersecting Sets
-  * [V8-4.3.1](https://cran.r-project.org/web/packages/V8/index.html) Embedded JavaScript and WebAssembly Engine for R
+  * [V8-4.3.2](https://cran.r-project.org/web/packages/V8/index.html) Embedded JavaScript and WebAssembly Engine for R
   * [VariantAnnotation-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) Annotation of Genetic Variants
   * [VennDiagram-1.7.3](https://cran.r-project.org/web/packages/VennDiagram/index.html) Generate High-Resolution Venn and Euler Plots
   * [Wrench-1.18.0](https://www.bioconductor.org/packages/release/bioc/html/Wrench.html) Wrench normalization for sparse count data
   * [XML-3.99-0.14](https://cran.r-project.org/web/packages/XML/index.html) Tools for Parsing and Generating XML Within R and S-Plus
   * [XVector-0.40.0](https://www.bioconductor.org/packages/release/bioc/html/XVector.html) Foundation of external vector representation and manipulation in Bioconductor
+  * [abind-1.4-5](https://cran.r-project.org/web/packages/abind/index.html) Combine Multidimensional Arrays
   * [ade4-1.7-22](https://cran.r-project.org/web/packages/ade4/index.html) Analysis of Ecological Data: Exploratory and Euclidean Methods
 in Environmental Sciences
-  * [admisc-0.32](https://cran.r-project.org/web/packages/admisc/index.html) Adrian Dusa's Miscellaneous
+  * [admisc-0.33](https://cran.r-project.org/web/packages/admisc/index.html) Adrian Dusa's Miscellaneous
   * [affxparser-1.72.0](https://www.bioconductor.org/packages/release/bioc/html/affxparser.html) Affymetrix File Parsing SDK
-  * [affy-1.78.0](https://www.bioconductor.org/packages/release/bioc/html/affy.html) Methods for Affymetrix Oligonucleotide Arrays
+  * [affy-1.78.1](https://www.bioconductor.org/packages/release/bioc/html/affy.html) Methods for Affymetrix Oligonucleotide Arrays
   * [affycoretools-1.72.0](https://www.bioconductor.org/packages/release/bioc/html/affycoretools.html) Functions useful for those doing repetitive analyses with Affymetrix GeneChips
   * [affyio-1.70.0](https://www.bioconductor.org/packages/release/bioc/html/affyio.html) Tools for parsing Affymetrix data files
   * [alr3-2.0.8](https://cran.r-project.org/web/packages/alr3/index.html) Data to Accompany Applied Linear Regression 3rd Edition
@@ -249,10 +252,10 @@ Summaries
   * [bamsignals-1.32.0](https://www.bioconductor.org/packages/release/bioc/html/bamsignals.html) Extract read count signals from bam files
   * [base64-2.0.1](https://cran.r-project.org/web/packages/base64/index.html) Base64 Encoder and Decoder
   * [base64url-1.4](https://cran.r-project.org/web/packages/base64url/index.html) Fast and URL-Safe Base64 Encoder and Decoder
-  * [basilisk-1.12.0](https://www.bioconductor.org/packages/release/bioc/html/basilisk.html) Freezing Python Dependencies Inside Bioconductor Packages
+  * [basilisk-1.12.1](https://www.bioconductor.org/packages/release/bioc/html/basilisk.html) Freezing Python Dependencies Inside Bioconductor Packages
   * [basilisk.utils-1.12.1](https://www.bioconductor.org/packages/release/bioc/html/basilisk.utils.html) Basilisk Installation Utilities
   * [batchtools-0.9.17](https://cran.r-project.org/web/packages/batchtools/index.html) Tools for Computation on Batch Systems
-  * [baySeq-2.35.2](https://www.bioconductor.org/packages/release/bioc/html/baySeq.html) Empirical Bayesian analysis of patterns of differential expression in count data
+  * [bayesplot-1.10.0](https://cran.r-project.org/web/packages/bayesplot/index.html) Plotting for Bayesian Models
   * [bbmle-1.0.25](https://cran.r-project.org/web/packages/bbmle/index.html) Tools for General Maximum Likelihood Estimation
   * [bdsmatrix-1.3-6](https://cran.r-project.org/web/packages/bdsmatrix/index.html) Routines for Block Diagonal Symmetric Matrices
   * [beachmat-2.16.0](https://www.bioconductor.org/packages/release/bioc/html/beachmat.html) Compiling Bioconductor to Handle Each Matrix Type
@@ -267,6 +270,7 @@ Plot)
   * [biovizBase-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/biovizBase.html) Basic graphic utilities for visualization of genomic data.
   * [bitops-1.0-7](https://cran.r-project.org/web/packages/bitops/index.html) Bitwise Operations
   * [bookdown-0.34](https://cran.r-project.org/web/packages/bookdown/index.html) Authoring Books and Technical Documents with R Markdown
+  * [boot-1.3-28.1](https://cran.r-project.org/web/packages/boot/index.html) Bootstrap Functions (Originally by Angelo Canty for S)
   * [breakaway-4.8.4](https://cran.r-project.org/web/packages/breakaway/index.html) Species Richness Estimation and Modeling
   * [brglm-0.7.2](https://cran.r-project.org/web/packages/brglm/index.html) Bias Reduction in Binomial-Response Generalized Linear Models
   * [bumphunter-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/bumphunter.html) Bump Hunter
@@ -285,12 +289,15 @@ al.
   * [clusterProfiler-4.8.1](https://www.bioconductor.org/packages/release/bioc/html/clusterProfiler.html) A universal enrichment tool for interpreting omics data
   * [coda-0.19-4](https://cran.r-project.org/web/packages/coda/index.html) Output Analysis and Diagnostics for MCMC
   * [colorRamps-2.3.1](https://cran.r-project.org/web/packages/colorRamps/index.html) Builds Color Tables
+  * [colourpicker-1.2.0](https://cran.r-project.org/web/packages/colourpicker/index.html) A Colour Picker Tool for Shiny and for Selecting Colours in
+Plots
   * [compare-0.2-6](https://cran.r-project.org/web/packages/compare/index.html) Comparing Objects for Differences
   * [config-0.3.1](https://cran.r-project.org/web/packages/config/index.html) Manage Environment Specific Configuration Values
   * [copula-1.1-2](https://cran.r-project.org/web/packages/copula/index.html) Multivariate Dependence with Copulas
   * [corpcor-1.6.10](https://cran.r-project.org/web/packages/corpcor/index.html) Efficient Estimation of Covariance and (Partial) Correlation
   * [corrplot-0.92](https://cran.r-project.org/web/packages/corrplot/index.html) Visualization of a Correlation Matrix
   * [cowplot-1.1.1](https://cran.r-project.org/web/packages/cowplot/index.html) Streamlined Plot Theme and Plot Annotations for 'ggplot2'
+  * [crosstalk-1.2.0](https://cran.r-project.org/web/packages/crosstalk/index.html) Inter-Widget Interactivity for HTML Widgets
   * [crul-1.4.0](https://cran.r-project.org/web/packages/crul/index.html) HTTP Client
   * [cubature-2.1.0](https://cran.r-project.org/web/packages/cubature/index.html) Adaptive Multivariate Integration over Hypercubes
   * [cummeRbund-2.42.0](https://www.bioconductor.org/packages/release/bioc/html/cummeRbund.html) Analysis, exploration, manipulation, and visualization of Cufflinks high-throughput sequencing data.
@@ -301,7 +308,7 @@ al.
   * [dada2-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/dada2.html) Accurate, high-resolution sample inference from amplicon sequencing data
   * [dbscan-1.1-11](https://cran.r-project.org/web/packages/dbscan/index.html) Density-Based Spatial Clustering of Applications with Noise
 (DBSCAN) and Related Algorithms
-  * [deSolve-1.35](https://cran.r-project.org/web/packages/deSolve/index.html) Solvers for Initial Value Problems of Differential Equations
+  * [deSolve-1.36](https://cran.r-project.org/web/packages/deSolve/index.html) Solvers for Initial Value Problems of Differential Equations
 ('ODE', 'DAE', 'DDE')
   * [degreenet-1.3-3](https://cran.r-project.org/web/packages/degreenet/index.html) Models for Skewed Count Distributions Relevant to Networks
   * [deldir-1.0-9](https://cran.r-project.org/web/packages/deldir/index.html) Delaunay Triangulation and Dirichlet (Voronoi) Tessellation
@@ -315,6 +322,7 @@ al.
   * [dichromat-2.0-0.1](https://cran.r-project.org/web/packages/dichromat/index.html) Color Schemes for Dichromats
   * [diffusionMap-1.2.0](https://cran.r-project.org/web/packages/diffusionMap/index.html) Diffusion Map
   * [dir.expiry-1.8.0](https://www.bioconductor.org/packages/release/bioc/html/dir.expiry.html) Managing Expiration for Cache Directories
+  * [distributional-0.3.2](https://cran.r-project.org/web/packages/distributional/index.html) Vectorised Probability Distributions
   * [doBy-4.6.16](https://cran.r-project.org/web/packages/doBy/index.html) Groupwise Statistics, LSmeans, Linear Estimates, Utilities
   * [doMPI-0.2.2](https://cran.r-project.org/web/packages/doMPI/index.html) Foreach Parallel Adaptor for the Rmpi Package
   * [doParallel-1.0.17](https://cran.r-project.org/web/packages/doParallel/index.html) Foreach Parallel Adaptor for the 'parallel' Package
@@ -322,6 +330,7 @@ al.
   * [downloader-0.4](https://cran.r-project.org/web/packages/downloader/index.html) Download Files over HTTP and HTTPS
   * [dqrng-0.3.0](https://cran.r-project.org/web/packages/dqrng/index.html) Fast Pseudo Random Number Generators
   * [drc-3.0-1](https://cran.r-project.org/web/packages/drc/index.html) Analysis of Dose-Response Curves
+  * [dygraphs-1.1.1.6](https://cran.r-project.org/web/packages/dygraphs/index.html) Interface to 'Dygraphs' Interactive Time Series Charting Library
   * [e1071-1.7-13](https://cran.r-project.org/web/packages/e1071/index.html) Misc Functions of the Department of Statistics, Probability
 Theory Group (Formerly: E1071), TU Wien
   * [edgeR-3.42.4](https://www.bioconductor.org/packages/release/bioc/html/edgeR.html) Empirical Analysis of Digital Gene Expression Data in R
@@ -329,7 +338,7 @@ Theory Group (Formerly: E1071), TU Wien
   * [elasticnet-1.3](https://cran.r-project.org/web/packages/elasticnet/index.html) Elastic-Net for Sparse Estimation and Sparse PCA
   * [ellipse-0.4.5](https://cran.r-project.org/web/packages/ellipse/index.html) Functions for Drawing Ellipses and Ellipse-Like Confidence
 Regions
-  * [emdbook-1.3.12](https://cran.r-project.org/web/packages/emdbook/index.html) Support Functions and Data for "Ecological Models and Data"
+  * [emdbook-1.3.13](https://cran.r-project.org/web/packages/emdbook/index.html) Support Functions and Data for "Ecological Models and Data"
   * [enrichplot-1.20.0](https://www.bioconductor.org/packages/release/bioc/html/enrichplot.html) Visualization of Functional Enrichment Result
   * [ensembldb-2.24.0](https://www.bioconductor.org/packages/release/bioc/html/ensembldb.html) Utilities to create and use Ensembl-based annotation databases
   * [epitools-0.5-10.1](https://cran.r-project.org/web/packages/epitools/index.html) Epidemiology Tools
@@ -380,7 +389,7 @@ Calls, Assignments and Other R Objects
   * [gam-1.22-2](https://cran.r-project.org/web/packages/gam/index.html) Generalized Additive Models
   * [gamm4-0.2-6](https://cran.r-project.org/web/packages/gamm4/index.html) Generalized Additive Mixed Models using 'mgcv' and 'lme4'
   * [gcrma-2.72.0](https://www.bioconductor.org/packages/release/bioc/html/gcrma.html) Background Adjustment Using Sequence Information
-  * [gdsfmt-1.36.0](https://cran.r-project.org/web/packages/gdsfmt/index.html) 
+  * [gdsfmt-1.36.1](https://cran.r-project.org/web/packages/gdsfmt/index.html) 
   * [gdtools-0.3.3](https://cran.r-project.org/web/packages/gdtools/index.html) Utilities for Graphical Rendering and Fonts Management
   * [geneLenDataBase-1.36.0](https://www.bioconductor.org/packages/release/bioc/html/geneLenDataBase.html) Lengths of mRNA transcripts for a number of genomes
   * [genefilter-1.82.1](https://www.bioconductor.org/packages/release/bioc/html/genefilter.html) genefilter: methods for filtering genes from high-throughput experiments
@@ -401,6 +410,7 @@ Calls, Assignments and Other R Objects
   * [ggrastr-1.0.2](https://cran.r-project.org/web/packages/ggrastr/index.html) Rasterize Layers for 'ggplot2'
   * [ggrepel-0.9.3](https://cran.r-project.org/web/packages/ggrepel/index.html) Automatically Position Non-Overlapping Text Labels with
 'ggplot2'
+  * [ggridges-0.5.4](https://cran.r-project.org/web/packages/ggridges/index.html) Ridgeline Plots in 'ggplot2'
   * [ggsci-3.0.0](https://cran.r-project.org/web/packages/ggsci/index.html) Scientific Journal and Sci-Fi Themed Color Palettes for
 'ggplot2'
   * [ggsignif-0.6.4](https://cran.r-project.org/web/packages/ggsignif/index.html) Significance Brackets for 'ggplot2'
@@ -409,7 +419,7 @@ Calls, Assignments and Other R Objects
   * [glmnet-4.1-7](https://cran.r-project.org/web/packages/glmnet/index.html) Lasso and Elastic-Net Regularized Generalized Linear Models
   * [glmpath-0.98](https://cran.r-project.org/web/packages/glmpath/index.html) L1 Regularization Path for Generalized Linear Models and Cox
 Proportional Hazards Model
-  * [gmp-0.7-1](https://cran.r-project.org/web/packages/gmp/index.html) Multiple Precision Arithmetic
+  * [gmp-0.7-2](https://cran.r-project.org/web/packages/gmp/index.html) Multiple Precision Arithmetic
   * [goseq-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/goseq.html) Gene Ontology analyser for RNA-seq and other length biased data
   * [gplots-3.1.3](https://cran.r-project.org/web/packages/gplots/index.html) Various R Programming Tools for Plotting Data
   * [graph-1.78.0](https://cran.r-project.org/web/packages/graph/index.html) graph: A package to handle graph data structures
@@ -420,6 +430,7 @@ Covariates
   * [gsl-2.1-8](https://cran.r-project.org/web/packages/gsl/index.html) Wrapper for the Gnu Scientific Library
   * [gson-0.1.0](https://cran.r-project.org/web/packages/gson/index.html) Base Class and Methods for 'gson' Format
   * [gsubfn-0.7](https://cran.r-project.org/web/packages/gsubfn/index.html) Utilities for Strings and Function Arguments
+  * [gtools-3.9.4](https://cran.r-project.org/web/packages/gtools/index.html) Various R Programming Tools
   * [hapassoc-1.2-9](https://cran.r-project.org/web/packages/hapassoc/index.html) Inference of Trait Associations with SNP Haplotypes and Other
 Attributes using the EM Algorithm
   * [haplo.stats-1.9.3](https://cran.r-project.org/web/packages/haplo.stats/index.html) Statistical Analysis of Haplotypes with Traits and Covariates
@@ -460,9 +471,11 @@ Monte Carlo Studies
   * [lars-1.3](https://cran.r-project.org/web/packages/lars/index.html) Least Angle Regression, Lasso and Forward Stagewise
   * [latentnet-2.10.6](https://cran.r-project.org/web/packages/latentnet/index.html) Latent Position and Cluster Models for Statistical Networks
   * [latticeExtra-0.6-30](https://cran.r-project.org/web/packages/latticeExtra/index.html) Extra Graphical Utilities Based on Lattice
+  * [lazyeval-0.2.2](https://cran.r-project.org/web/packages/lazyeval/index.html) Lazy (Non-Standard) Evaluation
   * [lgr-0.4.4](https://cran.r-project.org/web/packages/lgr/index.html) A Fully Featured Logging Framework
   * [limma-3.56.2](https://cran.r-project.org/web/packages/limma/index.html) Linear Models for Microarray Data
   * [lintr-3.0.2](https://cran.r-project.org/web/packages/lintr/index.html) A 'Linter' for R Code
+  * [lme4-1.1-34](https://cran.r-project.org/web/packages/lme4/index.html) Linear Mixed-Effects Models using 'Eigen' and S4
   * [lmtest-0.9-40](https://cran.r-project.org/web/packages/lmtest/index.html) Testing Linear Regression Models
   * [locfit-1.5-9.8](https://cran.r-project.org/web/packages/locfit/index.html) Local Regression, Likelihood and Density Estimation
   * [logistf-1.25.0](https://cran.r-project.org/web/packages/logistf/index.html) Firth's Bias-Reduced Logistic Regression
@@ -478,6 +491,7 @@ Bandwidth
   * [magick-2.7.4](https://cran.r-project.org/web/packages/magick/index.html) Advanced Graphics and Image-Processing in R
   * [mapdata-2.3.1](https://cran.r-project.org/web/packages/mapdata/index.html) Extra Map Databases
   * [maps-3.4.1](https://cran.r-project.org/web/packages/maps/index.html) Draw Geographical Maps
+  * [markdown-1.7](https://cran.r-project.org/web/packages/markdown/index.html) Render Markdown with 'commonmark'
   * [marray-1.78.0](https://www.bioconductor.org/packages/release/bioc/html/marray.html) Exploratory analysis for two-color spotted microarray data
   * [mclust-6.0.0](https://cran.r-project.org/web/packages/mclust/index.html) Gaussian Mixture Modelling for Model-Based Clustering,
 Classification, and Density Estimation
@@ -487,6 +501,8 @@ Classification, and Density Estimation
   * [mice-3.16.0](https://cran.r-project.org/web/packages/mice/index.html) Multivariate Imputation by Chained Equations
   * [microbenchmark-1.4.10](https://cran.r-project.org/web/packages/microbenchmark/index.html) Accurate Timing Functions
   * [minfi-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/minfi.html) Analyze Illumina Infinium DNA methylation arrays
+  * [minqa-1.2.5](https://cran.r-project.org/web/packages/minqa/index.html) Derivative-Free Optimization Algorithms by Quadratic
+Approximation
   * [misc3d-0.9-1](https://cran.r-project.org/web/packages/misc3d/index.html) Miscellaneous 3D Plots
   * [mitml-0.4-5](https://cran.r-project.org/web/packages/mitml/index.html) Tools for Multiple Imputation in Multilevel Modeling
   * [mitools-2.4](https://cran.r-project.org/web/packages/mitools/index.html) Tools for Multiple Imputation of Missing Data
@@ -516,6 +532,7 @@ Functionality
   * [networksis-2.1-3](https://cran.r-project.org/web/packages/networksis/index.html) Simulate Bipartite Graphs with Fixed Marginals Through
 Sequential Importance Sampling
   * [nleqslv-3.3.4](https://cran.r-project.org/web/packages/nleqslv/index.html) Solve Systems of Nonlinear Equations
+  * [nloptr-2.0.3](https://cran.r-project.org/web/packages/nloptr/index.html) R Interface to NLopt
   * [nnls-1.4](https://cran.r-project.org/web/packages/nnls/index.html) The Lawson-Hanson algorithm for non-negative least squares<U+000a>(NNLS)
   * [nor1mix-1.3-0](https://cran.r-project.org/web/packages/nor1mix/index.html) Normal aka Gaussian (1-d) Mixture Models (S3 Classes and
 Methods)
@@ -531,7 +548,7 @@ Methods)
   * [org.Hs.eg.db-3.17.0](https://www.bioconductor.org/packages/release/bioc/html/org.Hs.eg.db.html) Genome wide annotation for Human
   * [org.Mm.eg.db-3.17.0](https://www.bioconductor.org/packages/release/bioc/html/org.Mm.eg.db.html) Genome wide annotation for Mouse
   * [osqp-0.6.0.8](https://cran.r-project.org/web/packages/osqp/index.html) Quadratic Programming Solver using the 'OSQP' Library
-  * [pROC-1.18.2](https://cran.r-project.org/web/packages/pROC/index.html) Display and Analyze ROC Curves
+  * [pROC-1.18.4](https://cran.r-project.org/web/packages/pROC/index.html) Display and Analyze ROC Curves
   * [pack-0.1-1](https://cran.r-project.org/web/packages/pack/index.html) Convert values to/from raw vectors
   * [pan-1.8](https://cran.r-project.org/web/packages/pan/index.html) Multiple Imputation for Multivariate Panel or Clustered Data
   * [partools-1.1.6](https://cran.r-project.org/web/packages/partools/index.html) Tools for the 'Parallel' Package
@@ -564,6 +581,7 @@ Methods for Test in Mixed Models
   * [polynom-1.4-1](https://cran.r-project.org/web/packages/polynom/index.html) A Collection of Functions to Implement a Class for Univariate
 Polynomial Manipulations
   * [polyreg-0.8.0](https://cran.r-project.org/web/packages/polyreg/index.html) Polynomial Regression
+  * [posterior-1.4.1](https://cran.r-project.org/web/packages/posterior/index.html) Tools for Working with Posterior Distributions
   * [poweRlaw-0.70.6](https://cran.r-project.org/web/packages/poweRlaw/index.html) Analysis of Heavy Tailed Distributions
   * [pracma-2.4.2](https://cran.r-project.org/web/packages/pracma/index.html) Practical Numerical Math Functions
   * premessa 0.3.4 [CRAN]&emsp;
@@ -601,6 +619,7 @@ Regression
   * [relevent-1.2-1](https://cran.r-project.org/web/packages/relevent/index.html) Relational Event Models
   * [repr-1.1.6](https://cran.r-project.org/web/packages/repr/index.html) Serializable Representations
   * [reshape-0.8.9](https://cran.r-project.org/web/packages/reshape/index.html) Flexibly Reshape Data
+  * [reshape2-1.4.4](https://cran.r-project.org/web/packages/reshape2/index.html) Flexibly Reshape Data: A Reboot of the Reshape Package
   * [restfulr-0.0.15](https://cran.r-project.org/web/packages/restfulr/index.html) R Interface to RESTful Web Services
   * [reticulate-1.30](https://cran.r-project.org/web/packages/reticulate/index.html) Interface to 'Python'
   * [rex-1.2.1](https://cran.r-project.org/web/packages/rex/index.html) Friendly Regular Expressions
@@ -618,6 +637,7 @@ Regression
   * [rrcov-1.7-4](https://cran.r-project.org/web/packages/rrcov/index.html) Scalable Robust Estimators with High Breakdown Point
   * [rslurm-0.6.2](https://cran.r-project.org/web/packages/rslurm/index.html) Submit R Calculations to a 'Slurm' Cluster
   * [rsparse-0.5.1](https://cran.r-project.org/web/packages/rsparse/index.html) Statistical Learning on Sparse Matrices
+  * [rstanarm-2.21.4](https://cran.r-project.org/web/packages/rstanarm/index.html) Bayesian Applied Regression Modeling via Stan
   * [rstatix-0.7.2](https://cran.r-project.org/web/packages/rstatix/index.html) Pipe-Friendly Framework for Basic Statistical Tests
   * [rsvd-1.0.5](https://cran.r-project.org/web/packages/rsvd/index.html) Randomized Singular Value Decomposition
   * [rtracklayer-1.60.0](https://www.bioconductor.org/packages/release/bioc/html/rtracklayer.html) R interface to genome annotation files and the UCSC genome browser
@@ -647,6 +667,10 @@ Format and BGEN Format) into R
   * [shinycssloaders-1.0.0](https://cran.r-project.org/web/packages/shinycssloaders/index.html) Add Loading Animations to a 'shiny' Output While It's
 Recalculating
   * [shinyjqui-0.4.1](https://cran.r-project.org/web/packages/shinyjqui/index.html) 'jQuery UI' Interactions and Effects for Shiny
+  * [shinyjs-2.1.0](https://cran.r-project.org/web/packages/shinyjs/index.html) Easily Improve the User Experience of Your Shiny Apps in Seconds
+  * [shinystan-2.6.0](https://cran.r-project.org/web/packages/shinystan/index.html) Interactive Visual and Numerical Diagnostics and Posterior
+Analysis for Bayesian Models
+  * [shinythemes-1.2.0](https://cran.r-project.org/web/packages/shinythemes/index.html) Themes for Shiny
   * [siggenes-1.74.0](https://www.bioconductor.org/packages/release/bioc/html/siggenes.html) Multiple Testing using SAM and Efron's Empirical Bayes Approaches
   * [sitmo-2.0.2](https://cran.r-project.org/web/packages/sitmo/index.html) Parallel Pseudo Random Number Generator (PPRNG) 'sitmo' Header
 Files
@@ -656,8 +680,8 @@ Files
   * [snpStats-1.50.0](https://www.bioconductor.org/packages/release/bioc/html/snpStats.html) SnpMatrix and XSnpMatrix classes and methods
   * [sodium-1.2.1](https://cran.r-project.org/web/packages/sodium/index.html) A Modern and Easy-to-Use Crypto Library
   * [sp-2.0-0](https://cran.r-project.org/web/packages/sp/index.html) Classes and Methods for Spatial Data
-  * [sparklyr-1.8.1](https://cran.r-project.org/web/packages/sparklyr/index.html) R Interface to Apache Spark
-  * [sparseMatrixStats-1.12.1](https://www.bioconductor.org/packages/release/bioc/html/sparseMatrixStats.html) Summary Statistics for Rows and Columns of Sparse Matrices
+  * [sparklyr-1.8.2](https://cran.r-project.org/web/packages/sparklyr/index.html) R Interface to Apache Spark
+  * [sparseMatrixStats-1.12.2](https://www.bioconductor.org/packages/release/bioc/html/sparseMatrixStats.html) Summary Statistics for Rows and Columns of Sparse Matrices
   * [sqldf-0.4-11](https://cran.r-project.org/web/packages/sqldf/index.html) Manipulate R Data Frames Using SQL
   * [squash-1.0.9](https://cran.r-project.org/web/packages/squash/index.html) Color-Based Plots for Multivariate Visualization
   * [srvyr-1.2.0](https://cran.r-project.org/web/packages/srvyr/index.html) 'dplyr'-Like Syntax for Summary Statistics of Survey Data
@@ -672,11 +696,14 @@ Distance Functions
   * [sva-3.48.0](https://www.bioconductor.org/packages/release/bioc/html/sva.html) Surrogate Variable Analysis
   * [systemPipeR-2.6.3](https://www.bioconductor.org/packages/release/bioc/html/systemPipeR.html) systemPipeR: workflow management and report generation environment
   * [tables-0.9.17](https://cran.r-project.org/web/packages/tables/index.html) Formula-Driven Table Generation
+  * [tensorA-0.36.2](https://cran.r-project.org/web/packages/tensorA/index.html) Advanced Tensor Arithmetic with Named Indices
   * [tergm-4.2.0](https://cran.r-project.org/web/packages/tergm/index.html) Fit, Simulate and Diagnose Models for Network Evolution Based on
 Exponential-Family Random Graph Models
   * [tergmLite-2.6.1](https://cran.r-project.org/web/packages/tergmLite/index.html) Fast Simulation of Simple Temporal Exponential Random Graph
 Models
   * [text2vec-0.6.3](https://cran.r-project.org/web/packages/text2vec/index.html) Modern Text Mining Framework for R
+  * [threejs-0.3.3](https://cran.r-project.org/web/packages/threejs/index.html) Interactive 3D Scatter Plots, Networks and Globes
+  * [tidyposterior-1.0.0](https://cran.r-project.org/web/packages/tidyposterior/index.html) Bayesian Analysis to Compare Models using Resampling Statistics
   * [tidytree-0.4.2](https://cran.r-project.org/web/packages/tidytree/index.html) A Tidy Tool for Phylogenetic Tree Data Manipulation
   * [tiff-0.1-11](https://cran.r-project.org/web/packages/tiff/index.html) Read and Write TIFF Images
   * [tilingArray-1.78.0](https://www.bioconductor.org/packages/release/bioc/html/tilingArray.html) Transcript mapping with high-density oligonucleotide tiling arrays
@@ -704,9 +731,12 @@ Estimates
   * [webp-1.1.0](https://cran.r-project.org/web/packages/webp/index.html) A New Format for Lossless and Lossy Image Compression
   * [widgetTools-1.78.0](https://www.bioconductor.org/packages/release/bioc/html/widgetTools.html) Creates an interactive tcltk widget
   * [wk-0.7.3](https://cran.r-project.org/web/packages/wk/index.html) Lightweight Well-Known Geometry Parsing
-  * xCell 1.3.0 [CRAN]&emsp;
+  * xCell 1.1.0 [CRAN]&emsp;
   * [xmlparsedata-1.0.5](https://cran.r-project.org/web/packages/xmlparsedata/index.html) Parse Data of 'R' Code as an 'XML' Tree
+  * [xts-0.13.1](https://cran.r-project.org/web/packages/xts/index.html) eXtensible Time Series
   * [yulab.utils-0.0.6](https://cran.r-project.org/web/packages/yulab.utils/index.html) Supporting Functions for Packages Maintained by 'YuLab-SMU'
   * [zCompositions-1.4.0-1](https://cran.r-project.org/web/packages/zCompositions/index.html) Treatment of Zeros, Left-Censored and Missing Values in
 Compositional Data Sets
   * [zlibbioc-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/zlibbioc.html) An R packaged zlib-1.2.5
+  * [zoo-1.8-12](https://cran.r-project.org/web/packages/zoo/index.html) S3 Infrastructure for Regular and Irregular Time Series (Z's
+Ordered Observations)
