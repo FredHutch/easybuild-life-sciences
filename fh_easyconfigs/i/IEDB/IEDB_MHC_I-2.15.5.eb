@@ -1,0 +1,57 @@
+# easybuild easyconfig
+#
+# Fred Hutchinson Cancer Center
+# John Dey <jfdey@fredhutch.org>
+#
+easyblock = 'Tarball'
+
+name = 'IEDB_MHC_I'
+version = '2.15.5'
+
+homepage = 'https://www.iedb.org'
+description = """Immune Epitope Database (IEDB). It catalogs experimental data on antibody and T cell
+ epitopes studied in humans, non-human primates, and other animal species in the context of infectious
+ disease, allergy, autoimmunity and transplantation."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://downloads.iedb.org/tools/mhci/2.15.5']
+sources = [SOURCE_TAR_GZ]
+
+builddependencies = [
+    ('Python', '2.7.18', '-GCCcore-11.2.0-bare'),
+]
+
+local_links = [
+    './method/netmhc_4_0_executable/Linux_x86_64/data',
+    './method/netmhcpan_3_0_executable/Linux_x86_64/data',
+    './method/netMHCcons-1.1/bin/mhcfsa2psseq.Linux_i386',
+    './method/netmhcstabpan_1_0_executable/Linux_x86_64/data',
+    './method/netMHC-3.4/bin/Linux_x86_64',
+    './method/netMHC-3.4/bin/Linux_i686',
+    './method/netMHC-3.4/bin/Linux_i486',
+    './method/netMHC-3.4/bin/Linux_i786',
+    './method/netMHC-3.4/bin/Linux_i586',
+    './method/pickpocket-1.1/Linux_x86_64/data',
+    './method/pickpocket-1.1/Darwin_x86_64/data',
+    './method/pickpocket-1.1/Linux_ia64/data',
+    './method/pickpocket-1.1/Linux_i686/data',
+    './method/netMHCpan-2.8/Linux_x86_64/data',
+    './method/netMHCpan-2.8/IRIX64_IP35/data',
+    './method/netMHCpan-2.8/Linux_ia64/data',
+    './method/netMHCpan-2.8/Linux_i686/data',
+    './method/netMHCpan-2.8/Linux_i386',
+    './method/netMHCpan-2.8/Darwin_i386/data'
+]
+
+postinstallcmds = [
+    'cd mhc_i',
+    './configure',
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['allele_info', 'daa', 'examples', 'iedbtools_utilities', 'src'],
+}
+
+moduleclass = 'data'
