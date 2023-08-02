@@ -579,6 +579,7 @@ exts_list = [
     ('osqp','0.6.0.7'),
     ('CVXR', '1.0-11'),
     ('qqconf', '1.2.3'),
+    ('writexl', '1.4.2'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

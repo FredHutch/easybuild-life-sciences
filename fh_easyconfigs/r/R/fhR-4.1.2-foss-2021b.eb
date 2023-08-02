@@ -588,6 +588,20 @@ exts_list = [
     ('scs', '3.0-0'),
     ('osqp','0.6.0.5'),
     ('CVXR', '1.0-10'),
+    # Start sjPlot
+    ('insight', '0.19.3'),
+    ('datawizard', '0.8.0'),
+    ('sjlabelled', '1.2.0'),
+    ('sjmisc', '2.8.9'),
+    ('bayestestR', '0.13.1'),
+    ('parameters', '0.21.1'),
+    ('performance', '0.10.4'),
+    ('effectsize', '0.8.3'),
+    ('estimability', '1.4.1'),
+    ('emmeans', '1.8.7'),
+    ('sjstats', '0.18.2'),
+    ('ggeffects', '1.2.3'),
+    ('sjPlot', '2.8.14'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}

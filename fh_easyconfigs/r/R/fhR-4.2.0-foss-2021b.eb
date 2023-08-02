@@ -602,6 +602,8 @@ exts_list = [
     ('osqp','0.6.0.5'),
     ('CVXR', '1.0-10'),
     ('qqconf', '1.2.3'),
+    ('RcppArray', '0.2.0'),
+    ('RcppArmadillo', '0.12.4.1.0'),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}
