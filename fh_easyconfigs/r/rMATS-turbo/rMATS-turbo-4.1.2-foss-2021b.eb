@@ -1,0 +1,65 @@
+easyblock = 'Bundle'
+
+name = 'rMATS-turbo'
+version = '4.1.2'
+
+homepage = 'https://github.com/Xinglab/rmats-turbo'
+description = """rMATS turbo is the C/Cython version of rMATS (refer to http://rnaseq-mats.sourceforge.net)."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+builddependencies = [
+    ('CMake', '3.21.1'),
+]
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('SciPy-bundle', '2021.10'),
+    ('GSL', '2.7'),
+    ('SAMtools', '1.15.1'),
+    ('STAR', '2.7.9a'),
+    ('BamTools', '2.5.2'),
+]
+
+local_ldflags = " -lm -lgfortran -lgsl -lgslcblas -lgomp -lflexiblas $LIBLAPACK "
+local_buildopts = '  CC="$CC" CXX="$CXX" FC="$FC" LDFLAGS="%s"' % local_ldflags
+
+default_component_specs = {
+    'sources': ['v%(version)s.tar.gz'],
+    'source_urls': ['https://github.com/Xinglab/%(name)s/archive/refs/tags/'],
+}
+
+components = [
+    (name, version, {
+        'easyblock': 'MakeCp',
+        'start_dir': 'rmats-turbo-%(version)s/rMATS_C',
+        'buildopts': "%s" % local_buildopts,
+        'files_to_copy': [(['rMATSexe', '../rmats.py', '../rMATS_C', '../rMATS_R', '../rMATS_P'], 'bin')]
+    }),
+    ('rmats-turbo-python', version, {
+        'easyblock': 'PythonPackage',
+        'patches': [('rMATS-turbo-%(version)s_bamtools_as_dependency.patch')],
+        'start_dir': 'rmats-turbo-%(version)s/rMATS_pipeline',
+        'use_pip': True,
+        'download_dep_fail': True,
+        'sanity_pip_check': True,
+        'options': {'modulename': 'rmatspipeline'},
+    }),
+]
+
+modextrapaths = {
+    'PYTHONPATH': ['lib/python%(pyshortver)s/site-packages']
+}
+
+postinstallcmds = ["chmod a+x %(installdir)s/bin/rmats.py"]
+
+sanity_check_commands = [
+    'rmats.py --version',
+]
+
+sanity_check_paths = {
+    'files': ['bin/rMATSexe', 'bin/rmats.py'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
