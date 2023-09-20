@@ -1,0 +1,12 @@
+diff -ruN telescope-1.0.3.orig/setup.py telescope-1.0.3.new/setup.py
+--- telescope-1.0.3.orig/setup.py	2023-09-08 15:23:49.130862000 -0700
++++ telescope-1.0.3.new/setup.py	2023-09-08 15:28:56.576359000 -0700
+@@ -36,7 +36,7 @@
+ 
+ if USE_CYTHON:
+     from Cython.Build import cythonize
+-    extensions = cythonize(extensions)
++    extensions = cythonize(extensions, language_level=3)
+ 
+ setup(
+     name='telescope-ngs',

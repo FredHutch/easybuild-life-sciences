@@ -1,0 +1,40 @@
+easyblock = 'PythonPackage'
+
+name = 'Telescope'
+version = '1.0.3'
+
+homepage = 'https://github.com/mlbendall/telescope'
+description = 'Single locus resolution of Transposable ELEment expression using next-generation sequencing.'
+
+toolchain = {'name': 'gfbf', 'version': '2022b'}
+
+github_account = 'mlbendall'
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+patches = ['Telescope-1.0.3-Cython-language_level.patch', 'Telescope-1.0.3-cimport_fix.patch']
+checksums = [
+    {'v1.0.3.tar.gz': '115928f5aa347bf2416a15e9d790744e42553bb1118809b5677788e649269f74'},
+    {'Telescope-1.0.3-Cython-language_level.patch': '8109001d9df32aea74f4de2e61047c103bc8ef8d205d383c9b6e49d96b70cbfa'},
+    {'Telescope-1.0.3-cimport_fix.patch': '17f2feafbfef90c2a68a42a45fe6ece8cf5115da9672291e5a3494a923ba66d5'},
+]
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('PyYAML', '6.0'),
+    ('Pysam', '0.21.0'),
+    ('HTSlib', '1.17'),
+    ('SAMtools', '1.17')
+]
+
+use_pip = True
+download_dep_fail = True
+
+sanity_pip_check = True
+sanity_check_paths = {
+    'files': ['bin/telescope'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/telescope'],
+}
+sanity_check_commands = ['telescope --version']
+
+moduleclass = 'bio'
