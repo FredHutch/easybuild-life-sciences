@@ -78,9 +78,8 @@ osdependencies = [OS_PKG_OPENSSL_DEV]
 exts_list = [
     ('editables', '0.3', {
     }),
-    ('importlib-metadata', '4.12.0', {
+    ('importlib_metadata', '4.12.0', {
         'modulename': 'importlib_metadata',
-        'source_tmpl': 'importlib_metadata-%(version)s.tar.gz',
     }),
     ('pathspec', '0.9.0', {
     }),
@@ -696,9 +695,7 @@ exts_list = [
     }),
     ('nose_warnings_filters', '0.1.5', {
     }),
-    ('nest-asyncio', '1.5.5', {
-        'source_tmpl': 'nest_asyncio-%(version)s.tar.gz',
-        'modulename': 'nest_asyncio',
+    ('nest_asyncio', '1.5.5', {
     }),
     ('appnope', '0.1.3', {
     }),
