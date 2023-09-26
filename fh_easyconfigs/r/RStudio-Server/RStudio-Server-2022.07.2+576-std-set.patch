@@ -1,0 +1,12 @@
+author: John Dey jfdey@fredhutch.org  fix compile error: missing definition for set  
+diff -ruN rstudio-2022.07.2-576.orig/src/cpp/core/include/core/Thread.hpp rstudio-2022.07.2-576/src/cpp/core/include/core/Thread.hpp
+--- rstudio-2022.07.2-576.orig/src/cpp/core/include/core/Thread.hpp	2022-08-31 06:09:53.000000000 -0700
++++ rstudio-2022.07.2-576/src/cpp/core/include/core/Thread.hpp	2023-09-26 16:14:43.971989000 -0700
+@@ -25,6 +25,7 @@
+ #include <core/BoostThread.hpp>
+ #include <shared_core/Error.hpp>
+ #include <core/Log.hpp>
++#include <set>
+ 
+ #define LOCK_MUTEX(m)                                                          \
+    try                                                                         \
