@@ -1,0 +1,49 @@
+easyblock = 'PythonBundle'
+
+name = 'ImmuneBuilder'
+version = '1.0.1'
+versionsuffix = '-CUDA-%(cudaver)s'
+_commit = '56d2e2745f0ef03c53be78d84356d2f30b16888d'
+
+homepage = 'https://github.com/oxpig/ImmuneBuilder'
+description = """ImmuneBuilder, a set of deep learning models trained to accurately predict the
+ structure of antibodies (ABodyBuilder2), nanobodies (NanoBodyBuilder2) and T-Cell receptors (TCRBuilder2)"""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+builddependencies = []
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('CUDA', '11.4.1', '', SYSTEM),
+    ('SciPy-bundle', '2021.10'),
+    ('OpenMM', '7.5.1', versionsuffix),
+]
+
+
+use_pip = True
+sanity_pip_check = False
+
+exts_list = [
+    ('PDBFixer', '1.8.1', {
+        'source_urls': ['https://github.com/openmm/pdbfixer/archive/refs/tags/'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+        'checksums': ['d50551abfe9dbaefc066f4d9d400cdebe57f1fefd9de9d01e12beb87efd99595'],
+    }),
+    ('sympy', '1.12'),
+    (name, version, {
+        'modulename': 'ImmuneBuilder',
+        'source_urls': ['https://github.com/oxpig/ImmuneBuilder/archive/'],
+        'sources': [{'download_filename': '%s.tar.gz' % _commit, 'filename': SOURCE_TAR_GZ, }],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/ABodyBuilder2'],
+    'dirs': [],
+}
+
+sanity_check_commands = []
+
+moduleclass = 'bio'
+

@@ -1,0 +1,16 @@
+diff -ruN pyscenic-0.12.1.orig/src/pyscenic/transform.py pyscenic-0.12.1/src/pyscenic/transform.py
+--- pyscenic-0.12.1.orig/src/pyscenic/transform.py	2022-11-21 02:38:05.000000000 -0800
++++ pyscenic-0.12.1/src/pyscenic/transform.py	2023-08-14 16:10:51.606682000 -0700
+@@ -39,9 +39,9 @@
+         ("Enrichment", COLUMN_NAME_NES): np.float64,
+         ("Enrichment", COLUMN_NAME_MOTIF_SIMILARITY_QVALUE): np.float64,
+         ("Enrichment", COLUMN_NAME_ORTHOLOGOUS_IDENTITY): np.float64,
+-        ("Enrichment", COLUMN_NAME_ANNOTATION): np.object,
+-        ("Enrichment", COLUMN_NAME_CONTEXT): np.object,
+-        ("Enrichment", COLUMN_NAME_TARGET_GENES): np.object,
++        ("Enrichment", COLUMN_NAME_ANNOTATION): object,
++        ("Enrichment", COLUMN_NAME_CONTEXT): object,
++        ("Enrichment", COLUMN_NAME_TARGET_GENES): object,
+         ("Enrichment", COLUMN_NAME_RANK_AT_MAX): np.int64,
+     },
+     index=pd.MultiIndex.from_arrays(

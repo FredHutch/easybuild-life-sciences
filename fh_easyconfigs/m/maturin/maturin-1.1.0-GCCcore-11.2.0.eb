@@ -1,0 +1,38 @@
+easyblock = 'PythonBundle'
+
+name = 'maturin'
+version = '0.14.6'
+
+homepage = "https://github.com/pyo3/maturin"
+description = """This project is meant as a zero configuration
+replacement for setuptools-rust and milksnake. It supports building
+wheels for python 3.5+ on windows, linux, mac and freebsd, can upload
+them to pypi and has basic pypy and graalpy support."""
+
+toolchain = {'name': 'GCCcore', 'version': '11.2.0'}
+
+builddependencies = [('binutils', '2.37')]
+
+dependencies = [
+    ('Python', '3.9.6'),
+    ('Rust', '1.65.0'),
+]
+
+use_pip = True
+sanity_pip_check = True
+download_dep_fail = True
+
+exts_list = [
+    ('setuptools', '65.6.3', {
+        'checksums': ['a7620757bf984b58deaf32fc8a4577a9bbc0850cf92c20e1ce41c38c19e5fb75'],
+    }),
+    ('setuptools-rust', '1.5.2', {
+        'checksums': ['d8daccb14dc0eae1b6b6eb3ecef79675bd37b4065369f79c35393dd5c55652c7'],
+    }),
+    ('tomli', '2.0.1', {
+        'checksums': ['de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f'],
+    }),
+    (name, version),
+]
+
+moduleclass = 'tools'

@@ -1,0 +1,56 @@
+diff -ruN llvmlite-0.40.1.orig/ffi/passmanagers.cpp llvmlite-0.40.1/ffi/passmanagers.cpp
+--- llvmlite-0.40.1.orig/ffi/passmanagers.cpp	2023-06-21 00:30:00.134267300 -0700
++++ llvmlite-0.40.1/ffi/passmanagers.cpp	2023-09-05 10:54:50.342194000 -0700
+@@ -8,6 +8,7 @@
+ #include "llvm/IR/DiagnosticInfo.h"
+ #include "llvm/IR/DiagnosticPrinter.h"
+ #include "llvm/IR/LegacyPassManager.h"
++#include "llvm/Pass.h"
+ #include "llvm/IR/Module.h"
+ #include "llvm/Support/FileSystem.h"
+ #include "llvm/Support/ToolOutputFile.h"
+diff -ruN llvmlite-0.40.1.orig/ffi/targets.cpp llvmlite-0.40.1/ffi/targets.cpp
+--- llvmlite-0.40.1.orig/ffi/targets.cpp	2023-06-21 00:30:00.178267500 -0700
++++ llvmlite-0.40.1/ffi/targets.cpp	2023-09-05 13:46:27.082776000 -0700
+@@ -8,6 +8,7 @@
+ #include "llvm/Support/Host.h"
+ #if LLVM_VERSION_MAJOR > 13
+ #include "llvm/MC/TargetRegistry.h"
++#include "llvm/Support/GraphWriter.h"
+ #else
+ #include "llvm/Support/TargetRegistry.h"
+ #endif
+diff -ruN llvmlite-0.40.1.orig/ffi/value.cpp llvmlite-0.40.1/ffi/value.cpp
+--- llvmlite-0.40.1.orig/ffi/value.cpp	2023-06-21 00:30:00.134267300 -0700
++++ llvmlite-0.40.1/ffi/value.cpp	2023-09-05 13:47:21.271498000 -0700
+@@ -1,5 +1,6 @@
+ #include "core.h"
+ #include "llvm-c/Core.h"
++#include "llvm/GraphWriter.h"
+ #include <string>
+ 
+ #include <iostream>
+diff -ruN llvmlite-0.40.1.orig/llvmlite/tests/test_binding.py llvmlite-0.40.1/llvmlite/tests/test_binding.py
+--- llvmlite-0.40.1.orig/llvmlite/tests/test_binding.py	2023-06-21 00:30:00.182267400 -0700
++++ llvmlite-0.40.1/llvmlite/tests/test_binding.py	2023-09-05 12:58:36.163419000 -0700
+@@ -555,7 +555,10 @@
+         bd = ir.IRBuilder(fn.append_basic_block(name="<>!*''#"))
+         bd.ret(ir.Constant(ir.IntType(32), 12345))
+         asm = str(mod)
+-        self.assertEqual(asm, asm_nonalphanum_blocklabel)
++        self.assertEqual(
++            clean_string_whitespace(asm),
++            clean_string_whitespace(asm_nonalphanum_blocklabel)
++        )
+ 
+     def test_global_context(self):
+         gcontext1 = llvm.context.get_global_context()
+@@ -647,7 +650,7 @@
+     def test_version(self):
+         major, minor, patch = llvm.llvm_version_info
+         # one of these can be valid
+-        valid = [(11,), (12, ), (13, ), (14, )]
++        valid = [(11,), (12, ), (13, ), (14, ), (15, )]
+         self.assertIn((major,), valid)
+         self.assertIn(patch, range(10))
+ 

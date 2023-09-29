@@ -1,0 +1,77 @@
+# Built with EasyBuild version 4.8.0 on 2023-08-08_16-24-17
+easyblock = 'PythonBundle'
+
+name = 'numba'
+version = '0.57.0rc1'
+
+homepage = 'https://numba.pydata.org/'
+description = """Numba is an Open Source NumPy-aware optimizing compiler for
+Python sponsored by Continuum Analytics, Inc. It uses the remarkable LLVM
+compiler infrastructure to compile Python syntax to machine code."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+toolchainopts = {'pic': True}
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('LLVM', '14.0.6'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+local_llvmlite_preinstallopts = "export LLVM_CONFIG=${EBROOTLLVM}/bin/llvm-config && "
+local_llvmlite_preinstallopts += "export LLVMLITE_SKIP_LLVM_VERSION_CHECK=1 && "
+
+exts_list = [
+    ('llvmlite', '0.40.0rc1', {
+        'preinstallopts': "export LLVM_CONFIG=${EBROOTLLVM}/bin/llvm-config && export LLVMLITE_SKIP_LLVM_VERSION_CHECK=1 && ",
+        'checksums': ['f87877f4703bbc73b2c1a872a5487f4720031b9ad7bc8e2bf3dc5fe616db6b15'],
+    }),
+    (name, version, {
+        'checksums': ['3cd0510f3557524010338e65e395eeb035345fa4bf8cd2375023145334ddcf00'],
+    }),
+]
+
+fix_python_shebang_for = ['bin/*']
+
+sanity_check_paths = {
+    'files': ['bin/numba'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = [
+    "python -m llvmlite.tests",
+    "numba --help",
+]
+
+moduleclass = 'lang'
+
+# Build statistics
+buildstats = [{
+    "build_time": 67.02,
+    "command_line": ["--accept-eula-for='Intel-oneAPI'", "--buildpath='/build'", "--configfiles='/etc/easybuild.d/config.cfg,/app/easybuild/config.cfg'", "--cuda-compute-capabilities='6.1,7.5'", "--from-pr='17796'", '--group-writable-installdir', "--installpath='/app'", "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--sourcepath='/sources'", "--umask='002'"],
+    "core_count": 24,
+    "cpu_arch": "x86_64",
+    "cpu_arch_name": "UNKNOWN",
+    "cpu_model": "Intel(R) Xeon(R) Gold 6146 CPU @ 3.20GHz",
+    "cpu_speed": 3201.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.8.0",
+    "easybuild-framework_version": "4.8.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/12.2.0/libexec/gcc/x86_64-pc-linux-gnu/12.2.0/lto-wrapper; OFFLOAD_TARGET_NAMES=nvptx-none; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --without-cuda-driver --enable-offload-targets=nvptx-none --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold --enable-ld=default --prefix=/app/software/GCCcore/12.2.0 --with-local-prefix=/app/software/GCCcore/12.2.0 --enable-bootstrap --with-isl=/build/GCCcore/12.2.0/system-system/gcc-12.2.0/stage2_stuff --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu; Thread model: posix; Supported LTO compression algorithms: zlib; gcc version 12.2.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "ArrayFire",
+    "install_size": 31463818,
+    "modules_tool": ('Lmod', '/eb/lmod/lmod/libexec/lmod', '8.5.2'),
+    "os_name": "Ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04.6 LTS (Bionic Beaver)",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "3.8.0 (default, Dec  9 2021, 17:53:27) ; [GCC 8.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/12.2.0/bin/gcc",
+    "system_python_path": "/app/software/Python/3.10.8-GCCcore-12.2.0/bin/python",
+    "timestamp": 1691537057,
+    "total_memory": 385593,
+}]

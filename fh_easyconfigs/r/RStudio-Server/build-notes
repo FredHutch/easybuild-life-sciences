@@ -1,0 +1,50 @@
+2023.09.0-463
+
+ext:
+   [jscomp] Compiling 62 file(s) with 93 extern(s)
+   [jscomp] 0 error(s), 0 warning(s)
+
+javac:
+    [mkdir] Created dir: /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/bin
+    [javac] Compiling 3 source files to /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/bin
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] Compiling 2608 source files to /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/bin
+     [copy] Copying 1891 files to /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/bin
+
+gwtc:
+
+panmirror:
+     [echo] yarn location: ../../dependencies/common/node/16.14.0/bin/yarn
+     [echo] panmirror location: ./lib/quarto/apps/panmirror
+    [mkdir] Created dir: /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/www/js/panmirror
+
+BUILD FAILED
+/build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/build.xml:175: The following error occurred while executing this line:
+/build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/build.xml:132: The directory /build/RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/lib/quarto/apps/panmirror does not exist
+
+100% compile no error, but missing a directory.
+file="/opt/rstudio-tools/src/gwt/lib/quarto/apps/panmirror"/>  defined in
+RStudioServer/2023.09.0+463/foss-2022b-Java-11-R-4.3.1/rstudio-2023.09.0-463/src/gwt/build.xml
+
+=============================
+2022.07.2+576-foss-2022b fixed by adding set to Thread.hpp
+
+In file included from ~/src/cpp/core/include/core/LogOptions.hpp:25,
+                 from ~/src/cpp/core/LogOptions.cpp:16:
+
+/src/cpp/core/include/core/Thread.hpp:362:9: error   set in namespace std does not name a template type
+
+
+/src/cpp/core/include/core/Thread.hpp:26:1: note: std::set is defined in header <set>; did you forget to #include <set>?
+   25 | #include <core/BoostThread.hpp>
+  +++ |+#include <set>
+   26 | #include <shared_core/Error.hpp>
+
+/src/cpp/core/include/core/Thread.hpp:322:17: error: set_ was not declared in this scope
+
+
+#  std::set is also used in rstudio-2022.07.2-576/src/cpp/core/PerformanceTimer.cpp:      os << std::setprecision(ms < 10 ? 1 : 0);
+
+
+

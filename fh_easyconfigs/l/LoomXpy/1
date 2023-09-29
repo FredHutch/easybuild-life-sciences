@@ -1,0 +1,45 @@
+easyblock = 'PythonBundle'
+
+name = 'LoomXpy'
+version = '0.4.2'
+
+homepage = 'https://loomxpy.readthedocs.io/'
+description = """Python package (compatible with SCope) to create .loom files and extend them with
+ other data e.g.: SCENIC regulons"""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+builddependencies = [
+]
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('pySCENIC', '0.12.1'),
+    ('SciPy-bundle', '2023.02'),
+    ('scikit-learn', '1.2.1'),
+]
+
+use_pip = True
+sanity_pip_check = False
+
+local_preinstallopts = ' sed -i -e "s/use_scm_version=True/use_scm_version=False/" setup.py && '
+
+exts_list = [
+    ('ctxcore', '0.2.0', {
+        'source_tmpl': '%(name)s-%(version)s-py3-none-any.whl',
+    }),
+    ('networkx', '3.0'),
+    ('marshmallow', '3.20.1'),
+    ('dataclasses_json', '0.5.14'), 
+    ('loompy', '3.0.7'),
+    ('loomxpy', version, {
+        'preinstallopts': local_preinstallopts,
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'

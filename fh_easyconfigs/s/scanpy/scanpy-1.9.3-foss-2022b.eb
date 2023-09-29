@@ -1,0 +1,66 @@
+easyblock = 'PythonBundle'
+
+name = 'scanpy'
+version = '1.9.3'
+
+homepage = 'https://scanpy.readthedocs.io/en/stable/'
+description = """Scanpy is a scalable toolkit for analyzing single-cell gene expression data built
+ jointly with anndata. It includes preprocessing, visualization, clustering, trajectory inference
+ and differential expression testing. The Python-based implementation efficiently deals with
+ datasets of more than one million cells.
+"""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+toolchainopts = {'openmp': True}
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('h5py', '3.8.0'),
+    ('networkx', '3.0'),
+    ('numba', '0.57.0rc1'),
+    ('PyTables', '3.8.0'),
+    ('statsmodels', '0.14.0'),
+    ('scikit-learn', '1.2.1'),
+    ('Seaborn', '0.12.2'),
+    ('tqdm', '4.64.1'),
+    ('leidenalg', '0.10.1'),
+    ('umap-learn', '0.5.3'),
+]
+
+use_pip = True
+
+exts_list = [
+    ('natsort', '8.2.0', {
+        'checksums': ['57f85b72c688b09e053cdac302dd5b5b53df5f73ae20b4874fcbffd8bf783d11'],
+    }),
+    ('anndata', '0.9.2', {
+        'checksums': ['e5b8383d09723af674cae7ad0c2ef53eb1f8c73949b7f4c182a6e30f42196327'],
+    }),
+    ('stdlib_list', '0.9.0', {
+        'checksums': ['98eb66135976c96b4ee3f4c0ef0552ebb5a9977ce3028433db79f4738b02af26'],
+    }),
+    ('sinfo', '0.3.4', {
+        'checksums': ['81ea91c69a875de178e10bada9476d7300a1f712e1823dbd7714f43a10baba4d'],
+    }),
+    ('session_info', '1.0.0', {
+        'checksums': ['3cda5e03cca703f32ae2eadbd6bd80b6c21442cfb60e412c21cb8ad6d5cbb6b7'],
+    }),
+    (name, version, {
+        'checksums': ['dfe65f9acd9f4c1740079a099f89fa6a44b6f0ef75ecaf85247ad4af859144d7'],
+    }),
+]
+
+sanity_pip_check = True
+
+sanity_check_paths = {
+    'files': ['bin/%s' % x for x in ['natsort', 'scanpy']],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/'],
+}
+
+sanity_check_commands = [
+    "natsort --help",
+    "scanpy --help",
+]
+
+moduleclass = 'bio'

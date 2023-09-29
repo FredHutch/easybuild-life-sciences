@@ -1,0 +1,5 @@
+== FAILED: Installation ended unsuccessfully (build directory: /build/OpenMM/7.5.1/foss-2021b-CUDA-11.4.1-DeepMind-patch): build failed (first 300 chars): cmd " CTEST_OUTPUT_ON_FAILURE=1 make test -e ARGS="-E '(Integrator)|(Thermostat)|(Barostat)|(Rpmd)|(Amoeba)'"  " exited with exit code 2 and output:
+Running tests...
+/app/software/CMake/3.22.1-GCCcore-11.2.0/bin/ctest --force-new-ctest-process -E '(Integrator)|(Thermostat)|(Barostat)|(Rpmd)|(Amoeba) (took 37 mins 54 secs)
+== Results of the build can be found in the log file(s) /tmp/eb-63emc3gz/easybuild-OpenMM-7.5.1-20230830.150927.hpmCi.log
+ERROR: Build of /eb/software/EasyBuild/4.8.0/easybuild/easyconfigs/o/OpenMM/OpenMM-7.5.1-foss-2021b-CUDA-11.4.1-DeepMind-patch.eb failed (err: 'build failed (first 300 chars): cmd " CTEST_OUTPUT_ON_FAILURE=1 make test -e ARGS="-E \'(Integrator)|(Thermostat)|(Barostat)|(Rpmd)|(Amoeba)\'"  " exited with exit code 2 and output:\nRunning tests...\n/app/software/CMake/3.22.1-GCCcore-11.2.0/bin/ctest --force-new-ctest-process -E \'(Integrator)|(Thermostat)|(Barostat)|(Rpmd)|(Amoeba)')

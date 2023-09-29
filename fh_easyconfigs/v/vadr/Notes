@@ -1,0 +1,12 @@
+# vadr Install Notes
+
+
+### vadr-install.sh
+
+ - download sequip Bio-Easel
+     -   https://github.com/nawrockie/Bio-Easel  (Perl code)
+     [x]   Infernal/1.1.4-foss-2021b
+     [x]  Blast+ 2.12.0 BLAST+/2.12.0-gompi-2021b 
+     [x]  Requires HMMER  HMMER/3.3.2-gompi-2021b
+     -  FASTA - https://github.com/wrpearson/fasta36   (needs updating)
+     [x]  minimap2/2.24-GCCcore-11.2.0 - minimap2 https://github.com/lh3/minimap2/archive$MM2VERSIONGIT.zip

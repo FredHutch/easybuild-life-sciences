@@ -1,0 +1,133 @@
+easyblock = 'PythonBundle'
+
+name = 'scenicplus'
+version = '1.0.0'
+
+homepage = 'https://scenicplus.readthedocs.io/'
+description = """SCENIC+ is a python package to build enhancer driven gene regulatory networks
+ (GRNs) using combined or separate single-cell gene expression (scRNA-seq) and single-cell
+ chromatin accessibility (scATAC-seq) data."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+builddependencies = [
+    ('Rust', '1.65.0'),
+    ('nodejs', '18.12.1'),
+    ('CMake', '3.24.3'),
+]
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('pySCENIC', '0.12.1'),
+    ('Biopython', '1.81'),
+    ('pycisTarget', '1.0.2'),
+    ('matplotlib', '3.7.0'),
+    ('MACS2', '2.2.9.1'),
+    ('h5py', '3.8.0'),
+    ('plotly.py', '5.13.1'),
+    ('lxml', '4.9.2'),
+    ('pyBigWig', '0.3.22'),
+    ('Seaborn', '0.12.2'),
+    ('scanpy', '1.9.3'),
+    ('jupyter-server', '2.7.0'),
+    ('meson-python', '0.11.0'),
+    ('Ray-project', '2.6.2'),
+    ('BeautifulSoup', '4.11.1'),
+    ('scikit-build', '0.17.2'), # for Levenshtein
+]
+
+use_pip = True
+sanity_pip_check = False
+
+local_preinstallopts = ' sed -i -e "s/setup(/setup(version=\'%(version)s\',/" setup.py && '
+local_preinstallopts += ' sed -i -e "s/use_scm_version=True/use_scm_version=False/" setup.py && '
+
+exts_list = [
+    ('pyproject-metadata', '0.7.1'),
+    ('kaleido', '0.2.1', {
+        #https://files.pythonhosted.org/packages/ae/b3/a0f0f4faac229b0011d8c4a7ee6da7c2dca0b6fd08039c95920846f23ca4/kaleido-0.2.1-py2.py3-none-manylinux1_x86_64.whl
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-manylinux1_x86_64.whl',
+    }),
+    ('click', '8.1.6'), #  from loompy
+    ('numpy_groupies', '0.9.22'), #  from loompy
+    ('loompy', '3.0.7'),
+    ('mypy_extensions', '1.0.0'),
+    ('typing_inspect', '0.9.0'),
+    ('marshmallow', '3.20.1'),
+    ('dataclasses_json', '0.5.14'),
+    ('loomxpy', '0.4.2'),
+    ('mudata', '0.2.3'),
+    ('arboreto', '0.1.6', {
+        # the source on PyPI is missing 'requirements.txt', fetching from github instead
+        'source_urls': ['https://github.com/aertslab/arboreto/archive/refs/tags/'],
+        'sources': [{'download_filename': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+        'checksums': ['f94c0bc084ca61422e8b74ecdb80585a45b168ac682f18dd3c52c9097ee29caa'],
+    }),
+    ('gseapy', '0.10.8'),
+    ('ctxcore', '0.2.0', {
+        'source_tmpl': '%(name)s-%(version)s-py3-none-any.whl',
+    }),
+    ('adjustText', '0.8', {
+        'modulename': 'adjustText',
+    }),
+    ('nodeenv', '1.8.0'),
+    ('sphinx-theme-builder', '0.2.0b2', {
+        'modulename': 'sphinx_theme_builder',
+    }),
+    ('certifi', '2023.7.22'),
+    ('nbsphinx', '0.9.2'),
+    ('nbsphinx-link', '1.3.0', {
+        'modulename': 'nbsphinx_link',
+    }),
+    ('tzdata', '2023.3'),
+    ('mizani', '0.10.0'),  # from plotnine
+    ('patsy', '0.5.3'), # from plotnine
+    ('statsmodels', '0.14.0'), # from plotnine
+    ('plotnine', '0.12.2'),
+    ('python-utils', '3.7.0', {
+        'modulename': 'python_utils',
+    }),
+    ('progressbar2', '4.2.0', { #  from pygam
+        'modulename': 'progressbar',
+    }),
+    ('pygam', '0.9.0'),
+    ('autopaths', '1.6.0'),
+    ('retry', '0.9.2'), #  from plumbing
+    ('plumbing', '2.11.2'),
+    ('sh', '2.0.6'),
+    ('fasta', '2.3.2'),
+    ('pyfaidx', '0.7.2.1'),
+    ('lda', '2.0.0'),
+    ('globre', '0.1.5'), #  from tmtoolkit
+    ('et_xmlfile', '1.1.0'), #  from openpyxl
+    ('openpyxl', '3.1.2'), #  from tmtoolkit
+    ('bidict', '0.22.1'), #  from tmtoolkit
+    ('tmtoolkit', '0.12.0'), # from pycistopic
+    ('named', '1.3.0'), #  from Levenshtein
+    ('Levenshtein', '0.21.1'), # from pycistopic
+    ('pycisTopic', '1.0.2', {
+        'modulename': 'pycisTopic',
+        'preinstallopts': local_preinstallopts,
+        'source_urls': ['https://github.com/aertslab/pycisTopic/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+    #('pycistarget', '1.0.2', {
+    #    'preinstall_opts': local_preinstallopts,
+    #    'source_urls': ['https://github.com/aertslab/pycistarget/archive/refs/tags'],
+    #    'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    #}),
+    ('tspex', '0.6.3'),
+    (name, version, {
+        'preinstallopts': local_preinstallopts,
+        'source_tmpl': 'v%(version)s.tar.gz',
+        'source_urls': ['https://github.com/aertslab/scenicplus/archive/refs/tags'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+moduleclass = 'bio'
