@@ -20,7 +20,6 @@ dependencies = [
 
 use_pip = True
 
-# order is important!
 exts_list = [
     ('annoy', '1.17.1', {
         'checksums': ['bf177dbeafb81f63b2ac1e1246b1f26a2acc82e73ba46638734d29d8258122da'],
