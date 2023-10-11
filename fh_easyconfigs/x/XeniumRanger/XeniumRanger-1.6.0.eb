@@ -1,0 +1,57 @@
+easyblock = 'Tarball'
+
+name = 'XeniumRanger'
+version = '1.6.0'
+
+homepage = 'https://www.10xgenomics.com/support/software/xenium-ranger'
+description = """The Xenium In Situ software suite is a set of software
+ applications for analyzing and visualizing in situ gene expression data
+ produced by the Xenium Analyzer."""
+
+toolchain = SYSTEM
+
+download_instructions = """
+Download manually from https://www.10xgenomics.com/support/software/xenium-ranger/downloads
+"""
+sources = [{
+    'filename': "%(namelower)s-%(version)s.tar.tar", # filename as downloaded, extension should be .tar.gz
+    'extract_cmd': "tar xvzf %s", # specify explicitly due to source file not ending in .tar.gz
+}]
+checksums = ['f83fc8703f9c298e1980123b81d3ed56d88ec93ec171fa59ed5fe356a8e0bcf4']
+
+keepsymlinks = True
+
+unpack_options = ' && cd xeniumranger-xenium1.6/external/martian/jobmanagers && cp slurm.template.example slurm.template'
+
+sanity_check_paths = {
+    'files': ['bin/xeniumranger'],
+    'dirs': ['bin', 'lib', 'external', 'mro'],
+}
+
+sanity_check_commands = ['xeniumranger --help']
+
+modloadmsg = """
+    XeniumRanger should be run in cluster mode:
+    
+
+    Using '--jobmode=slurm' will run in cluster mode using the default SLURM template file:
+        
+        xeniumranger --jobmode=slurm ...
+    
+    The default template should be sufficient for most use cases.
+
+
+    Alternatively '--jobmode=<templatefile>' can be used with the path to a custom template file if needed:
+        
+        To create a custom template, copy '%(installdir)s/external/martian/jobmanagers/slurm.template' to a location of your choice and edit as necessary.
+
+
+    Running XeniumRanger in cluster mode will automatically create and submit jobs to the cluster
+    
+    The main 'xeniumranger' command can be run inside a cluster job, but can also be run directly on one of the 'rhino' hosts
+
+
+    See https://www.10xgenomics.com/support/software/xenium-ranger/advanced/XR-cluster-mode for more information on cluster mode
+"""
+
+moduleclass = 'bio'
