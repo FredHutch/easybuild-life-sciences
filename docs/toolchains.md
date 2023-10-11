@@ -32,3 +32,34 @@ match modules from different toolchains.
 | foss-2019a | GCC 8.2.0 | skipped |
 | [foss-2018b]({{ site.baseurl }}/toolchains/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but were outdated by 2019 |
 | [foss-2016b]({{ site.baseurl }}/toolchains/foss-2016b/) | GCC 5.4.0 | In use from 2016 too 2019. Retired with the Ubuntu 14.04 cluster |
+
+## Toolchain diagram {: #toolchains_diagram }
+
+To be more helpful in understanding the differences between these families, here is a diagram that explains what is added in
+each additional layer.
+
+Note: because there have been a few changes in toolchains, there are notes below the diagram
+that explain the differences between the generations going back to the `2020b` version of the `foss` and `intel` toolchains.
+
+#### Newest generations (`2022b` and later):
+
+``` mermaid
+graph LR
+  A[GCCCore] --> |binutils| B[GCC];
+  A --> |binutils| C[intel-compilers];
+  B --> |OpenMPI| E[gompi];
+  C --> |impi| F[iimpi];
+  B --> |FlexiBLAS + FFTW + ScaLAPACK| D[gfbf];
+  D --> |OpenMPI| G[foss];
+  E --> |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
+  F --> |imkl| Z[intel];
+  C --> |imkl| H[iimkl];
+  H --> |impi| Z[intel];
+```
+
+Note: following notes apply for the generations listed and those older than it:
+
+- `2022a` - `iimkl` not present yet
+- `2021b` - `gfbf` not present yet
+- `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
+
