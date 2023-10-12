@@ -44,7 +44,7 @@ that explain the differences between the generations going back to the `2020b` v
 <!-- https://github.com/easybuilders/easybuild-docs/blob/03891cbe6404a7fa237f289c99a660cfac5d7a73/docs/common-toolchains.md?plain=1#L9 -->
 ### Newest generations (`2022b` and later):
 
-``` mermaid
+```mermaid
 graph LR
   A[GCCCore] --> |binutils| B[GCC];
   A --> |binutils| C[intel-compilers];
