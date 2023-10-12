@@ -33,7 +33,7 @@ match modules from different toolchains.
 | [foss-2018b]({{ site.baseurl }}/toolchains/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but were outdated by 2019 |
 | [foss-2016b]({{ site.baseurl }}/toolchains/foss-2016b/) | GCC 5.4.0 | In use from 2016 too 2019. Retired with the Ubuntu 14.04 cluster |
 
-## Toolchain diagram {: #toolchains_diagram }
+## Toolchain diagram
 
 To be more helpful in understanding the differences between these families, here is a diagram that explains what is added in
 each additional layer.
@@ -41,7 +41,8 @@ each additional layer.
 Note: because there have been a few changes in toolchains, there are notes below the diagram
 that explain the differences between the generations going back to the `2020b` version of the `foss` and `intel` toolchains.
 
-#### Newest generations (`2022b` and later):
+<!-- https://github.com/easybuilders/easybuild-docs/blob/03891cbe6404a7fa237f289c99a660cfac5d7a73/docs/common-toolchains.md?plain=1#L9 -->
+### Newest generations (`2022b` and later):
 
 ``` mermaid
 graph LR
