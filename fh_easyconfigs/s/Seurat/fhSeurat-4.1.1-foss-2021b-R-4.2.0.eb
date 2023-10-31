@@ -14,6 +14,7 @@ toolchain = {'name': 'foss', 'version': '2021b'}
 dependencies = [
     #('R', '4.2.0'),
     ('GEOS', '3.9.1'),
+    ('fhR', '4.2.0'),
 ]
 
 exts_default_options = {
