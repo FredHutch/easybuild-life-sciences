@@ -12,9 +12,9 @@ sidebar:
 
 Reference data used by modules.
 
-### Ensemble Data
+### Ensembl Data
 
-For applications that require Ensemble data.  (Cache data used by VEP.)
+For applications that require Ensembl data.  (Cache data used by VEP and others)
 ```
 /shared/biodata/ngs/Reference/Genomes/Homo_sapiens/Ensembl-110
 ```
