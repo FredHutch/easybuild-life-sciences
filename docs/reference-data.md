@@ -13,8 +13,8 @@ sidebar:
 Reference data used by modules.
 
 ### Ensembl Data
+Ensembl is a genome browser for vertebrate genomes that supports research in comparative genomics, evolution, sequence variation and transcriptional regulation. Ensembl annotate genes, computes multiple alignments, predicts regulatory function and collects disease data. Ensembl tools include BLAST, BLAT, BioMart and the Variant Effect Predictor (VEP) for all supported species.
 
-For applications that require Ensembl data.  (Cache data used by VEP and others)
 ```
 /shared/biodata/ngs/Reference/Genomes/Homo_sapiens/Ensembl-110
 ```
