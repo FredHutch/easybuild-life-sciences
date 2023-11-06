@@ -25,6 +25,8 @@ docs:
         url: /seurat/
       - title: "Vendor Software"
         url: /vendorsoftware/
+      - title: "Reference Data"
+        url: /reference-data/
       - title: "Toolchains"
         url: /toolchains/
       - title: "Dependency Graphs"
