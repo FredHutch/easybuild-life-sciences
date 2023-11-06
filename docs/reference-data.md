@@ -14,25 +14,32 @@ Reference data used by modules.
 
 ### Ensemble Data
 
-Cache data used by VEP.
+For applications that require Ensemble data.  (Cache data used by VEP.)
 ```
 /shared/biodata/ngs/Reference/Genomes/Homo_sapiens/Ensembl-110
 ```
 
 ### 10X Genomics
-Refernce data for 10X Genomics tools is located `/shared/biodata/ngs/Reference/10X`
+The Hutch has serveral packages from 10X Genomoics. 
  - Cell Ranger
  - Cellranger ATAC 
  - Cell Ranger ARC
  - Space Ranger
+Refernce data for 10X Genomics tools is located
+```
+/shared/biodata/ngs/Reference/10X`
+```
 
 ### Kraken2
+Kraken 2 is the newest version of Kraken, a taxonomic classification system using exact k-mer matches to achieve high accuracy and fast classification speeds. This classifier matches each k-mer within a query sequence to the lowest common ancestor (LCA) of all genomes containing the given k-mer. The k-mer assignments inform the classification algorithm.
 
 ```
 /shared/biodata/ngs/Reference/Kraken2
 ```
 
 ### STAR2
+[STAR](https://github.com/alexdobin/STAR) aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.
+Modules: `STAR/2.7.10b-GCC-12.2.0`
 
 ```
 /shared/biodata/ngs/Reference/Genomes/Homo_sapiens/GRCh38/Sequence/STAR2Index
@@ -92,6 +99,8 @@ at the Broad Institute to analyse next-generation resequencing data.
 ### tcrdist3
 
 tcrdist3 is an open-source python package that enables a broad array of T cell receptor sequence analyses.
+There are many other applications for analyzing TCR data; DeepTCR, clusTCR, [pubtcrs](https://github.com/phbradley/pubtcrs).
+
 ```
 /shared/biodata/ngs/Reference/tcrdist
 ```
