@@ -35,6 +35,7 @@ Kraken 2 is the newest version of Kraken, a taxonomic classification system usin
 
 ```
 /shared/biodata/ngs/Reference/Kraken2
+/shared/biodata/microbiome/kraken2
 ```
 
 ### STAR2

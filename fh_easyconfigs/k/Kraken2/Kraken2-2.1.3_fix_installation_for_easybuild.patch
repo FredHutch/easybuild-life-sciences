@@ -1,0 +1,12 @@
+diff -ruN kraken2-2.1.3.orig/src/Makefile kraken2-2.1.3/src/Makefile
+--- kraken2-2.1.3.orig/src/Makefile	2023-06-06 17:25:37.000000000 -0700
++++ kraken2-2.1.3/src/Makefile	2023-11-07 11:43:41.310545000 -0800
+@@ -1,6 +1,6 @@
+-CXX = g++
++CXX ?= g++
+ KRAKEN2_SKIP_FOPENMP ?= -fopenmp
+-CXXFLAGS = $(KRAKEN2_SKIP_FOPENMP) -Wall -std=c++11 -O3
++CXXFLAGS ?= $(KRAKEN2_SKIP_FOPENMP) -Wall -std=c++11 -O3
+ CXXFLAGS += -DLINEAR_PROBING
+ 
+ .PHONY: all clean install
