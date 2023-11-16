@@ -18,17 +18,23 @@ Toolchains are curated twice a year and named for the year, and labeled a or b, 
 When loading multiple modules for a workflow, always load modules from the same toolchain. Do not mix and
 match modules from different toolchains.
 
-## GNU Toolchain Versions
+## FOSS Toolchain Versions
 
-| Toolchain | GCC Version | Notes |
-| ----------|-------------| ---------|
-| [foss-2022b]({{ site.baseurl }}/toolchains/foss-2022b/) | GCC 12.2.0 | Begining Feb 2023 |
-| [foss-2022a]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.3.0 | Limited use |
-| [foss-2021b]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.2.0 | Begining Nov 2021 |
-| [foss-2021a]({{ site.baseurl }}/toolchains/foss-2021a/) | GCC 10.3.0 | Limited use |
-| [foss-2020b]({{ site.baseurl }}/toolchains/foss-2020b/) | GCC 10.2.0 | Begining Nov 2020 |
-| foss-2020a | GCC 9.3.0 | Mostly skipped |
-| [foss-2019b]({{ site.baseurl }}/toolchains/foss-2019b/) | GCC 8.3.0 | Primay tool chain for June 2019 cluster update |
+The foss toolchain consists entirely of open source software. The FOSS name is derived from Free Open Sorce Software.
+
+Each toolchain uses a single version of Python. Multible versions of libraries can exist within a single toolchain, like 
+`matplotlib` but the base Python remains the same for all libraries within a toolchain.
+
+
+| Toolchain | GCC Version | Python | Notes |
+| ----------|-------------|--------|-------|
+| [foss-2022b]({{ site.baseurl }}/toolchains/foss-2022b/) | GCC 12.2.0 | 3.10.8 | Begining Feb 2023 |
+| [foss-2022a]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.3.0 | 3.10.4 | Limited use |
+| [foss-2021b]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.2.0 | 3.9.6  | Begining Nov 2021 |
+| [foss-2021a]({{ site.baseurl }}/toolchains/foss-2021a/) | GCC 10.3.0 | 3.9.5  | Limited use |
+| [foss-2020b]({{ site.baseurl }}/toolchains/foss-2020b/) | GCC 10.2.0 | 3.8.6  | Begining Nov 2020 |
+| foss-2020a                                              | GCC 9.3.0  | 3.8.2  | Mostly skipped |
+| [foss-2019b]({{ site.baseurl }}/toolchains/foss-2019b/) | GCC 8.3.0  | 3.7.4  | Primay tool chain for June 2019 cluster update |
 | foss-2019a | GCC 8.2.0 | skipped |
 | [foss-2018b]({{ site.baseurl }}/toolchains/foss-2018b/) | GCC 7.3.0 | Many modules were built for the new cluster, but were outdated by 2019 |
 | [foss-2016b]({{ site.baseurl }}/toolchains/foss-2016b/) | GCC 5.4.0 | In use from 2016 too 2019. Retired with the Ubuntu 14.04 cluster |
