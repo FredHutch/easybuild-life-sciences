@@ -65,7 +65,7 @@ if you modify the diagram, please change them back to hyphens.
 
 -->
 
-![Toolchain Diagram](/images/toolchain-diagram.png)
+![Toolchain Diagram](images/toolchain-diagram.png)
 
 <!--
 ```mermaid
