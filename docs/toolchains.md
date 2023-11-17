@@ -59,10 +59,9 @@ and display it here. If you need to update the diagram, uncomment
 the mermaid code below and update the diagram. Then take a screenshot
 and save it as docs/images/toolchain-diagram.png.
 
-Note that the Mermaid code has a "hyphen-hyphen greater than" in
+Note that the Mermaid code has several "hyphen-hyphen greater than" in
 it and that breaks the HTML comment. So I changed the hyphens to tildes,
 if you modify the diagram, please change them back to hyphens.
-
 
 -->
 
@@ -72,15 +71,15 @@ if you modify the diagram, please change them back to hyphens.
 ```mermaid
 graph LR
   A[GCCCore] ~~> |binutils| B[GCC];
-  A --> |binutils| C[intel-compilers];
-  B --> |OpenMPI| E[gompi];
-  C --> |impi| F[iimpi];
-  B --> |FlexiBLAS + FFTW + ScaLAPACK| D[gfbf];
-  D --> |OpenMPI| G[foss];
-  E --> |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
-  F --> |imkl| Z[intel];
-  C --> |imkl| H[iimkl];
-  H --> |impi| Z[intel];
+  A ~~> |binutils| C[intel-compilers];
+  B ~~> |OpenMPI| E[gompi];
+  C ~~> |impi| F[iimpi];
+  B ~~> |FlexiBLAS + FFTW + ScaLAPACK| D[gfbf];
+  D ~~> |OpenMPI| G[foss];
+  E ~~> |FlexiBLAS + FFTW + ScaLAPACK| G[foss];
+  F ~~> |imkl| Z[intel];
+  C ~~> |imkl| H[iimkl];
+  H ~~> |impi| Z[intel];
 ```
 
 -->
