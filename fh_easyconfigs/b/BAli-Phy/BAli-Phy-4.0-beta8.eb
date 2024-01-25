@@ -1,0 +1,45 @@
+# #
+# This is a contribution from Fred Hutch
+# Authors::     John Dey jfdey@fredhutch.org
+# #
+
+easyblock = 'MesonNinja'
+
+name = 'BAli-Phy'
+version = '4.0-beta8'
+
+homepage = 'http://www.bali-phy.org/'
+description = """BAli-Phy estimates multiple sequence alignments and evolutionary trees from DNA, amino acid, 
+or codon sequences."""
+
+toolchain = {'name': 'GCC', 'version': '12.2.0'}
+
+github_account = 'bredelings'
+source_urls = [GITHUB_SOURCE]
+sources = ['%(version)s.tar.gz']
+checksums = ['ebeb4c94d41af31c204ea36f5829e81a7bb8b8a4599434e80c630658950c8de2']
+
+builddependencies = [
+    ('CMake', '3.24.3'),
+    ('Meson', '1.1.1'),
+    ('Ninja', '1.11.1'),
+    ('Pandoc', '2.13', '', SYSTEM),
+    ('pkgconf', '1.9.3'),
+]
+
+dependencies = [
+    ('Boost', '1.81.0'),
+    ('Eigen', '3.4.0'),
+    ('nlohmann_json', '3.11.2'),
+    ('fmt', '9.1.0'),
+    ('cairo', '1.17.4'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/%(namelower)s'],
+    'dirs': ['bin', 'lib', 'share'],
+}
+
+sanity_check_commands = ["%(namelower)s --help"]
+
+moduleclass = 'bio'
