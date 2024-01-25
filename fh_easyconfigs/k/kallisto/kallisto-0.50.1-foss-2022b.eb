@@ -1,0 +1,38 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+
+easyblock = 'CMakeMake'
+
+name = 'kallisto'
+version = '0.50.1'
+
+homepage = 'https://pachterlab.github.io/kallisto/'
+description = """kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally
+ of target sequences using high-throughput sequencing reads."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+toolchainopts = {'pic': True, 'usempi': True}
+
+github_account = 'pachterlab'
+source_urls = [GITHUB_SOURCE]
+sources = ['v%(version)s.tar.gz']
+checksums = ['030752bab3b0e33cd3f23f6d8feddd74194e5513532ffbf23519e84db2a86d34']
+
+builddependencies = [
+    ('Autotools', '20220317'),
+    ('CMake', '3.24.3'),
+]
+
+dependencies = [('HDF5', '1.14.0')]
+
+preconfigopts = "cd ../%(name)s-%(version)s/ext/htslib/ && autoreconf  --install && cd - &&"
+
+parallel = 1
+
+separate_build_dir = True
+
+sanity_check_paths = {
+    'files': ['bin/kallisto'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
