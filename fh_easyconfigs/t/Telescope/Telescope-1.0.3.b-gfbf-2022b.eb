@@ -1,0 +1,39 @@
+easyblock = 'PythonPackage'
+
+name = 'Telescope'
+version = '1.0.3.b'
+local_commit = '4cf1859'
+
+homepage = 'https://github.com/mlbendall/telescope'
+description = 'Single locus resolution of Transposable ELEment expression using next-generation sequencing.'
+
+toolchain = {'name': 'gfbf', 'version': '2022b'}
+
+source_urls = ['https://github.com/mlbendall/%(namelower)s/archive']
+sources = [{
+    'download_filename': '%s.tar.gz' % local_commit,
+    'filename': SOURCE_TAR_GZ, 
+}]
+
+patches = ['Telescope-1.0.3-Cython-language_level.patch', 'Telescope-1.0.3-cimport_fix.patch']
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('PyYAML', '6.0'),
+    ('Pysam', '0.21.0'),
+    ('HTSlib', '1.17'),
+    ('SAMtools', '1.17')
+]
+
+use_pip = True
+download_dep_fail = True
+
+sanity_pip_check = True
+sanity_check_paths = {
+    'files': ['bin/telescope'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages/telescope'],
+}
+sanity_check_commands = ['telescope --version']
+
+moduleclass = 'bio'
