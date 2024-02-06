@@ -1,8 +1,7 @@
 easyblock = 'PythonPackage'
 
 name = 'Telescope'
-version = '1.0.3'
-versionsuffix = '20230222'
+version = '1.0.3-20230222'
 local_commit = '4cf1859'
 
 homepage = 'https://github.com/mlbendall/telescope'
