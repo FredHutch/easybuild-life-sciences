@@ -1,0 +1,34 @@
+# EasyBuild easyconfig
+#
+# John Dey - Fred Hutch
+easyblock = 'PackedBinary'
+
+name = 'PLINK2'
+local_version_date = '20240205'
+local_arch = 'linux_avx2'
+local_namelower = "%(namelower)s"
+version = '%s_%s' % ( local_version_date, local_arch )
+#  https://s3.amazonaws.com/plink2-assets/alpha3/plink2_linux_x86_64_20220814.zip
+
+homepage = 'https://www.cog-genomics.org/plink/2.0'
+description = """PLINK2 is a free, open-source whole genome association analysis toolset, designed to
+ perform a range of basic, large-scale analyses in a computationally efficient manner.
+ The focus of PLINK2 is purely on analysis of genotype/phenotype data."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://s3.amazonaws.com/plink2-assets']
+sources = ['%s_%s_%s.zip' % (local_namelower, local_arch, local_version_date)]
+
+checksums = ['84647ff7259e3269b38f517c1b4e0f2f9ffe306abe63f1a20b649964b8029725']
+
+sanity_check_paths = {
+    'files': ['bin/%(namelower)s'],
+    'dirs': [],
+}
+
+postinstallcmds = ['mkdir %(installdir)s/bin/',
+                   'mv %(installdir)s/plink2 %(installdir)s/bin' ]
+sanity_check_commands = ["bin/%(namelower)s --help"]
+
+moduleclass = 'bio'
