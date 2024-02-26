@@ -1,0 +1,36 @@
+easyblock = 'PerlModule'
+
+"""
+For 'make test' to run properly, you must ensure that the
+database user 'eb_user' can connect to your MySQL server
+"""
+
+name = 'DBD-mysql'
+version = '5.003'
+versionsuffix = '-Perl-%(perlver)s'
+
+homepage = 'https://metacpan.org/pod/distribution/DBD-mysql/lib/DBD/mysql.pm'
+description = "Perl binding for MySQL"
+
+toolchain = {'name': 'GCC', 'version': '12.2.0'}
+
+source_urls = ['https://cpan.metacpan.org/authors/id/D/DV/DVEEDEN']
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+dependencies = [
+    ('Perl', '5.36.0'),
+    ('MariaDB', '10.11.2'),
+    ('zlib', '1.2.12'),
+    ('OpenSSL', '1.1', '', SYSTEM),
+]
+
+options = {'modulename': 'DBD::mysql'}
+prebuildopts = 'export PERL_CPANM_OPT="--notest" && '
+
+sanity_check_paths = {
+    'files': ['lib/perl5/site_perl/%%(perlver)s/%s-linux-thread-multi/DBD/mysql.pm' % ARCH],
+    'dirs': ['lib/perl5/site_perl/%%(perlver)s/%s-linux-thread-multi/DBD/mysql' % ARCH],
+}
+
+moduleclass = 'data'
