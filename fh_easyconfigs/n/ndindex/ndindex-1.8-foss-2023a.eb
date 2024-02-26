@@ -1,0 +1,28 @@
+easyblock = 'PythonPackage'
+
+name = 'ndindex'
+version = '1.7'
+
+homepage = 'https://quansight-labs.github.io/ndindex/'
+description = """ndindex is a library that allows representing and manipulating objects that can be valid indices
+ to numpy arrays, i.e., slices, integers, ellipses, None, integer and boolean arrays, and tuples thereof."""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+builddependencies = [
+    ('Cython', '3.0.7'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+    ('SciPy-bundle', '2023.07')
+]
+
+use_pip = True
+download_dep_fail = True
+sanity_pip_check = True
+
+moduleclass = 'lib'
