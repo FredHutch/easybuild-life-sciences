@@ -12,7 +12,7 @@ homepage = 'http://www.bali-phy.org/'
 description = """BAli-Phy estimates multiple sequence alignments and evolutionary trees from DNA, amino acid, 
 or codon sequences."""
 
-toolchain = {'name': 'GCC', 'version': '12.2.0'}
+toolchain = {'name': 'gfbf', 'version': '2022b'}
 
 github_account = 'bredelings'
 source_urls = [GITHUB_SOURCE]
@@ -33,6 +33,8 @@ dependencies = [
     ('nlohmann_json', '3.11.2'),
     ('fmt', '9.1.0'),
     ('cairo', '1.17.4'),
+    ('gnuplot', '5.4.6'),
+    ('R', '4.3.1'),
 ]
 
 sanity_check_paths = {
