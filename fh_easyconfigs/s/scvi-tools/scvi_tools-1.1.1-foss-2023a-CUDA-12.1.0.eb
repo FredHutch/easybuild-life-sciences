@@ -1,0 +1,87 @@
+easyblock = 'PythonBundle'
+
+name = 'scvi_tools'
+version = '1.1.1'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+homepage = 'https://github.com/scverse/scvi-tools'
+description = """scvi-tools (single-cell variational inference tools) is a package for probabilistic modeling and
+analysis of single-cell omics data, built on top of PyTorch and AnnData."""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+dependencies = [
+    ('CUDA', '12.1.1', '', SYSTEM),
+    ('Python', '3.11.3'),
+    ('SciPy-bundle', '2023.07'),
+    ('matplotlib', '3.7.2'),
+    ('meson-python', '0.13.2'),
+    ('h5py', '3.9.0'),
+
+    ('IPython', '8.14.0'),
+    ('jax', '0.4.24', versionsuffix),
+    ('scikit-learn', '1.3.1'),
+    ('openpyxl', '3.1.2'),
+    ('PyTorch-Lightning', '2.2.0.post0', versionsuffix),
+    ('lightning', '2.2.0.post0', versionsuffix),
+    ('dm-tree', '0.1.8'),
+    ('scanpy', '1.9.8'),
+]
+
+use_pip = True
+
+exts_list = [
+    # ('natsort', '8.4.0',  from scanpy
+    # ('anndata', '0.10.5'),  # from scanpy
+    ('docrep', '0.3.2', {
+        'checksums': ['ed8a17e201abd829ef8da78a0b6f4d51fb99a4cbd0554adbed3309297f964314'],
+    }),
+    # ('typing_extensions', '4.9.0'),  # from ?
+    ('multipledispatch', '1.0.0', {
+    }),
+    ('numpyro', '0.13.2', {
+        'checksums': ['526f0b15518094c78e68df6e330c9c1c9cea1274dac69f05617224fa6d954ee8'],
+    }),
+    ('toolz', '0.12.0', {
+        'checksums': ['88c570861c440ee3f2f6037c4654613228ff40c93a6c25e0eba70d17282c6194'],
+    }),
+    ('chex', '0.1.85', {
+        'checksums': [],
+    }),
+    ('optax', '0.1.9', {
+    }),
+    ('pyro-api', '0.1.2', {
+        'modulename': 'pyroapi',
+        'checksums': ['a1b900d9580aa1c2fab3b123ab7ff33413744da7c5f440bd4aadc4d40d14d920'],
+    }),
+    ('pyro-ppl', '1.9.0', {
+        'modulename': 'pyro',
+    }),
+    ('commonmark', '0.9.1', {
+        'checksums': ['452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60'],
+    }),
+    ('contextlib2', '21.6.0', {
+        'checksums': ['ab1e2bfe1d01d968e1b7e8d9023bc51ef3509bba217bb730cee3827e1ee82869'],
+    }),
+    ('ml_collections', '0.1.1', {
+        'checksums': ['3fefcc72ec433aa1e5d32307a3e474bbb67f405be814ea52a2166bfc9dbe68cc'],
+    }),
+    ('mudata', '0.2.3', {
+    }),
+    ('tensorstore', '0.1.54'),
+    ('msgpack', '1.0.7'),
+    ('nest_asyncio', '1.6.0'),
+    ('orbax_checkpoint', '0.5.3', {
+        'modulename': 'orbax.checkpoin',
+    }),
+    ('flax', '0.8.1'),
+    (name, version, {
+        'modulename': 'scvi',
+        'checksums': ['f0c3b09de501664dd4f8d24906d34f80fa6ad0ea4b7850ae594e4ec5d6759172'],
+        'patches': ['scvi_tools-1.1.1_lightning.patch'],
+    }),
+]
+
+sanity_pip_check = True
+
+moduleclass = 'bio'

@@ -1,0 +1,29 @@
+easyblock = 'PythonPackage'
+
+name = 'lightning'
+version = '2.1.4'
+local_pytorch_version = '2.1.2'
+versionsuffix = '-PyTorch-' + local_pytorch_version + '-CUDA-%(cudaver)s'
+
+homepage = 'https://github.com/Lightning-AI/pytorch-lightning'
+description = "The deep learning framework to pretrain, finetune and deploy AI models."
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+
+builddependencies = [
+]
+
+dependencies = [
+    ('CUDA', '12.1.1', '', SYSTEM),
+    ('Python', '3.11.3'),
+    ('PyTorch', local_pytorch_version, '-CUDA-%(cudaver)s'),
+    ('PyTorch-Lightning', '2.2.2.post0, '-CUDA-%(cudaver)s'),
+]
+
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+
+moduleclass = 'tools'

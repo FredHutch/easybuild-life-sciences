@@ -1,0 +1,38 @@
+easyblock = 'PythonPackage'
+
+name = 'msgpack'
+version = '1.0.7'
+
+homepage = 'https://msgpack.org'
+description = """essagePack is an efficient binary serialization format, which lets you exchange
+data among multiple languages like JSON, except that it's faster and smaller.
+Small integers are encoded into a single byte while typical short strings
+require only one extra byte in addition to the strings themselves.
+"""
+
+toolchain = {'name': 'GCCcore', 'version': '12.3.0'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+builddependencies = [
+    ('binutils', '2.40'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+]
+
+download_dep_fail = True
+use_pip = True
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+options = {'modulename': 'cpuinfo'}
+
+sanity_pip_check = True
+
+moduleclass = 'tools'

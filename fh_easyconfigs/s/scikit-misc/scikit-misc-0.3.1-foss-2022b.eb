@@ -1,0 +1,29 @@
+easyblock = 'PythonPackage'
+
+name = 'scikit_misc'
+version = '0.3.1'
+
+homepage = 'https://github.com/has2k1/scikit-misc'
+description = "Miscellaneous tools for data analysis and scientific computing"
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+sources = [SOURCE_TAR_GZ]
+checksums = []
+
+builddependencies = [
+    ('meson-python', '0.11.0'),
+]
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02')
+]
+
+use_pip = True
+download_dep_fail = True
+sanity_pip_check = True
+
+options = {'modulename': 'skmisc'}
+
+moduleclass = 'lib'
