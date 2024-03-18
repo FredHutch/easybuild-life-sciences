@@ -28,6 +28,7 @@ Each toolchain uses a single version of Python. Multible versions of libraries c
 
 | Toolchain | GCC Version | Python | Notes |
 | ----------|-------------|--------|-------|
+| [foss-2023a]({{ site.baseurl }}/toolchains/foss-2024a/) | GCC 12.3.0 | 3.11.3 | Begining Feb 2024 |
 | [foss-2022b]({{ site.baseurl }}/toolchains/foss-2022b/) | GCC 12.2.0 | 3.10.8 | Begining Feb 2023 |
 | [foss-2022a]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.3.0 | 3.10.4 | Limited use |
 | [foss-2021b]({{ site.baseurl }}/toolchains/foss-2021b/) | GCC 11.2.0 | 3.9.6  | Begining Nov 2021 |
@@ -48,7 +49,7 @@ Note: because there have been a few changes in toolchains, there are notes below
 that explain the differences between the generations going back to the `2020b` version of the `foss` and `intel` toolchains.
 
 <!-- https://github.com/easybuilders/easybuild-docs/blob/03891cbe6404a7fa237f289c99a660cfac5d7a73/docs/common-toolchains.md?plain=1#L9 -->
-### Newest generations (`2022b` and later):
+### Newest generations (`2023a` and later):
 
 ```mermaid
 graph LR
@@ -66,7 +67,7 @@ graph LR
 
 Note: following notes apply for the generations listed and those older than it:
 
-- `2022a` - `iimkl` not present yet
+- `2023a` - `iimkl` not present yet
 - `2021b` - `gfbf` not present yet
 - `2020b` - `foss` uses OpenBLAS instead of FlexiBLAS, `iccifort` is used instead of `intel-compilers`
 
