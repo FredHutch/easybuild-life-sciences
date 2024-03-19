@@ -1,5 +1,5 @@
 ---
-title: foss-202db
+title: foss-2020b
 date: 2023-02-10
 layout: single
 permalink: /toolchains/foss-2022b/
