@@ -33,6 +33,7 @@ checksums = [
 ]
 
 builddependencies = [
+    ('binutils', '2.37'),
     ('Python', '3.9.6'),
 ]
 
