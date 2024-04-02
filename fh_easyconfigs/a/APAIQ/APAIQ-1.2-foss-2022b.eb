@@ -1,0 +1,39 @@
+easybuild = 'Tarball'
+
+name = 'APAIQ'
+version = '1.2'
+
+homepage = ''
+descripton = """APAIQ use bedGraph files as input, it can either take two bedGraph files from the forward strand and reverse strand, or single bedGraph file without strand information."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+source_url = ['https://github.com/christear/APAIQ_release/zipball/master.zip']
+sources = ['master.zip']
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('pybedtools', '0.9.0'),
+    ('Biopython', '1.81'),
+    ('TensorFlow', '2.13.0'),
+]
+
+files_to_copy = [(['dftd3'], 'bin'), (['man.pdf'], 'doc')]
+
+sanity_check_paths = {
+    'files': ['%(name)s.v.%(version)s..py', 'bgToBlocks.py',
+              'evaluateBlock.py',
+              'PolyAModel.py', 'postScan.py', 'scanPredctions.py', 'TrimmedMean.py'],
+    'dirs': ['demo', 'model', 'regression', 'srv_v2'],
+}
+
+sanity_check_commands = ["python %(name)s.v.%(version)s.py"]
+
+modextrapaths = {
+    'PYTHONPATH': '',
+    'PATH': ''
+}
+
+moduleclass = 'bio'
+

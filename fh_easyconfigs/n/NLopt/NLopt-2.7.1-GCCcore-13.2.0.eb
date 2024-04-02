@@ -1,0 +1,62 @@
+# Built with EasyBuild version 4.9.0 on 2024-03-22_14-10-07
+easyblock = 'CMakeMake'
+
+name = 'NLopt'
+version = '2.7.1'
+
+homepage = 'http://ab-initio.mit.edu/wiki/index.php/NLopt'
+description = """ NLopt is a free/open-source library for nonlinear optimization,
+ providing a common interface for a number of different free optimization routines
+ available online as well as original implementations of various other algorithms. """
+
+toolchain = {'name': 'GCCcore', 'version': '13.2.0'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/stevengj/nlopt/archive']
+sources = ['v%(version)s.tar.gz']
+checksums = ['db88232fa5cef0ff6e39943fc63ab6074208831dc0031cf1545f6ecd31ae2a1a']
+
+builddependencies = [
+    ('CMake', '3.27.6'),
+    ('binutils', '2.40'),
+]
+
+configopts = [
+    '-DBUILD_SHARED_LIBS=ON',
+    '-DBUILD_SHARED_LIBS=OFF'
+]
+
+sanity_check_paths = {
+    'files': ['lib/libnlopt.a', 'lib/libnlopt.%s' % SHLIB_EXT, 'include/nlopt.h'],
+    'dirs': ['lib/pkgconfig'],
+}
+
+moduleclass = 'numlib'
+
+# Build statistics
+buildstats = [{
+    "build_time": 37.31,
+    "command_line": ["--accept-eula-for='Intel-oneAPI,CUDA'", "--buildpath='/build'", "--configfiles='/etc/easybuild.d/config.cfg,/app/easybuild/config.cfg'", "--cuda-compute-capabilities='6.1,7.5'", '--group-writable-installdir', "--installpath='/app'", "--installpath-modules='/app/modules'", "--installpath-software='/app/software'", "--logfile-format='logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log'", "--repositorypath='/app/ebfiles_repo'", "--sourcepath='/sources'", "--umask='002'", 'NLopt-2.7.1-GCCcore-12.3.0.eb'],
+    "core_count": 24,
+    "cpu_arch": "x86_64",
+    "cpu_arch_name": "UNKNOWN",
+    "cpu_model": "Intel(R) Xeon(R) Gold 6146 CPU @ 3.20GHz",
+    "cpu_speed": 3201.0,
+    "cpu_vendor": "Intel",
+    "easybuild-easyblocks_version": "4.9.0",
+    "easybuild-framework_version": "4.9.0",
+    "gcc_version": "Using built-in specs.; COLLECT_GCC=gcc; COLLECT_LTO_WRAPPER=/app/software/GCCcore/12.3.0/libexec/gcc/x86_64-pc-linux-gnu/12.3.0/lto-wrapper; OFFLOAD_TARGET_NAMES=nvptx-none; Target: x86_64-pc-linux-gnu; Configured with: ../configure --enable-languages=c,c++,fortran --without-cuda-driver --enable-offload-targets=nvptx-none --enable-lto --enable-checking=release --disable-multilib --enable-shared=yes --enable-static=yes --enable-threads=posix --enable-plugins --enable-gold --enable-ld=default --prefix=/app/software/GCCcore/12.3.0 --with-local-prefix=/app/software/GCCcore/12.3.0 --enable-bootstrap --with-isl=/build/GCCcore/12.3.0/system-system/gcc-12.3.0/stage2_stuff --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu; Thread model: posix; Supported LTO compression algorithms: zlib; gcc version 12.3.0 (GCC) ; ",
+    "glibc_version": "2.27",
+    "hostname": "23b-deps",
+    "install_size": 3413862,
+    "modules_tool": ('Lmod', '/eb/lmod/lmod/libexec/lmod', '8.3.10'),
+    "os_name": "Ubuntu",
+    "os_type": "Linux",
+    "os_version": "18.04.6 LTS (Bionic Beaver)",
+    "platform_name": "x86_64-unknown-linux",
+    "python_version": "3.8.0 (default, Dec  9 2021, 17:53:27) ; [GCC 8.4.0]",
+    "system_gcc_path": "/app/software/GCCcore/12.3.0/bin/gcc",
+    "system_python_path": "/usr/bin/python",
+    "timestamp": 1711141807,
+    "total_memory": 354387,
+}]
