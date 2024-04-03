@@ -1,0 +1,31 @@
+# Easyconfig for unixODBC
+# Author: Lykle Voort
+# SURFsara, Amsterdam, The Netherlands
+#
+#  apt-get install gnupg2
+#  curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - 
+#  curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#  apt-get update
+#  apt-get install -y msodbcsql17
+
+easyblock = 'ConfigureMake'
+
+name = 'unixODBC'
+version = '2.3.12'
+
+homepage = "https://www.unixodbc.org"
+description = """unixODBC provides a uniform interface between application and database driver"""
+
+toolchain = {'name': 'GCC', 'version': '13.2.0'}
+
+sources = [SOURCE_TAR_GZ]
+source_urls = ['ftp://ftp.unixodbc.org/pub/unixODBC']
+checksums = []
+
+builddependencies = [
+    ('Autotools', '20220317'),
+]
+
+preconfigopts = "autoreconf -i -f && "
+
+moduleclass = 'data'
