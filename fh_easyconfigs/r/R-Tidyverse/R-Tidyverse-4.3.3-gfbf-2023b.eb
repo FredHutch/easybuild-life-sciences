@@ -40,6 +40,20 @@ exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
 # !! order of packages is important !!
 # packages updated on Apr  2, 2024
 exts_list = [
+    # Core tidyverse packages that are part of the base easybuild R
+    'cli',  # tidyverse from base R
+    'purrr',  # tidyverse from base R
+    'ragg',  # tidyverse from base R
+    'reprex',  # tidyverse from base R
+    'rstudioapi',  # tidyverse from base R
+    'stringr',  # tidyverse from base R
+    'tibble',  # tidyverse from base R
+    'xml2',   # tidyverse from bease R
+    'magrittr',   # tidyverse from base R
+    'pillar',   # tidyverse from base R
+    'httr',   # tidyverse from base R
+    'jsonlite',  # tidyverse from base R
+    'rlang',  # tidyverse from base R
     ('gtable', '0.3.4'),  # Imports from ggplot2
     ('isoband', '0.2.7'),  # Imports from ggplot2
     ('MASS', '7.3-60.0.1'),  # Imports from ggplot2
@@ -54,21 +68,21 @@ exts_list = [
     ('RColorBrewer', '1.1-3'),  # Imports from scales
     ('viridisLite', '0.4.2'),  # Imports from scales
     ('scales', '1.3.0'),  # Imports from ggplot2
-    ('ggplot2', '3.5.0'),  # core
-    ('forcats', '1.0.0'),  # core
+    ('ggplot2', '3.5.0'),  # tidyverse
+    ('forcats', '1.0.0'),  # tidyverse
     ('tidyselect', '1.2.1'),  # Imports from dplyr
     ('generics', '0.1.3'),  # Imports from dplyr
-    ('dplyr', '1.1.4'),  # core
-    ('tidyr', '1.3.1'),  # core
+    ('dplyr', '1.1.4'),  # tidyverse
+    ('tidyr', '1.3.1'),  # tidyverse
     ('hms', '1.1.3'),  # tidyverse
     ('bit', '4.0.5'),  # Depends from bit64
     ('bit64', '4.0.5'),  # Imports from vroom
     ('tzdb', '0.4.0'),  # Imports from vroom
     ('progress', '1.2.3'),  # linkingTo from readr
     ('vroom', '1.6.5'),  # Imports from readr
-    ('readr', '2.1.5'),  # core
+    ('readr', '2.1.5'),  # tidyverse
     ('igraph', '2.0.3'),  # Imports from tidygraph
-    ('tidygraph', '1.3.1'),  # core
+    ('tidygraph', '1.3.1'),  # tidyverse extra
     ('blob', '1.2.4'),  # Imports from dbplyr
     ('DBI', '1.2.2'),  # Imports from dbplyr
     ('dbplyr', '2.5.0'),  # tidyverse
@@ -91,7 +105,7 @@ exts_list = [
     ('readxl', '1.4.3'),  # tidyverse
     ('selectr', '0.4-2'),  # Imports from rvest
     ('rvest', '1.0.4'),  # tidyverse
-    ('tidypredict', '0.5'),  # core
+    ('tidypredict', '0.5'),  # tidyverse extra
     ('DiceDesign', '1.10'),  # Imports from dials
     ('hardhat', '1.3.1'),  # Imports from dials
     ('dials', '1.2.1'),  # Imports from tidymodels
@@ -116,7 +130,7 @@ exts_list = [
     ('future.apply', '1.11.1'),  # Imports from lava
     ('progressr', '0.14.0'),  # Imports from lava
     ('SQUAREM', '2021.1'),  # Imports from lava
-    ('numDeriv', '2016.8-1.1'),  # Imports from lava 
+    ('numDeriv', '2016.8-1.1'),  # Imports from lava
     ('lava', '1.8.0'),  # Imports from prodlim
     ('prodlim', '2023.08.28'),  # Imports from ipred
     ('ipred', '0.9-14'),  # Imports from recipes
@@ -136,7 +150,7 @@ exts_list = [
     ('yardstick', '1.3.1'),  # Imports from tune
     ('tune', '1.2.0'),  # Imports from tidymodels
     ('workflowsets', '1.1.0'),  # Imports from tidymodels
-    ('tidymodels', '1.2.0'),  # core
+    ('tidymodels', '1.2.0'),  # tidyverse extra
 ]
 modextrapaths = {'R_LIBS_SITE': ''}
 
