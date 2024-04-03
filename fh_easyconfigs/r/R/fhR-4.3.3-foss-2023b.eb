@@ -73,6 +73,23 @@ exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_s
 # !! order of packages is important !!
 # packages updated on Jun 30, 2023
 exts_list = [
+    ('plyr', '1.8.9'),
+    ('RcppParallel', '5.1.7'),
+    ('RcppEigen', '0.3.4.0.0'),
+    ('StanHeaders', '2.32.6'),
+    ('inline', '0.3.19'),
+    ('gridExtra', '2.3'),
+    ('checkmate', '2.3.1'),
+    ('matrixStats', '1.2.0'),
+    ('abind', '1.4-5'),
+    ('tensorA', '0.36.2.1'),
+    ('distributional', '0.4.0'),
+    ('posterior', '1.5.0'),
+    ('loo', '2.7.0'),
+    ('BH', '1.84.0-0'),
+    ('QuickJSR', '1.1.3'),
+    ('rstan', '2.32.6'),
+    ('rstantools', '2.4.0'),
     ('perm', '1.0-0.4'),
     ('webp', '1.2.0'),
     ('qpdf', '1.3.3'),
