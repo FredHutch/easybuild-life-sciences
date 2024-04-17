@@ -36,7 +36,7 @@ dependencies = [
     ('netCDF', '4.9.0'),  # for netcdf4
     ('ZeroMQ', '4.3.4'),  # for zmq
     ('SYMPHONY', '5.7.1'), # for lpsymphony
-    ('igraph', '0.10.4'), # for igraph
+    ('igraph', '0.10.6'), # for igraph
     ('OpenJPEG', '2.5.0'),
     ('UnZip', '6.0'),
     ('NSS', '3.85'),
@@ -48,7 +48,7 @@ dependencies = [
     ('MPFR', '4.2.0'),
     #('librsvg', '2.50.2'),  # for rsvg
     # ('protobuf', '3.17.3'),  # for RProtoBufLib
-    ('unixODBC', '2.3.11'),
+    # ('unixODBC', '2.3.11'),
     # ('OpenSSL', '1.1.1i'),
 ]
 
@@ -648,6 +648,20 @@ exts_list = [
     ('colorRamps', '2.3.1'),
     ('ggnewscale', '0.4.9'),
     ('ggpointdensity', '0.1.0'),
+
+    ('spatstat.utils', '3.0-3'),
+    ('spatstat.data', '3.0-1'),
+    ('spatstat.geom', '3.2-1'),
+    ('tensor', '1.5'),
+    ('spatstat.sparse', '3.0-1'),
+    ('spatstat.random', '3.1-5'),
+    ('goftest', '1.2-3'),
+    ('spatstat.explore', '3.2-1'),
+    ('spatstat.model', '3.2-4'),
+    ('spatstat.linnet', '3.1-1'),
+    ('spatstat', '3.0-6'),
+    ('sctransform', '0.3.5'),  # from R-4.3.0
+
     ('scattermore', '1.2'),
     ('tweenr', '2.0.2'),
     ('polyclip', '1.10-4'),
