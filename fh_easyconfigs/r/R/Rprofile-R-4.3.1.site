@@ -1,0 +1,21 @@
+# For (fh)R/4.3.1-foss-2022b
+
+local({
+
+if (Sys.getenv("RSTUDIO") == "1") {
+    options(bitmapType = 'cairo')
+    origLibPaths <- .libPaths()
+    dir0 <- paste0("/home/", Sys.getenv("USER"), "/R/x86_64-pc-linux-gnu-library/", getRversion()$major, ".", getRversion()$minor)
+    dir.create(dir0, recursive=TRUE, showWarnings=FALSE)
+    extraLibsFile <- file.path(Sys.getenv("RS_SESSION_TMP_DIR"), "USER_WANTS_SEURAT")
+    if (file.exists(extraLibsFile)) {
+        .libPaths(c(readLines(extraLibsFile, warn=FALSE)))
+    }
+    .libPaths(c(.libPaths(), "/app/software/fhR/4.3.1-foss-2022b", origLibPaths))
+    if (!dir0 %in% .libPaths()) {
+        .libPaths(c(.libPaths(), dir0))
+    }
+    rm(dir0, extraLibsFile, origLibPaths)
+}
+
+})
