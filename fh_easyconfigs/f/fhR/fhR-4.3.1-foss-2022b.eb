@@ -47,6 +47,7 @@ dependencies = [
     ('GDAL', '3.6.2'),
     ('MPFR', '4.2.0'),
     ('HDF5', '1.14.0'),
+    ('GSL', '2.7'),
     #('librsvg', '2.50.2'),  # for rsvg
     # ('protobuf', '3.17.3'),  # for RProtoBufLib
     # ('unixODBC', '2.3.11'),
