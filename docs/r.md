@@ -53,6 +53,7 @@ BioConductor packages are released and updated in step with R releases. Each rel
 
 | R Version | Bioconductor Version |
 |---|---|
+| 4.4.0 | 3.19 |
 | 4.3.3 | 3.18 |
 | 4.3.1 | 3.17 |
 | 4.3.0 | 3.17 |
