@@ -1,0 +1,104 @@
+# easybuild easycofig
+#
+# Fred Hutchinson Cancer Center
+easyblock = 'PythonBundle'
+
+name = 'cirro'
+version = '1.2.0'
+
+homepage = 'https://github.com/FredHutch/Cirro-client'
+description = """A Python 3.8+ library for the Cirro platform."""
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+skipsteps = ['sanitycheck']
+exts_list = [
+    ('requests', '2.31.0'),
+    ('portalocker', '2.7.0'),
+    ('msal', '1.22.0'),
+    ('msal-extensions', '1.0.0'),
+    ('trove-classifiers', '2023.5.24'),
+    ('jmespath', '1.0.1'),
+    ('python-dateutil', '2.8.2', {
+        'modulename': 'dateutil',
+    }),
+    ('botocore', '1.34.54'),
+    ('s3transfer', '0.10.0'),
+    ('boto3', '1.34.51'),
+    ('prompt_toolkit', '3.0.36', {
+    }),
+    ('questionary', '2.0.1'),
+    ('frozenlist', '1.3.3', {
+    }),
+    ('aiosignal', '1.3.1'),
+    ('typing_extensions', '4.6.3', {
+    }),
+    ('async-timeout', '4.0.2'),
+    ('importlib_metadata', '6.6.0', {
+    }),
+    ('attrs', '23.1.0', {
+    }),
+    ('multidict', '6.0.4', {
+    }),
+    ('yarl', '1.9.2', {
+    }),
+    ('idna-ssl', '1.1.0', {
+        'modulename': 'idna_ssl',
+    }),
+    ('asynctest', '0.13.0', {
+    }),
+    ('aiohttp', '3.8.4'),
+    ('wrapt', '1.15.0', {
+    }),
+    ('aioitertools', '0.11.0', {
+    }),
+    ('aiobotocore', '2.12.0', {
+    }),
+    ('fsspec', '2024.2.0'),
+    ('s3fs', '2024.2.0'),
+    ('envs', '1.4'), #  pycognito 2022.8.0 requires envs
+    ('rsa', '4.9'),
+    ('python-jose', '3.3.0', { 
+        'modulename': 'jose',
+    }),
+    ('pycognito', '2023.5.0'),
+    ('tqdm', '4.65.0'),
+    ('PyJWT', '2.7.0', {#  pygithub 1.56 requires pyjwt 2.6
+        'modulename': 'pyjwt',
+    }),
+    ('PyNaCl', '1.5.0', {
+        'modulename': 'nacl',
+    }),
+    ('PyGithub', '1.58.2', {
+        'modulename': 'github',
+    }),
+    ('cirro_api_client', '0.0.9'),
+    ('h11', '0.14.0'),
+    ('httpcore', '1.0.4'),
+    ('httpx', '0.26.0'),
+#    ('pyproject-metadata', '0.7.1', {
+#        'modulename': 'pyproject_metadata',
+#    }),
+#    ('meson_python', '0.15.0', {
+#        'modulename': 'mesonpy',
+#    }),
+#    ('pandas', '2.2.1'),
+    ('tzdata', '2024.1'),
+    ('brotlicffi', '1.1.0.0'),
+    ('urllib3', '2.0.7'),
+    ('sniffio', '1.3.1'),
+    (name, version, {
+    }),
+]
+
+sanity_check_commands = ['cirio-cli --help']
+
+moduleclass = 'lib'
