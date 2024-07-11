@@ -1,0 +1,87 @@
+easyblock = 'Bundle'
+
+name = 'fhSeurat'
+version = '4.1.1'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.15'
+
+homepage = 'https://satijalab.org/seurat'
+description = """Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data.
+fhSeurat module has additional Bioconductor packages for single-cell analysis."""
+
+toolchain = {'name': 'foss', 'version': '2021b'}
+
+dependencies = [
+    #('R', '4.2.0'),
+    ('GEOS', '3.9.1'),
+    ('fhR', '4.2.0'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+        'https://bioconductor.org/packages/release/bioc/src/contrib/',
+        'https://bioconductor.org/packages/release/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/release/data/experiment/src/contrib/',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz'
+}
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+
+exts_list = [
+    ('BiocGenerics', '0.42.0'),
+    ('S4Vectors', '0.34.0'),
+    ('IRanges', '2.30.0'),
+    ('GenomeInfoDbData', '1.2.8'),
+    ('GenomeInfoDb', '1.32.1'),
+    ('zlibbioc', '1.42.0'),
+    ('XVector', '0.36.0'),
+    ('GenomicRanges', '1.48.0'),
+    ('Rhtslib', '1.28.0'),
+    ('Biostrings', '2.64.0'),
+    ('BiocParallel', '1.28.1'),
+    ('Rsamtools', '2.12.0'),
+    ('SeuratObject', '4.1.1'),
+    ('Signac', '1.7.0'),
+    ('RcppAnnoy', '0.0.19'),
+    ('scattermore', '0.8'),
+    ('sitmo', '2.0.2'),
+    ('dqrng', '0.3.0'),
+    ('uwot', '0.1.11'),
+    ('RcppHNSW', '0.3.0'),
+    ('BiocNeighbors', '1.14.0'),
+    ('MatrixGenerics', '1.8.0'),
+    ('DelayedArray', '0.22.0'),
+    ('beachmat', '2.12.0'),
+    ('rsvd', '1.0.5'),
+    ('ScaledMatrix', '1.4.0'),
+    ('BiocSingular', '1.12.0'),
+    ('Biobase', '2.56.0'),
+    ('SummarizedExperiment', '1.26.0'),
+    ('SingleCellExperiment', '1.18.0'),
+    ('sparseMatrixStats', '1.8.0'),
+    ('Rhdf5lib', '1.18.0'),
+    ('rhdf5filters', '1.8.0'),
+    ('rhdf5', '2.40.0'),
+    ('HDF5Array', '1.24.2'),
+    ('DelayedMatrixStats', '1.18.0'),
+    ('scuttle', '1.6.3'),
+    ('ResidualMatrix', '1.6.1'),
+    ('batchelor', '1.12.3'),
+    ('Seurat', '4.1.1', {
+        'checksums': ['201aa96919b32378fc4cb67557188214c1242dcbae50cadd7d12c86666af8ace'],
+    }),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['Seurat'],
+}
+
+moduleclass = 'bio'

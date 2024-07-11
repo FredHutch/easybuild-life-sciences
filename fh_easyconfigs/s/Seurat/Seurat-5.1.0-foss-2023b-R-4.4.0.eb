@@ -1,0 +1,107 @@
+easyblock = 'Bundle'
+
+name = 'Seurat'
+version = '5.1.0'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.19'
+
+homepage = 'https://satijalab.org/seurat'
+description = "Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data."
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+dependencies = [
+    ('R', '4.4.0'),
+    ('R-Tidyverse', '4.4.0'),
+    ('fhR', '4.4.0'),
+]
+
+exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
+exts_default_options = {
+    'sources': ['%(name)s_%(version)s.tar.gz'],
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+}
+
+exts_list = [
+    ('rJava', '1.0-11', {
+        'checksums': ['9ea0ccf5553d86f7de8649a8324766c4f0810f35b7be561640dd87fd37986417'],
+    }),
+    ('Matrix', '1.6-3', {
+        'checksums': ['91268498831f6240f14b1c35658eb9582cd1b139a2c2ee19897f1d591c4e9624'],
+    }),
+    ('dotCall64', '1.1-1', {
+        'checksums': ['21b8d7d747c07aaf8a82d61ec98fe0539afcaa5a565d9c2fc55be65b6af2c91b'],
+    }),
+    ('spam', '2.10-0', {
+        'checksums': ['719c86a23801ecf051ffd8291912ee3567af4010e74af470fbf09e274728ac79'],
+    }),
+    ('generics', '0.1.3', {
+        'checksums': ['75046163bfa8b8a4f4214c1b689e796207f6447182f2e5062cf570302387d053'],
+    }),
+    ('RcppEigen', '0.3.4.0.0', {
+        'checksums': ['28d4a02011129f9b7a2a2bbe69ec4cca7676b072d5aca9dc1cefa8f96af45136'],
+    }),
+    ('SeuratObject', version, {
+        'checksums': ['5ace1720fef373d44da36d28cab8947cd3c342e76f889c2f204a62d668f5f941'],
+    }),
+    ('sctransform', '0.4.1', {
+        'checksums': ['5f6be7f8be543e4c32c8007207b603a750881459370b7bb5afd63e8c8fabf171'],
+    }),
+    ('fastDummies', '1.7.3', {
+        'checksums': ['cf6a182f778711b69460b00575babfa573f1578166d83ae2ed932db5fa15a06a'],
+    }),
+    ('fitdistrplus', '1.1-11', {
+        'checksums': ['26274f2b710b2417a8bca314d400abf320d4ccf0387ad082743056699501b53d'],
+    }),
+    ('ica', '1.0-3', {
+        'checksums': ['474d3530b16b76a1bf1a1114d24092678ea7215fa57c6fdcee6333f1e768b865'],
+    }),
+    ('leiden', '0.4.3', {
+        'checksums': ['6a464b4b860e621749b3b701bb7ceb07e23c1a36be241c3e13b18105eb980938'],
+    }),
+    ('RANN', '2.6.1', {
+        'checksums': ['b299c3dfb7be17aa41e66eff5674fddd2992fb6dd3b10bc59ffbf0c401697182'],
+    }),
+    (name, version, {
+        'checksums': ['0713b434be5bf14fcea068fbfc632ba15bebdec1007f1f48effd0dbb95c5150d'],
+    }),
+    ('seurat-data', '0.2.1', {
+        'modulename': 'SeuratData',
+        'source_urls': ['https://github.com/satijalab/seurat-data/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+    ('SeuratDisk', '0.0.0.9021', {
+        'source_urls': ['https://github.com/mojaveazure/seurat-disk/archive/'],
+        'sources': [{'download_filename': '877d4e18.zip', 'filename': SOURCE_ZIP}],
+    }),
+    # packages required for Azimuth
+    ('BSgenome.Hsapiens.UCSC.hg38', '1.4.5'),
+    ('EnsDb.Hsapiens.v86', '2.99.0'),
+    ('glmGamPoi', '1.12.2'),
+    ('JASPAR2020', '0.99.10'),
+    ('shinydashboard', '0.7.2'),
+    ('presto', '1.0.0', {
+        'source_urls': ['https://github.com/immunogenomics/presto/archive/refs/tags'],
+        'sources': {'download_filename': %(version)s.tar.gz, 'filename': SOURCE_TAR_GZ},
+    }),
+    ('RcppRoll', '0.3.0'),
+    ('Signac', '1.13.0'),
+    ('Azimuth', '0.5.0', {
+        'source_urls': ['https://github.com/satijalab/azimuth/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+]
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': [name],
+}
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+moduleclass = 'bio'
