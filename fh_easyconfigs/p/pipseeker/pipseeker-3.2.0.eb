@@ -1,0 +1,31 @@
+#
+#  Fred Hutchinson Cancer Center
+#  John Dey
+
+easyblock = 'BinariesTarball'
+
+name = 'pipseeker'
+version = '3.2.0'
+
+homepage = 'https://www.fluentbio.com/products/pipseeker-software-for-data-analysis/'
+description = """PIPseeker(TM) analyzes single-cell data obtained with Fluent BioSciences’ proprietary PIPseq™ 3ʹ Single
+Cell RNA (scRNA-seq) Kits."""
+
+toolchain = SYSTEM
+
+# Must create an account and approve an agreement before download
+source_urls = ['https://fbs-public.s3.us-east-2.amazonaws.com/public-pipseeker-releases/%(name)s-v%(version)s']
+sources = ['%(name)s-v%(version)s-linux.tar.gz']
+checksums = ['ddc0c4bc5d1bbc7c5792cd5447fdf8333dffaff9195c987874ea8fda8e47e856']
+
+postinstallcmds = [
+    "mkdir %(installdir)s/docs",
+    "mv %(installdir)s/bin/*.pdf %(installdir)s/docs",
+]
+
+sanity_check_paths = {
+    'files': ['bin/pipseeker'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
