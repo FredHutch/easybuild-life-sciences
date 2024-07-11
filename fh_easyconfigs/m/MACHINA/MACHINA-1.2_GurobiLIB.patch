@@ -1,0 +1,182 @@
+Author: John Dey Fred Hutch
+fix CMake target_link_libraries to find Gurobi libraries
+Download FindGUROBI.cmake from Gurbobi.com A new FindGUROBI.cmake is published for each major version of Gurobi
+diff -ruN machina-1.2.orig/CMakeLists.txt machina-1.2/CMakeLists.txt
+--- machina-1.2.orig/CMakeLists.txt	2021-02-23 11:13:32.000000000 -0800
++++ machina-1.2/CMakeLists.txt	2024-07-10 21:27:30.965869000 -0700
+@@ -505,56 +505,60 @@
+   ${Boost_LIBRARIES}
+ )
+ 
++option(CXX "enable C++ compilation" ON)
+ find_package( GUROBI REQUIRED )
++include_directories(${GUROBI_INCLUDE_DIRS})
++set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GUROBI_LIBRARY}" )
+ 
+ set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG" )
+ 
+ add_executable( pmh_sankoff ${pmh_sankoff_src} ${pmh_sankoff_hdr} )
+-target_link_libraries( pmh_sankoff ${CommonLibs} )
++target_link_libraries( pmh_sankoff ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY} )
+ 
+ add_executable( pmh ${pmh_src} ${pmh_hdr} )
+ target_include_directories( pmh PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
+-target_link_libraries( pmh ${CommonLibs} ${GUROBI_LIBRARIES} )
++target_link_libraries( pmh ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( pmh_tr ${pmh_tr_src} ${pmh_tr_hdr} )
+ target_include_directories( pmh_tr PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
+-target_link_libraries( pmh_tr ${CommonLibs} ${GUROBI_LIBRARIES} )
++target_link_libraries( pmh_tr ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY}) 
+ 
+ add_executable( pmh_ti ${pmh_ti_src} ${pmh_ti_hdr} )
+ target_include_directories( pmh_ti PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
+-target_link_libraries( pmh_ti ${CommonLibs} ${GUROBI_LIBRARIES} )
++target_link_libraries( pmh_ti ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY} )
+ 
+ add_executable( ms ${ms_src} ${ms_hdr} )
+ target_include_directories( ms PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
+-target_link_libraries( ms ${CommonLibs} ${GUROBI_LIBRARIES})
++target_link_libraries( ms ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( generatemigrationtrees ${generatemigrationtrees_src} ${generatemigrationtrees_hdr} )
+-target_link_libraries( generatemigrationtrees ${CommonLibs} )
++target_include_directories( ms PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
++target_link_libraries( generatemigrationtrees ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY} )
+ 
+ add_executable( generatemutationtrees ${generatemutationtrees_src} ${generatemutationtrees_hdr} )
+ target_include_directories( generatemutationtrees PUBLIC "${LIBLEMON_ROOT}/include" "src" ${Boost_INCLUDE_DIRS} ${GUROBI_INCLUDE_DIR} )
+-target_link_libraries( generatemutationtrees ${CommonLibs} ${GUROBI_LIBRARIES})
++target_link_libraries( generatemutationtrees ${CommonLibs} ${GUROBI_LIBRARIES} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( visualizemigrationgraph ${visualizemigrationgraph_src} ${visualizemigrationgraph_hdr} )
+-target_link_libraries( visualizemigrationgraph ${CommonLibs} )
++target_link_libraries( visualizemigrationgraph ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( visualizeclonetree ${visualizeclonetree_src} ${visualizeclonetree_hdr} )
+-target_link_libraries( visualizeclonetree ${CommonLibs} )
++target_link_libraries( visualizeclonetree ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( rf EXCLUDE_FROM_ALL ${robinson_foulds_src} ${robinson_foulds_hdr} )
+-target_link_libraries( rf ${CommonLibs} )
++target_link_libraries( rf ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( simulate EXCLUDE_FROM_ALL ${simulation_src} ${simulation_hdr} )
+-target_link_libraries( simulate ${CommonLibs} )
++target_link_libraries( simulate ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( cluster ${cluster_src} ${cluster_hdr} )
+-target_link_libraries( cluster ${CommonLibs} )
++target_link_libraries( cluster ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( frequencies EXCLUDE_FROM_ALL ${reads_to_frequencies_src} ${reads_to_frequencies_hdr} )
+-target_link_libraries( frequencies ${CommonLibs} )
++target_link_libraries( frequencies ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( stats ${stats_src} ${stats_hdr} )
+-target_link_libraries( stats ${CommonLibs} )
++target_link_libraries( stats ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+ 
+ add_executable( downsample EXCLUDE_FROM_ALL ${downsample_src} ${downsample_hdr} )
+-target_link_libraries( downsample ${CommonLibs} )
++target_link_libraries( downsample ${CommonLibs} optimized ${GUROBI_CXX_LIBRARY})
+diff -ruN machina-1.2.orig/FindGUROBI.cmake machina-1.2/FindGUROBI.cmake
+--- machina-1.2.orig/FindGUROBI.cmake	2021-02-23 11:13:32.000000000 -0800
++++ machina-1.2/FindGUROBI.cmake	2024-07-10 15:28:36.548342000 -0700
+@@ -1,61 +1,39 @@
+-# Simply provide the home of gurobi within the double apices here below
+-# REQUIREMENT 1: Full path to Gurobi's home which must have a name similar to "gurobiXXX" where XXX is the version.
+-# REQUIREMENT 2: Gurobi's must contain either (1) `lib` and `include` directories, (2) a folder named either `linux64` or `mac64` which correspondingly contains `lib` and `include` directories
+-
+-set(GUROBI_HOME "" CACHE STRING "Path where Gurobi is installed")
+-
+-
+-
+-if(EXISTS ${GUROBI_HOME} )
+-    message( "-- Gurobi's home is set to: " ${GUROBI_HOME} )
+-
+-    string( REGEX MATCH "gurobi[0-9][0-9][0-9]" GUROBI_VER_FULL ${GUROBI_HOME} )
+-    string( REGEX MATCH "[0-9][0-9][0-9]" GUROBI_VER ${GUROBI_VER_FULL} )
+-
+-    ## If the previous process fails to find the correct version of Gurobi in variable GUROBI_VER (e.g. 702, 751, 801) please provide the correct version here below by properly setting the version instead of XXX and uncommented the command
+-    ## set(GUROBI_VER "XXX")
+-
+-    string(STRIP ${GUROBI_VER} GUROBI_VER )
+-    message( "-- The retrieved version of Gurobi is: " ${GUROBI_VER} )
+-
+-    string(SUBSTRING ${GUROBI_VER} 0 2 GUROBI_VER_LIB)
+-
+-    message( "-- The retrieved name of version-specific library is " gurobi ${GUROBI_VER_LIB} )
+-
+-    file( GLOB GUROBI_LIB_FILE ${GUROBI_HOME}/linux64/lib/libgurobi${GUROBI_VER_LIB}.* )
+-    if( GUROBI_LIB_FILE )
+-    	message( "-- Gurobi library " ${GUROBI_LIB_FILE} " found in " ${GUROBI_HOME} "/linux64/lib/" )
++find_path(GUROBI_INCLUDE_DIRS
++    NAMES gurobi_c.h
++    HINTS ${GUROBI_DIR} $ENV{GUROBI_HOME}
++    PATH_SUFFIXES include)
++
++find_library(GUROBI_LIBRARY
++    NAMES gurobi gurobi100 gurobi110
++    HINTS ${GUROBI_DIR} $ENV{GUROBI_HOME}
++    PATH_SUFFIXES lib)
++
++if(CXX)
++    if(MSVC)
++        set(MSVC_YEAR "2017")
++        
++        if(MT)
++            set(M_FLAG "mt")
++        else()
++            set(M_FLAG "md")
++        endif()
++        
++        find_library(GUROBI_CXX_LIBRARY
++            NAMES gurobi_c++${M_FLAG}${MSVC_YEAR}
++            HINTS ${GUROBI_DIR} $ENV{GUROBI_HOME}
++            PATH_SUFFIXES lib)
++        find_library(GUROBI_CXX_DEBUG_LIBRARY
++            NAMES gurobi_c++${M_FLAG}d${MSVC_YEAR}
++            HINTS ${GUROBI_DIR} $ENV{GUROBI_HOME}
++            PATH_SUFFIXES lib)
+     else()
+-	file( GLOB GUROBI_LIB_FILE ${GUROBI_HOME}/mac64/lib/libgurobi${GUROBI_VER_LIB}.* )
+-	if( GUROBI_LIB_FILE )
+-    	    message( "-- Gurobi library " ${GUROBI_LIB_FILE} " found in " ${GUROBI_HOME} "/mac64/lib/" )
+-    	else()
+-	    file( GLOB GUROBI_LIB_FILE ${GUROBI_HOME}/lib/libgurobi${GUROBI_VER_LIB}.* )
+-	    if( GUROBI_LIB_FILE )
+-    	    	message( "-- Gurobi library " ${GUROBI_LIB_FILE} " found in " ${GUROBI_HOME} "/lib/" )
+-	    else()
+-	        message( FATAL_ERROR "libgurobi" ${GUROBI_VER_LIB} ".* not found either in " ${GUROBI_HOME} "/linux64/lib/ or " ${GUROBI_HOME} "/mac64/lib/ or " ${GUROBI_HOME} "/lib, please check the file exists and provide the correct PATH or manually set Gurobi's version. CMake will exit." )
+-	    endif()
+-	endif()
++        find_library(GUROBI_CXX_LIBRARY
++            NAMES gurobi_c++
++            HINTS ${GUROBI_DIR} $ENV{GUROBI_HOME}
++            PATH_SUFFIXES lib)
++        set(GUROBI_CXX_DEBUG_LIBRARY ${GUROBI_CXX_LIBRARY})
+     endif()
+-
+ endif()
+ 
+-FIND_PATH(GUROBI_INCLUDE_DIR
+-          NAMES "gurobi_c++.h" "gurobi_c.h"
+-          PATHS /Library/gurobi651/mac64/include/ /usr/local/gurobi651/linux64/include/ ${GUROBI_HOME}/linux64/include/ ${GUROBI_HOME}/mac64/include/ ${GUROBI_HOME}/include/
+-          DOC "Gurobi include directory")
+-
+-FIND_LIBRARY(GUROBI_CPP_LIB
+-             NAMES gurobi_c++ 
+-             PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/ ${GUROBI_HOME}/linux64/lib/ ${GUROBI_HOME}/mac64/lib/ ${GUROBI_HOME}/lib/
+-             DOC "Gurobi C++ Libraries")
+-
+-FIND_LIBRARY(GUROBI_LIB
+-             NAMES "gurobi${GUROBI_VER_LIB}"
+-             PATHS /Library/gurobi651/mac64/lib/ /usr/local/gurobi651/linux64/lib/ ${GUROBI_HOME}/linux64/lib/ ${GUROBI_HOME}/mac64/lib/ ${GUROBI_HOME}/lib/
+-             DOC "Gurobi C Libraries")
+-
+-set(GUROBI_LIBRARIES ${GUROBI_CPP_LIB} ${GUROBI_LIB})
+-
+-set(GUROBI_FOUND TRUE)
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(GUROBI DEFAULT_MSG GUROBI_LIBRARY)
