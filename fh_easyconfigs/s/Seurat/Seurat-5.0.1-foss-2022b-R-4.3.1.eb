@@ -3,6 +3,7 @@ easyblock = 'Bundle'
 name = 'Seurat'
 version = '5.0.1'
 versionsuffix = '-R-%(rver)s'
+local_biocver = '3.17'
 
 homepage = 'https://satijalab.org/seurat'
 description = "Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data."
@@ -11,10 +12,12 @@ toolchain = {'name': 'foss', 'version': '2022b'}
 
 dependencies = [
     ('R', '4.3.1'),
+    ('R-Tidyverse', '4.3.1'),
     ('fhR', '4.3.1'),
 ]
 
 exts_defaultclass = 'RPackage'
+exts_filter = ("R -q --no-save", "library(%(ext_name)s)")
 exts_default_options = {
     'sources': ['%(name)s_%(version)s.tar.gz'],
     'source_urls': [
@@ -24,6 +27,7 @@ exts_default_options = {
     ],
 }
 
+local_presto_commit = '7636b3d0465c468c35853f82f1717d3a64b3c8f6'
 exts_list = [
     ('rJava', '1.0-11', {
         'checksums': ['9ea0ccf5553d86f7de8649a8324766c4f0810f35b7be561640dd87fd37986417'],
@@ -66,6 +70,31 @@ exts_list = [
     }),
     (name, version, {
         'checksums': ['0713b434be5bf14fcea068fbfc632ba15bebdec1007f1f48effd0dbb95c5150d'],
+    }),
+    ('seurat-data', '0.2.1', {
+        'modulename': 'SeuratData',
+        'source_urls': ['https://github.com/satijalab/seurat-data/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+    ('SeuratDisk', '0.0.0.9021', {
+        'source_urls': ['https://github.com/mojaveazure/seurat-disk/archive/'],
+        'sources': [{'download_filename': '877d4e18.zip', 'filename': SOURCE_ZIP}],
+    }),
+    # packages required for Azimuth
+    ('BSgenome.Hsapiens.UCSC.hg38', '1.4.5'),
+    ('EnsDb.Hsapiens.v86', '2.99.0'),
+    ('glmGamPoi', '1.12.2'),
+    ('JASPAR2020', '0.99.10'),
+    ('shinydashboard', '0.7.2'),
+    ('presto', '1.0.0', {
+        'source_urls': ['https://github.com/immunogenomics/presto/archive/%s' % local_presto_commit],
+        'sources': {'download_filename': 'master.zip', 'filename': SOURCE_ZIP},
+    }),
+    ('RcppRoll', '0.3.0'),
+    ('Signac', '1.13.0'),
+    ('Azimuth', '0.5.0', {
+        'source_urls': ['https://github.com/satijalab/azimuth/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
     }),
 ]
 

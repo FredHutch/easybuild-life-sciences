@@ -5,13 +5,14 @@
 easyblock = 'PythonBundle'
 
 name = 'FFPolish'
-version = ''
+version = '0.1.0'
+local_commit = 'b7af154'
 
-homepage = ''
-description = """
+homepage = 'https://github.com/morinlab/FFPolish'
+description = """Filters Artifacts From Formalin-Fixed Paraffin-Embedded (FFPE) Variants
 """
 
-toolchain = {'name': 'foss', 'version': '2021b'}
+toolchain = {'name': 'foss', 'version': '2022b'}
 
 builddependanices = [
 #    (        - _libgcc_mutex 0.1 conda_forge
@@ -28,8 +29,7 @@ builddependanices = [
 #    ('pip', '20.2.4 py_0
 #    ('python', '3.7.8 h6f2ec95_1_cpython
 #    ('python_abi', '3.7 1_cp37m
-#    ('readline', '8.0 he28a2e2_2
-#    ('setuptools', '49.6.0 py37he5f6b98_2
+
 #    ('sqlite', '3.33.0 h4cf870e_1
 #    ('tk', '8.6.10 hed695b0_1
 #    ('wheel', '0.35.1 pyh9f0ad1d_0
@@ -49,11 +49,16 @@ dependanices = [
     ('vaex
 ]
 
+#
+    'source_urls': ['https://github.com/morinlab/%(name)s/archive/'],
+    'sources': [{'download_filename': 'a3486ca.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+
 exts_list = [
     ('typing_extensioins', '4.0.0'),
+    # Installing collected packages: ipywebrtc, ipython-genutils, blake3, aplus, xyzservices, widgetsnbextension, websockets, uvloop, typing-extensions, traittypes, python-dotenv, pyerfa, pyarrow, prompt-toolkit, pillow, packaging, llvmlite, kiwisolver, jupyterlab-widgets, httptools, h5py, frozendict, fonttools, exceptiongroup, cycler, contourpy, cachetools, astropy-iers-data, annotated-types, uvicorn, python-utils, pydantic-core, numba, matplotlib, branca, astropy, anyio, xarray, watchfiles, starlette, pydantic, progressbar2, vaex-core, ipywidgets, fastapi, vaex-viz, vaex-server, vaex-ml, vaex-hdf5, vaex-astro, ipyvue, ipympl, ipyleaflet, ipydatawidgets, bqplot, pythreejs, ipyvuetify, ipyvolume, vaex-jupyter, vaex
+
     ('vaex 4.16.0'),
-    ('convert-zero-one-based', '0.0.1.post0'),
-        'modulename': 'zero_one_based_conversion',
+    ('convert_zero_one_based', '0.0.1.post0'),
     }),
 ]
 
