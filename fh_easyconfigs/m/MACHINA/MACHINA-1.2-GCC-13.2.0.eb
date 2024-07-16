@@ -1,0 +1,53 @@
+easyblock = 'CMakeMake'
+
+name = 'MACHINA'
+version = '1.2'
+
+homepage = 'https://github.com/raphael-group/machina'
+description = """MACHINA is a computational framework for inferring migration
+ patterns between a primary tumor and metastases using DNA sequencing data."""
+
+toolchain = {'name': 'GCC', 'version': '13.2.0'}
+
+source_urls = ['https://github.com/raphael-group/machina/archive/refs/tags']
+sources = ['v%(version)s.tar.gz']
+patches = ['%(name)s-%(version)s_GurobiLIB.patch']
+checksums = [
+    '57859f99fdd04058f0f5434dae6f6fd91a8fa9c02ab5e92de7f218ad79bac36c',  # v1.2.tar.gz
+    'ff8422287a545a117814a7a5e07ce04c5260e41d303be5698a251d8b0ba047d4',  # MACHINA-1.2_GurobiLIB.patch
+]
+
+builddependencies = [
+    ('pkgconf', '2.0.3'),
+    ('CMake', '3.27.6'),
+    ('Doxygen', '1.9.8'),
+]
+
+dependencies = [
+    ('Boost', '1.83.0'),
+    ('LEMON', '1.3.1'),
+    ('Gurobi', '11.0.2', '', SYSTEM),
+    ('Graphviz', '10.0.1'),
+]
+
+configopts = "-DCMAKE_BUILD_TYPE=Release "
+configopts += "-DLIBLEMON_ROOT=$EBROOTLEMON "
+
+separate_build_dir = True
+skipsteps = ['install']
+postinstallcmds = [
+    'mkdir -p %(installdir)s/bin ',
+    'cp cluster generatemigrationtrees generatemutationtrees ms %(installdir)s/bin',
+    'cp pmh pmh_sankoff pmh_ti pmh_tr stats %(installdir)s/bin',
+    'cp visualizeclonetree visualizemigrationgraph %(installdir)s/bin',
+]
+
+sanity_check_paths = {
+    'files': ['bin/cluster'],
+    'dirs': [],
+}
+
+# cluster --help returns exit-code 1, but it is valid working executable.
+sanity_check_commands = ["cluster --help 2>&1 | grep -q 'Usage:'"]
+
+moduleclass = 'bio'

@@ -25,13 +25,10 @@ checksums = ['f43ac8a3edb987b9a0a61452acd9d8dbe9eb37368c6da7ce36e5247cb2a1a368']
 
 # files_to_copy = ['linux64']
 
-modextravars = {
-    'GUROBI_HOME': '%(installdir)s',
-    #'GRB_LICENSE_FILE': '%(installdir)s/gurobi.lic'
-}
+modextravars = {'GUROBI_HOME': '%(installdir)s'}
 modextrapaths = {
-    'PATH': 'bin', # GUROBI_HOME/bin
-    'LD_LIBRARY_PATH': 'lib' # GUROBI_HOME/lib
+    'PATH': 'bin',
+    'LD_LIBRARY_PATH': 'lib'
 }
 
 sanity_check_paths = {

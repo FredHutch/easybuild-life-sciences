@@ -16,7 +16,7 @@ toolchain = {'name': 'GCC', 'version': '12.2.0'}
 
 source_urls = ['https://download.redis.io/releases']
 sources = [SOURCELOWER_TAR_GZ]
-checksums = []
+checksums = ['9dd83d5b278bb2bf0e39bfeb75c3e8170024edbaf11ba13b7037b2945cf48ab7']
 
 builddependencies = [
     ('pkgconf', '1.9.3'),

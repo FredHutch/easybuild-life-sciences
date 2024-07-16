@@ -1,9 +1,9 @@
 easyblock = 'Bundle'
 
 name = 'Seurat'
-version = '5.0.1'
+version = '5.1.0'
 versionsuffix = '-R-%(rver)s'
-local_biocver = '3.17'
+local_biocver = '3.19'
 
 homepage = 'https://satijalab.org/seurat'
 description = "Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data."
@@ -11,9 +11,9 @@ description = "Seurat is an R package designed for QC, analysis, and exploration
 toolchain = {'name': 'foss', 'version': '2022b'}
 
 dependencies = [
-    ('R', '4.3.1'),
-    ('R-Tidyverse', '4.3.1'),
-    ('fhR', '4.3.1'),
+    ('R', '4.4.0'),
+    ('R-Tidyverse', '4.4.0'),
+    ('fhR', '4.4.0'),
 ]
 
 exts_defaultclass = 'RPackage'
@@ -27,7 +27,6 @@ exts_default_options = {
     ],
 }
 
-local_presto_commit = '7636b3d0465c468c35853f82f1717d3a64b3c8f6'
 exts_list = [
     ('rJava', '1.0-11', {
         'checksums': ['9ea0ccf5553d86f7de8649a8324766c4f0810f35b7be561640dd87fd37986417'],
@@ -87,8 +86,8 @@ exts_list = [
     ('JASPAR2020', '0.99.10'),
     ('shinydashboard', '0.7.2'),
     ('presto', '1.0.0', {
-        'source_urls': ['https://github.com/immunogenomics/presto/archive/%s' % local_presto_commit],
-        'sources': {'download_filename': 'master.zip', 'filename': SOURCE_ZIP},
+        'source_urls': ['https://github.com/immunogenomics/presto/archive/refs/tags'],
+        'sources': {'download_filename': %(version)s.tar.gz, 'filename': SOURCE_TAR_GZ},
     }),
     ('RcppRoll', '0.3.0'),
     ('Signac', '1.13.0'),
