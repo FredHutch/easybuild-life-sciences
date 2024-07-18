@@ -1,0 +1,59 @@
+easyblock = 'PythonBundle'
+
+name = 'CITE-seq-Count'
+version = '1.4.4'
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://github.com/Hoohm/CITE-seq-Count'
+description = "A python package that allows to count antibody TAGS from a CITE-seq and/or cell hashing experiment."
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+
+dependencies = [
+    ('Python', '3.11.5'),
+    ('UMI-tools', '1.1.4'),
+    ('Levenshtein', '0.25.1'),
+]
+
+use_pip = True
+
+exts_list = [
+#    ('python-Levenshtein', '0.25.1', {
+#        'checksums': ['b21e7efe83c8e8dc8260f2143b2393c6c77cb2956f0c53de6c4731c4d8006acc'],
+#    }),
+    ('pytest-dependency', '0.6.0', {
+        'checksums': ['934b0e6a39d95995062c193f7eaeed8a8ffa06ff1bcef4b62b0dc74a708bacc1'],
+    }),
+    ('pybktree', '1.1', {
+        'checksums': ['eec0037cdd3d7553e6d72435a4379bede64be17c6712f149e485169638154d2b'],
+    }),
+    ('dill', '0.3.8', {
+        'checksums': ['3ebe3c479ad625c4553aca177444d89b486b1d84982eeacded644afc0cf797ca'],
+    }),
+    ('multiprocess', '0.70.16', {
+        'checksums': ['161af703d4652a0e1410be6abccecde4a7ddffd19341be0a7011b94aeb171ac1'],
+    }),
+    (name, version, {
+        'modulename': 'cite_seq_count',
+        'source_tmpl': 'https://github.com/Hoohm/CITE-seq-Count/archive/refs/tags/1.4.4.tar.gz',
+#        'source_tmpl': 'https://files.pythonhosted.org/packages/2f/50/2492fd7537a9a07b0874d0f0aae50954b123eb07e8501e92eed0647d428a/CITE_seq_Count-1.4.5-py3-none-any.whl',
+#        'source_tmpl': 'https://github.com/Hoohm/CITE-seq-Count/archive/refs/f276945b095bf46e3637ba9924628fe3fd5f84be/master.tar.gz',
+#        'checksums': ['a8e0483243ee236bbf8b73c9415f9f4462eb9306d880199b9b1bfaacb53d1c9f'],
+#        'checksums': ['d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed'],
+        'checksums': ['5ec9be9dcd556e2f2152b696ef074f959a3116c1ee4cfe6d040e5cfb00f32d03'],
+        # remove (too) strict version pinning for dependencies
+        #'prebuildopts': "sed -i 's/==/>=/g' setup.py && "
+        'patches': ['cite-seq-count.patch'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/CITE-seq-Count'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ["CITE-seq-Count --help"]
+
+sanity_pip_check = True
+
+moduleclass = 'bio'

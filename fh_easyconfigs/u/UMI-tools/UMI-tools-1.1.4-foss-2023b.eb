@@ -1,0 +1,53 @@
+easyblock = 'PythonBundle'
+
+name = 'UMI-tools'
+version = '1.1.4'
+
+homepage = 'https://umi-tools.readthedocs.io'
+description = "Tools for handling Unique Molecular Identifiers in NGS data sets"
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+
+dependencies = [
+    ('Python', '3.11.5'),
+    ('matplotlib', '3.8.2'),
+    ('Pysam', '0.22.0'),
+]
+
+use_pip = True
+
+exts_list = [
+#    ('poetry', '1.8.3', {
+#        'checksums': ['67f4eb68288eab41e841cc71a00d26cf6bdda9533022d0189a145a34d0a35f48'],
+#        'source_tmpl': 'https://files.pythonhosted.org/packages/07/c7/41108195c39ac1010054ef6b3b445894cee79e8ec73f086b73da94a01901/poetry-1.8.3.tar.gz',
+#        'prebuildopts': 'pip install . && ',
+#    }),
+    ('cleo', '2.1.0', {
+        'checksums': ['0b2c880b5d13660a7ea651001fb4acb527696c01f15c9ee650f377aa543fd523'],
+        'preinstallopts': 'pip install poetry==1.8.3 && ',
+    }),
+    ('regex', '2024.5.15', {
+        'checksums': ['d3ee02d9e5f482cc8309134a91eeaacbdd2261ba111b0fef3748eeb4913e6a2c'],
+    }),
+    ('pybktree', '1.1', {
+        'checksums': ['eec0037cdd3d7553e6d72435a4379bede64be17c6712f149e485169638154d2b'],
+    }),
+    (name, version, {
+        'modulename': 'umi_tools',
+        'source_tmpl': 'umi_tools-%(version)s.tar.gz',
+        #'source_urls': ['https://github.com/CGATOxford/UMI-tools/archive/'],
+        'checksums': ['85e9c3548664c8a468c0ab0d42f68839fa440108d22e650425be4e3878167567'],
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/umi_tools'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+prebuildopts = 'pip install poetry==1.8.3 && '
+
+#sanity_check_commands = ['poetry --version']
+sanity_pip_check = True
+
+moduleclass = 'bio'
