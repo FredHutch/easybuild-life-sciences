@@ -43,7 +43,7 @@ exts_list = [
         'checksums': ['5ec9be9dcd556e2f2152b696ef074f959a3116c1ee4cfe6d040e5cfb00f32d03'],
         # remove (too) strict version pinning for dependencies
         #'prebuildopts': "sed -i 's/==/>=/g' setup.py && "
-        'patches': ['cite-seq-count.patch'],
+        'patches': ['cite-seq-count.patch', 'cite-seq-count-io.patch'],
     }),
 ]
 

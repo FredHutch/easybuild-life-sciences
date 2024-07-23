@@ -1,0 +1,11 @@
+--- cite_seq_count/io.py	2024-07-23 09:22:16.691761101 -0700
++++ cite_seq_count/io.py	2024-07-23 09:22:34.831885501 -0700
+@@ -45,7 +45,7 @@
+     """
+     prefix = os.path.join(outfolder)
+     os.makedirs(prefix, exist_ok=True)
+-    pandas_dense = pd.DataFrame(sparse_matrix.todense(), columns=columns, index=index)
++    pandas_dense = pd.DataFrame(sparse_matrix.todense(), columns=list(columns), index=index)
+     pandas_dense.to_csv(os.path.join(outfolder,filename), sep='\t')
+ 
+ 
