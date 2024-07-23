@@ -42,7 +42,11 @@ builddependencies = [
 
 dependencies = [
     ('Boost', '1.83.0'),
+    ('GDAL', '3.6.2'),
+    ('GSL', '2.7'),
+    ('HDF5', '1.14.0'),
     ('Java', '11', '', SYSTEM),
+    ('NLopt', '2.7.1'),
     ('R', '4.3.1'),
     ('SOCI', '4.0.3', '-Boost-1.83.0'),
     ('yaml-cpp', '0.7.0'),
