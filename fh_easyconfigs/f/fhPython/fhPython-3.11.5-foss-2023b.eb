@@ -21,16 +21,16 @@ builddependencies = [
 ]
 
 dependencies = [
-    ('Python', '3.9.6'),
+    ('Python', '3.11.5'),
     ('MUMmer', '4.0.0beta2'),
-    ('SciPy-bundle', '2021.10'),
-    ('IPython', '7.26.0'),
-    ('Boost', '1.77.0'),
-    ('matplotlib', '3.4.3'),
+    ('SciPy-bundle', '2023.11'),
+    ('IPython', '8.17.2'),
+    ('Boost', '1.83.0'),
+    ('matplotlib', '3.8.2'),
     ('Biopython', '1.79'),
-    ('Pysam', '0.18.0'),
+    ('Pysam', '0.22.0'),
     ('pybedtools', '0.8.2'),
-    ('PyYAML', '5.4.1'),
+    ('PyYAML', '6.0.1'),
     ('PyTables', '3.6.1'),
     ('h5py', '3.6.0'),
     ('numba', '0.54.1'),
