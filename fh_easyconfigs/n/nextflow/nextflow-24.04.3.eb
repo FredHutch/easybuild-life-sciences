@@ -1,0 +1,37 @@
+# easyconfig
+
+easyblock = 'Binary'
+
+name = "nextflow"
+version = "24.04.3"
+
+homepage = "https://github.com/nextflow-io/nextflow"
+description = """Nextflow is a bioinformatics workflow manager that enables the development
+ of portable and reproducible workflows. It supports deploying workflows on a variety of
+ execution platforms including local, HPC schedulers, AWS Batch, Google Genomics Pipelines,
+ and Kubernetes."""
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/nextflow-io/nextflow/releases/download/v%(version)s']
+sources = ['%(name)s-%(version)s-all']
+checksums = []
+
+dependencies = [ ('Java', '11', '', True), ]
+
+install_cmd = "mkdir -p %(installdir)s/bin &&"
+install_cmd += "cp %(builddir)s/%(namelower)s-%(version)s-all %(installdir)s/bin &&"
+install_cmd += "cd %(installdir)s/bin && ln -s %(namelower)s-%(version)s-all %(namelower)s &&"
+install_cmd += "chmod +x %(installdir)s/bin/%(namelower)s-%(version)s-all"
+
+sanity_check_paths = {
+    'files': ["bin/nextflow"],
+    'dirs': []
+}
+
+sanity_check_commands = [
+    "%(namelower)s -v",
+    "%(namelower)s help",
+]
+
+moduleclass = 'tools'
