@@ -1,0 +1,42 @@
+# The Fred Hutchinson Cancer Research Center
+# Homepage: https://www.fredhutch.org
+# Author: Benjamin McGough <bmcgough@fredhutch.org>
+
+easyblock = 'JAR'
+
+name = 'cromwell'
+version = '85.1-AWS'
+
+homepage = 'https://github.com/broadinstitute/cromwell'
+description = """Scientific workflow engine designed for simplicity & scalability."""
+
+toolchain = SYSTEM
+
+source_urls = [
+    'https://github.com/henriqueribeiro/cromwell/releases/download/85.1-AWS/',
+    'https://github.com/broadinstitute/cromwell/releases/download/85/',
+]
+sources = [
+    'cromwell-85-83ca277-SNAP.jar',
+    'womtool-85.jar',
+]
+
+
+checksums = []
+
+dependencies = [('Java', '11')]
+
+postinstallcmds = [
+    "mv %(installdir)s/cromwell-85-83ca277-SNAP.jar %(installdir)s/%(name)s.jar",
+    "mv %(installdir)s/womtool-85.jar %(installdir)s/womtool.jar",
+]
+
+sanity_check_paths = {
+    'files': ['%(name)s.jar', 'womtool.jar'],
+    'dirs': [],
+}
+
+modloadmsg = "To execute %(name)s, run: java -jar $EBROOTCROMWELL/%(name)s.jar\n"
+modloadmsg += "\nTo execute womtool, run: java -jar $EBROOTCROMWELL/womtool.jar\n"
+
+moduleclass = 'bio'
