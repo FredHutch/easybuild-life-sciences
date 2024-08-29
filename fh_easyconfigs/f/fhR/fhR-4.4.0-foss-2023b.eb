@@ -73,8 +73,7 @@ local_ext_version_check = "pkgver = packageVersion('%(ext_name)s'); if (pkgver !
 local_stop_msg = "stop('%(ext_name)s %(ext_version)s not installed, found ', pkgver, ' instead')"
 exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_stop_msg))
 
-# !! order of packages is important !!
-# packages updated on Jun 30, 2023
+local_commit_RcppPlanc = 'ba52d8546f562b98b7cf060d2ad044960035f430'
 exts_list = [
     ('plyr', '1.8.9'),
     ('RcppParallel', '5.1.7'),
@@ -864,6 +863,13 @@ exts_list = [
     ('TxDb.Celegans.UCSC.ce6.ensGene', '3.2.2'),
     ('TxDb.Dmelanogaster.UCSC.dm3.ensGene', '3.2.2'),
     ('ChIPQC', '1.40.0'),
+    ('RcppPlanc', '1.0.0', {
+       'source_urls': ['https://github.com/welch-lab/RcppPlanc/archive/'],
+       'sources': [{
+           'download_filename': '%s.tar.gz' % local_commit_RcppPlanc,
+           'filename': SOURCE_TAR_GZ,
+       }],
+    }),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}
