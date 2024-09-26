@@ -11,9 +11,13 @@ docs:
         url: /
       - title: "Software Updates"
         url: /updates/
-      - title: "Bio Software Inventory"
+      - title: "Noble - Bio Software Inventory"
+        url: /bio-modules-24.04/
+      - title: "Noble - Full Software Inventory"
+        url: /all-modules-24.04/
+      - title: "Bionic - Bio Software Inventory"
         url: /bio-modules-18.04/
-      - title: "Full Software Inventory"
+      - title: "Bionic - Full Software Inventory"
         url: /all-modules-18.04/
       - title: "R Modules"
         url: /r/

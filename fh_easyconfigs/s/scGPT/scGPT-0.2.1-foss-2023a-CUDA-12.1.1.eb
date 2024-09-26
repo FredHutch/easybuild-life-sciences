@@ -13,10 +13,12 @@ dependencies = [
     ('Python', '3.11.3'),
     ('SciPy-bundle', '2023.07'),
     ('CUDA', '12.1.1', '', SYSTEM),
+    ('PyTorch', '2.1.2', versionsuffix),
     ('PyTorch-bundle', '2.1.2', versionsuffix),
+    ('scvi-tools', '1.1.2', versionsuffix),
     ('flash-attention', '2.6.3', versionsuffix),  # waiting for PR 21083
+    ('wandb', '0.16.1'),
     ('poetry', '1.5.1'),
-    ('scvi-tools', '1.1.2'),
     ('PyYAML', '6.0'),
     ('scanpy', '1.9.8'),
     ('tqdm', '4.66.1'),
