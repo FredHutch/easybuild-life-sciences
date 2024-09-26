@@ -1,4 +1,4 @@
-# EasyBuild at FredHutch 
+# EasyBuild at FredHutch
 
 ---
 
