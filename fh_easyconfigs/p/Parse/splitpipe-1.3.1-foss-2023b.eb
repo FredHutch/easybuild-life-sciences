@@ -31,7 +31,7 @@ dependencies = [
     ('Python', '3.11.5'),
     ('IgBLAST', '1.22.0-x64-linux', '', SYSTEM),
     ('SciPy-bundle', '2023.11'),
-    ('igraph', '0.10.10'),
+    ('igraph', '0.10.12'),
     ('SAMtools', '1.19.2'),
     ('matplotlib', '3.8.2'),
     ('Pysam', '0.22.0'),
