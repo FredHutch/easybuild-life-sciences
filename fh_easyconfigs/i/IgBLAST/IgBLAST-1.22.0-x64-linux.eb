@@ -1,0 +1,31 @@
+# Built with EasyBuild version 4.8.1 on 2023-10-20_15-25-21
+# Easybuild Easyconfig
+#
+# John Dey <jfdey@fredhutch.org>
+#
+# Fred Hutchinson Cancer Center - Seattle Washington
+easyblock = "Tarball"
+
+name = 'IgBLAST'
+version = '1.22.0'
+versionsuffix = '-x64-linux'
+
+homepage = 'https://ncbi.github.io/igblast'
+description = """IgBLAST faclilitates the analysis of immunoglobulin and T cell receptor variable domain sequences."""
+
+toolchain = SYSTEM
+
+source_urls = ['ftp://ftp.ncbi.nih.gov/blast/executables/igblast/release/%(version)s']
+sources = ['ncbi-%(namelower)s-%(version)s-x64-linux.tar.gz']
+checksums = ['d54f1e1001fff529811c933595ef3c2322961c82b2d37a53f7a7914cd5807449']
+
+sanity_check_paths = {
+    'files': ["bin/igblastn", 'bin/igblastp'],
+    'dirs': ['bin']
+}
+
+sanity_check_commands = ['%(namelower)sn -h']
+
+modextravars = {'IGDATA': '%(installdir)s/internal_data'}
+
+moduleclass = 'bio'
