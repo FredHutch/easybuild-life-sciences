@@ -28,7 +28,7 @@ dependencies = [
     # ('PostgreSQL', '15.2'),
     ('JAGS', '4.3.2'),
     ('GLPK', '5.0'), # rglpk
-    ('poppler', '24.03.0'), # pdftools
+    ('poppler', '24.04.0'), # pdftools
     ('Graphviz', '10.0.1'),
     ('NLopt', '2.7.1'),
     ('libGLU', '9.0.3'),
@@ -36,7 +36,7 @@ dependencies = [
     ('netCDF', '4.9.2'),  # for netcdf4
     ('ZeroMQ', '4.3.5'),  # for zmq
     ('SYMPHONY', '5.7.2'), # for lpsymphony
-    ('igraph', '0.10.10'), # for igraph
+    ('igraph', '0.10.12'), # for igraph
     ('OpenJPEG', '2.5.0'),
     ('UnZip', '6.0'),
     ('NSS', '3.94'),

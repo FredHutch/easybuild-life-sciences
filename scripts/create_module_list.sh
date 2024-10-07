@@ -16,9 +16,8 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
     exit 1
 fi
 
-# extract major.minor from OS relase: VERSION="16.04.3 LTS (Xenial Xerus)"
-os_ver=`grep '^VERSION=' /etc/os-release | sed 's/.*="\([0-9]*\.[0-9]*\).*$/\1/'`
-inventory=bio-modules-${os_ver}.md
+# get VERSION_ID from /etc/os-release 
+. /etc/os-release
 
 # remove the $repo from left everything else; add the $repo and the "/docs" dir back
 base_dir=${PWD%${repo}*}${repo}
@@ -31,15 +30,26 @@ module_dir=/app/modules
 
 echo Collecting Inventory
 cd $base_dir
-$spider -o spider-json ${module_dir}/bio:${module_dir}/math:${module_dir}/chem | python -mjson.tool >${docs_dir}/modules-${os_ver}.json
+moduleclass='ai bio chem math'
+module_search_path=''
+for class in $moduleclass; do
+   if [ -z $module_search_path ]; then
+       module_search_path=${module_dir}/${class}
+   else
+       module_search_path=${module_search_path}:${module_dir}/${class}
+   fi
+done
+echo $module_search_path
+$spider -o spider-json $module_search_path | python3 -mjson.tool > modules-${VERSION_ID}.json
+cp modules-${VERSION_ID}.json ${docs_dir} 
 
 echo Generating Markdown
-json_in=${docs_dir}/modules-${os_ver}.json
-md_file=bio-modules-${os_ver}
+json_in=${docs_dir}/modules-${VERSION_ID}.json
+md_file=bio-modules-${VERSION_ID}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
-echo 'title: Bio Modules' $os_ver >> ${md_out}
+echo 'title: Bio Modules' $VERSION_ID >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo "permalink: /${md_file}/" >> ${md_out}
 echo 'created: '`date +"%Y-%m-%d"` >> ${md_out}
