@@ -17,7 +17,8 @@ source_urls = ['https://gitlab.com/graphviz/graphviz/-/archive/%(version)s']
 sources = [SOURCELOWER_TAR_GZ]
 patches = ['%(name)s-8.1.0_skip-install-data-hook.patch']
 checksums = [
-    # {'Graphviz-8.1.0_skip-install-data-hook.patch': '834666f1b5a8eff35f30899419e322739d71a2936408b27c8ffb4423a99a38e1'},
+    {'graphviz-10.0.1.tar.gz': '28f452ef1cb12288c8758a62f8c3fcfefdb91b251f7aae61d0d703f851bde931'},
+    {'Graphviz-8.1.0_skip-install-data-hook.patch': '834666f1b5a8eff35f30899419e322739d71a2936408b27c8ffb4423a99a38e1'},
 ]
 
 builddependencies = [

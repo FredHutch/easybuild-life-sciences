@@ -34,7 +34,7 @@ builddependencies = [
 
 dependencies = [
     ('Boost', '1.83.0'),
-    ('GDAL', '3.8.4'),
+    ('GDAL', '3.9.0'),
     ('Java', '11', '', SYSTEM),
     ('R', '4.4.0'),
     ('SOCI', '4.0.3', '-Boost-1.83.0'),

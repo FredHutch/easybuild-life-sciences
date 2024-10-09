@@ -2,7 +2,7 @@
 title: Bio Modules 24.04
 layout: single
 permalink: /bio-modules-24.04/
-created: 2024-10-07
+created: 2024-10-08
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -60,7 +60,7 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  - [Bio-DB-HTS/3.01-GCC-12.2.0](https://metacpan.org/release/Bio-DB-HTS)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/b/Bio-DB-HTS/Bio-DB-HTS-3.01-GCC-12.2.0.eb)
 Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
- - [BioPerl/1.7.8-GCCcore-12.3.0](https://bioperl.org/)
+ - [BioPerl/1.7.8-GCCcore-12.2.0](http://www.bioperl.org/)
 Bioperl is the product of a community effort to produce Perl code which is useful in biology.
  Examples include Sequence objects, Alignment objects and database searching objects.
  - [Biopython/1.84-foss-2023b](https://www.biopython.org)
@@ -108,7 +108,7 @@ stand-alone executable version is also available.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/c/CoinUtils/CoinUtils-2.11.10-GCC-13.2.0.eb)
 CoinUtils (Coin-OR Utilities) is an open-source collection of classes and
 functions that are generally useful to more than one COIN-OR project.
- - [Eigen/3.4.0-GCCcore-12.3.0](https://eigen.tuxfamily.org)
+ - [Eigen/3.4.0-GCCcore-13.2.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [FASTA/36.3.8i-GCC-12.2.0](https://fasta.bioch.virginia.edu/fasta_www2/fasta_list2.shtml)
@@ -239,7 +239,7 @@ PyTorch with compatible versions of official Torch extensions.
  - [Pysam/0.22.0-GCC-12.3.0](https://github.com/pysam-developers/pysam)
 Pysam is a python module for reading and manipulating Samfiles.
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
- - [Qhull/2020.2-GCCcore-12.2.0](http://www.qhull.org)
+ - [Qhull/2020.2-GCCcore-13.2.0](http://www.qhull.org)
 Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
  halfspace intersection about a point, furthest-site Delaunay triangulation,
  and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and
@@ -281,7 +281,8 @@ Sambamba is a high performance modern robust and fast tool
  (and library), written in the D programming language, for working with SAM
  and BAM files. Current functionality is an important subset of samtools
  functionality, including view, index, sort, markdup, and depth.
- - [Seaborn/0.13.2-gfbf-2023a](https://seaborn.pydata.org/)
+ - [Seaborn/0.13.2-gfbf-2023b](https://seaborn.pydata.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/fh_easyconfigs/s/Seaborn/Seaborn-0.13.2-gfbf-2023b.eb)
 Seaborn is a Python visualization library based on matplotlib.
  It provides a high-level interface for drawing attractive statistical graphics. 
  - [Shapely/2.0.1-gfbf-2023a](https://github.com/Toblerity/Shapely)

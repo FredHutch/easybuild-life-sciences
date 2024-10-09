@@ -21,7 +21,7 @@ builddependencies = [
 
 dependencies = [
     ('Python', '3.11.5'),
-    ('igraph', '0.10.10'),
+    ('igraph', '0.10.12'),
     ('python-igraph', '0.11.4'),
     ('libleidenalg', '0.11.1'),
 ]
