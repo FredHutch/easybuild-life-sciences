@@ -25,7 +25,7 @@ dependencies = [
     ('R', '4.4.0'),
     ('R-Tidyverse', '4.4.0'),
     ('libwebp', '1.3.2'), # webp
-    # ('PostgreSQL', '15.2'),
+    ('PostgreSQL', '16.1'),
     ('JAGS', '4.3.2'),
     ('GLPK', '5.0'), # rglpk
     ('poppler', '24.04.0'), # pdftools
@@ -137,6 +137,7 @@ exts_list = [
     ('partools', '1.1.6'),
     ('BiocManager', '1.30.23'),
     #('RPostgreSQL', '0.7-6'),
+    ('RPostgres', '1.4.7'),
     ('proto', '1.0.0'),
     ('gsubfn', '0.7'),
     ('chron', '2.3-61'),
