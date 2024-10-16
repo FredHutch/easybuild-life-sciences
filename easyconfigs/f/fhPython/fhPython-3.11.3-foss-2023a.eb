@@ -1,0 +1,1529 @@
+# easybuild easycofig
+#
+# Fred Hutchinson Cancer Research Center
+easyblock = 'PythonBundle'
+
+name = 'fhPython'
+version = '3.11.3'
+
+homepage = 'http://python.org/'
+description = """Fred Hutch Python"""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+toolchainopts = {'pic': True}
+
+builddependencies = [
+    ('CMake', '3.24.3'),
+    ('Autotools', '20220317'),
+    ('Bison', '3.7.6'),
+    ('flex', '2.6.4'),
+    ('pkg-config', '0.29.2'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+    ('MUMmer', '4.0.0rc1'),
+    ('SciPy-bundle', '2023.07'),
+    ('poetry', '1.5.1'),
+    ('JupyterLab', '4.0.5'),
+    ('IPython', '8.14.0'),
+    ('Arrow', '14.0.1'),  # loads Boost 1.82.0, lz4, snappy, 
+    # ('Boost', '1.82.0'),
+    ('plotly.py', '5.22.0'),
+    ('matplotlib', '3.7.2'),
+    ('Biopython', '1.83'),
+    ('Pysam', '0.22.0'),
+    ('pybedtools', '0.9.1'),
+    ('PyYAML', '6.0'),
+    ('PyTables', '3.8.0'),
+    ('h5py', '3.9.0'),
+    ('numba', '0.58.1'),
+    ('tqdm', '4.66.1'),
+    ('awscli', '2.17.54'),
+    ('Pillow', '10.0.0'),
+    ('scikit-learn', '1.4.2'),
+    ('scikit-build', '0.17.6'),
+    ('scikit-bio', '0.6.0'),
+    ('scikit-image', '0.22.0'),
+    ('scikit-misc', '0.3.1'),
+    ('Seaborn', '0.13.2'),
+    ('Porechop', '0.2.4'),
+    ('python-igraph', '0.11.4'),
+    ('statsmodels', '0.14.1'),
+    ('Blosc', '1.21.5'),
+    ('dask', '2023.12.1'),
+    ('PostgreSQL', '16.1'),
+    ('SQLAlchemy', '2.0.25'),
+    ('typing-extensions', '4.9.0'),
+    ('Arrow', '14.0.1'),
+    ('ICU', '73.2'),
+    ('Pandoc', '2.13', '', SYSTEM),
+    #  ('FreeTDS', 'Not Found'),
+    ('OpenJPEG', '2.5.0'),
+    ('OpenBLAS', '0.3.23'),
+    ('Tk', '8.6.13'),
+    ('libxml2', '2.11.4'),
+    ('libxslt', '1.1.38'),
+    ('libffi', '3.4.4'),
+    ('Qt5', '5.15.10'),
+    ('cURL', '8.0.1'),
+    ('libGLU', '9.0.3'),
+    ('Mesa', '23.1.4'),
+    ('netCDF', '4.9.2'),
+    ('igraph', '0.10.10'),
+    ('snappy', '1.1.10'),
+    ('freetype', '2.13.0'),
+    ('hatchling', '1.18.0'),
+    ('CellBender', '0.3.0'),
+]
+
+use_pip = True
+download_dep_fail = True
+sanity_pip_check = True
+
+osdependencies = [OS_PKG_OPENSSL_DEV]
+
+# order is important!
+exts_list = [
+    ('sniffio', '1.3.1', {
+    }),
+    ('exceptiongroup', '1.2.2', {
+    }),
+    ('anyio', '4.6.0', { }),
+    ('jaraco.functools', '4.1.0', {
+        'source_tmpl': 'jaraco_functools-%(version)s.tar.gz',
+    }),
+    ('backports.tarfile', '1.2.0', {
+        'source_tmpl': 'backports_tarfile-%(version)s.tar.gz',
+    }),
+    ('jaraco.context', '6.0.1', {
+        'source_tmpl': 'jaraco_context-%(version)s.tar.gz',
+    }),
+    ('importlib_resources', '6.4.5', { }),
+    ('pycparser', '2.22', { }),
+    ('cffi', '1.17.1', { }),
+    ('cryptography', '43.0.1', { }),
+    ('pygments', '2.18.0', { }),
+    ('mdurl', '0.1.2', { }),
+    ('markdown-it-py', '3.0.0', { }),
+    ('rich', '13.9.2', { }),
+    ('tomli_w', '1.1.0', { }),
+    ('click', '8.1.7', {
+    }),
+    ('userpath', '1.9.2', { }),
+    ('uv', '0.4.20', { }),
+    ('distlib', '0.3.9', { }),
+    ('filelock', '3.16.1', { }),
+    ('virtualenv', '20.26.6', { }),
+    ('zstandard', '0.23.0', { }),
+    ('h11', '0.14.0', {
+    }),
+    ('httpcore', '1.0.6', {
+    }),
+    ('httpx', '0.27.2', {
+    }),
+    ('hyperlink', '21.0.0', {
+    }),
+    ('hatch', '1.12.0'),
+    ('fastjsonschema', '2.20.0', {
+    }),
+    ('attrs', '24.2.0', { }),
+    ('rpds_py', '0.20.0', {
+        'modulename': 'rpds',
+    }),
+    ('rpds_py', '0.20.0', {
+    }),
+    ('referencing', '0.35.1', {
+    }),
+    ('jsonschema_specifications', '2024.10.1', {
+    }),
+    ('pkgutil_resolve_name', '1.3.10', {
+    }),
+    ('frozenlist', '1.4.1', {
+    }),
+    ('aiosignal', '1.3.1', {
+    }),
+    ('multidict', '6.1.0', {
+    }),
+    ('propcache', '0.2.0', {
+    }),
+    ('yarl', '1.14.0', {
+    }),
+    ('aiohttp', '3.10.10', {
+    }),
+    ('colorama', '0.4.6', {
+    }),
+    ('py-cpuinfo', '9.0.0', {
+        'modulename': 'cpuinfo',
+    }),
+    ('sh', '2.1.0'),
+    ('slurmpy', '0.0.8'),
+    ('elementpath', '4.5.0'),
+    ('xmlschema', '3.4.2'),
+    ('jsonpointer', '3.0.0'),
+    ('rfc3987', '1.3.8'),
+    ('strict-rfc3339', '0.7', {
+        'modulename': 'strict_rfc3339',
+    }),
+    ('webcolors', '24.8.0'),
+    ('python-dateutil', '2.9.0.post0', {
+        'modulename': 'dateutil',
+    }),
+    ('boto3', '1.35.38', {
+    }),
+    ('unicodecsv', '0.14.1', {
+    }),
+    ('ijson', '3.3.0', {
+    }),
+    ('jsonlines', '4.0.0', {
+    }),
+    ('linear-tsv', '1.1.0', {
+        'modulename': 'tsv',
+    }),
+    ('et_xmlfile', '1.1.0', {
+    }),
+    ('openpyxl', '3.1.5', {
+    }),
+    ('chardet', '5.2.0', {
+    }),
+    ('xlrd', '2.0.1', {
+    }),
+    ('tabulator', '1.53.5'),
+    ('isodate', '0.7.2'),
+    ('rfc3986', '2.0.0'),
+    ('jsontableschema', '0.10.1'),
+    ('pycodestyle', '2.12.1'),
+    ('pyflakes', '3.2.0'),
+    ('mccabe', '0.7.0'),
+    ('flake8', '7.1.1'),
+    ('coverage', '7.6.2'),
+    ('fields', '5.0.0'),
+    ('manhole', '1.8.1'),
+    ('hunter', '3.7.0'),
+    ('process-tests', '3.0.0', {
+        'modulename': 'process_tests',
+    }),
+    ('argcomplete', '3.5.1'),
+    ('sqlparse', '0.5.1'),
+    ('argon2-cffi-bindings', '21.2.0', {
+        'modulename': '_argon2_cffi_bindings',
+    }),
+    ('asgiref', '3.8.1'),
+    ('backports.zoneinfo', '0.2.1', {
+    }),
+    ('Django', '5.1.2', {
+        'modulename': 'django',
+    }),
+    ('dpcontracts', '0.6.0'),
+    ('lark-parser', '0.12.0', {
+        'modulename': 'lark',
+    }),
+    ('iniconfig', '2.0.0', {
+    }),
+    ('pytest', '8.3.3', {
+    }),
+    ('pytest-flake8', '1.2.2', {
+        'modulename': 'flake8',
+        'source_tmpl': 'pytest_flake8-1.2.2.tar.gz',
+    }),
+    ('pep517', '0.13.1', {
+    }),
+    ('docutils', '0.21.2', {
+    }),
+    ('sphinxcontrib-applehelp', '2.0.0', {
+        'source_tmpl': 'sphinxcontrib_applehelp-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-devhelp', '2.0.0', {
+        'source_tmpl': 'sphinxcontrib_devhelp-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-jsmath', '1.0.1', {
+
+    }),
+    ('sphinxcontrib-htmlhelp', '2.1.0', {
+        'source_tmpl': 'sphinxcontrib_htmlhelp-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-serializinghtml', '2.0.0', {
+        'source_tmpl': 'sphinxcontrib_serializinghtml-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-qthelp', '2.0.0', {
+        'source_tmpl': 'sphinxcontrib_qthelp-%(version)s.tar.gz',
+    }),
+    ('Pygments', '2.18.0', {
+        'source_tmpl': 'pygments-%(version)s.tar.gz',
+    }),
+    ('pytz', '2024.2', {
+    }),
+    ('babel', '2.16.0', {
+    }),
+    ('alabaster', '1.0.0', {
+    }),
+    ('imagesize', '1.4.1', {
+    }),
+    ('snowballstemmer', '2.2.0', {
+    }),
+    ('sphinx', '8.1.0', {
+    }),
+    ('importlib_metadata', '8.5.0', {
+    }),
+    ('importlib_resources', '6.4.5', {
+    }),
+    ('domdf_python_tools', '3.9.0', {
+    }),
+    ('jaraco.packaging', '10.2.3', {
+        'source_tmpl': 'jaraco_packaging-%(version)s.tar.gz',
+    }),
+    ('pytest_checkdocs', '2.13.0', {
+    }),
+    ('configparser', '7.1.0'),
+    ('funcsigs', '1.0.2'),
+    ('cmarkgfm', '2024.1.14'),
+    ('nh3', '0.2.18', {
+    }),
+    ('readme_renderer', '44.0'),
+    ('retrying', '1.3.4'),
+    ('pydicom', '3.0.1'),
+    ('Logbook', '1.7.0.post0', {
+    }),
+    ('types-python-dateutil', '2.9.0.20241003', {
+    }),
+    ('PyDP', '0.2.4', {
+        'modulename': 'pydp',
+        '0.2.4': '%(version)s.tar.gz',
+        'source_urls': ['https://github.com/aroth85/pydp/archive'],
+    }),
+    ('neo4j-driver', '5.25.0', {
+        'modulename': 'neo4j',
+    }),
+    ('tabulate', '0.9.0', {
+    }),
+    ('pyBigWig', '0.3.23', {
+        'modulename': 'pyBigWig',
+        'source_tmpl': 'pybigwig-%(version)s.tar.gz',
+    }),
+    ('tenacity', '9.0.0', {
+    }),
+    ('twobitreader', '3.1.7', {
+    }),
+    ('wrapt', '1.16.0'),
+    ('debtcollector', '3.0.0'),
+    ('monotonic', '1.6'),
+    ('iso8601', '2.1.0'),
+    ('pbr', '6.1.0', {
+    }),
+    ('stevedore', '5.3.0'),
+    ('positional', '1.2.1'),
+    ('cloudpickle', '3.0.0'),
+    ('wcwidth', '0.2.13', {
+    }),
+    ('PrettyTable', '3.11.0', {
+        'source_tmpl': 'prettytable-%(version)s.tar.gz',
+    }),
+    ('pyinotify', '0.9.6'),
+    ('oslo.i18n', '6.4.0', {
+        'modulename': 'oslo_i18n',
+    }),
+    ('netaddr', '1.3.0', {
+    }),
+    ('netifaces', '0.11.0', {
+    }),
+    ('pyparsing', '3.1.4', {
+    }),
+    ('oslo.utils', '7.3.0', {
+        'modulename': 'oslo_utils',
+    }),
+    ('yamlordereddictloader', '0.4.2'),
+    ('oslo.serialization', '5.5.0', {
+        'modulename': 'oslo_serialization',
+    }),
+    ('oslo.config', '9.6.0', {
+        'modulename': 'oslo_config',
+    }),
+    ('oslo.context', '5.6.0', {
+        'modulename': 'oslo_context',
+    }),
+    ('extras', '1.0.0'),
+    ('fixtures', '4.1.0'),
+    ('pydocstyle', '6.3.0'),
+    ('flake8-polyfill', '1.0.2', {
+        'modulename': 'flake8_polyfill',
+    }),
+    ('flake8_docstrings', '1.7.0', {
+    }),
+    ('testtools', '2.7.2', {
+    }),
+    ('python-subunit', '1.4.4', {
+        'modulename': 'subunit',
+    }),
+    ('typed_ast', '1.5.5', {
+    }),
+    ('mypy_extensions', '1.0.0'),
+    ('mypy', '1.11.2'),
+    ('Genshi', '0.7.9', {
+        'modulename': 'genshi',
+    }),
+    ('datrie', '0.8.2'),
+    ('cssselect', '1.2.0'),
+    ('collective.checkdocs', '0.2', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+#    ('backports.functools-lru-cache', '2.0.0', {
+#        'modulename': 'backports.functools_lru_cache',
+#        'source_tmpl': 'backports.functools_lru_cache-%(version)s.tar.gz',
+#    }),
+    ('soupsieve', '2.6'),
+    ('lxml', '5.3.0', {
+    }),
+    ('beautifulsoup4', '4.12.3', {
+        'modulename': 'bs4',
+    }),
+    ('Babel', '2.16.0', {
+        'modulename': 'babel',
+        'source_tmpl': 'babel-%(version)s.tar.gz',
+    }),
+    ('Sphinx', '8.1.0', {
+        'modulename': 'sphinx',
+        'source_tmpl': 'sphinx-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-jquery', '4.1', {
+    }),
+    ('sphinx-rtd-theme', '3.0.1', {
+        'modulename': 'sphinx_rtd_theme',
+        'source_tmpl': 'sphinx_rtd_theme-%(version)s.tar.gz',
+    }),
+    ('sphinxcontrib-programoutput', '0.17', {
+        'modulename': 'sphinxcontrib.programoutput',
+    }),
+    ('sphinx-argparse', '0.5.2', {
+        'modulename': 'sphinxarg',
+        'source_tmpl': 'sphinx_argparse-%(version)s.tar.gz',
+    }),
+    ('flake8-import-order', '0.18.2', {
+        'modulename': 'flake8_import_order',
+    }),
+    ('docutils-stubs', '0.0.22', {
+        'modulename': 'docutils',
+    }),
+    ('openstackdocstheme', '3.3.0'),
+    ('testrepository', '0.0.21'),
+    ('testscenarios', '0.5.0'),
+    ('pycryptodome', '3.21.0', {
+        'modulename': 'Crypto',
+    }),
+    ('dnspython', '2.7.0', {
+        'modulename': 'dns',
+    }),
+    ('eventlet', '0.37.0'),
+    ('pyperclip', '1.9.0'),
+    ('codecov', '2.1.13'),
+    ('pytest-mock', '3.14.0', {
+        'modulename': 'pytest_mock',
+    }),
+    ('gnureadline', '8.2.10'),
+    ('cmd2', '2.4.3'),
+    ('autopage', '0.5.2', {
+    }),
+    ('cliff', '4.7.0'),
+    ('voluptuous', '0.15.2'),
+    ('Mako', '1.3.5', {
+        'modulename': 'mako',
+    }),
+    ('Tempita', '0.5.2', {
+        'modulename': 'tempita',
+    }),
+    ('decorator', '5.1.1', {
+    }),
+    ('sqlalchemy-migrate', '0.13.0', {
+        'modulename': 'migrate',
+    }),
+    ('testresources', '2.0.1'),
+    ('PyMySQL', '1.1.1', {
+        'modulename': 'pymysql',
+        'source_tmpl': 'pymysql-%(version)s.tar.gz',
+    }),
+    ('psycopg2', '2.9.9'),
+    ('mox3', '1.1.0'),
+    ('requestsexceptions', '1.4.0'),
+    ('jsonpatch', '1.33'),
+    ('os-service-types', '1.7.0', {
+        'modulename': 'os_service_types',
+    }),
+    ('betamax', '0.9.0'),
+    ('pykerberos', '1.2.4', {
+        'modulename': 'kerberos',
+    }),
+    ('pyspnego', '0.11.1', {
+        'modulename': 'spnego',
+    }),
+    ('requests-kerberos', '0.15.0', {
+        'modulename': 'requests_kerberos',
+    }),
+    ('setuptools-scm', '8.1.0', {
+        'source_tmpl': 'setuptools_scm-%(version)s.tar.gz',
+    }),
+    ('hatch-vcs', '0.4.0', {
+        'modulename': 'hatch_vcs',
+        'source_tmpl': 'hatch_vcs-%(version)s.tar.gz',
+    }),
+    ('apipkg', '3.0.2'),
+    ('execnet', '2.1.1'),
+    ('path', '17.0.0'),
+    ('path.py', '12.5.0', {
+        'modulename': 'path',
+    }),
+    ('termcolor', '2.5.0'),
+    ('oauthlib', '3.2.2'),
+    ('smmap', '5.0.1', {
+    }),
+    ('gitdb', '4.0.11', {
+    }),
+    ('GitPython', '3.1.43', {
+        'modulename': 'git',
+    }),
+    ('bandit', '1.7.10'),
+    ('purl', '1.6'),
+    ('requests-mock', '1.12.1', {
+        'modulename': 'requests_mock',
+    }),
+    ('munch', '4.0.0'),
+    ('dogpile.cache', '1.3.3'),
+    ('keystoneauth1', '5.8.0'),
+    ('openstacksdk', '4.0.0', {
+        'modulename': 'openstack',
+    }),
+    ('os-client-config', '2.1.0', {
+        'modulename': 'os_client_config',
+    }),
+    ('oslotest', '5.0.0'),
+    ('stestr', '4.1.0'),
+    ('os-testr', '3.0.0', {
+        'modulename': 'os_testr',
+    }),
+    ('python-json-logger', '2.0.7', {
+        'modulename': 'pythonjsonlogger',
+    }),
+    ('daiquiri', '3.2.5.1'),
+    ('xattr', '1.1.0'),
+    ('psutil', '6.0.0', {
+    }),
+    ('Jinja2', '3.1.4', {
+        'source_tmpl': 'jinja2-%(version)s.tar.gz',
+    }),
+    ('pifpaf', '3.2.2'),
+    ('oslo.db', '16.0.0', {
+        'modulename': 'oslo_db',
+    }),
+    ('joblib', '1.4.2', {
+    }),
+    ('threadpoolctl', '3.5.0', {
+    }),
+    ('pauvre', '0.2.3'),  # Nanopore
+    ('NanoPlot', '1.43.0', {
+        'source_tmpl': 'nanoplot-%(version)s.tar.gz',
+    }),
+    ('nanoplotter', '1.10.0'),
+    ('NanoFilt', '2.8.0', {
+        'modulename': 'nanofilt',
+    }),
+    ('NanoLyse', '1.2.1', {
+        'modulename': 'nanolyse',
+    }),
+    ('nanoget', '1.19.3', {
+    }),
+    ('NanoComp', '1.24.0', {
+        'modulename': 'nanocomp',
+        'source_tmpl': 'nanocomp-%(version)s.tar.gz',
+    }),
+    ('NanoStat', '1.6.0', {
+        'modulename': 'nanostat',
+    }),
+    ('fasteners', '0.19', {
+    }),
+    ('oslo.concurrency', '6.1.0', {
+        'modulename': 'oslo_concurrency',
+    }),
+    ('subunit2sql', '1.10.0'),
+    ('reno', '4.1.0'),
+    ('hacking', '7.0.0'),
+    ('ddt', '1.7.2'),
+    ('restructuredtext-lint', '1.4.0', {
+        'modulename': 'restructuredtext_lint',
+        'source_tmpl': 'restructuredtext_lint-%(version)s.tar.gz',
+    }),
+    ('doc8', '1.1.2'),
+    ('oslo.log', '6.1.2', {
+        'modulename': 'oslo_log',
+    }),
+    ('watchdog', '5.0.3'),
+    ('dominate', '2.9.1'),
+    ('inflection', '0.5.1'),
+    ('MarkupSafe', '3.0.1', {
+        'modulename': 'markupsafe',
+        'source_tmpl': 'markupsafe-%(version)s.tar.gz',
+    }),
+    ('qrcode', '8.0'),
+    ('Markdown', '3.7', {
+        'modulename': 'markdown',
+        'source_tmpl': 'markdown-%(version)s.tar.gz',
+    }),
+    ('darkslide', '6.0.0'),
+    ('pycurl', '7.45.3'),
+    ('tornado', '6.4.1', {
+    }),
+    ('xyzservices', '2024.9.0', {
+    }),
+    ('bokeh', '3.6.0'),
+    ('Nuitka', '2.4.8', {
+        'modulename': 'nuitka',
+    }),
+    ('lazy-object-proxy', '1.10.0', {
+        'modulename': 'lazy_object_proxy',
+    }),
+    ('pytz-deprecation-shim', '0.1.0.post0', {
+        'source_tmpl': 'pytz_deprecation_shim-%(version)s.tar.gz',
+        'modulename': 'pytz_deprecation_shim',
+    }),
+    ('tzlocal', '5.2'),
+    ('zope.interface', '7.1.0', {
+    }),
+    ('repoze.sphinx.autointerface', '1.0.0'),
+    ('zope.exceptions', '5.1'),
+    ('zope.testing', '5.0.1'),
+    ('zope.testrunner', '6.5'),
+    ('zope.event', '5.0'),
+    ('graphviz', '0.20.3', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('objgraph', '3.6.2'),
+    ('docopt', '0.6.2', {
+    }),
+    ('coveralls', '4.0.1'),
+    ('gevent', '24.10.1'),
+    ('cramjam', '2.8.4', {
+    }),
+    ('python-snappy', '0.7.3', {
+        'modulename': 'snappy',
+    }),
+    ('pymongo', '4.10.1'),
+    ('hiredis', '3.0.0'),
+    ('Deprecated', '1.2.14', {
+        'modulename': 'deprecated',
+    }),
+    ('redis', '5.1.1'),
+    ('looseversion', '1.3.0', {
+    }),
+    ('rethinkdb', '2.4.10.post1'),
+    ('incremental', '24.7.2'),
+    ('constantly', '23.10.4', {
+    }),
+    ('APScheduler', '3.10.4', {
+        'modulename': 'apscheduler',
+    }),
+    ('warlock', '2.0.1'),
+    ('flaky', '3.8.1'),
+    ('pretend', '1.0.9'),
+    ('pyOpenSSL', '24.2.1', {
+        'modulename': 'OpenSSL',
+        'source_tmpl': 'pyopenssl-%(version)s.tar.gz',
+    }),
+    ('python-glanceclient', '4.7.0', {
+        'modulename': 'glanceclient',
+    }),
+    ('python-cinderclient', '9.6.0', {
+        'modulename': 'cinderclient',
+    }),
+    ('osc-lib', '3.1.0', {
+        'modulename': 'openstackclient',
+    }),
+    ('python-keystoneclient', '5.5.0', {
+        'modulename': 'keystoneclient.v3',
+    }),
+    ('python-novaclient', '18.7.0', {
+        'modulename': 'novaclient',
+    }),
+    ('python-openstackclient', '7.1.3', {
+        'modulename': 'openstackclient',
+    }),
+    ('oslosphinx', '4.18.0'),
+    ('python-swiftclient', '4.6.0', {
+        'modulename': 'swiftclient',
+    }),
+    ('python-freezerclient', '5.2.0', {
+        'modulename': 'freezerclient',
+    }),
+    ('python-neutronclient', '11.3.1', {
+        'modulename': 'neutronclient',
+    }),
+    ('repoze.lru', '0.7'),
+    ('WebOb', '1.8.8', {
+        'modulename': 'webob',
+        'source_tmpl': 'webob-%(version)s.tar.gz',
+    }),
+    ('Routes', '2.5.1', {
+        'modulename': 'routes',
+    }),
+    ('flup', '1.0.3'),
+    ('Paste', '3.10.1', {
+        'modulename': 'paste',
+        'source_tmpl': 'paste-%(version)s.tar.gz',
+    }),
+    ('PasteDeploy', '3.1.0', {
+        'modulename': 'paste.deploy',
+    }),
+    ('Yappi', '1.6.0', {
+        'source_tmpl': 'yappi-%(version)s.tar.gz',
+    }),
+    ('oslo.service', '3.5.0', {
+        'modulename': 'oslo_service',
+    }),
+    ('oslo.privsep', '3.4.0', {
+        'modulename': 'oslo_privsep',
+    }),
+    ('os-win', '5.9.0', {
+    }),
+    ('os-brick', '6.9.0', {
+        'modulename': 'os_brick',
+    }),
+    ('bcrypt', '4.2.0', {
+    }),
+    ('paramiko', '3.5.0', {
+    }),
+    ('freezer', '15.0.0'),
+    ('uritemplate', '4.1.1'),
+    ('google', '3.0.0'),
+    ('protobuf', '5.28.2', {
+        'modulename': 'google.protobuf',
+    }),
+    ('pyasn1', '0.6.1', {
+    }),
+    ('ldap3', '2.9.1'),
+    ('npyscreen', '4.10.5'),
+    ('oauth', '1.0.1'),
+    ('python-pam', '2.0.2', {
+        'modulename': 'pam',
+    }),
+    ('pymssql', '2.3.1'),
+    ('urwid', '2.6.15'),
+    ('presto', '0.7.2'),
+    ('airr', '1.5.1'),
+    ('changeo', '1.3.0'),
+    ('abstract_rendering', '0.5.1'),
+    ('aenum', '3.1.15'),
+    ('PyVCF', '0.6.8', {
+        'modulename': 'vcf',
+    }),
+    ('pypandoc', '1.14'),
+    ('typechecks', '0.1.0', {
+    }),
+    ('simplejson', '3.19.3', {
+    }),
+    ('serializable', '0.4.1'),
+    ('shove', '0.6.6', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('stuf', '0.9.16'),
+    ('apiwrapper', '0.1.8'),
+    ('sphinxcontrib-websupport', '2.0.0', {
+        'modulename': 'sphinxcontrib',
+        'source_tmpl': 'sphinxcontrib_websupport-%(version)s.tar.gz',
+    }),
+    ('autopep8', '2.3.1'),
+    ('bitarray', '2.9.3'),
+    ('DataShape', '0.5.2', {
+        'modulename': 'datashape',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+    ('networkx', '3.4'),
+    ('tslib', '1.6', {
+        'source_tmpl': '%(name)s-%(version)s-py2.py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('multipledispatch', '1.0.0'),
+    ('blessings', '1.7'),
+    ('ndg-httpsclient', '0.5.1', {
+         'modulename': 'ndg.httpsclient',
+         'source_tmpl': 'ndg_httpsclient-0.4.4.tar.gz',
+    }),
+    ('blessed', '1.20.0', {
+    }),
+    ('cwcwidth', '0.1.9', {
+    }),
+    ('curtsies', '0.4.2', {
+    }),
+    ('pyxdg', '0.28', {
+        'modulename': 'xdg',
+    }),
+    ('backports.cached-property', '1.0.2', {
+    }),
+    ('bpython', '0.24'),
+    ('bz2file', '0.98'),
+    ('clyent', '1.2.1'),
+    ('ConfigArgParse', '1.7', {
+        'modulename': 'configargparse',
+    }),
+    ('configobj', '5.0.9'),
+    ('isal', '1.7.1', {
+    }),
+    ('xopen', '2.0.2'),
+    ('dnaio', '1.2.2'),
+    ('cutadapt', '4.9'),
+    ('cytoolz', '1.0.0'),
+    ('daemonize', '2.5.0'),
+    ('dbf', '0.99.9'),
+    ('singledispatch', '4.1.0'),
+    ('epydoc', '3.0.1'),
+    ('fastcache', '1.1.0'),
+    ('httplib2', '0.22.0'),
+    ('ipdb', '0.13.13'),
+    ('yaspin', '3.1.0'),
+    ('sphinxcontrib_github_alt', '1.2', {
+    }),
+    ('nose', '1.3.7', {
+    }),
+    ('nose_warnings_filters', '0.1.5', {
+    }),
+    ('nest_asyncio', '1.6.0', {
+    }),
+    ('appnope', '0.1.4', {
+    }),
+    ('pure-eval', '0.2.3', {
+        'modulename': 'pure_eval',
+        'source_tmpl': 'pure_eval-%(version)s.tar.gz',
+    }),
+    ('stack-data', '0.6.3', {
+        'source_tmpl': 'stack_data-%(version)s.tar.gz',
+    }),
+    ('pyzmq', '26.2.0', {
+    }),
+    ('comm', '0.2.2', {
+    }),
+    ('debugpy', '1.8.7', {
+    }),
+    ('nbval', '0.11.0', {
+    }),
+    ('nose-exclude', '0.5.0', {
+        'modulename': 'nose_exclude',
+    }),
+    ('sortedcontainers', '2.4.0', {
+    }),
+    ('outcome', '1.3.0.post0', {
+    }),
+    ('trio', '0.26.2', {
+    }),
+    ('wsproto', '1.2.0', {
+    }),
+    #('trio-websocket', '0.11.1', {
+    #}),
+    #('websocket-client', '1.8.0', {
+    #}),
+    ('selenium', '4.25.0', {
+    }),
+    ('yarg', '0.1.10'),
+    ('bleach', '6.1.0', {
+    }),
+    ('defusedxml', '0.7.1', {
+    }),
+    ('nbclient', '0.10.0', {
+    }),
+    ('pandocfilters', '1.5.1', {
+    }),
+    ('tinycss2', '1.3.0', {
+    }),
+    ('pipreqs', '0.5.0'),
+    ('cached-property', '1.5.2', {
+        'modulename': 'cached_property',
+    }),
+    ('first', '2.0.2'),
+    ('orderedmultidict', '1.0.1', {
+    }),
+    ('importlib', '1.0.4', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('contextlib2', '21.6.0', {
+    }),
+    ('pip_shims', '0.7.3'),
+    ('mypytools', '0.1.15'),
+    ('importlab', '0.8.1', {
+    }),
+    ('immutabledict', '4.2.0', {
+    }),
+    ('libcst', '1.5.0', {
+    }),
+    ('msgspec', '0.18.6', {
+    }),
+    ('ninja', '1.11.1.1', {
+    }),
+    ('pycnite', '2024.7.31', {
+    }),
+    ('pydot', '3.0.2', {
+    }),
+    ('toml', '0.10.2', {
+    }),
+    ('pytype', '2024.9.13'),
+    ('backports.shutil_get_terminal_size', '1.0.0', {
+    }),
+    ('backports.weakref', '1.0.post1', {
+    }),
+    ('vistir', '0.8.0'),
+    ('retype', '22.8.0'),
+    ('typing_inspect', '0.9.0', {
+    }),
+    ('MonkeyType', '23.3.0', {
+        'modulename': 'monkeytype',
+    }),
+    ('plette', '2.1.0'),
+    ('annotated-types', '0.7.0', {
+        'source_tmpl': 'annotated_types-%(version)s.tar.gz',
+    }),
+    ('pydantic-core', '2.24.0', {
+        'source_tmpl': 'pydantic_core-%(version)s.tar.gz',
+    }),
+    ('pydantic', '2.9.2', {
+    }),
+    ('requirementslib', '3.0.0'),
+    ('pip_api', '0.0.34', {
+    }),
+    ('isort', '5.13.2'),
+    ('json2html', '1.3.0'),
+    ('lazr.uri', '1.0.6'),
+    ('logilab-common', '2.0.0', {
+        'modulename': 'logilab',
+    }),
+    ('fastnumbers', '5.1.0'),
+    ('regex', '2024.9.11', { }),
+    ('nltk', '3.9.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('olefile', '0.47', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('pycosat', '0.6.6', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('PyNaCl', '1.5.0', {
+        'modulename': 'nacl',
+    }),
+    ('PyJWT', '2.9.0', {
+        'modulename': 'jwt',
+        'source_tmpl': 'pyjwt-%(version)s.tar.gz',
+    }),
+    ('PyGithub', '2.4.0', {
+        'modulename': 'github',
+        'source_tmpl': 'pygithub-%(version)s.tar.gz',
+    }),
+    ('PyGreSQL', '6.0.1', {
+        'modulename': 'pg',
+        'source_tmpl': 'pygresql-%(version)s.tar.gz',
+    }),
+    ('dill', '0.3.9', { }),
+    ('astroid', '3.3.5', {
+    }),
+    ('pylint', '3.3.1'),
+    ('pyodbc', '5.1.0'),
+    ('findspark', '2.0.1'),
+    ('pyserial', '3.5', {
+        'modulename': 'serial',
+    }),
+    ('python-hostlist', '1.23.0', {
+        'modulename': 'hostlist',
+    }),
+    ('novaclient-auth-secretkey', '0.1', {
+        'modulename': 'novaclient',
+    }),
+    ('rackspace-novaclient', '2.1', {
+        'modulename': 'novaclient',
+    }),
+    ('ip_associations_python_novaclient_ext', '0.2'),
+    ('rax_default_network_flags_python_novaclient_ext', '0.4.0'),
+    ('rax_scheduled_images_python_novaclient_ext', '0.3.1'),
+    ('os_virtual_interfacesv2_python_novaclient_ext', '0.20'),
+    ('os_networksv2_python_novaclient_ext', '0.26'),
+    ('os_diskconfig_python_novaclient_ext', '0.1.3'),
+    ('rackspace-auth-openstack', '1.3', {
+        'modulename': 'rackspace_auth_openstack',
+    }),
+    ('reportlab', '4.2.5', {
+    }),
+    ('roman', '4.2'),
+    ('rsa', '4.9'),
+    ('ruffus', '2.8.4'),
+    ('idna-ssl', '1.1.0', {
+        'modulename': 'idna_ssl',
+    }),
+    ('asynctest', '0.13.0', {
+    }),
+    ('aioitertools', '0.12.0'),
+    ('async_generator', '1.10', {
+    }),
+    ('aiobotocore', '2.15.2', {
+    }),
+    ('fsspec', '2024.9.0', {
+    }),
+    ('s3fs', '2024.9.0'),
+    ('imageio', '2.35.1'),
+    ('pyerfa', '2.0.1.4', {
+        'modulename': 'erfa',
+    }),
+    #('astropy', '4.2.1'),
+    ('misopy', '0.5.4'),
+    ('sip', '6.8.6', {
+        'modulename': 'sipbuild',
+    }),
+    ('PyOpenGL', '3.1.7', {
+        'modulename': 'OpenGL',
+    }),
+    ('ssh-import-id', '5.11', {
+        'modulename': 'ssh_import_id',
+    }),
+    ('stdeb', '0.10.0'),
+    ('swiftly', '2.06', {
+        'source_tmpl': '%(name)s-%(version)s.tgz',
+    }),
+    ('sympy', '1.13.3'),
+    ('Theano', '1.0.5', {
+        'modulename': 'theano',
+    }),
+    ('wadllib', '1.3.9'),
+    ('XlsxWriter', '3.2.0', {
+        'modulename': 'xlsxwriter',
+    }),
+    ('xlwt', '1.3.0'),
+    ('manuel', '1.12.4'),
+    ('ZConfig', '4.1', {
+        'modulename': 'ZConfig',   # easybuid issue
+        'source_tmpl': 'zconfig-%(version)s.tar.gz',
+    }),
+    ('vctools', '0.1.6.1'),
+    ('cftime', '1.6.4'),
+    ('netCDF4', '1.7.1.post2', {
+        'modulename': 'netCDF4',
+        'source_tmpl': 'netcdf4-1.7.1.post%(version)s.tar.gz',
+    }),
+    ('jellyfish', '1.1.0'),
+    ('messytables', '0.15.2'),
+    ('bd2k-python-lib', '1.14a1.dev48', {
+        'modulename': 'bd2k',
+    }),
+    ('resolvelib', '1.0.1', {
+    }),
+    ('ansible-core', '2.17.5', {
+        'modulename': 'ansible',
+        'ansible_core-%(version)s.tar.gz',
+    }),
+    ('pefile', '2024.8.26'),
+    ('altgraph', '0.17.4'),
+    ('macholib', '1.16.3'),
+    ('pyinstaller-hooks-contrib', '2024.8', {
+        'modulename': '_pyinstaller_hooks_contrib',
+    }),
+    ('pyinstaller', '6.10.0', {
+        'modulename': 'PyInstaller',
+    }),
+    ('slurm-pipeline', '4.1.1', {
+        'modulename': 'slurm_pipeline',
+    }),
+    ('argh', '0.31.3'),
+    ('cx_Logging', '3.2.0', {
+        'modulename': 'cx_Logging',
+        'source_tmpl': 'cx_logging-%(version)s.tar.gz',
+    }),
+    #('patchelf', '0.14.5.0', {
+    #    'modulename': False,
+    #}),
+    ('lief', '0.15.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('patchelf', '0.17.2.1', {
+    }),
+    ('cx_Freeze', '7.2.3', {
+        'modulename': 'cx_Freeze',
+        'source_tmpl': 'cx_freeze-%(version)s.tar.gz',
+    }),
+    ('oscpy', '0.6.0', {
+    }),
+    ('python-editor', '1.0.4', {
+        'modulename': 'editor',
+    }),
+    ('alnvu', '0.3.3'),
+    ('bcbio-gff', '0.7.1', {
+        'modulename': 'BCBio',
+    }),
+    ('burrito', '0.9.1'),
+    ('burrito-fillings', '0.1.1', {
+        'modulename': 'bfillings',
+    }),
+    ('appdirs', '1.4.4', {
+    }),
+    ('progressbar33', '2.4', {
+    }),
+    ('mock', '5.1.0', {
+    }),
+    ('datacache', '1.4.1'),
+    ('smmap2', '3.0.1', {
+        'modulename': 'smmap',
+    }),
+    ('gitdb2', '4.0.2', {
+        'modulename': 'gitdb',
+    }),
+    ('polars', '1.9.0', {
+    }),
+    ('gtfparse', '2.5.0'),
+    ('HTSeq', '2.0.9', {
+        'modulename': 'HTSeq',
+        'source_tmpl': 'htseq-%(version)s.tar.gz',
+    }),
+    ('memoized-property', '1.0.3', {  # 400
+        'modulename': 'memoized_property',
+    }),
+    ('parse', '1.20.2'),
+    ('tinytimer', '0.0.0', {
+    }),
+    ('pyensembl', '2.3.13'),
+    ('pygithub3', '0.5.1'),
+    ('pynast', '1.2.2'),
+    ('oncodrivefml', '2.4.0'),
+    ('pdm-pep517', '1.1.4', {
+        'modulename': 'pdm',
+    }),
+    ('pytoolconfig', '1.3.1', {
+    }),
+    #('rope', '1.2.0', {  # creates UNKNOWN whl
+    #    'modulename': False,
+    #}),
+    ('absl-py', '2.1.0', {
+        'modulename': 'absl',
+    }),
+    ('grpcio', '1.66.2', {
+        'modulename': 'grpc',
+    }),
+    ('astor', '0.8.1'),
+    ('pycares', '4.4.0'),
+    ('aiodns', '3.2.0'),
+    ('brotlipy', '0.7.0', {
+        'modulename': 'brotli',
+    }),
+    ('black', '24.10.0'),
+    ('commonmark', '0.9.1', {
+    }),
+    ('httpie', '3.2.3'),
+    ('ont-fast5-api', '4.1.3', {
+        'modulename': 'ont_fast5_api',
+    }),
+    ('pybktree', '1.1', {
+    }),
+    ('umi_tools', '1.1.6'),
+    ('ratelimiter', '1.2.0.post0', {
+    }),
+    ('toposort', '1.10', {
+    }),
+    ('connection_pool', '0.0.3', {
+    }),
+    ('PuLP', '2.9.0', {
+        'modulename': 'pulp',
+        'source_tmpl': 'pulp-%(version)s.tar.gz',
+    }),
+    ('smart-open', '7.0.5', {
+        'source_tmpl': 'smart_open-%(version)s.tar.gz',
+        'modulename': 'smart_open',
+    }),
+    ('stopit', '1.1.2', {
+    }),
+    ('dpath', '2.2.0', {
+    }),
+    ('plac', '1.4.3', {
+    }),
+    ('yte', '1.5.4', {
+    }),
+    ('py', '1.11.0', {
+    }),
+    ('retry', '0.9.2', {
+    }),
+    ('immutables', '0.21', {
+    }),
+    ('connection-pool', '0.0.3', {
+    }),
+    ('GitPython', '3.1.43', {
+        'modulename': 'git',
+    }),
+    ('humanfriendly', '10.0', {
+    }),
+    ('reretry', '0.11.8', {
+    }),
+    ('argparse-dataclass', '2.0.0', {
+        'source_tmpl': 'argparse_dataclass-%(version)s.tar.gz',
+    }),
+    ('throttler', '1.2.2', {
+    }),
+    ('snakemake-interface-common', '1.17.4', {
+    }),
+    ('snakemake-interface-executor-plugins', '9.3.2', {
+    }),
+    ('snakemake-interface-storage-plugins', '3.3.0', {
+    }),
+    ('snakemake-interface-report-plugins', '1.1.0', {
+    }),
+    ('snakemake', '8.20.6'),
+    ('pyfaidx', '0.8.1.3'),
+    ('whatshap', '2.3'),
+    ('opencv-python', '4.10.0.84', {
+        'modulename': 'cv2',
+    }),
+    ('vine', '5.1.0'),
+    ('amqp', '5.2.0'),
+    ('requests-oauthlib', '2.0.0', {
+        'modulename': 'requests_oauthlib',
+    }),
+    ('azure-core', '1.31.0', {
+        'source_tmpl': '%(name)s-%(version)s.zip',
+        'modulename': 'azure',
+    }),
+    ('msrest', '0.7.1', {
+        'source_tmpl': '%(name)s-%(version)s.zip'
+    }),
+    ('adal', '1.2.7'),
+    ('msrestazure', '0.6.4.post1'),
+    ('pyasn1-modules', '0.4.1', {
+        'modulename': 'pyasn1_modules',
+    }),
+    ('service-identity', '24.1.0', {
+        'modulename': 'service_identity',
+    }),
+    ('Automat', '24.8.1', {
+        'source_tmpl': 'automat-%(version)s.tar.gz',
+    }),
+    ('zope-interface', '7.1.0', {
+    }),
+    ('Twisted', '24.7.0', {
+         'modulename': 'twisted',
+    }),
+    ('treq', '24.9.1'),
+    ('python-consul', '1.1.0', {
+        'modulename': 'consul',
+    }),
+    ('serpent', '1.41'),
+    ('selectors34', '1.2', {
+    }),
+    ('Pyro4', '4.82', {
+        'modulename': 'Pyro4',
+    }),
+    ('softlayer_messaging', '1.0.3'),
+    ('kombu', '5.4.2'),
+    ('billiard', '4.2.1'),
+    ('DateTime', '5.5', {
+        'modulename': 'datetime',
+    }),
+    ('pyArango', '2.1.1', {
+        'modulename': 'pyArango',
+    }),
+    ('Brotli', '1.1.0', {
+        'modulename': 'brotli',
+        'source_tmpl': '%(name)s-%(version)s.zip',
+    }),
+    ('geomet', '1.1.0'),
+    ('cassandra-driver', '3.29.2', {
+        'modulename': 'cassandra',
+    }),
+    ('ephem', '4.1.6'),
+    ('prompt-toolkit', '3.0.48', {
+    }),
+    ('textblob', '0.18.0.post0'),
+    ('virtualenv-clone', '0.5.7', {
+        'modulename': 'clonevirtualenv',
+    }),
+    ('pipenv', '2024.1.0'),
+    ('keyrings.alt', '5.0.2', {
+    }),
+    ('opentelemetry-api', '1.27.0', {
+    }),
+    ('opentelemetry-semantic-conventions', '0.48b0', {
+    }),
+    ('opentelemetry-sdk', '1.27.0', {
+    }),
+    ('googleapis-common-protos', '1.65.0', {
+    }),
+    ('opentelemetry-proto', '1.27.0', {
+    }),
+    ('opentelemetry-exporter-otlp-proto-common', '1.27.0', {
+    }),
+    ('opentelemetry-exporter-otlp-proto-http', '1.27.0', {
+    }),
+    ('opentelemetry-instrumentation', '0.48b0', {
+    }),
+    ('opentelemetry-util-http', '0.48b0', {
+    }),
+    ('opentelemetry-instrumentation-httpx', '0.48b0', {
+    }),
+    ('opentelemetry-instrumentation-requests', '0.48b0', {
+    }),
+    ('opentelemetry-instrumentation-threading', '0.48b0', {
+    }),
+    ('opentelemetry-instrumentation-urllib', '0.48b0', {
+    }),
+    ('asyncio-atexit', '1.0.1', {
+    }),
+    ('synapseclient', '4.6.0'),
+    ('pyblake2', '1.1.2'),
+    ('readme-renderer', '44.0', {
+    }),
+    ('twine', '5.1.1'),
+    ('profilehooks', '1.13.0'),
+    ('annoy', '1.17.3', {
+    }),
+    ('pynndescent', '0.5.13'),
+    ('umap-learn', '0.5.6', {
+        'modulename': 'umap',
+    }),
+    ('Cython', '3.0.11', {
+    }),
+    ('bbknn', '1.6.0', {
+    }),
+    ('sphinx-autodoc-typehints', '2.5.0', {
+        'modulename': 'sphinx_autodoc_typehints',
+        'source_tmpl': 'sphinx_autodoc_typehints-%(version)s.tar.gz',
+    }),
+    ('tokenize-rt', '6.0.0', {
+        'modulename': 'tokenize_rt',
+        'source_tmpl': 'tokenize_rt-%(version)s.tar.gz',
+    }),
+    ('pytest-cov', '5.0.0', {
+        'modulename': 'pytest_cov',
+    }),
+    ('leidenalg', '0.10.2', {
+    }),
+    ('louvain', '0.8.2', {
+    }),
+    ('zappy', '0.2.0'),
+    ('asciitree', '0.3.3'),
+    ('numcodecs', '0.13.1'),
+    ('zarr', '2.18.3'),
+    ('feather-format', '0.4.1', { # loads without error but fails sanity
+        'modulename': 'feather',
+    }),
+    ('narwhals', '1.9.2', {
+    }),
+    ('altair', '5.4.1'),
+    ('PyChef', '0.3.0', {
+        'modulename': 'chef',
+        'patches': ['%(name)s-%(version)s_platform.patch'],
+    }),
+    ('slicer', '0.0.8'),
+    ('shap', '0.46.0'),
+    ('mpld3', '0.5.10'),
+    ('biolib', '0.1.9'),
+    ('DendroPy', '5.0.1', {
+        'modulename': 'dendropy',
+    }),
+    ('sci', '0.1.7'),
+    ('pyFFTW', '0.14.0', {
+        'modulename': 'pyfftw',
+    }),
+    ('pyemd', '1.0.0'),
+    ('setuptools-git', '1.2', {
+        'modulename': 'setuptools_git',
+    }),
+    ('django-configurations', '2.5.1', {
+        'modulename': 'configurations',
+    }),
+    ('sybil', '8.0.0'),
+    ('zope.i18nmessageid', '7.0'),
+    ('zope.schema', '7.0.1'),
+    ('zope.configuration', '5.0.1'),
+    ('zope.proxy', '6.1', {
+    }),
+    ('zope.deferredimport', '5.0', {
+    }),
+    ('persistent', '6.1'),
+    ('zope.location', '5.0'),
+    ('zope.deprecation', '5.0'),
+    ('zope.hookable', '7.0'),
+    ('zope.component', '6.0'),
+    ('zope.security', '7.3', {
+    }),
+    ('zope.copy', '4.3'),
+    ('testfixtures', '8.3.0'),
+    ('Morfessor', '2.0.6', {
+        'modulename': 'morfessor',
+    }),
+    ('Levenshtein', '0.26.0', {
+    }),
+    ('python-Levenshtein', '0.26.0', {
+        'modulename': 'Levenshtein',
+    }),
+    ('websocket', '0.2.1'),
+    ('visdom', '0.2.4'),
+    ('google-pasta', '0.2.0', {
+        'modulename': 'pasta',
+    }),
+    ('pybind11', '2.13.6', {
+    }),
+    ('nmslib', '2.1.1'),
+    ('cwl', '0.0.1', {
+        'modulename': 'cwlcli',
+    }),
+    ('ruamel.yaml.clib', '0.2.8', {
+    }),
+    ('ruamel.yaml', '0.18.6'),
+    ('keepalive', '0.5'),
+    ('rdflib', '7.0.0'),
+    ('SPARQLWrapper', '2.0.0', {
+        'modulename': 'SPARQLWrapper',
+    }),
+    ('shellescape', '3.8.1'),
+    ('rdflib-jsonld', '0.6.2', {
+        'modulename': 'rdflib_jsonld',
+    }),
+    ('schema-salad', '8.7.20240905150001', {
+        'modulename': 'schema_salad',
+    }),
+    ('prov', '2.0.1'),
+    ('bagit', '1.8.1'),
+    ('capturer', '3.0'),
+    ('coloredlogs', '15.0.1'),
+    ('boltons', '24.0.0'),
+    ('galaxy-lib', '19.5.2', {
+        'modulename': 'galaxy',
+    }),
+    ('cwl-upgrader', '1.2.11', {
+    }),
+    ('cwl-utils', '0.34', {
+    }),
+    ('spython', '0.3.14', {
+    }),
+    ('cwltool', '3.1.20241007082533', {
+        'modulename': 'cwltool',
+    }),
+    ('cwlref-runner', '1.0', { # CLI tool, entrypoint is cwltool
+        'modulename': 'cwltool',
+    }),
+    ('Parsley', '1.3', {
+        'modulename': 'parsley',
+    }),
+    ('numpy_groupies', '0.11.2'),
+    ('loompy', '3.0.7'),
+    ('py4j', '0.10.9.7', {
+    }),
+    ('hyperopt', '0.2.7'),
+    ('array-api-compat', '1.9', {
+    }),
+    ('anndata', '0.10.9'),
+    ('stdlib-list', '0.10.0', {
+        'modulename': 'stdlib_list'
+    }),
+    ('sinfo', '0.3.4'),
+    ('dunamai', '1.22.0', {
+    }),
+    ('get_version', '3.5.5'),
+    ('session-info', '1.0.0', {
+        'source_tmpl': 'session_info-%(version)s.tar.gz',
+        'modulename': 'session_info',
+    }),
+    ('get-annotations', '0.1.2', {
+    }),
+    ('legacy-api-wrap', '1.4', {
+    }),
+    ('scanpy', '1.10.3'),
+    ('torch', '2.4.1', {
+    }),
+    ('scikit-misc', '0.5.1', {
+    }),
+    ('scvi', '0.6.8'),
+    ('astunparse', '1.6.3', {
+    }),
+    ('opt_einsum', '3.4.0', {
+    }),
+    ('flatbuffers', '24.3.25', {
+    }),
+    ('libclang', '18.1.1', {
+        'modulename': 'clang',
+    }),
+    ('namex', '0.0.8', {
+    }),
+    ('optree', '0.13.0', {
+    }),
+    ('ml-dtypes', '0.5.0', {
+    }),
+    ('keras', '3.6.0', {
+    }),
+    ('opt-einsum', '3.4.0', {
+    }),
+    ('tensorflow-io-gcs-filesystem', '0.37.1', {
+    }),
+    ('tensorflow', '2.17.0', {
+    }),
+    ('kopt', '0.1.0', {
+    }),
+    ('DCA', '0.3.4', {
+        'modulename': 'dca',
+    }),
+    ('yagdspy', '1.0'),
+    ('POT', '0.9.4', {
+        'modulename': 'ot',
+    }),
+    ('pymummer', '0.11.0'),
+    ('pyfastaq', '3.17.0'),
+    ('jdcal', '1.4.1'),
+    ('circlator', '1.5.5'),
+    ('dxpy', '0.383.1'),
+    ('stor', '4.1.0'),
+    ('Click', '8.1.7', {
+    }),
+    ('ordered-set', '4.1.0', {
+    }),
+    ('dep_check', '3.0.1'),
+    ('nibabel', '5.3.0'),
+    ('autograd', '1.7.0'),
+    ('autograd_gamma', '0.5.0', {
+        'source_tmpl': 'autograd_gamma-0.4.2-py3-none-any.whl',
+        'unpack_sources': False,
+    }),
+    ('interface_meta', '1.3.0'),
+    ('graphlib-backport', '1.1.0', {
+    }),
+    ('interface-meta', '1.3.0', {
+    }),
+    ('formulaic', '1.0.2', {
+    }),
+    ('autograd-gamma', '0.5.0', {
+    }),
+    ('lifelines', '0.29.0'),
+    ('tslearn', '0.6.3'),
+    ('interop', '1.3.2', {
+        'source_tmpl': 'interop-%(version)s-cp39-cp39-manylinux1_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    ('pyem', '2.1.0', {
+    }),
+    ('charset_normalizer', '3.4.0', {
+        'source_tmpl': 'charset-normalizer-%(version)s.tar.gz',
+    }),
+    ('contextvars', '2.4', {
+    }),
+    ('hpack', '4.0.0', {
+    }),
+    ('hyperframe', '6.0.1', {
+    }),
+    ('h2', '4.1.0'),
+    ('pyro-api', '0.1.2', {
+        'modulename': 'pyroapi',
+    }),
+    ('pyro-ppl', '1.9.1', {
+        'modulename': 'pyro',
+    }),
+    ('argon2-cffi', '23.1.0', {
+    }),
+    ('rfc3339-validator', '0.1.4', {
+    }),
+    ('rfc3986-validator', '0.1.1', {
+    }),
+    ('terminado', '0.18.1', {
+    }),
+    ('overrides', '7.7.0', {
+    }),
+    ('send2trash', '1.8.3', {
+    }),
+    ('plotsr', '0.5.4', {
+        'source_urls': ['https://github.com/schneebergerlab/plotsr/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+]
+
+moduleclass = 'lang'
