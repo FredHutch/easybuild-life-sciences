@@ -2,7 +2,7 @@
 title: Bio Modules 24.04
 layout: single
 permalink: /bio-modules-24.04/
-created: 2024-10-15
+created: 2024-11-05
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -87,37 +87,48 @@ A python package that allows to count antibody TAGS from a CITE-seq and/or cell 
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CRISPResso2/CRISPResso2-2.3.1-foss-2023b.eb)
 CRISPResso2 is a software pipeline designed to enable rapid and
 intuitive interpretation of genome editing experiments.
+ - [Cassiopeia/2.0.0-foss-2023a](https://github.com/YosefLab/Cassiopeia)
+A Package for Cas9-Enabled Single Cell Lineage Tracing Tree Reconstruction.
+ - [Cbc/2.10.11-foss-2023a](https://github.com/coin-or/Cbc)
+Cbc (Coin-or branch and cut) is an open-source mixed integer linear programming
+solver written in C++. It can be used as a callable library or using a
+stand-alone executable.
  - [CellBender/0.3.0-foss-2023a](http://github.com/broadinstitute/CellBender)
 CellBender is a software package for eliminating technical artifacts from
 high-throughput single-cell RNA sequencing (scRNA-seq) data.
 
- - [CellRank/2.0.2-foss-2023a-CUDA-12.1.1](https://cellrank.readthedocs.io/en/stable/)
+ - [CellRank/2.0.2-foss-2023a](https://cellrank.readthedocs.io/en/stable/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CellRank/CellRank-2.0.2-foss-2023a.eb)
 CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
 hypothesis based on these. 
- - [Cgl/0.60.8-foss-2023b](https://github.com/coin-or/Cgl)
+ - [Cgl/0.60.8-foss-2023a](https://github.com/coin-or/Cgl)
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that
 can be used with other COIN-OR packages that make use of cuts, such as, among
 others, the linear solver Clp or the mixed integer linear programming solvers
 Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or
 communicate with a solver. It does not directly call a solver.
- - [Clp/1.17.9-foss-2023b](https://github.com/coin-or/Clp)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/Clp/Clp-1.17.9-foss-2023b.eb)
+ - [Clp/1.17.9-foss-2023a](https://github.com/coin-or/Clp)
 Clp (Coin-or linear programming) is an open-source linear programming solver.
 It is primarily meant to be used as a callable library, but a basic,
 stand-alone executable version is also available.
- - [CoinUtils/2.11.10-GCC-13.2.0](https://github.com/coin-or/CoinUtils)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CoinUtils/CoinUtils-2.11.10-GCC-13.2.0.eb)
+ - [CoinUtils/2.11.10-GCC-12.3.0](https://github.com/coin-or/CoinUtils)
 CoinUtils (Coin-OR Utilities) is an open-source collection of classes and
 functions that are generally useful to more than one COIN-OR project.
- - [Eigen/3.4.0-GCCcore-13.2.0](https://eigen.tuxfamily.org)
+ - [Eigen/3.4.0-GCCcore-12.2.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [FASTA/36.3.8i-GCC-12.2.0](https://fasta.bioch.virginia.edu/fasta_www2/fasta_list2.shtml)
 The FASTA programs find regions of local or global (new) similarity between 
 protein or DNA sequences, either by searching Protein or DNA databases, or by identifying 
 local duplications within a sequence.
+ - [FastQC/0.12.1-Java-11](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+FastQC is a quality control application for high throughput
+sequence data. It reads in sequence data in a variety of formats and can either
+provide an interactive application to review the results of several different
+QC checks, or create an HTML based report which can be integrated into a
+pipeline.
  - [Flax/0.8.4-gfbf-2023a-CUDA-12.1.1](https://flax.readthedocs.io)
 Flax is a high-performance neural network library and ecosystem for JAX that is
 designed for flexibility: Try new forms of training by forking an example and
@@ -183,14 +194,14 @@ Model Based Analysis for ChIP-Seq data
  - [MACS3/3.0.0-foss-2022b](https://macs3-project.github.io/MACS/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MACS3/MACS3-3.0.0-foss-2022b.eb)
 Model Based Analysis for ChIP-Seq data
- - [METIS/5.1.0-GCCcore-12.2.0](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
+ - [METIS/5.1.0-GCCcore-12.3.0](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
 METIS is a set of serial programs for partitioning graphs, partitioning
  finite element meshes, and producing fill reducing orderings for sparse
  matrices. The algorithms implemented in METIS are based on the multilevel
  recursive-bisection, multilevel k-way, and multi-constraint partitioning
  schemes.
 
- - [MPC/1.3.1-GCCcore-12.3.0](http://www.multiprecision.org/)
+ - [MPC/1.3.1-GCCcore-13.2.0](http://www.multiprecision.org/)
 Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
@@ -241,7 +252,8 @@ Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.
  Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,
  it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments
  to effectively find adapters, even at low sequence identity
- - [PyTorch/2.1.2-foss-2023a](https://pytorch.org/)
+ - [PyTorch/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTorch/PyTorch-2.1.2-foss-2023a-CUDA-12.1.1.eb)
 Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 PyTorch is a deep learning framework that puts Python first.
  - [PyTorch-bundle/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
@@ -292,15 +304,14 @@ Sambamba is a high performance modern robust and fast tool
  (and library), written in the D programming language, for working with SAM
  and BAM files. Current functionality is an important subset of samtools
  functionality, including view, index, sort, markdup, and depth.
- - [Seaborn/0.13.2-gfbf-2023b](https://seaborn.pydata.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Seaborn/Seaborn-0.13.2-gfbf-2023b.eb)
+ - [Seaborn/0.13.2-gfbf-2023a](https://seaborn.pydata.org/)
 Seaborn is a Python visualization library based on matplotlib.
  It provides a high-level interface for drawing attractive statistical graphics. 
  - [Shapely/2.0.1-gfbf-2023a](https://github.com/Toblerity/Shapely)
 Shapely is a BSD-licensed Python package for manipulation and analysis of planar geometric objects.
 It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from which GEOS is ported) libraries.
- - [Telescope/1.0.3-gfbf-2022b](https://github.com/mlbendall/telescope)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-gfbf-2022b.eb)
+ - [Telescope/1.0.3-20230222-gfbf-2022b](https://github.com/mlbendall/telescope)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-20230222-gfbf-2022b.eb)
 Single locus resolution of Transposable ELEment expression using next-generation sequencing.
  - [UMI-tools/1.1.4-foss-2023b](https://umi-tools.readthedocs.io)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/u/UMI-tools/UMI-tools-1.1.4-foss-2023b.eb)
@@ -334,7 +345,10 @@ A tool designed to provide fast all-in-one preprocessing for FastQ files.
  - [fhR/4.4.0-foss-2023b](http://www.r-project.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/fhR/fhR-4.4.0-foss-2023b.eb)
 R is a free software environment for statistical computing and graphics.
- - [gmpy2/2.1.5-GCC-13.2.0](https://github.com/aleaxit/gmpy)
+ - [gffread/0.12.7-GCCcore-12.3.0](https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread)
+GFF/GTF parsing utility providing format conversions,
+region filtering, FASTA sequence extraction and more.
+ - [gmpy2/2.1.5-GCC-12.3.0](https://github.com/aleaxit/gmpy)
 GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
  - [jax/0.4.25-gfbf-2023a-CUDA-12.1.1](https://jax.readthedocs.io/)
 Composable transformations of Python+NumPy programs:
