@@ -1,0 +1,19 @@
+diff -ruN centrosome-1.2.3.orig/setup.py centrosome-1.2.3/setup.py
+--- centrosome-1.2.3.orig/setup.py	2024-07-22 15:38:41.000000000 -0700
++++ centrosome-1.2.3/setup.py	2024-11-09 11:54:59.792080000 -0800
+@@ -114,13 +114,13 @@
+         # then delete contourpy as a dependency as well
+         "contourpy<1.2.0",
+         "numpy>=1.18.2,<2",
+-        "scikit-image>=0.17.2,<0.22.0",
++        "scikit-image>=0.17.2,<=0.22.0",
+         # we don't depend on this directly but scikit-image does
+         # and does not put an upper pin on it
+         # if removing upper pin on scikit-image here,
+         # then delete PyWavelets as a dependency as well
+         "PyWavelets<1.5",
+-        "scipy>=1.4.1,<1.11",
++        "scipy>=1.4.1,<=1.11.1",
+     ],
+     tests_require=[
+         "pytest",

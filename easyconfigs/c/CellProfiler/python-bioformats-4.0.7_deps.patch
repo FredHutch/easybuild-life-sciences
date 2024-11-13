@@ -1,0 +1,12 @@
+diff -ruN python-bioformats-4.0.7.orig/setup.py python-bioformats-4.0.7/setup.py
+--- python-bioformats-4.0.7.orig/setup.py	2022-12-14 10:28:33.000000000 -0800
++++ python-bioformats-4.0.7/setup.py	2024-11-08 17:24:33.929316000 -0800
+@@ -21,7 +21,7 @@
+     install_requires=[
+         "boto3>=1.14.23",
+         "future>=0.18.2",
+-        "python-javabridge==4.0.3"
++        "python-javabridge==4.0.4"
+     ],
+     license="GPL License",
+     long_description="""Python-bioformats is a Python wrapper for Bio-Formats, a standalone Java library for reading

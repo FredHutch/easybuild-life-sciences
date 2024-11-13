@@ -1,0 +1,113 @@
+# Based on a mixture of the previous EasyConfig file and one John Dey
+# from Fred Hutch provided:
+# https://github.com/FredHutch/easybuild-life-sciences/blob/main/fh_easyconfigs/c/CellProfiler/CellProfiler-4.2.4-foss-2021b.eb
+# Also thanks to Lars Viklund
+# Author: J. Sassmannshausen (Imperial College London/UK)
+
+easyblock = 'PythonBundle'
+
+name = 'CellProfiler'
+version = '4.2.7'
+
+homepage = 'http://cellprofiler.org/'
+description = """CellProfiler is a free open-source software designed to enable
+ biologists without training in computer vision or programming to quantitatively
+ measure phenotypes from thousands of images automatically."""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+builddependencies = [
+    ('pkgconf', '1.9.5'),
+    ('hypothesis', '6.82.0'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+    ('SciPy-bundle', '2023.07'),
+    ('matplotlib', '3.7.2'),
+    ('matplotlib', '3.7.2'),
+    ('Java', '11', '', True),
+    ('scikit-image', '0.22.0'),
+    ('pybind11', '2.11.1'),
+    ('boto3', '1.28.70'),
+    ('imageio', '2.33.1'),
+    ('wxPython', '4.2.1'),
+    ('h5py', '3.9.0'),
+    ('Pillow', '10.0.0'),
+    ('libpng', '1.6.39'),
+    ('libjpeg-turbo', '2.1.5.1'),
+    ('LibTIFF', '4.5.0'),
+    ('zlib', '1.2.13'),
+    ('freetype', '2.13.0'),
+    ('Tkinter', '3.11.3'),
+    ('MariaDB', '11.6.0'),
+    ('ZeroMQ', '4.3.4'),  # LibZMQ for pyzmq
+    ('GTK4', '4.13.1'),
+    ('Python-bundle-PyPI', '2023.06'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('deprecation', '2.1.0', {
+        'checksums': ['72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff'],
+    }),
+    ('scikit-learn', '0.24.2', {
+        'modulename': 'sklearn',
+        'checksums': ['d14701a12417930392cd3898e9646cf5670c190b933625ebe7511b1f7d7b8736'],
+    }),
+    ('centrosome', '1.2.3', {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+    ('cached-property', '1.5.2', {
+        'checksums': ['9fa5755838eecbb2d234c3aa390bd80fbd3ac6b6869109bfc1b499f7bd89a130'],
+    }),
+    ('prokaryote', '2.4.4', {
+        'checksums': ['0a147b8b9a0a7279aa773e6a8fe459eb49f6de479f7afe7203dc4ac10dc8b587'],
+    }),
+    ('python_javabridge', '4.0.4', {
+        'modulename': 'javabridge',
+    }),
+    ('python-bioformats', '4.0.7', {
+        'modulename': 'bioformats',
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+    ('pyzmq', '25.1.2', {
+        'modulename': 'zmq',
+        'checksums': ['93f1aa311e8bb912e34f004cf186407a4e90eec4f0ecc0efd26056bf7eda0226'],
+    }),
+    ('cellprofiler-core', version, {
+        'source_tmpl': 'cellprofiler_core-%(version)s.tar.gz',
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+        'checksums': [
+            {'cellprofiler_core-4.2.7.tar.gz': 'b1a4c232a7d6237726ec3f5a5d5b9c06b177d3b37020c14b2179b690aef1f772'},
+        ],
+    }),
+    ('pydantic', '1.10.15', {
+        'checksums': ['ca832e124eda231a60a041da4f013e3ff24949d94a01154b137fc2f2a43c3ffb'],
+    }),
+    ('inflect', '6.2.0', {
+        'checksums': ['518088ef414a4e15df70e6bcb40d021da4d423cc6c2fd4c0cad5500d39f86627'],
+    }),
+    ('mahotas', '1.4.15', {
+        'checksums': ['d79b1bb36c195543d5a1f0e171c8edf6a142184ac11177f90b5f0098ef86e07c'],
+    }),
+    ('mysqlclient', '2.2.4', {
+        'modulename': 'MySQLdb',
+        'checksums': ['33bc9fb3464e7d7c10b1eaf7336c5ff8f2a3d3b88bab432116ad2490beb3bf41'],
+    }),
+    ('urllib3', '1.26.18', {
+        'checksums': ['f8ecc1bba5667413457c529ab955bf8c67b45db799d159066261719e328580a0'],
+    }),
+    ('sentry_sdk', '2.4.0', {
+        'checksums': ['62b9bb0489e731ecbce008f9647899b51d220067a75c3adfd46f8187660c0029'],
+    }),
+    (name, version, {
+        'patches': ['%(name)s-%(version)s_deps.patch'],
+    }),
+]
+
+sanity_check_commands = ['cellprofiler --help']
+
+moduleclass = 'bio'
