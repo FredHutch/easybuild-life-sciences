@@ -1,0 +1,13 @@
+# author: John Dey  update Java version
+diff -ruN Trimmomatic-0.39.orig/build.xml Trimmomatic-0.39/build.xml
+--- Trimmomatic-0.39.orig/build.xml	2021-01-22 01:34:05.000000000 -0800
++++ Trimmomatic-0.39/build.xml	2024-06-11 18:37:28.538754000 -0700
+@@ -31,7 +31,7 @@
+ 	</target>
+ 
+ 	<target name="compile" depends="import">
+-		<javac srcdir="${src}" destdir="${dist_build}" debug="true" source="1.5" target="1.5" includeantruntime="false">
++		<javac srcdir="${src}" destdir="${dist_build}" debug="true" source="21" target="21" includeantruntime="false">
+ 			<classpath>
+ 				<fileset dir="${dist_lib}">
+ 					<include name="*.jar" />

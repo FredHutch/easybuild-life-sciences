@@ -1,0 +1,48 @@
+# This file is an EasyBuild reciPY as per https://github.com/easybuilders/easybuild
+# Author: Pablo Escobar Lopez
+# Swiss Institute of Bioinformatics
+# Biozentrum - University of Basel
+
+easyblock = 'CmdCp'
+
+name = 'Trimmomatic'
+version = '0.39'
+versionsuffix = '-Java-%(javaver)s'
+
+homepage = 'http://www.usadellab.org/cms/?page=trimmomatic'
+description = """Trimmomatic performs a variety of useful trimming tasks for illumina
+ paired-end and single ended data.The selection of trimming steps and their associated
+ parameters are supplied on the command line. """
+
+toolchain = SYSTEM
+
+source_urls = ['https://github.com/usadellab/Trimmomatic/archive/refs/tags/v%(version)s']
+sources = ['v%(version)s.tar.gz' ]
+patches = ['Trimmomatic_java-ver.patch']
+checksums = [
+    'a05e28c3391d6ef55dec40de76bb19ca828c4896f3d6ad72e9659ed6a2229e34', # v0.39.tar.gz
+    'a19febd36ef6124c1816c5daa7c307eb3626273d74ebeeaeef3c71005ed5b5e0', #  Trimmomatic_java-ver.patch
+]
+
+builddependencies = [('ant', '1.10.14', versionsuffix)]
+dependencies = [('Java', '21')]
+
+#  skipsteps = ['configure', 'build']
+cmds_map = [('', 'ant')]
+files_to_copy = [
+    "dist/jar/trimmomatic-%(version)s.jar",
+    'adapters',
+    'distSrc/LICENSE',
+    'README.md',
+]
+
+modloadmsg = """To execute Trimmomatic run: java -jar $EBROOTTRIMMOMATIC/trimmomatic-%(version)s.jar\n"""
+
+sanity_check_commands = ['java -jar %(namelower)s-%(version)s.jar -version']
+
+sanity_check_paths = {
+    'files': ["trimmomatic-%(version)s.jar"],
+    'dirs': [""],
+}
+
+moduleclass = 'bio'
