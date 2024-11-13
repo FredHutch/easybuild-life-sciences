@@ -1,0 +1,39 @@
+easyblock = 'ConfigureMake'
+
+name = 'filezilla'
+version = '3.67.1'
+
+homepage = 'https://filezilla-project.org'
+description = "FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with
+ lots of useful features and an intuitive graphical user interface."
+
+toolchain = {'name': 'GCC', 'version': '11.2.0'}
+
+source_urls = ['https://dl4.cdn.filezilla-project.org/client/']
+sources = ['FileZilla_%(version)s_src.tar.bz2']
+
+# https://sources.debian.org/src/filezilla/3.62.2-3/debian/patches/
+patches = ['01_remove-xdg-check.patch']
+
+builddependencies = [
+    ('Autotools', '20210726'),
+    ('pkg-config', '0.29.2'),
+    ('xmlto', '0.0.28'),
+]
+
+dependencies = [
+    ('libfilezilla', '0.40.0'),
+    ('wxWidgets', '3.0.5.1'),
+    ('nettle', '3.7.3'),
+    ('DBus', '1.13.18'),
+    ('SQLite', '3.36'),
+]
+
+configure_cmd_prefix = "autoreconf && "
+
+sanity_check_paths = {
+    'files': ['bin/filezilla'],
+    'dirs': ['bin', 'lib', 'share'],
+}
+
+moduleclass = 'tools'

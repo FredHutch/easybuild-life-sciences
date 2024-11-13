@@ -1,0 +1,30 @@
+easyblock = 'ConfigureMake'
+
+name = 'libnvme'
+version = '1.7.1'
+
+homepage = 'https://nvmexpress.org'
+description = """This is the libnvme development C library. libnvme provides type definitions for
+ NVMe specification structures, enumerations, and bit fields, helper functions to construct, dispatch,
+ and decode commands and payloads, and utilities to connect, scan, and manage nvme devices on a Linux system."""
+
+toolchain = {'name': 'GCC', 'version': '12.3.0'}
+
+github_account = 'linux-nvme'
+source_urls = [GITHUB_SOURCE]
+sources = [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+checksums = ['']
+
+# https://github.com/linux-nvme/libnvme/archive/refs/tags/
+
+builddependencies = [('binutils', '2.40')]
+
+dependencies = [
+    ('zlib', '1.2.11'),
+    ('libxml2', '2.9.10'),
+]
+
+sanity_check_paths = {
+    'files': ['bin/xsltproc', 'include/libxslt/xslt.h', 'lib/%%(name)s.%s' % SHLIB_EXT],
+    'dirs': [],
+}

@@ -1,0 +1,32 @@
+name = 'MUMPS'
+version = '5.6.2'
+versionsuffix = '-metis'
+
+homepage = 'https://graal.ens-lyon.fr/MUMPS/'
+description = "A parallel sparse direct solver"
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+toolchainopts = {'pic': True, 'usempi': True}
+
+source_urls = ['https://graal.ens-lyon.fr/MUMPS/']
+sources = ['%(name)s_%(version)s.tar.gz']
+patches = [
+    '%(name)s-%(version)s_shared-pord.patch',    # builds the shared libs of PORD
+    '%(name)s-%(version)s_shared-mumps.patch',   # builds shared libs of MUMPS
+]
+checksums = [
+]
+
+dependencies = [
+    ('SCOTCH', '7.0.4'),
+    ('METIS', '5.1.0'),
+]
+
+parallel = 1
+
+# fix 'Type mismatch between actual argument' errors with GCC 10.x
+prebuildopts = 'export FFLAGS="$FFLAGS -fallow-argument-mismatch" && '
+
+buildopts = 'all SONAME_VERSION="%(version)s"'
+
+moduleclass = 'math'

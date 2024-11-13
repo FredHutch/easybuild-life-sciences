@@ -13,13 +13,15 @@ as a text editor or word processor, need not know anything about a specific
 spell-checker, and since all back-ends are plugins, new spell-checkers can
 be added without needing any change to the program using Enchant."""
 
-toolchain = {'name': 'GCC', 'version': '12.3.0'}
+toolchain = {'name': 'GCCcore', 'version': '12.3.0'}
 
 source_urls = ['https://github.com/rrthomas/enchant/releases/download/v%(version)s']
 sources = ['enchant-%(version)s.tar.gz']
 
 builddependencies = [
     ('Autotools', '20220317'),
+    ('binutils', '2.40'),
+    ('M4', '1.4.19'),
     ('pkgconf', '1.9.5'),
     ('groff', '1.22.4'),
 ]

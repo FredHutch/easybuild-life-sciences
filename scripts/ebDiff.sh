@@ -18,7 +18,7 @@ echo Exclude List: $exclude
 # spider=/app/lmod/lmod/libexec/spider
 # module_dir=/app/modules
 # $spider -o spider-json ${module_dir}/bio:${module_dir}/math:${module_dir}/chem | \
-# python -mjson.tool >${docs_dir}/modules-${os_ver}.json | \
+# python3 -mjson.tool >${docs_dir}/modules-${os_ver}.json | \
 # listModules.py > list.txt
 installed=list.txt
 

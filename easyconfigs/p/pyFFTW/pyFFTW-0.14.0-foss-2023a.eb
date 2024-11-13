@@ -1,0 +1,24 @@
+easyblock = 'PythonPackage'
+
+name = 'pyFFTW'
+version = '0.14.0'
+
+homepage = 'https://github.com/pyFFTW/pyFFTW'
+description = """A pythonic wrapper around FFTW, the FFT library, presenting a unified interface
+ for all the supported transforms."""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+sources = ['%(namelower)s-%(version)s.tar.gz']
+
+dependencies = [
+    ('Python', '3.11.3'),
+    ('SciPy-bundle', '2023.07'),
+    ('setuptools', '75.3.0'),
+]
+
+download_dep_fail = True
+use_pip = True
+sanity_pip_check = True
+
+moduleclass = 'lib'

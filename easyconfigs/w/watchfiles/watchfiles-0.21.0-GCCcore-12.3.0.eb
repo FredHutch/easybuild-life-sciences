@@ -1,0 +1,32 @@
+easyblock = 'PythonBundle'
+
+name = 'watchfiles'
+version = '0.21.0'
+
+homepage = 'https://github.com/oconnor663/blake3-py'
+description = """Simple, modern and high performance file watching and code reload in python."""
+
+toolchain = {'name': 'GCCcore', 'version': '12.3.0'}
+
+builddependencies = [
+    ('Rust', '1.75.0'),
+    ('maturin', '1.4.0', '-Rust-1.75.0'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('anyio', '3.0.0'),
+    ('idna', '3.3'),
+    ('sniffio', '1.3.0'),
+    (name, version, {
+        'patches': ['%(name)s-%(version)s_proc-macro2.patch'],
+    }),
+]
+
+moduleclass = 'devel'

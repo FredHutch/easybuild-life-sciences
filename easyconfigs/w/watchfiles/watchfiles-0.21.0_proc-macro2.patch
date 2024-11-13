@@ -1,0 +1,15 @@
+diff -ruN watchfiles-0.21.0.orig/Cargo.lock watchfiles-0.21.0/Cargo.lock
+--- watchfiles-0.21.0.orig/Cargo.lock	2023-10-13 05:53:50.000000000 -0700
++++ watchfiles-0.21.0/Cargo.lock	2024-04-30 16:44:24.310131000 -0700
+@@ -216,9 +216,9 @@
+ 
+ [[package]]
+ name = "proc-macro2"
+-version = "1.0.53"
++version = "1.0.60"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+-checksum = "ba466839c78239c09faf015484e5cc04860f88242cff4d03eb038f04b4699b73"
++checksum = "dec2b086b7a862cf4de201096214fa870344cf922b2b30c167badb3af3195406"
+ dependencies = [
+  "unicode-ident",
+ ]

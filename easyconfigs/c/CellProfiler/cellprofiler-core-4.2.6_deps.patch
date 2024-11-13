@@ -1,0 +1,15 @@
+# author John Dey loosen up versions of requires
+Common subdirectories: cellprofiler-core-4.2.6/cellprofiler_core and cellprofiler-core-4.2.6.orig/cellprofiler_core
+Common subdirectories: cellprofiler-core-4.2.6/cellprofiler_core.egg-info and cellprofiler-core-4.2.6.orig/cellprofiler_core.egg-info
+diff cellprofiler-core-4.2.6/setup.py cellprofiler-core-4.2.6.orig/setup.py
+11d10
+<         "Programming Language :: Python :: 3.11",
+27c26
+<         "docutils>=0.15.2",
+---
+>         "docutils==0.15.2",
+36c35
+<         "scikit-image>=0.18.3",
+---
+>         "scikit-image==0.18.3",
+Common subdirectories: cellprofiler-core-4.2.6/tests and cellprofiler-core-4.2.6.orig/tests
