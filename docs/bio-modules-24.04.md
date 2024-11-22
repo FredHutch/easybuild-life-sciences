@@ -1,5 +1,5 @@
 ---
-title: Bio Modules 24.04
+title: Bio Modules for Harmony Nodes
 layout: single
 permalink: /bio-modules-24.04/
 created: 2024-11-22
