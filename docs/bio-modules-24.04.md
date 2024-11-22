@@ -2,7 +2,7 @@
 title: Bio Modules 24.04
 layout: single
 permalink: /bio-modules-24.04/
-created: 2024-11-05
+created: 2024-11-22
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -40,7 +40,7 @@ Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively
  short nucleotide sequences against a long reference sequence such as the human
  genome.
 
- - [BamTools/2.5.2-GCC-12.3.0](https://github.com/pezmaster31/bamtools)
+ - [BamTools/2.5.2-GCC-12.2.0](https://github.com/pezmaster31/bamtools)
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [Beast/10.5.0-beta3-GCC-12.3.0-beagle-lib-4.0.1-CUDA-12.1.1](https://beast.community)
 BEAST is a cross-platform program for Bayesian analysis of molecular sequences
@@ -97,8 +97,7 @@ stand-alone executable.
 CellBender is a software package for eliminating technical artifacts from
 high-throughput single-cell RNA sequencing (scRNA-seq) data.
 
- - [CellRank/2.0.2-foss-2023a](https://cellrank.readthedocs.io/en/stable/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CellRank/CellRank-2.0.2-foss-2023a.eb)
+ - [CellRank/2.0.2-foss-2023a-CUDA-12.1.1](https://cellrank.readthedocs.io/en/stable/)
 CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
@@ -109,14 +108,16 @@ can be used with other COIN-OR packages that make use of cuts, such as, among
 others, the linear solver Clp or the mixed integer linear programming solvers
 Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or
 communicate with a solver. It does not directly call a solver.
- - [Clp/1.17.9-foss-2023a](https://github.com/coin-or/Clp)
+ - [Clp/1.17.9-foss-2023b](https://github.com/coin-or/Clp)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/Clp/Clp-1.17.9-foss-2023b.eb)
 Clp (Coin-or linear programming) is an open-source linear programming solver.
 It is primarily meant to be used as a callable library, but a basic,
 stand-alone executable version is also available.
- - [CoinUtils/2.11.10-GCC-12.3.0](https://github.com/coin-or/CoinUtils)
+ - [CoinUtils/2.11.10-GCC-13.2.0](https://github.com/coin-or/CoinUtils)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CoinUtils/CoinUtils-2.11.10-GCC-13.2.0.eb)
 CoinUtils (Coin-OR Utilities) is an open-source collection of classes and
 functions that are generally useful to more than one COIN-OR project.
- - [Eigen/3.4.0-GCCcore-12.2.0](https://eigen.tuxfamily.org)
+ - [Eigen/3.4.0-GCCcore-13.3.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [FASTA/36.3.8i-GCC-12.2.0](https://fasta.bioch.virginia.edu/fasta_www2/fasta_list2.shtml)
@@ -150,7 +151,7 @@ GMP is a free library for arbitrary precision arithmetic, operating on signed
 The HH-suite is an open-source software package
  for sensitive protein sequence searching based on the pairwise
  alignment of hidden Markov models (HMMs).
- - [HMMER/3.4-gompi-2023a](http://hmmer.org/)
+ - [HMMER/3.4-gompi-2024a](http://hmmer.org/)
 HMMER is used for searching sequence databases for homologs
  of protein sequences, and for making protein sequence alignments. It
  implements methods using probabilistic models called profile hidden Markov
@@ -167,6 +168,10 @@ A C library for reading/writing high-throughput sequencing data.
  - [IgBLAST/1.22.0-x64-linux](https://ncbi.github.io/igblast)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/i/IgBLAST/IgBLAST-1.22.0-x64-linux.eb)
 IgBLAST faclilitates the analysis of immunoglobulin and T cell receptor variable domain sequences.
+ - [InChI/1.07.1-GCC-13.3.0](https://www.inchi-trust.org/)
+The IUPAC International Chemical Identifier (InChI TM) is a non-proprietary
+identifier for chemical substances that can be used in printed and electronic
+data sources thus enabling easier linking of diverse data compilations.
  - [Infernal/1.1.4-foss-2022b](http://eddylab.org/infernal/)
 Infernal ("INFERence of RNA ALignment") is for searching DNA sequence databases
  for RNA structure and sequence similarities.
@@ -201,7 +206,7 @@ METIS is a set of serial programs for partitioning graphs, partitioning
  recursive-bisection, multilevel k-way, and multi-constraint partitioning
  schemes.
 
- - [MPC/1.3.1-GCCcore-13.2.0](http://www.multiprecision.org/)
+ - [MPC/1.3.1-GCCcore-12.3.0](http://www.multiprecision.org/)
 Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
@@ -213,7 +218,7 @@ Gnu Mpc is a C library for the arithmetic of
 The MPFR library is a C library for multiple-precision floating-point
  computations with correct rounding.
 
- - [MUMPS/5.6.1-foss-2022b-metis](https://graal.ens-lyon.fr/MUMPS/)
+ - [MUMPS/5.6.1-foss-2023a-metis](https://graal.ens-lyon.fr/MUMPS/)
 A parallel sparse direct solver
  - [MUMmer/4.0.0rc1-GCCcore-12.3.0](https://mummer.sourceforge.net/)
 MUMmer is a system for rapidly aligning entire genomes,
@@ -262,7 +267,7 @@ PyTorch with compatible versions of official Torch extensions.
  - [Pysam/0.22.0-GCC-12.3.0](https://github.com/pysam-developers/pysam)
 Pysam is a python module for reading and manipulating Samfiles.
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
- - [Qhull/2020.2-GCCcore-12.3.0](http://www.qhull.org)
+ - [Qhull/2020.2-GCCcore-13.2.0](http://www.qhull.org)
 Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
  halfspace intersection about a point, furthest-site Delaunay triangulation,
  and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and
@@ -277,6 +282,8 @@ Bioconductor provides tools for the analysis and coprehension
 RAPIDS provides unmatched speed with familiar APIs that match the most popular
 PyData libraries. Built on state-of-the-art foundations like NVIDIA CUDA and
 Apache Arrow, it unlocks the speed of GPUs with code you already know.
+ - [RDKit/2024.03.5-foss-2024a](https://www.rdkit.org)
+RDKit is a collection of cheminformatics and machine-learning software written in C++ and Python.
  - [SAMtools/1.19.2-GCC-13.2.0](https://www.htslib.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SAMtools/SAMtools-1.19.2-GCC-13.2.0.eb)
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
@@ -304,7 +311,8 @@ Sambamba is a high performance modern robust and fast tool
  (and library), written in the D programming language, for working with SAM
  and BAM files. Current functionality is an important subset of samtools
  functionality, including view, index, sort, markdup, and depth.
- - [Seaborn/0.13.2-gfbf-2023a](https://seaborn.pydata.org/)
+ - [Seaborn/0.13.2-gfbf-2023b](https://seaborn.pydata.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Seaborn/Seaborn-0.13.2-gfbf-2023b.eb)
 Seaborn is a Python visualization library based on matplotlib.
  It provides a high-level interface for drawing attractive statistical graphics. 
  - [Shapely/2.0.1-gfbf-2023a](https://github.com/Toblerity/Shapely)
@@ -329,6 +337,9 @@ The BIOM file format (canonically pronounced biome) is designed to be
  contingency tables. BIOM is a recognized standard for the Earth Microbiome
  Project and is a Genomics Standards Consortium supported project.
 
+ - [cooler/0.10.2-foss-2023a](https://open2c.github.io/cooler)
+Cooler is a support library for a storage format, also called cooler, used to store
+ genomic interaction data of any size, such as Hi-C contact matrices.
  - [cutadapt/4.4-GCCcore-12.2.0](https://opensource.scilifelab.se/projects/cutadapt/)
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
@@ -345,7 +356,7 @@ A tool designed to provide fast all-in-one preprocessing for FastQ files.
  - [fhR/4.4.0-foss-2023b](http://www.r-project.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/fhR/fhR-4.4.0-foss-2023b.eb)
 R is a free software environment for statistical computing and graphics.
- - [gffread/0.12.7-GCCcore-12.3.0](https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread)
+ - [gffread/0.12.7-GCCcore-12.2.0](https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread)
 GFF/GTF parsing utility providing format conversions,
 region filtering, FASTA sequence extraction and more.
  - [gmpy2/2.1.5-GCC-12.3.0](https://github.com/aleaxit/gmpy)
@@ -357,7 +368,7 @@ differentiate, vectorize, JIT to GPU/TPU, and more
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/k/kallisto/kallisto-0.50.1-foss-2022b.eb)
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally
  of target sequences using high-throughput sequencing reads.
- - [libcerf/2.3-GCCcore-12.3.0](https://jugit.fz-juelich.de/mlz/libcerf)
+ - [libcerf/2.3-GCCcore-12.2.0](https://jugit.fz-juelich.de/mlz/libcerf)
 libcerf is a self-contained numeric library that provides an efficient and
  accurate implementation of complex error functions, along with Dawson,
  Faddeeva, and Voigt functions.
@@ -385,6 +396,8 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for
 A basic Python-based EGA download client 
  - [pybedtools/0.9.1-foss-2023a](https://daler.github.io/pybedtools)
 pybedtools wraps and extends BEDTools and offers feature-level manipulations from within Python.
+ - [pyfaidx/0.8.1.1-GCCcore-12.3.0](https://pypi.python.org/pypi/pyfaidx)
+pyfaidx: efficient pythonic random access to fasta subsequences
  - [samblaster/0.1.26-GCC-13.2.0](https://github.com/GregoryFaust/samblaster)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/samblaster/samblaster-0.1.26-GCC-13.2.0.eb)
 samblaster is a fast and flexible program for marking
@@ -421,7 +434,7 @@ algorithm: Message Passing, Spheres or Connected Components.
  - [statsmodels/0.14.1-gfbf-2023a](https://www.statsmodels.org/)
 Statsmodels is a Python module that allows users to explore data, estimate statistical models,
 and perform statistical tests.
- - [sympy/1.12-gfbf-2023b](https://sympy.org/)
+ - [sympy/1.12-gfbf-2023a](https://sympy.org/)
 SymPy is a Python library for symbolic mathematics. It aims to
  become a full-featured computer algebra system (CAS) while keeping the code as
  simple as possible in order to be comprehensible and easily extensible. SymPy

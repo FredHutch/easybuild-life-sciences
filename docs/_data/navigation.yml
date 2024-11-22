@@ -11,9 +11,9 @@ docs:
         url: /
       - title: "Software Updates"
         url: /updates/
-      - title: "Noble - Bio Software Inventory"
+      - title: "Harmony - Bio Software Inventory"
         url: /bio-modules-24.04/
-      - title: "Noble - Full Software Inventory"
+      - title: "Harmony - Full Software Inventory"
         url: /all-modules-24.04/
       - title: "Bionic - Bio Software Inventory"
         url: /bio-modules-18.04/
