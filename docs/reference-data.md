@@ -12,6 +12,26 @@ sidebar:
 
 Reference data used by modules.
 
+### AlphaFold 3
+
+  - Date:  Dec 1, 2024 
+  - Method: /app/software/AlphaFold3/alphafold3/fetch_databases.sh <DB_DIR>
+  - Version: 3.0.0
+  - DB_DIR=/hpc/reference/alphafold3/
+
+#### Directory List
+```
+mmcif_files/  # Directory containing ~200k PDB mmCIF files.
+bfd-first_non_consensus_sequences.fasta
+mgy_clusters_2022_05.fa
+nt_rna_2023_02_23_clust_seq_id_90_cov_80_rep_seq.fasta
+pdb_seqres_2022_09_28.fasta
+rfam_14_9_clust_seq_id_90_cov_80_rep_seq.fasta
+rnacentral_active_seq_id_90_cov_80_linclust.fasta
+uniprot_all_2021_04.fa
+uniref90_2022_05.fa
+```
+
 ### Ensembl Data
 Ensembl is a genome browser for vertebrate genomes that supports research in comparative genomics, evolution, sequence variation and transcriptional regulation. Ensembl annotate genes, computes multiple alignments, predicts regulatory function and collects disease data. Ensembl tools include BLAST, BLAT, BioMart and the Variant Effect Predictor (VEP) for all supported species.
 
