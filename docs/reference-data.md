@@ -14,6 +14,8 @@ Reference data used by modules.
 
 ### AlphaFold 3
 
+AlphaFold is an AI system developed by DeepMind that predicts a protein’s 3D structure from its amino acid sequence.
+
   - Date:  Dec 1, 2024 
   - Method: /app/software/AlphaFold3/alphafold3/fetch_databases.sh <DB_DIR>
   - Version: 3.0.0
@@ -45,6 +47,7 @@ The Hutch has serveral packages from 10X Genomoics.
  - Cellranger ATAC 
  - Cell Ranger ARC
  - Space Ranger
+
 Refernce data for 10X Genomics tools is located
 ```
 /shared/biodata/ngs/Reference/10X`
@@ -66,7 +69,7 @@ Modules: `STAR/2.7.10b-GCC-12.2.0`
 /shared/biodata/ngs/Reference/Genomes/Homo_sapiens/GRCh38/Sequence/STAR2Index
 ```
 
-### AlphaFold
+### AlphaFold 2
 
 AlphaFold is an AI system developed by DeepMind that predicts a protein’s 3D structure from its amino acid sequence.
 
