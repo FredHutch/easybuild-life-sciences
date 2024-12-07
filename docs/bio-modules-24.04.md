@@ -1,8 +1,8 @@
 ---
-title: Bio Modules for Harmony Nodes
+title: Bio Modules 24.04
 layout: single
 permalink: /bio-modules-24.04/
-created: 2024-11-22
+created: 2024-12-07
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -40,7 +40,7 @@ Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively
  short nucleotide sequences against a long reference sequence such as the human
  genome.
 
- - [BamTools/2.5.2-GCC-12.2.0](https://github.com/pezmaster31/bamtools)
+ - [BamTools/2.5.2-GCC-12.3.0](https://github.com/pezmaster31/bamtools)
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [Beast/10.5.0-beta3-GCC-12.3.0-beagle-lib-4.0.1-CUDA-12.1.1](https://beast.community)
 BEAST is a cross-platform program for Bayesian analysis of molecular sequences
@@ -60,11 +60,10 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  - [Bio-DB-HTS/3.01-GCC-12.2.0](https://metacpan.org/release/Bio-DB-HTS)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Bio-DB-HTS/Bio-DB-HTS-3.01-GCC-12.2.0.eb)
 Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
- - [BioPerl/1.7.8-GCCcore-12.2.0](http://www.bioperl.org/)
+ - [BioPerl/1.7.8-GCCcore-12.3.0](https://bioperl.org/)
 Bioperl is the product of a community effort to produce Perl code which is useful in biology.
  Examples include Sequence objects, Alignment objects and database searching objects.
  - [Biopython/1.84-foss-2023b](https://www.biopython.org)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Biopython/Biopython-1.84-foss-2023b.eb)
 Biopython is a set of freely available tools for biological
  computation written in Python by an international team of developers. It is
  a distributed collaborative effort to develop Python libraries and
@@ -102,7 +101,7 @@ CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
 hypothesis based on these. 
- - [Cgl/0.60.8-foss-2023a](https://github.com/coin-or/Cgl)
+ - [Cgl/0.60.8-foss-2023b](https://github.com/coin-or/Cgl)
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that
 can be used with other COIN-OR packages that make use of cuts, such as, among
 others, the linear solver Clp or the mixed integer linear programming solvers
@@ -113,8 +112,7 @@ communicate with a solver. It does not directly call a solver.
 Clp (Coin-or linear programming) is an open-source linear programming solver.
 It is primarily meant to be used as a callable library, but a basic,
 stand-alone executable version is also available.
- - [CoinUtils/2.11.10-GCC-13.2.0](https://github.com/coin-or/CoinUtils)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CoinUtils/CoinUtils-2.11.10-GCC-13.2.0.eb)
+ - [CoinUtils/2.11.10-GCC-12.3.0](https://github.com/coin-or/CoinUtils)
 CoinUtils (Coin-OR Utilities) is an open-source collection of classes and
 functions that are generally useful to more than one COIN-OR project.
  - [Eigen/3.4.0-GCCcore-13.3.0](https://eigen.tuxfamily.org)
@@ -206,7 +204,7 @@ METIS is a set of serial programs for partitioning graphs, partitioning
  recursive-bisection, multilevel k-way, and multi-constraint partitioning
  schemes.
 
- - [MPC/1.3.1-GCCcore-12.3.0](http://www.multiprecision.org/)
+ - [MPC/1.3.1-GCCcore-13.2.0](http://www.multiprecision.org/)
 Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
@@ -218,7 +216,7 @@ Gnu Mpc is a C library for the arithmetic of
 The MPFR library is a C library for multiple-precision floating-point
  computations with correct rounding.
 
- - [MUMPS/5.6.1-foss-2023a-metis](https://graal.ens-lyon.fr/MUMPS/)
+ - [MUMPS/5.6.1-foss-2022b-metis](https://graal.ens-lyon.fr/MUMPS/)
 A parallel sparse direct solver
  - [MUMmer/4.0.0rc1-GCCcore-12.3.0](https://mummer.sourceforge.net/)
 MUMmer is a system for rapidly aligning entire genomes,
@@ -257,14 +255,13 @@ Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.
  Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,
  it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments
  to effectively find adapters, even at low sequence identity
- - [PyTorch/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTorch/PyTorch-2.1.2-foss-2023a-CUDA-12.1.1.eb)
+ - [PyTorch/2.1.2-foss-2023a](https://pytorch.org/)
 Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 PyTorch is a deep learning framework that puts Python first.
  - [PyTorch-bundle/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTorch-bundle/PyTorch-bundle-2.1.2-foss-2023a-CUDA-12.1.1.eb)
 PyTorch with compatible versions of official Torch extensions.
- - [Pysam/0.22.0-GCC-12.3.0](https://github.com/pysam-developers/pysam)
+ - [Pysam/0.22.1-GCC-13.3.0](https://github.com/pysam-developers/pysam)
 Pysam is a python module for reading and manipulating Samfiles.
  It's a lightweight wrapper of the samtools C-API. Pysam also includes an interface for tabix.
  - [Qhull/2020.2-GCCcore-13.2.0](http://www.qhull.org)
@@ -288,7 +285,7 @@ RDKit is a collection of cheminformatics and machine-learning software written i
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SAMtools/SAMtools-1.19.2-GCC-13.2.0.eb)
 SAM Tools provide various utilities for manipulating alignments in the SAM format, 
  including sorting, merging, indexing and generating alignments in a per-position format.
- - [SCOTCH/7.0.3-gompi-2022b](https://www.labri.fr/perso/pelegrin/scotch/)
+ - [SCOTCH/7.0.3-gompi-2023a](https://www.labri.fr/perso/pelegrin/scotch/)
 Software package and libraries for sequential and parallel graph partitioning,
 static mapping, and sparse matrix block ordering, and sequential mesh and hypergraph partitioning.
  - [STAR/2.7.11b-GCC-13.2.0](https://github.com/alexdobin/STAR)
@@ -318,6 +315,10 @@ Seaborn is a Python visualization library based on matplotlib.
  - [Shapely/2.0.1-gfbf-2023a](https://github.com/Toblerity/Shapely)
 Shapely is a BSD-licensed Python package for manipulation and analysis of planar geometric objects.
 It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from which GEOS is ported) libraries.
+ - [Sniffles/2.5.2-GCC-13.3.0](https://github.com/fritzsedlazeck/Sniffles)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Sniffles/Sniffles-2.5.2-GCC-13.3.0.eb)
+A fast structural variant caller for long-read sequencing,
+ Sniffles2 accurately detect SVs on germline, somatic and population-level for PacBio and Oxford Nanopore read data.
  - [Telescope/1.0.3-20230222-gfbf-2022b](https://github.com/mlbendall/telescope)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-20230222-gfbf-2022b.eb)
 Single locus resolution of Transposable ELEment expression using next-generation sequencing.
@@ -346,6 +347,8 @@ Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  - [easel/0.48-GCC-12.2.0](https://bioeasel.org/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/e/easel/easel-0.48-GCC-12.2.0.eb)
 Easel supports computational analysis of biological sequences using probabilistic models.
+ - [edlib/1.3.9.post1-GCC-13.3.0](https://martinsos.github.io/edlib)
+Lightweight, super fast library for sequence alignment using edit (Levenshtein) distance.
  - [einops/0.7.0-GCCcore-12.3.0](https://einops.rocks/)
 Flexible and powerful tensor operations for readable and reliable code.
 Supports numpy, pytorch, tensorflow, jax, and others.
