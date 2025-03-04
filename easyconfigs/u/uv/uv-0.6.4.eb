@@ -1,0 +1,39 @@
+easyblock = 'Tarball'
+
+name = 'uv'
+version = '0.6.4'
+
+homepage = 'https://docs.astral.sh/uv/'
+description = """
+A single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.
+"""
+
+toolchain = SYSTEM
+
+download_instructions = """
+Download manually from https://github.com/astral-sh/uv/releases/download/0.6.4/uv-x86_64-unknown-linux-gnu.tar.gz
+"""
+
+source_urls = ['https://github.com/astral-sh/uv/releases/download/0.6.4/uv-x86_64-unknown-linux-gnu.tar.gz']
+sources = ["%(namelower)s-x86_64-unknown-linux-gnu.tar.gz"]
+checksums = ['ed38cde84d822c1878c484e560e28c157a1c025204151efa60aa46831500f4d6']
+
+keepsymlinks = True
+
+preinstall_cmd = "mkdir -p %(installdir)s/bin"
+postinstallcmds = ["mkdir -p %(installdir)s/bin", "cp -v %(builddir)s/uv-x86_64-unknown-linux-gnu/uv %(builddir)s/uv-x86_64-unknown-linux-gnu/uvx %(installdir)s/bin/", "rm %(installdir)s/uv", "rm %(installdir)s/uvx"]
+
+
+sanity_check_paths = {
+    'files': ['bin/uv', 'bin/uvx'],
+    'dirs': [],
+}
+
+sanity_check_commands = ['uv --help']
+
+modloadmsg = """
+Run `uv --help` for more information.
+"""
+
+moduleclass = 'lang'
+
