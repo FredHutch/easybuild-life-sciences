@@ -1,0 +1,58 @@
+easyblock = 'Tarball'
+
+name = 'XeniumRanger'
+version = '3.1.0'
+
+homepage = 'https://www.10xgenomics.com/support/software/xenium-ranger'
+description = """The Xenium In Situ software suite is a set of software applications for analyzing and
+ visualizing in situ gene expression data produced by the Xenium Analyzer. Xenium Ranger provides flexible
+ off-instrument reanalysis of Xenium In Situ data. Relabel transcripts, resegment cells with the latest
+ 10x segmentation algorithms, or import your own segmentation data to assign transcripts to cells.
+"""
+
+toolchain = SYSTEM
+
+download_instructions = """
+Download manually from https://www.10xgenomics.com/support/software/xenium-ranger/downloads
+"""
+
+source_urls = ['https://www.10xgenomics.com/support/software/xenium-ranger/downloads']
+sources = ["%(namelower)s-%(version)s.tar.gz"]
+checksums = ['b1f85a071c3b9d7753e0170351ca955f0487cf51a4fe4f7bbe207469e0d3feb5']
+
+keepsymlinks = True
+
+sanity_check_paths = {
+    'files': ['bin/xeniumranger'],
+    'dirs': ['bin', 'lib', 'external', 'mro'],
+}
+
+sanity_check_commands = ['xeniumranger --help']
+
+modloadmsg = """
+    XeniumRanger should be run in cluster mode:
+
+    Using '--jobmode=slurm' will run in cluster mode using the default SLURM template file:
+
+        xeniumranger --jobmode=slurm ...
+
+    The default template should be sufficient for most use cases.
+
+
+    Alternatively '--jobmode=<templatefile>' can be used with the path to a custom template file if needed:
+
+        To create a custom template, copy '%(installdir)s/external/martian/jobmanagers/slurm.template' to a
+        location of your choice and edit as necessary.
+
+
+    Running XeniumRanger in cluster mode will automatically create and submit jobs to the cluster
+
+    The main 'xeniumranger' command can be run inside a cluster job, but can also be run directly on
+    one of the 'rhino' hosts
+
+
+    See https://www.10xgenomics.com/support/software/xenium-ranger/advanced/XR-cluster-mode for more
+    information on cluster mode
+"""
+
+moduleclass = 'bio'
