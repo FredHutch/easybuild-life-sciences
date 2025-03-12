@@ -150,7 +150,8 @@ Implementations
   * [Rfast-2.1.5](https://cran.r-project.org/web/packages/Rfast/index.html) A Collection of Efficient and Extremely Fast R Functions
   * [Rgraphviz-2.50.0](https://cran.r-project.org/web/packages/Rgraphviz/index.html) Provides plotting capabilities for R graph objects
   * [Rhdf5lib-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/Rhdf5lib.html) hdf5 library as an R package
-  * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits *apply() Style Dispatch for `HPC`
+  * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits &#42;apply() Style Dispatch for `HPC`
+  * [Ringo-1.66.0](http://bioconductor.jp/packages/3.18/bioc/html/Ringo.html) The package Ringo facilitates the primary analysis of ChIP-chip data.
   * [Rhtslib-3.2.0](https://www.bioconductor.org/packages/release/bioc/html/Rhtslib.html) HTSlib high-throughput sequencing library as an R package
   * [Rlabkey-3.4.1](https://cran.r-project.org/web/packages/Rlabkey/index.html) Data Exchange Between R and 'LabKey' Server
   * [Rmpi-0.7-3.3](https://cran.r-project.org/web/packages/Rmpi/index.html) Interface (Wrapper) to MPI (Message-Passing Interface)
@@ -389,7 +390,7 @@ Sequential Importance Sampling
   * [polyester-1.39.0](https://www.bioconductor.org/packages/release/bioc/html/polyester.html) Simulate RNA-seq reads
   * [polyreg-0.8.0](https://cran.r-project.org/web/packages/polyreg/index.html) Polynomial Regression
   * [poweRlaw-1.0.0](https://cran.r-project.org/web/packages/poweRlaw/index.html) Analysis of Heavy Tailed Distributions
-  * premessa 0.3.4 [CRAN]&emsp; premessa is an R package for pre-processing of flow and mass cytometry data, that includes panel editing/renaming for FCS files, bead-based normalization and debarcoding.
+  * [premessa-0.3.4](https://github.com/ParkerICI/premessa)  premessa is an R package for pre-processing of flow and mass cytometry data, that includes panel editing/renaming for FCS files, bead-based normalization and debarcoding.
   * [preprocessCore-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/preprocessCore.html) A collection of pre-processing functions
   * [psychotools-0.7-4](https://cran.r-project.org/web/packages/psychotools/index.html) Psychometric Modeling Infrastructure
   * [pwalign-1.2.0](https://www.bioconductor.org/packages/release/bioc/html/pwalign.html) Perform pairwise sequence alignments
