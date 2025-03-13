@@ -1,6 +1,6 @@
 ---
-title: fhR-4.4.2-foss-2024a-R-4.4.2
-date: 2025-03-12
+title: fhR-4.4.2-foss-2024a-R-4.4.2.eb
+date: 2025-03-13
 ---
 
 ### Known Issues
@@ -8,15 +8,15 @@ date: 2025-03-12
 
 ### Package List
   * [ALDEx2-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/ALDEx2.html) Analysis Of Differential Abundance Taking Sample and Scale Variation Into Account
-  * [ALL-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/ALL.html) A data package
+  * ALL 1.46.0 Package Not Found
   * [AgiMicroRna-2.56.0](https://www.bioconductor.org/packages/release/bioc/html/AgiMicroRna.html) Processing and Differential Expression Analysis of Agilent microRNA chips
   * [AnnotationDbi-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationDbi.html) Manipulation of SQLite-based annotations in Bioconductor
   * [AnnotationFilter-1.30.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationFilter.html) Facilities for Filtering Bioconductor Annotation Resources
   * [AnnotationForge-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationForge.html) Tools for building SQLite-based annotation data packages
   * [AnnotationHub-3.14.0](https://www.bioconductor.org/packages/release/bioc/html/AnnotationHub.html) Client to access AnnotationHub resources
-  * ArchR 1.0.2 [CRAN]&emsp;
+  * ArchR 1.0.2 Package Not Found
   * [BSgenome-1.74.0](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.html) Software infrastructure for efficient representation of full genomes and their SNPs
-  * [BSgenome.Hsapiens.UCSC.hg19-1.4.3](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.Hsapiens.UCSC.hg19.html) Full genome sequences for Homo sapiens (UCSC version hg19, based on GRCh37.p13)
+  * BSgenome.Hsapiens.UCSC.hg19 1.4.3 Package Not Found
   * [Bhat-0.9-12](https://cran.r-project.org/web/packages/Bhat/index.html) General Likelihood Exploration
   * [Biobase-2.66.0](https://www.bioconductor.org/packages/release/bioc/html/Biobase.html) Biobase: Base functions for Bioconductor
   * [BiocBaseUtils-1.8.0](https://www.bioconductor.org/packages/release/bioc/html/BiocBaseUtils.html) General utility functions for developing Bioconductor packages
@@ -40,7 +40,7 @@ date: 2025-03-12
   * [CMA-1.64.0](https://www.bioconductor.org/packages/release/bioc/html/CMA.html) Synthesis of microarray-based classification
   * [CNEr-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/CNEr.html) CNE Detection and Visualization
   * [COMPASS-1.44.0](https://www.bioconductor.org/packages/release/bioc/html/COMPASS.html) Combinatorial Polyfunctionality Analysis of Single Cells
-  * CaSpER v2.0 [CRAN]&emsp;
+  * CaSpER v2.0 Package Not Found
   * [Category-2.72.0](https://www.bioconductor.org/packages/release/bioc/html/Category.html) Category Analysis
   * [ChIPQC-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/ChIPQC.html) Quality metrics for ChIPseq data
   * [ChIPpeakAnno-3.40.0](https://www.bioconductor.org/packages/release/bioc/html/ChIPpeakAnno.html) Batch annotation of the peaks identified from either ChIP-seq, ChIP-chip experiments, or any experiments that result in large number of genomic interval data
@@ -53,7 +53,7 @@ date: 2025-03-12
   * [DEGseq-1.60.0](https://www.bioconductor.org/packages/release/bioc/html/DEGseq.html) Identify Differentially Expressed Genes from RNA-seq data
   * [DESeq2-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/DESeq2.html) Differential gene expression analysis based on the negative binomial distribution
   * [DNAcopy-1.80.0](https://www.bioconductor.org/packages/release/bioc/html/DNAcopy.html) DNA Copy Number Data Analysis
-  * [DO.db-2.9](https://www.bioconductor.org/packages/release/bioc/html/DO.db.html) A set of annotation maps describing the entire Disease Ontology
+  * DO.db 2.9 Package Not Found
   * [DOSE-4.0.0](https://www.bioconductor.org/packages/release/bioc/html/DOSE.html) Disease Ontology Semantic and Enrichment analysis
   * [DOT-0.1](https://cran.r-project.org/web/packages/DOT/index.html) Render and Export DOT Graphs in R
   * [DelayedArray-0.32.0](https://www.bioconductor.org/packages/release/bioc/html/DelayedArray.html) A unified framework for working transparently with on-disk and in-memory array-like datasets
@@ -65,10 +65,10 @@ date: 2025-03-12
   * [EBImage-4.48.0](https://www.bioconductor.org/packages/release/bioc/html/EBImage.html) Image processing and analysis toolbox for R
   * [EpiModel-2.5.0](https://cran.r-project.org/web/packages/EpiModel/index.html) Mathematical Modeling of Infectious Disease Dynamics
   * [ExperimentHub-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/ExperimentHub.html) Client to access ExperimentHub resources
-  * [FDb.InfiniumMethylation.hg19-2.2.0](https://www.bioconductor.org/packages/release/bioc/html/FDb.InfiniumMethylation.hg19.html) Annotation package for Illumina Infinium DNA methylation probes
+  * FDb.InfiniumMethylation.hg19 2.2.0 Package Not Found
   * [FlowSOM-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/FlowSOM.html) Using self-organizing maps for visualization and interpretation of cytometry data
   * [GEOquery-2.74.0](https://www.bioconductor.org/packages/release/bioc/html/GEOquery.html) Get data from NCBI Gene Expression Omnibus (GEO)
-  * [GO.db-3.19.1](https://www.bioconductor.org/packages/release/bioc/html/GO.db.html) A set of annotation maps describing the entire Gene Ontology
+  * GO.db 3.19.1 Package Not Found
   * [GOSemSim-2.32.0](https://www.bioconductor.org/packages/release/bioc/html/GOSemSim.html) GO-terms Semantic Similarity Measures
   * [GOstats-2.72.0](https://www.bioconductor.org/packages/release/bioc/html/GOstats.html) Tools for manipulating GO and microarrays
   * [GPfit-1.0-8](https://cran.r-project.org/web/packages/GPfit/index.html) Gaussian Processes Modeling
@@ -77,7 +77,7 @@ date: 2025-03-12
   * [GWASExactHW-1.2](https://cran.r-project.org/web/packages/GWASExactHW/index.html) Exact Hardy-Weinburg Testing for Genome Wide Association Studies
   * [GWASTools-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/GWASTools.html) Tools for Genome Wide Association Studies
   * [GenomeInfoDb-1.42.3](https://www.bioconductor.org/packages/release/bioc/html/GenomeInfoDb.html) Utilities for manipulating chromosome names, including modifying them to follow a particular naming style
-  * [GenomeInfoDbData-1.2.12](https://www.bioconductor.org/packages/release/bioc/html/GenomeInfoDbData.html) Species and taxonomy ID look up tables used by GenomeInfoDb
+  * GenomeInfoDbData 1.2.12 Package Not Found
   * [GenomicAlignments-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicAlignments.html) Representation and manipulation of short genomic alignments
   * [GenomicFeatures-1.58.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicFeatures.html) Query the gene models of a given organism/assembly
   * [GenomicFiles-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicFiles.html) Distributed computing by file or by range
@@ -87,21 +87,21 @@ date: 2025-03-12
   * [GreyListChIP-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/GreyListChIP.html) Grey Lists -- Mask Artefact Regions Based on ChIP Inputs
   * [Gviz-1.50.0](https://www.bioconductor.org/packages/release/bioc/html/Gviz.html) Plotting data and annotation information along genomic coordinates
   * [HDF5Array-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/HDF5Array.html) HDF5 datasets as array-like objects in R
-  * [HDO.db-0.99.1](https://www.bioconductor.org/packages/release/bioc/html/HDO.db.html) A set of annotation maps describing the entire Human Disease Ontology
+  * HDO.db 0.99.1 Package Not Found
   * [HMMcopy-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/HMMcopy.html) Copy number prediction with correction for GC and mappability bias for HTS data
-  * [HSMMSingleCell-1.24.0](https://www.bioconductor.org/packages/release/bioc/html/HSMMSingleCell.html) Single-cell RNA-Seq for differentiating human skeletal muscle myoblasts (HSMM)
+  * HSMMSingleCell 1.24.0 Package Not Found
   * [HaploSim-1.8.4.2](https://cran.r-project.org/web/packages/HaploSim/index.html) Functions to Simulate Haplotypes
-  * [Homo.sapiens-1.3.1](https://www.bioconductor.org/packages/release/bioc/html/Homo.sapiens.html) Annotation package for the Homo.sapiens object
+  * Homo.sapiens 1.3.1 Package Not Found
   * [IHW-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/IHW.html) Independent Hypothesis Weighting
   * [IRanges-2.40.1](https://www.bioconductor.org/packages/release/bioc/html/IRanges.html) Foundation of integer range manipulation in Bioconductor
   * [IRdisplay-1.1](https://cran.r-project.org/web/packages/IRdisplay/index.html) 'Jupyter' Display Machinery
-  * [IlluminaHumanMethylation450kmanifest-0.4.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylation450kmanifest.html) Annotation for Illumina's 450k methylation arrays
+  * IlluminaHumanMethylation450kmanifest 0.4.0 Package Not Found
   * [InteractionSet-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/InteractionSet.html) Base Classes for Storing Genomic Interaction Data
   * [KEGGREST-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/KEGGREST.html) Client-side REST access to the Kyoto Encyclopedia of Genes and Genomes (KEGG)
   * [KEGGgraph-1.66.0](https://www.bioconductor.org/packages/release/bioc/html/KEGGgraph.html) KEGGgraph: A graph approach to KEGG PATHWAY in R and Bioconductor
   * [LogicReg-1.6.6](https://cran.r-project.org/web/packages/LogicReg/index.html) Logic Regression
   * [LymphoSeq-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/LymphoSeq.html) Analyze high-throughput sequencing of T and B cell receptors
-  * [LymphoSeqDB-0.99.2](https://www.bioconductor.org/packages/release/bioc/html/LymphoSeqDB.html) LymphoSeq annotation databases
+  * LymphoSeqDB 0.99.2 Package Not Found
   * [MAGeCKFlute-2.9.0](https://www.bioconductor.org/packages/release/bioc/html/MAGeCKFlute.html) Integrative Analysis Pipeline for Pooled CRISPR Functional Genetic Screens
   * [MAST-1.32.0](https://www.bioconductor.org/packages/release/bioc/html/MAST.html) Model-based Analysis of Single Cell Transcriptomics
   * [MCMCglmm-2.36](https://cran.r-project.org/web/packages/MCMCglmm/index.html) MCMC Generalised Linear Mixed Models
@@ -116,13 +116,13 @@ Operations
   * [Nozzle.R1-1.1-1.1](https://cran.r-project.org/web/packages/Nozzle.R1/index.html) Nozzle Reports
   * [OrganismDbi-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html) Software to enable the smooth interfacing of different database packages
   * [PBSddesolve-1.13.4](https://cran.r-project.org/web/packages/PBSddesolve/index.html) Solver for Delay Differential Equations
-  * [PFAM.db-3.19.1](https://www.bioconductor.org/packages/release/bioc/html/PFAM.db.html) A set of protein ID mappings for PFAM
+  * PFAM.db 3.19.1 Package Not Found
   * [PICS-2.50.0](https://www.bioconductor.org/packages/release/bioc/html/PICS.html) Probabilistic inference of ChIP-seq
   * [PolynomF-2.0-8](https://cran.r-project.org/web/packages/PolynomF/index.html) Polynomials in R
   * [ProtGenerics-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/ProtGenerics.html) Generic infrastructure for Bioconductor mass spectrometry packages
   * [QUIC-1.1.1](https://cran.r-project.org/web/packages/QUIC/index.html) Regularized Sparse Inverse Covariance Matrix Estimation
   * [R2jags-0.8-9](https://cran.r-project.org/web/packages/R2jags/index.html) Using R to Run 'JAGS'
-  * [RBGL-1.82.0](https://cran.r-project.org/web/packages/RBGL/index.html) An interface to the BOOST graph library
+  * [RBGL-1.82.0](https://www.bioconductor.org/packages/release/bioc/html/RBGL.html) An interface to the BOOST graph library
   * [REDCapR-1.4.0](https://cran.r-project.org/web/packages/REDCapR/index.html) Interaction Between R and REDCap
   * [RLRsim-3.1-8](https://cran.r-project.org/web/packages/RLRsim/index.html) Exact (Restricted) Likelihood Ratio Tests for Mixed and Additive
 Models
@@ -142,13 +142,13 @@ Neighbors
 Neighbors
   * [RcppML-0.3.7](https://cran.r-project.org/web/packages/RcppML/index.html) Rcpp Machine Learning Library
   * [RcppNumerical-0.6-0](https://cran.r-project.org/web/packages/RcppNumerical/index.html) 'Rcpp' Integration for Numerical Computing Libraries
-  * RcppPlanc 1.0.0 [CRAN]&emsp;
+  * RcppPlanc 1.0.0 Package Not Found
   * [RcppZiggurat-0.1.6](https://cran.r-project.org/web/packages/RcppZiggurat/index.html) 'Rcpp' Integration of Different "Ziggurat" Normal RNG
 Implementations
   * [Rdsdp-1.0.5.2.1](https://cran.r-project.org/web/packages/Rdsdp/index.html) R Interface to DSDP Semidefinite Programming Library
   * [ReportingTools-2.46.0](https://www.bioconductor.org/packages/release/bioc/html/ReportingTools.html) Tools for making reports in various formats
   * [Rfast-2.1.5](https://cran.r-project.org/web/packages/Rfast/index.html) A Collection of Efficient and Extremely Fast R Functions
-  * [Rgraphviz-2.50.0](https://cran.r-project.org/web/packages/Rgraphviz/index.html) Provides plotting capabilities for R graph objects
+  * [Rgraphviz-2.50.0](https://www.bioconductor.org/packages/release/bioc/html/Rgraphviz.html) Provides plotting capabilities for R graph objects
   * [Rhdf5lib-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/Rhdf5lib.html) hdf5 library as an R package
   * [Rhpc-0.21-247](https://cran.r-project.org/web/packages/Rhpc/index.html) Permits &#42;apply() Style Dispatch for 'HPC'
   * [Rhtslib-3.2.0](https://www.bioconductor.org/packages/release/bioc/html/Rhtslib.html) HTSlib high-throughput sequencing library as an R package
@@ -158,8 +158,7 @@ Implementations
   * [Rsubread-2.20.0](https://www.bioconductor.org/packages/release/bioc/html/Rsubread.html) Mapping, quantification and variant analysis of sequencing data
   * [S4Arrays-1.6.0](https://www.bioconductor.org/packages/release/bioc/html/S4Arrays.html) Foundation of array-like containers in Bioconductor
   * [S4Vectors-0.44.0](https://www.bioconductor.org/packages/release/bioc/html/S4Vectors.html) Foundation of vector-like and list-like containers in Bioconductor
-  * [SNPRelate-1.40.0](https://cran.r-project.org/web/packages/SNPRelate/index.html) Parallel Computing Toolset for Genome-Wide Association Studies
-(GWAS)
+  * [SNPRelate-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/SNPRelate.html) Parallel Computing Toolset for Relatedness and Principal Component Analysis of SNP Data
   * [SNPassoc-2.1-2](https://cran.r-project.org/web/packages/SNPassoc/index.html) SNPs-Based Whole Genome Association Studies
   * [SPIA-2.58.0](https://www.bioconductor.org/packages/release/bioc/html/SPIA.html) Signaling Pathway Impact Analysis (SPIA) using combined evidence of pathway over-representation and unusual signaling perturbations
   * [ScaledMatrix-1.14.0](https://www.bioconductor.org/packages/release/bioc/html/ScaledMatrix.html) Creating a DelayedMatrix of Scaled and Centered Values
@@ -173,13 +172,13 @@ Implementations
   * [TFMPvalue-0.0.9](https://cran.r-project.org/web/packages/TFMPvalue/index.html) Efficient and Accurate P-Value Computation for Position Weight
 Matrices
   * [TitanCNA-1.44.0](https://www.bioconductor.org/packages/release/bioc/html/TitanCNA.html) Subclonal copy number and LOH prediction from whole genome sequencing of tumours
-  * [TxDb.Celegans.UCSC.ce6.ensGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Celegans.UCSC.ce6.ensGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Dmelanogaster.UCSC.dm3.ensGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Dmelanogaster.UCSC.dm3.ensGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Hsapiens.UCSC.hg18.knownGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Hsapiens.UCSC.hg18.knownGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Hsapiens.UCSC.hg19.knownGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Mmusculus.UCSC.mm10.knownGene-3.10.0](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Mmusculus.UCSC.mm10.knownGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Mmusculus.UCSC.mm9.knownGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Mmusculus.UCSC.mm9.knownGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Rnorvegicus.UCSC.rn4.ensGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Rnorvegicus.UCSC.rn4.ensGene.html) Annotation package for TxDb object(s)
+  * TxDb.Celegans.UCSC.ce6.ensGene 3.2.2 Package Not Found
+  * TxDb.Dmelanogaster.UCSC.dm3.ensGene 3.2.2 Package Not Found
+  * TxDb.Hsapiens.UCSC.hg18.knownGene 3.2.2 Package Not Found
+  * TxDb.Hsapiens.UCSC.hg19.knownGene 3.2.2 Package Not Found
+  * TxDb.Mmusculus.UCSC.mm10.knownGene 3.10.0 Package Not Found
+  * TxDb.Mmusculus.UCSC.mm9.knownGene 3.2.2 Package Not Found
+  * TxDb.Rnorvegicus.UCSC.rn4.ensGene 3.2.2 Package Not Found
   * [UCSC.utils-1.2.0](https://www.bioconductor.org/packages/release/bioc/html/UCSC.utils.html) Low-level utilities to retrieve data from the UCSC Genome Browser
   * [VariantAnnotation-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/VariantAnnotation.html) Annotation of Genetic Variants
   * [Wrench-1.24.0](https://www.bioconductor.org/packages/release/bioc/html/Wrench.html) Wrench normalization for sparse count data
@@ -234,7 +233,7 @@ Summaries
   * [dada2-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/dada2.html) Accurate, high-resolution sample inference from amplicon sequencing data
   * [degreenet-1.3-6](https://cran.r-project.org/web/packages/degreenet/index.html) Models for Skewed Count Distributions Relevant to Networks
   * [densvis-1.16.0](https://www.bioconductor.org/packages/release/bioc/html/densvis.html) Density-Preserving Data Visualization via Non-Linear Dimensionality Reduction
-  * [depmap-1.18.0](https://www.bioconductor.org/packages/release/bioc/html/depmap.html) Cancer Dependency Map Data Package
+  * depmap 1.18.0 Package Not Found
   * [derfinder-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/derfinder.html) Annotation-agnostic differential expression analysis of RNA-seq data at base-pair resolution via the DER Finder approach
   * [derfinderHelper-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/derfinderHelper.html) derfinder helper package
   * [descr-1.1.8](https://cran.r-project.org/web/packages/descr/index.html) Descriptive Statistics
@@ -277,8 +276,8 @@ Models to Egocentrically Sampled Network Data
   * [fts-0.9.9.2](https://cran.r-project.org/web/packages/fts/index.html) R Interface to 'tslib' (a Time Series Library in C++)
   * [gage-2.56.0](https://www.bioconductor.org/packages/release/bioc/html/gage.html) Generally Applicable Gene-set Enrichment for Pathway Analysis
   * [gcrma-2.78.0](https://www.bioconductor.org/packages/release/bioc/html/gcrma.html) Background Adjustment Using Sequence Information
-  * [gdsfmt-1.42.1](https://cran.r-project.org/web/packages/gdsfmt/index.html) 
-  * [geneLenDataBase-1.39.0](https://www.bioconductor.org/packages/release/bioc/html/geneLenDataBase.html) Lengths of mRNA transcripts for a number of genomes
+  * [gdsfmt-1.42.1](https://www.bioconductor.org/packages/release/bioc/html/gdsfmt.html) R Interface to CoreArray Genomic Data Structure (GDS) Files
+  * geneLenDataBase 1.39.0 Package Not Found
   * [genefilter-1.88.0](https://www.bioconductor.org/packages/release/bioc/html/genefilter.html) genefilter: methods for filtering genes from high-throughput experiments
   * [geneplotter-1.84.0](https://www.bioconductor.org/packages/release/bioc/html/geneplotter.html) Graphics related functions for Bioconductor
   * [ggVennDiagram-1.5.2](https://cran.r-project.org/web/packages/ggVennDiagram/index.html) A 'ggplot2' Implement of Venn Diagram
@@ -293,7 +292,7 @@ Models to Egocentrically Sampled Network Data
   * [ggtree-3.14.0](https://www.bioconductor.org/packages/release/bioc/html/ggtree.html) an R package for visualization of tree and annotation data
   * [glmpath-0.98](https://cran.r-project.org/web/packages/glmpath/index.html) L1 Regularization Path for Generalized Linear Models and Cox
 Proportional Hazards Model
-  * [graph-1.84.1](https://cran.r-project.org/web/packages/graph/index.html) graph: A package to handle graph data structures
+  * [graph-1.84.1](https://www.bioconductor.org/packages/release/bioc/html/graph.html) graph: A package to handle graph data structures
   * [gsignal-0.3-7](https://cran.r-project.org/web/packages/gsignal/index.html) Signal Processing
   * [gson-0.1.0](https://cran.r-project.org/web/packages/gson/index.html) Base Class and Methods for 'gson' Format
   * [gsubfn-0.7](https://cran.r-project.org/web/packages/gsubfn/index.html) Utilities for Strings and Function Arguments
@@ -303,13 +302,13 @@ Attributes using the EM Algorithm
 when Linkage Phase is Ambiguous
   * [hardhat-1.4.1](https://cran.r-project.org/web/packages/hardhat/index.html) Construct Modeling Packages
   * [hdrcde-3.4](https://cran.r-project.org/web/packages/hdrcde/index.html) Highest Density Regions and Conditional Density Estimation
-  * [hgu133plus2.db-3.13.0](https://www.bioconductor.org/packages/release/bioc/html/hgu133plus2.db.html) Affymetrix Affymetrix HG-U133_Plus_2 Array annotation data (chip hgu133plus2)
-  * [hopach-2.66.0](https://cran.r-project.org/web/packages/hopach/index.html) Hierarchical Ordered Partitioning and Collapsing Hybrid (HOPACH)
+  * hgu133plus2.db 3.13.0 Package Not Found
+  * [hopach-2.66.0](https://www.bioconductor.org/packages/release/bioc/html/hopach.html) Hierarchical Ordered Partitioning and Collapsing Hybrid (HOPACH)
   * [hypergate-0.8.5](https://cran.r-project.org/web/packages/hypergate/index.html) Machine Learning of Hyperrectangular Gating Strategies for
 High-Dimensional Cytometry
   * [igraphdata-1.0.1](https://cran.r-project.org/web/packages/igraphdata/index.html) A Collection of Network Data Sets for the 'igraph' Package
   * [illuminaio-0.48.0](https://www.bioconductor.org/packages/release/bioc/html/illuminaio.html) Parsing Illumina Microarray Output Files
-  * [impute-1.80.0](https://cran.r-project.org/web/packages/impute/index.html) impute: Imputation for microarray data
+  * [impute-1.80.0](https://www.bioconductor.org/packages/release/bioc/html/impute.html) impute: Imputation for microarray data
   * [inferference-1.0.2](https://cran.r-project.org/web/packages/inferference/index.html) Methods for Causal Inference with Interference
   * [interactiveDisplayBase-1.44.0](https://www.bioconductor.org/packages/release/bioc/html/interactiveDisplayBase.html) Base package for enabling powerful shiny web displays of Bioconductor objects
   * [invgamma-1.1](https://cran.r-project.org/web/packages/invgamma/index.html) The Inverse Gamma Distribution
@@ -323,7 +322,7 @@ High-Dimensional Cytometry
 Monte Carlo Studies
   * [latentnet-2.11.0](https://cran.r-project.org/web/packages/latentnet/index.html) Latent Position and Cluster Models for Statistical Networks
   * [lgr-0.4.4](https://cran.r-project.org/web/packages/lgr/index.html) A Fully Featured Logging Framework
-  * [limma-3.62.2](https://cran.r-project.org/web/packages/limma/index.html) Linear Models for Microarray Data
+  * [limma-3.62.2](https://www.bioconductor.org/packages/release/bioc/html/limma.html) Linear Models for Microarray and Omics Data
   * [lintr-3.2.0](https://cran.r-project.org/web/packages/lintr/index.html) A 'Linter' for R Code
   * [lokern-1.1-12](https://cran.r-project.org/web/packages/lokern/index.html) Kernel Regression Smoothing with Local or Global Plug-in
 Bandwidth
@@ -337,7 +336,7 @@ Bandwidth
   * [methylKit-1.32.1](https://www.bioconductor.org/packages/release/bioc/html/methylKit.html) DNA methylation analysis from high-throughput bisulfite sequencing results
   * [methylumi-2.52.0](https://www.bioconductor.org/packages/release/bioc/html/methylumi.html) Handle Illumina methylation data
   * [minfi-1.52.1](https://www.bioconductor.org/packages/release/bioc/html/minfi.html) Analyze Illumina Infinium DNA methylation arrays
-  * [mixOmics-6.30.0](https://cran.r-project.org/web/packages/mixOmics/index.html) Omics Data Integration Project
+  * [mixOmics-6.30.0](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) Omics Data Integration Project
   * [mixsqp-0.3-54](https://cran.r-project.org/web/packages/mixsqp/index.html) Sequential Quadratic Programming for Fast Maximum-Likelihood
 Estimation of Mixture Proportions
   * [mlapi-0.1.1](https://cran.r-project.org/web/packages/mlapi/index.html) Abstract Classes for Building 'scikit-learn' Like API
@@ -346,7 +345,7 @@ Estimation of Mixture Proportions
   * [motifmatchr-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/motifmatchr.html) Fast Motif Matching in R
   * [msa-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/msa.html) Multiple Sequence Alignment
   * [msigdbr-7.5.1](https://cran.r-project.org/web/packages/msigdbr/index.html) MSigDB Gene Sets for Multiple Organisms in a Tidy Data Format
-  * [multtest-2.62.0](https://cran.r-project.org/web/packages/multtest/index.html) Resampling-based multiple hypothesis testing
+  * [multtest-2.62.0](https://www.bioconductor.org/packages/release/bioc/html/multtest.html) Resampling-based multiple hypothesis testing
   * [nanotime-0.3.11](https://cran.r-project.org/web/packages/nanotime/index.html) Nanosecond-Resolution Time Support for R
   * [ncdfFlow-2.52.1](https://www.bioconductor.org/packages/release/bioc/html/ncdfFlow.html) ncdfFlow: A package that provides HDF5 based storage for flow cytometry data.
   * [networksis-2.1-3](https://cran.r-project.org/web/packages/networksis/index.html) Simulate Bipartite Graphs with Fixed Marginals Through
@@ -357,8 +356,8 @@ Sequential Importance Sampling
   * [oligo-1.70.1](https://www.bioconductor.org/packages/release/bioc/html/oligo.html) Preprocessing tools for oligonucleotide arrays
   * [oligoClasses-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/oligoClasses.html) Classes for high-throughput arrays supported by oligo and crlmm
   * [openCyto-2.18.0](https://www.bioconductor.org/packages/release/bioc/html/openCyto.html) Hierarchical Gating Pipeline for flow cytometry data
-  * [org.Hs.eg.db-3.19.1](https://www.bioconductor.org/packages/release/bioc/html/org.Hs.eg.db.html) Genome wide annotation for Human
-  * [org.Mm.eg.db-3.19.1](https://www.bioconductor.org/packages/release/bioc/html/org.Mm.eg.db.html) Genome wide annotation for Mouse
+  * org.Hs.eg.db 3.19.1 Package Not Found
+  * org.Mm.eg.db 3.19.1 Package Not Found
   * [pack-0.1-1](https://cran.r-project.org/web/packages/pack/index.html) Convert values to/from raw vectors
   * [parsnip-1.3.0](https://cran.r-project.org/web/packages/parsnip/index.html) A Common API to Modeling and Analysis Functions
   * [partools-1.1.6](https://cran.r-project.org/web/packages/partools/index.html) Tools for the 'Parallel' Package
@@ -389,7 +388,7 @@ Sequential Importance Sampling
   * [polyester-1.39.0](https://www.bioconductor.org/packages/release/bioc/html/polyester.html) Simulate RNA-seq reads
   * [polyreg-0.8.0](https://cran.r-project.org/web/packages/polyreg/index.html) Polynomial Regression
   * [poweRlaw-1.0.0](https://cran.r-project.org/web/packages/poweRlaw/index.html) Analysis of Heavy Tailed Distributions
-  * premessa 0.3.4 [CRAN]&emsp;
+  * premessa 0.3.4 Package Not Found
   * [preprocessCore-1.68.0](https://www.bioconductor.org/packages/release/bioc/html/preprocessCore.html) A collection of pre-processing functions
   * [psychotools-0.7-4](https://cran.r-project.org/web/packages/psychotools/index.html) Psychometric Modeling Infrastructure
   * [pwalign-1.2.0](https://www.bioconductor.org/packages/release/bioc/html/pwalign.html) Perform pairwise sequence alignments
@@ -399,7 +398,7 @@ Sequential Importance Sampling
   * [qtl-1.70](https://cran.r-project.org/web/packages/qtl/index.html) Tools for Analyzing QTL Experiments
   * [quantoptr-0.1.3](https://cran.r-project.org/web/packages/quantoptr/index.html) Algorithms for Quantile- And Mean-Optimal Treatment Regimes
   * [quantsmooth-1.72.0](https://www.bioconductor.org/packages/release/bioc/html/quantsmooth.html) Quantile smoothing and genomic visualization of array data
-  * [qvalue-2.38.0](https://cran.r-project.org/web/packages/qvalue/index.html) Q-value estimation for false discovery rate control
+  * [qvalue-2.38.0](https://www.bioconductor.org/packages/release/bioc/html/qvalue.html) Q-value estimation for false discovery rate control
   * [qvcalc-1.0.4](https://cran.r-project.org/web/packages/qvcalc/index.html) Quasi Variances for Factor Effects in Statistical Models
   * [r2d3-0.2.6](https://cran.r-project.org/web/packages/r2d3/index.html) Interface to 'D3' Visualizations
   * [rGADEM-2.54.0](https://www.bioconductor.org/packages/release/bioc/html/rGADEM.html) de novo motif discovery
@@ -479,7 +478,7 @@ for Dimensionality Reduction
   * [widgetTools-1.84.0](https://www.bioconductor.org/packages/release/bioc/html/widgetTools.html) Creates an interactive tcltk widget
   * [workflows-1.2.0](https://cran.r-project.org/web/packages/workflows/index.html) Modeling Workflows
   * [workflowsets-1.1.0](https://cran.r-project.org/web/packages/workflowsets/index.html) Create a Collection of 'tidymodels' Workflows
-  * xCell 1.1.0 [CRAN]&emsp;
+  * xCell 1.1.0 Package Not Found
   * [xmlparsedata-1.0.5](https://cran.r-project.org/web/packages/xmlparsedata/index.html) Parse Data of 'R' Code as an 'XML' Tree
   * [yardstick-1.3.2](https://cran.r-project.org/web/packages/yardstick/index.html) Tidy Characterizations of Model Performance
   * [yulab.utils-0.2.0](https://cran.r-project.org/web/packages/yulab.utils/index.html) Supporting Functions for Packages Maintained by 'YuLab-SMU'
@@ -488,13 +487,11 @@ Compositional Data Sets
   * [zigg-0.0.2](https://cran.r-project.org/web/packages/zigg/index.html) Lightweight Interfaces to the 'Ziggurat' Pseudo Random Number
 Generator
   * [zlibbioc-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/zlibbioc.html) An R packaged zlib-1.2.5
-
 ### Library List from dependent Modules
-
   * [ADGofTest-0.3](https://cran.r-project.org/web/packages/ADGofTest/index.html) Anderson-Darling GoF test
   * [AICcmodavg-2.3-3](https://cran.r-project.org/web/packages/AICcmodavg/index.html) Model Selection and Multimodel Inference Based on (Q)AIC(c)
   * [ALDEx2-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/ALDEx2.html) Analysis Of Differential Abundance Taking Sample and Scale Variation Into Account
-  * [ALL-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/ALL.html) A data package
+  * ALL 1.48.0 Package Not Found
   * [AMAPVox-2.2.1](https://cran.r-project.org/web/packages/AMAPVox/index.html) LiDAR Data Voxelisation
   * [ANCOMBC-2.8.0](https://www.bioconductor.org/packages/release/bioc/html/ANCOMBC.html) Microbiome differential abudance and correlation analyses with bias correction
   * [ATACseqQC-1.30.0](https://www.bioconductor.org/packages/release/bioc/html/ATACseqQC.html) ATAC-seq Quality Control
@@ -518,10 +515,10 @@ Network Database
   * [BIGL-1.9.3](https://cran.r-project.org/web/packages/BIGL/index.html) Biochemically Intuitive Generalized Loewe Model
   * [BMA-3.18.19](https://cran.r-project.org/web/packages/BMA/index.html) Bayesian Model Averaging
   * [BSgenome-1.74.0](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.html) Software infrastructure for efficient representation of full genomes and their SNPs
-  * [BSgenome.Cfamiliaris.UCSC.canFam3-1.4.0](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.Cfamiliaris.UCSC.canFam3.html) Full genome sequences for Canis lupus familiaris (UCSC version canFam3)
-  * [BSgenome.Hsapiens.UCSC.hg19-1.4.3](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.Hsapiens.UCSC.hg19.html) Full genome sequences for Homo sapiens (UCSC version hg19, based on GRCh37.p13)
-  * [BSgenome.Hsapiens.UCSC.hg38-1.4.5](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.Hsapiens.UCSC.hg38.html) Full genomic sequences for Homo sapiens (UCSC genome hg38)
-  * [BSgenome.Mmusculus.UCSC.mm10-1.4.3](https://www.bioconductor.org/packages/release/bioc/html/BSgenome.Mmusculus.UCSC.mm10.html) Full genome sequences for Mus musculus (UCSC version mm10, based on GRCm38.p6)
+  * BSgenome.Cfamiliaris.UCSC.canFam3 1.4.0 Package Not Found
+  * BSgenome.Hsapiens.UCSC.hg19 1.4.3 Package Not Found
+  * BSgenome.Hsapiens.UCSC.hg38 1.4.5 Package Not Found
+  * BSgenome.Mmusculus.UCSC.mm10 1.4.3 Package Not Found
   * [BatchJobs-1.9](https://cran.r-project.org/web/packages/BatchJobs/index.html) Batch Computing with R
   * [BayesLogit-2.1](https://cran.r-project.org/web/packages/BayesLogit/index.html) PolyaGamma Sampling
   * [BayesPen-1.0](https://cran.r-project.org/web/packages/BayesPen/index.html) Bayesian Penalized Credible Regions
@@ -577,7 +574,7 @@ Regression Models
   * [DMCfun-4.0.1](https://cran.r-project.org/web/packages/DMCfun/index.html) Diffusion Model of Conflict (DMC) in Reaction Time Tasks
   * [DNABarcodes-1.36.0](https://www.bioconductor.org/packages/release/bioc/html/DNABarcodes.html) A tool for creating and analysing DNA barcodes used in Next Generation Sequencing multiplexing experiments
   * [DNAcopy-1.80.0](https://www.bioconductor.org/packages/release/bioc/html/DNAcopy.html) DNA Copy Number Data Analysis
-  * [DO.db-2.9](https://www.bioconductor.org/packages/release/bioc/html/DO.db.html) A set of annotation maps describing the entire Disease Ontology
+  * DO.db 2.9 Package Not Found
   * [DOSE-4.0.0](https://www.bioconductor.org/packages/release/bioc/html/DOSE.html) Disease Ontology Semantic and Enrichment analysis
   * [DRIMSeq-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/DRIMSeq.html) Differential transcript usage and tuQTL analyses with Dirichlet-multinomial model in RNA-seq
   * [DRR-0.0.4](https://cran.r-project.org/web/packages/DRR/index.html) Dimensionality Reduction via Regression
@@ -605,14 +602,14 @@ Q-Learning, and Dynamic Weighted Survival Modeling (DWSurv)
   * [EValue-4.1.3](https://cran.r-project.org/web/packages/EValue/index.html) Sensitivity Analyses for Unmeasured Confounding and Other Biases
 in Observational Studies and Meta-Analyses
   * [EasyABC-1.5.2](https://cran.r-project.org/web/packages/EasyABC/index.html) Efficient Approximate Bayesian Computation Sampling Schemes
-  * [EnsDb.Hsapiens.v75-2.99.0](https://www.bioconductor.org/packages/release/bioc/html/EnsDb.Hsapiens.v75.html) Ensembl based annotation package
-  * [EnsDb.Hsapiens.v79-2.99.0](https://www.bioconductor.org/packages/release/bioc/html/EnsDb.Hsapiens.v79.html) Ensembl based annotation package
-  * [EnsDb.Hsapiens.v86-2.99.0](https://www.bioconductor.org/packages/release/bioc/html/EnsDb.Hsapiens.v86.html) Ensembl based annotation package
+  * EnsDb.Hsapiens.v75 2.99.0 Package Not Found
+  * EnsDb.Hsapiens.v79 2.99.0 Package Not Found
+  * EnsDb.Hsapiens.v86 2.99.0 Package Not Found
   * [EnvStats-3.0.0](https://cran.r-project.org/web/packages/EnvStats/index.html) Package for Environmental Statistics, Including US EPA Guidance
   * [ExPosition-2.8.23](https://cran.r-project.org/web/packages/ExPosition/index.html) Exploratory Analysis with the Singular Value Decomposition
   * [Exact-3.3](https://cran.r-project.org/web/packages/Exact/index.html) Unconditional Exact Test
   * [ExperimentHub-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/ExperimentHub.html) Client to access ExperimentHub resources
-  * [FDb.InfiniumMethylation.hg19-2.2.0](https://www.bioconductor.org/packages/release/bioc/html/FDb.InfiniumMethylation.hg19.html) Annotation package for Illumina Infinium DNA methylation probes
+  * FDb.InfiniumMethylation.hg19 2.2.0 Package Not Found
   * [FKSUM-1.0.1](https://cran.r-project.org/web/packages/FKSUM/index.html) Fast Kernel Sums
   * [FME-1.3.6.3](https://cran.r-project.org/web/packages/FME/index.html) A Flexible Modelling Environment for Inverse Modelling,
 Sensitivity, Identifiability and Monte Carlo Analysis
@@ -621,8 +618,8 @@ Sensitivity, Identifiability and Monte Carlo Analysis
   * [FactoMineR-2.11](https://cran.r-project.org/web/packages/FactoMineR/index.html) Multivariate Exploratory Data Analysis and Data Mining
   * [FactorCopula-0.9.3](https://cran.r-project.org/web/packages/FactorCopula/index.html) Factor, Bi-Factor, Second-Order and Factor Tree Copula Models
   * [FlowSOM-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/FlowSOM.html) Using self-organizing maps for visualization and interpretation of cytometry data
-  * [FlowSorted.Blood.EPIC-2.10.0](https://www.bioconductor.org/packages/release/bioc/html/FlowSorted.Blood.EPIC.html) Illumina EPIC data on immunomagnetic sorted peripheral adult blood cells
-  * [FlowSorted.CordBloodCombined.450k-1.22.0](https://www.bioconductor.org/packages/release/bioc/html/FlowSorted.CordBloodCombined.450k.html) Illumina 450k/EPIC data on FACS and MACS umbilical blood cells
+  * FlowSorted.Blood.EPIC 2.10.0 Package Not Found
+  * FlowSorted.CordBloodCombined.450k 1.22.0 Package Not Found
   * [Formula-1.2-5](https://cran.r-project.org/web/packages/Formula/index.html) Extended Model Formulas
   * [GENESIS-2.36.0](https://www.bioconductor.org/packages/release/bioc/html/GENESIS.html) GENetic EStimation and Inference in Structured samples (GENESIS): Statistical methods for analyzing genetic data from samples with population structure and/or relatedness
   * [GENIE3-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/GENIE3.html) GEne Network Inference with Ensemble of trees
@@ -631,7 +628,7 @@ Sensitivity, Identifiability and Monte Carlo Analysis
   * [GGally-2.2.1](https://cran.r-project.org/web/packages/GGally/index.html) Extension to 'ggplot2'
   * [GJRM-0.2-6.7](https://cran.r-project.org/web/packages/GJRM/index.html) Generalised Joint Regression Modelling
   * [GLAD-2.70.0](https://www.bioconductor.org/packages/release/bioc/html/GLAD.html) Gain and Loss Analysis of DNA
-  * [GO.db-3.20.0](https://www.bioconductor.org/packages/release/bioc/html/GO.db.html) A set of annotation maps describing the entire Gene Ontology
+  * GO.db 3.20.0 Package Not Found
   * [GOSemSim-2.32.0](https://www.bioconductor.org/packages/release/bioc/html/GOSemSim.html) GO-terms Semantic Similarity Measures
   * [GOstats-2.72.0](https://www.bioconductor.org/packages/release/bioc/html/GOstats.html) Tools for manipulating GO and microarrays
   * [GPArotation-2024.3-1](https://cran.r-project.org/web/packages/GPArotation/index.html) Gradient Projection Factor Rotation
@@ -645,7 +642,7 @@ Model
   * [GenSA-1.1.14.1](https://cran.r-project.org/web/packages/GenSA/index.html) R Functions for Generalized Simulated Annealing
   * [GeneNet-1.2.16](https://cran.r-project.org/web/packages/GeneNet/index.html) Modeling and Inferring Gene Networks
   * [GenomeInfoDb-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/GenomeInfoDb.html) Utilities for manipulating chromosome names, including modifying them to follow a particular naming style
-  * [GenomeInfoDbData-1.2.13](https://www.bioconductor.org/packages/release/bioc/html/GenomeInfoDbData.html) Species and taxonomy ID look up tables used by GenomeInfoDb
+  * GenomeInfoDbData 1.2.13 Package Not Found
   * [GenomicAlignments-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicAlignments.html) Representation and manipulation of short genomic alignments
   * [GenomicFeatures-1.58.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicFeatures.html) Query the gene models of a given organism/assembly
   * [GenomicFiles-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/GenomicFiles.html) Distributed computing by file or by range
@@ -660,7 +657,7 @@ Model
   * [Gviz-1.50.0](https://www.bioconductor.org/packages/release/bioc/html/Gviz.html) Plotting data and annotation information along genomic coordinates
   * [GxEScanR-2.0.2](https://cran.r-project.org/web/packages/GxEScanR/index.html) Run GWAS/GWEIS Scans Using Binary Dosage Files
   * [HDF5Array-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/HDF5Array.html) HDF5 datasets as array-like objects in R
-  * [HDO.db-1.0.0](https://www.bioconductor.org/packages/release/bioc/html/HDO.db.html) A set of annotation maps describing the entire Human Disease Ontology
+  * HDO.db 1.0.0 Package Not Found
   * [HGNChelper-0.8.15](https://cran.r-project.org/web/packages/HGNChelper/index.html) Identify and Correct Invalid HGNC Human Gene Symbols and MGI
 Mouse Gene Symbols
   * [HMMcopy-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/HMMcopy.html) Copy number prediction with correction for GC and mappability bias for HTS data
@@ -670,32 +667,32 @@ Mouse Gene Symbols
   * [HiddenMarkov-1.8-13](https://cran.r-project.org/web/packages/HiddenMarkov/index.html) Hidden Markov Models
   * [Hmisc-5.2-0](https://cran.r-project.org/web/packages/Hmisc/index.html) Harrell Miscellaneous
   * [Hmsc-3.0-13](https://cran.r-project.org/web/packages/Hmsc/index.html) Hierarchical Model of Species Communities
-  * [Homo.sapiens-1.3.1](https://www.bioconductor.org/packages/release/bioc/html/Homo.sapiens.html) Annotation package for the Homo.sapiens object
+  * Homo.sapiens 1.3.1 Package Not Found
   * [IDPmisc-1.1.21](https://cran.r-project.org/web/packages/IDPmisc/index.html) 'Utilities of Institute of Data Analyses and Process Design
 (www.zhaw.ch/idp)'
   * [IHW-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/IHW.html) Independent Hypothesis Weighting
   * [IRanges-2.40.0](https://www.bioconductor.org/packages/release/bioc/html/IRanges.html) Foundation of integer range manipulation in Bioconductor
   * [ISOcodes-2024.02.12](https://cran.r-project.org/web/packages/ISOcodes/index.html) Selected ISO Codes
   * [ISOweek-0.6-2](https://cran.r-project.org/web/packages/ISOweek/index.html) Week of the year and weekday according to ISO 8601
-  * [IlluminaHumanMethylation450kanno.ilmn12.hg19-0.6.1](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylation450kanno.ilmn12.hg19.html) Annotation for Illumina's 450k methylation arrays
-  * [IlluminaHumanMethylation450kmanifest-0.4.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylation450kmanifest.html) Annotation for Illumina's 450k methylation arrays
-  * [IlluminaHumanMethylationEPICanno.ilm10b2.hg19-0.6.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylationEPICanno.ilm10b2.hg19.html) Annotation for Illumina's EPIC methylation arrays
-  * [IlluminaHumanMethylationEPICanno.ilm10b4.hg19-0.6.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylationEPICanno.ilm10b4.hg19.html) Annotation for Illumina's EPIC methylation arrays
-  * [IlluminaHumanMethylationEPICmanifest-0.3.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylationEPICmanifest.html) Manifest for Illumina's EPIC methylation arrays
-  * [IlluminaHumanMethylationEPICv2anno.20a1.hg38-1.0.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylationEPICv2anno.20a1.hg38.html) Annotation for Illumina's EPIC v2.0 methylation arrays
-  * [IlluminaHumanMethylationEPICv2manifest-1.0.0](https://www.bioconductor.org/packages/release/bioc/html/IlluminaHumanMethylationEPICv2manifest.html) Manifest for Illumina's EPIC v2.0 methylation arrays
+  * IlluminaHumanMethylation450kanno.ilmn12.hg19 0.6.1 Package Not Found
+  * IlluminaHumanMethylation450kmanifest 0.4.0 Package Not Found
+  * IlluminaHumanMethylationEPICanno.ilm10b2.hg19 0.6.0 Package Not Found
+  * IlluminaHumanMethylationEPICanno.ilm10b4.hg19 0.6.0 Package Not Found
+  * IlluminaHumanMethylationEPICmanifest 0.3.0 Package Not Found
+  * IlluminaHumanMethylationEPICv2anno.20a1.hg38 1.0.0 Package Not Found
+  * IlluminaHumanMethylationEPICv2manifest 1.0.0 Package Not Found
   * [InteractionSet-1.34.0](https://www.bioconductor.org/packages/release/bioc/html/InteractionSet.html) Base Classes for Storing Genomic Interaction Data
   * [Iso-0.0-21](https://cran.r-project.org/web/packages/Iso/index.html) Functions to Perform Isotonic Regression
   * [JADE-2.0-4](https://cran.r-project.org/web/packages/JADE/index.html) Blind Source Separation Methods Based on Joint Diagonalization
 and Some BSS Performance Criteria
-  * [JASPAR2020-0.99.10](https://www.bioconductor.org/packages/release/bioc/html/JASPAR2020.html) Data package for JASPAR database (version 2020)
+  * JASPAR2020 0.99.10 Package Not Found
   * [JBTools-0.7.2.9](https://cran.r-project.org/web/packages/JBTools/index.html) Misc Small Tools and Helper Functions for Other Code of J.
 Buttlar
   * [KEGGREST-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/KEGGREST.html) Client-side REST access to the Kyoto Encyclopedia of Genes and Genomes (KEGG)
   * [KEGGgraph-1.66.0](https://www.bioconductor.org/packages/release/bioc/html/KEGGgraph.html) KEGGgraph: A graph approach to KEGG PATHWAY in R and Bioconductor
   * [KODAMA-2.4.1](https://cran.r-project.org/web/packages/KODAMA/index.html) Knowledge Discovery by Accuracy Maximization
   * [KernSmooth-2.23-24](https://cran.r-project.org/web/packages/KernSmooth/index.html) Functions for Kernel Smoothing Supporting Wand & Jones (1995)
-  * [LCFdata-2.0](https://cran.r-project.org/web/packages/LCFdata/index.html) Data sets for package `LMERConvenienceFunctions`
+  * [LCFdata-2.0](https://cran.r-project.org/web/packages/LCFdata/index.html) Data sets for package "LMERConvenienceFunctions"
   * [LEA-3.18.0](https://www.bioconductor.org/packages/release/bioc/html/LEA.html) LEA: an R package for Landscape and Ecological Association Studies
   * [LMERConvenienceFunctions-3.0](https://cran.r-project.org/web/packages/LMERConvenienceFunctions/index.html) Model Selection and Post-Hoc Analysis for (G)LMER Models
   * [LaplacesDemon-16.1.6](https://cran.r-project.org/web/packages/LaplacesDemon/index.html) Complete Environment for Bayesian Inference
@@ -750,7 +747,7 @@ Scripts
   * [OpenMx-2.21.13](https://cran.r-project.org/web/packages/OpenMx/index.html) Extended Structural Equation Modelling
   * [OrganismDbi-1.48.0](https://www.bioconductor.org/packages/release/bioc/html/OrganismDbi.html) Software to enable the smooth interfacing of different database packages
   * [PCAmatchR-0.3.3](https://cran.r-project.org/web/packages/PCAmatchR/index.html) Match Cases to Controls Based on Genotype Principal Components
-  * [PFAM.db-3.20.0](https://www.bioconductor.org/packages/release/bioc/html/PFAM.db.html) A set of protein ID mappings for PFAM
+  * PFAM.db 3.20.0 Package Not Found
   * [PKI-0.1-14](https://cran.r-project.org/web/packages/PKI/index.html) Public Key Infrastucture for R Based on the X.509 Standard
   * [PMA-1.2-4](https://cran.r-project.org/web/packages/PMA/index.html) Penalized Multivariate Analysis
   * [PRROC-1.3.1](https://cran.r-project.org/web/packages/PRROC/index.html) Precision-Recall and ROC Curves for Weighted and Unweighted Data
@@ -788,7 +785,7 @@ Directories
   * [R6-2.5.1](https://cran.r-project.org/web/packages/R6/index.html) Encapsulated Classes with Reference Semantics
   * [RANN-2.6.2](https://cran.r-project.org/web/packages/RANN/index.html) Fast Nearest Neighbour Search (Wraps ANN Library) Using L2
 Metric
-  * [RBGL-1.82.0](https://cran.r-project.org/web/packages/RBGL/index.html) An interface to the BOOST graph library
+  * [RBGL-1.82.0](https://www.bioconductor.org/packages/release/bioc/html/RBGL.html) An interface to the BOOST graph library
   * [RBesT-1.7-4](https://cran.r-project.org/web/packages/RBesT/index.html) R Bayesian Evidence Synthesis Tools
   * [RCAL-2.0](https://cran.r-project.org/web/packages/RCAL/index.html) Regularized Calibrated Estimation
   * [RCircos-1.2.2](https://cran.r-project.org/web/packages/RCircos/index.html) Circos 2D Track Plot
@@ -857,17 +854,17 @@ Implementations
   * [ResidualMatrix-1.16.0](https://www.bioconductor.org/packages/release/bioc/html/ResidualMatrix.html) Creating a DelayedMatrix of Regression Residuals
   * [Rfast-2.1.0](https://cran.r-project.org/web/packages/Rfast/index.html) A Collection of Efficient and Extremely Fast R Functions
   * [Rglpk-0.6-5.1](https://cran.r-project.org/web/packages/Rglpk/index.html) R/GNU Linear Programming Kit Interface
-  * [Rgraphviz-2.50.0](https://cran.r-project.org/web/packages/Rgraphviz/index.html) Provides plotting capabilities for R graph objects
+  * [Rgraphviz-2.50.0](https://www.bioconductor.org/packages/release/bioc/html/Rgraphviz.html) Provides plotting capabilities for R graph objects
   * [Rhdf5lib-1.28.0](https://www.bioconductor.org/packages/release/bioc/html/Rhdf5lib.html) hdf5 library as an R package
   * [RhpcBLASctl-0.23-42](https://cran.r-project.org/web/packages/RhpcBLASctl/index.html) Control the Number of Threads on 'BLAS'
   * [Rhtslib-3.2.0](https://www.bioconductor.org/packages/release/bioc/html/Rhtslib.html) HTSlib high-throughput sequencing library as an R package
   * [Rmpfr-1.0-0](https://cran.r-project.org/web/packages/Rmpfr/index.html) Interface R to MPFR - Multiple Precision Floating-Point Reliable
   * [RnBeads-2.24.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.html) RnBeads
-  * [RnBeads.hg19-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.hg19.html) RnBeads.hg19
-  * [RnBeads.hg38-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.hg38.html) RnBeads.hg38
-  * [RnBeads.mm10-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.mm10.html) RnBeads.mm10
-  * [RnBeads.mm9-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.mm9.html) RnBeads.mm9
-  * [RnBeads.rn5-1.38.0](https://www.bioconductor.org/packages/release/bioc/html/RnBeads.rn5.html) RnBeads.rn5
+  * RnBeads.hg19 1.38.0 Package Not Found
+  * RnBeads.hg38 1.38.0 Package Not Found
+  * RnBeads.mm10 2.14.0 Package Not Found
+  * RnBeads.mm9 1.38.0 Package Not Found
+  * RnBeads.rn5 1.38.0 Package Not Found
   * [Rook-1.2](https://cran.r-project.org/web/packages/Rook/index.html) HTTP Web Server for R
   * [Rsamtools-2.22.0](https://www.bioconductor.org/packages/release/bioc/html/Rsamtools.html) Binary alignment (BAM), FASTA, variant call (BCF), and tabix file import
   * [Rserve-1.8-13](https://cran.r-project.org/web/packages/Rserve/index.html) Versatile R Server
@@ -889,8 +886,7 @@ associated with species distribution modelling exercises
   * [SKAT-2.2.5](https://cran.r-project.org/web/packages/SKAT/index.html) SNP-Set (Sequence) Kernel Association Test
   * [SMVar-1.3.4](https://cran.r-project.org/web/packages/SMVar/index.html) Structural Model for Variances
   * [SNFtool-2.3.1](https://cran.r-project.org/web/packages/SNFtool/index.html) Similarity Network Fusion
-  * [SNPRelate-1.40.0](https://cran.r-project.org/web/packages/SNPRelate/index.html) Parallel Computing Toolset for Genome-Wide Association Studies
-(GWAS)
+  * [SNPRelate-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/SNPRelate.html) Parallel Computing Toolset for Relatedness and Principal Component Analysis of SNP Data
   * [SOAR-0.99-11](https://cran.r-project.org/web/packages/SOAR/index.html) Memory management in R by delayed assignments
   * [SPAtest-3.1.2](https://cran.r-project.org/web/packages/SPAtest/index.html) Score Test and Meta-Analysis Based on Saddlepoint Approximation
   * [SPIA-2.58.0](https://www.bioconductor.org/packages/release/bioc/html/SPIA.html) Signaling Pathway Impact Analysis (SPIA) using combined evidence of pathway over-representation and unusual signaling perturbations
@@ -937,8 +933,8 @@ Matrices
   * [TrajectoryUtils-1.14.0](https://www.bioconductor.org/packages/release/bioc/html/TrajectoryUtils.html) Single-Cell Trajectory Analysis Utilities
   * [TreeSummarizedExperiment-2.14.0](https://www.bioconductor.org/packages/release/bioc/html/TreeSummarizedExperiment.html) TreeSummarizedExperiment: a S4 Class for Data with Tree Structures
   * [TruncatedNormal-2.3](https://cran.r-project.org/web/packages/TruncatedNormal/index.html) Truncated Multivariate Normal and Student Distributions
-  * [TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Hsapiens.UCSC.hg19.knownGene.html) Annotation package for TxDb object(s)
-  * [TxDb.Mmusculus.UCSC.mm10.knownGene-3.10.0](https://www.bioconductor.org/packages/release/bioc/html/TxDb.Mmusculus.UCSC.mm10.knownGene.html) Annotation package for TxDb object(s)
+  * TxDb.Hsapiens.UCSC.hg19.knownGene 3.2.2 Package Not Found
+  * TxDb.Mmusculus.UCSC.mm10.knownGene 3.10.0 Package Not Found
   * [UCSC.utils-1.2.0](https://www.bioconductor.org/packages/release/bioc/html/UCSC.utils.html) Low-level utilities to retrieve data from the UCSC Genome Browser
   * [UCell-2.10.1](https://www.bioconductor.org/packages/release/bioc/html/UCell.html) Rank-based signature enrichment analysis for single-cell data
   * [UpSetR-1.4.0](https://cran.r-project.org/web/packages/UpSetR/index.html) A More Scalable Alternative to Venn and Euler Diagrams for
@@ -1109,7 +1105,7 @@ in Wang and Louis (2003)
   * [cards-0.3.0](https://cran.r-project.org/web/packages/cards/index.html) Analysis Results Data
   * [caret-6.0-94](https://cran.r-project.org/web/packages/caret/index.html) Classification and Regression Training
   * [catlearn-1.0](https://cran.r-project.org/web/packages/catlearn/index.html) Formal Psychological Models of Categorization and Learning
-  * [ccdata-1.32.0](https://www.bioconductor.org/packages/release/bioc/html/ccdata.html) Data for Combination Connectivity Mapping (ccmap) Package
+  * ccdata 1.32.0 Package Not Found
   * [ccmap-1.32.0](https://www.bioconductor.org/packages/release/bioc/html/ccmap.html) Combination Connectivity Mapping
   * [celestial-1.4.6](https://cran.r-project.org/web/packages/celestial/index.html) Collection of Common Astronomical Conversion Routines and
 Functions
@@ -1403,14 +1399,14 @@ and Shape
 Utilities
   * [gdata-3.0.1](https://cran.r-project.org/web/packages/gdata/index.html) Various R Programming Tools for Data Manipulation
   * [gdistance-1.6.4](https://cran.r-project.org/web/packages/gdistance/index.html) Distances and Routes on Geographical Grids
-  * [gdsfmt-1.42.0](https://cran.r-project.org/web/packages/gdsfmt/index.html) 
+  * [gdsfmt-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/gdsfmt.html) R Interface to CoreArray Genomic Data Structure (GDS) Files
   * [gdtools-0.4.1](https://cran.r-project.org/web/packages/gdtools/index.html) Utilities for Graphical Rendering and Fonts Management
   * [gee-4.13-27](https://cran.r-project.org/web/packages/gee/index.html) Generalized Estimation Equation Solver
   * [geeM-0.10.1](https://cran.r-project.org/web/packages/geeM/index.html) Solve Generalized Estimating Equations
   * [geepack-1.3.12](https://cran.r-project.org/web/packages/geepack/index.html) Generalized Estimating Equation Package
   * [geex-1.1.1](https://cran.r-project.org/web/packages/geex/index.html) An API for M-Estimation
   * [geiger-2.0.11](https://cran.r-project.org/web/packages/geiger/index.html) Analysis of Evolutionary Diversification
-  * [geneLenDataBase-1.42.0](https://www.bioconductor.org/packages/release/bioc/html/geneLenDataBase.html) Lengths of mRNA transcripts for a number of genomes
+  * geneLenDataBase 1.42.0 Package Not Found
   * [genefilter-1.88.0](https://www.bioconductor.org/packages/release/bioc/html/genefilter.html) genefilter: methods for filtering genes from high-throughput experiments
   * [geneplotter-1.84.0](https://www.bioconductor.org/packages/release/bioc/html/geneplotter.html) Graphics related functions for Bioconductor
   * [generics-0.1.3](https://cran.r-project.org/web/packages/generics/index.html) Common S3 Generics not Provided by Base R Methods Related to
@@ -1487,9 +1483,9 @@ Likelihood
   * [gplots-3.2.0](https://cran.r-project.org/web/packages/gplots/index.html) Various R Programming Tools for Plotting Data
   * grDevices built in 
   * [grImport2-0.3-3](https://cran.r-project.org/web/packages/grImport2/index.html) Importing 'SVG' Graphics
-  * [graph-1.84.0](https://cran.r-project.org/web/packages/graph/index.html) graph: A package to handle graph data structures
+  * [graph-1.84.0](https://www.bioconductor.org/packages/release/bioc/html/graph.html) graph: A package to handle graph data structures
   * graphics built in 
-  * [graphite-1.52.0](https://cran.r-project.org/web/packages/graphite/index.html) GRAPH Interaction from pathway Topological Environment
+  * [graphite-1.52.0](https://www.bioconductor.org/packages/release/bioc/html/graphite.html) GRAPH Interaction from pathway Topological Environment
   * [graphlayouts-1.2.1](https://cran.r-project.org/web/packages/graphlayouts/index.html) Additional Layout Algorithms for Network Visualizations
   * [grf-2.4.0](https://cran.r-project.org/web/packages/grf/index.html) Generalized Random Forests
   * grid built in 
@@ -1525,7 +1521,7 @@ Arrays/Dictionaries
   * [heatmaply-1.5.0](https://cran.r-project.org/web/packages/heatmaply/index.html) Interactive Cluster Heat Maps Using 'plotly' and 'ggplot2'
   * [here-1.0.1](https://cran.r-project.org/web/packages/here/index.html) A Simpler Way to Find Your Files
   * [hexbin-1.28.5](https://cran.r-project.org/web/packages/hexbin/index.html) Hexagonal Binning Routines
-  * [hgu133plus2.db-3.13.0](https://www.bioconductor.org/packages/release/bioc/html/hgu133plus2.db.html) Affymetrix Affymetrix HG-U133_Plus_2 Array annotation data (chip hgu133plus2)
+  * hgu133plus2.db 3.13.0 Package Not Found
   * [highr-0.11](https://cran.r-project.org/web/packages/highr/index.html) Syntax Highlighting for R Source Code
   * [hms-1.1.3](https://cran.r-project.org/web/packages/hms/index.html) Pretty Time of Day
   * [htmlTable-2.4.3](https://cran.r-project.org/web/packages/htmlTable/index.html) Advanced Tables for Markdown/HTML
@@ -1548,7 +1544,7 @@ Arrays/Dictionaries
   * [image.binarization-0.1.3](https://cran.r-project.org/web/packages/image.binarization/index.html) Binarize Images for Enhancing Optical Character Recognition
   * [imager-1.0.2](https://cran.r-project.org/web/packages/imager/index.html) Image Processing Library Based on 'CImg'
   * [imagerExtra-1.3.2](https://cran.r-project.org/web/packages/imagerExtra/index.html) Extra Image Processing Library Based on 'imager'
-  * [impute-1.80.0](https://cran.r-project.org/web/packages/impute/index.html) impute: Imputation for microarray data
+  * [impute-1.80.0](https://www.bioconductor.org/packages/release/bioc/html/impute.html) impute: Imputation for microarray data
   * [ineq-0.2-13](https://cran.r-project.org/web/packages/ineq/index.html) Measuring Inequality, Concentration, and Poverty
   * [influenceR-0.1.5](https://cran.r-project.org/web/packages/influenceR/index.html) Software Tools to Quantify Structural Importance of Nodes in a
 Network
@@ -1600,7 +1596,7 @@ Derivatives
   * [laeken-0.5.3](https://cran.r-project.org/web/packages/laeken/index.html) Estimation of Indicators on Social Exclusion and Poverty
   * [lambda.r-1.2.4](https://cran.r-project.org/web/packages/lambda.r/index.html) Modeling Data with Functional Programming
   * [lars-1.3](https://cran.r-project.org/web/packages/lars/index.html) Least Angle Regression, Lasso and Forward Stagewise
-  * lassosum 0.4.5 [CRAN]&emsp;
+  * lassosum 0.4.5 Package Not Found
   * [later-1.3.2](https://cran.r-project.org/web/packages/later/index.html) Utilities for Scheduling Functions to Execute Later with Event
 Loops
   * [lattice-0.22-6](https://cran.r-project.org/web/packages/lattice/index.html) Trellis Graphics for R
@@ -1622,7 +1618,7 @@ Library
   * [libcoin-1.0-10](https://cran.r-project.org/web/packages/libcoin/index.html) Linear Test Statistics for Permutation Inference
   * [lifecycle-1.0.4](https://cran.r-project.org/web/packages/lifecycle/index.html) Manage the Life Cycle of your Package Functions
   * [limSolve-1.5.7.1](https://cran.r-project.org/web/packages/limSolve/index.html) Solving Linear Inverse Models
-  * [limma-3.62.1](https://cran.r-project.org/web/packages/limma/index.html) Linear Models for Microarray Data
+  * [limma-3.62.1](https://www.bioconductor.org/packages/release/bioc/html/limma.html) Linear Models for Microarray and Omics Data
   * [linkcomm-1.0-14](https://cran.r-project.org/web/packages/linkcomm/index.html) Tools for Generating, Visualizing, and Analysing Link
 Communities in Networks
   * [linprog-0.9-4](https://cran.r-project.org/web/packages/linprog/index.html) Linear Programming / Optimization
@@ -1726,7 +1722,7 @@ Approximation
   * [missMethyl-1.40.0](https://www.bioconductor.org/packages/release/bioc/html/missMethyl.html) Analysing Illumina HumanMethylation BeadChip Data
   * [mitml-0.4-5](https://cran.r-project.org/web/packages/mitml/index.html) Tools for Multiple Imputation in Multilevel Modeling
   * [mitools-2.4](https://cran.r-project.org/web/packages/mitools/index.html) Tools for Multiple Imputation of Missing Data
-  * [mixOmics-6.30.0](https://cran.r-project.org/web/packages/mixOmics/index.html) Omics Data Integration Project
+  * [mixOmics-6.30.0](https://www.bioconductor.org/packages/release/bioc/html/mixOmics.html) Omics Data Integration Project
   * [mixsqp-0.3-54](https://cran.r-project.org/web/packages/mixsqp/index.html) Sequential Quadratic Programming for Fast Maximum-Likelihood
 Estimation of Mixture Proportions
   * [mixtools-2.0.0](https://cran.r-project.org/web/packages/mixtools/index.html) Tools for Analyzing Finite Mixture Models
@@ -1756,7 +1752,7 @@ Models
   * [multicool-1.0.1](https://cran.r-project.org/web/packages/multicool/index.html) Permutations of Multisets in Cool-Lex Order
   * [multipol-1.0-9](https://cran.r-project.org/web/packages/multipol/index.html) Multivariate Polynomials
   * [multitaper-1.0-17](https://cran.r-project.org/web/packages/multitaper/index.html) Spectral Analysis Tools using the Multitaper Method
-  * [multtest-2.62.0](https://cran.r-project.org/web/packages/multtest/index.html) Resampling-based multiple hypothesis testing
+  * [multtest-2.62.0](https://www.bioconductor.org/packages/release/bioc/html/multtest.html) Resampling-based multiple hypothesis testing
   * [munsell-0.5.1](https://cran.r-project.org/web/packages/munsell/index.html) Utilities for Using Munsell Colours
   * [muscat-1.20.0](https://www.bioconductor.org/packages/release/bioc/html/muscat.html) Multi-sample multi-group scRNA-seq data analysis tools
   * [mutoss-0.1-13](https://cran.r-project.org/web/packages/mutoss/index.html) Unified Multiple Testing Procedures
@@ -1819,9 +1815,9 @@ OpenSSL
   * [optmatch-0.10.8](https://cran.r-project.org/web/packages/optmatch/index.html) Functions for Optimal Matching
   * [optparse-1.7.5](https://cran.r-project.org/web/packages/optparse/index.html) Command Line Option Parser
   * [ordinal-2023.12-4.1](https://cran.r-project.org/web/packages/ordinal/index.html) Regression Models for Ordinal Data
-  * [org.Hs.eg.db-3.20.0](https://www.bioconductor.org/packages/release/bioc/html/org.Hs.eg.db.html) Genome wide annotation for Human
-  * [org.Mm.eg.db-3.20.0](https://www.bioconductor.org/packages/release/bioc/html/org.Mm.eg.db.html) Genome wide annotation for Mouse
-  * [org.Rn.eg.db-3.20.0](https://www.bioconductor.org/packages/release/bioc/html/org.Rn.eg.db.html) Genome wide annotation for Rat
+  * org.Hs.eg.db 3.20.0 Package Not Found
+  * org.Mm.eg.db 3.20.0 Package Not Found
+  * org.Rn.eg.db 3.20.0 Package Not Found
   * [origami-1.0.7](https://cran.r-project.org/web/packages/origami/index.html) Generalized Framework for Cross-Validation
   * [oro.nifti-0.11.4](https://cran.r-project.org/web/packages/oro.nifti/index.html) Rigorous - 'NIfTI' + 'ANALYZE' + 'AFNI' : Input / Output
   * [orthopolynom-1.0-6.1](https://cran.r-project.org/web/packages/orthopolynom/index.html) Collection of Functions for Orthogonal and Orthonormal
@@ -1831,7 +1827,7 @@ Polynomials
   * [pROC-1.18.5](https://cran.r-project.org/web/packages/pROC/index.html) Display and Analyze ROC Curves
   * [pRoloc-1.46.0](https://www.bioconductor.org/packages/release/bioc/html/pRoloc.html) A unifying bioinformatics framework for spatial proteomics
   * [pRolocGUI-2.16.0](https://www.bioconductor.org/packages/release/bioc/html/pRolocGUI.html) Interactive visualisation of spatial proteomics data
-  * [pRolocdata-1.44.0](https://www.bioconductor.org/packages/release/bioc/html/pRolocdata.html) Data accompanying the pRoloc package
+  * pRolocdata 1.44.0 Package Not Found
   * [packrat-0.9.2](https://cran.r-project.org/web/packages/packrat/index.html) A Dependency Management System for Projects and their R Package
 Dependencies
   * [pacman-0.5.1](https://cran.r-project.org/web/packages/pacman/index.html) Package Management Tool
@@ -1951,7 +1947,7 @@ Comparison
   * [quantreg-5.99.1](https://cran.r-project.org/web/packages/quantreg/index.html) Quantile Regression
   * [quantsmooth-1.72.0](https://www.bioconductor.org/packages/release/bioc/html/quantsmooth.html) Quantile smoothing and genomic visualization of array data
   * [questionr-0.7.8](https://cran.r-project.org/web/packages/questionr/index.html) Functions to Make Surveys Processing Easier
-  * [qvalue-2.38.0](https://cran.r-project.org/web/packages/qvalue/index.html) Q-value estimation for false discovery rate control
+  * [qvalue-2.38.0](https://www.bioconductor.org/packages/release/bioc/html/qvalue.html) Q-value estimation for false discovery rate control
   * [r2rtf-1.1.1](https://cran.r-project.org/web/packages/r2rtf/index.html) Easily Create Production-Ready Rich Text Format (RTF) Tables and
 Figures
   * [rARPACK-0.11-0](https://cran.r-project.org/web/packages/rARPACK/index.html) Solvers for Large Scale Eigenvalue and SVD Problems
@@ -1984,7 +1980,7 @@ and Logs
   * [rdrop2-0.8.2.1](https://cran.r-project.org/web/packages/rdrop2/index.html) Programmatic Interface to the 'Dropbox' API
   * [reactR-0.6.1](https://cran.r-project.org/web/packages/reactR/index.html) React Helpers
   * [reactable-0.4.4](https://cran.r-project.org/web/packages/reactable/index.html) Interactive Data Tables for R
-  * [reactome.db-1.89.0](https://www.bioconductor.org/packages/release/bioc/html/reactome.db.html) A set of annotation maps for reactome
+  * reactome.db 1.89.0 Package Not Found
   * [readODS-2.3.1](https://cran.r-project.org/web/packages/readODS/index.html) Read and Write ODS Files
   * [readbitmap-0.1.5](https://cran.r-project.org/web/packages/readbitmap/index.html) Simple Unified Interface to Read Bitmap Images
 (BMP,JPEG,PNG,TIFF)
@@ -2222,7 +2218,7 @@ Normal Distribution
   * [systemfonts-1.1.0](https://cran.r-project.org/web/packages/systemfonts/index.html) System Native Font Finding
   * [tableone-0.13.2](https://cran.r-project.org/web/packages/tableone/index.html) Create 'Table 1' to Describe Baseline Characteristics with or
 without Propensity Score Weights
-  * tabletools 0.1.0 [CRAN]&emsp;
+  * tabletools 0.1.0 Package Not Found
   * [tau-0.0-26](https://cran.r-project.org/web/packages/tau/index.html) Text Analysis Utilities
   * [taxize-0.9.100.1](https://cran.r-project.org/web/packages/taxize/index.html) Taxonomic Information from Around the Web
   * tcltk built in 
