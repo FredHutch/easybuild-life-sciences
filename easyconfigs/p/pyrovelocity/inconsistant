@@ -1,0 +1,21 @@
+lineax 0.0.7 has requirement jax>=0.4.26, but you have jax 0.4.25.dev20240911.
+ibis-framework 9.5.0 has requirement sqlglot<25.21,>=23.4, but you have sqlglot 26.3.9.
+optimistix 0.0.10 has requirement equinox>=0.11.7, but you have equinox 0.11.5.
+optimistix 0.0.10 has requirement jax>=0.4.28, but you have jax 0.4.25.dev20240911.
+pyrovelocity 0.4.0b4 has requirement arviz>=0.17.1, but you have arviz 0.16.1.
+pyrovelocity 0.4.0b4 has requirement astropy>=6.1.2, but you have astropy 6.0.1.
+pyrovelocity 0.4.0b4 has requirement fsspec>=2024.3.0, but you have fsspec 2024.2.0.
+pyrovelocity 0.4.0b4 has requirement matplotlib>=3.9.1, but you have matplotlib 3.7.2.
+pyrovelocity 0.4.0b4 has requirement mlflow>=2.13.0, but you have mlflow 2.10.2.
+pyrovelocity 0.4.0b4 has requirement polars>=0.20.17, but you have polars 0.20.2.
+pyrovelocity 0.4.0b4 has requirement pyarrow>=14.0.2, but you have pyarrow 14.0.1.
+pyrovelocity 0.4.0b4 has requirement pydantic>=2.8.0, but you have pydantic 2.5.3.
+pyrovelocity 0.4.0b4 has requirement pyro-ppl>=1.9.1, but you have pyro-ppl 1.9.0.
+pyrovelocity 0.4.0b4 has requirement pyyaml>=6.0.1, but you have pyyaml 6.0.
+pyrovelocity 0.4.0b4 has requirement scanpy>=1.10.1, but you have scanpy 1.9.8.
+pyrovelocity 0.4.0b4 has requirement scvelo>=0.3.2, but you have scvelo 0.3.1.
+pyrovelocity 0.4.0b4 has requirement statsmodels>=0.14.2, but you have statsmodels 0.14.1.
+pyrovelocity 0.4.0b4 has requirement trio>=0.26.0, but you have trio 0.23.2.
+botocore 1.34.51 has requirement urllib3<2.1,>=1.25.4; python_version >= "3.10", but you have urllib3 2.1.0.
+poetry 1.5.1 has requirement urllib3<2.0.0,>=1.26.0, but you have urllib3 2.1.0.
+asyncpg 0.29.0 has requirement async-timeout>=4.0.3; python_version < "3.12.0", but you have async-timeout 4.0.2.

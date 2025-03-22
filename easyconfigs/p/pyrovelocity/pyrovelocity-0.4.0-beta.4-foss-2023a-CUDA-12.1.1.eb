@@ -1,0 +1,156 @@
+easyblock = 'PythonBundle'
+
+name = 'pyrovelocity'
+version = '0.4.0-beta.4'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+
+homepage = 'https://docs.pyrovelocity.net/'
+description = """is a library for probabilistic inference in minimal models approximating gene
+ expression dynamics from, possibly multimodal, single-cell sequencing data. It provides posterior
+ estimates of gene expression parameters, predictive estimates of gene expression states, and local
+ estimates of cell state transition probabilities."""
+
+toolchain = {'name': 'foss', 'version': '2023a'}
+
+builddependencies = [
+    ('hatchling', '1.18.0'),
+    ('poetry', '1.5.1'),
+    ('maturin', '1.4.0', '-Rust-1.75.0'),
+]
+
+dependencies = [
+    ('Python', '3.11.3'),
+    ('CUDA', '12.1.1', '', SYSTEM),
+    ('Python-bundle-PyPI', '2023.06'),
+    ('SciPy-bundle', '2023.07'),
+    ('Greenlet', '2.0.2'),
+    ('MLflow', '2.10.2'),
+    ('h5py', '3.9.0'),
+    ('einops', '0.7.0'),
+    ('Flax', '0.8.4', versionsuffix),  # -CUDA-12.1.1.eb'),  containes jax
+    ('polars', '0.20.2'),
+    ('pydantic', '2.5.3'),
+    ('leidenalg', '0.10.2'),
+    ('LLVM', '14.0.6', '-llvmlite'),
+    ('matplotlib', '3.7.2'),
+    ('pyro-ppl', '1.9.0', versionsuffix), # eb pyro-ppl-1.9.0-foss-2023a-CUDA-12.1.1.eb 
+    ('PyTorch-bundle', '2.1.2', versionsuffix),
+    ('PyTorch-Lightning', '2.2.1', versionsuffix),
+
+    ('scikit-learn', '1.3.1'),
+    ('JupyterLab', '4.0.5'),
+    ('Arrow', '14.0.1'),
+    ('Seaborn', '0.13.2'),
+    ('PyYAML',  '6.0'),
+    ('scanpy', '1.9.8'),
+    ('scvi-tools', '1.1.2', versionsuffix),  # provides chex 0.1.86
+    ('statsmodels', '0.14.1'),
+    ('scVelo', '0.3.1'),
+    ('sympy', '1.12'),
+    ('astropy', '6.0.1'),
+    ('Flask', '2.3.3'),
+    ('python-igraph', '0.11.4'),
+    ('tqdm', '4.66.1'),
+    ('ArviZ', '0.16.1'),
+]
+
+use_pip = True
+sanity_pip_check = False
+skipsteps = ['sanitycheck']
+
+exts_list = [
+# adjusttext, arviz, diffrax, httpx
+    ('statannotations', '0.7.1'),
+    ('urllib3', '2.1.0'),
+    ('jsonschema', '4.18.0'),
+    ('adjusttext', '1.3.0', {
+        'modulename': 'adjustText',
+    }),
+    ('altair', '5.3.0'),
+    ('anndata', '0.10.5'),
+    ('anyio', '4.3.0'),
+    ('appdirs', '1.4.4'),
+    ('beartype', '0.18.5'),
+    ('click', '8.1.7'),
+    ('termcolor', '2.3.0'),
+    ('colorlog', '6.7.0'),
+    ('daft', '0.1.2'),
+    ('typeguard', '2.13.3', {
+        'checksums': ['00edaa8da3a133674796cf5ea87d9f4b4c367d77476e185e80251cc13dfbb8c4'],
+    }),
+    ('jaxtyping', '0.2.29', {
+        'checksums': ['e1cd916ed0196e40402b0638449e7d051571562b2cd68d8b94961a383faeb409'],
+    }),
+    ('equinox', '0.11.5'),
+        ('lineax', '0.0.7', {
+            'modulename': False,
+            'source_tmpl': SOURCE_PY3_WHL,
+        }),
+        ('optimistix', '0.0.10', {
+        'modulename': False,
+    }),
+    ('diffrax', '0.5.0', {
+        'modulename': False,
+    }),
+    ('diskcache', '5.6.1'),
+    ('duckdb', '1.1.3'),
+    ('expression', '5.0.2'),
+    ('frozenlist', '1.4.0', {
+        'checksums': ['09163bdf0b2907454042edb19f887c6d33806adc71fbd54afc14908bfdc22251'],
+    }),
+    ('httpcore', '1.0.5', {
+        'checksums': ['34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61'],
+    }),
+    ('httpx', '0.27.2', {
+        'checksums': ['f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2'],
+    }),
+        ('sqlglot', '26.3.9'),
+        ('parsy', '2.1'),
+        ('dunamai', '1.22.0'),
+        ('atpublic', '5.1', {
+            'modulename': 'public',
+        }),
+        ('poetry_dynamic_versioning', '1.7.0'),
+    ('ibis_framework', '9.5.0', {
+        'modulename': 'ibis',
+        'source_tmpl': SOURCE_PY3_WHL,
+    }),
+    ('plumbum', '1.8.2', {
+        'checksums': ['9e6dc032f4af952665f32f3206567bc23b7858b1413611afe603a3f8ad9bfd75'],
+    }),
+    ('returns', '0.23.0'),
+#    ('rich', '13.7.1'),
+    ('sparse', '0.15.4'),
+        ('outcome', '1.3.0'),
+    ('trio', '0.23.2'),
+    ('tiledb', '0.31.1', {
+        'source_tmpl': '%(name)s-%(version)s-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl',
+        'unpack_sources': False,
+    }),
+    ('validators', '0.33.0'),
+    ('vegafusion', '1.6.9'),
+    ('vegafusion_python_embed', '1.6.9', {
+        'modulename': 'vegafusion_embed',
+    }),
+    ('vl_convert_python', '1.7.0', {
+        'modulename': 'vl_convert',
+        'source_tmpl': '%(name)s-%(version)s-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl',
+    }),
+    ('zstandard', '0.23.0'),
+    # [tool.poetry.group.bioinformatics.dependencies]
+      #  ('serializable', '0.4.1'),
+      #  tinytimer
+      #  memoized-propert
+      #  ('gtfparse', '2.5.0')
+      #  ('typechecks', '0.1.0'),
+      #  ('datacache', '1.4.1'),
+      #  ('pyensembl', '2.3.12'),
+    ('pyfaidx', '0.8.1.1'),
+    (name, version, {
+       'source_urls': ['https://github.com/pinellolab/pyrovelocity/archive/'],
+       'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+    }),
+]
+
+moduleclass = 'bio'
