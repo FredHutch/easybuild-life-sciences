@@ -1,0 +1,489 @@
+oarfish v0.6.5 (/loc/eb_build/oarfish-0.6.5_hand)
+├── anyhow v1.0.94
+├── arrow2 v0.18.0
+│   ├── ahash v0.8.11
+│   │   ├── cfg-if v1.0.0
+│   │   ├── getrandom v0.2.15
+│   │   │   ├── cfg-if v1.0.0
+│   │   │   └── libc v0.2.168
+│   │   ├── once_cell v1.20.2
+│   │   └── zerocopy v0.7.35
+│   │       ├── byteorder v1.5.0
+│   │       └── zerocopy-derive v0.7.35 (proc-macro)
+│   │           ├── proc-macro2 v1.0.92
+│   │           │   └── unicode-ident v1.0.14
+│   │           ├── quote v1.0.37
+│   │           │   └── proc-macro2 v1.0.92 (*)
+│   │           └── syn v2.0.90
+│   │               ├── proc-macro2 v1.0.92 (*)
+│   │               ├── quote v1.0.37 (*)
+│   │               └── unicode-ident v1.0.14
+│   │   [build-dependencies]
+│   │   └── version_check v0.9.5
+│   ├── arrow-format v0.8.1
+│   │   ├── planus v0.3.1
+│   │   │   └── array-init-cursor v0.2.0
+│   │   └── serde v1.0.216
+│   │       └── serde_derive v1.0.216 (proc-macro)
+│   │           ├── proc-macro2 v1.0.92 (*)
+│   │           ├── quote v1.0.37 (*)
+│   │           └── syn v2.0.90 (*)
+│   ├── base64 v0.21.7
+│   ├── bytemuck v1.20.0
+│   │   └── bytemuck_derive v1.8.0 (proc-macro)
+│   │       ├── proc-macro2 v1.0.92 (*)
+│   │       ├── quote v1.0.37 (*)
+│   │       └── syn v2.0.90 (*)
+│   ├── chrono v0.4.39
+│   │   └── num-traits v0.2.19
+│   │       └── libm v0.2.11
+│   │       [build-dependencies]
+│   │       └── autocfg v1.4.0
+│   ├── dyn-clone v1.0.17
+│   ├── either v1.13.0
+│   ├── ethnum v1.5.0
+│   ├── fallible-streaming-iterator v0.1.9
+│   ├── foreign_vec v0.1.0
+│   ├── futures v0.3.31
+│   │   ├── futures-channel v0.3.31
+│   │   │   ├── futures-core v0.3.31
+│   │   │   └── futures-sink v0.3.31
+│   │   ├── futures-core v0.3.31
+│   │   ├── futures-executor v0.3.31
+│   │   │   ├── futures-core v0.3.31
+│   │   │   ├── futures-task v0.3.31
+│   │   │   └── futures-util v0.3.31
+│   │   │       ├── futures-channel v0.3.31 (*)
+│   │   │       ├── futures-core v0.3.31
+│   │   │       ├── futures-io v0.3.31
+│   │   │       ├── futures-macro v0.3.31 (proc-macro)
+│   │   │       │   ├── proc-macro2 v1.0.92 (*)
+│   │   │       │   ├── quote v1.0.37 (*)
+│   │   │       │   └── syn v2.0.90 (*)
+│   │   │       ├── futures-sink v0.3.31
+│   │   │       ├── futures-task v0.3.31
+│   │   │       ├── memchr v2.7.4
+│   │   │       ├── pin-project-lite v0.2.15
+│   │   │       ├── pin-utils v0.1.0
+│   │   │       └── slab v0.4.9
+│   │   │           [build-dependencies]
+│   │   │           └── autocfg v1.4.0
+│   │   ├── futures-io v0.3.31
+│   │   ├── futures-sink v0.3.31
+│   │   ├── futures-task v0.3.31
+│   │   └── futures-util v0.3.31 (*)
+│   ├── hash_hasher v2.0.3
+│   ├── hashbrown v0.14.5
+│   │   └── ahash v0.8.11 (*)
+│   ├── num-traits v0.2.19 (*)
+│   ├── parquet2 v0.17.2
+│   │   ├── async-stream v0.3.6
+│   │   │   ├── async-stream-impl v0.3.6 (proc-macro)
+│   │   │   │   ├── proc-macro2 v1.0.92 (*)
+│   │   │   │   ├── quote v1.0.37 (*)
+│   │   │   │   └── syn v2.0.90 (*)
+│   │   │   ├── futures-core v0.3.31
+│   │   │   └── pin-project-lite v0.2.15
+│   │   ├── flate2 v1.0.35
+│   │   │   ├── crc32fast v1.4.2
+│   │   │   │   └── cfg-if v1.0.0
+│   │   │   └── miniz_oxide v0.8.0
+│   │   │       └── adler2 v2.0.0
+│   │   ├── futures v0.3.31 (*)
+│   │   ├── parquet-format-safe v0.2.4
+│   │   │   ├── async-trait v0.1.83 (proc-macro)
+│   │   │   │   ├── proc-macro2 v1.0.92 (*)
+│   │   │   │   ├── quote v1.0.37 (*)
+│   │   │   │   └── syn v2.0.90 (*)
+│   │   │   └── futures v0.3.31 (*)
+│   │   ├── seq-macro v0.3.5 (proc-macro)
+│   │   ├── snap v1.1.1
+│   │   ├── streaming-decompression v0.1.2
+│   │   │   └── fallible-streaming-iterator v0.1.9
+│   │   └── zstd v0.12.4
+│   │       └── zstd-safe v6.0.6
+│   │           ├── libc v0.2.168
+│   │           └── zstd-sys v2.0.13+zstd.1.5.6
+│   │               [build-dependencies]
+│   │               ├── cc v1.2.4
+│   │               │   ├── jobserver v0.1.32
+│   │               │   │   └── libc v0.2.168
+│   │               │   ├── libc v0.2.168
+│   │               │   └── shlex v1.3.0
+│   │               └── pkg-config v0.3.31
+│   ├── simdutf8 v0.1.5
+│   └── streaming-iterator v0.1.9
+│   [build-dependencies]
+│   └── rustc_version v0.4.1
+│       └── semver v1.0.24
+├── atomic_float v1.1.0
+├── bio-types v1.0.4
+│   ├── derive-new v0.6.0 (proc-macro)
+│   │   ├── proc-macro2 v1.0.92 (*)
+│   │   ├── quote v1.0.37 (*)
+│   │   └── syn v2.0.90 (*)
+│   ├── lazy_static v1.5.0
+│   ├── regex v1.11.1
+│   │   ├── aho-corasick v1.1.3
+│   │   │   └── memchr v2.7.4
+│   │   ├── memchr v2.7.4
+│   │   ├── regex-automata v0.4.9
+│   │   │   ├── aho-corasick v1.1.3 (*)
+│   │   │   ├── memchr v2.7.4
+│   │   │   └── regex-syntax v0.8.5
+│   │   └── regex-syntax v0.8.5
+│   ├── serde v1.0.216 (*)
+│   ├── strum_macros v0.26.4 (proc-macro)
+│   │   ├── heck v0.5.0
+│   │   ├── proc-macro2 v1.0.92 (*)
+│   │   ├── quote v1.0.37 (*)
+│   │   ├── rustversion v1.0.18 (proc-macro)
+│   │   └── syn v2.0.90 (*)
+│   └── thiserror v1.0.69
+│       └── thiserror-impl v1.0.69 (proc-macro)
+│           ├── proc-macro2 v1.0.92 (*)
+│           ├── quote v1.0.37 (*)
+│           └── syn v2.0.90 (*)
+├── bstr v1.11.1
+│   ├── memchr v2.7.4
+│   └── regex-automata v0.4.9 (*)
+├── clap v4.5.23
+│   ├── clap_builder v4.5.23
+│   │   ├── anstream v0.6.18
+│   │   │   ├── anstyle v1.0.10
+│   │   │   ├── anstyle-parse v0.2.6
+│   │   │   │   └── utf8parse v0.2.2
+│   │   │   ├── anstyle-query v1.1.2
+│   │   │   ├── colorchoice v1.0.3
+│   │   │   ├── is_terminal_polyfill v1.70.1
+│   │   │   └── utf8parse v0.2.2
+│   │   ├── anstyle v1.0.10
+│   │   ├── clap_lex v0.7.4
+│   │   └── strsim v0.11.1
+│   └── clap_derive v4.5.18 (proc-macro)
+│       ├── heck v0.5.0
+│       ├── proc-macro2 v1.0.92 (*)
+│       ├── quote v1.0.37 (*)
+│       └── syn v2.0.90 (*)
+├── crossbeam v0.8.4
+│   ├── crossbeam-channel v0.5.13
+│   │   └── crossbeam-utils v0.8.20
+│   ├── crossbeam-deque v0.8.5
+│   │   ├── crossbeam-epoch v0.9.18
+│   │   │   └── crossbeam-utils v0.8.20
+│   │   └── crossbeam-utils v0.8.20
+│   ├── crossbeam-epoch v0.9.18 (*)
+│   ├── crossbeam-queue v0.3.11
+│   │   └── crossbeam-utils v0.8.20
+│   └── crossbeam-utils v0.8.20
+├── csv v1.3.1
+│   ├── csv-core v0.1.11
+│   │   └── memchr v2.7.4
+│   ├── itoa v1.0.14
+│   ├── ryu v1.0.18
+│   └── serde v1.0.216 (*)
+├── either v1.13.0
+├── indicatif v0.17.9
+│   ├── console v0.15.8
+│   │   ├── lazy_static v1.5.0
+│   │   ├── libc v0.2.168
+│   │   └── unicode-width v0.1.14
+│   ├── number_prefix v0.4.0
+│   ├── portable-atomic v1.10.0
+│   └── unicode-width v0.2.0
+├── itertools v0.13.0
+│   └── either v1.13.0
+├── kders v0.1.1
+│   ├── anyhow v1.0.94
+│   ├── itertools v0.13.0 (*)
+│   ├── ndarray v0.15.6
+│   │   ├── matrixmultiply v0.3.9
+│   │   │   └── rawpointer v0.2.1
+│   │   │   [build-dependencies]
+│   │   │   └── autocfg v1.4.0
+│   │   ├── num-complex v0.4.6
+│   │   │   └── num-traits v0.2.19 (*)
+│   │   ├── num-integer v0.1.46
+│   │   │   └── num-traits v0.2.19 (*)
+│   │   ├── num-traits v0.2.19 (*)
+│   │   └── rawpointer v0.2.1
+│   ├── ndarray-stats v0.6.0
+│   │   ├── indexmap v2.7.0
+│   │   │   ├── equivalent v1.0.1
+│   │   │   └── hashbrown v0.15.2
+│   │   ├── itertools v0.13.0 (*)
+│   │   ├── ndarray v0.16.1
+│   │   │   ├── matrixmultiply v0.3.9 (*)
+│   │   │   ├── num-complex v0.4.6 (*)
+│   │   │   ├── num-integer v0.1.46 (*)
+│   │   │   ├── num-traits v0.2.19 (*)
+│   │   │   └── rawpointer v0.2.1
+│   │   ├── noisy_float v0.2.0
+│   │   │   └── num-traits v0.2.19 (*)
+│   │   ├── num-integer v0.1.46 (*)
+│   │   ├── num-traits v0.2.19 (*)
+│   │   └── rand v0.8.5
+│   │       ├── libc v0.2.168
+│   │       ├── rand_chacha v0.3.1
+│   │       │   ├── ppv-lite86 v0.2.20
+│   │       │   │   └── zerocopy v0.7.35 (*)
+│   │       │   └── rand_core v0.6.4
+│   │       │       └── getrandom v0.2.15 (*)
+│   │       └── rand_core v0.6.4 (*)
+│   └── num v0.4.3
+│       ├── num-bigint v0.4.6
+│       │   ├── num-integer v0.1.46 (*)
+│       │   └── num-traits v0.2.19 (*)
+│       ├── num-complex v0.4.6 (*)
+│       ├── num-integer v0.1.46 (*)
+│       ├── num-iter v0.1.45
+│       │   ├── num-integer v0.1.46 (*)
+│       │   └── num-traits v0.2.19 (*)
+│       │   [build-dependencies]
+│       │   └── autocfg v1.4.0
+│       ├── num-rational v0.4.2
+│       │   ├── num-bigint v0.4.6 (*)
+│       │   ├── num-integer v0.1.46 (*)
+│       │   └── num-traits v0.2.19 (*)
+│       └── num-traits v0.2.19 (*)
+├── lz4 v1.28.0
+│   └── lz4-sys v1.11.1+lz4-1.10.0
+│       └── libc v0.2.168
+│       [build-dependencies]
+│       └── cc v1.2.4 (*)
+├── minimap2 v0.1.22+minimap2.2.28
+│   ├── libc v0.2.168
+│   ├── minimap2-sys v0.1.20+minimap2.2.28
+│   │   └── libz-sys v1.1.20
+│   │       └── libc v0.2.168
+│   │       [build-dependencies]
+│   │       ├── cc v1.2.4 (*)
+│   │       ├── pkg-config v0.3.31
+│   │       └── vcpkg v0.2.15
+│   │   [build-dependencies]
+│   │   ├── cc v1.2.4 (*)
+│   │   └── pkg-config v0.3.31
+│   └── needletail v0.6.1
+│       ├── buffer-redux v1.0.2
+│       │   └── memchr v2.7.4
+│       ├── bytecount v0.6.8
+│       ├── bzip2 v0.4.4
+│       │   ├── bzip2-sys v0.1.11+1.0.8
+│       │   │   └── libc v0.2.168
+│       │   │   [build-dependencies]
+│       │   │   ├── cc v1.2.4 (*)
+│       │   │   └── pkg-config v0.3.31
+│       │   └── libc v0.2.168
+│       ├── flate2 v1.0.35 (*)
+│       ├── liblzma v0.3.5
+│       │   └── liblzma-sys v0.3.11
+│       │       └── libc v0.2.168
+│       │       [build-dependencies]
+│       │       ├── cc v1.2.4 (*)
+│       │       └── pkg-config v0.3.31
+│       ├── memchr v2.7.4
+│       └── zstd v0.13.2
+│           └── zstd-safe v7.2.1
+│               └── zstd-sys v2.0.13+zstd.1.5.6 (*)
+├── minimap2-sys v0.1.20+minimap2.2.28 (*)
+├── needletail v0.6.1 (*)
+├── noodles-bam v0.70.0
+│   ├── bstr v1.11.1 (*)
+│   ├── byteorder v1.5.0
+│   ├── bytes v1.9.0
+│   ├── indexmap v2.7.0 (*)
+│   ├── memchr v2.7.4
+│   ├── noodles-bgzf v0.33.0
+│   │   ├── byteorder v1.5.0
+│   │   ├── bytes v1.9.0
+│   │   ├── crossbeam-channel v0.5.13 (*)
+│   │   └── flate2 v1.0.35 (*)
+│   ├── noodles-core v0.15.0
+│   │   └── bstr v1.11.1 (*)
+│   ├── noodles-csi v0.40.0
+│   │   ├── bit-vec v0.8.0
+│   │   ├── bstr v1.11.1 (*)
+│   │   ├── byteorder v1.5.0
+│   │   ├── indexmap v2.7.0 (*)
+│   │   ├── noodles-bgzf v0.33.0 (*)
+│   │   └── noodles-core v0.15.0 (*)
+│   └── noodles-sam v0.66.0
+│       ├── bitflags v2.6.0
+│       ├── bstr v1.11.1 (*)
+│       ├── indexmap v2.7.0 (*)
+│       ├── lexical-core v1.0.5
+│       │   ├── lexical-parse-float v1.0.5
+│       │   │   ├── lexical-parse-integer v1.0.5
+│       │   │   │   ├── lexical-util v1.0.6
+│       │   │   │   │   └── static_assertions v1.1.0
+│       │   │   │   └── static_assertions v1.1.0
+│       │   │   ├── lexical-util v1.0.6 (*)
+│       │   │   └── static_assertions v1.1.0
+│       │   ├── lexical-parse-integer v1.0.5 (*)
+│       │   ├── lexical-util v1.0.6 (*)
+│       │   ├── lexical-write-float v1.0.5
+│       │   │   ├── lexical-util v1.0.6 (*)
+│       │   │   ├── lexical-write-integer v1.0.5
+│       │   │   │   ├── lexical-util v1.0.6 (*)
+│       │   │   │   └── static_assertions v1.1.0
+│       │   │   └── static_assertions v1.1.0
+│       │   └── lexical-write-integer v1.0.5 (*)
+│       ├── memchr v2.7.4
+│       ├── noodles-bgzf v0.33.0 (*)
+│       ├── noodles-core v0.15.0 (*)
+│       └── noodles-csi v0.40.0 (*)
+├── noodles-bgzf v0.33.0 (*)
+├── noodles-sam v0.66.0 (*)
+├── num-format v0.4.4
+│   ├── arrayvec v0.7.6
+│   └── itoa v1.0.14
+├── path-tools v0.1.0
+├── rand v0.8.5 (*)
+├── rayon v1.10.0
+│   ├── either v1.13.0
+│   └── rayon-core v1.12.1
+│       ├── crossbeam-deque v0.8.5 (*)
+│       └── crossbeam-utils v0.8.20
+├── rustc-hash v2.1.0
+├── sendable-swapvec v0.4.3
+│   ├── bincode v1.3.3
+│   │   └── serde v1.0.216 (*)
+│   ├── lz4_flex v0.10.0
+│   │   └── twox-hash v1.6.3
+│   │       ├── cfg-if v1.0.0
+│   │       └── static_assertions v1.1.0
+│   ├── miniz_oxide v0.8.0 (*)
+│   ├── serde v1.0.216 (*)
+│   └── tempfile v3.14.0
+│       ├── cfg-if v1.0.0
+│       ├── fastrand v2.3.0
+│       ├── once_cell v1.20.2
+│       └── rustix v0.38.42
+│           ├── bitflags v2.6.0
+│           └── linux-raw-sys v0.4.14
+├── seqcol_rs v0.1.3
+│   ├── anyhow v1.0.94
+│   ├── base64 v0.22.1
+│   ├── itertools v0.13.0 (*)
+│   ├── needletail v0.6.1 (*)
+│   ├── serde_json v1.0.133
+│   │   ├── indexmap v2.7.0 (*)
+│   │   ├── itoa v1.0.14
+│   │   ├── memchr v2.7.4
+│   │   ├── ryu v1.0.18
+│   │   └── serde v1.0.216 (*)
+│   └── sha2 v0.10.8
+│       ├── cfg-if v1.0.0
+│       ├── cpufeatures v0.2.16
+│       ├── digest v0.10.7
+│       │   ├── block-buffer v0.10.4
+│       │   │   └── generic-array v0.14.7
+│       │   │       └── typenum v1.17.0
+│       │   │       [build-dependencies]
+│       │   │       └── version_check v0.9.5
+│       │   └── crypto-common v0.1.6
+│       │       ├── generic-array v0.14.7 (*)
+│       │       └── typenum v1.17.0
+│       └── sha2-asm v0.6.4
+│           [build-dependencies]
+│           └── cc v1.2.4 (*)
+├── serde v1.0.216 (*)
+├── serde_json v1.0.133 (*)
+├── sprs v0.11.2
+│   ├── alga v0.9.3
+│   │   ├── approx v0.3.2
+│   │   │   └── num-traits v0.2.19 (*)
+│   │   ├── num-complex v0.2.4
+│   │   │   └── num-traits v0.2.19 (*)
+│   │   │   [build-dependencies]
+│   │   │   └── autocfg v1.4.0
+│   │   └── num-traits v0.2.19 (*)
+│   ├── ndarray v0.16.1 (*)
+│   ├── num-complex v0.4.6 (*)
+│   ├── num-traits v0.2.19 (*)
+│   ├── num_cpus v1.16.0
+│   │   └── libc v0.2.168
+│   ├── rayon v1.10.0 (*)
+│   └── smallvec v1.13.2
+├── statrs v0.17.1
+│   ├── approx v0.5.1
+│   │   └── num-traits v0.2.19 (*)
+│   ├── nalgebra v0.32.6
+│   │   ├── approx v0.5.1 (*)
+│   │   ├── matrixmultiply v0.3.9 (*)
+│   │   ├── nalgebra-macros v0.2.2 (proc-macro)
+│   │   │   ├── proc-macro2 v1.0.92 (*)
+│   │   │   ├── quote v1.0.37 (*)
+│   │   │   └── syn v2.0.90 (*)
+│   │   ├── num-complex v0.4.6 (*)
+│   │   ├── num-rational v0.4.2 (*)
+│   │   ├── num-traits v0.2.19 (*)
+│   │   ├── rand v0.8.5 (*)
+│   │   ├── rand_distr v0.4.3
+│   │   │   ├── num-traits v0.2.19 (*)
+│   │   │   └── rand v0.8.5 (*)
+│   │   ├── simba v0.8.1
+│   │   │   ├── approx v0.5.1 (*)
+│   │   │   ├── num-complex v0.4.6 (*)
+│   │   │   ├── num-traits v0.2.19 (*)
+│   │   │   ├── paste v1.0.15 (proc-macro)
+│   │   │   └── wide v0.7.30
+│   │   │       ├── bytemuck v1.20.0 (*)
+│   │   │       └── safe_arch v0.7.2
+│   │   │           └── bytemuck v1.20.0 (*)
+│   │   └── typenum v1.17.0
+│   ├── num-traits v0.2.19 (*)
+│   └── rand v0.8.5 (*)
+├── tabled v0.17.0
+│   ├── papergrid v0.13.0
+│   │   ├── bytecount v0.6.8
+│   │   ├── fnv v1.0.7
+│   │   └── unicode-width v0.2.0
+│   └── tabled_derive v0.9.0 (proc-macro)
+│       ├── heck v0.4.1
+│       ├── proc-macro-error2 v2.0.1
+│       │   ├── proc-macro-error-attr2 v2.0.0 (proc-macro)
+│       │   │   ├── proc-macro2 v1.0.92 (*)
+│       │   │   └── quote v1.0.37 (*)
+│       │   ├── proc-macro2 v1.0.92 (*)
+│       │   ├── quote v1.0.37 (*)
+│       │   └── syn v2.0.90 (*)
+│       ├── proc-macro2 v1.0.92 (*)
+│       ├── quote v1.0.37 (*)
+│       └── syn v1.0.109
+│           ├── proc-macro2 v1.0.92 (*)
+│           ├── quote v1.0.37 (*)
+│           └── unicode-ident v1.0.14
+├── tracing v0.1.41
+│   ├── pin-project-lite v0.2.15
+│   ├── tracing-attributes v0.1.28 (proc-macro)
+│   │   ├── proc-macro2 v1.0.92 (*)
+│   │   ├── quote v1.0.37 (*)
+│   │   └── syn v2.0.90 (*)
+│   └── tracing-core v0.1.33
+│       └── once_cell v1.20.2
+├── tracing-subscriber v0.3.19
+│   ├── matchers v0.1.0
+│   │   └── regex-automata v0.1.10
+│   │       └── regex-syntax v0.6.29
+│   ├── nu-ansi-term v0.46.0
+│   │   └── overload v0.1.1
+│   ├── once_cell v1.20.2
+│   ├── regex v1.11.1 (*)
+│   ├── sharded-slab v0.1.7
+│   │   └── lazy_static v1.5.0
+│   ├── smallvec v1.13.2
+│   ├── thread_local v1.1.8
+│   │   ├── cfg-if v1.0.0
+│   │   └── once_cell v1.20.2
+│   ├── tracing v0.1.41 (*)
+│   ├── tracing-core v0.1.33 (*)
+│   └── tracing-log v0.2.0
+│       ├── log v0.4.22
+│       ├── once_cell v1.20.2
+│       └── tracing-core v0.1.33 (*)
+└── typed-builder v0.20.0
+    └── typed-builder-macro v0.20.0 (proc-macro)
+        ├── proc-macro2 v1.0.92 (*)
+        ├── quote v1.0.37 (*)
+        └── syn v2.0.90 (*)
