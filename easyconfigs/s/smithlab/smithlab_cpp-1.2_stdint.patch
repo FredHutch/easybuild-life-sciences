@@ -1,0 +1,11 @@
+diff -ruN smithlab_cpp-1.2.orig/sam_record.hpp smithlab_cpp-1.2/sam_record.hpp
+--- smithlab_cpp-1.2.orig/sam_record.hpp	2022-07-19 20:16:27.000000000 +0000
++++ smithlab_cpp-1.2/sam_record.hpp	2025-03-26 12:05:56.705428000 +0000
+@@ -19,6 +19,7 @@
+ #ifndef SAM_RECORD_HPP
+ #define SAM_RECORD_HPP
+ 
++#include <stdint.h>
+ #include <string>
+ #include <vector>
+ #include <iostream>
