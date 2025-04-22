@@ -51,6 +51,7 @@ dependencies = [
     ('unixODBC', '2.3.12'),
     ('fontconfig', '2.14.2'),
     ('freetype', '2.13.2'),
+    ('Java', '11', '', True),
 ]
 
 exts_default_options = {
@@ -886,6 +887,20 @@ exts_list = [
     ('paws.security.identity', '0.7.0'),
     ('paws.storage', '0.7.0'),
     ('paws', '0.7.0'),
+    ('rJava', '1.0-11'),
+        ('signal', '1.8-1'),
+        ('intergraph', '2.0-4'),
+        ('ggnetwork', '0.5.13'),
+    ('CaSpER', 'v2.0', {
+        'sources': [{
+            'filename': SOURCE_TAR_GZ,
+            'git_config': {
+                'url': 'https://github.com/akdess',
+                'repo_name': 'CaSpER',
+                'commit': '8aae116f2fa5cb55ac62259633b246b9d7b021b4',
+            }
+        }],
+    }),
 ]
 
 modextrapaths = {'R_LIBS_SITE': ''}
