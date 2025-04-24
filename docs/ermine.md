@@ -17,7 +17,7 @@ ermine is GPU server owned by the Phil Bradley's lab. Deployed 2022.
   | Memory        | 1044409212 kB (996Gb)|  
   | OS            | Ubuntu 18.04 |
 
-Bionic Software Inventory
+### Bionic Software Inventory
  - [Life Science Software Inventory]({{ site.baseurl }}/ermine-modules-18.04/)
  - [Full Software Invensotry]({{ site.baseurl }}/ermine-all-modules-18.04/)
 

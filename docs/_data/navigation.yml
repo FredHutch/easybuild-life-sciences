@@ -39,5 +39,5 @@ docs:
         url: /about/
   - title: "SciComp Managed Systems"
     children:
-      -- title: "ermine"
-         url: /ermine/
+      - title: "ermine"
+        url: /ermine/
