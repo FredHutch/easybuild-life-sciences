@@ -1,6 +1,0 @@
-diff -ruN RSclient.orig/src/Makevars RSclient/src/Makevars
---- RSclient.orig/src/Makevars	2021-10-30 23:59:07.000000000 -0700
-+++ RSclient/src/Makevars	2021-11-24 21:22:22.327734000 -0800
-@@ -1 +1 @@
--PKG_LIBS=-lssl -lcrypto
-+PKG_LIBS=-L/usr/lib/x86_64-linux-gnu -lssl -lcrypto
