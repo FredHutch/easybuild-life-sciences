@@ -26,6 +26,7 @@ local_bins = ['svm-%s' % x for x in ['predict', 'scale', 'train']]
 
 files_to_copy = [
     (['*.o'], 'lib'),
+    (['*.hpp'], 'include'),
 ]
 
 sanity_check_paths = {
