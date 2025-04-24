@@ -8,7 +8,7 @@ sidebar:
   nav: "docs"
 ---
 
-ermine is a GPU server owned by the Phil Bradley's lab. Deployed 2022.
+ermine is a GPU server owned by Phil Bradley's lab.
 
   | System Info |
   |-------------|-------|
