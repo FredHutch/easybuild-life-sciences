@@ -37,3 +37,7 @@ docs:
         url: /dot/
       - title: "About"
         url: /about/
+  - title: "SciComp Managed Systems"
+    children:
+      -- title: "ermine"
+         url: /ermine/
