@@ -24,6 +24,7 @@ dependencies = [
     ('Clp', '1.17.9'),
     ('Cgl', '0.60.8'),
     ('GLPK', '5.0'),
+    ('METIS', '5.1.0'),
 ]
 
 # Use BLAS/LAPACK from OpenBLAS
