@@ -1,6 +1,11 @@
 ---
 title: quokka All LMOD Modules Bionic
 date: 2025-04-24
+layout: single
+toc: true
+toc_label: "On This Page"
+sidebar:
+  nav: "docs"
 ---
 
  - [ATK/2.36.0-GCCcore-11.2.0](https://developer.gnome.org/atk/)

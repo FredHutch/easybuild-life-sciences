@@ -1,6 +1,11 @@
 ---
 title: quokka Bio Modules Bionic
 date: 2025-04-24
+layout: single
+toc: true
+toc_label: "On This Page"
+sidebar:
+  nav: "docs"
 ---
 
  - [DeepCell/0.11.1-foss-2021b-CUDA-11.4.1](https://deepcell.readthedocs.io/en/master/)
