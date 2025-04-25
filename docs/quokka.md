@@ -20,8 +20,8 @@ quokka is a compute server owned by Phil Bradley's Lab.
   | OS            | Ubuntu 18.04 |
 
 ### Bionic Software Inventory
- - [Life Science Software Inventory]({{ site.baseurl }}/quokka-bio-modules-18.04/)
- - [Full Software Invensotry]({{ site.baseurl }}/quokka-all-modules-18.04/)
+ - [Life Science Software Inventory]({{ site.baseurl }}/sw_inventory/quokka-bio-modules-18.04/)
+ - [Full Software Invensotry]({{ site.baseurl }}/sw_inventory/quokka-all-modules-18.04/)
 
 ### Noble Software Inventory
 quokka has a pending OS upgrade to Noble

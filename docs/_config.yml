@@ -32,9 +32,6 @@ collections:
   announcements:
     output: true
     permalink: /:collection/:path/
-  sw_inventory:
-    output: true
-    permalink: /:collection/:path/
 
 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -239,15 +236,6 @@ defaults:
   - scope:
       path: ""
       type: python 
-    values:
-      layout: single
-      sidebar:
-        nav: "docs"
-
-  # _sw_inventory
-  - scope:
-      path: ""
-      type: sw_inventory 
     values:
       layout: single
       sidebar:
