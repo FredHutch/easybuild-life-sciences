@@ -41,3 +41,5 @@ docs:
     children:
       - title: "ermine"
         url: /ermine/
+      - title: "quoka"
+        url: /quoka/

@@ -2,13 +2,14 @@
 title: Quokka System 
 layout: single
 permalink: /quokka/
+collection: sw_inventory
 toc: true
 toc_label: "On This Page"
 sidebar:
   nav: "docs"
 ---
 
-quokka is a GPU server owned by Phil Bradley's lab.
+quokka is a compute server owned by Phil Bradley's Lab.
 
   | System Info |
   |-------------|-------|

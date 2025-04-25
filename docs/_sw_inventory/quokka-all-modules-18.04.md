@@ -1,12 +1,6 @@
 ---
-title: Bio Modules 18.04
-layout: single
-permalink: /quokka-all-modules-18.04/
-created: 2025-04-24
-toc: true
-toc_label: "On This Page"
-sidebar:
-  nav: "docs"
+title: quokka All LMOD Modules Bionic
+date: 2025-04-24
 ---
 
  - [ATK/2.36.0-GCCcore-11.2.0](https://developer.gnome.org/atk/)

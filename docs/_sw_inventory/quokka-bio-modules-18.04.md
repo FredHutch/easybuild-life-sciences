@@ -1,12 +1,6 @@
 ---
-title: Bio Modules 18.04
-layout: single
-permalink: /quokka-bio-modules-18.04/
-created: 2025-04-24
-toc: true
-toc_label: "On This Page"
-sidebar:
-  nav: "docs"
+title: quokka Bio Modules Bionic
+date: 2025-04-24
 ---
 
  - [DeepCell/0.11.1-foss-2021b-CUDA-11.4.1](https://deepcell.readthedocs.io/en/master/)
