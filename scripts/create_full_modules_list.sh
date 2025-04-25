@@ -14,6 +14,11 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
     exit 1
 fi
 
+label=""
+if [[ $# -eq 1 ]]; then
+    label="${1}-"
+fi
+
 # extract major.minor from OS relase: VERSION="16.04.3 LTS (Xenial Xerus)"
 os_ver=`grep '^VERSION=' /etc/os-release | sed 's/.*="\([0-9]*\.[0-9]*\).*$/\1/'`
 inventory=all-modules-${os_ver}.md
@@ -33,11 +38,11 @@ fi
 
 echo Collecting Inventory
 cd $base_dir
-$spider -o spider-json ${module_dir}/all | python3 -mjson.tool >${docs_dir}/all-modules-${os_ver}.json
+json_in=${docs_dir}/${label}all-modules-${os_ver}.json
+$spider -o spider-json ${module_dir}/all | python3 -mjson.tool >${json_in}
 
 echo Generating Markdown
-json_in=${docs_dir}/all-modules-${os_ver}.json
-md_file=all-modules-${os_ver}
+md_file=${label}all-modules-${os_ver}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}

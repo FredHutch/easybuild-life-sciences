@@ -16,6 +16,12 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
     exit 1
 fi
 
+label=""
+if [[ $# -eq 1 ]]; then
+   label="${1}-"
+   echo Lable: $label
+fi
+
 # get VERSION_ID from /etc/os-release 
 . /etc/os-release
 
@@ -40,12 +46,11 @@ for class in $moduleclass; do
    fi
 done
 echo $module_search_path
-$spider -o spider-json $module_search_path | python3 -mjson.tool > modules-${VERSION_ID}.json
-cp modules-${VERSION_ID}.json ${docs_dir} 
+json_in=${docs_dir}/${label}bio-modules-${VERSION_ID}.json
+$spider -o spider-json $module_search_path | python3 -mjson.tool > ${json_in} 
 
 echo Generating Markdown
-json_in=${docs_dir}/modules-${VERSION_ID}.json
-md_file=bio-modules-${VERSION_ID}
+md_file=${label}bio-modules-${VERSION_ID}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
