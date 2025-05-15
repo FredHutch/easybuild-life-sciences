@@ -16,9 +16,9 @@ docs:
       - title: "Chorus - Full Software Inventory"
         url: /sw_inventory/chorus-all-modules-24.04/
       - title: "Gizmo - Bio Software Inventory"
-        url: /sw_inventory/bio-modules-18.04/
+        url: /sw_inventory/gizmo-bio-modules-18.04/
       - title: "Gizmo - Full Software Inventory"
-        url: /sw_inventory/all-modules-18.04/
+        url: /sw_inventory/gizmo-all-modules-18.04/
       - title: "R Modules"
         url: /r/
       - title: "Python Modules"
