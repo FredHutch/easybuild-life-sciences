@@ -1,5 +1,5 @@
 ---
-title: $label Bio Modules 24.04
+title: chorus Bio Modules 24.04
 layout: single
 permalink: /sw_inventory/chorus-bio-modules-24.04/
 created: 2025-05-15
@@ -60,13 +60,13 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  - [BindCraft/1.1.0-foss-2023a](https://github.com/martinpacesa/BindCraft)
 Simple binder design pipeline using AlphaFold2 backpropagation, MPNN, and PyRosetta.
  Select your target and let the script do the rest of the work and finish once you have enough designs to order!
- - [Bio-DB-HTS/3.01-GCC-12.2.0](https://metacpan.org/release/Bio-DB-HTS)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Bio-DB-HTS/Bio-DB-HTS-3.01-GCC-12.2.0.eb)
+ - [Bio-DB-HTS/3.01-GCC-13.3.0](https://metacpan.org/release/Bio-DB-HTS)
 Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
- - [BioPerl/1.7.8-GCCcore-12.3.0](https://bioperl.org/)
+ - [BioPerl/1.7.8-GCCcore-12.2.0](http://www.bioperl.org/)
 Bioperl is the product of a community effort to produce Perl code which is useful in biology.
  Examples include Sequence objects, Alignment objects and database searching objects.
- - [Biopython/1.84-foss-2023b](https://www.biopython.org)
+ - [Biopython/1.84-foss-2024a](https://www.biopython.org)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Biopython/Biopython-1.84-foss-2024a.eb)
 Biopython is a set of freely available tools for biological
  computation written in Python by an international team of developers. It is
  a distributed collaborative effort to develop Python libraries and
@@ -112,7 +112,7 @@ CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
 hypothesis based on these. 
- - [Cgl/0.60.8-foss-2023a](https://github.com/coin-or/Cgl)
+ - [Cgl/0.60.8-foss-2023b](https://github.com/coin-or/Cgl)
 The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators that
 can be used with other COIN-OR packages that make use of cuts, such as, among
 others, the linear solver Clp or the mixed integer linear programming solvers
@@ -120,8 +120,7 @@ Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or
 communicate with a solver. It does not directly call a solver.
  - [CheckM2/1.1.0-foss-2024a](https://github.com/chklovski/CheckM2/)
 Assessing the quality of metagenome-derived genome bins using machine learning
- - [Clp/1.17.9-foss-2023b](https://github.com/coin-or/Clp)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/Clp/Clp-1.17.9-foss-2023b.eb)
+ - [Clp/1.17.9-foss-2023a](https://github.com/coin-or/Clp)
 Clp (Coin-or linear programming) is an open-source linear programming solver.
 It is primarily meant to be used as a callable library, but a basic,
 stand-alone executable version is also available.
@@ -172,7 +171,7 @@ pipeline.
 FastTree infers approximately-maximum-likelihood phylogenetic trees from alignments of nucleotide
  or protein sequences. FastTree can handle alignments with up to a million of sequences in a reasonable amount of
  time and memory. 
- - [Flax/0.8.4-gfbf-2023a-CUDA-12.1.1](https://flax.readthedocs.io)
+ - [Flax/0.8.4-gfbf-2023a](https://flax.readthedocs.io)
 Flax is a high-performance neural network library and ecosystem for JAX that is
 designed for flexibility: Try new forms of training by forking an example and
 by modifying the training loop, not by adding features to a framework.
@@ -202,7 +201,7 @@ It also contains the gmxapi extension for the single precision MPI build.
 The HH-suite is an open-source software package
  for sensitive protein sequence searching based on the pairwise
  alignment of hidden Markov models (HMMs).
- - [HMMER/3.4-gompi-2023a](http://hmmer.org/)
+ - [HMMER/3.4-gompi-2024a](http://hmmer.org/)
 HMMER is used for searching sequence databases for homologs
  of protein sequences, and for making protein sequence alignments. It
  implements methods using probabilistic models called profile hidden Markov
@@ -255,14 +254,14 @@ Model Based Analysis for ChIP-Seq data
 MAFFT is a multiple sequence alignment program for unix-like operating systems.
 It offers a range of multiple alignment methods, L-INS-i (accurate; for alignment
 of <∼200 sequences), FFT-NS-2 (fast; for alignment of <∼30,000 sequences), etc.
- - [METIS/5.1.0-GCCcore-12.2.0](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
+ - [METIS/5.1.0-GCCcore-12.3.0](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
 METIS is a set of serial programs for partitioning graphs, partitioning
  finite element meshes, and producing fill reducing orderings for sparse
  matrices. The algorithms implemented in METIS are based on the multilevel
  recursive-bisection, multilevel k-way, and multi-constraint partitioning
  schemes.
 
- - [MPC/1.3.1-GCCcore-12.3.0](http://www.multiprecision.org/)
+ - [MPC/1.3.1-GCCcore-13.2.0](http://www.multiprecision.org/)
 Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
@@ -274,7 +273,7 @@ Gnu Mpc is a C library for the arithmetic of
 The MPFR library is a C library for multiple-precision floating-point
  computations with correct rounding.
 
- - [MUMPS/5.6.1-foss-2023a-metis](https://graal.ens-lyon.fr/MUMPS/)
+ - [MUMPS/5.6.1-foss-2022b-metis](https://graal.ens-lyon.fr/MUMPS/)
 A parallel sparse direct solver
  - [MUMmer/4.0.0rc1-GCCcore-12.3.0](https://mummer.sourceforge.net/)
 MUMmer is a system for rapidly aligning entire genomes,
@@ -327,7 +326,8 @@ PyRosetta is an interactive Python-based interface to the powerful Rosetta molec
 suite. It enables users to design their own custom molecular modeling algorithms using Rosetta
 sampling methods and energy functions.
 
- - [PyTorch/2.1.2-foss-2023a](https://pytorch.org/)
+ - [PyTorch/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTorch/PyTorch-2.1.2-foss-2023a-CUDA-12.1.1.eb)
 Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 PyTorch is a deep learning framework that puts Python first.
  - [PyTorch-bundle/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
@@ -339,7 +339,7 @@ Pysam is a python module for reading and manipulating Samfiles.
  - [QIIME2/2024.5.0-foss-2023a](https://qiime2.org)
 QIIME 2 is a powerful, extensible, and decentralized microbiome bioinformatics platform that is free,
 open source, and community developed.
- - [Qhull/2020.2-GCCcore-13.2.0](http://www.qhull.org)
+ - [Qhull/2020.2-GCCcore-12.2.0](http://www.qhull.org)
 Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
  halfspace intersection about a point, furthest-site Delaunay triangulation,
  and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and
@@ -382,8 +382,7 @@ Sambamba is a high performance modern robust and fast tool
  (and library), written in the D programming language, for working with SAM
  and BAM files. Current functionality is an important subset of samtools
  functionality, including view, index, sort, markdup, and depth.
- - [Seaborn/0.13.2-gfbf-2023b](https://seaborn.pydata.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Seaborn/Seaborn-0.13.2-gfbf-2023b.eb)
+ - [Seaborn/0.13.2-gfbf-2023a](https://seaborn.pydata.org/)
 Seaborn is a Python visualization library based on matplotlib.
  It provides a high-level interface for drawing attractive statistical graphics. 
  - [Shapely/2.0.1-gfbf-2023a](https://github.com/Toblerity/Shapely)
@@ -393,8 +392,8 @@ It is based on the widely deployed GEOS (the engine of PostGIS) and JTS (from wh
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Sniffles/Sniffles-2.5.2-GCC-13.3.0.eb)
 A fast structural variant caller for long-read sequencing,
  Sniffles2 accurately detect SVs on germline, somatic and population-level for PacBio and Oxford Nanopore read data.
- - [Telescope/1.0.3-gfbf-2022b](https://github.com/mlbendall/telescope)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-gfbf-2022b.eb)
+ - [Telescope/1.0.3-20230222-gfbf-2022b](https://github.com/mlbendall/telescope)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-20230222-gfbf-2022b.eb)
 Single locus resolution of Transposable ELEment expression using next-generation sequencing.
  - [UMI-tools/1.1.4-foss-2023b](https://umi-tools.readthedocs.io)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/u/UMI-tools/UMI-tools-1.1.4-foss-2023b.eb)
@@ -484,10 +483,10 @@ focus are evolutionary placements of short environmental sequences on a
 reference phylogenetic tree. Such data is typically produced by tools like
 EPA-ng, RAxML-EPA or pplacer and usually stored in jplace files.
 
- - [gffread/0.12.7-GCCcore-12.3.0](https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread)
+ - [gffread/0.12.7-GCCcore-12.2.0](https://ccb.jhu.edu/software/stringtie/gff.shtml#gffread)
 GFF/GTF parsing utility providing format conversions,
 region filtering, FASTA sequence extraction and more.
- - [gmpy2/2.1.5-GCC-12.3.0](https://github.com/aleaxit/gmpy)
+ - [gmpy2/2.1.5-GCC-13.2.0](https://github.com/aleaxit/gmpy)
 GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
  - [jax/0.4.25-gfbf-2023a](https://jax.readthedocs.io/)
 Composable transformations of Python+NumPy programs:
@@ -496,7 +495,7 @@ differentiate, vectorize, JIT to GPU/TPU, and more
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/k/kallisto/kallisto-0.50.1-foss-2022b.eb)
 kallisto is a program for quantifying abundances of transcripts from RNA-Seq data, or more generally
  of target sequences using high-throughput sequencing reads.
- - [libcerf/2.3-GCCcore-12.2.0](https://jugit.fz-juelich.de/mlz/libcerf)
+ - [libcerf/2.3-GCCcore-12.3.0](https://jugit.fz-juelich.de/mlz/libcerf)
 libcerf is a self-contained numeric library that provides an efficient and
  accurate implementation of complex error functions, along with Dawson,
  Faddeeva, and Voigt functions.
