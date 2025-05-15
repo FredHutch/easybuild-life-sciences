@@ -1,8 +1,8 @@
 ---
-title: ermine Bio Modules 18.04
+title: Bio Modules 18.04
 layout: single
-permalink: /ermine-bio-modules-18.04/
-created: 2025-04-23
+permalink: /sw_inventory/ermine-bio-modules-18.04/
+created: 2025-05-15
 toc: true
 toc_label: "On This Page"
 sidebar:
@@ -29,16 +29,15 @@ Eigen is a C++ template library for linear algebra: matrices, vectors, numerical
  and related algorithms.
  - [GEOS/3.9.1-GCC-11.2.0](https://trac.osgeo.org/geos)
 GEOS (Geometry Engine
- - [GMP/6.2.1-GCCcore-10.3.0](https://gmplib.org/)
+ - [GMP/6.2.1-GCCcore-11.2.0](https://gmplib.org/)
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
- - [HH-suite/3.3.0-gompi-2021b](https://github.com/soedinglab/hh-suite)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/h/HH-suite/HH-suite-3.3.0-gompi-2021b.eb)
+ - [HH-suite/3.3.0-gompi-2021a](https://github.com/soedinglab/hh-suite)
 The HH-suite is an open-source software package 
 for sensitive protein sequence searching based on the pairwise 
 alignment of hidden Markov models (HMMs).
- - [HMMER/3.3.2-gompi-2021a](http://hmmer.org/)
+ - [HMMER/3.3.2-gompi-2021b](http://hmmer.org/)
 HMMER is used for searching sequence databases for homologs
  of protein sequences, and for making protein sequence alignments. It
  implements methods using probabilistic models called profile hidden Markov

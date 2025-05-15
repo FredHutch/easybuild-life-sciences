@@ -27,7 +27,7 @@ fi
 
 # remove the $repo from left everything else; add the $repo and the "/docs" dir back
 base_dir=${PWD%${repo}*}${repo}
-docs_dir=${base_dir}/docs
+docs_dir=${base_dir}/docs/sw_inventory
 scripts_dir=${base_dir}/scripts
 
 # Location of LMOD modules
@@ -56,7 +56,7 @@ md_out=${docs_dir}/${md_file}.md
 echo '---' > ${md_out}
 echo 'title: Bio Modules' $VERSION_ID >> ${md_out}
 echo 'layout: single' >> ${md_out}
-echo "permalink: /${md_file}/" >> ${md_out}
+echo "permalink: /sw_inventory/${md_file}/" >> ${md_out}
 echo 'created: '`date +"%Y-%m-%d"` >> ${md_out}
 echo 'toc: true' >> ${md_out}
 echo 'toc_label: "On This Page"' >> ${md_out}

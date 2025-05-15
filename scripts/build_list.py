@@ -1,39 +1,39 @@
 #!/usr/bin/env python3
 
 """
+file: build_list.py
 Create a list of software that needs to be built.
 
-Filter by toolchain
+Build list is based on a existing system
+
 input is output from spider *.json file
 """
 
-from toolchain import toolchain
+from toolchain import Toolchain
 import json
 import sys
+import os
 
-data = json.load(sys.stdin)
-packages = data.keys()
-slist = sorted(packages)
-tc = toolchain('2022b')
+""" <cutoff> is the lowest matching tool chain to be used """
+cutoff = '2022b'
 
-for p in slist:
-    pac = data[p]
-    paths = list(pac.keys())
-    if len(paths) == 1:
-       latest = pac[paths[0]]
-    else:
-       maxVal = None
-       for release in pac:
-          verVal = pac[release]['pV']
-          if maxVal and verVal > maxVal:
-              latest = pac[release]
-              maxVal = verVal
-          if not maxVal:
-              latest = pac[release]
-              maxVal = verVal
-              latestVersion = pac[release]['Version']
-    if tc.tc_ge(latest['Version']):
-        print('{}:{}'.format(p,latest['Version']))
-    else:
-        print('Needs updated: {}:{}.eb'.format(p,latest['Version']), file=sys.stderr)
+if len(sys.argv) > 1:
+    with open(sys.argv[1]) as f:
+        data = json.load(f)
+else:
+    print(f'usage: build_list json_file')
+    sys.exit(1)
 
+tc_tools = Toolchain(cutoff)
+
+for p in data.keys():
+    for name in data[p]:
+        print(f"name: {name}")
+        if tc_tools.cutoff(data[p][name]['fullName']):
+            if os.path.isfile(name):
+                print(f"Installed: {name}")
+            else:
+                eb = data[p][name]['fullName'].replace('/', '-') + ".eb"
+                print(f"eb {eb} --robot")
+        else:
+            print(f"== cutoff: {data[p][name]['fullName']}")

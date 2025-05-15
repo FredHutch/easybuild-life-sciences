@@ -1,5 +1,5 @@
 
-class toolchain():
+class Toolchain():
     """
         methods for working with EasyBuild toolchains
     """
@@ -35,6 +35,15 @@ class toolchain():
         }
         if tc in self.tc_versions:
            self.tc_index = self.tc_versions[tc]
+
+    def cutoff(self, mod_name):
+        """ return true if mod_name has toolchain GE to tc
+        """
+        for i in range(0,self.tc_max):
+            for tc_name in self.toolchains[i]:
+               if tc_name in mod_name:
+                 return i >= self.tc_versions[self.tc]
+        return True 
 
     def tc_trim(self, suffix):
         """ return <suffix> with out the toolchain text
