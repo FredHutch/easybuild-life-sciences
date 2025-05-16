@@ -58,8 +58,10 @@ for p in slist:
        elif isinstance(text, str):
            descrp = text
    if 'whatis' in latest:
+       entry = None
        entry = [x for x in latest['whatis'] if 'Homepage: ' in x]
-       text = entry[0].split('Homepage: ')[1]
+       if entry and 'Homepage: ' in entry:
+           text = entry[0].split('Homepage: ')[1]
        if isinstance(text, bytes):
            url = text.decode()
        elif isinstance(text, str):
