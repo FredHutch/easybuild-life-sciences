@@ -1,5 +1,5 @@
 ---
-title: Bio Modules 18.04
+title: ermine Bio Modules 18.04
 layout: single
 permalink: /sw_inventory/ermine-bio-modules-18.04/
 created: 2025-05-15
@@ -18,22 +18,23 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  but is also a framework for testing evolutionary hypotheses without conditioning on a single
  tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted
  proportional to its posterior probability. 
- - [Biopython/1.79-foss-2021a](https://www.biopython.org)
+ - [Biopython/1.79-foss-2021b](https://www.biopython.org)
 Biopython is a set of freely available tools for biological
  computation written in Python by an international team of developers. It is
  a distributed collaborative effort to develop Python libraries and
  applications which address the needs of current and future work in
  bioinformatics. 
- - [Eigen/3.3.9-GCCcore-11.2.0](https://eigen.tuxfamily.org)
+ - [Eigen/3.3.9-GCCcore-10.3.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [GEOS/3.9.1-GCC-11.2.0](https://trac.osgeo.org/geos)
 GEOS (Geometry Engine
- - [GMP/6.2.1-GCCcore-11.2.0](https://gmplib.org/)
+ - [GMP/6.2.1-GCCcore-10.3.0](https://gmplib.org/)
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
- - [HH-suite/3.3.0-gompi-2021a](https://github.com/soedinglab/hh-suite)
+ - [HH-suite/3.3.0-gompi-2021b](https://github.com/soedinglab/hh-suite)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/h/HH-suite/HH-suite-3.3.0-gompi-2021b.eb)
 The HH-suite is an open-source software package 
 for sensitive protein sequence searching based on the pairwise 
 alignment of hidden Markov models (HMMs).

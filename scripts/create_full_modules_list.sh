@@ -46,7 +46,7 @@ md_file=${label}all-modules-${os_ver}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
-echo 'title: All Modules' $os_ver >> ${md_out}
+echo "title: $label All Modules" $os_ver >> ${md_out}
 echo "permalink: /sw_inventory/${md_file}/" >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo 'toc: true' >> ${md_out}

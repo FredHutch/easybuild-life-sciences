@@ -56,7 +56,6 @@ dependencies = [
     ('statsmodels', '0.14.1'),
     ('cryptography', '41.0.1'),
     ('Blosc', '1.21.5'),
-    ('dask', '2023.12.1'),
     ('PostgreSQL', '16.1'),
     ('SQLAlchemy', '2.0.25'),
     ('typing-extensions', '4.9.0'),
@@ -702,9 +701,6 @@ exts_list = [
     ('first', '2.0.2', {
     }),
     ('orderedmultidict', '1.0.1', {
-    }),
-    ('importlib', '1.0.4', {
-        'source_tmpl': '%(name)s-%(version)s.zip',
     }),
     ('contextlib2', '21.6.0', {
     }),

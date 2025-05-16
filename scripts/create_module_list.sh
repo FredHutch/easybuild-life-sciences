@@ -18,7 +18,7 @@ fi
 
 label=""
 if [[ $# -eq 1 ]]; then
-   label="${1}-"
+   label="${1}"
    echo Lable: $label
 fi
 
@@ -46,15 +46,15 @@ for class in $moduleclass; do
    fi
 done
 echo $module_search_path
-json_in=${docs_dir}/${label}bio-modules-${VERSION_ID}.json
+json_in=${docs_dir}/${label}-bio-modules-${VERSION_ID}.json
 $spider -o spider-json $module_search_path | python3 -mjson.tool > ${json_in} 
 
 echo Generating Markdown
-md_file=${label}bio-modules-${VERSION_ID}
+md_file=${label}-bio-modules-${VERSION_ID}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
-echo 'title: Bio Modules' $VERSION_ID >> ${md_out}
+echo "title: $label Bio Modules" $VERSION_ID >> ${md_out}
 echo 'layout: single' >> ${md_out}
 echo "permalink: /sw_inventory/${md_file}/" >> ${md_out}
 echo 'created: '`date +"%Y-%m-%d"` >> ${md_out}
