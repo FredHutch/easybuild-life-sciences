@@ -1,0 +1,33 @@
+name = 'MRtrix'
+version = '3.0.5'
+
+homepage = 'http://www.brain.org.au/software/index.html#mrtrix'
+description = """MRtrix provides a set of tools to perform diffusion-weighted MR
+ white-matter tractography in a manner robust to crossing fibres, using
+ constrained spherical deconvolution (CSD) and probabilistic streamlines."""
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+toolchainopts = {'cstd': 'c++11'}
+
+source_urls = ['https://github.com/MRtrix3/mrtrix3/archive/']
+sources = [{'source_download': '%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+checksums = ['ee85e1a0e64e81507cb17adbe9c5b4b84b861f1daa2aacad13436801f65a4b06']
+
+builddependencies = [
+    ('Eigen', '3.4.0'),
+    ('pkgconf', '2.0.3'),
+]
+
+dependencies = [
+    ('Python', '3.11.5'),
+    ('zlib', '1.2.13'),
+    ('Mesa', '23.1.9'),
+    ('Qt5', '5.15.13'),
+    ('LibTIFF', '4.6.0'),
+    ('FFTW', '3.3.10'),
+    ('libpng', '1.6.40'),
+]
+
+sanity_check_commands = ['mrfilter --help']
+
+moduleclass = 'bio'
