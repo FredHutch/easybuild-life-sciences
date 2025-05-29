@@ -1,0 +1,44 @@
+easyblock = 'CMakeMake'
+
+name = 'ANTs'
+version = '2.6.0'
+
+homepage = 'https://stnava.github.io/ANTs/'
+description = """ANTs extracts information from complex datasets that include
+ imaging. ANTs is useful for managing, interpreting and visualizing
+ multidimensional data."""
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+toolchainopts = {'pic': True}
+
+source_urls = ['https://github.com/ANTsX/ANTs/archive/']
+sources = [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}]
+checksums = []
+
+builddependencies = [('CMake', '3.27.6')]
+
+dependencies = [
+    ('Python', '3.11.5'),
+    ('VTK', '9.3.0'),
+]
+
+configopts = ' '.join(['-DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=OFF'
+    '-DUSE_VTK=ON -DUSE_SYSTEM_VTK=ON'
+    '-DSuperBuild_ANTS_USE_GIT_PROTOCOL=OFF'
+    '-DPYTHON_INCLUDE_DIR=$EBROOTPYTHON/include/python%(pyshortver)s'
+    '-DPYTHON_LIBRARY=$EBROOTPYTHON/lib/libpython%%(pyshortver)s.so'
+    '-DPYTHON_LIBRARY=$EBROOTPYTHON/lib/libpython%%(pyshortver)s.%s' % SHLIB_EXT
+])
+
+preinstallopts = "cd ANTS-build && "
+
+sanity_check_paths = {
+    'files': ['bin/ANTS', 'bin/antsBrainExtraction.sh'],
+    'dirs': ['lib'],
+}
+
+sanity_check_commands = []
+
+modextravars = {'ANTSPATH': '%(installdir)s/bin'}
+
+moduleclass = 'data'
