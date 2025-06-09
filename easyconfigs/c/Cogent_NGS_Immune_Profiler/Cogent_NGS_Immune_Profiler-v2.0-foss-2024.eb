@@ -27,6 +27,7 @@ dependencies = [
     ('Biopython', '1.84'),
     ('matplotlib', '3.9.2'),
     ('Nextflow', '24.10.2', '', SYSTEM),
+    ('Miniforge3', '24.1.2-0', '', SYSTEM),
 ]
 
 sanity_check_paths = {
