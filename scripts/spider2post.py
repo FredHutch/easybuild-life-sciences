@@ -32,7 +32,7 @@ for p in slist:
    else:
       maxVal = version.parse("0.0.0")
       for release in pac.keys():
-         verVal = version.parse(pac[release]['Version'].split('-')[0])
+         verVal = version.parse(pac[release]['Version'].split('-')[0].replace('_', '.'))
          if verVal > maxVal:
              latest = pac[release]
              maxVal = verVal
