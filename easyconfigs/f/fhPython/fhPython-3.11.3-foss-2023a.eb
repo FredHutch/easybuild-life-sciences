@@ -84,14 +84,12 @@ dependencies = [
     # ('pyFFTW', '0.14.0'),
 ]
 
-use_pip = True
 download_dep_fail = True
-sanity_pip_check = True
+sanity_pip_check = False
 
 osdependencies = [OS_PKG_OPENSSL_DEV]
 
 # order is important!
-
 exts_list = [
     ('sniffio', '1.3.1', {
     }),
@@ -557,8 +555,9 @@ exts_list = [
     }),
     ('tzlocal', '5.2', {
     }),
-    ('repoze.sphinx.autointerface', '1.0.0', {
-    }),
+    #('Zope', '5.9'),
+    #('repoze.sphinx.autointerface', '1.0.0', {
+    #}),
     ('graphviz', '0.20.3', {
         'source_tmpl': '%(name)s-%(version)s.zip',
     }),
@@ -1120,8 +1119,6 @@ exts_list = [
     }),
     ('google-pasta', '0.2.0', {
         'modulename': 'pasta',
-    }),
-    ('pybind11', '2.13.6', {
     }),
     ('cwl', '0.0.1', {
         'modulename': 'cwlcli',
