@@ -1,0 +1,98 @@
+# John Dey Fred Hutch Cancer Center 
+easyblock = 'PythonBundle'
+
+name = 'SigProfiler'
+version = '202507'
+versionsuffix = '-numpy-2'
+
+homepage = 'https://cancer.sanger.ac.uk/signatures/tools/'
+description = """
+SigProfiler provides a comprehensive and integrated suite of bioinformatic
+ tools for performing mutational signature analysis.
+"""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+builddependencies = [
+    ('Cython', '3.0.10'),
+    ('pkgconf', '2.2.0'),
+    ('CMake', '3.29.3'),
+    ('hatchling', '1.24.2'),
+]
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('SciPy-bundle', '2025.07', versionsuffix),
+    ('h5py', '3.12.1'),
+    ('matplotlib', '3.9.2', versionsuffix),
+    ('Pillow', '10.4.0'),
+    ('scikit-learn', '1.6.1', versionsuffix),
+    ('poppler', '25.07.0'),  # needed by pdf2image
+    ('Seaborn', '0.13.2', versionsuffix),
+    ('statsmodels', '0.14.4', versionsuffix),
+    ('XlsxWriter', '3.2.0'),
+    ('PyTorch', '2.3.0', versionsuffix),
+    ('hypothesis', '6.103.1'),
+    ('meson-python', '0.16.0'),
+    ('spin', '0.14'),
+]
+
+sanity_pip_check = False
+
+exts_list = [
+    # ('numpy', '2.2.5'),
+    ('SigProfilerMatrixGenerator', '1.3.4', {
+        'modulename': 'SigProfilerMatrixGenerator',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+    ('SigProfilerPlotting', '1.4.1', {
+        'modulename': 'sigProfilerPlotting',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+    ('fastrand', '3.0.6', {
+        'source_urls': ['https://github.com/lemire/fastrand/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }),
+    ('SigProfilerSimulator', '1.2.2', {
+        'modulename': 'SigProfilerSimulator',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+    #('opencv-python', '4.6.0.66', {
+    #    'modulename': None,
+    #}),
+    # ('imp3', '0.1.4'),
+    ('pypdf', '5.0.0'),
+    ('pdf2image', '1.16.0'),
+    ('reportlab', '4.4.2', {
+    }),
+    ('about-time', '4.2.1', {
+        'modulename': 'about_time',
+    }),
+    ('graphemeu', '0.7.2', {
+        'modulename': 'grapheme',
+        'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl',
+    }),
+    ('alive-progress', '3.3.0'),
+    ('sigprofilerassignment', '0.2.3', {
+        'modulename': 'SigProfilerAssignment',
+        'source_urls': ['https://github.com/AlexandrovLab/SigProfilerAssignment/archive/refs/tags'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': SOURCE_TAR_GZ}],
+    }), 
+    ('nimfa', '1.4.0', {
+        'source_tmpl': '%(namelower)s-%(version)s-py2.py3-none-any.whl',
+    }),
+    ('SigProfilerExtractor', '1.2.1', {
+        'modulename': 'SigProfilerExtractor',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+    ('SigProfilerClusters', '1.2.1', {
+        'modulename': 'SigProfilerClusters',
+    }),
+    ('SigProfilerTopography', '1.0.101', {
+        'modulename': 'SigProfilerTopography',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz',
+    }),
+]
+
+
+moduleclass = 'bio'
