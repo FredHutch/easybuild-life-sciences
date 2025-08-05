@@ -1,0 +1,153 @@
+# John Dey Fred Hutchinson Cancer Center
+easyblock = 'PythonBundle'
+
+name = 'cirro'
+version = '1.6.0'
+
+homepage = 'https://github.com/FredHutch/Cirro-client'
+description = """A Python 3.8+ library for the Cirro platform."""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+builddependencies = [
+    ('CMake', '3.29.3'),
+    ('hatchling', '1.24.2'),
+    ('maturin', '1.6.0'),
+    ('Cython', '3.0.10'),
+    ('setuptools', '80.9.0'),
+]
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('Python-bundle-PyPI', '2024.06'),
+    ('SciPy-bundle', '2024.05'),
+    ('tqdm', '4.66.5'),
+    ('typing-extensions', '4.11.0'),
+    ('Deprecated', '1.2.18'),
+    ('cryptography', '42.0.8'),
+    ('aiohttp', '3.10.10'),
+    ('poetry', '1.8.3'),
+    ('ruamel.yaml', '0.18.6'),
+]
+
+sanity_pip_check = False
+
+exts_list = [
+    ('portalocker', '2.10.1',  {
+    }),
+    ('PyJWT', '2.10.1', {
+        'modulename': 'jwt',
+        'source_tmpl': '%(namelower)s-%(version)s.tar.gz'
+    }),
+    ('pycparser', '2.22', {
+    }),
+    ('msal', '1.33.0',  {
+    }),
+    ('msal_extensions', '1.3.1',  {
+    }),
+    ('trove_classifiers', '2025.5.9.12',  {
+        'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl', 
+    }),
+    ('s3transfer', '0.13.1',  {
+    }),
+    ('boto3', '1.39.17',  {
+    }),
+    ('s3fs', '2025.7.0'),
+    ('wcwidth', '0.2.13', {
+    }),
+    ('prompt_toolkit', '3.0.51',  {
+    }),
+    ('questionary', '2.1.0',  {
+    }),
+    ('async_timeout', '5.0.1',  {
+    }),
+    ('importlib_metadata', '8.7.0',  {
+    }),
+    ('fsspec', '2025.7.0',  {
+    }),
+    ('s3fs', '2025.7.0',  {
+    }),
+    ('requests_aws4auth', '1.3.1',  {
+    }),
+    ('backoff', '2.2.1', {
+    }),
+    ('graphql_core', '3.2.6',  {
+        'modulename': 'graphql',
+    }),
+    ('sniffio', '1.3.1', {
+    }),
+    ('anyio', '4.9.0', {
+    }),
+    ('gql', '3.5.3',  {
+    }),
+    ('envs', '1.4', {
+    }),
+    ('pyasn1', '0.6.1', {
+    }),
+    ('rsa', '4.9.1',  {
+    }),
+    ('ecdsa', '0.19.1', {
+    }),
+    ('python_jose', '3.5.0',  {
+        'modulename': 'jose',
+    }),
+    ('pycognito', '2024.5.1',  {
+    }),
+    ('PyNaCl', '1.5.0', {
+        'modulename': 'nacl',
+    }),
+    ('h11', '0.16.0', {
+    }),
+    ('httpcore', '1.0.9', {
+    }),
+    ('httpx', '0.26.0', {
+    }),
+    # required for miniwdl WDL
+    ('xdg', '6.0.0',  {
+    }),
+    ('docker', '7.1.0',  {
+    }),
+    ('argcomplete', '3.6.2',  {
+    }),
+    ('pygtail', '0.14.0',  {
+    }),
+    ('humanfriendly', '10.0', {
+    }),
+    ('coloredlogs', '15.0.1',  {
+    }),
+    ('python_json_logger', '3.3.0', {
+        'modulename': 'pythonjsonlogger',
+    }),
+    ('lark', '1.2.2',  {
+    }),
+    ('bullet', '2.2.0',  {
+    }),
+    ('python_json_logger', '3.3.0', {
+        'modulename': 'pythonjsonlogger',
+    }),
+    ('miniwdl', '1.13.0', {
+        'modulename': 'WDL',
+    }),
+    ('nf_core', '3.3.2', {
+    }),
+    ('cirro_api_client', '1.0.3', {
+    }),
+    ('rpds_py', '0.20.0', {
+        'modulename': 'rpds',
+    }),
+    ('referencing', '0.35.1', {
+    }),
+    ('jsonschema_specifications', '2024.10.1', {
+    }),
+    ('jsonschema', '4.22.0', {
+    }),
+    ('awscrt', '0.27.5', {
+        'preinstallopts': "export AWS_CRT_BUILD_USE_SYSTEM_LIBCRYPTO=1 && ",
+    }),
+    (name, version, {
+    }),
+]
+
+#sanity_check_commands = ['cirio-cli --help']
+
+moduleclass = 'lib'
