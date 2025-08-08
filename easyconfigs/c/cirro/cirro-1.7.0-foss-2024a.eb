@@ -48,7 +48,7 @@ exts_list = [
     ('trove_classifiers', '2025.5.9.12',  {
         'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl',
     }),
-    ('boto3', '1.39.17',  {
+    ('botocore', '1.39.17',  {
     }),
     ('s3transfer', '0.13.1',  {
     }),
