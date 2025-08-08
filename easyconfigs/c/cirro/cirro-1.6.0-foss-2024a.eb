@@ -46,7 +46,9 @@ exts_list = [
     ('msal_extensions', '1.3.1',  {
     }),
     ('trove_classifiers', '2025.5.9.12',  {
-        'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl', 
+        'source_tmpl': '%(namelower)s-%(version)s-py3-none-any.whl',
+    }),
+    ('botocore', '1.39.17',  {
     }),
     ('s3transfer', '0.13.1',  {
     }),
@@ -130,12 +132,12 @@ exts_list = [
     }),
     ('nf_core', '3.3.2', {
     }),
-    ('cirro_api_client', '1.0.3', {
+    ('cirro_api_client', '1.1.0', {
     }),
     ('rpds_py', '0.20.0', {
         'modulename': 'rpds',
     }),
-    ('referencing', '0.35.1', {
+    ('referencing', '0.36.2', {
     }),
     ('jsonschema_specifications', '2024.10.1', {
     }),
