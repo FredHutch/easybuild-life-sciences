@@ -1,0 +1,1067 @@
+easyblock = 'Bundle'
+
+name = 'R-bundle-Bioconductor'
+version = '3.21'
+versionsuffix = '-R-%(rver)s'
+
+local_biocver = '3.21'
+
+homepage = 'https://bioconductor.org'
+description = """Bioconductor provides tools for the analysis and coprehension
+ of high-throughput genomic data."""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+builddependencies = [('pkgconf', '2.2.0')]
+
+dependencies = [
+    ('R', '4.5.1'),
+    ('R-bundle-CRAN', '2025.06'),
+    ('Boost', '1.85.0'),  # for mzR
+    ('GSL', '2.8'),  # for flowClust
+    ('arrow-R', '17.0.0.1', versionsuffix),  # required by RcisTarget
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://bioconductor.org/packages/3.21/bioc/src/contrib/',
+        'https://bioconductor.org/packages/3.21/bioc/src/contrib/Archive/%(name)s',
+        'https://bioconductor.org/packages/3.21/data/annotation/src/contrib/',
+        'https://bioconductor.org/packages/3.21/data/experiment/src/contrib/',
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'sources': ['%(name)s_%(version)s.tar.gz'],
+}
+
+exts_defaultclass = 'RPackage'
+
+# check whether correct version is installed in extension filter
+# (some versions in this bundle may be newer than the ones provided by R)
+local_ext_version_check = "pkgver = packageVersion('%(ext_name)s'); if (pkgver != '%(ext_version)s') "
+local_stop_msg = "stop('%(ext_name)s %(ext_version)s not installed, found ', pkgver, ' instead')"
+exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_stop_msg))
+
+# CRAN packages on which these Bioconductor packages depend are available in R module on which this depends
+# !! order of packages is important !!
+# packages updated on 23 June 2025
+exts_list = [
+    ('BiocGenerics', '0.54.0', {
+    }),
+    ('Biobase', '2.68.0', {
+    }),
+    ('S4Vectors', '0.46.0', {
+    }),
+    ('IRanges', '2.42.0', {
+    }),
+    ('GenomeInfoDbData', '1.2.14', {
+    }),
+    ('UCSC.utils', '1.4.0', {
+    }),
+    ('GenomeInfoDb', '1.44.0', {
+    }),
+    ('zlibbioc', '1.54.0', {
+    }),
+    ('XVector', '0.48.0', {
+    }),
+    ('Biostrings', '2.76.0', {
+    }),
+    ('KEGGREST', '1.48.1', {
+    }),
+    ('AnnotationDbi', '1.70.0', {
+    }),
+    ('GenomicRanges', '1.60.0', {
+    }),
+    ('BiocParallel', '1.42.1', {
+    }),
+    ('Rhtslib', '3.4.0', {
+    }),
+    ('Rsamtools', '2.24.0', {
+    }),
+    ('MatrixGenerics', '1.20.0', {
+    }),
+    ('S4Arrays', '1.8.1', {
+    }),
+    ('SparseArray', '1.8.0', {
+    }),
+    ('DelayedArray', '0.34.1', {
+    }),
+    ('SummarizedExperiment', '1.38.1', {
+    }),
+    ('GenomicAlignments', '1.44.0', {
+    }),
+    ('pwalign', '1.4.0', {
+    }),
+    ('ShortRead', '1.66.0', {
+    }),
+    ('graph', '1.86.0', {
+    }),
+    ('affyio', '1.78.0', {
+    }),
+    ('preprocessCore', '1.70.0', {
+        'installopts': "--configure-args='--disable-threading'",
+    }),
+    ('BiocManager', '1.30.26', {
+    }),
+    ('affy', '1.86.0', {
+    }),
+    ('GO.db', '3.21.0', {
+    }),
+    ('limma', '3.64.1', {
+    }),
+    ('RBGL', '1.84.0', {
+    }),
+    ('org.Hs.eg.db', '3.21.0', {
+    }),
+    ('AnnotationForge', '1.50.0', {
+    }),
+    ('annaffy', '1.80.0', {
+    }),
+    ('gcrma', '2.80.0', {
+    }),
+    ('oligoClasses', '1.70.0', {
+    }),
+    ('edgeR', '4.6.2', {
+    }),
+    ('PFAM.db', '3.21.0', {
+    }),
+    ('perm', '1.0-0.4', {
+        'checksums': ['561e01793a9032b6a3676a7819fe24175eeb9e96a5314bd78b9c48d46e627be9'],
+    }),
+    ('baySeq', '2.42.0', {
+    }),
+    ('qvalue', '2.40.0', {
+    }),
+    ('impute', '1.82.0', {
+    }),
+    ('shinyFiles', '0.9.3', {
+        'checksums': ['4a72e165ee8a6e8256988f27286a2cfc4d7a42e2a902f4f2a728b1c237c07286'],
+    }),
+    ('samr', '3.0', {
+        'checksums': ['25f88ac002c2adce8881a562241bc12d683810a05defb553e8e3d4878f037506'],
+    }),
+    ('DEGseq', '1.62.0', {
+    }),
+    ('hgu133plus2.db', '3.13.0', {
+        'checksums': ['ddde58e777a8341536a664c7d4be874a2f395f8aaa019c1f738462a8ce74cc44'],
+    }),
+    ('illuminaio', '0.50.0', {
+    }),
+    ('BiocIO', '1.18.0', {
+    }),
+    ('restfulr', '0.0.15', {
+        'checksums': ['40ff8f1fb2987af2223e1a855bb1680c5ce2143fbce7ebc42f1edb291f80e692'],
+    }),
+    ('rtracklayer', '1.68.0', {
+    }),
+    ('filelock', '1.0.3', {
+        'checksums': ['2dcd0ec453f5ec4d96f69b0c472569d57d3c5f9956a82a48492ee02f12071137'],
+    }),
+    ('BiocFileCache', '2.16.0', {
+    }),
+    ('biomaRt', '2.64.0', {
+    }),
+    ('GenomicFeatures', '1.60.0', {
+    }),
+    ('bumphunter', '1.50.0', {
+    }),
+    ('multtest', '2.64.0', {
+    }),
+    ('scrime', '1.3.5', {
+        'checksums': ['5d97d3e57d8eb30709340fe572746029fd139456d7a955421c4e3aa75d825578'],
+    }),
+    ('siggenes', '1.82.0', {
+    }),
+    ('DynDoc', '1.86.0', {
+    }),
+    ('NOISeq', '2.52.0', {
+    }),
+    #('Rgraphviz', '2.52.0', {
+    #    'patches': ['Rgraphviz-2.28.0_fno-tree-vectorize.patch'],
+    #    'checksums': [
+    #        {'Rgraphviz_2.50.0.tar.gz': '5fb51037c66ff0c539906167c0082bb4da41d39d0add161d4533efaf48bc8a91'},
+    #        {'Rgraphviz-2.28.0_fno-tree-vectorize.patch':
+    #         '15783e9daba6f63c8e655858468a99e9f4f088468dbe3b414825e5844cf6b4a9'},
+    #    ],
+    #}),
+    ('RNASeqPower', '1.48.0', {
+    }),
+    ('annotate', '1.86.1', {
+    }),
+    ('GSEABase', '1.70.0', {
+    }),
+    ('genefilter', '1.90.0', {
+    }),
+    ('Category', '2.74.0', {
+    }),
+    ('GOstats', '2.74.0', {
+    }),
+    ('BSgenome', '1.76.0', {
+    }),
+    ('VariantAnnotation', '1.54.1', {
+    }),
+    ('interactiveDisplayBase', '1.46.0', {
+    }),
+    ('BiocVersion', '3.21.1', {
+    }),
+    ('AnnotationHub', '3.16.0', {
+    }),
+    ('AnnotationFilter', '1.32.0', {
+    }),
+    ('ProtGenerics', '1.40.0', {
+    }),
+    ('ensembldb', '2.32.0', {
+    }),
+    ('biovizBase', '1.56.0', {
+    }),
+    ('txdbmaker', '1.4.1', {
+    }),
+    ('OrganismDbi', '1.50.0', {
+    }),
+    ('ggbio', '1.56.0', {
+    }),
+    ('geneplotter', '1.86.0', {
+    }),
+    ('DESeq2', '1.48.1', {
+    }),
+    ('ReportingTools', '2.48.0', {
+    }),
+    ('Glimma', '2.18.0', {
+    }),
+    ('affycoretools', '1.80.0', {
+    }),
+    ('TxDb.Hsapiens.UCSC.hg19.knownGene', '3.2.2', {
+        'checksums': ['063de2b1174782a0b2b8ab7f04a0bdf3c43252cb67c685a9f8ef2b8e318352e9'],
+    }),
+    ('Homo.sapiens', '1.3.1', {
+        'checksums': ['014809fc6ef6410be8dc1094c9cb083719f20d999065ae4bf388855be0913b94'],
+    }),
+    ('BSgenome.Hsapiens.UCSC.hg19', '1.4.3', {
+        'checksums': ['5bfa65d7836449d9b30c356968497cdfaa98be48c4e329e71e8f8a120f3e9d1a'],
+    }),
+    ('AgiMicroRna', '2.58.0', {
+    }),
+    ('geneLenDataBase', '1.44.0', {
+    }),
+    ('goseq', '1.60.0', {
+    }),
+    ('KEGGgraph', '1.68.0', {
+    }),
+    ('GEOquery', '2.76.0', {
+    }),
+    ('gsignal', '0.3-7', {
+        'checksums': ['43430b138a58237a4e416cf85069b08054c41e1cb150c37cd0ca86bec6fe13b2'],
+    }),
+    ('mixOmics', '6.32.0', {
+    }),
+    ('Rhdf5lib', '1.30.0', {
+        'patches': ['Rhdf5lib-1.20.0_fix_hardcoded_path_to_mv.patch'],
+        'checksums': [
+            {'Rhdf5lib_1.30.0.tar.gz': '170606eaa916cc0489bdc0a6dcf25fa13ee2c9275c95573b6145345d857c8746'},
+            {'Rhdf5lib-1.20.0_fix_hardcoded_path_to_mv.patch':
+             'fd35fd20166aa67cf5fbc194861d9196a2220fd40057b0524722ecc3de4774e8'},
+        ],
+    }),
+    ('rhdf5filters', '1.20.0', {
+    }),
+    ('rhdf5', '2.52.1', {
+    }),
+    ('h5mread', '1.0.1'),
+    ('HDF5Array', '1.36.0', {
+    }),
+    ('sparseMatrixStats', '1.20.0', {
+    }),
+    ('DelayedMatrixStats', '1.30.0', {
+    }),
+    ('minfi', '1.54.1', {
+    }),
+    ('FDb.InfiniumMethylation.hg19', '2.2.0', {
+        'checksums': ['605aa3643588a2f40a942fa760b92662060a0dfedb26b4e4cd6f1a78b703093f'],
+    }),
+    ('methylumi', '2.54.0', {
+    }),
+    ('lumi', '2.60.0', {
+    }),
+    ('widgetTools', '1.86.0', {
+    }),
+    ('tkWidgets', '1.86.0', {
+    }),
+    ('Mfuzz', '2.68.0', {
+    }),
+    ('venn', '1.12', {
+        'checksums': ['ed86b69bd99ceea93352a30699a0baba3fd8cdcde907a9476e92be202ad8721d'],
+    }),
+    ('maSigPro', '1.80.0', {
+    }),
+    ('SPIA', '2.60.0', {
+    }),
+    ('Gviz', '1.52.0', {
+    }),
+    ('cummeRbund', '2.50.0', {
+    }),
+    ('GenomicFiles', '1.44.1', {
+    }),
+    ('derfinderHelper', '1.42.0', {
+    }),
+    ('derfinder', '1.42.0', {
+    }),
+    ('Rsubread', '2.22.1', {
+    }),
+    ('pcaMethods', '2.0.0', {
+    }),
+    ('marray', '1.86.0', {
+    }),
+    ('CGHbase', '1.68.0', {
+    }),
+    ('Wrench', '1.26.0', {
+    }),
+    ('lpsymphony', '1.36.0', {
+    }),
+    ('IHW', '1.36.0', {
+    }),
+    ('gdsfmt', '1.44.0', {
+    }),
+    ('SNPRelate', '1.42.0', {
+    }),
+    ('biomformat', '1.36.0', {
+    }),
+    ('phyloseq', '1.52.0', {
+    }),
+    ('NADA', '1.6-1.1', {
+        'checksums': ['670ff6595ba074ed0a930b7a09624d5ef20616379a20e768c1a7b37332aee44a'],
+    }),
+    ('zCompositions', '1.5.0-4', {
+        'checksums': ['73188e1e065a042723ed7a48df04e22317b204222d40744b83e8c392aae16aaf'],
+    }),
+    ('RcppZiggurat', '0.1.8', {
+    }),
+    ('zigg', '0.0.2'),
+    ('Rfast', '2.1.5.1', {
+    }),
+    ('directlabels', '2025.5.20', {
+    }),
+    ('ALDEx2', '1.40.0', {
+    }),
+    ('dada2', '1.36.0', {
+    }),
+    ('LEA', '3.20.0', {
+        'patches': ['LEA-3.0.0_support_aarch64_and_ppc64le.patch'],
+        'checksums': [
+            {'LEA_3.20.0.tar.gz': 'ba77013f57be8d938c0687b43405fd249bf3afdf51dbd0b5c27953f976981559'},
+            {'LEA-3.0.0_support_aarch64_and_ppc64le.patch':
+             'caeaae7aa0577540bc9c03b54ce5a0fe4ff1a28ac503106e2b3acd1b9db82881'},
+        ],
+    }),
+    ('tximport', '1.36.0', {
+    }),
+    ('SingleCellExperiment', '1.30.1', {
+    }),
+    ('assorthead', '1.2.0', {
+    }),
+    ('beachmat', '2.24.0', {
+    }),
+    ('RcppAnnoy', '0.0.22', {
+        'checksums': ['9f2121d787c4d3e7beccdd65f5d1de81f31c99d57d5d61ca3cc5af7169dd8f65'],
+    }),
+    ('RcppHNSW', '0.6.0', {
+        'checksums': ['a5a6ed00a84143aa62aa67df66fcccae657d5db0a1f9bb4b955a8e94c2ff580f'],
+    }),
+    ('BiocNeighbors', '2.2.0', {
+    }),
+    ('rsvd', '1.0.5', {
+        'checksums': ['e40686b869acd4f71fdb1e8e7a6c64cd6792fc9d52a78f9e559a7176ab84e21e'],
+    }),
+    ('ScaledMatrix', '1.16.0', {
+    }),
+    ('BiocSingular', '1.24.0', {
+    }),
+    ('scuttle', '1.18.0', {
+    }),
+    ('RcppML', '0.3.7', {
+        'checksums': ['325c6515085527eb9123cc5e87e028547065771ed4d623048f41886ae28908c6'],
+    }),
+    ('sitmo', '2.0.2', {
+        'checksums': ['448ef8d56e36783354011845daf33f1efb83ea3b9685eea75eaf5134e24fa8c2'],
+    }),
+    ('dqrng', '0.4.1', {
+        'checksums': ['3d9df935020c3c2538bc712456079925c4b379d67407c83fbc008340e353288f'],
+    }),
+    ('uwot', '0.2.3', {
+    }),
+    ('ggrastr', '1.0.2', {
+        'checksums': ['cb27406dca99cea6440adf6edb7eb53141b60322452f5a5d4409e36516ad20d1'],
+    }),
+    ('scater', '1.36.0', {
+    }),
+    ('bluster', '1.18.0', {
+    }),
+    ('metapod', '1.16.0', {
+    }),
+    ('scran', '1.36.0', {
+    }),
+    ('SC3', '1.36.0', {
+    }),
+    ('ComplexHeatmap', '2.24.0', {
+    }),
+    ('GENIE3', '1.30.0', {
+    }),
+    ('dupRadar', '1.38.0', {
+    }),
+    ('DNAcopy', '1.82.0', {
+    }),
+    ('sva', '3.56.0', {
+    }),
+    ('ballgown', '2.40.0', {
+    }),
+    ('DropletUtils', '1.28.0', {
+    }),
+    ('DeconRNASeq', '1.50.0', {
+    }),
+    ('SpatialExperiment', '1.18.1', {
+    }),
+    ('GSVA', '2.2.0', {
+    }),
+    ('PureCN', '2.14.1', {
+    }),
+    ('globaltest', '5.62.0', {
+    }),
+    ('GlobalAncova', '4.26.0', {
+    }),
+    ('vsn', '3.76.0', {
+    }),
+    ('mzID', '1.46.0', {
+    }),
+    ('mzR', '2.42.0', {
+    }),
+    ('MsCoreUtils', '1.20.0', {
+    }),
+    ('BiocBaseUtils', '1.10.0', {
+    }),
+    ('MultiAssayExperiment', '1.34.0', {
+    }),
+    ('QFeatures', '1.18.0', {
+    }),
+    ('MetaboCoreUtils', '1.16.1'),
+    ('Spectra', '1.18.2'),
+    ('PSMatch', '1.12.0', {
+    }),
+    ('MSnbase', '2.34.1', {
+    }),
+    ('MassSpecWavelet', '1.74.0', {
+    }),
+    ('MsFeatures', '1.16.0', {
+    }),
+    ('MsExperiment', '1.10.1', {
+    }),
+    ('xcms', '4.6.0', {
+    }),
+    ('CAMERA', '1.64.0', {
+    }),
+    ('fgsea', '1.34.0', {
+    }),
+    ('GWASExactHW', '1.2', {
+        'checksums': ['d3137a478338f03de52b75b3eb1b9cce135c82b81ed39fde692b1e0157ddecf7'],
+    }),
+    ('quantsmooth', '1.74.0', {
+    }),
+    ('GWASTools', '1.54.0', {
+    }),
+    ('SeqArray', '1.48.0', {
+    }),
+    ('SeqVarTools', '1.46.0', {
+    }),
+    ('GENESIS', '2.38.0', {
+    }),
+    ('MLInterfaces', '1.88.1', {
+    }),
+    ('pRoloc', '1.48.0', {
+    }),
+    ('pRolocdata', '1.46.0', {
+    }),
+    ('fresh', '0.2.1', {
+        'checksums': ['5826072b9b37c683012d45e77247420a778eecdaec05947c6d507f4c3b2471a6'],
+    }),
+    ('waiter', '0.2.5', {
+        'checksums': ['9ac25e979db9242598bd0492ff862360009b51ce672184ec9f4eeb2232164979'],
+    }),
+    ('shinydashboardPlus', '2.0.5', {
+        'checksums': ['0bc34cd75f6df1d9c6cb8e7e98e18c5c9c4f739ef54c8d79462597dd1cf3a3cc'],
+    }),
+    ('shinyhelper', '0.3.2', {
+        'checksums': ['f7ed62543ab4d05a34b69a9183517a09e93e1b2da85b113282de0f9982db90b0'],
+    }),
+    ('anytime', '0.3.11', {
+    }),
+    ('shinyWidgets', '0.9.0', {
+    }),
+    ('pRolocGUI', '2.18.0', {
+    }),
+    ('EBImage', '4.50.0', {
+    }),
+    ('GenomicScores', '2.20.0', {
+    }),
+    ('BSgenome.Mmusculus.UCSC.mm10', '1.4.3', {
+        'checksums': ['dcf602bf9fadf1ef4ce70e0c0fc92b6435467df5affe7d0872d88a93b99ff9ee'],
+    }),
+    ('TxDb.Mmusculus.UCSC.mm10.knownGene', '3.10.0', {
+        'checksums': ['696281749d01737c94894564d62093433045bc007a4528cc3d94f205edb54977'],
+    }),
+    ('regioneR', '1.40.1', {
+    }),
+    ('InteractionSet', '1.36.1', {
+    }),
+    ('universalmotif', '1.26.2', {
+    }),
+    ('ChIPpeakAnno', '3.42.0', {
+    }),
+    ('seqLogo', '1.74.0', {
+    }),
+    ('rGADEM', '2.55.0', {
+    }),
+    ('MotifDb', '1.50.0', {
+    }),
+    ('poweRlaw', '1.0.0', {
+    }),
+    ('CNEr', '1.43.0', {
+        'patches': ['CNEr-1.43.0_free.patch'],
+    }),
+    ('DirichletMultinomial', '1.50.0', {
+    }),
+    ('TFMPvalue', '0.0.9', {
+        'checksums': ['b9db56e75e2cee840d8b7861686dec07ee2c40cbc7d55361e5d04f1bf0c65de7'],
+    }),
+    ('TFBSTools', '1.46.0', {
+    }),
+    ('motifStack', '1.52.0', {
+    }),
+    ('ATACseqQC', '1.32.0', {
+    }),
+    ('ResidualMatrix', '1.18.0', {
+    }),
+    ('batchelor', '1.24.0', {
+    }),
+    ('gsmoothr', '0.1.7', {
+        'checksums': ['b75ffd2a4a0f357762e02e46e355b45cc90ea637830f0a1b01f216bb4541e903'],
+    }),
+    ('R.devices', '2.17.2', {
+        'checksums': ['403eeaf552dd696142096973dee3460dc52c19b73fd194841dd4638e2bdcec95'],
+    }),
+    ('R.filesets', '2.15.1', {
+        'checksums': ['08f5e9269b4f5ffb86f9a369fba792d864240d5f5c02dab435007b53ee989de3'],
+    }),
+    ('aroma.light', '3.38.0', {
+    }),
+    ('PSCBS', '0.68.0', {
+    }),
+    ('aroma.core', '3.3.1', {
+        'checksums': ['fa26bca509750eb44e85cae2d78b03870c003d4f7e0360977e924a7838805e44'],
+    }),
+    ('R.huge', '0.10.1', {
+        'checksums': ['05cb1edaaa0ad120c2946a80405c8c8da6a778873f08ff203391452527786ce8'],
+    }),
+    ('aroma.apd', '0.7.1', {
+    }),
+    ('aroma.affymetrix', '3.2.2', {
+        'checksums': ['18e1c9479e3e41bdfff06769d0ff2d85fcae16042cfd0eefa4dbcd0c4f3c9c40'],
+    }),
+    ('Repitools', '1.54.0', {
+    }),
+    ('BSgenome.Hsapiens.UCSC.hg38', '1.4.5', {
+        'checksums': ['b49277e4fd955be76571f187630993b02a459c7c5b69ef62a01a75dd5226e952'],
+    }),
+    ('MEDIPS', '1.60.0', {
+    }),
+    ('RProtoBufLib', '2.20.0', {
+        'patches': ['RProtoBufLib-2.8.0_fix-protobuf-build.patch'],
+    }),
+    ('cytolib', '2.20.0', {
+    }),
+    ('flowCore', '2.20.0', {
+    }),
+    ('mutoss', '0.1-13', {
+        'checksums': ['b60f6fcdce44dc60c7d34c6510047f756f1442366a3566661b22aae12f4ff141'],
+    }),
+    ('qqconf', '1.3.2', {
+        'checksums': ['9405d627adf9447a003e14dac43701ea3e03ee73244038aa4a6e3dd324dd8ea3'],
+    }),
+    ('metap', '1.12', {
+    }),
+    ('scattermore', '1.2', {
+        'checksums': ['5534a87b0bdd1375f0fbffc1a5c980ad64e33a108435a67469b8324b580602d1'],
+    }),
+    ('SeuratObject', '5.1.0', {
+    }),
+    ('leidenbase', '0.1.35'),
+    ('Seurat', '5.3.0', {
+    }),
+    ('ALL', '1.50.0', {
+    }),
+    ('ConsensusClusterPlus', '1.72.0', {
+    }),
+    ('flowViz', '1.72.0', {
+    }),
+    ('ncdfFlow', '2.54.0', {
+    }),
+    ('aws.signature', '0.6.0', {
+        'checksums': ['f7fe4f686979be21e5a8ba7ae11f0fade4f5aaf4e98063b5349ee0962dbb9496'],
+    }),
+    ('aws.s3', '0.3.21', {
+        'checksums': ['bd21054ab63555d294e7465dcb6c86f107db52ba841aeac5bdf4d00af0674c8c'],
+    }),
+    ('flowWorkspace', '4.20.0', {
+    }),
+    ('ash', '1.0-15', {
+        'checksums': ['8b0a7bc39dd0ce2172f09edc5b5e029347d041a4d508bbff3f3fd6f69450c2ab'],
+    }),
+    ('hdrcde', '3.4', {
+        'checksums': ['4341c6a021da46dcae3b1ef6d580e84dcf625c2b2139f537d0c26ec90899149b'],
+    }),
+    ('rainbow', '3.8', {
+        'checksums': ['eca456288b70fe4b6c74a587d8624d3b36d67f8f9ffc13320eefb17a952d823d'],
+    }),
+    ('fds', '1.8', {
+        'checksums': ['203a5e7671e542dcb83d4c75d0f4012aaebc32d54f94657afaf9e71e99dd0489'],
+    }),
+    ('fda', '6.3.0', {
+    }),
+    ('flowStats', '4.20.0', {
+    }),
+    ('flowClust', '3.46.0', {
+        'installopts': "--configure-args='--with-gsl=${EBROOTGSL} --enable-bundled-gsl=false'",
+    }),
+    ('openCyto', '2.20.0', {
+    }),
+    ('ggcyto', '1.36.0', {
+    }),
+    ('CytoML', '2.20.0', {
+    }),
+    ('colorRamps', '2.3.4', {
+        'checksums': ['3cdf311123ea1924ee1446b9b5bd7aa3282ca00addb6e7181f98578eb6b18ff8'],
+    }),
+    ('ggnewscale', '0.5.2', {
+    }),
+    ('ggpointdensity', '0.2.0', {
+    }),
+    ('FlowSOM', '2.16.0', {
+    }),
+    ('HMMcopy', '1.50.0', {
+    }),
+    ('diffcyt', '1.28.0', {
+    }),
+    ('blme', '1.0-6', {
+        'checksums': ['0608978044a00d0baaf09a694dc6edeac59dbfa373c4548e4ebbe335345c173e'],
+    }),
+    ('remaCor', '0.0.18', {
+        'checksums': ['57e4ffba44392f300525b18db36a44437a6fafce38a06eff065f5482e4171631'],
+    }),
+    ('fANCOVA', '0.6-1', {
+        'checksums': ['c3ea3640d9a87abbfeae713141d606ece93bc88b9952f41a37b3f1fbe802bc12'],
+    }),
+    ('variancePartition', '1.38.0', {
+    }),
+    ('muscat', '1.22.0', {
+    }),
+    ('IlluminaHumanMethylation450kmanifest', '0.4.0', {
+        'checksums': ['41b2e54bac3feafc7646fe40bce3aa2b92c10871b0a13657c5736517792fa763'],
+    }),
+    ('IlluminaHumanMethylationEPICmanifest', '0.3.0', {
+        'checksums': ['e39a69d98486cec981e97c56f45bbe47d2ccb5bbb66a1b16fa0685575493902a'],
+    }),
+    ('IlluminaHumanMethylation450kanno.ilmn12.hg19', '0.6.1', {
+        'checksums': ['3627d75a6303f4d307fa6daf0c5afd57649c60a268b3d4be7e8ac8edc4b1e288'],
+    }),
+    ('IlluminaHumanMethylationEPICanno.ilm10b2.hg19', '0.6.0', {
+        'checksums': ['4decdbc78a6a8d02bf8aecb0d6e1d81134ae9dbc2375add52574f07829e8cd69'],
+    }),
+    ('IlluminaHumanMethylationEPICanno.ilm10b4.hg19', '0.6.0', {
+        'checksums': ['2c8128126b63e7fa805a5f3b02449367dca9c3be3eb5f6300acc718826590719'],
+    }),
+    ('conumee', '1.42.0', {
+    }),
+    ('BSgenome.Cfamiliaris.UCSC.canFam3', '1.4.0', {
+        'checksums': ['99c55b6f7808822a3dae6679e60ecfb88a2b618159484bc35303c000bd4820c7'],
+    }),
+    ('ExperimentHub', '2.16.0', {
+    }),
+    ('SingleR', '2.10.0', {
+    }),
+    ('FlowSorted.Blood.EPIC', '2.12.0', {
+    }),
+    ('FlowSorted.CordBloodCombined.450k', '1.24.0', {
+    }),
+    ('DRIMSeq', '1.36.0', {
+    }),
+    ('stageR', '1.30.1', {
+    }),
+    ('isva', '1.9', {
+        'checksums': ['9fd016e0b34034d271d45f8a0d0db62780bf0187112e45f610aa9237014e1d17'],
+    }),
+    ('org.Mm.eg.db', '3.21.0', {
+    }),
+    ('org.Rn.eg.db', '3.21.0', {
+    }),
+    ('ROC', '1.84.0', {
+    }),
+    ('wateRmelon', '2.14.0', {
+    }),
+    ('GLAD', '2.72.0', {
+    }),
+    ('IlluminaHumanMethylationEPICv2manifest', '1.0.0', {
+        'checksums': ['f41cbb23145daab677dbe49cc00a469b826e05a0900a0a313b222a867a098bfc'],
+    }),
+    ('IlluminaHumanMethylationEPICv2anno.20a1.hg38', '1.0.0', {
+        'checksums': ['aae07c726c534fc017c5c730d2e3189120d2c73f52f5c4306a842a7cd4a8e46e'],
+    }),
+    ('missMethyl', '1.42.0', {
+    }),
+    ('MethylSeekR', '1.48.0', {
+    }),
+    ('affxparser', '1.80.0', {
+    }),
+    ('ccdata', '1.34.0', {
+    }),
+    ('lsa', '0.73.3', {
+        'checksums': ['f07f1159f215501495d7a077911e7ed2ac61e1705899f3be3a5cf9012778619a'],
+    }),
+    ('ccmap', '1.34.0', {
+    }),
+    ('oligo', '1.72.0', {
+    }),
+    ('SMVar', '1.3.4', {
+        'checksums': ['aaea3ef7da6cee1bb86fef166df766229c8b7cac9fcf5bc28da7adff5e2c01d6'],
+    }),
+    ('metaMA', '3.1.3', {
+        'checksums': ['3a0c0351b83419984095cb2c1d77d222d1cdb7158dd8c80fc384bf175ab9358e'],
+    }),
+    ('randomcoloR', '1.1.0.1', {
+        'checksums': ['cbae51a47a92b2cc3d5ab48877818404429fb73fc795430ec622a8dff20f1067'],
+    }),
+    ('shinyBS', '0.61.1', {
+        'checksums': ['0aed72473060531d0e782ba62092493002137df6b251af9e2294e2a40a32a140'],
+    }),
+    ('shinypanel', '0.1.5', {
+        'checksums': ['3264a5a75a306881e6a1622413298d7f3cda3dc78f54446171925774bab97a00'],
+    }),
+    ('snpStats', '1.58.0', {
+    }),
+    ('mixsqp', '0.3-54', {
+        'checksums': ['f7d0de918a221c58b3618dc3290a0ebe052256999ee3be35a19384f26b1dfb8e'],
+    }),
+    ('susieR', '0.14.2', {
+    }),
+    ('coloc', '5.2.3', {
+        'checksums': ['259dbd9613d809aa60ad148f6e187249642510f0dbbd15a50b25588d9a426150'],
+    }),
+    ('SCANVIS', '1.22.0', {
+    }),
+    ('EnsDb.Hsapiens.v86', '2.99.0', {
+        'checksums': ['552c07bcc2a1420089d4330deafaeb5303e03d0fa75c96b78075dfd67eeee7be'],
+    }),
+    ('agricolae', '1.3-7', {
+        'checksums': ['c5ade90ee23299de1d20e93406d9f4cb39bd92c51094e29306ec74baa1b34a7d'],
+    }),
+    ('bookdown', '0.43', {
+    }),
+    ('BiocStyle', '2.36.0', {
+    }),
+    ('ggdendro', '0.2.0', {
+        'checksums': ['1940c34ddb30083a4c3bc3be98b6b466dcc78e03ac22a32088744db8bff7aa69'],
+    }),
+    ('pmp', '1.20.0', {
+    }),
+    ('MultiDataSet', '1.36.0', {
+    }),
+    ('ropls', '1.40.0', {
+    }),
+    ('ontologyIndex', '2.12', {
+        'checksums': ['a8e5d67a5ef4acb099edcc0d4ee47aeb013557fafc7ee1c071c405f636f8c03d'],
+    }),
+    ('rols', '3.4.0', {
+    }),
+    ('struct', '1.20.1', {
+    }),
+    ('ggthemes', '5.1.0', {
+        'checksums': ['074819acfe8bb2233426a0fef3bb448c5ce817bb14d517252fa05932e28bbd0e'],
+    }),
+    ('structToolbox', '1.20.0', {
+    }),
+    ('EnsDb.Hsapiens.v75', '2.99.0', {
+        'checksums': ['2c59f95959f344b2a3eaa65a00086b01a420823e30b0810fc81e49b08dcba64b'],
+    }),
+    ('ggseqlogo', '0.2', {
+        'checksums': ['1cbfd532032dd51316a1fa084bc8cdabe5517bc6ce7b3abafc0d94340e6736b7'],
+    }),
+    ('sparsesvd', '0.2-2', {
+        'checksums': ['bb40cc69ee3aec28ff1418fd16cd76d953701a7b0d6bdcb0424c71793d96d836'],
+    }),
+    ('docopt', '0.7.2', {
+    }),
+    ('qlcMatrix', '0.9.8', {
+        'checksums': ['5b23fde80b0835f673f95cc6b867755149aa1e4fcc6bf40ad0079d51cc926834'],
+    }),
+    ('Signac', '1.14.0', {
+        'checksums': ['e0aad9e2c27c148fdd376081c2de1e3db46b1835eac83ef41fe562e08363c59e'],
+    }),
+    ('motifmatchr', '1.30.0', {
+    }),
+    ('extraDistr', '1.10.0', {
+        'checksums': ['f4264a6c2c95bb7a865655b0e84f48e30dcd584498b49d626a71adaec8eda3a9'],
+    }),
+    ('PRROC', '1.4', {
+    }),
+    ('TSP', '1.2-5', {
+    }),
+    ('qap', '0.1-2', {
+        'checksums': ['47a4ada3ae7a3a5c9304174bd5291daad60d329d527c0c6bb5ec1ac257584da5'],
+    }),
+    ('ca', '0.71.1', {
+        'checksums': ['040c2fc94c356075f116cc7cd880530b3c9e02206c0035182c03a525ee99b424'],
+    }),
+    ('seriation', '1.5.7', {
+    }),
+    ('egg', '0.4.5', {
+        'checksums': ['15c8ba7cf2676eb0460de7e5dfbc89fc3175ac22a8869cfd44d66d156fd6c7bb'],
+    }),
+    ('heatmaply', '1.5.0', {
+        'checksums': ['aca4dd8b0181aa97969c8c25c73343e294c4d9c24e7cbf52e97fecbed5a92db3'],
+    }),
+    ('OUTRIDER', '1.26.2', {
+    }),
+    ('FRASER', '2.4.3', {
+    }),
+    ('JASPAR2020', '0.99.10', {
+        'checksums': ['b9b92d141a317ebb32a14708229f6b82522ceeb5f1b88360d93b0a7cfe30375b'],
+    }),
+    ('AUCell', '1.30.1', {
+    }),
+    ('arrow', '20.0.0.2'),
+    ('RcisTarget', '1.28.1', {
+    }),
+    ('NMF', '0.28', {
+        'checksums': ['77dfe7b323ee5e5f8801851d1d4356932e2ffc810a7ac7faf5542cbfd92eeefb'],
+    }),
+    ('densEstBayes', '1.0-2.2', {
+        'checksums': ['8361df9cd4b34fabfca19360bb680a8a3c68386a72bb69cf00dfa19daf97b679'],
+    }),
+    ('reldist', '1.7-2', {
+        'checksums': ['d9086cbc14ed7c65d72da285b86a07e77cbfebc478ba7327b769bd08549229c9'],
+    }),
+    ('M3Drop', '1.34.0', {
+    }),
+    ('bsseq', '1.44.1', {
+    }),
+    ('DSS', '2.56.0', {
+    }),
+    ('pathview', '1.48.0', {
+    }),
+    ('chromVAR', '1.30.1', {
+    }),
+    ('EnsDb.Hsapiens.v79', '2.99.0', {
+        'checksums': ['eff1ae8d7f4ed5c6bed335de63a758be593750fb0b3483c01cf50402688d244d'],
+    }),
+    ('WGCNA', '1.73', {
+        'checksums': ['e8a0a367a93190dd9f738578a82d31856e004b9de46d2775e4ed0f44a95063ce'],
+    }),
+    ('DNABarcodes', '1.38.0', {
+    }),
+    ('GenomicInteractions', '1.42.0', {
+    }),
+    ('CAGEfightR', '1.28.0', {
+    }),
+    ('CAGEr', '2.14.0', {
+    }),
+    ('SPOTlight', '1.12.1', {
+    }),
+    ('CGHcall', '2.70.0', {
+    }),
+    ('QDNAseq', '1.44.0', {
+    }),
+    ('HiCcompare', '1.30.0', {
+    }),
+    ('ROntoTools', '2.36.0', {
+    }),
+    ('scDblFinder', '1.22.0', {
+    }),
+    ('treeio', '1.32.0', {
+    }),
+    ('ggtree', '3.16.0', {
+    }),
+    ('scistreer', '1.2.0', {
+        'checksums': ['6c445f61042866d1aef2e8ccae402d79dab657f880a1b07d02db9819cf25cd0e'],
+    }),
+    ('hahmmr', '1.0.0', {
+        'checksums': ['0990f1eef3afcffd54658f2a6f503f16c633c359c58ce05b38b9c67909d26da5'],
+    }),
+    ('numbat', '1.4.2', {
+        'checksums': ['a6113888adf9d0bf90a33310090c4809ab860db4144d69f06f56d921328fe828'],
+    }),
+    ('HiCBricks', '1.26.0', {
+    }),
+    ('dir.expiry', '1.16.0', {
+    }),
+    ('basilisk.utils', '1.20.0', {
+    }),
+    ('basilisk', '1.20.0', {
+    }),
+    ('zellkonverter', '1.18.0', {
+    }),
+    ('DO.db', '2.9', {
+        'checksums': ['762bcb9b5188274fd81d82f785cf2846a5acc61fad55e2ff8ec1502282c27881'],
+    }),
+    ('GOSemSim', '2.34.0', {
+    }),
+    ('HDO.db', '1.0.0', {
+        'checksums': ['04b951ada0ae9f0ed002c22966db70b910c2a91d139f8f706016556667370240'],
+    }),
+    ('DOSE', '4.2.0', {
+    }),
+    ('ggtangle', '0.0.6', {
+    }),
+    ('enrichplot', '1.28.2', {
+    }),
+    ('gson', '0.1.0', {
+        'checksums': ['14ddbee5be66d0b1dc178e41175a50ab6ed9ffed04d4361ecf5eef3548d9a381'],
+    }),
+    ('clusterProfiler', '4.16.0', {
+    }),
+    ('reactome.db', '1.92.0', {
+    }),
+    ('graphite', '1.54.0', {
+    }),
+    ('ReactomePA', '1.52.0', {
+    }),
+    ('flowClean', '1.46.0', {
+    }),
+    ('flowAI', '1.38.0', {
+    }),
+    ('flowFP', '1.66.0', {
+    }),
+    ('simona', '1.6.0', {
+    }),
+    ('simplifyEnrichment', '2.2.0', {
+    }),
+    ('RPMG', '2.2-7', {
+        'checksums': ['c413de3c126bc377fe31a948887d27f404a9637c57fe0e07b087d5509cb99f11'],
+    }),
+    ('Rwave', '2.6-5', {
+        'checksums': ['6c9ef75bb376f2e3f5c5dcd3b3fdca7d86797ce809da34f444632657189be2e4'],
+    }),
+    ('RSEIS', '4.2-4', {
+        'checksums': ['7a9b04135eaf6a6e6a2bcea75db5a4ee36888f1d1a1a2c2d3b07889a4dd0cfaa'],
+    }),
+    ('splancs', '2.01-45', {
+        'checksums': ['8bccf1d61d7feaab52da07a9c95aa66bcd3986a6b214f13b232c1e2bea4b76d3'],
+    }),
+    ('MBA', '0.1-2', {
+        'checksums': ['a5b5a1b47fa7bea3c2ca54a447ac3d55ceff7fa894fc2caca462928a79f24e92'],
+    }),
+    ('GEOmap', '2.5-11', {
+        'checksums': ['976be56d62f39b8e7526dc851bbf77f21db3d366a7ee5a7205aadce13c47cec0'],
+    }),
+    ('RFOC', '3.4-10', {
+        'checksums': ['b1211db8960b482ebb516233c86b075d1a1f006a88191a72fa98babd5a8e2100'],
+    }),
+    ('flowDensity', '1.42.0', {
+    }),
+    ('flowPeaks', '1.54.0', {
+    }),
+    ('SamSPECTRAL', '1.62.0', {
+    }),
+    ('ddPCRclust', '1.28.0', {
+    }),
+    ('feature', '1.2.15', {
+        'checksums': ['de38292b7e800068a20824e2a9e7d5d4d0b465b7925db0d165346aa5030ff67b'],
+    }),
+    ('flowMerge', '2.56.0', {
+    }),
+    ('TrajectoryUtils', '1.16.1', {
+    }),
+    ('slingshot', '2.16.0', {
+    }),
+    ('TreeSummarizedExperiment', '2.16.1', {
+    }),
+    ('decontam', '1.28.0', {
+    }),
+    ('DECIPHER', '3.4.0', {
+    }),
+    ('fillpattern', '1.0.2'),
+    ('gridtext', '0.1.5'),
+    ('ggtext', '0.1.2'),
+    ('rbiom', '2.2.0', {
+    }),
+    ('mia', '1.16.0', {
+    }),
+    ('ANCOMBC', '2.10.1', {
+    }),
+    ('decoupleR', '2.14.0', {
+    }),
+    ('UCell', '2.12.0', {
+    }),
+    ('intervals', '0.15.5', {
+        'checksums': ['11907be2c47ee4f6359055113dc0dab9ba2c35fbc743c2d52fd1ba1006c7ce5c'],
+    }),
+    ('oompaBase', '3.2.10', {
+    }),
+    ('oompaData', '3.1.5', {
+    }),
+    ('TailRank', '3.2.4', {
+    }),
+    ('RnBeads', '2.26.0', {
+    }),
+    ('RnBeads.hg19', '1.40.0', {
+    }),
+    ('RnBeads.hg38', '1.40.0', {
+    }),
+    ('RnBeads.mm9', '1.40.0', {
+    }),
+    ('RnBeads.mm10', '2.16.0', {
+    }),
+    ('RnBeads.rn5', '1.40.0', {
+    }),
+    ('log4r', '0.4.4', {
+        'checksums': ['ff1f2d2552f492d66680e36776ecb515479483da5e09f260f1ada661776ce732'],
+    }),
+    ('MSstatsConvert', '1.18.0', {
+    }),
+    ('MSstats', '4.16.0', {
+    }),
+    ('MSstatsTMT', '2.16.0', {
+    }),
+    ('MSstatsPTM', '2.10.0', {
+    }),
+    ('factoextra', '1.0.7', {
+        'checksums': ['624ff01c74933352aca55966f8a052b1ccc878f52c2c307e47f88e0665db94aa'],
+    }),
+    ('MSstatsLiP', '1.14.1', {
+    }),
+    ('babelgene', '22.9', {
+        'checksums': ['ce6601dcb78352516d3b0355042c52a20e154b39d3b27b93ff52150a59c885e2'],
+    }),
+    ('msigdbr', '24.1.0', {
+    }),
+    ('msigdb', '1.16.0'),
+    ('escape', '2.4.0', {
+    }),
+    ('plyranges', '1.28.0', {
+    }),
+    ('seqPattern', '1.40.0', {
+    }),
+    ('genomation', '1.40.1', {
+    }),
+    ('ChIPseeker', '1.44.0', {
+    }),
+    ('SimBu', '1.10.0', {
+    }),
+    ('hiAnnotator', '1.42.0', {
+    }),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['AnnotationDbi', 'BiocManager', 'GenomicFeatures'],
+}
+
+moduleclass = 'bio'
