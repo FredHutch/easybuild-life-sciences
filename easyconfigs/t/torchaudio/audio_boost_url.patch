@@ -1,0 +1,12 @@
+diff -ruN audio.orig/third_party/boost/CMakeLists.txt audio/third_party/boost/CMakeLists.txt
+--- audio.orig/third_party/boost/CMakeLists.txt	2024-06-21 21:51:23.000000000 -0700
++++ audio/third_party/boost/CMakeLists.txt	2025-08-04 13:15:51.416431000 -0700
+@@ -7,7 +7,7 @@
+ ExternalProject_Add(boost
+   PREFIX ${CMAKE_CURRENT_BINARY_DIR}
+   DOWNLOAD_DIR ${ARCHIVE_DIR}
+-  URL https://boostorg.jfrog.io/artifactory/main/release/1.78.0/source/boost_1_78_0.tar.gz
++  URL https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.gz
+   URL_HASH SHA256=94ced8b72956591c4775ae2207a9763d3600b30d9d7446562c552f0a14a63be7
+   BUILD_IN_SOURCE 1
+   CONFIGURE_COMMAND ""

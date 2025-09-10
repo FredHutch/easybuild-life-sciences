@@ -1,0 +1,12 @@
+author: John Dey Fred Hutch Cancer Center
+argparse is a builtin
+--- hermes-83aadbc14722a2d8b23e0b8226aa46f3d3e42380.orig/setup.py	2025-04-13 16:03:54.000000000 -0700
++++ hermes-83aadbc14722a2d8b23e0b8226aa46f3d3e42380/setup.py	2025-09-08 16:47:16.214677000 -0700
+@@ -27,7 +27,6 @@
+     include_package_data=True,
+     cmdclass={"install": CustomInstall},
+     install_requires=[
+-        "argparse",
+         "cmake",
+         "foldcomp",
+         "biopython==1.83",

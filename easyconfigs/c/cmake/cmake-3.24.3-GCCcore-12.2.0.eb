@@ -1,0 +1,30 @@
+easyblock = 'PythonPackage'
+
+name = 'cmake'
+version = '3.24.3'
+
+homepage = 'https://cmake.org'
+description = """Python cmake module
+ CMake, the cross-platform, open-source build system.  CMake is a family of
+ tools designed to build, test and package software.
+"""
+
+toolchain = {'name': 'GCCcore', 'version': '12.2.0'}
+
+sources = ['cmake-3.24.3-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl']
+checksums = ['38348b9f0e4094fcf375bb84bc04cdf0fd57ba640dffa11a899ec12a7eb100b9']
+
+builddependencies = [('CMake', '3.24.3')]
+
+dependencies = [
+    ('Python', '3.10.8'),
+]
+
+sanity_check_commands = ["cmake --help", "ctest --help"]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': ['bin', 'lib', 'lib64'],
+}
+
+moduleclass = 'lib'

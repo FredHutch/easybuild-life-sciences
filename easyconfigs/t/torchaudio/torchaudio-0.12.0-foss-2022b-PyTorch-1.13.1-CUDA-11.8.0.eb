@@ -1,0 +1,55 @@
+# John Dey Fred Hutch Cancer Center
+# toolchain modified from 2022a too 2022b for Hermes
+easyblock = 'PythonPackage'
+
+name = 'torchaudio'
+version = '0.12.0'
+local_pytorch_version = '1.13.1'
+versionsuffix = '-PyTorch-' + local_pytorch_version + '-CUDA-%(cudaver)s'
+
+homepage = 'https://github.com/pytorch/audio'
+description = """ Data manipulation and transformation for audio signal
+processing, powered by PyTorch """
+
+toolchain = {'name': 'foss', 'version': '2022b'}
+
+sources = [{
+    'filename': '%(name)s-%(version)s.tar.gz',
+    'git_config': {
+        'url': 'https://github.com/pytorch',
+        'repo_name': 'audio',
+        'tag': 'v%(version)s',
+        'recursive': True,
+        'keep_git_dir': True,
+    }
+}]
+patches = [
+    'audio_boost_url.patch',
+    'audio_CHECK.patch',
+]
+
+checksums = [None]
+
+builddependencies = [
+    ('binutils', '2.39'),
+    ('CMake', '3.24.3'),
+    ('Ninja', '1.11.1'),
+    ('pkgconf', '1.9.3'),
+]
+
+dependencies = [
+    ('CUDA', '11.8.0', '', SYSTEM),
+    ('Python', '3.10.8'),
+    ('SciPy-bundle', '2023.02'),
+    ('PyTorch', local_pytorch_version, '-CUDA-%(cudaver)s'),
+    ('SoX', '14.4.2'),
+    ('FFmpeg', '5.1.2'),
+    ('Boost', '1.78.0'),
+]
+cuda_compute_capabilities = ['5.0', '6.0', '7.0', '7.5', '8.0', '8.9']
+
+# CUDA_NVCC_FLAGS = -allow-unsupported-compiler'
+preinstallopts = "export CXXFLAGS='-fpermissive' && export NVCC_APPEND_FLAGS='-allow-unsupported-compiler' && USE_FFMPEG=1"
+installopts = '--no-use-pep517'
+
+moduleclass = 'tools'

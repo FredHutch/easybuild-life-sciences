@@ -1,0 +1,161 @@
+fix error: ‘CHECK_NE’ was not declared in this scope; did you mean ‘CHECK’?
+back port delaration of CHECK_[EQ,LE,NE] too TORCH_CHECK_XX
+author: John Dey Fred Hutch Cancer Center
+diff -ruN audio.orig/torchaudio/csrc/rnnt/cpu/compute.cpp audio/torchaudio/csrc/rnnt/cpu/compute.cpp
+--- audio.orig/torchaudio/csrc/rnnt/cpu/compute.cpp	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/cpu/compute.cpp	2025-08-07 12:25:31.813135000 -0700
+@@ -81,7 +81,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
+   options.device_ = CPU;
+ 
+   torch::Tensor costs = torch::empty(
+diff -ruN audio.orig/torchaudio/csrc/rnnt/cpu/compute_alphas.cpp audio/torchaudio/csrc/rnnt/cpu/compute_alphas.cpp
+--- audio.orig/torchaudio/csrc/rnnt/cpu/compute_alphas.cpp	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/cpu/compute_alphas.cpp	2025-08-07 12:25:31.785265000 -0700
+@@ -21,7 +21,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
+   options.device_ = CPU;
+ 
+   torch::Tensor alphas = torch::zeros(
+diff -ruN audio.orig/torchaudio/csrc/rnnt/cpu/compute_betas.cpp audio/torchaudio/csrc/rnnt/cpu/compute_betas.cpp
+--- audio.orig/torchaudio/csrc/rnnt/cpu/compute_betas.cpp	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/cpu/compute_betas.cpp	2025-08-07 12:25:31.858564000 -0700
+@@ -21,7 +21,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CPU);
+   options.device_ = CPU;
+ 
+   torch::Tensor costs = torch::empty(
+diff -ruN audio.orig/torchaudio/csrc/rnnt/cpu/cpu_kernels.h audio/torchaudio/csrc/rnnt/cpu/cpu_kernels.h
+--- audio.orig/torchaudio/csrc/rnnt/cpu/cpu_kernels.h	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/cpu/cpu_kernels.h	2025-08-07 12:25:31.668308000 -0700
+@@ -48,7 +48,7 @@
+   }
+ 
+   DTYPE& operator()(const std::vector<int>& indices) {
+-    CHECK_EQ(indices.size(), dims_.size());
++    TORCH_CHECK_EQ(indices.size(), dims_.size());
+     int index = indices.back();
+     for (int i = indices.size() - 2; i >= 0; --i) {
+       index += indices[i] * strides_[i];
+diff -ruN audio.orig/torchaudio/csrc/rnnt/cpu/cpu_transducer.h audio/torchaudio/csrc/rnnt/cpu/cpu_transducer.h
+--- audio.orig/torchaudio/csrc/rnnt/cpu/cpu_transducer.h	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/cpu/cpu_transducer.h	2025-08-07 12:25:31.742092000 -0700
+@@ -28,7 +28,7 @@
+     DTYPE* gradients = nullptr) {
+   const Options& options = workspace.GetOptions();
+ 
+-  CHECK_EQ(options.device_, CPU);
++  TORCH_CHECK_EQ(options.device_, CPU);
+ 
+   const int& B = options.batchSize_;
+   const int& maxT = options.maxSrcLen_;
+@@ -91,7 +91,7 @@
+     DTYPE* alphas) {
+   const Options& options = workspace.GetOptions();
+ 
+-  CHECK_EQ(options.device_, CPU);
++  TORCH_CHECK_EQ(options.device_, CPU);
+ 
+   const int& B = options.batchSize_;
+   const int& maxT = options.maxSrcLen_;
+@@ -140,7 +140,7 @@
+     DTYPE* betas) {
+   const Options& options = workspace.GetOptions();
+ 
+-  CHECK_EQ(options.device_, CPU);
++  TORCH_CHECK_EQ(options.device_, CPU);
+ 
+   const int& B = options.batchSize_;
+   const int& maxT = options.maxSrcLen_;
+diff -ruN audio.orig/torchaudio/csrc/rnnt/gpu/compute.cu audio/torchaudio/csrc/rnnt/gpu/compute.cu
+--- audio.orig/torchaudio/csrc/rnnt/gpu/compute.cu	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/gpu/compute.cu	2025-08-07 12:25:31.608194000 -0700
+@@ -82,7 +82,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
+   options.stream_ = at::cuda::getCurrentCUDAStream();
+   cudaSetDevice(logits.get_device());
+   options.device_ = GPU;
+diff -ruN audio.orig/torchaudio/csrc/rnnt/gpu/compute_alphas.cu audio/torchaudio/csrc/rnnt/gpu/compute_alphas.cu
+--- audio.orig/torchaudio/csrc/rnnt/gpu/compute_alphas.cu	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/gpu/compute_alphas.cu	2025-08-07 12:25:31.463963000 -0700
+@@ -22,7 +22,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
+   options.stream_ = at::cuda::getCurrentCUDAStream();
+   cudaSetDevice(logits.get_device());
+   options.device_ = GPU;
+diff -ruN audio.orig/torchaudio/csrc/rnnt/gpu/compute_betas.cu audio/torchaudio/csrc/rnnt/gpu/compute_betas.cu
+--- audio.orig/torchaudio/csrc/rnnt/gpu/compute_betas.cu	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/gpu/compute_betas.cu	2025-08-07 12:25:31.514181000 -0700
+@@ -22,7 +22,7 @@
+   options.blank_ = blank;
+   options.clamp_ = clamp;
+ 
+-  CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
++  TORCH_CHECK_EQ(logits.device().type(), torch::DeviceType::CUDA);
+   options.stream_ = at::cuda::getCurrentCUDAStream();
+   cudaSetDevice(logits.get_device());
+   options.device_ = GPU;
+diff -ruN audio.orig/torchaudio/csrc/rnnt/workspace.h audio/torchaudio/csrc/rnnt/workspace.h
+--- audio.orig/torchaudio/csrc/rnnt/workspace.h	2024-06-21 21:51:23.000000000 -0700
++++ audio/torchaudio/csrc/rnnt/workspace.h	2025-08-07 12:26:28.798789000 -0700
+@@ -27,7 +27,7 @@
+   ~DtypeWorkspace() {}
+ 
+   static int ComputeSizeFromOptions(const Options& options) {
+-    CHECK_NE(options.device_, UNDEFINED);
++    TORCH_CHECK_NE(options.device_, UNDEFINED);
+     return ComputeSizeForDenominators(options) +
+         ComputeSizeForLogProbs(options) + ComputeSizeForAlphas(options) +
+         ComputeSizeForBetas(options);
+@@ -36,7 +36,7 @@
+   void Free();
+   void Reset(const Options& options, DTYPE* data, int size) {
+     int needed_size = ComputeSizeFromOptions(options);
+-    CHECK_LE(needed_size, size);
++    TORCH_CHECK_LE(needed_size, size);
+     options_ = options;
+     data_ = data;
+     size_ = size;
+@@ -98,7 +98,7 @@
+ 
+   void Reset(const Options& options, int* data, int size) {
+     int needed_size = ComputeSizeFromOptions(options);
+-    CHECK_LE(needed_size, size);
++    TORCH_CHECK_LE(needed_size, size);
+     options_ = options;
+     data_ = data;
+     size_ = size;
+@@ -109,11 +109,11 @@
+   }
+ 
+   int* GetPointerToAlphaCounters() const {
+-    CHECK_EQ(options_.device_, GPU);
++    TORCH_CHECK_EQ(options_.device_, GPU);
+     return data_;
+   }
+   int* GetPointerToBetaCounters() const {
+-    CHECK_EQ(options_.device_, GPU);
++    TORCH_CHECK_EQ(options_.device_, GPU);
+     return GetPointerToAlphaCounters() + ComputeSizeForAlphaCounters(options_);
+   }
+ 
