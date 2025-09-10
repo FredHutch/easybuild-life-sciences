@@ -2,7 +2,7 @@
 easyblock = 'PythonBundle'
 
 name = 'cirro'
-version = '1.6.0'
+version = '1.7.0'
 
 homepage = 'https://github.com/FredHutch/Cirro-client'
 description = """A Python 3.8+ library for the Cirro platform."""
@@ -137,13 +137,13 @@ exts_list = [
     ('rpds_py', '0.20.0', {
         'modulename': 'rpds',
     }),
-    ('referencing', '0.36.2', {
+    ('referencing', '0.33.0', {
     }),
     ('jsonschema_specifications', '2024.10.1', {
     }),
     ('jsonschema', '4.22.0', {
     }),
-    ('awscrt', '0.27.5', {
+    ('awscrt', '0.27.4', {
         'preinstallopts': "export AWS_CRT_BUILD_USE_SYSTEM_LIBCRYPTO=1 && ",
     }),
     (name, version, {
