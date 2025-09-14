@@ -2,7 +2,7 @@ easyblock = 'MakeCp'
 
 name = 'NextPolish'
 version = '1.4.1'
-versionsuffix = '2025-01-08'
+versionsuffix = '-2025-01-08'
 local_commit = 'cfa7b1b'
 
 homepage = 'https://github.com/Nextomics/NextPolish'
@@ -13,13 +13,13 @@ toolchain = {'name': 'GCC', 'version': '13.3.0'}
 source_urls = ['https://github.com/Nextomics/NextPolish/archive']
 sources = [{
     'download_filename': f'{local_commit}.tar.gz',
-    'filename': f'{name}-{version}-{versionsuffix}.tar.gz',
+    'filename': f'{name}-{version}{versionsuffix}.tar.gz',
 }]
-patches = [f'{name}-{version}-{versionsuffix}_relauxtab.patch']
+patches = [f'{name}-{version}{versionsuffix}_relauxtab.patch']
 checksums = [
-    {f'{name}-{version}-{versionsuffix}.tar.gz':
+    {f'{name}-{version}{versionsuffix}.tar.gz':
      '685c30fef5071808b0868d6e6959c41d7938beecd4b2eaf283f945f1f62e222d'},
-    {f'{name}-{version}-{versionsuffix}_relauxtab.patch':
+    {f'{name}-{version}{versionsuffix}_relauxtab.patch':
      '8158a4748b98a5bb5707179f9aa4f56d27e5d18df0d5590501c5ecbaf7a6590e'},
 ]
 
@@ -46,6 +46,9 @@ exts_list = [
         'checksums': ['8015a8311d5021bc44edbfbf45ff2557a529999e235d25190bac62993fdf7b66'],
     }),
 ]
+
+# fix make -C util - warning: jobserver unavailable
+#maxparallel = 1
 
 start_dir = 'source'
 
