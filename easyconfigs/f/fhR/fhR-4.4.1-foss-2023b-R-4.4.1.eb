@@ -1,0 +1,352 @@
+#  easybuild easyconfig
+#
+#  Benjamin McGough bmcgough@fredhutch.org
+#  John Dey jfdey@fredhutch.org
+#
+#  Fred Hutchinson Cancer Research Center
+easyblock = 'Bundle'
+
+name = 'fhR'
+version = '4.4.1'
+versionsuffix = '-R-%(rver)s'
+local_biocver = '3.20'
+
+homepage = 'http://www.r-project.org/'
+description = """R is a free software environment for statistical computing and graphics."""
+
+toolchain = {'name': 'foss', 'version': '2023b'}
+
+builddependencies = [
+    ('pkgconf', '2.0.3'),
+    ('CMake', '3.27.6'),
+    ('binutils', '2.40'),
+]
+
+dependencies = [
+    ('R', '4.4.1'),
+    ('R-bundle-CRAN', '2024.06'), #  R-bundle-CRAN-2024.06-foss-2023b.eb
+    ('R-bundle-Bioconductor', '3.19', '-R-4.4.1'),
+    # ('R-Tidyverse', '4.4.0'),
+    ('libwebp', '1.3.2'), #  libwebp-1.3.2-GCCcore-13.2.0.eb
+    ('poppler', '24.04.0'), #  poppler-24.04.0-GCC-13.2.0.eb
+    ('libGLU', '9.0.3'), #  libGLU-9.0.3-GCCcore-13.2.0.eb
+    ('netCDF', '4.9.2'), #  netCDF-4.9.2-gompi-2023b.eb
+    ('ZeroMQ', '4.3.5'),
+    ('JAGS', '4.3.2'),
+    ('poppler', '24.04.0'), # pdftools
+    ('Graphviz', '10.0.1'),
+    ('SYMPHONY', '5.7.2'), # for lpsymphony
+    ('igraph', '0.10.12'), #  igraph-0.10.12-foss-2023b.eb
+    ('OpenJPEG', '2.5.0'), #  OpenJPEG-2.5.0-GCCcore-13.2.0.eb
+    ('UnZip', '6.0'), #  UnZip-6.0-GCCcore-13.2.0.eb
+    ('NSS', '3.94'), #  NSS-3.94-GCCcore-13.2.0.eb
+    ('librsvg', '2.58.0'), #  librsvg-2.58.0-GCCcore-13.2.0.eb
+    ('protobuf', '25.3'), #  protobuf-25.3-GCCcore-13.2.0.eb
+    ('unixODBC', '2.3.12'),
+    ('fontconfig', '2.14.2'), #  fontconfig-2.14.2-GCCcore-13.2.0.eb
+    ('freetype', '2.13.2'), #  freetype-2.13.2-GCCcore-13.2.0.eb
+    ('Java', '11', '', True),
+    ('igraph', '0.10.10'), # for igraph
+    ('UnZip', '6.0'),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://www.bioconductor.org/packages/%s/bioc/src/contrib' % local_biocver,
+        'https://www.bioconductor.org/packages/%s/bioc/src/contrib/Archive/%s' % (local_biocver, name),
+        'https://www.bioconductor.org/packages/%s/data/annotation/src/contrib/' % local_biocver,
+        'https://www.bioconductor.org/packages/%s/data/experiment/src/contrib/' % local_biocver,
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://depot.sagebase.org/CRAN/prod/3.2/src/contrib',
+        'https://adtex.sourceforge.net',
+    ],
+    'source_tmpl': '%(name)s_%(version)s.tar.gz',
+}
+
+# these are extensions for R
+exts_defaultclass = 'RPackage'
+local_ext_version_check = "pkgver = packageVersion('%(ext_name)s'); if (pkgver != '%(ext_version)s') "
+local_stop_msg = "stop('%(ext_name)s %(ext_version)s not installed, found ', pkgver, ' instead')"
+exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_stop_msg))
+
+local_commit_RcppPlanc = 'ba52d8546f562b98b7cf060d2ad044960035f430'
+exts_list = [
+    ('webp', '1.3.0'),
+    ('qpdf', '1.3.4'),
+    # ('pdftools', '3.5.0', {
+    #     'installopts': ' --no-lock',
+    # }),
+    ('scidb', '3.0.0'),
+    ('ssgraph', '1.15'),
+    ('pdist', '1.2.1'),
+    ('rje', '1.12.1'),
+    ('float', '0.3-3'),
+    ('MatrixExtra', '0.1.15'),
+    ('lgr', '0.4.4'),
+    ('rsparse', '0.5.3'),
+    ('mlapi', '0.1.1'),
+    ('text2vec', '0.6.4'),
+    ('polyreg', '0.8.0'),
+    ('regtools', '1.7.0'),
+    ('partools', '1.1.6'),
+    ('RPostgres', '1.4.8'),
+    ('gsubfn', '0.7'),
+    ('sqldf', '0.4-11'),
+    ('alr3', '2.0.8'),
+    ('sets', '1.0-25'),
+    ('psychotools', '0.7-4'),
+    ('relations', '0.6-15'),
+    ('benchmark', '0.3-6'),
+    ('Bhat', '0.9-12'),
+    ('biglm', '0.9-3'),
+    ('Bolstad', '0.2.42'),
+    ('Bolstad2', '1.0-29'),
+    ('qvcalc', '1.0.4'),
+    ('BradleyTerry2', '1.1-2'),
+    ('catdata', '1.2.4'),
+    ('compare', '0.2-6'),
+    ('DAAG', '1.25.6'),
+    ('degreenet', '1.3-6'),
+    ('Rmpi', '0.7-3.3'),
+    ('doMPI', '0.2.2'),
+    ('elasticnet', '1.3'),
+    ('srvyr', '1.3.0'),
+    ('egor', '1.24.2'),
+    ('ergm', '4.6.0'),
+    ('ergm.ego', '1.1.0'),
+    ('collections', '0.3.7'),
+    ('tergm', '4.2.0'),
+    ('tergmLite', '2.6.1'),
+    #('EpiModel', '2.5.0'),
+    ('fit.models', '0.64'),
+    ('fts', '0.9.9.2'),
+    ('glmpath', '0.98'),
+    ('hapassoc', '1.2-9'),
+    ('HaploSim', '1.8.4.2'),
+    ('arsenal', '3.6.3'),
+    ('haplo.stats', '1.9.7'),
+    ('igraphdata', '1.0.1'),
+    ('repr', '1.1.7'),
+    ('IRdisplay', '1.1'),
+    ('its', '1.1.8'),
+    ('kin.cohort', '0.7'),
+    ('latentnet', '2.11.0'),
+    ('cyclocomp', '1.1.1'),
+    ('xmlparsedata', '1.0.5'),
+    ('lintr', '3.2.0'),
+    ('LogicReg', '1.6.6'),
+    ('lokern', '1.1-12'),
+    ('lpridge', '1.1-0'),
+    ('mapdata', '2.3.1'),
+    ('MCMCglmm', '2.36'),
+    ('mondate', '1.0'),
+    ('MPV', '1.64'),
+    ('networksis', '2.1-3'),
+    ('nws', '1.7.0.1'),
+    ('PBSddesolve', '1.13.4'),
+    ('pedigree', '1.4.2'),
+    ('pedigreemm', '0.3-5'),
+    ('PolynomF', '2.0-8'),
+    ('qtl', '1.70'),
+    ('rjags', '4-16'),
+    ('R2jags', '0.8-9'),
+    ('regress', '1.3-21'),
+    ('relevent', '1.2-1'),
+    ('Rhpc', '0.21-247'),
+    ('fasttime', '1.1-0'),
+    ('Rlabkey', '3.4.2'),
+    ('RSclient', '0.7-10', {
+       'patches': ['%(name)s_%(version)s-crypto.patch'],
+    }),
+    ('rzmq', '0.9.15'),
+    ('tables', '0.9.31'),
+    ('timeSeries', '4032.109'),
+    ('wavethresh', '4.7.3'),
+    ('config', '0.3.2'),
+    ('forge', '0.2.0'),
+    ('r2d3', '0.2.6'),
+    ('sparklyr', '1.8.6'),
+    ('REDCapR', '1.4.0'),
+    ('pack', '0.1-1'),
+    ('RaggedExperiment', '1.30.0'),
+    ('rslurm', '0.6.2'),
+    ('diamonds', '1.0-5'),
+    ('kyotil', '2024.11-01'),
+    ('dfoptim', '2023.1.0'),
+    ('BivarP', '1.0'),
+    ('argparser', '0.7.2'),
+    ('rgenoud', '5.9-0.11'),
+    ('inferference', '1.0.2'),
+    ('udunits2', '0.13.2.1'),
+    ('aws.ec2metadata', '0.2.0'),
+    ('descr', '1.1.8'),
+    ('RProtoBuf', '0.4.23'),
+    ('gage', '2.56.0'),
+    ('amap', '0.8-20'),
+    ('base64url', '1.4'),
+    ('batchtools', '0.9.17'),
+    ('DOT', '0.1'),
+    ('systemPipeR', '2.12.0'),
+    ('RcppNumerical', '0.6-0'),
+    ('apeglm', '1.28.0'),
+    ('etrunct', '0.1'),
+    ('invgamma', '1.1'),
+    ('ashr', '2.2-63'),
+    ('GreyListChIP', '1.38.0'),
+    ('DiffBind', '3.16.0'),
+    ('msa', '1.38.0', {
+    }),
+    ('rvcheck', '0.2.1'),
+    ('rstanarm', '2.32.1'),
+    ('DiceDesign', '1.10'),
+    ('sfd', '0.1.0'),
+    ('dials', '1.4.0'),
+    ('doFuture', '1.0.1'),
+    ('GPfit', '1.0-8'),
+    ('sparsevctrs', '0.3.0'),
+    ('modelenv', '0.2.0'),
+    ('hardhat', '1.4.1'),  # for workflows 
+    ('parsnip', '1.3.0'),
+    ('workflows', '1.2.0'),
+    ('yardstick', '1.3.2'),
+    ('tune', '1.3.0'),
+    ('workflowsets', '1.1.0'),
+    ('tidyposterior', '1.0.1'),
+    ('LymphoSeqDB', '0.99.2'),
+    ('LymphoSeq', '1.34.0'),
+    # ('polyester', '1.42.0'),
+    ('metagenomeSeq', '1.48.1'),
+    ('zigg', '0.0.2'),
+    ('chipseq', '1.56.0'),
+    ('fastseg', '1.52.0'),
+    ('hopach', '2.66.0'),
+    ('PICS', '2.50.0'),
+    ('tilingArray', '1.84.0'),
+    ('TitanCNA', '1.44.0'),
+    ('rbenchmark', '1.0.0'),
+    ('pbs', '1.1'),
+    ('RLRsim', '3.1-8'),
+    ('refund', '0.1-37'),
+    ('breakaway', '4.8.4'),
+    ('xCell', '1.1.0', {
+       # product version does not match source version
+       'source_urls': ['https://github.com/dviraran/xCell/archive'],
+       'sources': [{
+           'download_filename': '1.3.tar.gz',
+           'filename': '%(name)s_1.3.tar.gz',
+       }],
+    }),
+    ('HSMMSingleCell', '1.24.0'),
+    ('MatrixEQTL', '2.3'),
+    ('curry', '0.1.1'),
+    ('doBy', '4.7.0'),
+    ('refGenome', '1.7.7'),
+    ('faraway', '1.0.9'),
+    ('COMPASS', '1.44.0'),
+    ('hypergate', '0.8.5'),
+    ('diffusionMap', '1.2.0'),
+    ('Rdsdp', '1.0.5.2.1'),
+    ('knockoff', '0.3.6'),
+    ('vimp', '2.3.3'),
+    ('numbers', '0.8-5'),
+    ('SemiPar', '1.0-4.2'),
+    ('squash', '1.0.9'),
+    ('iotools', '0.3-5'),
+    ('seqminer', '9.7'),
+    ('schoolmath', '0.4.2'),
+    ('qdapRegex', '0.7.8'),
+    ('CMA', '1.64.0'),
+    ('methylKit', '1.32.1'),
+    ('poisbinom', '1.0.1'),
+    ('SNPassoc', '2.1-2'),
+    ('MAST', '1.32.0'),
+    ('odbc', '1.6.0'),
+    ('QUIC', '1.1.1'),
+    ('RcppDate', '0.0.5'),
+    ('RcppCCTZ', '0.2.13'),
+    ('nanotime', '0.3.11'),
+    ('europepmc', '0.4.3'),
+    ('depmap', '1.18.0'),
+    ('MAGeCKFlute', '2.9.0'),
+    ('forestplot', '3.1.6'),
+    ('Gmisc', '3.0.3'),
+    ('bezier', '1.1.2'),
+    ('bamsignals', '1.38.0'),
+    ('karyoploteR', '1.32.0'),
+    ('arules', '1.7-9'),
+    ('CLONETv2', '2.2.1'),
+    ('RPresto', '1.4.7'),
+    ('RVenn', '1.1.0'),
+    ('ggVennDiagram', '1.5.2'),
+    ('ArchR', '1.0.2', {
+        'source_urls': ['https://github.com/GreenleafLab/ArchR/archive/refs/tags'],
+        'sources': [{
+            'download_filename': 'v%(version)s.tar.gz',
+            'filename': '%(name)s_%(version)s.tar.gz',
+        }],
+    }),
+    ('quantoptr', '0.1.3'),
+    ('drc', '3.0-1'),
+    ('densvis', '1.16.0'),
+    ('CATALYST', '1.30.2'),
+    ('shinyjqui', '0.4.1'),
+    ('premessa', '0.3.4', {
+       'source_urls': ['https://github.com/ParkerICI/premessa/archive/refs/tags'],
+       'sources': [{
+           'download_filename': 'v%(version)s.tar.gz',
+           'filename': '%(name)s_%(version)s.tar.gz',
+       }],
+    }),
+    ('sodium', '1.4.0'),
+    ('keyring', '1.3.2'),
+    ('Nozzle.R1', '1.1-1.1'),
+    ('TxDb.Hsapiens.UCSC.hg18.knownGene', '3.2.2'),
+    ('TxDb.Mmusculus.UCSC.mm9.knownGene', '3.2.2'),
+    ('TxDb.Rnorvegicus.UCSC.rn4.ensGene', '3.2.2'),
+    ('TxDb.Celegans.UCSC.ce6.ensGene', '3.2.2'),
+    ('TxDb.Dmelanogaster.UCSC.dm3.ensGene', '3.2.2'),
+    ('ChIPQC', '1.42.0'),
+    ('RcppPlanc', '1.0.0', {
+       'source_urls': ['https://github.com/welch-lab/RcppPlanc/archive/'],
+       'sources': [{
+           'download_filename': '%s.tar.gz' % local_commit_RcppPlanc,
+           'filename': SOURCE_TAR_GZ,
+       }],
+    }),
+    ('httr2', '1.0.4'),
+    ('paws.common', '0.8.2'),
+    ('paws.analytics', '0.8.0'),
+    ('paws.application.integration', '0.8.0'),
+    ('paws.compute', '0.8.0'),
+    ('paws.cost.management', '0.8.0'),
+    ('paws.customer.engagement', '0.8.0'),
+    ('paws.database', '0.8.0'),
+    ('paws.developer.tools', '0.8.0'),
+    ('paws.end.user.computing', '0.8.0'),
+    ('paws.machine.learning', '0.8.0'),
+    ('paws.management', '0.8.0'),
+    ('paws.networking', '0.8.0'),
+    ('paws.security.identity', '0.8.0'),
+    ('paws.storage', '0.8.0'),
+    ('paws', '0.8.0'),
+    #('CaSpER', 'v2.0', {
+    #    'sources': [{
+    #        'filename': SOURCE_TAR_GZ,
+    #        'git_config': {
+    #            'url': 'https://github.com/akdess',
+    #            'repo_name': 'CaSpER',
+    #            'commit': '8aae116f2fa5cb55ac62259633b246b9d7b021b4',
+    #        }
+    #    }],
+    #}),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['Rmpi'],
+}
+
+moduleclass = 'bio'
