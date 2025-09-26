@@ -1,0 +1,69 @@
+easyblock = 'Bundle'
+
+name = 'R-Torch'
+version = '2.7.1'
+versionsuffix = '-R-%(rver)s'
+
+local_biocver = '3.20'
+
+local_notes = """ torch wants to download the following even if the libtorch.so libraies are in
+LD_LIBRARY_PATH. torch is in lib, libtorch is loaded to libs.
+
+with CUDA 12.8.0 this gets downloaded.
+https://download.pytorch.org/libtorch/cu128/libtorch-cxx11-abi-shared-with-deps-2.7.1%2Bcu128.zip
+https://torch-cdn.mlverse.org/binaries/refs/heads/cran/v0.16.0/latest/lantern-0.16.0+cu128+x86_64-Linux.zip
+"""
+
+homepage = 'https://cran.r-project.org/web/packages/torch/index.html'
+description = """Provides functionality to define and train neural networks similar to 'PyTorch'.
+ Includes Bioconductor 3.20."""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+builddependencies = [('pkgconf', '2.2.0')]
+
+dependencies = [
+    ('R', '4.4.2'),
+    ('R-bundle-Bioconductor', '3.20', versionsuffix),
+    ('CUDA', '12.8.0', '', SYSTEM),
+]
+
+exts_default_options = {
+    'source_urls': [
+        'https://cran.r-project.org/src/contrib/Archive/%(name)s',  # package archive
+        'https://cran.r-project.org/src/contrib/',  # current version of packages
+        'https://cran.freestatistics.org/src/contrib',  # mirror alternative for current packages
+    ],
+    'sources': ['%(name)s_%(version)s.tar.gz'],
+}
+
+exts_defaultclass = 'RPackage'
+
+# check whether correct version is installed in extension filter
+# (some versions in this bundle may be newer than the ones provided by R)
+local_ext_version_check = "pkgver = packageVersion('%(ext_name)s'); if (pkgver != '%(ext_version)s') "
+local_stop_msg = "stop('%(ext_name)s %(ext_version)s not installed, found ', pkgver, ' instead')"
+exts_filter = ("R -q --no-save", "%s { %s }" % (local_ext_version_check, local_stop_msg))
+
+# CRAN packages on which these Bioconductor packages depend are available in R module on which this depends
+# !! order of packages is important !!
+# packages updated on 24 November 2024
+exts_list = [
+    ('coro', '1.1.0'),
+    ('safetensors', '0.2.0'),
+    ('torch', '0.16.0',{
+        'checksums': [],
+    }),
+    ('pins', '1.4.1'),
+    # ('torchvision', '0.7.0'),
+    # ('torchdatasets', '0.3.1'),
+]
+
+modextrapaths = {'R_LIBS_SITE': ''}
+
+sanity_check_paths = {
+    'files': [],
+    'dirs': ['torch'],
+}
+
+moduleclass = 'ai'
