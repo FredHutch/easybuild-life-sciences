@@ -68,7 +68,7 @@ Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively
  short nucleotide sequences against a long reference sequence such as the human
  genome.
 
- - [BamTools/2.5.2-GCC-13.3.0](BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.)
+ - [BamTools/2.5.2-GCC-12.3.0](BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.)
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [Beast/10.5.0-beta3-GCC-12.3.0-beagle-lib-4.0.1-CUDA-12.1.1](BEAST is a cross-platform program for Bayesian analysis of molecular sequences
  using MCMC. It is entirely orientated towards rooted, time-measured phylogenies inferred using
@@ -100,17 +100,19 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BindCraft/BindCraft-20250520-foss-2023a-CUDA-12.1.1.eb)
 Simple binder design pipeline using AlphaFold2 backpropagation, MPNN, and PyRosetta.
  Select your target and let the script do the rest of the work and finish once you have enough designs to order!
- - [Bio-DB-HTS/3.01-GCC-13.3.0](Read files using HTSlib including BAM/CRAM, Tabix and BCF database files)
+ - [Bio-DB-HTS/3.01-GCC-12.2.0](Read files using HTSlib including BAM/CRAM, Tabix and BCF database files)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Bio-DB-HTS/Bio-DB-HTS-3.01-GCC-12.2.0.eb)
 Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
- - [BioPerl/1.7.8-GCCcore-13.3.0](Bioperl is the product of a community effort to produce Perl code which is useful in biology.
+ - [BioPerl/1.7.8-GCCcore-12.3.0](Bioperl is the product of a community effort to produce Perl code which is useful in biology.
  Examples include Sequence objects, Alignment objects and database searching objects.)
 Bioperl is the product of a community effort to produce Perl code which is useful in biology.
  Examples include Sequence objects, Alignment objects and database searching objects.
- - [Biopython/1.84-foss-2023b](Biopython is a set of freely available tools for biological
+ - [Biopython/1.84-foss-2024a](Biopython is a set of freely available tools for biological
  computation written in Python by an international team of developers. It is
  a distributed collaborative effort to develop Python libraries and
  applications which address the needs of current and future work in
  bioinformatics. )
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/Biopython/Biopython-1.84-foss-2024a.eb)
 Biopython is a set of freely available tools for biological
  computation written in Python by an international team of developers. It is
  a distributed collaborative effort to develop Python libraries and
@@ -146,9 +148,10 @@ stand-alone executable.)
 Cbc (Coin-or branch and cut) is an open-source mixed integer linear programming
 solver written in C++. It can be used as a callable library or using a
 stand-alone executable.
- - [CellBender/0.3.0-foss-2023a](CellBender is a software package for eliminating technical artifacts from
+ - [CellBender/0.3.0-foss-2023a-CUDA-12.1.1](CellBender is a software package for eliminating technical artifacts from
 high-throughput single-cell RNA sequencing (scRNA-seq) data.
 )
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CellBender/CellBender-0.3.0-foss-2023a-CUDA-12.1.1.eb)
 CellBender is a software package for eliminating technical artifacts from
 high-throughput single-cell RNA sequencing (scRNA-seq) data.
 
@@ -163,10 +166,11 @@ Cell Ranger is a set of analysis pipelines that process Chromium
 Chromium Single Cell ATAC data.)
 Cell Ranger ATAC is a set of analysis pipelines that process 
 Chromium Single Cell ATAC data.
- - [CellRank/2.0.2-foss-2023a-CUDA-12.1.1](CellRank is a toolkit to uncover cellular dynamics based on
+ - [CellRank/2.0.2-foss-2023a](CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
 hypothesis based on these. )
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CellRank/CellRank-2.0.2-foss-2023a.eb)
 CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
@@ -280,26 +284,27 @@ The Genome Analysis Toolkit or GATK is a software package developed at the Broad
  high-performance computing features make it capable of taking on projects of any size.
  - [GEOS/3.12.2-GCC-13.3.0](GEOS (Geometry Engine)
 GEOS (Geometry Engine
- - [GMP/6.3.0-GCCcore-13.2.0](GMP is a free library for arbitrary precision arithmetic, operating on signed
+ - [GMP/6.3.0-GCCcore-13.3.0](GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 )
 GMP is a free library for arbitrary precision arithmetic, operating on signed
  integers, rational numbers, and floating point numbers.
 
- - [GROMACS/2024.4-foss-2023b-CUDA-12.4.0](GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the
+ - [GROMACS/2024.4-foss-2023b](GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the
 Newtonian equations of motion for systems with hundreds to millions of
 particles.
 
-This is a GPU enabled build, containing both MPI and threadMPI binaries.
+This is a CPU only build, containing both MPI and threadMPI binaries
+for both single and double precision.
 
 It also contains the gmxapi extension for the single precision MPI build.
 )
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/g/GROMACS/GROMACS-2024.4-foss-2023b-CUDA-12.4.0.eb)
 GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the
 Newtonian equations of motion for systems with hundreds to millions of
 particles.
 
-This is a GPU enabled build, containing both MPI and threadMPI binaries.
+This is a CPU only build, containing both MPI and threadMPI binaries
+for both single and double precision.
 
 It also contains the gmxapi extension for the single precision MPI build.
 
@@ -381,7 +386,8 @@ Longshot is a variant calling tool for diploid genomes using long error prone re
  Biosciences (PacBio) SMRT and Oxford Nanopore Technologies (ONT). It takes as input an aligned BAM file and outputs
  a phased VCF file with variants and haplotype information. It can also output haplotype-separated BAM files that can
  be used for downstream analysis. Currently, it only calls single nucleotide variants (SNVs).
- - [MACS2/2.2.9.1-foss-2023a](Model Based Analysis for ChIP-Seq data)
+ - [MACS2/2.2.9.1-foss-2022b](Model Based Analysis for ChIP-Seq data)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MACS2/MACS2-2.2.9.1-foss-2022b.eb)
 Model Based Analysis for ChIP-Seq data
  - [MACS3/3.0.1-gfbf-2023a](Model Based Analysis for ChIP-Seq data)
 Model Based Analysis for ChIP-Seq data
@@ -409,7 +415,7 @@ METIS is a set of serial programs for partitioning graphs, partitioning
  recursive-bisection, multilevel k-way, and multi-constraint partitioning
  schemes.
 
- - [MPC/1.3.1-GCCcore-13.2.0](Gnu Mpc is a C library for the arithmetic of
+ - [MPC/1.3.1-GCCcore-13.3.0](Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
  standard for fixed precision real floating point numbers to
@@ -423,7 +429,7 @@ Gnu Mpc is a C library for the arithmetic of
  complex numbers, providing well-defined semantics for every
  operation. At the same time, speed of operation at high precision
  is a major design goal.
- - [MPFR/4.2.1-GCCcore-13.2.0](The MPFR library is a C library for multiple-precision floating-point
+ - [MPFR/4.2.1-GCCcore-13.3.0](The MPFR library is a C library for multiple-precision floating-point
  computations with correct rounding.
 )
 The MPFR library is a C library for multiple-precision floating-point
@@ -542,7 +548,7 @@ Pysam is a python module for reading and manipulating Samfiles.
 open source, and community developed.)
 QIIME 2 is a powerful, extensible, and decentralized microbiome bioinformatics platform that is free,
 open source, and community developed.
- - [Qhull/2020.2-GCCcore-12.2.0](Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
+ - [Qhull/2020.2-GCCcore-13.3.0](Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
  halfspace intersection about a point, furthest-site Delaunay triangulation,
  and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and
  higher dimensions. Qhull implements the Quickhull algorithm for computing the
@@ -603,6 +609,13 @@ STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays
 STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts
  supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner
  to map junction reads and spanning reads to a reference annotation set.
+ - [SVIM/2.0.0-foss-2024a](SVIM (pronounced swim) is a structural variant caller for third-generation sequencing reads.
+ It is able to detect and classify the following six classes of structural variation: deletions, insertions,
+ inversions, tandem duplications, interspersed duplications and translocations.)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SVIM/SVIM-2.0.0-foss-2024a.eb)
+SVIM (pronounced swim) is a structural variant caller for third-generation sequencing reads.
+ It is able to detect and classify the following six classes of structural variation: deletions, insertions,
+ inversions, tandem duplications, interspersed duplications and translocations.
  - [SVclone/1.1.2-foss-2022b](Cluster structural variants of similar cancer cell fraction (CCF).)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SVclone/SVclone-1.1.2-foss-2022b.eb)
 Cluster structural variants of similar cancer cell fraction (CCF).
@@ -661,8 +674,8 @@ Squidpy is a tool for the analysis and visualization of spatial molecular data.
 A gap-closing software tool that uses error-prone long reads generated by
  third-generation-sequence techniques (Pacbio, Oxford Nanopore, etc.) or preassembled contigs
  to fill N-gap in the genome assembly.
- - [Telescope/1.0.3-gfbf-2022b](Single locus resolution of Transposable ELEment expression using next-generation sequencing.)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-gfbf-2022b.eb)
+ - [Telescope/1.0.3-20230222-gfbf-2022b](Single locus resolution of Transposable ELEment expression using next-generation sequencing.)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-20230222-gfbf-2022b.eb)
 Single locus resolution of Transposable ELEment expression using next-generation sequencing.
  - [UMI-tools/1.1.4-foss-2023b](Tools for handling Unique Molecular Identifiers in NGS data sets)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/u/UMI-tools/UMI-tools-1.1.4-foss-2023b.eb)
@@ -787,12 +800,13 @@ Cutadapt finds and removes adapter sequences, primers, poly-A tails and
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/cuteSV/cuteSV-2.1.2-foss-2024a.eb)
 cuteSV uses tailored methods to collect the signatures of various types of SVs
  and employs a clustering-and-refinement method to analyze the signatures to implement sensitive SV detection.
- - [dcm2niix/1.0.20241211-GCCcore-13.3.0](dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format.)
+ - [dcm2niix/1.0.20241211-GCCcore-13.2.0](dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format.)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/dcm2niix/dcm2niix-1.0.20241211-GCCcore-13.2.0.eb)
 dcm2niix is designed to convert neuroimaging data from the DICOM format to the NIfTI format.
  - [dorado/1.0.2-foss-2024a-CUDA-12.6.0](Dorado is a high-performance, easy-to-use, open source basecaller for Oxford Nanopore reads.)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/dorado/dorado-1.0.2-foss-2024a-CUDA-12.6.0.eb)
 Dorado is a high-performance, easy-to-use, open source basecaller for Oxford Nanopore reads.
- - [dssp/4.4.10-GCC-13.3.0](This is a rewrite of DSSP, now offering full mmCIF support. The difference with
+ - [dssp/4.4.10-GCC-12.2.0](This is a rewrite of DSSP, now offering full mmCIF support. The difference with
 previous releases of DSSP is that it now writes out an annotated mmCIF file by
 default, storing the secondary structure information in the _struct_conf
 category.
@@ -806,6 +820,7 @@ assignments (and much more) for all protein entries in the Protein Data Bank
 (PDB). DSSP is also the program that calculates DSSP entries from PDB entries.
 
 DSSP does not predict secondary structure.)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/dssp/dssp-4.4.10-GCC-12.2.0.eb)
 This is a rewrite of DSSP, now offering full mmCIF support. The difference with
 previous releases of DSSP is that it now writes out an annotated mmCIF file by
 default, storing the secondary structure information in the _struct_conf
@@ -862,7 +877,7 @@ focus are evolutionary placements of short environmental sequences on a
 reference phylogenetic tree. Such data is typically produced by tools like
 EPA-ng, RAxML-EPA or pplacer and usually stored in jplace files.
 
- - [gffread/0.12.7-GCCcore-12.2.0](GFF/GTF parsing utility providing format conversions,
+ - [gffread/0.12.7-GCCcore-12.3.0](GFF/GTF parsing utility providing format conversions,
 region filtering, FASTA sequence extraction and more.)
 GFF/GTF parsing utility providing format conversions,
 region filtering, FASTA sequence extraction and more.
@@ -892,11 +907,11 @@ libcerf is a self-contained numeric library that provides an efficient and
  accurate implementation of complex error functions, along with Dawson,
  Faddeeva, and Voigt functions.
 
- - [libcifpp/7.0.8-GCC-12.2.0](This library contains code to work with mmCIF and PDB files)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/l/libcifpp/libcifpp-7.0.8-GCC-12.2.0.eb)
+ - [libcifpp/7.0.8-GCC-13.3.0](This library contains code to work with mmCIF and PDB files)
 This library contains code to work with mmCIF and PDB files
- - [libmcfp/1.3.4-GCCcore-13.3.0](A library for parsing command line arguments and configuration files and making
+ - [libmcfp/1.3.4-GCCcore-12.2.0](A library for parsing command line arguments and configuration files and making
 them available throughout a program.)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/l/libmcfp/libmcfp-1.3.4-GCCcore-12.2.0.eb)
 A library for parsing command line arguments and configuration files and making
 them available throughout a program.
  - [loompy/3.0.8-foss-2024a](Python implementation of the Loom file format, an efficient file format for large omics datasets)
@@ -1084,6 +1099,10 @@ splitpipe tool from Parse Biosciences. The pipeline takes FASTQ files and delive
  sources tools such as scanpy and seuratProcess sequencing results with our pipeline.
 
  A Parse Bioscience login ID is required to download
+ - [spoa/4.1.0-GCC-13.3.0](Spoa (SIMD POA) is a c++ implementation of the partial order alignment (POA) algorithm
+ which is used to generate consensus sequences)
+Spoa (SIMD POA) is a c++ implementation of the partial order alignment (POA) algorithm
+ which is used to generate consensus sequences
  - [starcode/1.4-GCC-13.2.0](Starcode is a DNA sequence clustering software. Starcode clustering is based on all pairs
 search within a specified Levenshtein distance (allowing insertions and deletions), followed by a clustering
 algorithm: Message Passing, Spheres or Connected Components.)
@@ -1095,7 +1114,7 @@ and perform statistical tests.)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/statsmodels/statsmodels-0.14.4-gfbf-2024a-numpy-2.eb)
 Statsmodels is a Python module that allows users to explore data, estimate statistical models,
 and perform statistical tests.
- - [sympy/1.13.3-gfbf-2024a-numpy-2](SymPy is a Python library for symbolic mathematics. It aims to
+ - [sympy/1.13.3-gfbf-2024a](SymPy is a Python library for symbolic mathematics. It aims to
  become a full-featured computer algebra system (CAS) while keeping the code as
  simple as possible in order to be comprehensible and easily extensible. SymPy
  is written entirely in Python and does not require any external libraries.)
