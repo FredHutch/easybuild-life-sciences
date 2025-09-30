@@ -20,6 +20,10 @@ label=""
 if [[ $# -eq 1 ]]; then
    label="${1}"
    echo Lable: $label
+else
+   echo usage: create_module_list.sh lable
+   echo Lable should be [chorus, gizmo, ermine, etc]
+   exit 
 fi
 
 # get VERSION_ID from /etc/os-release 
@@ -47,7 +51,11 @@ for class in $moduleclass; do
 done
 echo $module_search_path
 json_in=${docs_dir}/${label}-bio-modules-${VERSION_ID}.json
-$spider -o spider-json $module_search_path | python3 -mjson.tool > ${json_in} 
+$spider -o spider-json $module_search_path | \
+    python3 -mjson.tool | \
+    sed 's/4.release-/4./' |\
+    sed 's/004.\*release/004/' > ${json_in}
+    # 04.*release.
 
 echo Generating Markdown
 md_file=${label}-bio-modules-${VERSION_ID}
