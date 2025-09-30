@@ -2,13 +2,11 @@
 
 # create_module_list.sh
 #
-# Create a list of LMOD modules. Filter modules based on module class 'bio', 'chem', 'phys' and
-# 'math'
-# Used to create software Inventory
+# Create a list of LMOD modules to publish a Software Inventory
+#   modules all or Bio 
+#
 
 repo='easybuild-life-sciences'
-marker='<!---DO NOT EDIT BELOW HERE--->'
-
 
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Can not find github pages docs directory."
@@ -16,15 +14,30 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
     exit 1
 fi
 
+function usage {
+   echo usage: create_module_list.sh [full,bio] lable
+   echo Lable should be [chorus, gizmo, ermine, etc]
+   exit
+}
+
 label=""
-if [[ $# -eq 1 ]]; then
-   label="${1}"
+if [[ $# -eq 2 ]]; then
+   inventory_type="${1}"
+   label="${2}"
    echo Lable: $label
 else
-   echo usage: create_module_list.sh lable
-   echo Lable should be [chorus, gizmo, ermine, etc]
-   exit 
+  usage
 fi
+
+case $inventory_type in 
+  "bio") moduleclass="ai bio chem math"
+  ;;
+  "all") moduleclass="all"
+  ;;
+  *)
+  usage
+  ;;
+esac
 
 # get VERSION_ID from /etc/os-release 
 . /etc/os-release
@@ -40,7 +53,6 @@ module_dir=/app/modules
 
 echo Collecting Inventory
 cd $base_dir
-moduleclass='ai bio chem math'
 module_search_path=''
 for class in $moduleclass; do
    if [ -z $module_search_path ]; then
@@ -50,7 +62,7 @@ for class in $moduleclass; do
    fi
 done
 echo $module_search_path
-json_in=${docs_dir}/${label}-bio-modules-${VERSION_ID}.json
+json_in=${docs_dir}/${label}-${inventory_type}-modules-${VERSION_ID}.json
 $spider -o spider-json $module_search_path | \
     python3 -mjson.tool | \
     sed 's/4.release-/4./' |\
@@ -58,7 +70,7 @@ $spider -o spider-json $module_search_path | \
     # 04.*release.
 
 echo Generating Markdown
-md_file=${label}-bio-modules-${VERSION_ID}
+md_file=${label}-${inventory_type}-modules-${VERSION_ID}
 md_out=${docs_dir}/${md_file}.md
 
 echo '---' > ${md_out}
