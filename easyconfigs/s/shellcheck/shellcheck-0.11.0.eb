@@ -1,0 +1,40 @@
+easyblock = 'Tarball'
+
+name = 'shellcheck'
+version = '0.11.0'
+
+homepage = 'https://www.shellcheck.net/'
+description = """
+Finds bugs in your shell scripts. 
+"""
+
+toolchain = SYSTEM
+
+download_instructions = """
+Download manually from https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v%(version)s.linux.x86_64.tar.xz
+"""
+
+source_urls = ['https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v%(version)s.linux.x86_64.tar.xz']
+sources = ["%(namelower)s-v%(version)s.linux.x86_64.tar.xz"]
+checksums = ['8c3be12b05d5c177a04c29e3c78ce89ac86f1595681cab149b65b97c4e227198']
+
+#keepsymlinks = True
+
+#preinstall_cmd = "mkdir -p %(installdir)s/bin"
+#postinstallcmds = ["mkdir -p %(installdir)s/bin", "cp -v %(builddir)s/shellcheck-v%(version)s/shellcheck %(installdir)s/bin/", "rm %(installdir)s/shellcheck-v%(version)s/shellcheck"]
+
+modextrapaths = {'PATH': ['.']}
+
+sanity_check_paths = {
+    'files': ['shellcheck'],
+    'dirs': [],
+}
+
+sanity_check_commands = ['shellcheck --help']
+
+modloadmsg = """
+Run `shellcheck --help` for more information.
+"""
+
+moduleclass = 'lang'
+
