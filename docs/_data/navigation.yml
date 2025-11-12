@@ -18,7 +18,7 @@ docs:
       - title: "Canto - Bio Software Inventory"
         url: /sw_inventory/skylake-bio-modules-24.04/
       - title: "Canto - Full Software Inventory"
-        url: /sw_inventory/skylate-all-modules-24.04/
+        url: /sw_inventory/skylake-all-modules-24.04/
       - title: "Gizmo - Bio Software Inventory"
         url: /sw_inventory/gizmo-bio-modules-18.04/
       - title: "Gizmo - Full Software Inventory"
