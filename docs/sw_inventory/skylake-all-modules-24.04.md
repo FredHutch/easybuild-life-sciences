@@ -1,5 +1,5 @@
 ---
-title: skylake Bio Modules 24.04
+title: Canto Bio Modules Noble 24.04 (Skylake)
 layout: single
 permalink: /sw_inventory/skylake-all-modules-24.04/
 created: 2025-11-12
@@ -8,6 +8,7 @@ toc_label: "On This Page"
 sidebar:
   nav: "docs"
 ---
+
 
  - [AGAT/1.4.0-GCC-12.3.0](https://agat.readthedocs.io/en/latest/)
 AGAT: Another GTF/GFF Analysis Toolkit. Suite of tools to handle gene annotations
