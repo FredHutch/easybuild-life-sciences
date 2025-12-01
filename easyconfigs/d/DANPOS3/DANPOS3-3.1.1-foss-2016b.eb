@@ -1,0 +1,38 @@
+easyblock = 'Tarball'
+
+name = 'DANPOS3'
+version = '3.1.1'  # really no idea what the version is.
+versionsuffix = '-Python-%(pyver)s'
+
+homepage = 'https://sites.google.com/site/danposdoc'
+# also https://github.com/sklasfeld/DANPOS3
+description = """A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 3"""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+source_urls = ['https://github.com/sklasfeld/DANPOS3/archive/refs/heads/']
+sources = ['master.tar.gz']
+checksums = ['966ca09180db07825cb31039308c8ab76f1a404b2976b389c5f808463e1e684f']
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('R', '4.4.2'),
+    ('SAMtools', '1.21'),
+    ('rpy2', '3.5.17'),
+    ('Pysam', '0.22.1'),
+]
+
+modextrapaths = {
+    'PATH': '',
+    'PYTHONPATH': '',
+}
+
+sanity_check_paths = {
+    'files': ['danpos.py'],
+    'dirs': [],
+}
+postinstallcmds = ["chmod 755  %(installdir)s/danpos.py"]
+
+sanity_check_commands = ["python -c 'import danpos'"]
+
+moduleclass = 'bio'
