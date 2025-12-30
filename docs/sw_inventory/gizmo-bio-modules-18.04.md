@@ -2,13 +2,18 @@
 title: gizmo Bio Modules 18.04
 layout: single
 permalink: /sw_inventory/gizmo-bio-modules-18.04/
-created: 2025-05-15
+created: 2025-12-30
 toc: true
 toc_label: "On This Page"
 sidebar:
   nav: "docs"
 ---
 
+ - [ADMIXTURE/1.3.0-x86_64](https://dalexander.github.io/admixture/index.html)
+Software tool for maximum likelihood estimation of individual
+ancestries from multilocus SNP genotype datasets. It uses the same statistical
+model as STRUCTURE but calculates estimates much more rapidly using a
+fast numerical optimization algorithm. 
  - [AGAT/0.9.2-GCC-11.2.0](https://agat.readthedocs.io/en/latest/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/a/AGAT/AGAT-0.9.2-GCC-11.2.0.eb)
 AGAT: Another GTF/GFF Analysis Toolkit. Suite of tools to handle gene annotations
@@ -23,6 +28,9 @@ in C of functions in ASE.  ASE uses it automatically when installed.
 AUGUSTUS is a program that predicts genes in eukaryotic genomic sequences
  - [AlphaFold/2.3.1-foss-2022a-CUDA-11.7.0](https://deepmind.com/research/case-studies/alphafold)
 AlphaFold can predict protein structures with atomic accuracy even where no similar structure is known
+ - [AlphaPulldown/0.30.4-fosscuda-2020b](https://github.com/KosinskiLab/AlphaPulldown)
+AlphaPulldown is a Python package that streamlines protein-protein
+interaction screens and high-throughput modelling of higher-order oligomers using AlphaFold-Multimer
  - [ArrayFire/3.8.1-foss-2019b-CUDA-10.2.89](https://arrayfire.com/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/a/ArrayFire/ArrayFire-3.8.1-foss-2019b-CUDA-10.2.89.eb)
 ArrayFire is a general-purpose library that simplifies the process of
@@ -33,6 +41,9 @@ ArrayFire is a general-purpose library that simplifies the process of
 Arriba is a command-line tool for the detection of gene fusions from RNA-Seq data.
  It was developed for the use in a clinical research setting. Therefore, short runtimes and high
  sensitivity were important design criteria.
+ - [Arrow/17.0.0-gfbf-2024a](https://arrow.apache.org)
+Apache Arrow (incl. PyArrow Python bindings), a cross-language development platform
+ for in-memory data.
  - [ArviZ/0.16.1-foss-2023a](https://github.com/arviz-devs/arviz)
 Exploratory analysis of Bayesian models with Python
  - [BAli-Phy/4.0-beta8-GCC-12.2.0](http://www.bali-phy.org/)
@@ -45,8 +56,7 @@ BBMap short read aligner, and other bioinformatic tools.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BCFtools/BCFtools-1.19-GCC-13.2.0.eb)
 Samtools is a suite of programs for interacting with high-throughput sequencing data.
  BCFtools
- - [BEAST/10.5.0-beta3-GCC-12.3.0-CUDA-12.1.1](https://beast.community)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BEAST/BEAST-10.5.0-beta3-GCC-12.3.0-CUDA-12.1.1.eb)
+ - [BEAST/10.5.0-beta3-GCC-12.3.0](https://beast.community)
 BEAST is a cross-platform program for Bayesian analysis of molecular sequences
  using MCMC. It is entirely orientated towards rooted, time-measured phylogenies inferred using
  strict or relaxed molecular clock models. It can be used as a method of reconstructing phylogenies
@@ -73,25 +83,31 @@ This repository contains a reference implementation
  Band, G. and Marchini, J., "BGEN: a binary file format for imputed genotype and haplotype data", 
  bioArxiv 308296; doi: https://doi.org/10.1101/308296
 
- - [BLAST+/2.14.0-gompi-2022b](https://blast.ncbi.nlm.nih.gov/)
+ - [BLAST+/2.16.0-gompi-2024a](https://blast.ncbi.nlm.nih.gov/)
 Basic Local Alignment Search Tool, or BLAST, is an algorithm
  for comparing primary biological sequence information, such as the amino-acid
  sequences of different proteins or the nucleotides of DNA sequences.
  - [BLAT/3.5-GCC-8.3.0](https://genome.ucsc.edu/FAQ/FAQblat.html)
 BLAT on DNA is designed to quickly find sequences of 95% and
 greater similarity of length 25 bases or more.
+ - [BPCells/0.3.0-foss-2024a](https://cole-trapnell-lab.github.io/monocle3)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BPCells/BPCells-0.3.0-foss-2024a.eb)
+Single-cell transcriptome sequencing (sc-RNA-seq) experiments
+ allow us to discover new cell types and help us understand how they arise in
+ development. The Monocle 3 package provides a toolkit for analyzing
+ single-cell gene expression experiments.
  - [BUStools/0.40.0-foss-2019b](https://github.com/BUStools/bustools)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BUStools/BUStools-0.40.0-foss-2019b.eb)
 bustools is a program for manipulating BUS files for single cell RNA-Seq datasets.
  It can be used to error correct barcodes, collapse  UMIs, produce gene count or transcript compatibility
  count matrices, and is useful for many other tasks. See the kallisto | bustools  website for examples
  and instructions on how to use bustools as part of a single-cell RNA-seq workflow.
- - [BWA/0.7.17-GCCcore-11.2.0](http://bio-bwa.sourceforge.net/)
+ - [BWA/0.7.18-GCCcore-13.3.0](https://bio-bwa.sourceforge.net/)
 Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively
  short nucleotide sequences against a long reference sequence such as the human
  genome.
 
- - [BamTools/2.5.2-GCC-12.3.0](https://github.com/pezmaster31/bamtools)
+ - [BamTools/2.5.2-GCC-12.2.0](https://github.com/pezmaster31/bamtools)
 BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files.
  - [BaseSpaceCLI/1.5.1](https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/BaseSpaceCLI/BaseSpaceCLI-1.5.1.eb)
@@ -115,6 +131,8 @@ BEAST is a cross-platform program for Bayesian MCMC analysis of molecular
  but is also a framework for testing evolutionary hypotheses without conditioning on a single 
  tree topology. BEAST uses MCMC to average over tree space, so that each tree is weighted 
  proportional to its posterior probability. 
+ - [BeautifulSoup/4.12.3-GCCcore-13.3.0](https://www.crummy.com/software/BeautifulSoup)
+Beautiful Soup is a Python library designed for quick turnaround projects like screen-scraping.
  - [Bio-DB-HTS/3.01-GCC-13.3.0](https://metacpan.org/release/Bio-DB-HTS)
 Read files using HTSlib including BAM/CRAM, Tabix and BCF database files
  - [Bio-SearchIO-hmmer/1.7.3-GCC-10.2.0](https://metacpan.org/pod/Bio::SearchIO::hmmer3)
@@ -180,8 +198,7 @@ CellProfiler is a free open-source software designed to enable
 Cell Ranger is a set of analysis pipelines that process Chromium
  single-cell RNA-seq output to align reads, generate gene-cell matrices and perform
  clustering and gene expression analysis.
- - [CellRanger-ARC/2.0.0](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/CellRanger-ARC/CellRanger-ARC-2.0.0.eb)
+ - [CellRanger-ARC/2.1.0](https://support.10xgenomics.com/single-cell-multiome-atac-gex/software/pipelines/latest/what-is-cell-ranger-arc)
 Cell Ranger ARC is a set of analysis pipelines that process
  Chromium Single Cell Multiome ATAC + Gene Expression sequencing data to generate a
  variety of analyses pertaining to gene expression, chromatin accessibility and
@@ -197,6 +214,8 @@ CellRank is a toolkit to uncover cellular dynamics based on
  Markov state modeling of single-cell data.  It contains two main modules:
 kernels compute cell-cell transition probabilities and estimators generate
 hypothesis based on these. 
+ - [CellTypist/1.6.2-foss-2023a](https://www.celltypist.org/)
+A tool for semi-automatic cell type annotation
  - [Cellpose/0.6.5-fosscuda-2020b](http://cellpose.org/)
 Cellpose is an anatomical segmentation algorithm written in Python 3 by Carsen 
 Stringer and Marius Pachitariu.
@@ -246,6 +265,12 @@ CrossMap is a program for genome coordinates conversion
  between different assemblies (such as hg18 (NCBI36) <=> hg19 (GRCh37)).
  It supports commonly used file formats including BAM, CRAM, SAM, Wiggle,
  BigWig, BED, GFF, GTF and VCF.
+ - [DANPOS3/3.1.1-foss-2024a-Python-3.12.3](https://sites.google.com/site/danposdoc)
+A toolkit for Dynamic Analysis of Nucleosome and Protein Occupancy by Sequencing, version 3
+ - [DBD-mysql/4.051-GCC-13.3.0](https://metacpan.org/pod/distribution/DBD-mysql/lib/DBD/mysql.pm)
+Perl binding for MySQL
+ - [DB_File/1.859-GCCcore-12.3.0](https://perldoc.perl.org/DB_File.html)
+Perl5 access to Berkeley DB version 1.x.
  - [DIAMOND/2.0.13-GCC-11.2.0](https://github.com/bbuchfink/diamond)
 Accelerated BLAST compatible local sequence aligner
  - [DeepCell/0.11.1-foss-2021b-CUDA-11.4.1](https://deepcell.readthedocs.io/en/master/)
@@ -264,9 +289,15 @@ inversions and translocations at single-nucleotide resolution in short-read
 massively parallel sequencing data. It uses paired-ends, split-reads and
 read-depth to sensitively and accurately delineate genomic rearrangements
 throughout the genome.
- - [DendroPy/4.5.2-GCCcore-11.3.0](https://dendropy.org/)
-A Python library for phylogenetics and phylogenetic computing: 
-reading, writing, simulation, processing and manipulation of phylogenetic trees 
+ - [DeltaLake/0.15.1-gfbf-2023a](https://delta-io.github.io/delta-rs/)
+Native Delta Lake Python binding based on delta-rs with Pandas integration.
+The Delta Lake project aims to unlock the power of the Deltalake for as many
+users and projects as possible by providing native low-level APIs aimed at
+developers and integrators, as well as a high-level operations API that lets
+you query, inspect, and operate your Delta Lake with ease.
+ - [DendroPy/5.0.1-GCCcore-13.2.0](https://dendropy.org/)
+A Python library for phylogenetics and phylogenetic computing:
+reading, writing, simulation, processing and manipulation of phylogenetic trees
 (phylogenies) and characters.
  - [DiMSum/1.2.9-foss-2021b-R-4.2.0](https://github.com/lehner-lab/DiMSum)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/DiMSum/DiMSum-1.2.9-foss-2021b-R-4.2.0.eb)
@@ -292,7 +323,7 @@ EMBOSS is 'The European Molecular Biology Open Software Suite'
 EPACTS is a versatile software pipeline to perform various statistical tests for identifying
  genome-wide association from sequence data through a user-friendly interface, both to scientific analysts and
  to method developers.
- - [Eigen/3.4.0-GCCcore-11.3.0](https://eigen.tuxfamily.org)
+ - [Eigen/3.4.0-GCCcore-13.3.0](https://eigen.tuxfamily.org)
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers,
  and related algorithms.
  - [Enrich2/1.3.1-foss-2020b-Python-2.7.18](https://github.com/FowlerLab/Enrich2)
@@ -309,7 +340,7 @@ The FASTX-Toolkit is a collection of command line tools for
 FLAIR (Full-Length Alternative Isoform analysis of RNA)
 for the correction, isoform definition, and alternative splicing analysis of noisy reads.
 FLAIR has primarily been used for nanopore cDNA, native RNA, and PacBio sequencing reads.
- - [FLASH/2.2.00-GCCcore-12.2.0](https://ccb.jhu.edu/software/FLASH/)
+ - [FLASH/2.2.00-foss-2022b](https://ccb.jhu.edu/software/FLASH/)
 FLASH (Fast Length Adjustment of SHort reads) is a very fast
 and accurate software tool to merge paired-end reads from next-generation
 sequencing experiments. FLASH is designed to merge pairs of reads when the
@@ -334,19 +365,27 @@ FlashPCA performs fast principal component analysis (PCA) of single nucleotide
 Flax is a high-performance neural network library and ecosystem for JAX that is
 designed for flexibility: Try new forms of training by forking an example and
 by modifying the training loop, not by adding features to a framework.
+ - [FreeTDS/1.3.6-GCCcore-11.2.0](https://www.freetds.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/FreeTDS/FreeTDS-1.3.6-GCCcore-11.2.0.eb)
+FreeTDS is a set of libraries for Unix and Linux that allows your programs to
+ natively talk to Microsoft SQL Server and Sybase databases.
  - [GATK/4.4.0.0-GCCcore-12.2.0-Java-17](https://www.broadinstitute.org/gatk/)
 The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute
  to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,
  with a primary focus on variant discovery and genotyping as well as strong emphasis on
  data quality assurance. Its robust architecture, powerful processing engine and
  high-performance computing features make it capable of taking on projects of any size.
- - [GCTA/1.92.2beta](https://cnsgenomics.com/software/gcta)
+ - [GCTA/1.92.2beta]()
 GCTA (Genome-wide Complex Trait Analysis) was originally designed to
  estimate the proportion of phenotypic variance explained by all genome-wide SNPs for
  complex traits (the GREML method), and has subsequently extended for many other analyses
  to better understand the genetic architecture of complex traits.
- - [GEOS/3.12.1-GCC-13.2.0](https://trac.osgeo.org/geos)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/g/GEOS/GEOS-3.12.1-GCC-13.2.0.eb)
+ - [GDAL/3.10.0-foss-2024a](https://www.gdal.org)
+GDAL is a translator library for raster geospatial data formats that is released under an X/MIT style
+ Open Source license by the Open Source Geospatial Foundation. As a library, it presents a single abstract data model
+ to the calling application for all supported formats. It also comes with a variety of useful commandline utilities for
+ data translation and processing.
+ - [GEOS/3.12.2-GCC-13.3.0](https://trac.osgeo.org/geos)
 GEOS (Geometry Engine
  - [GISTIC/2.0.23-GCCcore-8.3.0](www.broadinstitute.org/cancer/cga/gistc)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/g/GISTIC/GISTIC-2.0.23-GCCcore-8.3.0.eb)
@@ -387,9 +426,20 @@ tools for discovery and genotyping of structural variation using whole-genome
 sequencing data. The methods used in Genome STRiP are designed to find shared
 variation using data from multiple individuals. Genome STRiP looks both across
 and within a set of sequenced genomes to detect variation.
+ - [Globus-CLI/3.29.0-GCCcore-12.2.0](https://docs.globus.org/cli/)
+A Command Line Wrapper over the Globus SDK for Python, which provides an interface to Globus services
+ from the shell, and is suited to both interactive and simple scripting use cases.
  - [GoPeaks/1.0.0](https://github.com/maxsonBraunLab/gopeaks)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/g/GoPeaks/GoPeaks-1.0.0.eb)
 GoPeaks is a peak caller designed for CUT&TAG/CUT&RUN sequencing data.
+ - [HDF/4.3.0-GCCcore-13.3.0](https://support.hdfgroup.org/products/hdf4/)
+HDF (also known as HDF4) is a library and multi-object file format for
+ storing and managing data between machines.
+
+ - [HDF5/1.14.5-gompi-2024a](https://portal.hdfgroup.org/display/support)
+HDF5 is a data model, library, and file format for storing and managing data.
+ It supports an unlimited variety of datatypes, and is designed for flexible
+ and efficient I/O and for high volume and complex data.
  - [HH-suite/3.3.0-gompi-2022a](https://github.com/soedinglab/hh-suite)
 The HH-suite is an open-source software package
  for sensitive protein sequence searching based on the pairwise
@@ -402,7 +452,7 @@ HISAT2 is a fast and sensitive alignment program for mapping next-generation seq
 HLA-HD (HLA typing from High-quality Dictionary) can accurately
  determine HLA alleles with 6-digit precision from NGS data (fastq format).
  RNA-Seq data can also be applied.
- - [HMMER/3.3.2-gompi-2020b](http://hmmer.org/)
+ - [HMMER/3.3.2-gompi-2022a](http://hmmer.org/)
 HMMER is used for searching sequence databases for homologs
  of protein sequences, and for making protein sequence alignments. It
  implements methods using probabilistic models called profile hidden Markov
@@ -437,12 +487,17 @@ Hail is an open-source, general-purpose, Python-based data analysis tool with
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/h/HiC-Pro/HiC-Pro-3.1.0-foss-2021b.eb)
 HiC-Pro was designed to process Hi-C data, from raw fastq files (paired-end Illumina data) 
  to the normalized contact maps.
+ - [HyPhy/2.5.60-gompi-2022a](https://veg.github.io/hyphy-site/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/h/HyPhy/HyPhy-2.5.60-gompi-2022a.eb)
+HyPhy (Hypothesis Testing using Phylogenies) is an open-source software package
+ for the analysis of genetic sequences (in particular the inference of natural selection)
+ using techniques in phylogenetics, molecular evolution, and machine learning
  - [IGV/2.15.4-Java-11](https://www.broadinstitute.org/software/igv/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/i/IGV/IGV-2.15.4-Java-11.eb)
 This package contains command line utilities for
  preprocessing, computing feature count density (coverage),  sorting, and
  indexing data files.
- - [IGVTools/2.4.16-Java-1.8](http://www.broadinstitute.org/software/igv/)
+ - [IGVTools/2.4.16-Java-1.8]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/i/IGVTools/IGVTools-2.4.16-Java-1.8.eb)
 This package contains command line utilities for preprocessing, 
  computing feature count density (coverage),  sorting, and indexing data files.
@@ -459,8 +514,15 @@ Infernal ("INFERence of RNA ALignment") is for searching DNA sequence databases
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/j/JAGS/JAGS-4.3.2-foss-2023b.eb)
 JAGS is Just Another Gibbs Sampler.  It is a program for analysis
  of Bayesian hierarchical models using Markov Chain Monte Carlo (MCMC) simulation  
- - [Jellyfish/2.3.0-GCC-8.3.0](http://www.genome.umd.edu/jellyfish.html)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/j/Jellyfish/Jellyfish-2.3.0-GCC-8.3.0.eb)
+ - [Jansson/2.14-GCC-12.3.0](https://www.digip.org/jansson/)
+Jansson is a C library for encoding, decoding and manipulating JSON data.
+ Its main features and design principles are:
+ * Simple and intuitive API and data model
+ * Comprehensive documentation
+ * No dependencies on other libraries
+ * Full Unicode support (UTF-8)
+ * Extensive test suite
+ - [Jellyfish/2.3.0-GCC-11.2.0](http://www.genome.umd.edu/jellyfish.html)
 Jellyfish is a tool for fast, memory-efficient counting of k-mers in DNA.
  - [Kalign/3.3.5-GCCcore-11.3.0](https://github.com/TimoLassmann/kalign)
 Kalign is a fast multiple sequence alignment program for biological sequences.
@@ -479,9 +541,14 @@ Kraken is a system for assigning taxonomic labels to short DNA sequences,
  the development of less sensitive but much faster abundance estimation
  programs. Kraken aims to achieve high sensitivity and high speed by
  utilizing exact alignments of k-mers and a novel classification algorithm.
+ - [LAME/3.100-GCCcore-13.2.0](http://lame.sourceforge.net/)
+LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
  - [LUMPY/0.3.1-foss-2020b](https://github.com/arq5x/lumpy-sv)
 A probabilistic framework for structural variant discovery.
 
+ - [Levenshtein/0.25.1-GCCcore-13.2.0](https://pypi.org/project/python-Levenshtein/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/l/Levenshtein/Levenshtein-0.25.1-GCCcore-13.2.0.eb)
+Python extension for computing string edit distances and similarities.
  - [LoomXpy/0.4.2-foss-2022b](https://loomxpy.readthedocs.io/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/l/LoomXpy/LoomXpy-0.4.2-foss-2022b.eb)
 Python package (compatible with SCope) to create .loom files and extend them with
@@ -507,6 +574,11 @@ MAESTRO(Model-based AnalysEs of Single-cell Transcriptome and RegulOme) is a com
 MAFFT is a multiple sequence alignment program for unix-like operating systems.
 It offers a range of multiple alignment methods, L-INS-i (accurate; for alignment
 of <∼200 sequences), FFT-NS-2 (fast; for alignment of <∼30,000 sequences), etc.
+ - [MAGeCK/0.5.9.5-gfbf-2022b](https://sourceforge.net/p/mageck/wiki/Home/)
+Model-based Analysis of Genome-wide CRISPR-Cas9 Knockout (MAGeCK) is a computational tool to identify
+ important genes from the recent genome-scale CRISPR-Cas9 knockout screens (or GeCKO) technology. MAGeCK is developed
+ by Wei Li and Han Xu from Dr. Xiaole Shirley Liu's lab at Dana-Farber Cancer Institute, and is being actively updated
+ by Wei Li lab from Children's National Medical Center.
  - [MAGeCK-VISPR/0.5.5-Python-3.7.4](https://bitbucket.org/liulab/mageck-vispr/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MAGeCK-VISPR/MAGeCK-VISPR-0.5.5-Python-3.7.4.eb)
 MAGeCK-VISPR is a comprehensive quality control, analysis and visualization workflow for CRISPR/Cas9
@@ -516,6 +588,9 @@ MAGeCK-VISPR is a comprehensive quality control, analysis and visualization work
 MAGeCK-VISPR is a comprehensive quality control, analysis and visualization workflow for CRISPR/Cas9
   screens The workflow combines the MAGeCK algorithm to identify essential genes from CRISPR/Cas9 screens considering
   multiple conditions with VISPR to interactively explore results and quality control in a web-based frontend.
+ - [MEGAHIT/1.2.9-GCCcore-13.3.0](https://github.com/voutcn/megahit)
+An ultra-fast single-node solution for large and complex
+metagenomics assembly via succinct de Bruijn graph
  - [MEGAN/6.25.3-Java-17](http://megan.informatik.uni-tuebingen.de/)
 MEGAN is a comprehensive toolbox for interactively analyzing microbiome data
  - [MEME/5.5.1-gompi-2021b](https://meme-suite.org/meme/index.html)
@@ -525,16 +600,13 @@ The MEME Suite allows you to: * discover motifs using MEME, DREME (DNA only) or
  MAST, FIMO, MCAST or GLAM2SCAN, * compare a motif to all motifs in a database of motifs, * associate
  motifs with Gene Ontology terms via their putative target genes, and * analyse motif enrichment
  using SpaMo or CentriMo.
- - [METIS/5.1.0-GCCcore-10.2.0](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
-METIS is a set of serial programs for partitioning graphs, partitioning
- finite element meshes, and producing fill reducing orderings for sparse
- matrices. The algorithms implemented in METIS are based on the multilevel
- recursive-bisection, multilevel k-way, and multi-constraint partitioning
- schemes.
-
+ - [METIS/5.1.0-foss-2020b](http://glaros.dtc.umn.edu/gkhome/metis/metis/overview)
+METIS is a set of serial programs for partitioning graphs, partitioning finite element meshes,
+ and producing fill reducing orderings for sparse matrices. The algorithms implemented in METIS are based on the
+ multilevel recursive-bisection, multilevel k-way, and multi-constraint partitioning schemes.
  - [MMseqs2/13-45111-gompi-2021b](https://mmseqs.com)
 MMseqs2: ultra fast and sensitive search and clustering suite
- - [MPC/1.3.1-GCCcore-12.3.0](http://www.multiprecision.org/)
+ - [MPC/1.3.1-GCCcore-12.2.0](http://www.multiprecision.org/)
 Gnu Mpc is a C library for the arithmetic of
  complex numbers with arbitrarily high precision and correct
  rounding of the result. It extends the principles of the IEEE-754
@@ -563,14 +635,22 @@ MUSCLE is one of the best-performing multiple alignment programs
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/Magic-BLAST/Magic-BLAST-1.5.0-Linux_x86_64.eb)
 Magic-BLAST is a tool for mapping large next-generation RNA or DNA sequencing runs
  against a whole genome or transcriptome.
- - [MaxQuant/2.4.9.0-foss-2022b](https://www.maxquant.org/)
+ - [MariaDB/11.7.0-GCC-13.3.0](https://mariadb.org/)
+MariaDB is an enhanced, drop-in replacement for MySQL.
+Included engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.
+ - [MathWorksServiceHost/2024.13.0.2]()
+MathWorks Service Host is a collection of background processes that provide
+ required services to MATLAB and other MathWorks products. Starting from MATLAB Release
+ 2024a, MATLAB requires MathWorks Service Host.
+ - [MaxQuant/2.7.3.0](https://maxquant.org/maxquant)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MaxQuant/MaxQuant-2.7.3.0.eb)
 MaxQuant is a quantitative proteomics software package designed for analyzing large
  mass-spectrometric data sets. It is specifically aimed at high-resolution MS data. Several labeling
  techniques as well as label-free quantification are supported.
  - [Metal/2020-05-05-GCC-10.2.0](http://csg.sph.umich.edu/abecasis/Metal/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/Metal/Metal-2020-05-05-GCC-10.2.0.eb)
 Metal
- - [MiXCR/3.0.3-Java-1.8](https://milaboratory.com/software/mixcr/)
+ - [MiXCR/3.0.3-Java-1.8]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MiXCR/MiXCR-3.0.3-Java-1.8.eb)
 MiXCR processes big immunome data from raw sequences 
 to quantitated clonotypes 
@@ -596,9 +676,10 @@ Beam-induced Motion for Improved Single-particle Electron
 Cryo-microscopy, Nature Methods, submitted.
 BioArxiv: https://biorxiv.org/content/early/2016/07/04/061960
 
- - [MrBayes/3.2.7a-foss-2021b](http://mrbayes.csit.fsu.edu)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MrBayes/MrBayes-3.2.7a-foss-2021b.eb)
-MrBayes is a program for the Bayesian estimation of phylogeny.
+ - [MrBayes/3.2.7a-gompi-2021b](https://nbisweden.github.io/MrBayes/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MrBayes/MrBayes-3.2.7a-gompi-2021b.eb)
+MrBayes is a program for Bayesian inference and model choice across
+ a wide range of phylogenetic and evolutionary models.
  - [MuSE/2.0.1-GCC-11.2.0](https://github.com/wwylab/MuSE)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/MuSE/MuSE-2.0.1-GCC-11.2.0.eb)
 An accurate and ultra-fast somatic mutation calling tool for whole-genome sequencing (WGS)
@@ -625,6 +706,9 @@ produced from Next Generation Sequencing.
 NextGenMap is a flexible highly sensitive short read mapping tool that
  handles much higher mismatch rates than comparable algorithms while still outperforming
  them in terms of runtime.
+ - [NextPolish/1.4.1-GCC-13.3.02025-01-08](https://github.com/Nextomics/NextPolish)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/n/NextPolish/NextPolish-1.4.1-GCC-13.3.02025-01-08.eb)
+NextDenovo is a string graph-based de novo assembler for long reads.
  - [OpenMM/8.0.0-foss-2023a-CUDA-12.1.1](https://openmm.org)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/o/OpenMM/OpenMM-8.0.0-foss-2023a-CUDA-12.1.1.eb)
 OpenMM is a toolkit for molecular simulation.
@@ -654,7 +738,7 @@ PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PHASE/PHASE-2.1.2-GCCcore-8.3.0.eb)
 PHASE is a program implementing the method for reconstructing haplotypes
  from population data
- - [PLINK/2.00-alpha1-x86_64](https://www.cog-genomics.org/plink/1.9/)
+ - [PLINK/2.00-alpha1-x86_64]()
 Whole-genome association analysis toolset
  - [PLINK2/20210826-linux_x86_64](https://www.cog-genomics.org/plink/2.0)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PLINK2/PLINK2-20210826-linux_x86_64.eb)
@@ -669,19 +753,37 @@ PLUMED is an open source library for free energy calculations in molecular syste
  state of the art methods such as metadynamics, umbrella sampling and Jarzynski-equation based steered MD.
  The software, written in C++, can be easily interfaced with both fortran and C/C++ codes.
 
- - [PLUMED/2.7.2-foss-2020b](https://www.plumed.org)
-PLUMED is an open source library for free energy calculations in molecular systems which
- works together with some of the most popular molecular dynamics engines. Free energy calculations can be
- performed as a function of many order parameters with a particular  focus on biological problems, using
- state of the art methods such as metadynamics, umbrella sampling and Jarzynski-equation based steered MD.
- The software, written in C++, can be easily interfaced with both fortran and C/C++ codes.
-
- - [Porechop/0.2.4-GCCcore-12.3.0](https://github.com/rrwick/Porechop)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/Porechop/Porechop-0.2.4-GCCcore-12.3.0.eb)
+ - [ParMETIS/4.0.3-gompi-2022a](https://karypis.github.io/glaros/projects/gp.html)
+ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning
+ unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the
+ functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and
+ large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way
+ graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.
+ - [ParMETIS/4.0.3-gompi-2022a](https://karypis.github.io/glaros/projects/gp.html)
+ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning
+ unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the
+ functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and
+ large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way
+ graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.
+ - [PhyML/3.3.20220408-foss-2023a](https://github.com/stephaneguindon/phyml)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PhyML/PhyML-3.3.20220408-foss-2023a.eb)
+PhyML is a software package that uses modern statistical approaches to
+analyse alignments of nucleotide or amino acid sequences in a phylogenetic framework.
+ - [Porechop/0.2.4-GCCcore-11.2.0](https://github.com/rrwick/Porechop)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/Porechop/Porechop-0.2.4-GCCcore-11.2.0.eb)
 Porechop is a tool for finding and removing adapters from Oxford Nanopore reads.
  Adapters on the ends of reads are trimmed off, and when a read has an adapter in its middle,
  it is treated as chimeric and chopped into separate reads. Porechop performs thorough alignments
  to effectively find adapters, even at low sequence identity
+ - [PostgreSQL/16.4-GCCcore-13.3.0](https://www.postgresql.org/)
+PostgreSQL is a powerful, open source object-relational database system.
+ It is fully ACID compliant, has full support for foreign keys,
+ joins, views, triggers, and stored procedures (in multiple languages).
+ It includes most SQL:2008 data types, including INTEGER,
+ NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and TIMESTAMP.
+ It also supports storage of binary large objects, including pictures,
+ sounds, or video. It has native programming interfaces for C/C++, Java,
+ .Net, Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
  - [ProteinMPNN/1.0.1-20230627-foss-2022a-CUDA-11.7.0](https://github.com/dauparas/ProteinMPNN)
 A deep learning based protein sequence design method is 
 described that is widely applicable to current design challenges and shows 
@@ -691,8 +793,16 @@ outstanding performance in both in silico and experimental tests.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyStan/PyStan-3.5.0-foss-2021b.eb)
 Python interface to Stan, a package for Bayesian inference
  using the No-U-Turn sampler, a variant of Hamiltonian Monte Carlo.
- - [PyTorch/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTorch/PyTorch-2.1.2-foss-2023a-CUDA-12.1.1.eb)
+ - [PyTables/3.9.2-foss-2023a](https://www.pytables.org)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/PyTables/PyTables-3.9.2-foss-2023a.eb)
+PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope
+ with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the
+ NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical
+ parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,
+ processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and 
+ disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions 
+ such as relational or object oriented databases.
+ - [PyTorch/2.1.2-foss-2022b](https://pytorch.org/)
 Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 PyTorch is a deep learning framework that puts Python first.
  - [PyTorch-bundle/2.1.2-foss-2023a-CUDA-12.1.1](https://pytorch.org/)
@@ -713,14 +823,14 @@ QIIME is an open-source bioinformatics pipeline for performing microbiome analys
 QUAST evaluates genome assemblies by computing various metrics.
 It works both with and without reference genomes. The tool accepts multiple
 assemblies, thus is suitable for comparison.
- - [Qhull/2020.2-GCCcore-11.2.0](http://www.qhull.org)
+ - [Qhull/2020.2-GCCcore-13.3.0](http://www.qhull.org)
 Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
  halfspace intersection about a point, furthest-site Delaunay triangulation,
  and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and
  higher dimensions. Qhull implements the Quickhull algorithm for computing the
  convex hull.
 
- - [R-bundle-Bioconductor/3.19-foss-2023b-R-4.4.1](https://bioconductor.org)
+ - [R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2](https://bioconductor.org)
 Bioconductor provides tools for the analysis and coprehension
  of high-throughput genomic data.
  - [R-keras/2.2.5.0-foss-2019b-Python-3.7.4-R-3.6.2](https://cran.r-project.org/web/packages/keras)
@@ -731,8 +841,8 @@ RAxML search algorithm for maximum likelihood based inference of phylogenetic tr
 RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML)
  optimality criterion. Its search heuristic is based on iteratively performing a series of Subtree
  Pruning and Regrafting (SPR) moves, which allows to quickly navigate to the best-known ML tree.
- - [RELION/3.1.2-fosscuda-2020b](https://github.com/3dem/relion)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/RELION/RELION-3.1.2-fosscuda-2020b.eb)
+ - [RELION/3.1.2-fosscuda-2019b](https://github.com/3dem/relion)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/RELION/RELION-3.1.2-fosscuda-2019b.eb)
 RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone computer
  program for Maximum A Posteriori refinement of (multiple) 3D reconstructions or 2D class
  averages in cryo-electron microscopy.
@@ -751,6 +861,11 @@ Fast, efficient RNA-Seq metrics for quality control and process optimization
  - [ROSE/1-GCCcore-8.3.0-Python-2.7.16](http://younglab.wi.mit.edu/super_enhancer_code.html)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/ROSE/ROSE-1-GCCcore-8.3.0-Python-2.7.16.eb)
 To create stitched enhancers, and to separate super-enhancers from typical enhancers using sequencing data (.bam) given a file of previously identified constituent enhancers (.gff)
+ - [RPostgreSQL/0.7-6-foss-2023b](https://cran.r-project.org/package=tesseract)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/RPostgreSQL/RPostgreSQL-0.7-6-foss-2023b.eb)
+Database interface and 'PostgreSQL' driver for 'R'. This package provides a
+Database Interface 'DBI' compliant driver for 'R' to access 'PostgreSQL'
+database systems.
  - [RSEM/1.3.3-foss-2019b](http://deweylab.github.io/RSEM/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/RSEM/RSEM-1.3.3-foss-2019b.eb)
 RNA-Seq by Expectation-Maximization
@@ -764,6 +879,14 @@ RSeQC provides a number of useful modules that can
  - [Racon/1.5.0-GCCcore-11.2.0](https://github.com/lbcb-sci/racon)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/Racon/Racon-1.5.0-GCCcore-11.2.0.eb)
 Ultrafast consensus module for raw de novo genome assembly of long uncorrected reads.
+ - [Redis/7.0.12-GCC-12.2.0](https://redis.io)
+Redis is an open source (BSD licensed), in-memory data structure store, used as
+a database, cache, and message broker. Redis provides data structures such as
+strings, hashes, lists, sets, sorted sets with range queries, bitmaps,
+hyperloglogs, geospatial indexes, and streams. Redis has built-in replication,
+Lua scripting, LRU eviction, transactions, and different levels of on-disk
+persistence, and provides high availability via Redis Sentinel and automatic
+partitioning with Redis Cluster.
  - [Regenie/3.1.2-GCC-11.2.0](https://rgcgithub.github.io/regenie)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/Regenie/Regenie-3.1.2-GCC-11.2.0.eb)
 Regenie is a C++ program for whole genome regression modelling of large genome-wide 
@@ -773,9 +896,8 @@ association studies.  It is developed and supported by a team of scientists at t
 RevBayes provides an interactive environment for statistical computation in
  phylogenetics. It is primarily intended for modeling, simulation, and Bayesian inference in
  evolutionary biology, particularly phylogenetics.
- - [SAMtools/1.19.2-GCC-13.2.0](https://www.htslib.org/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SAMtools/SAMtools-1.19.2-GCC-13.2.0.eb)
-SAM Tools provide various utilities for manipulating alignments in the SAM format, 
+ - [SAMtools/1.21-GCC-13.3.0](https://www.htslib.org/)
+SAM Tools provide various utilities for manipulating alignments in the SAM format,
  including sorting, merging, indexing and generating alignments in a per-position format.
  - [SCOTCH/7.0.3-gompi-2022b](https://www.labri.fr/perso/pelegrin/scotch/)
 Software package and libraries for sequential and parallel graph partitioning,
@@ -784,6 +906,9 @@ static mapping, and sparse matrix block ordering, and sequential mesh and hyperg
 SHAPEIT4 is a fast and accurate method for estimation of haplotypes
 (aka phasing) for SNP array and high coverage sequencing data.
 
+ - [SPAdes/4.1.0-GCC-13.3.0](https://github.com/ablab/spades)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SPAdes/SPAdes-4.1.0-GCC-13.3.0.eb)
+Genome assembler for single-cell and isolates data sets
  - [SQANTI3/1.0-foss-2019b-Python-3.7.4](https://github.com/ConesaLab/SQANTI3)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SQANTI3/SQANTI3-1.0-foss-2019b-Python-3.7.4.eb)
 SQANTI3 is the first module of the Functional IsoTranscriptomics (FIT) framework,
@@ -801,6 +926,12 @@ STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays
 STAR-Fusion uses the STAR aligner to identify candidate fusion transcripts
  supported by Illumina reads. STAR-Fusion further processes the output generated by the STAR aligner
  to map junction reads and spanning reads to a reference annotation set.
+ - [SVG/2.84-foss-2019b-Perl-5.30.0](https://metacpan.org/pod/SVG)
+Perl binding for SVG
+ - [SVIM/2.0.0-foss-2022a](https://github.com/eldariont/svim)
+SVIM (pronounced swim) is a structural variant caller for third-generation sequencing reads.
+ It is able to detect and classify the following six classes of structural variation: deletions, insertions,
+ inversions, tandem duplications, interspersed duplications and translocations.
  - [SVclone/1.1.2-foss-2022b](https://github.com/mcmero/SVclone)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SVclone/SVclone-1.1.2-foss-2022b.eb)
 Cluster structural variants of similar cancer cell fraction (CCF).
@@ -816,7 +947,8 @@ Sambamba is a high performance modern robust and fast tool
  (and library), written in the D programming language, for working with SAM
  and BAM files. Current functionality is an important subset of samtools
  functionality, including view, index, sort, markdup, and depth.
- - [Seaborn/0.13.2-gfbf-2023a](https://seaborn.pydata.org/)
+ - [Seaborn/0.13.2-gfbf-2023b](https://seaborn.pydata.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Seaborn/Seaborn-0.13.2-gfbf-2023b.eb)
 Seaborn is a Python visualization library based on matplotlib.
  It provides a high-level interface for drawing attractive statistical graphics. 
  - [SeqAn/2.4.0-GCCcore-11.2.0](https://github.com/seqan/seqan)
@@ -824,22 +956,32 @@ Seaborn is a Python visualization library based on matplotlib.
 SeqAn is an open source C++ library of efficient algorithms and data structures
  for the analysis of sequences with the focus on biological data.
 
- - [SeqLib/1.2.0-GCC-10.2.0](https://github.com/walaj/SeqLib)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SeqLib/SeqLib-1.2.0-GCC-10.2.0.eb)
-C++ interface to HTSlib, BWA-MEM and Fermi
+ - [SeqKit/2.10.1](https://bioinf.shenwei.me/seqkit/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SeqKit/SeqKit-2.10.1.eb)
+SeqKit
+ - [SeqLib/1.2.0-GCC-11.2.0](https://github.com/walaj/SeqLib)
+C++ interface to HTSlib, BWA-MEM and Fermi.
  - [SeqPrep/1.3.2-GCCcore-8.3.0](https://github.com/jstjohn/SeqPrep)
 Tool for stripping adaptors and/or merging paired reads with overlap into single reads.
  - [Seurat/5.1.0-foss-2023b-R-4.4.0](https://satijalab.org/seurat)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Seurat/Seurat-5.1.0-foss-2023b-R-4.4.0.eb)
 Seurat is an R package designed for QC, analysis, and exploration of single cell RNA-seq data.
+ - [ShapeMapper2/2.3-GCC-13.3.0](https://github.com/Weeks-UNC/shapemapper2)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/ShapeMapper2/ShapeMapper2-2.3-GCC-13.3.0.eb)
+ShapeMapper automates the calculation of RNA chemical probing reactivities
+ from mutational profiling (MaP) experiments, in which chemical adducts on RNA
+ are detected as internal mutations in cDNA through reverse transcription and
+ read out by massively parallel sequencing.
+
  - [SlamDunk/0.4.3-foss-2021b](https://t-neumann.github.io/slamdunk)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/SlamDunk/SlamDunk-0.4.3-foss-2021b.eb)
 SlamDunk is a novel, fully automated software tool for automated, robust, scalable and reproducible
 SLAMseq data analysis.
- - [Sniffles/2.5.2-GCC-13.3.0](https://github.com/fritzsedlazeck/Sniffles)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/Sniffles/Sniffles-2.5.2-GCC-13.3.0.eb)
+ - [Sniffles/2.6.2-gfbf-2024a](https://github.com/fritzsedlazeck/Sniffles)
 A fast structural variant caller for long-read sequencing,
  Sniffles2 accurately detect SVs on germline, somatic and population-level for PacBio and Oxford Nanopore read data.
+ - [SoX/14.4.2-GCCcore-12.3.0](http://sox.sourceforge.net/)
+Sound eXchange, the Swiss Army knife of audio manipulation
  - [SpaceRanger/2.0.0-GCC-11.2.0](https://support.10xgenomics.com/spatial-gene-expression/software/pipelines/latest/what-is-space-ranger)
 Space Ranger is a set of analysis pipelines that process Visium spatial RNA-seq output
 and brightfield microscope images in order to detect tissue, align reads, generate feature-spot matrices,
@@ -854,11 +996,15 @@ Stacks is a software pipeline for building loci from short-read sequences, such 
  the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq,
  for the purpose of building genetic maps and conducting population genomics and phylogeography.
 
- - [StringTie/2.1.4-GCC-8.3.0](https://ccb.jhu.edu/software/stringtie/)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/StringTie/StringTie-2.1.4-GCC-8.3.0.eb)
+ - [StringTie/2.2.3-GCC-12.3.0](https://ccb.jhu.edu/software/stringtie/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/StringTie/StringTie-2.2.3-GCC-12.3.0.eb)
 StringTie is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts
  - [Subread/2.0.3-GCC-11.2.0](http://subread.sourceforge.net/)
 High performance read alignment, quantification and mutation discovery
+ - [TGS-GapCloser/1.2.1-GCCcore-13.3.0](https://github.com/BGI-Qingdao/TGS-GapCloser)
+A gap-closing software tool that uses error-prone long reads generated by
+ third-generation-sequence techniques (Pacbio, Oxford Nanopore, etc.) or preassembled contigs
+ to fill N-gap in the genome assembly.
  - [TOPAZ/0.2.4-foss-2020b](http://cb.csail.mit.edu/cb/topaz/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/TOPAZ/TOPAZ-0.2.4-foss-2020b.eb)
 Topaz is a pipeline for particle picking in cryo-electron micrographs using neural networks and positive-unlabeled learning
@@ -879,8 +1025,8 @@ paired-end sequencing data with any read length.
 Raw sequences produced by next generation sequencing (NGS) machines may contain adapter,
  linker, barcode and fingerprint sequences. TagDust2 is a program to extract and correctly label the
  sequences to be mapped in downstream pipelines.
- - [Telescope/1.0.3-gfbf-2022b](https://github.com/mlbendall/telescope)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-gfbf-2022b.eb)
+ - [Telescope/1.0.3-20230222-gfbf-2022b](https://github.com/mlbendall/telescope)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Telescope/Telescope-1.0.3-20230222-gfbf-2022b.eb)
 Single locus resolution of Transposable ELEment expression using next-generation sequencing.
  - [Theano/1.1.2-foss-2020b-PyMC](https://deeplearning.net/software/theano)
 Theano is a Python library that allows you to define, optimize,
@@ -888,7 +1034,7 @@ and evaluate mathematical expressions involving multi-dimensional arrays efficie
  - [TopHat/2.1.1-foss-2019b](http://ccb.jhu.edu/software/tophat/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/TopHat/TopHat-2.1.1-foss-2019b.eb)
 TopHat is a fast splice junction mapper for RNA-Seq reads.
- - [Tracer/1.7.1](http://beast.community/tracer)
+ - [Tracer/1.7.1]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/t/Tracer/Tracer-1.7.1.eb)
 Tracer is a program for analysing the trace files generated
  by Bayesian MCMC runs (that is, the continuous parameter values sampled from
@@ -912,8 +1058,7 @@ Trinity represents a novel method for the efficient and robust de novo reconstru
  - [UMI-tools/1.1.4-foss-2023b](https://umi-tools.readthedocs.io)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/u/UMI-tools/UMI-tools-1.1.4-foss-2023b.eb)
 Tools for handling Unique Molecular Identifiers in NGS data sets
- - [VCFtools/0.1.16-GCC-10.2.0](https://vcftools.github.io)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/v/VCFtools/VCFtools-0.1.16-GCC-10.2.0.eb)
+ - [VCFtools/0.1.16-GCC-11.2.0](https://vcftools.github.io)
 The aim of VCFtools is to provide 
  easily accessible methods for working with complex 
  genetic variation data in the form of VCF files.
@@ -943,8 +1088,12 @@ especially suitable for long reads, but works also well with short reads.
  - [WiggleTools/1.2.4-GCC-8.3.0]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/w/WiggleTools/WiggleTools-1.2.4-GCC-8.3.0.eb)
 The WiggleTools package allows genomewide data files to be manipulated as numerical functions, equipped with all the standard functional analysis operators (sum, product, product by a scalar, comparators), and derived statistics (mean, median, variance, stddev, t-test, Wilcoxon's rank sum test, etc).
- - [XeniumRanger/3.1.0](https://www.10xgenomics.com/support/software/xenium-ranger)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/x/XeniumRanger/XeniumRanger-3.1.0.eb)
+ - [XML-Compile/1.63-GCCcore-11.2.0](https://metacpan.org/pod/XML::Compile)
+Perl module for compilation based XML processing
+ - [XML-LibXML/2.0210-GCCcore-13.3.0](https://metacpan.org/pod/distribution/XML-LibXML/LibXML.pod)
+Perl binding for libxml2
+ - [XeniumRanger/4.0.0](https://www.10xgenomics.com/support/software/xenium-ranger)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/x/XeniumRanger/XeniumRanger-4.0.0.eb)
 The Xenium In Situ software suite is a set of software applications for analyzing and
  visualizing in situ gene expression data produced by the Xenium Analyzer. Xenium Ranger provides flexible
  off-instrument reanalysis of Xenium In Situ data. Relabel transcripts, resegment cells with the latest
@@ -978,7 +1127,7 @@ Count DNA sequence reads in BAM files
  - [bam2fastx/1.3.0](https://github.com/pacificbiosciences/bam2fastx)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/bam2fastx/bam2fastx-1.3.0.eb)
 Conversion of PacBio BAM files into gzipped fasta and fastq files, including splitting of barcoded data
- - [bam2wig/1.5](https://github.com/MikeAxtell/bam2wig)
+ - [bam2wig/1.5]()
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/bam2wig/bam2wig-1.5.eb)
 Conversion of a BAM alignment to wiggle and bigwig coverage files, with flexible reporting options.
  - [basicfiltering/1.0.7-foss-2020a-Python-3.8.2](https://github.com/rhshah/basicfiltering)
@@ -992,12 +1141,16 @@ bcl2fastq Conversion Software both demultiplexes data and converts BCL files gen
  Illumina sequencing systems to standard FASTQ file formats for downstream analysis.
  - [bgen/4.1.3-GCCcore-10.2.0](https://github.com/limix/bgen)
 A BGEN file format reader. It fully supports the BGEN format specifications 1.2 and 1.3.
- - [biom-format/2.1.15-foss-2023a](https://biom-format.org)
+ - [biom-format/2.1.16-foss-2023b](https://biom-format.org)
 The BIOM file format (canonically pronounced biome) is designed to be
  a general-use format for representing biological sample by observation
  contingency tables. BIOM is a recognized standard for the Earth Microbiome
  Project and is a Genomics Standards Consortium supported project.
 
+ - [bsddb3/6.2.9-GCCcore-10.2.0](https://pypi.org/project/bsddb3/)
+bsddb3 is a nearly complete Python binding of the
+Oracle/Sleepycat C API for the Database Environment, Database, Cursor,
+Log Cursor, Sequence and Transaction objects.
  - [bx-python/0.13.0-foss-2023b](https://github.com/bxlab/bx-python)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/b/bx-python/bx-python-0.13.0-foss-2023b.eb)
 The bx-python project is a Python library and associated set of scripts to allow for rapid
@@ -1008,8 +1161,13 @@ cDNA_Cupcake is a miscellaneous collection of Python and R scripts used for anal
  - [cas-offinder/2.4.1-foss-2023b]()
 Cas-OFFinder is OpenCL based, ultrafast and versatile program that searches
  for potential off-target sites of CRISPR/Cas-derived RNA-guided endonucleases (RGEN).
- - [cellranger/2.1.1](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest)
+ - [cellranger/2.1.1]()
 Single Cell Analysis Pipelines
+ - [cellsnp-lite/1.2.3-GCC-13.2.0](https://cellsnp-lite.readthedocs.io/en/latest)
+Cellsnp-lite is a C/C++ tool for efficient genotyping
+bi-allelic SNPs on single cells. You can use cellsnp-lite after read
+alignment to obtain the snp x cell pileup UMI or read count matrices for
+each allele of given or detected SNPs.
  - [clusTCR/1.0.2-foss-2019b-Python-3.7.4](https://svalkiers.github.io/clusTCR/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/clusTCR/clusTCR-1.0.2-foss-2019b-Python-3.7.4.eb)
 Python interface for rapid clustering of large sets of CDR3 sequences with unknown
@@ -1026,15 +1184,29 @@ cooltools provides a suite of computational tools with a paired python API and
 Scientific workflow engine designed for simplicity & scalability.
  - [ctffind/4.1.14-fosscuda-2019b](https://grigoriefflab.umassmed.edu/ctffind4)
 Program for finding CTFs of electron micrographs.
- - [cutadapt/4.9-GCCcore-12.3.0](https://opensource.scilifelab.se/projects/cutadapt/)
+ - [cutadapt/5.0-GCCcore-13.2.0](https://opensource.scilifelab.se/projects/cutadapt/)
 Cutadapt finds and removes adapter sequences, primers, poly-A tails and
  other types of unwanted sequence from your high-throughput sequencing reads.
+ - [cuteSV/2.1.2-foss-2024a](https://github.com/tjiangHIT/cuteSV)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/c/cuteSV/cuteSV-2.1.2-foss-2024a.eb)
+cuteSV uses tailored methods to collect the signatures of various types of SVs
+ and employs a clustering-and-refinement method to analyze the signatures to implement sensitive SV detection.
+ - [dask/2024.9.1-gfbf-2024a](https://dask.org/)
+Dask natively scales Python. Dask provides advanced parallelism for analytics,
+enabling performance at scale for the tools you love.
+ - [datamash/1.8-GCCcore-11.2.0](https://www.gnu.org/software/datamash/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/datamash/datamash-1.8-GCCcore-11.2.0.eb)
+GNU datamash performs basic numeric, textual and statistical operations on input data files
  - [deepTools/3.5.4.post1-gfbf-2022b](https://deeptools.readthedocs.io/)
 deepTools is a suite of python tools particularly developed for the efficient analysis of
  high-throughput sequencing data, such as ChIP-seq, RNA-seq or MNase-seq.
  - [delly/0.8.3](https://github.com/dellytools/delly)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/delly/delly-0.8.3.eb)
 DELLY2: Structural variant discovery by integrated paired-end and split-read analysis
+ - [dill/0.3.9-GCCcore-13.3.0](https://pypi.org/project/dill/)
+dill extends python's pickle module for serializing and de-serializing python objects to the majority
+ of the built-in python types. Serialization is the process of converting an object to a byte stream, and the inverse
+ of which is converting a byte stream back to on python object hierarchy.
  - [dms_tools2/2.6.11-foss-2020b](https://jbloomlab.github.io/dms_tools2/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/d/dms_tools2/dms_tools2-2.6.11-foss-2020b.eb)
 dms_tools2 is a software package for analyzing deep mutational scanning data.
@@ -1062,9 +1234,18 @@ of novel genomes, transcriptomes or even metagenomic gene catalogs.
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/e/einops/einops-0.8.0-GCCcore-13.2.0.eb)
 Flexible and powerful tensor operations for readable and reliable code.
 Supports numpy, pytorch, tensorflow, jax, and others.
+ - [epiScanpy/0.4.0-foss-2023a](https://github.com/colomemaria/episcanpy)
+EpiScanpy is a toolkit to analyse single-cell open chromatin
+(scATAC-seq) and single-cell DNA methylation (for example scBS-seq)
+data. EpiScanpy is the epigenomic extension of the very popular scRNA-seq
+analysis tool Scanpy (Genome Biology, 2018) [Wolf18].
  - [factera/1.4.4-foss-2019b-Perl-5.30.0](https://factera.stanford.edu/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/factera/factera-1.4.4-foss-2019b-Perl-5.30.0.eb)
 (Fusion And Chromosomal Translocation Enumeration and Recovery Algorithm) is a tool for detection of genomic fusions in paired-end targeted (or genome-wide) sequencing data.
+ - [faiss/1.7.3-foss-2021b-CUDA-11.4.1](https://ai.facebook.com/tools/faiss/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/faiss/faiss-1.7.3-foss-2021b-CUDA-11.4.1.eb)
+FAISS (Facebook AI Similarity Search) is a library that allows developers to
+ quickly search for embeddings of multimedia documents that are similar to each other.
  - [fastNGSadmix/dda93a4-GCC-10.2.0](http://www.popgen.dk/software/index.php/FastNGSadmix)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/f/fastNGSadmix/fastNGSadmix-dda93a4-GCC-10.2.0.eb)
 Program for infering admixture proportions and doing PCA with a single NGS
@@ -1098,8 +1279,17 @@ region filtering, FASTA sequence extraction and more.
 A set of functions to generate high-resolution Venn and Euler plots. Includes handling for several special cases, including two-case scaling, and extensive customization of plot shape and structure.
  - [giggle/master-foss-2020b](https://github.com/ryanlayer/giggle)
 GIGGLE is a genomics search engine that identifies and ranks the significance of shared genomic loci between query features and thousands of genome interval files.
- - [gmpy2/2.1.5-GCC-12.2.0](https://github.com/aleaxit/gmpy)
+ - [gmpy2/2.1.5-GCC-13.2.0](https://github.com/aleaxit/gmpy)
 GMP/MPIR, MPFR, and MPC interface to Python 2.6+ and 3.x
+ - [h5netcdf/1.2.0-foss-2023a](https://h5netcdf.org/)
+A Python interface for the netCDF4 file-format that reads and writes local or
+remote HDF5 files directly via h5py or h5pyd, without relying on the Unidata
+netCDF library.
+ - [h5py/3.12.1-foss-2024a](https://www.h5py.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/h/h5py/h5py-3.12.1-foss-2024a.eb)
+HDF5 for Python (h5py) is a general-purpose Python interface to the Hierarchical Data Format library,
+ version 5. HDF5 is a versatile, mature scientific software library designed for the fast, flexible storage of enormous
+ amounts of data.
  - [hyperfreq/1.2.0-foss-2020b](https://python.org/)
 Hypermutation analysis software using BetaRat distribution for Bayesian
  analysis of the relative probability ratio (RPR) of observing mutations in two contexts. Includes
@@ -1108,6 +1298,8 @@ Hypermutation analysis software using BetaRat distribution for Bayesian
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/i/iVar/iVar-1.3.2-GCC-11.2.0.eb)
 iVar is a computational package that contains functions broadly useful for viral amplicon-based sequencing.
 
+ - [infercnvpy/0.4.3-foss-2023a](https://github.com/icbi-lab/infercnvpy)
+Infer copy number variation (CNV) from scRNA-seq data. Plays nicely with Scanpy.
  - [interop/1.1.10-foss-2019b-Python-3.7.4](https://github.com/Illumina/interop)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/i/interop/interop-1.1.10-foss-2019b-Python-3.7.4.eb)
 The Illumina InterOp libraries are a set of common routines used for reading InterOp metric files produced by Illumina sequencers including NextSeq 1k/2k. These libraries are backwards compatible and capable of supporting prior releases of the software, with one exception: GA systems have been excluded.
@@ -1119,7 +1311,7 @@ Intervene a tool for intersection and visualization of multiple genomic region s
 IT++ is a C++ library of mathematical, signal processing and communication
  classes and functions. Its main use is in simulation of communication systems and for
  performing research in the area of communications.
- - [jax/0.4.25-gfbf-2024a](https://jax.readthedocs.io/)
+ - [jax/0.4.25-gfbf-2023a-CUDA-12.1.1](https://jax.readthedocs.io/)
 Composable transformations of Python+NumPy programs:
 differentiate, vectorize, JIT to GPU/TPU, and more
  - [kallisto/0.50.1-foss-2022b](https://pachterlab.github.io/kallisto/)
@@ -1152,6 +1344,7 @@ libcerf is a self-contained numeric library that provides an efficient and
 ligtextutils is a dependency of fastx-toolkit and is provided
  via the same upstream
  - [loompy/3.0.8-foss-2024a](https://loompy.org/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/l/loompy/loompy-3.0.8-foss-2024a.eb)
 Python implementation of the Loom file format, an efficient file format for large omics datasets
  - [lpsolve/5.5.2.11-GCC-10.2.0](https://sourceforge.net/projects/lpsolve/)
 Mixed Integer Linear Programming (MILP) solver
@@ -1169,8 +1362,7 @@ single efficient workflow.
  - [medaka/1.2.3-foss-2019b-Python-3.7.4](https://github.com/nanoporetech/medaka)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/medaka/medaka-1.2.3-foss-2019b-Python-3.7.4.eb)
 medaka is a tool to create a consensus sequence from nanopore sequencing data.
- - [minimap2/2.26-GCCcore-12.2.0](https://github.com/lh3/minimap2)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/m/minimap2/minimap2-2.26-GCCcore-12.2.0.eb)
+ - [minimap2/2.29-GCCcore-13.3.0](https://github.com/lh3/minimap2)
 Minimap2 is a fast sequence mapping and alignment
 program that can find overlaps between long noisy reads, or map long
 reads or their assemblies to a reference genome optionally with detailed
@@ -1209,7 +1401,17 @@ The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for
  using data in the INSDC Sequence Read Archives.
  - [ncdf4/1.17-foss-2019b](https://cran.r-project.org/web/packages/ncdf4)
 ncdf4: Interface to Unidata netCDF (version 4 or earlier) format data files
- - [nf-core/2.14.1-foss-2024a](https://github.com/nf-core/tools)
+ - [netCDF/4.9.2-gompi-2023a](https://www.unidata.ucar.edu/software/netcdf/)
+NetCDF (network Common Data Form) is a set of software libraries
+ and machine-independent data formats that support the creation, access, and sharing of array-oriented
+ scientific data.
+ - [netMHCpan/4.1b](https://www.cbs.dtu.dk/services/NetMHCpan/)
+The NetMHCpan software predicts binding of peptides to any known MHC
+ molecule using artificial neural networks (ANNs).
+ - [netcdf4-python/1.6.4-foss-2023a](https://unidata.github.io/netcdf4-python/)
+Python/numpy interface to netCDF.
+ - [nf-core/3.3.1-foss-2024a](https://github.com/nf-core/tools)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/n/nf-core/nf-core-3.3.1-foss-2024a.eb)
 Python package with helper tools for the nf-core community.
  - [nullarbor/2.0.20191013](https://github.com/tseemann/nullarbor)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/n/nullarbor/nullarbor-2.0.20191013.eb)
@@ -1227,6 +1429,8 @@ OncoSNP-SEQ is an analytical tool for characterising copy number alterations
  - [ont-guppy-cpu/2.3.7](https://nanoporetech.com/products/minit)
 Guppy is a production basecaller provided by Oxford Nanopore,
  and uses a command-line interface.
+ - [openpyxl/3.1.2-GCCcore-12.2.0](https://openpyxl.readthedocs.io)
+A Python library to read/write Excel 2010 xlsx/xlsm files
  - [packmol/20.2.2-GCC-10.2.0](http://m3g.iqm.unicamp.br/packmol)
 Packing Optimization for Molecular Dynamics Simulations
  - [parallel-fastq-dump/0.6.7-GCCcore-11.2.0](https://github.com/rvalieris/parallel-fastq-dump)
@@ -1255,16 +1459,27 @@ Whole-genome association analysis toolset
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/plinkliftover/plinkliftover-0.3.0-foss-2022b.eb)
 PLINKLiftOver is a utility enabling liftOver to work on genomics files from PLINK,
  allowing one to update the coordinates from one genome reference version to another.
+ - [polars/0.20.2-gfbf-2023a](https://pola.rs/)
+Polars is a blazingly fast DataFrame library for manipulating
+structured data. The core is written in Rust and this module provides its
+interface for Python.
  - [popscle/0.1-beta-foss-2019b](https://github.com/statgen/popscle)
 A suite of
 population scale analysis tools for single-cell genomics data including
 implementation of Demuxlet / Freemuxlet methods and auxilary tools 
+ - [pplacer/1.1.alpha19](http://matsen.fhcrc.org/pplacer/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/pplacer/pplacer-1.1.alpha19.eb)
+Pplacer places query sequences on a fixed reference phylogenetic tree to maximize phylogenetic
+ likelihood or posterior probability according to a reference alignment. Pplacer is designed to be fast, to give
+ useful information about uncertainty, and to offer advanced visualization and downstream analysis.
  - [prodigal/2.6.3-GCCcore-11.2.0](https://github.com/hyattpd/Prodigal/)
 Prodigal (Prokaryotic Dynamic Programming Genefinding Algorithm)
    is a microbial (bacterial and archaeal) gene finding program developed
    at Oak Ridge National Laboratory and the University of Tennessee.
  - [prokka/1.14.5-gompi-2019b](https://www.vicbioinformatics.com/software.prokka.shtml)
 Prokka is a software tool for the rapid annotation of prokaryotic genomes.
+ - [pugixml/1.14-GCCcore-12.3.0](https://pugixml.org/)
+pugixml is a light-weight C++ XML processing library
  - [pyBigWig/0.3.23-gfbf-2023b](https://github.com/deeptools/pyBigWig)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/p/pyBigWig/pyBigWig-0.3.23-gfbf-2023b.eb)
 A python extension, written in C, for quick access to bigBed
@@ -1297,7 +1512,7 @@ PyClone is a Bayesian clustering method for grouping sets of deeply sequenced
  contamination.
  - [pyfaidx/0.8.1.2-GCCcore-13.3.0](https://pypi.python.org/pypi/pyfaidx)
 pyfaidx: efficient pythonic random access to fasta subsequences
- - [pyrovelocity/0.4.0-beta.4-foss-2023a-CUDA-12.1.1](https://docs.pyrovelocity.net/)
+ - [pyrovelocity/0.4.0-beta.4-foss-2024a-CUDA-12.4.0](https://docs.pyrovelocity.net/)
 is a library for probabilistic inference in minimal models approximating gene
  expression dynamics from, possibly multimodal, single-cell sequencing data. It provides posterior
  estimates of gene expression parameters, predictive estimates of gene expression states, and local
@@ -1305,12 +1520,21 @@ is a library for probabilistic inference in minimal models approximating gene
  - [rMATS-turbo/4.1.2-foss-2021b](https://github.com/Xinglab/rmats-turbo)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/rMATS-turbo/rMATS-turbo-4.1.2-foss-2021b.eb)
 rMATS turbo is the C/Cython version of rMATS (refer to http://rnaseq-mats.sourceforge.net).
+ - [redis-py/4.6.0-foss-2022b](https://github.com/redis/redis-py)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/r/redis-py/redis-py-4.6.0-foss-2022b.eb)
+The Python interface to the Redis key-value store.
  - [samblaster/0.1.26-GCC-10.2.0](https://github.com/GregoryFaust/samblaster)
 samblaster is a fast and flexible program for marking
  duplicates in read-id grouped1 paired-end SAM files.
+ - [savvy/2.0.1-GCC-10.2.0](https://github.com/statgen/savvy)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/savvy/savvy-2.0.1-GCC-10.2.0.eb)
+Interface to various variant calling formats.
  - [scArches/0.6.1-foss-2023a](https://github.com/theislab/scarches)
 Single-cell architecture surgery (scArches) is a package for reference-based analysis of single-cell
  data.
+ - [scCODA/0.1.9-foss-2023a](https://github.com/theislab/scCODA)
+scCODA allows for identification of compositional changes in high-throughput sequencing count data,
+especially cell compositions from scRNA-seq.
  - [scGPT/0.2.1-foss-2023a-CUDA-12.1.1](https://github.com/bowang-lab/scGPT/)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/scGPT/scGPT-0.2.1-foss-2023a-CUDA-12.1.1.eb)
 scGPT: Towards Building a Foundation Model for Single-Cell Multi-omics Using Generative AI.
@@ -1329,19 +1553,25 @@ Scanpy is a scalable toolkit for analyzing single-cell gene expression data buil
 SCENIC+ is a python package to build enhancer driven gene regulatory networks
  (GRNs) using combined or separate single-cell gene expression (scRNA-seq) and single-cell
  chromatin accessibility (scATAC-seq) data.
+ - [scib/1.1.4-foss-2023a](https://github.com/theislab/scib)
+Benchmarking atlas-level data integration in single-cell genomics.
  - [scib-metrics/0.5.1-foss-2023a](https://scib-metrics.readthedocs.io)
 Accelerated and Python-only metrics for benchmarking single-cell integration outputs
  - [scikit-bio/0.6.0-foss-2023a](http://scikit-bio.org)
 scikit-bio is an open-source, BSD-licensed Python 3 package providing data structures, algorithms
 and educational resources for bioinformatics.
+ - [scikit-learn/1.6.1-gfbf-2024a](https://scikit-learn.org/stable/index.html)
+Scikit-learn integrates machine learning algorithms in the tightly-knit scientific Python world,
+building upon numpy, scipy, and matplotlib. As a machine-learning module,
+it provides versatile tools for data mining and analysis in any field of science and engineering.
+It strives to be simple and efficient, accessible to everybody, and reusable in various contexts.
  - [scipy/1.4.1-foss-2019b-Python-3.7.4](https://www.scipy.org)
 SciPy is a collection of mathematical algorithms and convenience
  functions built on the Numpy extension for Python.
- - [scrublet/0.2.3-foss-2021b](https://github.com/AllonKleinLab/scrublet)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/scrublet/scrublet-0.2.3-foss-2021b.eb)
+ - [scrublet/0.2.3-foss-2022b](https://github.com/AllonKleinLab/scrublet)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/scrublet/scrublet-0.2.3-foss-2022b.eb)
 Python code for identifying doublets in single-cell RNA-seq data
- - [scvi-tools/1.1.2-foss-2023a](https://github.com/scverse/scvi-tools)
-[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/s/scvi-tools/scvi-tools-1.1.2-foss-2023a.eb)
+ - [scvi-tools/1.1.2-foss-2023a-CUDA-12.1.1](https://github.com/scverse/scvi-tools)
 scvi-tools (single-cell variational inference tools) is a package for probabilistic modeling and
 analysis of single-cell omics data, built on top of PyTorch and AnnData.
  - [seq2HLA/2.3-foss-2019b-Python-2.7.16](https://github.com/TRON-Bioinformatics/seq2HLA)
@@ -1359,6 +1589,8 @@ Seqtk is a fast and lightweight tool for processing sequences in the FASTA or FA
 The SeqTools package contains three tools for visualising sequence alignments: Blixem, Dotter and Belvu.
  - [sequenza-utils/3.0.0-GCCcore-8.3.0-Python-3.7.4](https://sequenza-utils.readthedocs.io/)
 Sequenza is a software for the estimation and quantification of purity/ploidy and copy number alteration in sequencing experiments of tumor samples. Sequenza-utils provide command lines programs to transform common NGS file format
+ - [shrinkwrap/1.1.0-GCCcore-10.2.0](https://github.com/jonathonl/shrinkwrap)
+A std::streambuf wrapper for compression formats.
  - [snippy/4.6.0-foss-2019b-Perl-5.30.0](https://github.com/tseemann/snippy)
 Snippy finds SNPs between a haploid reference genome and your NGS sequence
  reads. It will find both substitutions (snps) and insertions/deletions (indels).
@@ -1378,7 +1610,7 @@ splitpipe tool from Parse Biosciences. The pipeline takes FASTQ files and delive
  sources tools such as scanpy and seuratProcess sequencing results with our pipeline.
 
  A Parse Bioscience login ID is required to download
- - [spoa/4.0.0-GCC-8.3.0](https://github.com/rvaser/spoa)
+ - [spoa/4.1.0-GCC-13.3.0](https://github.com/rvaser/spoa)
 Spoa (SIMD POA) is a c++ implementation of the partial order alignment (POA) algorithm
  which is used to generate consensus sequences
  - [starcode/1.4-GCC-11.2.0](https://github.com/gui11aume/starcode)
@@ -1401,6 +1633,9 @@ Generic indexer for TAB-delimited genome position files
  - [tbl2asn/20220427-linux64](https://www.ncbi.nlm.nih.gov/genbank/tbl2asn2/)
 Tbl2asn is a command-line program that automates the creation of
  sequence records for submission to GenBank
+ - [unixODBC/2.3.12-GCC-13.2.0](https://www.unixodbc.org)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/u/unixODBC/unixODBC-2.3.12-GCC-13.2.0.eb)
+unixODBC provides a uniform interface between application and database driver
  - [vcflib/1.0.1-GCCcore-8.3.0](https://github.com/vcflib/vcflib)
 [easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/v/vcflib/vcflib-1.0.1-GCCcore-8.3.0.eb)
 vcflib provides methods to manipulate and interpret sequence variation as it can be
@@ -1415,3 +1650,11 @@ A tool set for short variant discovery in genetic sequence data.
  - [wandb/0.16.1-GCC-12.3.0](https://wandb.ai)
 CLI and Python API for Weights and Biases (wandb), a tool for visualizing and
 tracking your machine learning experiments.
+ - [xarray/2023.9.0-gfbf-2023a](https://github.com/pydata/xarray)
+xarray (formerly xray) is an open source project and Python package that aims to bring
+ the labeled data power of pandas to the physical sciences, by providing N-dimensional variants of the
+ core pandas data structures.
+ - [zarr/2.18.4-foss-2024a](https://zarr.readthedocs.io/en/stable/)
+[easyconfig](https://github.com/FredHutch/easybuild-life-sciences/blob/master/easyconfigs/z/zarr/zarr-2.18.4-foss-2024a.eb)
+Zarr is a Python package providing an implementation of compressed, 
+chunked, N-dimensional arrays, designed for use in parallel computing.
