@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" convert output from module spider to a single Markdown page.
+""" convert JSON output from module spider to a single [markdown/csv] file.
 Not all modules can be located in the Fred Hutch Easybuild-life-scienes repo.
 check for module type of bio, then search for easyconfig
 
@@ -12,7 +12,12 @@ from pprint import pprint
 import json
 import sys
 import os
+import re
 from packaging import version
+
+__author__ = "John Dey"
+__date__ = "Jan 2026"
+__version__ = "1.0.0"
 
 data = json.load(sys.stdin)
 packages = data.keys()
@@ -27,6 +32,7 @@ for p in slist:
    pac = data[p]
    print(p, file=sys.stderr)
    paths = list(pac.keys())
+   latestVersion = ""
    if len(paths) == 1:
       latest = pac[paths[0]]
       latestVersion = pac[paths[0]]['Version']
@@ -40,29 +46,18 @@ for p in slist:
              latestVersion = pac[release]['Version']
    if 'fullName' in latest and '-2015' in latest['fullName']:
         continue
-   descrp = ''
+   cleaned_descrp = "none"
    url = ''
-   easyconfig_url = None
    fullName = latest['fullName']
-   eb_filename = fullName.replace('/', '-') + '.eb'
-   topdir = fullName[0].lower()
-   projdir = p
-   eb_path = repo_path +  topdir +'/'+ projdir +'/'+ eb_filename
-   # search for eb_filename
-   if os.path.isfile(eb_path):
-       easyconfig_url = github_repo + topdir +'/'+ projdir +'/'+ eb_filename
-   eb_filename = None
    if 'Description' in latest:
        text = latest['Description'].split(' - ')[0]
        if isinstance(text, bytes):
            descrp = text.decode()
        elif isinstance(text, str):
            descrp = text
-   if 'URL' in latest:
-       url = latest['URL']
-   print(' - [{}]({})'.format(latest['fullName'], url))
-   if easyconfig_url:
-       print('[easyconfig]({})'.format(easyconfig_url) )
-   else:
-       print
-   print('{}'.format(descrp))
+       cleaned_descrp = re.sub(r'[\x00-\x1F\x7F]', ' ', descrp)  # Remove control characters
+       if '\r' in cleaned_descrp:
+           print(f"{p} has an issue")
+   url = latest.get('URL', "none")
+   print(f'"{p}","{latestVersion}","{url}","{cleaned_descrp}"')
+  

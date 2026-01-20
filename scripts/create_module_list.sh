@@ -6,6 +6,13 @@
 #   modules all or Bio 
 #
 
+function usage {
+   echo usage: create_module_list.sh [all, bio] lable
+   echo Lable should be [chorus, gizmo, ermine, etc]
+   echo Lable for Nobel on Gizmo is 'skylake'
+   exit
+}
+
 repo='easybuild-life-sciences'
 
 if [[ ! -z "${PWD##*${repo}*}" ]]; then
@@ -13,13 +20,6 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
     echo "Run script from github repo: ${repo}"
     exit 1
 fi
-
-function usage {
-   echo usage: create_module_list.sh [all, bio] lable
-   echo Lable should be [chorus, gizmo, ermine, etc]
-   echo Lable for Nobel on Gizmo is 'skylake'
-   exit
-}
 
 label=""
 if [[ $# -eq 2 ]]; then
@@ -73,6 +73,7 @@ $spider -o spider-json $module_search_path | \
 echo Generating Markdown
 md_file=${label}-${inventory_type}-modules-${VERSION_ID}
 md_out=${docs_dir}/${md_file}.md
+csv_out=${docs_dir}/${md_file}.csv
 
 echo '---' > ${md_out}
 echo "title: $label Bio Modules" $VERSION_ID >> ${md_out}
@@ -88,6 +89,7 @@ echo '' >> ${md_out}
 
 # convert json modules spider to Markdown
 cat ${json_in} | ${scripts_dir}/spider2post.py >> ${md_out}
+cat ${json_in} | ${scripts_dir}/spider2csv.py > ${csv_out}
 
 echo Wrote inventory to ${md_out}
 
