@@ -15,8 +15,9 @@ if [[ ! -z "${PWD##*${repo}*}" ]]; then
 fi
 
 function usage {
-   echo usage: create_module_list.sh [full,bio] lable
+   echo usage: create_module_list.sh [all, bio] lable
    echo Lable should be [chorus, gizmo, ermine, etc]
+   echo Lable for Nobel on Gizmo is 'skylake'
    exit
 }
 
@@ -30,7 +31,7 @@ else
 fi
 
 case $inventory_type in 
-  "bio") moduleclass="ai bio chem math"
+  "bio") moduleclass="ai bio chem data math"
   ;;
   "all") moduleclass="all"
   ;;

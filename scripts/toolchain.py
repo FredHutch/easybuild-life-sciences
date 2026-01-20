@@ -19,6 +19,7 @@ class Toolchain():
             ['foss-2023a', 'GCCcore-12.3.0', 'GCC-12.3.0', 'gompi-2023a', 'gfbf-2023a'],
             ['foss-2023b', 'GCCcore-13.2.0', 'GCC-13.2.0', 'gompi-2023b', 'gfbf-2023b'],
             ['foss-2024a', 'GCCcore-13.3.0', 'GCC-13.3.0', 'gompi-2024a', 'gfbf-2024a'],
+            ['foss-2025a', 'GCCcore-14.2.0', 'GCC-14.2.0', 'gompi-2025a', 'gfbf-2025a'],
         ]
         self.tc_versions = {
             '8.2.0': 0, '2019a': 0,
@@ -32,6 +33,7 @@ class Toolchain():
             '12.3.0': 8, '2023a': 8,
             '13.2.0': 9, '2023b': 9,
             '13.3.0': 10, '2024a': 10,
+            '14.2.0': 11, '2025a': 11,
         }
         if tc in self.tc_versions:
            self.tc_index = self.tc_versions[tc]

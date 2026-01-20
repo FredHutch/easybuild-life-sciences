@@ -57,15 +57,8 @@ for p in slist:
            descrp = text.decode()
        elif isinstance(text, str):
            descrp = text
-   if 'whatis' in latest:
-       entry = None
-       entry = [x for x in latest['whatis'] if 'Homepage: ' in x]
-       if entry and 'Homepage: ' in entry:
-           text = entry[0].split('Homepage: ')[1]
-       if isinstance(text, bytes):
-           url = text.decode()
-       elif isinstance(text, str):
-           url = text
+   if 'URL' in latest:
+       url = latest['URL']
    print(' - [{}]({})'.format(latest['fullName'], url))
    if easyconfig_url:
        print('[easyconfig]({})'.format(easyconfig_url) )

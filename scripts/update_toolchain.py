@@ -37,15 +37,22 @@ def set_easyconfig_path():
     return ebroot
 
 def find_modules(modules, tc):
+    """ search EasyBuild easyconfig directories for module names """
     global ebroot
     for mod  in modules:
-        letter_dir = mod[0].lower()
-        mod_dir = os.path.join(ebroot, 'easybuild/easyconfigs', letter_dir, mod)
+        letter_dir = os.path.join(ebroot, 'easybuild/easyconfigs', mod[0].lower())
         found = []
-        for eb_config in os.listdir(mod_dir):
-            if tc.tc_filter(eb_config):
-                found.append(eb_config)
-                print(f"using: {eb_config}")
+        for eb_dirname in os.listdir(letter_dir):
+            if mod.lower() in eb_dirname.lower():
+                print(f'    #  possible Match {mod} -> {eb_dirname}')
+                for eb_config in os.listdir(os.path.join(letter_dir, eb_dirname)):
+                    if tc.tc_filter(eb_config):
+                        if 'Python-2.7' in eb_config:
+                            continue
+                        found.append(eb_config)
+                        sub_name = eb_config.replace(mod + '-', '')[:-3]
+                        version = tc.tc_trim(sub_name)
+                        print(f"    ('{mod}', '{version}'), #  {eb_config}")
         if len(found) == 0:
             print(f"missing toolchain for {mod}")
 
@@ -58,6 +65,7 @@ def main():
 
     project_file = sys.argv[1]
     toolchain = sys.argv[2]
+    print(f'Module list: {project_file}  Toolchain: {toolchain}')
     ebroot = set_easyconfig_path()
     tc_tools = Toolchain(toolchain)
     modules = read_project(project_file)
