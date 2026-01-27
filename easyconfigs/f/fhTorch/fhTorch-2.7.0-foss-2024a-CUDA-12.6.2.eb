@@ -1,0 +1,110 @@
+easyblock = 'PythonBundle'
+
+name = 'fhTorch'
+version = '2.7.0'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+homepage = 'https://pytorch.org/'
+description = """Tensors and Dynamic neural networks in Python with strong GPU acceleration.
+PyTorch is a deep learning framework that puts Python first."""
+
+""" 
+build fails with this issue, but is being handled by a PR
+   https://github.com/easybuilders/easybuild-easyblocks/issues/4036
+
+3 files with device code for more CUDA Compute Capabilities than requested:
+  lib/python3.12/site-packages/transformer_engine/wheel_lib/libtransformer_engine.so
+  lib/python3.12/site-packages/torch/lib/libtorch_cuda.so
+  lib/python3.12/site-packages/torch/lib/libtorch_cuda_linalg.so
+2 files missing PTX code for the highest configured CUDA Compute Capability:
+  lib/python3.12/site-packages/torch/lib/libtorch_cuda.so
+  lib/python3.12/site-packages/torch/lib/libtorch_cuda_linalg.so
+"""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('SciPy-bundle', '2024.05'),
+    ('CUDA', '12.6.2', '', SYSTEM),
+    ('NCCL', '2.23.4', '-CUDA-%(cudaver)s'),
+    ('cuDNN', '9.5.1.17', '-CUDA-%(cudaver)s', SYSTEM),
+    ('sympy', '1.13.3'),
+    ('networkx', '3.4.2'),
+    ('PyYAML', '6.0.2'),
+    # Installing collected packages: transformer_engine, protobuf, ml_dtypes, onnx, transformer-engine-cu12, onnx_ir, onnxscript, transformer_engine_torch
+    ('pydantic', '2.9.1'),
+    ('protobuf', '28.0'),
+    ('ml_dtypes', '0.5.0'),
+    ('ONNX', '1.20.0'),
+    ('ONNX-IR', '0.1.12'),
+    ('ONNX-Script', '0.5.6'),
+]
+
+sanity_pip_check = False
+# --cuda-sanity-check-error-on-failed-checks
+# --cuda-sanity-check-accept-missing-ptx to accept binaries missing PTX code for the highest configured CUDA Compute Capability.
+
+exts_list = [
+    ('triton', '3.3.0', {
+        'source_tmpl': 'triton-3.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    }),
+    ('nvidia.cublas', '12.6.4.1', {
+        'source_tmpl': 'nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cuda_cupti', '12.6.80', {
+        'source_tmpl': 'nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cuda_nvrtc', '12.6.77', {
+        'source_tmpl': 'nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl',
+    }),
+    ('nvidia.cuda_runtime', '12.6.77', {
+        'source_tmpl': 'nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cudnn', '9.5.1.17', {
+        'source_tmpl': 'nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_x86_64.whl',
+    }),
+    ('nvidia.cufft', '11.3.0.4', {
+        'source_tmpl': 'nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.nvjitlink', '12.6.85', {
+        'source_tmpl': 'nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl',
+    }),
+    ('nvidia.cufile', '1.11.1.6', {
+        'source_tmpl': 'nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.curand', '10.3.7.77', {
+        'source_tmpl': 'nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cusolver', '11.7.1.2', {
+        'source_tmpl': 'nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cusparse', '12.5.4.2', {
+        'source_tmpl': 'nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.cusparselt', '0.6.3', {
+        'modulename': 'cusparselt',
+        'source_tmpl': 'nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_x86_64.whl',
+    }),
+    ('nvidia.nccl', '2.26.2', {
+        'source_tmpl': 'nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('nvidia.nvtx', '12.9.79', {
+        'source_tmpl': 'nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl',
+    }),
+    ('torch', '2.7.0', {
+        'source_tmpl': 'torch-%(version)s+cu126-cp312-cp312-manylinux_2_28_x86_64.whl',
+    }),
+    ('transformer_engine', '2.11.0', {
+        'source_tmpl': 'transformer_engine-2.11.0-py3-none-any.whl',
+    }),
+    ('transformer_engine_cu12', '2.11.0', {
+        'modulename': False,
+        'source_tmpl': 'transformer_engine_cu12-2.11.0-py3-none-manylinux_2_28_x86_64.whl',
+    }),
+    ('transformer_engine_torch', '2.11.0', {
+        'modulename': False,
+    }),
+]
+
+moduleclass = 'bio'

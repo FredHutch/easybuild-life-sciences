@@ -1,0 +1,55 @@
+easyblock = 'PythonBundle'
+
+name = 'evo2'
+version = '0.4.0'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+""" use eb --skip-sanity-check to build evo2. There is a bug in how easybuild checks CUDA libs
+
+  >> CUDA sanity check summary report:
+  >> Number of CUDA files checked: 5
+  >> Number of files missing one or more CUDA Compute Capabilities: 5
+  >> (not running with --cuda-sanity-check-error-on-failed-checks, so not considered failures)
+  >> Number of files with device code for more CUDA Compute Capabilities than requested: 1
+  >> (not running with --cuda-sanity-check-error-on-failed-checks, so not considered failures)
+  >> Number of files missing PTX code for the highest configured CUDA Compute Capability: 5
+  >> (not running with --cuda-sanity-check-error-on-failed-checks, so not considered failures)
+  >> You may consider rerunning with --cuda-sanity-check-accept-ptx-as-devcode to accept suitable PTX code instead of device code.
+
+"""
+
+homepage = 'https://github.com/ArcInstitute/evo2'
+description = """
+Genome modeling and design across all domains of life. Evo 2 is a state of the art DNA language
+ model for long context modeling and design.
+"""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('CUDA', '12.6.2', '', SYSTEM),
+    ('SciPy-bundle', '2024.05'),
+    ('Biopython', '1.84'),
+    ('sympy', '1.13.3'),
+    ('fhTorch', '2.7.0', '-CUDA-%(cudaver)s'),
+    ('einops', '0.8.1'),
+    ('tqdm', '4.66.5'),
+    ('huggingface_hub', '0.34.4'),
+]
+
+exts_list = [
+    ('flash_attn', '2.8.2', {
+        'source_tmpl': 'flash_attn-2.8.2+cu12torch2.7cxx11abiFALSE-cp312-cp312-linux_x86_64.whl',
+    }),
+    ('triton', '3.3.0', {
+        'source_tmpl': 'triton-3.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl',
+    }),
+    ('vtx', '1.0.7', {
+        'modulename': False,
+    }),
+    ('vortex', '0.1.3'),
+    (name, version)
+]
+
+moduleclass = 'bio'
