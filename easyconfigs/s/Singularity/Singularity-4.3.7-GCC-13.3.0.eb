@@ -19,20 +19,21 @@ builddependencies = [
 ]
 
 # osdependencies = [libseccomp-dev, libfuse-dev, libsubid-dev, cryptsetup-bin]
-
+unpack_options = '&& mkdir %(builddir)s/%(namelower)s-ce-%(version)s/builddir'
 skipsteps = ['configure']
 
 prebuildopts = 'export GOPATH=%(builddir)s && '
-prebuildopts = 'export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig && '
-prebuildopts += './mconfig  -P release -b buiddir -V %(version)s --prefix=%(installdir)s && '
+prebuildopts += 'export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig && '
+prebuildopts += './mconfig  -P release -V %(version)s --prefix=%(installdir)s && '
 prebuildopts += 'cd builddir && '
 
-start_dir = '%(builddir)s/%(namelower)s-ce-%(version)s/builddir'
+preinstallopts = 'cd %(builddir)s/%(namelower)s-ce-%(version)s/builddir && '
 
 sanity_check_paths = {
-    'files': ['bin/run-singularity', 'bin/singularity', 'etc/singularity/singularity.conf',
-              'libexec/singularity/bin/action-suid'],
-    'dirs': ['etc', 'libexec/singularity'],
+    'files': ['bin/run-singularity', 'bin/singularity'],
+    'dirs': ['etc', 'libexec', 'share', 'var'],
 }
+
+sanity_check_cmds = ['singularity --help']
 
 moduleclass = 'tools'
