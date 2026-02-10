@@ -1,0 +1,29 @@
+easyblock = 'Tarball'
+
+name = 'gh'
+version = '2.86.0'
+
+homepage = 'https://github.com/cli/'
+description = "GitHub’s official command line tool"
+
+toolchain = SYSTEM
+
+# https://github.com/cli/cli/releases/download/v2.86.0/gh_2.86.0_linux_amd64.tar.gz
+source_urls = ['https://github.com/cli/cli/releases/download/v%(version)s/']
+sources = ['%(name)s_%(version)s_linux_amd64.tar.gz']
+checksums = ['f3b08bd6a28420cc2229b0a1a687fa25f2b838d3f04b297414c1041ca68103c7']
+
+#builddependencies = [
+#    ('Go', '1.22.1')
+#]
+
+installopts = './cmd/%(name)s'
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': []
+}
+
+sanity_check_commands = ['%(name)s --version']
+
+moduleclass = 'tools'
