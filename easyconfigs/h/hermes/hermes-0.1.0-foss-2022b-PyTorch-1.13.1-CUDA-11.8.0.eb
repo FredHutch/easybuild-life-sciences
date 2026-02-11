@@ -15,6 +15,7 @@ toolchain = {'name': 'foss', 'version': '2022b'}
 builddependencies = [('CMake', '3.24.3')]
 
 sanity_pip_check = False
+cuda_compute_capabilities = ['6.1', '7.5', '8.6', '8.9']
 
 dependencies = [
     ('Python', '3.10.8'),
@@ -22,6 +23,8 @@ dependencies = [
     ('PyTorch', local_pytorch_version, '-CUDA-%(cudaver)s'),
     ('torchaudio', '0.12.0', versionsuffix),
     ('torchvision', '0.14.1', '-CUDA-%(cudaver)s'),
+    ('dssp', '4.4.10'),
+    ('PyRosetta', '4.release-384'),
     ('Biopython', '1.83'),
     ('matplotlib', '3.7.0'),
     ('tqdm', '4.64.1'),
@@ -53,6 +56,15 @@ components = [
              '30d501f4af60ec0df959a37f7ccff5d5fee05ea138bf234fc40d3ad55c9968c3'},
         ]
     }),
+    ('zernikegrams', '1.0.13', {
+        'easyblock': 'Tarball',
+        'source_urls': ['https://github.com/StatPhysBio/zernikegrams/archive/refs/tags'],
+        'sources': [{
+            'download_filename': f'{version}.tar.gz',
+            'filename': SOURCE_TAR_GZ
+        }],
+        'checksums': ['df261fae6fec3941920a86a0ea8b7273bbbb77869a148d6885e7c6eae98b2bdd'],
+    }),
 ]
 
 postinstallcmds = [
@@ -61,6 +73,14 @@ postinstallcmds = [
 ]
 
 exts_list = [
+    ('simtk', '0.1.0'),
+    ('stopit', '1.1.2'),
+    ('sqlitedict', '2.1.0'),
+    ('PDBFixer', '1.9', {
+        'source_urls': ['https://github.com/openmm/pdbfixer/archive/'],
+        'sources': [{'download_filename': '%(version)s.tar.gz', 'filename': '%(name)s-%(version)s.tar.gz'}],
+        'checksums': ['88b9a77e50655f89d0eb2075093773e82c27a4cef842cb7d735c877b20cd39fb'],
+    }),
     ('hdf5plugin', '4.4.0', {
         'checksums': ['4142f54170843782eda7456b8f47d15910879ceb2608025aebf9464b7163913a'],
     }),
@@ -103,6 +123,7 @@ exts_list = [
         'checksums': ['b62fafd5fa6699adcb66c770b2f1cd7c68ded052d6548bb25642064592c95921'],
     }),
 ]
+
 modextrapaths = {'PYTHONPATH': ['%(installdir)s/%(name)s-%(version)s']}
 
 moduleclass = 'bio'

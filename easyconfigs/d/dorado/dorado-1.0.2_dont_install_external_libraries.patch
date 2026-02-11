@@ -1,6 +1,3 @@
-Don't install external libraries in Dorado's lib directory.
-Simon Branford (University of Birmingham)
-updated John Dey (Fred Hutch Cancer Center)
 diff -ruN dorado.orig/cmake/InstallRedistLibs.cmake dorado/cmake/InstallRedistLibs.cmake
 --- dorado.orig/cmake/InstallRedistLibs.cmake	2025-07-16 02:14:42.000000000 +0000
 +++ dorado/cmake/InstallRedistLibs.cmake	2025-07-23 20:13:22.409472000 +0000
@@ -13,3 +10,20 @@ diff -ruN dorado.orig/cmake/InstallRedistLibs.cmake dorado/cmake/InstallRedistLi
          endif()
      endforeach()
  
+@@ -65,14 +65,14 @@
+         find_library(NUMA_DLL numa REQUIRED)
+         get_filename_component(NUMA_DLL_PATH ${NUMA_DLL} DIRECTORY)
+         file(GLOB NUMA_DLLS "${NUMA_DLL_PATH}/libnuma.so*")
+-        install(FILES ${NUMA_DLLS} DESTINATION lib COMPONENT redist_libs)
++        # install(FILES ${NUMA_DLLS} DESTINATION lib COMPONENT redist_libs)
+     endif()
+ 
+ elseif(WIN32)
+     file(GLOB TORCH_DLLS "${TORCH_LIB}/lib/*.dll")
+     install(FILES ${TORCH_DLLS} DESTINATION bin COMPONENT redist_libs)
+     file(GLOB HTSLIB_DLLS "${HTSLIB_DIR}/*.dll")
+-    install(FILES ${HTSLIB_DLLS} DESTINATION bin COMPONENT redist_libs)
++    #install(FILES ${HTSLIB_DLLS} DESTINATION bin COMPONENT redist_libs)
+ 
+ elseif(APPLE)
+     file(GLOB TORCH_DLLS "${TORCH_LIB}/lib/*.dylib")

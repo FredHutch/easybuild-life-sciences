@@ -1,0 +1,15 @@
+unpin versions from Conda yaml
+author: John Dey Fred Hutch Cancer Center
+diff -ruN CogentAP-3.0.19.orig/cogent_ap_env.yaml CogentAP-3.0.19/cogent_ap_env.yaml
+--- CogentAP-3.0.19.orig/cogent_ap_env.yaml	2024-08-27 17:16:29.000000000 -0700
++++ CogentAP-3.0.19/cogent_ap_env.yaml	2026-02-03 19:25:31.108578000 -0800
+@@ -3,6 +3,6 @@
+  - bioconda
+  - conda-forge
+ dependencies:
+- - nextflow=24.04.4
+- - mamba=1.5.8
+- - libarchive==3.7.4
++ - nextflow>=24.04.4
++ - mamba>=1.5.8
++ - libarchive>=3.7.4

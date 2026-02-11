@@ -1,0 +1,62 @@
+easyblock = 'Tarball'
+
+name = 'CogentAP'
+version = '3.0.19'
+
+homepage = (
+    'https://www.takarabio.com/products/next-generation-sequencing/'
+    'bioinformatics-tools/cogent-ngs-analysis-pipeline'
+)
+
+description = """Cogent NGS Analysis Pipeline (also referred to as CogentAP) is
+ bioinformatic software for analyzing single-cell RNA-seq, bulk RNA-seq, and single-cell
+ DNA-seq data."""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+""" download requires registration """
+source_urls = [
+    'https://www.takarabio.com/products/next-generation-sequencing/bioinformatics-tools/cogent-ngs-analysis-pipeline'
+]
+sources = [SOURCE_ZIP]
+patches = ['CogentAP-3.0.19_version.patch']
+checksums = [
+    'e3da7d69b7e13bfa6ebdb92f4588f361629081363948113c1a5ba779e0e76d16',
+    '568e6b814fe1b21961db0835a795ff9710f2ca4c12902b061f29c39aac1fccc1'
+]
+
+builddependencies = [
+    ('Miniforge3', '24.1.2-0', '', SYSTEM),
+]
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('Biopython', '1.84'),
+    ('matplotlib', '3.9.2'),
+    ('Nextflow', '24.10.2', '', SYSTEM),
+    ('Miniforge3', '24.1.2-0', '', SYSTEM),
+    # ('Mamba', '4.14.0-0', '', SYSTEM),  version too different for conda
+    ('SAMtools', '1.21'),
+    ('FastQC', '0.12.1', '-Java-11', SYSTEM),
+    ('SortMeRNA', '4.3.6'),
+    ('STAR-Fusion', '1.15.1'),
+    ('TRUST4', '1.0.7'),
+    ('Salmon', '1.10.3'),
+    ('libarchive', '3.7.4'),
+    ('cutadapt', '5.1'),
+    ('pigz', '2.8'),
+]
+
+# postinstallcmds = ['./CogentAP_setup.sh install']
+# 
+
+sanity_check_paths = {
+    'files': ['VERSION'],
+    'dirs': ['bin', 'config', 'deploy', 'modules', 'workflows'],
+}
+
+modextrapaths = {"PATH": "%(installdir)s"}
+
+# sanity_check_commands = ["cogent --help"]
+
+moduleclass = 'bio'

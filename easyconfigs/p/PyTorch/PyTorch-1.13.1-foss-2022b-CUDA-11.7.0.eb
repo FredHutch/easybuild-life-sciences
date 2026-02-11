@@ -1,5 +1,3 @@
-# modified: John Dey Fred Hutch 
-# add Gloo-compatibility-with-newer-kernel patch
 name = 'PyTorch'
 version = '1.13.1'
 versionsuffix = '-CUDA-%(cudaver)s'

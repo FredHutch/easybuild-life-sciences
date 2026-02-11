@@ -111,8 +111,8 @@ exts_list = [
     (name, version, {
         'modulename': 'Giotto',
         'source_urls': ['https://github.com/drieslab/Giotto/archive/'],
-        'sources': ['v%(version)s.tar.gz'],
-        'checksums': ['cbe08439d2e1a3edac1f46032c4c8511ef2cc9371bf49e0730ba7ee0e4c942ca'],
+        'sources': [{'download_filename': 'v%(version)s.tar.gz', 'filename': 'Giotto-%(version)s.tar.gz'}],
+        'checksums': ['ab420c17a111aeb9e17a834957e544eadf198bbef34f783489b6f3d1d5add7ac'],
     }),
 ]
 

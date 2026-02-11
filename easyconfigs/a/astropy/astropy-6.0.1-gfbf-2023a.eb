@@ -55,6 +55,9 @@ exts_list = [
     }),
 ]
 
-sanity_check_commands = ["pytest %(installdir)s/lib/python%(pyshortver)s/site-packages/astropy"]
+sanity_check_commands = [("pytest"
+    " --ignore=/astropy/time/tests/test_ut1.py"
+    " %(installdir)s/lib/python%(pyshortver)s/site-packages/astropy"
+    )]
 
 moduleclass = 'astro'

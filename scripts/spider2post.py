@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" convert output from module spider to a single Markdown page.
+""" convert JSON output from module spider to a single [markdown/csv] file.
 Not all modules can be located in the Fred Hutch Easybuild-life-scienes repo.
 check for module type of bio, then search for easyconfig
 
@@ -12,9 +12,26 @@ from pprint import pprint
 import json
 import sys
 import os
+import re
 from packaging import version
+from tc import Toolchain as TC
 
-data = json.load(sys.stdin)
+__author__ = "John Dey"
+__date__ = "Jan 2026"
+__version__ = "1.0.0"
+
+data_path = os.path.dirname(sys.argv[1])
+file_name = os.path.basename(sys.argv[1])
+base_name = file_name.removesuffix('.json')
+markdown_name =os.path.join(data_path , base_name + ".md") 
+csv_name = os.path.join(data_path , base_name + ".csv")
+csv_f = open(csv_name, "w")
+md_f = open(markdown_name, 'a')
+
+with open(sys.argv[1], 'r') as file:
+    json_data = file.read()
+    data = json.loads(json_data)
+
 packages = data.keys()
 slist = sorted(packages)
 repo_path = os.path.dirname(os.path.abspath(__file__)) + '/../easyconfigs/'
@@ -27,6 +44,7 @@ for p in slist:
    pac = data[p]
    print(p, file=sys.stderr)
    paths = list(pac.keys())
+   latestVersion = ""
    if len(paths) == 1:
       latest = pac[paths[0]]
       latestVersion = pac[paths[0]]['Version']
@@ -40,29 +58,28 @@ for p in slist:
              latestVersion = pac[release]['Version']
    if 'fullName' in latest and '-2015' in latest['fullName']:
         continue
-   descrp = ''
+   software_version = TC.tc_trim(latestVersion)
+   cleaned_descrp = "none"
    url = ''
-   easyconfig_url = None
    fullName = latest['fullName']
-   eb_filename = fullName.replace('/', '-') + '.eb'
-   topdir = fullName[0].lower()
-   projdir = p
-   eb_path = repo_path +  topdir +'/'+ projdir +'/'+ eb_filename
-   # search for eb_filename
-   if os.path.isfile(eb_path):
-       easyconfig_url = github_repo + topdir +'/'+ projdir +'/'+ eb_filename
-   eb_filename = None
    if 'Description' in latest:
        text = latest['Description'].split(' - ')[0]
        if isinstance(text, bytes):
            descrp = text.decode()
        elif isinstance(text, str):
            descrp = text
-   if 'URL' in latest:
-       url = latest['URL']
-   print(' - [{}]({})'.format(latest['fullName'], url))
-   if easyconfig_url:
-       print('[easyconfig]({})'.format(easyconfig_url) )
-   else:
-       print
-   print('{}'.format(descrp))
+       cleaned_descrp = re.sub(r'[\x00-\x1F\x7F]', ' ', descrp)  # Remove control characters
+       if '\r' in cleaned_descrp:
+           print(f"{p} has an issue")
+   url = latest.get('URL', "none")
+   print(f'"{p}","{software_version}","{latestVersion}","{url}","{cleaned_descrp}"', file=csv_f)
+   print(f" - [{latest['fullName']}]({url})", file=md_f)
+   print(f"{cleaned_descrp}", file=md_f)
+
+csv_f.close()
+md_f.close()
+
+if __file__ == '__main__':
+    if len(sys.argv) != 2:
+       print('usage: need one filename argument')
+       sys.exit(1)

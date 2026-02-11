@@ -5,181 +5,30 @@
 ## Overview
 - FredHutch Scientific Computing uses Easybuild to provide 100s of OSS packages to our Scientists
 - Scientists can load multiple versions of any software via Environment modules (LMOD)
-- All software is built to offer high reproducibility, it can be rebuilt exactly even 10 years from now 
+- All software is built to offer high reproducibility
 
 ---
 
 ## New package requests (including Python and R libraries/modules)
+
 Please open an issue against this repo to request new softwares!
-
----
-
-## Quickstart 
-
-please follow these simple steps:
-
-- use a system with at least 8GB RAM, 8GB Disk and 4 cores
-- create a useraccount you using for builds, for example 'eb' :
-
-```
-sudo adduser --disabled-password --gecos "" eb
-sudo sh -c "echo 'eb ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers.d/zz_eb"
-
-```
-
-- and then simply launch the bootstrap process:
-
-```
-curl -s https://raw.githubusercontent.com/FredHutch/easybuild-life-sciences/master/sandbox/easybuild_bootstrap.sh | bash
-```
-- after easybuild is installed simply log out and login again and as an example (installing R) execute this
-
-```
-module load EasyBuild
-eb R-3.3.1-foss-2016b.eb --robot
-```
-
-
----
-
-## Presentation
-- This readme is also a [presentation](http://fredhutch.github.io/easybuild-life-sciences)
 
 ---
 
 ## Goals
 Before and during implementation, we kept the following goals in mind:
 
-- software packages will be reproducable
-- modules will be easily loaded by user in interactive sessions and in scripts
-- default versions of software packages will be easy to manage (ex: R-3.2.3 may be most recent, but `module load R` will load R-3.2.1)
-- packages will be built by any member of a given POSIX group
-- new packages will be easily implemented (new versions and software packages without existing easyconfigs)
+  - Use as many existing easyconfigs as possible.
+  - Contribute back to the EasyBuild community when possible.
+  - Build all module in a container to maintain a clean build room. The session should be terminated
+    after a module is built.
+  - Publish internal documentation for users, with complete software inventory.
 
 ---
 
-## Prerequisites
-
-You need money to make money, and you need software to build software.
-
-- Ubuntu 14.04
-- `build-essentials`
-- an implementation of Modules - we use Environment Modules, but check out [Lmod](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod)
 
 ---
 
-## Our environment
-
-- read-only NFS mount on all systems mounted at `/app`
-- hand-built software packages
-- hand-managed modulefile hierarchy
-- pre-existing POSIX group of all users expected to execute builds
-- user base that is highly varied with regard to Unix knowledge - *keeping things simple encourages more widespread use*
-
----
-
-## Bootstrap
-
-- easybuild was bootstrapped into `/app/easybuild`
-- we created `/app/easybuild/etc` to hold additional centralized configuration files
-- we created `/app/easybuild/fh_easyconfigs` to hold our custom easyconfig files while we are developing them
-
----
-
-## Bootstrap - Step One - RTFM
-
-- Follow the [Fine Manual](https://easybuild.readthedocs.org/en/latest/Installation.html#bootstrapping-easybuild)
-
----
-
-## Bootstrap - Step Two - Environment
-
-EasyBuild configuration
-
-Configuration is consistent across methods:
-- config file(s)
-- environment variables
-- command-line parameters
-
-Easybuild applies them in that order (meaning command-line overrides everything)
-
-Since we use Modules, it made sense to use Environment Variables in our case
-
----
-
-## Bootstrap - Paths and Logs
-
-In the easybuild modulefile, I added the following:
-
-    !Tcl
-    set ebDir "/app/easybuild"
-    setenv EASYBUILD_SOURCEPATH "$ebDir/sources"
-    setenv EASYBUILD_BUILDPATH "$ebDir/build"
-    setenv EASYBUILD_INSTALLPATH_SOFTWARE "$ebDir/software"
-    setenv EASYBUILD_INSTALLPATH_MODULES "$ebDir/modules"
-    setenv EASYBUILD_REPOSITORYPATH "$ebDir/ebfiles_repo"
-    setenv EASYBUILD_LOGFILE_FORMAT "$ebDir/logs,easybuild-%(name)s-%(version)s-%(date)s.%(time)s.log"
-
-The modulefile is a tcl snippet and this sets environment variables for us.
-
----
-
-## Bootstrap Easybuild Parameters
-
-    !Tcl
-    # keep group writable bit
-    setenv EASYBUILD_GROUP_WRITABLE_INSTALLDIR 1
-    # set umask to preserve group write permissions on modulefiles
-    setenv EASYBUILD_UMASK 002
-    # create module dependencies to recursively unload
-    setenv EASYBUILD_RECURSIVE_MODULE_UNLOAD 1
-    # add our normal modulefile footer
-    setenv EASYBUILD_MODULES_FOOTER "$ebDir/etc/fredhutch_modulefile_footer"
-    # add our own easyconfig directory to robot paths
-    setenv EASYBUILD_ROBOT_PATHS ":$ebDir/fh_easyconfigs"
-    # Our licenses
-    setenv LM_LICENSE_FILE "$ebDir/etc/licenses/intel.lic"
-
-These are more complex, and will be documented soon.
-
----
-
-## Bootstrap - Ownership and Permissions
-
-There are a number of manual steps that were performed that can best be described as messy, and also perhaps make up the bulk of the useful information here.
-
-Since we decided to have building be performed by members of a POSIX group, and we want produced software and modules centrally located for the use of everyone, we have to tell Easybuild how to do that.
-
-- `GROUP_WRITABLE_INSTALLDIR` - this lets our group write to easybuild-created directories
-- `UMASK 002` - this tells Easybuild to set this umask when writing directories/files
-
-Of course, some manual adjusting was needed:
-
-- `chgrp -R <build group> /app/easybuild/*` - change to our build group from the default group of the installer account
-- `chmod -R g+s /app/easybuild/*` - setgid bit for dirs created during bootstrap
-
----
-
-## Bootstrap - Easybuild Parameters
-
-- `RECURSIVE_MODULE_UNLOAD 1` - this causes Easybuild to create modulefiles that will auto-load *and* auto-unload dependent modules
-- `ROBOT_PATHS <path>` - adds our local easyconfig development dir to robot paths
-- `LM_LICENSE_FILE <file>` - where our licenses are located
-
-## Bootstrap - Modulefile Manipulating
-
-- Now, Easybuild configured for us loads with `module load Easybuild/2.3.0` everytime for everyone
-- `MODULES_FOOTER` - code to include in every modulefile created by Easybuild
-
-Ex:
-
-    !Tcl
-    set curMod [module-info name]
-    if { [module-info mode load] } {
-        system "logger \$USER module load $curMod "
-    }
-
----
 ## User Documentation
 
 [Easybuild packages available at the Fred Hutch](https://fredhutch.github.io/easybuild-life-sciences/)
@@ -215,18 +64,15 @@ The `create_post.sh` script takes a easybuild module name as an argument. The
  easyconfig is assumed to be in the fh_easyconfig unless a full path is
  specified. 
 ```
-../scripts/create_post.sh beagle-lib-3.0.2-foss-2018b.eb
-CFGS1=/app/easybuild/software/EasyBuild/3.7.0/lib/python2.7/site-packages/easybuild_easyconfigs-3.7.0-py2.7.egg/easybuild/easyconfigs
-./create_posts.sh $CFGS1/p/PHASE/PHASE-2.1.1.eb
+../scripts/create_post.sh beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1 
 ```
 
 #### Generate new software inventory
+
 The `create_module_list.sh` uses module spider to create a list of installed
- modules.  `create_module_list.sh` checks OS distributions and creates seperate
- output for Ubuntu 14.04 and 16.04.
-```
-~/scripts/create_module_list.sh
-```
+ modules.  `create_module_list.sh` needs to be run from a host that has
+the specific hardware inventory you want to publsh.
+
 
 #### Generate module list for R and python
 The script `easy_annotate.py` is used to create a Markdown page containing all

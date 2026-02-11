@@ -8,8 +8,7 @@
 
 function usage {
    echo usage: create_module_list.sh [all, bio] lable
-   echo Lable should be [chorus, gizmo, ermine, etc]
-   echo Lable for Nobel on Gizmo is 'skylake'
+   echo Lable should be [chorus, gizmo, canto, ermine, etc]
    exit
 }
 
@@ -88,8 +87,8 @@ echo '---' >> ${md_out}
 echo '' >> ${md_out}
 
 # convert json modules spider to Markdown
-cat ${json_in} | ${scripts_dir}/spider2post.py >> ${md_out}
-cat ${json_in} | ${scripts_dir}/spider2csv.py > ${csv_out}
+#cat ${json_in} | ${scripts_dir}/spider2post.py >> ${md_out}
+${scripts_dir}/spider2post.py ${json_in}  
 
 echo Wrote inventory to ${md_out}
 
