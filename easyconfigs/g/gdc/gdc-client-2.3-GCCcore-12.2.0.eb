@@ -1,0 +1,65 @@
+easyblock = 'CargoPythonBundle'
+
+name = 'gdc-client'
+version = '2.3'
+
+homepage = 'https://gdc.nci.nih.gov/access-data/gdc-data-transfer-tool'
+description = """The gdc-client provides several convenience functions over the GDC API which provides general
+ download/upload via HTTPS."""
+
+toolchain = {'name': 'GCCcore', 'version': '12.2.0'}
+
+builddependencies = [
+    ('binutils', '2.39'),
+    ('Rust', '1.75.0'),
+    ('maturin', '1.4.0', '-Rust-1.75.0'),
+]
+
+dependencies = [
+    ('Python', '3.10.8'),
+    ('PyYAML', '6.0'),
+    ('lxml', '4.9.2'),
+]
+
+crates = [
+    ('rpds', '1.1.0'),
+]
+
+#checksums = [
+#    {'rpds-1.1.0.tar.gz': 'a0e15515d3ce3313324d842629ea4905c25a13f81953eadb88f85516f59290a4'},
+#]
+
+exts_list = [
+    ('termcolor', '1.1.0', {
+        'checksums': ['1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b'],
+    }),
+    ('jsonschema', '4.17.0', {
+        'checksums': ['5bfcf2bca16a087ade17e02b282d34af7ccd749ef76241e7f9bd7c0cb8a9424d'],
+    }),
+    ('progressbar2', '4.2.0', {
+        'modulename': 'progressbar',
+        'checksums': ['1393922fcb64598944ad457569fbeb4b3ac189ef50b5adb9cef3284e87e394ce'],
+    }),
+    ('python-utils', '3.5.2', {
+        'checksums': ['68198854fc276bc4b2403b261703c218e01ef564dcb072a7096ed9ea7aa5130c'],
+    }),
+    ('sortedcontainers', '2.4.0', {
+        'checksums': ['25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88'],
+    }),
+    # must download sources via git to preserve .git directory,
+    # since setuptools-scm is used to determine version
+    (name, version, {
+        'source_urls': ['https://github.com/NCI-GDC/gdc-client/archive/refs/tags'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'patches': ['%(name)s-%(version)s_requirements.patch'],
+        'modulename': 'gdc_client',
+    }),
+]
+
+sanity_check_paths = {
+    'files': ['bin/gdc-client'],
+    'dirs': ['lib/python%(pyshortver)s/site-packages'],
+}
+
+sanity_check_commands = ['gdc-client --help']
+moduleclass = 'tools'
