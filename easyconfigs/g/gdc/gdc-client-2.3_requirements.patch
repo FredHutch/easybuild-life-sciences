@@ -1,3 +1,8 @@
+add version to setup.cfg
+remove "dirty-tag" from setuptools-scm
+relax version requiments.txt 
+
+author: John Dey Fred Hutch
 diff -ruN gdc-client-2.3.orig/pyproject.toml gdc-client-2.3/pyproject.toml
 --- gdc-client-2.3.orig/pyproject.toml	2024-09-11 10:22:54.000000000 -0700
 +++ gdc-client-2.3/pyproject.toml	2026-02-12 12:26:37.720567000 -0800

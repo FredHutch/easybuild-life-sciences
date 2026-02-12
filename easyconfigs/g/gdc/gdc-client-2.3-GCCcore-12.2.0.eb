@@ -24,10 +24,9 @@ dependencies = [
 crates = [
     ('rpds', '1.1.0'),
 ]
-
-#checksums = [
-#    {'rpds-1.1.0.tar.gz': 'a0e15515d3ce3313324d842629ea4905c25a13f81953eadb88f85516f59290a4'},
-#]
+checksums = [
+    {'rpds-1.1.0.tar.gz': 'a0e15515d3ce3313324d842629ea4905c25a13f81953eadb88f85516f59290a4'},
+]
 
 exts_list = [
     ('termcolor', '1.1.0', {
@@ -46,13 +45,15 @@ exts_list = [
     ('sortedcontainers', '2.4.0', {
         'checksums': ['25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88'],
     }),
-    # must download sources via git to preserve .git directory,
-    # since setuptools-scm is used to determine version
     (name, version, {
-        'source_urls': ['https://github.com/NCI-GDC/gdc-client/archive/refs/tags'],
-        'source_tmpl': '%(version)s.tar.gz',
-        'patches': ['%(name)s-%(version)s_requirements.patch'],
         'modulename': 'gdc_client',
+        'patches': ['%(name)s-%(version)s_requirements.patch'],
+        'source_tmpl': '%(version)s.tar.gz',
+        'source_urls': ['https://github.com/NCI-GDC/gdc-client/archive/refs/tags'],
+        'checksums': [
+            {'2.3.tar.gz': 'c4617516d84572135ee21b3b0bbaf4a5d360dcfe752ef70ba89c156ab64d1870'},
+            {'gdc-client-2.3_requirements.patch': 'e5b42ea5d49406d21cb1be5206f2f4fe2702688af061dcad81cb25a0cc1e54e4'},
+        ],
     }),
 ]
 
