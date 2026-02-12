@@ -1,0 +1,36 @@
+easyblock = 'Tarball'
+
+name = 'gdc-client'
+version = '2.3'
+
+homepage = 'https://gdc.cancer.gov/access-data/gdc-data-transfer-tool'
+description = """
+The GDC provides a standard client-based mechanism supporting high-performance data downloads and submission.
+"""
+
+toolchain = SYSTEM
+
+download_instructions = """
+Follow the instructions at the URL above
+"""
+
+source_urls = ['https://bildit.yerself']
+sources = ["%(namelower)s_2.3_Ubuntu_x64.tar.gz"]
+checksums = ['c443ccada95f98be9bcb1574fff0ca3129d0d123842d51d44886bfbc4bab924a']
+
+keepsymlinks = True
+
+preinstall_cmd = "mkdir -p %(installdir)s/bin"
+postinstallcmds = ["mkdir -p %(installdir)s/bin", "cp -v %(builddir)s/gdc-client %(builddir)s/gdc-client %(installdir)s/bin/", "rm %(installdir)s/gdc-client"]
+
+
+sanity_check_paths = {
+    'files': ['bin/gdc-client'],
+    'dirs': [],
+}
+
+sanity_check_commands = ['gdc-client --help']
+
+
+moduleclass = 'lang'
+
