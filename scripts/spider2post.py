@@ -22,8 +22,10 @@ __version__ = "1.0.0"
 
 data_path = os.path.dirname(sys.argv[1])
 file_name = os.path.basename(sys.argv[1])
-base_name = file_name.removesuffix('.json')
-markdown_name =os.path.join(data_path , base_name + ".md") 
+#base_name = file_name.removesuffix('.json')
+base_name = file_name.replace('.json', '')
+
+markdown_name =os.path.join(data_path , base_name + ".md")
 csv_name = os.path.join(data_path , base_name + ".csv")
 csv_f = open(csv_name, "w")
 md_f = open(markdown_name, 'a')

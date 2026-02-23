@@ -1,0 +1,49 @@
+# John Dey Fred Hutch
+easyblock = 'CMakeMakeCp'
+
+name = 'svaba'
+version = '1.3.0'
+local_commit = '442ad95'
+
+homepage = 'https://github.com/walaj/svaba'
+description = """SvABA - Structural variation and indel analysis by assembly"""
+
+toolchain = {'name': 'GCC', 'version': '13.3.0'}
+
+# create tar ball from recursive clone of repository
+# git clone --recursive https://github.com/walaj/svaba
+source_urls = 'https://github.com/walaj/svaba',
+sources = "%s.tar.gz" % local_commit,
+checksums = ['e9ef106c6b2cfc5095c20a2e73a9930cdaceefc95f2d027c9f026254b697bb10']
+
+builddependencies = [
+    ('CMake', '3.29.3'),
+    ('binutils', '2.42'),
+]
+
+dependencies = [
+    ('HTSlib', '1.21'),
+    ('XZ', '5.4.5'),
+    ('bzip2', '1.0.8'),
+]
+
+separate_build_dir = True
+
+configopts = "-DHTSLIB_DIR=$EBROOTHTSLIB/lib "
+
+files_to_copy = [
+    (['svaba'], 'bin'),
+    (['SeqLib/libseqlib.a'], 'lib'),
+    (['%(builddir)s/%(name)s/R'], ''),
+]
+
+modextrapaths = {'R_LIBS_SITE': 'R'}
+
+sanity_check_commands = ['svaba --version']
+
+sanity_check_paths = {
+    'files': ['bin/svaba', 'R/svaba-annotate.R'],
+    'dirs': [],
+}
+
+moduleclass = 'bio'
