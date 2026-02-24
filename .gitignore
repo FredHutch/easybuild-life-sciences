@@ -3,4 +3,5 @@ sources/*
 *.pyc
 *.json
 *.update
+*.csv
 scripts/list.txt
