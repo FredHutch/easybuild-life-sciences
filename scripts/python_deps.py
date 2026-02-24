@@ -10,11 +10,11 @@ import xmlrpclib
 
 def parse_pypi_requires(pkg_name, requires):
     """ pip requirement specifier is defined in full in PEP 508
-        The project name is the only required portion of a requirement string. 
+        The project name is the only required portion of a requirement string.
 
         Test that <python_version> and <sys_platform> conform.
         If <extra> is present and required check that extra is contained in "exts_list".
-        
+
         We only care about the package name so ignore all version information
         input: 'numpy (>=1.7.1)'  output: ['numpy', '']
         badness:
@@ -27,8 +27,8 @@ def parse_pypi_requires(pkg_name, requires):
     sys_platform = 'Linux'
     extra = ''
     require_re = '^([A-Za-z0-9_\-\.]+)(?:.*)$'
-    extra_re =   "and\sextra\s==\s'([A-Za-z0-9_\-\.]+)'"  # only if the 
-    targets = ['python_version', 'sys_platform', 'extra'] 
+    extra_re =   "and\sextra\s==\s'([A-Za-z0-9_\-\.]+)'"  # only if the
+    targets = ['python_version', 'sys_platform', 'extra']
     ans = re.search(require_re, requires)
     name = ans.group(1)
     test = False    # do we need to test extra requires field?
@@ -54,7 +54,7 @@ def parse_pypi_requires(pkg_name, requires):
         return None
 
 def get_package_info(client, pkg_name):
-    """Python pypi API for package version and dependancy list 
+    """Python pypi API for package version and dependancy list
        pkg is a list; ['package name', 'version', 'other stuff']
        return the version number for the package and a list of dependancie
     """
@@ -68,7 +68,7 @@ def get_package_info(client, pkg_name):
         url_info = client.release_urls(pkg_name, pkg_ver)
         found = False
         for url in url_info:
-            if (url['url'].endswith('.gz') or 
+            if (url['url'].endswith('.gz') or
                 url['url'].endswith('.zip') or
                 url['url'].endswith('whl')):
                 URL = url['url']
@@ -84,14 +84,14 @@ def get_package_info(client, pkg_name):
             for requires in xml_info['requires_dist']:
                 pkg_requires = parse_pypi_requires(pkg_name, requires)
                 if pkg_requires:
-                    print("  required: %s" % pkg_requires) 
+                    print("  required: %s" % pkg_requires)
 
         print("\n%s('%s', '%s', {" % (indent4, pkg_name, pkg_ver))
         print("%s%s'source_url': [%s]," % (indent4, indent4, URL))
         print("%s)}," % indent4 )
     else:
         print("Warning: %s Not in PyPi. No depdancy checking performed" % pkg_name)
-        
+
 
 
 
