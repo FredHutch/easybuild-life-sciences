@@ -1,0 +1,64 @@
+# easybuild easyconfig
+#
+# Dominik Otto dotto@fredhutch.org
+#
+# Fred Hutchinson Cancer Center
+#
+easyblock = 'MesonNinja'
+
+name = 'bubblewrap'
+version = '0.11.1'
+
+homepage = 'https://github.com/containers/bubblewrap'
+description = """Unprivileged sandboxing tool. bubblewrap runs an application
+ in a sandbox, where it has restricted access to parts of the operating system
+ or user data such as the home directory. Used by Flatpak and similar projects."""
+
+toolchain = {'name': 'GCCcore', 'version': '12.3.0'}
+
+source_urls = ['https://github.com/containers/bubblewrap/releases/download/v%(version)s']
+sources = ['%(name)s-%(version)s.tar.xz']
+checksums = ['c1b7455a1283b1295879a46d5f001dfd088c0bb0f238abb5e128b3583a246f71']
+
+builddependencies = [
+    ('binutils', '2.40'),
+    ('Meson', '1.1.1'),
+    ('Ninja', '1.11.1'),
+    ('pkgconf', '1.9.5'),
+]
+
+dependencies = [
+    ('libcap', '2.69'),
+]
+
+configopts = '-Dman=disabled '
+
+# On Ubuntu 24.04+ with kernel.apparmor_restrict_unprivileged_userns=1,
+# bwrap needs an AppArmor profile granting userns to create user namespaces.
+# Install the profile template; a privileged postinstall step must deploy it:
+#   cp %(installdir)s/etc/apparmor.d/bwrap-easybuild /etc/apparmor.d/
+#   apparmor_parser -r /etc/apparmor.d/bwrap-easybuild
+postinstallcmds = [
+    "mkdir -p %(installdir)s/etc/apparmor.d",
+    """echo 'abi <abi/4.0>,
+include <tunables/global>
+profile bwrap-easybuild %(installdir)s/bin/bwrap flags=(unconfined) {
+  userns,
+}
+' > %(installdir)s/etc/apparmor.d/bwrap-easybuild""",
+]
+
+sanity_check_paths = {
+    'files': ['bin/bwrap', 'etc/apparmor.d/bwrap-easybuild'],
+    'dirs': [],
+}
+
+sanity_check_commands = ['bwrap --version']
+
+modloadmsg = """NOTE: On systems with AppArmor unprivileged userns restrictions
+(Ubuntu 24.04+), a privileged user must install the AppArmor profile:
+  sudo cp %(installdir)s/etc/apparmor.d/bwrap-easybuild /etc/apparmor.d/
+  sudo apparmor_parser -r /etc/apparmor.d/bwrap-easybuild
+"""
+
+moduleclass = 'tools'
