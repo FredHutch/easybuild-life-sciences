@@ -1,0 +1,50 @@
+easyblock = 'CMakeMake'
+
+name = 'VerifyBamID'
+version = '2.0.2'
+
+homepage = "https://github.com/Griffan/VerifyBamID"
+description = """verifyBamID is a software that verifies whether the reads in particular file match previously known
+ genotypes for an individual (or group of individuals), and checks whether the reads are contaminated as a mixture of
+ two samples. verifyBamID can detect sample contamination and swaps when external genotypes are available. When
+ external genotypes are not available, verifyBamID still robustly detects sample swaps.
+"""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+# https://github.com/Griffan/VerifyBamID/archive/refs/tags/V2.0.2.tar.gz
+source_urls = ['https://github.com/Griffan/%(name)s/archive/refs/tags/']
+sources = ["V%(version)s.tar.gz"]
+
+checksums = [
+    'bccd0d9c8f0bb80986ab73b22656c82919635453a50420001a0d7376f487820c'
+]
+
+dependencies = [
+    ('bzip2', '1.0.8'),
+    ('HTSlib', '1.21'),
+    ('XZ', '5.4.5'),
+    ('CMake', '3.29.3'),
+]
+
+skipsteps = ['install']
+
+postinstallcmds = [
+    'mkdir -p %(installdir)s/bin',
+    'mv ../%(name)s-%(version)s/bin/%(name)s  %(installdir)s/bin',
+]
+
+buildopts = 'CXX="$CXX"'
+
+files_to_copy = [(['%(name)s/bin/%(name)s'], 'bin')]
+
+sanity_check_paths = {
+    'files': ['bin/%(name)s'],
+    'dirs': []
+}
+
+sanity_check_commands = [
+    'VerifyBamID 2>&1 | grep VerifyBamID2',
+]
+
+moduleclass = 'bio'
