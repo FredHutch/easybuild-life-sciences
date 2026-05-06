@@ -7,8 +7,8 @@
 #
 
 function usage {
-   echo usage: create_module_list.sh [all, bio] lable
-   echo Lable should be [chorus, gizmo, canto, ermine, etc]
+   echo usage: create_module_list.sh [all, bio] label
+   echo Label should be a partition name 
    exit
 }
 
@@ -46,6 +46,7 @@ esac
 base_dir=${PWD%${repo}*}${repo}
 docs_dir=${base_dir}/docs/sw_inventory
 scripts_dir=${base_dir}/scripts
+OOD=/fh/working/_ADM/SciComp/ood/modules/
 
 # Location of LMOD modules
 spider=/app/lmod/lmod/libexec/spider
@@ -63,6 +64,7 @@ for class in $moduleclass; do
 done
 echo $module_search_path
 json_in=${docs_dir}/${label}-${inventory_type}-modules-${VERSION_ID}.json
+$spider -o spider-json $module_search_path > ${OOD}${label}.json
 $spider -o spider-json $module_search_path | \
     python3 -mjson.tool | \
     sed 's/4.release-/4./' |\
