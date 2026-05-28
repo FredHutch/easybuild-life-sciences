@@ -1,0 +1,71 @@
+# easybuild easyconfig
+#
+# Dominik Otto  dotto@fredhutch.org
+#
+# Fred Hutchinson Cancer Center
+#
+easyblock = 'ConfigureMake'
+
+name = 'passt'
+version = '2026_05_07'
+local_commit = '1afd4ed'
+
+homepage = 'https://passt.top/'
+description = """passt (Plug A Simple Socket Transport) and pasta (Pack A Subtle Tap
+ Abstraction) are unprivileged user-mode networking tools that translate between a
+ Layer-2 network interface (or a network namespace, in the case of pasta) and native
+ Layer-4 sockets on the host. They require no capabilities, kernel modules, or setuid
+ binaries, making them a drop-in replacement for slirp / slirp4netns in rootless
+ container and sandbox workflows. Dual-licensed GPL-2.0-or-later OR BSD-3-Clause."""
+
+toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
+
+source_urls = ['https://passt.top/passt/snapshot/']
+sources = ['%%(name)s-%%(version)s.%s.tar.gz' % local_commit]
+checksums = ['4b5cb8482db1a861bce36dafd4ba606565e1e294079c81d1e82e28f11e7a1f30']
+
+builddependencies = [
+    ('binutils', '2.42'),
+]
+
+# passt ships a plain Makefile, not autotools.
+skipsteps = ['configure']
+
+# Build only the two binaries needed for rootless-container / sandbox
+# networking. The upstream tree also ships `qrap` (qemu wrapper),
+# `passt-repair` (live-migration helper), and `pesto` (per-socket
+# traffic shaping); none is required for the use case driving this
+# module. Extend `local_bin` / `local_manpages` to reinstate them.
+#
+# NOTE: passt's source unconditionally `#include`s `<linux/vhost_types.h>`
+# (added in Linux 5.0) and `<linux/close_range.h>` (Linux 5.9) via
+# util.h -> packet.h -> virtio.h. The Ubuntu 18.04 build host that the
+# `gizmo-*-modules-18.04` modules target ships linux-libc-dev for the
+# 4.15 kernel and does not provide these headers. Compile here therefore
+# requires either (a) a newer linux-libc-dev / kernel-headers easyconfig
+# loaded as a build dependency, (b) a build host running Ubuntu 20.04+,
+# or (c) a passt patch making those includes conditional. See PR body
+# for the local build attempt that exposed this.
+#
+# The Makefile derives VERSION from `git describe`; snapshot tarballs
+# have no .git, so set VERSION explicitly to keep `--version` informative.
+local_bin = 'passt pasta'
+local_manpages = 'passt.1 pasta.1'
+buildopts = "VERSION=%%(version)s.%s BIN='%s' MANPAGES='%s'" % (
+    local_commit, local_bin, local_manpages,
+)
+installopts = "prefix=%%(installdir)s DESTDIR= BIN='%s' MANPAGES='%s'" % (
+    local_bin, local_manpages,
+)
+
+sanity_check_paths = {
+    'files': ['bin/passt', 'bin/pasta'],
+    'dirs': ['bin', 'share/man/man1'],
+}
+
+sanity_check_commands = [
+    'passt --version',
+    'pasta --version',
+]
+
+moduleclass = 'tools'
