@@ -1,0 +1,51 @@
+# easybuild easyconfig
+#
+# Dominik Otto  dotto@fredhutch.org
+#
+# Fred Hutchinson Cancer Center
+#
+easyblock = 'ConfigureMake'
+
+name = 'socat'
+version = '1.8.1.1'
+
+homepage = 'http://www.dest-unreach.org/socat/'
+description = """socat (SOcket CAT) is a multipurpose relay for bidirectional data
+ transfer between two independent data channels. Each channel may be a file, pipe,
+ device (serial line, pseudo terminal), a socket (UNIX, IPv4, IPv6 - raw, UDP, TCP,
+ SSL), an SSL socket, a proxy CONNECT connection, a file descriptor, the GNU
+ readline editor, a program, or a combination of any two of these. socat supports
+ listening sockets, named pipes, and pseudo terminals, and is commonly used as a
+ TCP port forwarder, a UNIX-socket-to-TCP bridge, an external socksifier, or as a
+ versatile glue between otherwise incompatible network endpoints."""
+
+toolchain = {'name': 'GCCcore', 'version': '13.3.0'}
+
+# Upstream serves the tarball over HTTPS with a certificate that does not
+# match the dest-unreach.org hostname, so use the plain-HTTP mirror. The
+# tarball is verified by the SHA-256 checksum below.
+source_urls = ['http://www.dest-unreach.org/socat/download/']
+sources = [SOURCE_TAR_GZ]
+checksums = ['f68b602c80e94b4b7498d74ec408785536fe33534b39467977a82ab2f7f01ddb']
+
+builddependencies = [
+    ('binutils', '2.42'),
+]
+
+# socat's configure script auto-detects OpenSSL, readline and libwrap on the
+# build host. The immediate consumer (rootless sandbox bridging) needs only
+# UNIX-LISTEN / TCP / Linux-namespaces support, all of which are built
+# unconditionally; optional features may be added later by depending on the
+# corresponding modules and reconfiguring.
+
+sanity_check_paths = {
+    'files': ['bin/socat'],
+    'dirs': ['bin', 'share/man/man1'],
+}
+
+sanity_check_commands = [
+    'socat -V',
+    "socat -h | head -1",
+]
+
+moduleclass = 'tools'
