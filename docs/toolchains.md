@@ -28,6 +28,7 @@ Each toolchain uses a single version of Python. Multible versions of libraries c
 
 | Toolchain | GCC Version | Python | CUDA  |Notes |
 | ----------|-------------|--------|-------|------|
+| [foss-2026.1]({{ site.baseurl }}/toolchains/foss-2026.1/) | GCC 15.2.0 | 3.14.2 | 13.x |July 2026 Chorus|
 | [foss-2025a]({{ site.baseurl }}/toolchains/foss-2024a/) | GCC 14.2.0 | 3.13.1 | 12.8.0 |July 2025 Harmony |
 | [foss-2024a]({{ site.baseurl }}/toolchains/foss-2024a/) | GCC 13.3.0 | 3.12.3 | 12.6.2 |November 2024 Harmony |
 | [foss-2023b]({{ site.baseurl }}/toolchains/foss-2023b/) | GCC 13.2.0 | 3.11.5 | 12.4.0 |March 19, 2024 |
