@@ -1,0 +1,65 @@
+easyblock = 'PythonBundle'
+
+name = 'fhTorch'
+version = '2.13.0'
+versionsuffix = '-CUDA-%(cudaver)s'
+
+homepage = 'https://pytorch.org/'
+description = """Tensors and Dynamic neural networks in Python with strong GPU acceleration.
+PyTorch is a deep learning framework that puts Python first."""
+
+toolchain = {'name': 'foss', 'version': '2026.1'}
+
+dependencies = [
+    ('Python', '3.14.2'),
+    ('CUDA', '13.2.0', '', SYSTEM),
+    ('SciPy-bundle', '2026.05'),
+    # ('Python-bundle-PyPI', '2025.04'), from SciPy
+    ('sympy', '1.14.0'),
+    ('networkx', '3.6.1'),
+    ('PyYAML', '6.0.3'),
+]
+
+sanity_pip_check = False
+
+""" Install Torch direct from wheel downloaded from PyTorch.org. https://download.pytorch.org/whl/cu132/torch/
+  The torch module pulls in a huge number of nvidia and cuda packages, from PyPi and pytorch.org.
+  It does not help to add the CUDA module, it will be ignored and the speicif version ov CUDA and 
+  Nvidia tools will be downloaded as wheels.
+
+  from EBcb container load this module then run pip install. It will install into /app/software/fhTorch/
+  Torch Wheel files are here: /app/sources/t/torch 
+
+  ml fhTorch/2.13.0 
+  PYTHONPATH=$PYTHONPAH pip install torch-2.13.0+cu132-cp314-cp314-manylinux_2_28_x86_64.whl \
+    --target=/app/software/fhTorch/2.13.0-foss-2026.1-CUDA-13.2.0/lib/python3.14/site-packages
+
+...
+Downloading cuda_toolkit-13.2.1-py2.py3-none-any.whl (2.6 kB)
+Downloading nvidia_cudnn_cu13-9.20.0.48-py3-none-manylinux_2_27_x86_64.whl (366.2 MB)
+Downloading nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl (170.1 MB)
+Downloading nvidia_nccl_cu13-2.29.7-py3-none-manylinux_2_18_x86_64.whl (206.0 MB)
+Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+Downloading triton-3.7.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (197.7 MB)
+Downloading nvidia_cublas-13.4.0.1-py3-none-manylinux_2_27_x86_64.whl (404.9 MB)
+Downloading nvidia_cuda_cupti-13.2.75-py3-none-manylinux_2_25_x86_64.whl (12.0 MB)
+Downloading nvidia_cuda_nvrtc-13.2.78-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (47.0 MB)
+Downloading nvidia_cuda_runtime-13.2.75-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+Downloading nvidia_cufft-12.2.0.46-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (218.3 MB)
+Downloading nvidia_cufile-1.17.1.22-py3-none-manylinux_2_27_x86_64.whl (1.4 MB)
+Downloading nvidia_curand-10.4.2.55-py3-none-manylinux_2_27_x86_64.whl (59.9 MB)
+Downloading nvidia_cusolver-12.2.0.1-py3-none-manylinux_2_27_x86_64.whl (227.4 MB)
+Downloading nvidia_cusparse-12.7.10.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (150.9 MB)
+Downloading nvidia_nvtx-13.2.75-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (153 kB)
+Downloading cuda_bindings-13.3.1-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.5 MB)
+Downloading cuda_pathfinder-1.6.0-py3-none-any.whl (54 kB)
+Downloading nvidia_nvjitlink-13.3.33-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.7 MB)
+
+
+"""
+
+exts_list = [
+    ('pydot', '2.0.0', {'checksums': ['60246af215123fa062f21cd791be67dda23a6f280df09f68919e637a1e4f3235']}),
+]
+
+moduleclass = 'ai'
