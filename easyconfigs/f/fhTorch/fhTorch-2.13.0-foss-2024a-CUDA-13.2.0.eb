@@ -14,7 +14,6 @@ dependencies = [
     ('Python', '3.14.2'),
     ('CUDA', '13.2.0', '', SYSTEM),
     ('SciPy-bundle', '2026.05'),
-    # ('Python-bundle-PyPI', '2025.04'), from SciPy
     ('sympy', '1.14.0'),
     ('networkx', '3.6.1'),
     ('PyYAML', '6.0.3'),
@@ -22,12 +21,13 @@ dependencies = [
 
 sanity_pip_check = False
 
-""" Install Torch direct from wheel downloaded from PyTorch.org. https://download.pytorch.org/whl/cu132/torch/
-  The torch module pulls in a huge number of nvidia and cuda packages, from PyPi and pytorch.org.
-  It does not help to add the CUDA module, it will be ignored and the speicif version ov CUDA and 
-  Nvidia tools will be downloaded as wheels.
+"""
+  Install Torch directly from a wheel downloaded from PyTorch.org. https://download.pytorch.org/whl/cu132/torch/
+  The torch module pulls in a large number of NVIDIA and CUDA packages from PyPI and pytorch.org.
+  It does not help to add the CUDA module; it will be ignored, and the specific version of
+  CUDA and NVIDIA tools will be downloaded as wheels.
 
-  from EBcb container load this module then run pip install. It will install into /app/software/fhTorch/
+  From EBcb container load this module then run pip install. It will install into `/app/software/fhTorch/`
   Torch Wheel files are here: /app/sources/t/torch 
 
   ml fhTorch/2.13.0 
