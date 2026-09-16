@@ -1,0 +1,37 @@
+easyblock = 'PythonBundle'
+
+name = 'scVelo'
+version = '0.3.1'
+
+homepage = "https://scvelo.org"
+description = """scVelo is a scalable toolkit for estimating and analyzing RNA velocities in single cells using
+ dynamical modeling."""
+
+toolchain = {'name': 'foss', 'version': '2024a'}
+
+builddependencies = [('hatchling', '1.24.2')]
+
+dependencies = [
+    ('Python', '3.12.3'),
+    ('SciPy-bundle', '2024.05'),
+    ('numba', '0.60.0'),
+    ('anndata', '0.11.3'),
+    ('scanpy', '1.10.4'),
+    ('loompy', '3.0.8'),
+    ('umap-learn', '0.5.7'),
+    ('scikit-learn', '1.5.2'),
+    ('matplotlib', '3.9.2'),
+    ('scvi-tools', '1.1.2'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+exts_list = [
+    ('scvelo', version, {
+        'preinstallopts': "sed -i 's/scikit-learn>=0.21.2, <1.2.0/scikit-learn>=0.21.2/' pyproject.toml && ",
+        # 'patches': ['scVelo-0.3.1_dep-fix.patch'],
+    }),
+]
+
+moduleclass = 'bio'
