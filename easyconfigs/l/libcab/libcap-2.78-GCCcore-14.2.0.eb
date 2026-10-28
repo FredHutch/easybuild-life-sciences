@@ -1,0 +1,47 @@
+# easybuild easyconfig
+#
+# Dominik Otto dotto@fredhutch.org
+#
+# Fred Hutchinson Cancer Center
+#
+easyblock = 'ConfigureMake'
+
+name = 'libcap'
+version = '2.78'
+
+homepage = 'https://sites.google.com/site/fullycapable/'
+description = """libcap is a library for getting and setting POSIX.1e
+ (formerly POSIX 6) draft 15 capabilities. Required as a dependency for
+ bubblewrap and other sandboxing tools."""
+
+toolchain = {'name': 'GCCcore', 'version': '14.2.0'}
+
+source_urls = ['https://mirrors.edge.kernel.org/pub/linux/libs/security/linux-privs/libcap2']
+sources = [SOURCE_TAR_XZ]
+checksums = ['0d621e562fd932ccf67b9660fb018e468a683d7b827541df27813228c996bb11']
+
+builddependencies = [
+    ('binutils', '2.42'),
+]
+
+# libcap uses a plain Makefile, not autotools/configure
+skipsteps = ['configure']
+
+# Build with PIC, install into easybuild prefix, skip the PAM module
+# (pam_cap requires libpam-dev which is a system package we do not depend on)
+buildopts = 'lib=lib GOLANG=no'
+installopts = 'lib=lib GOLANG=no prefix=%(installdir)s DESTDIR='
+
+sanity_check_paths = {
+    'files': [
+        'lib/libcap.%s' % SHLIB_EXT,
+        'lib/libcap.a',
+        'lib/pkgconfig/libcap.pc',
+        'include/sys/capability.h',
+        'sbin/setcap',
+        'sbin/getcap',
+    ],
+    'dirs': ['lib', 'include', 'sbin'],
+}
+
+moduleclass = 'lib'
