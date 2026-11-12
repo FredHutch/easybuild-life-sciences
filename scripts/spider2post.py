@@ -14,7 +14,7 @@ import sys
 import os
 import re
 from packaging import version
-from tc import Toolchain as TC
+from toolchain import Toolchain as TC
 
 __author__ = "John Dey"
 __date__ = "Jan 2026"
