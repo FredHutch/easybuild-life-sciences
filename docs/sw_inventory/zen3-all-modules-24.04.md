@@ -19,8 +19,8 @@ Automake: GNU Standards-compliant Makefile generator
 This bundle collect the standard GNU build tools: Autoconf, Automake  and libtool 
  - [BLIS/1.0-GCC-13.3.0](https://github.com/flame/blis/)
 BLIS is a portable software framework for instantiating high-performance BLAS-like dense linear algebra libraries.
- - [Bison/3.8.2-GCCcore-13.3.0](https://www.gnu.org/software/bison)
-Bison is a general-purpose parser generator that converts an annotated context-free grammar  into a deterministic LR or generalized LR (GLR) parser employing LALR(1) parser tables.
+ - [Bison/3.8.2](https://www.gnu.org/software/bison)
+Bison is a general-purpose parser generator that converts an annotated  context-free grammar into a deterministic LR or generalized LR (GLR) parser  employing LALR(1) parser tables. 
  - [Boost/1.85.0-GCC-13.3.0](https://www.boost.org/)
 Boost provides free peer-reviewed portable C++ source libraries.
  - [Brotli/1.1.0-GCCcore-13.3.0](https://github.com/google/brotli)
@@ -93,8 +93,8 @@ The LLVM Core libraries provide a modern source- and target-independent  optimiz
 tiff: Library and tools for reading and writing TIFF data files
  - [LittleCMS/2.16-GCCcore-13.3.0](https://www.littlecms.com/)
 Little CMS intends to be an OPEN SOURCE small-footprint color management engine,  with special focus on accuracy and performance. 
- - [M4/1.4.19-GCCcore-13.3.0](https://www.gnu.org/software/m4/m4.html)
-GNU M4 is an implementation of the traditional Unix macro processor. It is mostly SVR4 compatible   although it has some extensions (for example, handling more than 9 positional parameters to macros).  GNU M4 also has built-in functions for including files, running shell commands, doing arithmetic, etc.
+ - [M4/1.4.19](https://www.gnu.org/software/m4/m4.html)
+GNU M4 is an implementation of the traditional Unix macro processor. It is  mostly SVR4 compatible although it has some extensions (for example, handling  more than 9 positional parameters to macros). GNU M4 also has built-in  functions for including files, running shell commands, doing arithmetic, etc. 
  - [MPFR/4.2.1-GCCcore-13.3.0](https://www.mpfr.org)
 The MPFR library is a C library for multiple-precision floating-point  computations with correct rounding. 
  - [Mako/1.3.5-GCCcore-13.3.0](https://www.makotemplates.org)
@@ -201,7 +201,7 @@ fontTools is a library for manipulating fonts, written in Python. The project in
 GNU Compiler Collection (GCC) based compiler toolchain, including  OpenMPI for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
  - [freetype/2.13.2-GCCcore-13.3.0](https://www.freetype.org)
 FreeType 2 is a software font engine that is designed to be small, efficient,  highly customizable, and portable while capable of producing high-quality  output (glyph images). It can be used in graphics libraries, display servers,  font conversion tools, text image generation tools, and many other products  as well. 
- - [gettext/0.22.5](https://www.gnu.org/software/gettext/)
+ - [gettext/0.22.5-GCCcore-13.3.0](https://www.gnu.org/software/gettext/)
 GNU 'gettext' is an important step for the GNU Translation Project, as it is an asset on which we may build many other steps. This package offers to programmers, translators, and even users, a well integrated set of tools and documentation
  - [gfbf/2024a]((none))
 GNU Compiler Collection (GCC) based compiler toolchain, including  FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW.
@@ -289,7 +289,7 @@ LZ4 is lossless compression algorithm, providing compression speed at 400 MB/s p
 GNU version of make utility
  - [maturin/1.6.0-GCCcore-13.3.0](https://github.com/pyo3/maturin)
 This project is meant as a zero configuration replacement for setuptools-rust and milksnake. It supports building wheels for python 3.5+ on windows, linux, mac and freebsd, can upload them to pypi and has basic pypy and graalpy support.
- - [ncurses/6.5](https://www.gnu.org/software/ncurses/)
+ - [ncurses/6.5-GCCcore-13.3.0](https://www.gnu.org/software/ncurses/)
 The Ncurses (new curses) library is a free software emulation of curses in  System V Release 4.0, and more. It uses Terminfo format, supports pads and  color and multiple highlights and forms characters and function-key mapping,  and has all the other SYSV-curses enhancements over BSD Curses. 
  - [netCDF/4.9.2-gompi-2024a](https://www.unidata.ucar.edu/software/netcdf/)
 NetCDF (network Common Data Form) is a set of software libraries  and machine-independent data formats that support the creation, access, and sharing of array-oriented  scientific data.
@@ -321,7 +321,7 @@ Set of Linux utilities
 A tool for creating isolated virtual python environments.
  - [xorg-macros/1.20.1-GCCcore-13.3.0](https://gitlab.freedesktop.org/xorg/util/macros)
 X.org macros utilities.
- - [zlib/1.3.1](https://www.zlib.net/)
-zlib is designed to be a free, general-purpose, legally unencumbered -- that  is, not covered by any patents -- lossless data-compression library for use  on virtually any computer hardware and operating system. 
+ - [zlib/1.3.1-GCCcore-13.3.0](https://www.zlib.net/)
+zlib is designed to be a free, general-purpose, legally unencumbered -- that is,  not covered by any patents -- lossless data-compression library for use on virtually any  computer hardware and operating system.
  - [zstd/1.5.6-GCCcore-13.3.0](https://facebook.github.io/zstd)
 Zstandard is a real-time compression algorithm, providing high compression ratios.  It offers a very wide range of compression/speed trade-off, while being backed by a very fast decoder.  It also offers a special mode for small data, called dictionary compression, and can create dictionaries  from any sample set.
