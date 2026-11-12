@@ -43,7 +43,7 @@ docs:
         url: /about/
   - title: "SciComp Managed Systems"
     children:
-      - title: "ermine"
-        url: /ermine/
-      - title: "quokka"
-        url: /quokka/
+      - title: "AMD Zen3"
+        url: /zen3/
+      - title: "Intel broadwell"
+        url: /broadwell/
