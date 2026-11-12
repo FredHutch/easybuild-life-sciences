@@ -1,5 +1,5 @@
 ---
-title: Broadwell System 
+title: Broadwell Systems
 layout: single
 permalink: /broadwell/
 collection: sw_inventory
@@ -9,9 +9,9 @@ sidebar:
   nav: "docs"
 ---
 
-## Intel Broadwell Systems (AVX, AVX3)
+### Systems with Intel Broadwell CPU Architecture (AVX, AVX3)
 
-quokka is a compute server owned by Phil Bradley's Lab.
+#### quokka is a compute server owned by Phil Bradley's Lab.
 
   | System Info |
   |-------------|-------|
@@ -21,7 +21,7 @@ quokka is a compute server owned by Phil Bradley's Lab.
   | Memory        | 264033736 kB (251Gb)|  
   | OS            | Ubuntu 24.04 |
 
-volta 
+#### volta 
 
   | System Info |
   |---------------|-------|

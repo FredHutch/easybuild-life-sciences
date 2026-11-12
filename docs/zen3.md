@@ -8,8 +8,6 @@ sidebar:
   nav: "docs"
 ---
 
-# AMD Zen3 Systems
-
 ermine is a GPU server owned by Phil Bradley's lab.
 
   | System Info |
