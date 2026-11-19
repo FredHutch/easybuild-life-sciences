@@ -1,0 +1,35 @@
+name = 'Java'
+_java_version = '25'
+_patch_version = '5.1'
+_build_version = '2'
+version = f'{_java_version}.0.{_patch_version}'
+
+homepage = 'https://openjdk.org'
+description = """Java Platform, Standard Edition (Java SE) lets you develop and deploy
+Java applications on desktops and servers."""
+
+toolchain = SYSTEM
+
+_tarball_tmpl = f'OpenJDK{_java_version}U-jdk_{{}}_linux_hotspot_{version}_{_build_version}.tar.gz'
+
+# Using the Adoptium Eclipse Temurin builds, recommended by https://whichjdk.com/#distributions
+source_urls = [f'https://github.com/adoptium/temurin{_java_version}-binaries/releases/download/'
+               f'jdk-{version}+{_build_version}/']
+# OpenJDK25U-jdk_x64_linux_hotspot_25.0.5.1_2.tar.gz
+
+sources = [_tarball_tmpl.format('%(jdkarch)s')]
+
+checksums = [
+    {
+        _tarball_tmpl.format('x64'):
+            '760f91b22c3efc9bd1b64ff950598231be82928cc807e30691a0e7a2995a62c0',
+        _tarball_tmpl.format('aarch64'):
+            'bb5b2ded252f21c6090cf780b0a408ad0d83bbb557e702955643557f13231880',
+        _tarball_tmpl.format('ppc64le'):
+            '47825886fd72e86c94e6fd1687a13bebb4ae729e24d2788be0d294589bf07297',
+        _tarball_tmpl.format('riscv64'):
+            '21d9ee84f64d845e7de888f86cc2abe3256c75853a0d5abe7fd42d6526374e90',
+    }
+]
+
+moduleclass = 'lang'
