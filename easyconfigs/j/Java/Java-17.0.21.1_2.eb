@@ -1,0 +1,42 @@
+name = 'Java'
+_java_version = '17'
+_patch_version = '21.1'
+_build_version = '2'
+version = f'{_java_version}.0.{_patch_version}'
+
+homepage = 'http://openjdk.java.net'
+description = """Java Platform, Standard Edition (Java SE) lets you develop and deploy
+Java applications on desktops and servers."""
+
+toolchain = SYSTEM
+
+_tarball_tmpl = f'OpenJDK{_java_version}U-jdk_{{}}_linux_hotspot_{version}_{_build_version}.tar.gz'
+# CVE-2026-114938 Patched version OpenJDK17U-jdk_x64_linux_hotspot_17.0.21.1_2.tar.gz
+
+# Using the Adoptium Eclipse Temurin builds, recommended by https://whichjdk.com/#distributions
+source_urls = [f'https://github.com/adoptium/temurin{_java_version}-binaries/releases/download/'
+               f'jdk-{version}+{_build_version}/']
+sources = [
+    _tarball_tmpl.format('%(jdkarch)s'),
+    {'filename': 'Java_blocked-certs-eMudhra-CVE-2026-91403.txt',
+     'extract_cmd': "cp %s %(builddir)s/"},
+]
+checksums = [
+    {
+        _tarball_tmpl.format('x64'):
+            '0b0ac5eab6db6abaec68c9913bcddb31321e5da411c45073d520d9c125e6f7b4',
+        _tarball_tmpl.format('aarch64'):
+            '3e4eca7ead088f080af1476007decf010a240a1eb4e1e78c54fa32fbcc347084',
+        _tarball_tmpl.format('ppc64le'):
+            '9f031f48f66350b0b976354738eac984e4863f7205cb7a1a2130272a84bb64e5',
+        _tarball_tmpl.format('riscv64'):
+            '5c74fd8f5440098c8f44e54cad428b3915ffd3f2d1ec7967ac78bc6411c4380b',
+    }
+]
+
+postinstallcmds = [
+    # see https://glaforge.dev/posts/2026/10/21/the-emudhra-ca-compromise-why-your-jvm-is-vulnerable-and-how-to-fix-it
+    "cat %(builddir)s/Java_blocked-certs-eMudhra-CVE-2026-91403.txt >> %(installdir)s/lib/security/blocked.certs",
+]
+
+moduleclass = 'lang'
